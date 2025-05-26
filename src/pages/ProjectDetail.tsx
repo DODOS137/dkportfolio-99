@@ -9,7 +9,6 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
-import ScrollAnimatedImage from '../components/ScrollAnimatedImage';
 
 interface Project {
   id: string;
@@ -163,16 +162,12 @@ const ProjectDetail = () => {
           </div>
           
           {/* Image display based on project slug */}
-          {project.slug === "project-4" ? <ScrollAnimatedImage 
-              src="/lovable-uploads/8f1ac9c4-a3f8-4eed-93d3-859b298cea4d.png" 
-              alt={project.title} 
-              className="w-full mb-8" 
-            /> : project.slug === "project-3" ? <>
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png" 
-            alt={project.title} 
-            className="w-full mb-8 relative" 
-          />
+          {project.slug === "project-4" ? <div className="w-full mb-8">
+              <img src="/lovable-uploads/8f1ac9c4-a3f8-4eed-93d3-859b298cea4d.png" alt={project.title} className="w-full h-auto object-contain" />
+            </div> : project.slug === "project-3" ? <>
+          <div className="w-full mb-8 relative">
+            <img src="/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png" alt={project.title} className="w-full h-auto object-contain" />
+          </div>
           
           <div className="w-full mb-8 flex justify-center">
             <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
@@ -212,72 +207,53 @@ const ProjectDetail = () => {
           </div>
           
           {/* IMAGE SECTION 2: Project Information */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/1fb09718-c420-4de4-87fc-14efe41aa711.png" 
-            alt="Project Information" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img src="/lovable-uploads/1fb09718-c420-4de4-87fc-14efe41aa711.png" alt="Project Information" className="w-full h-auto object-contain" />
+          </div>
 
           {/* IMAGE SECTION 3: Project Detail 1 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/40711394-3ec4-4a63-b98d-3a59882383cc.png" 
-            alt="Project Detail 1" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img alt="Project Detail 1" className="w-full h-auto object-contain" src="/lovable-uploads/40711394-3ec4-4a63-b98d-3a59882383cc.png" />
+          </div>
 
           {/* IMAGE SECTION 4: Project Detail 2 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/b4be558a-6e57-41d5-b7ff-4df1cae97923.png" 
-            alt="Project Detail 2" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img alt="Project Detail 2" className="w-full h-auto object-contain" src="/lovable-uploads/b4be558a-6e57-41d5-b7ff-4df1cae97923.png" />
+          </div>
 
           {/* IMAGE SECTION 5: Project Detail 3 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/b5c01922-cad3-4341-af67-b84a24191175.png" 
-            alt="Project Detail 3" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img alt="Project Detail 3" className="w-full h-auto object-contain" src="/lovable-uploads/b5c01922-cad3-4341-af67-b84a24191175.png" />
+          </div>
 
           {/* IMAGE SECTION 6: Project Detail 4 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/2acad0fc-8ea3-4cce-9805-708bcb3dde3b.png" 
-            alt="Project Detail 4" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img alt="Project Detail 4" className="w-full h-auto object-contain" src="/lovable-uploads/2acad0fc-8ea3-4cce-9805-708bcb3dde3b.png" />
+          </div>
 
           {/* IMAGE SECTION 7: Project Detail 5 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/60f4e28b-ec3b-4789-a8f2-2de9c8c3afa7.png" 
-            alt="Project Detail 5" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img alt="Project Detail 5" className="w-full h-auto object-contain" src="/lovable-uploads/60f4e28b-ec3b-4789-a8f2-2de9c8c3afa7.png" />
+          </div>
 
           {/* IMAGE SECTION 8: Project Detail 6 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/754153ec-8716-40c2-a499-40e5afb19803.png" 
-            alt="Project Detail 6" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img alt="Project Detail 6" className="w-full h-auto object-contain" src="/lovable-uploads/754153ec-8716-40c2-a499-40e5afb19803.png" />
+          </div>
 
           {/* IMAGE SECTION 9: Project Detail 7 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/3e247063-e599-4542-b6f4-48027625ef69.png" 
-            alt="Project Detail 7" 
-            className="w-full my-10" 
-          />
+          <div className="w-full my-10">
+            <img alt="Project Detail 7" className="w-full h-auto object-contain" src="/lovable-uploads/3e247063-e599-4542-b6f4-48027625ef69.png" />
+          </div>
 
           {/* IMAGE SECTION 10: Project Detail 8 */}
-          <ScrollAnimatedImage 
-            src="/lovable-uploads/aadab6a8-16af-4f84-86bc-f2e9a8bef4fa.png" 
-            alt="Project Detail 8" 
-            className="w-full my-10" 
-          />
-        </> : project.imageUrl && <ScrollAnimatedImage 
-              src={project.imageUrl} 
-              alt={project.title} 
-              className="w-full mb-8 relative" 
-            />}
+          <div className="w-full my-10">
+            <img alt="Project Detail 8" className="w-full h-auto object-contain" src="/lovable-uploads/aadab6a8-16af-4f84-86bc-f2e9a8bef4fa.png" />
+          </div>
+        </> : project.imageUrl && <div className="w-full mb-8 relative">
+              <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-contain" />
+              <div className="absolute inset-0 flex items-center"></div>
+            </div>}
           
           {/* Title and description moved between image and video */}
           {project.slug === "invisible-space-museum" && <>
@@ -289,10 +265,10 @@ const ProjectDetail = () => {
                         <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
                     field
                   }) => <FormItem>
-                              <FormControl>
-                                <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
-                              </FormControl>
-                            </FormItem>} />
+                            <FormControl>
+                              <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
+                            </FormControl>
+                          </FormItem>} />
                         <Button type="submit" className="bg-white text-black hover:bg-gray-200">
                           저장
                         </Button>
@@ -311,81 +287,59 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 1 - Project Type */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/830169e7-f56e-4013-bc24-20cc8dea565a.png" 
-                alt="Project Type" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Type" className="w-full h-auto object-contain" src="/lovable-uploads/830169e7-f56e-4013-bc24-20cc8dea565a.png" />
+              </div>
               
               {/* Image section 2 - Approach */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/69e9a28a-754b-4ea1-8945-946c81453652.png" 
-                alt="Approach" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Approach" className="w-full h-auto object-contain" src="/lovable-uploads/69e9a28a-754b-4ea1-8945-946c81453652.png" />
+              </div>
               
               {/* Image section 3 - Process */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/b7bcee38-0fa1-4423-8b70-82269a056822.png" 
-                alt="Process" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/b7bcee38-0fa1-4423-8b70-82269a056822.png" />
+              </div>
               
               {/* Image section 4 - Worldbuilding */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/501e5230-4841-4922-9d27-c24ede54b1fe.png" 
-                alt="Worldbuilding - Environmental Setting" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/501e5230-4841-4922-9d27-c24ede54b1fe.png" />
+              </div>
               
               {/* Image section 5 - Planet A233 */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/490f1604-abcc-484e-8a48-7105a5fc9f92.png" 
-                alt="Planet A233 Concept" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Planet A233 Concept" className="w-full h-auto object-contain" src="/lovable-uploads/490f1604-abcc-484e-8a48-7105a5fc9f92.png" />
+              </div>
               
               {/* Image section 6 - Story Concept */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/ccc8e848-9291-4f9e-af1f-9363bf39c195.png" 
-                alt="Story Concept & Emotional Logic" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Story Concept & Emotional Logic" className="w-full h-auto object-contain" src="/lovable-uploads/ccc8e848-9291-4f9e-af1f-9363bf39c195.png" />
+              </div>
               
               {/* Image section 7 - Video Development */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/910bd54b-f2a9-4c14-a7eb-1e2fa388c89b.png" 
-                alt="Video Development Concepts" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Video Development Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/910bd54b-f2a9-4c14-a7eb-1e2fa388c89b.png" />
+              </div>
               
               {/* Image section 8 - Video Series Description */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/194fd58a-6fcb-41ea-ad9e-e1d5e687e6d6.png" 
-                alt="Video Series Description" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Video Series Description" className="w-full h-auto object-contain" src="/lovable-uploads/194fd58a-6fcb-41ea-ad9e-e1d5e687e6d6.png" />
+              </div>
               
               {/* Image section 9 - Level Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/2ced82fe-7596-46c4-971b-9754596a28d3.png" 
-                alt="Level Design Layout" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/2ced82fe-7596-46c4-971b-9754596a28d3.png" />
+              </div>
               
               {/* Image section 10 - User Journey */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/005e67f1-2918-488a-bf73-884dcdbe32e7.png" 
-                alt="User Journey Flow" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="User Journey Flow" className="w-full h-auto object-contain" src="/lovable-uploads/005e67f1-2918-488a-bf73-884dcdbe32e7.png" />
+              </div>
               
               {/* Image section 11 - Spatial Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/fdbf9b1f-d044-4c35-b65e-e702cd3cb8d3.png" 
-                alt="Spatial Design Concepts" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Spatial Design Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/fdbf9b1f-d044-4c35-b65e-e702cd3cb8d3.png" />
+              </div>
               
               {/* NEW: Additional YouTube Video Section */}
               <div className="w-full my-10">
@@ -397,18 +351,14 @@ const ProjectDetail = () => {
               </div>
               
               {/* NEW: Image section 13 - Post-Project Direction */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/a96a1fbb-7e20-4e12-83dd-8b2908b357fe.png" 
-                alt="Post-Project Direction - Interactive Elements" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/a96a1fbb-7e20-4e12-83dd-8b2908b357fe.png" />
+              </div>
               
               {/* NEW: Image section 14 - Interactive Evolution Concept */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/f6086651-deb6-4878-bcb1-bfa446e03f6b.png" 
-                alt="Interactive Evolution Concept Visualization" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Interactive Evolution Concept Visualization" className="w-full h-auto object-contain" src="/lovable-uploads/f6086651-deb6-4878-bcb1-bfa446e03f6b.png" />
+              </div>
             </>}
           
           {project.slug === "project-5" && <>
@@ -466,66 +416,50 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 1 - Project Type & Info */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/7ef87db2-c0b5-4b14-9c44-a02673bbfa89.png" 
-                alt="Project Type and Info" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Type and Info" className="w-full h-auto object-contain" src="/lovable-uploads/7ef87db2-c0b5-4b14-9c44-a02673bbfa89.png" />
+              </div>
               
               {/* Image section 2 - Process */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/9377c794-5dfd-4cbc-95c1-924950254356.png" 
-                alt="Project Process" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Process" className="w-full h-auto object-contain" src="/lovable-uploads/9377c794-5dfd-4cbc-95c1-924950254356.png" />
+              </div>
               
               {/* Image section 3 - Worldbuilding */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/db878cb6-21bb-45ed-bb18-f32fc6f63ec0.png" 
-                alt="Worldbuilding - Environmental Setting" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/db878cb6-21bb-45ed-bb18-f32fc6f63ec0.png" />
+              </div>
               
               {/* Image section 4 - Story Concept */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/33404ace-d96d-4d85-ad0e-9528701598b0.png" 
-                alt="Story Concept and Plot" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Story Concept and Plot" className="w-full h-auto object-contain" src="/lovable-uploads/33404ace-d96d-4d85-ad0e-9528701598b0.png" />
+              </div>
               
               {/* Image section 5 - Character Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/21467fb9-09f2-4077-a2c1-0d8a7c478c55.png" 
-                alt="Character Design Details" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Character Design Details" className="w-full h-auto object-contain" src="/lovable-uploads/21467fb9-09f2-4077-a2c1-0d8a7c478c55.png" />
+              </div>
               
               {/* Image section 6 - Robot Models */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/c408582f-77b8-472b-a63a-0044aae0b097.png" 
-                alt="Robot Character Models" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Robot Character Models" className="w-full h-auto object-contain" src="/lovable-uploads/c408582f-77b8-472b-a63a-0044aae0b097.png" />
+              </div>
               
               {/* First 3D model viewer */}
               <ModelViewer modelPath="https://sketchfab.com/models/ad41a20fb4cb43b5afefa525ddc60ea3/embed" title="Interactive 3D Robot Model" isSketchfab={true} />
              
               {/* Image section 8 - Robot Specs Detail */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/5b3058a3-7730-40e1-a279-239b5c762def.png" 
-                alt="Robot LS1-07 Specifications" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Robot LS1-07 Specifications" className="w-full h-auto object-contain" src="/lovable-uploads/5b3058a3-7730-40e1-a279-239b5c762def.png" />
+              </div>
               
               {/* Use the exact URL provided by the user for the second model */}
               <ModelViewer modelPath="https://sketchfab.com/models/65e7ff25d71f4512829dfc88c5537add/embed" title="Interactive LS1-07 Robot Model" isSketchfab={true} />
               
               {/* Image section 9 - 3D Storyboard Development */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/c3c01f35-32e6-4184-8b0f-4981a9e12657.png" 
-                alt="3D Storyboard Development" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="3D Storyboard Development" className="w-full h-auto object-contain" src="/lovable-uploads/c3c01f35-32e6-4184-8b0f-4981a9e12657.png" />
+              </div>
 
               {/* YouTube Video Section - 80% width */}
               <div className="w-full my-10 flex justify-center">
@@ -537,60 +471,44 @@ const ProjectDetail = () => {
               </div>
               
               {/* NEW: Image section 10 - Level Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/05b3cbcd-f9ff-4e49-a6c9-332c83271abc.png" 
-                alt="Level Design Layout" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/05b3cbcd-f9ff-4e49-a6c9-332c83271abc.png" />
+              </div>
               
               {/* NEW: Image section 11 - Artifacts Detail */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/e7e6311d-ad0e-492f-bc55-6f702900d494.png" 
-                alt="Artifact Details and Interactive Elements" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Artifact Details and Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/e7e6311d-ad0e-492f-bc55-6f702900d494.png" />
+              </div>
               
               {/* NEW: Image section 12 - Player Journey */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/139ca29f-9912-4258-8381-65443de63395.png" 
-                alt="Player Journey and Narrative Flow" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Player Journey and Narrative Flow" className="w-full h-auto object-contain" src="/lovable-uploads/139ca29f-9912-4258-8381-65443de63395.png" />
+              </div>
               
               {/* NEW: Image section 13 - Final Concept */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/19f88eb1-55fc-447c-9910-a8acad4cdcfe.png" 
-                alt="Final Concept Images - Library Environment" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Final Concept Images - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/19f88eb1-55fc-447c-9910-a8acad4cdcfe.png" />
+              </div>
               
               {/* NEW: Image section 14 - Main Hall & Tree */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/ccda885d-f430-43ba-8966-4adb619d47a2.png" 
-                alt="Main Hall & Tree - Library Environment" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Main Hall & Tree - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/ccda885d-f430-43ba-8966-4adb619d47a2.png" />
+              </div>
               
               {/* NEW: Image section 15 - Library Main Hall */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/923720d8-1f64-4936-9a07-71bedb9d4a0e.png" 
-                alt="Library Main Hall with Robot Character" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Library Main Hall with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/923720d8-1f64-4936-9a07-71bedb9d4a0e.png" />
+              </div>
               
               {/* NEW: Image section 16 - Overhead View */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/38be711f-81bc-4f86-8fd3-eea0c5226c1a.png" 
-                alt="Overhead View of Library with Robot Character" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Overhead View of Library with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/38be711f-81bc-4f86-8fd3-eea0c5226c1a.png" />
+              </div>
               
               {/* NEW: Image section 17 - Post-Project Direction */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/2cc04897-cb27-46d1-92b6-76c95a2afbcd.png" 
-                alt="Post-Project Direction - Interactive Elements" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/2cc04897-cb27-46d1-92b6-76c95a2afbcd.png" />
+              </div>
             </>}
           
           {project.slug === "project-6" && <>
@@ -616,209 +534,168 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 1 - Project Overview */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/2b2603e2-436b-473e-8a0b-b492246d33d9.png" 
-                alt="Project Overview" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Overview" className="w-full h-auto object-contain" src="/lovable-uploads/2b2603e2-436b-473e-8a0b-b492246d33d9.png" />
+              </div>
               
               {/* Image section 2 - Approach */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/2ad0f781-5bed-4642-8316-6caca0952f3d.png" 
-                alt="Project Approach" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Approach" className="w-full h-auto object-contain" src="/lovable-uploads/2ad0f781-5bed-4642-8316-6caca0952f3d.png" />
+              </div>
               
               {/* Image section 3 - Site Selection */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/a172e8d9-00d6-4b41-ac4e-a54dbfa9386f.png" 
-                alt="Site Selection" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/a172e8d9-00d6-4b41-ac4e-a54dbfa9386f.png" />
+              </div>
               
               {/* Image section 4 - Bridge Analysis */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/79518ec9-03d9-43fd-91a2-f0093064f858.png" 
-                alt="Bridge Analysis" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Bridge Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/79518ec9-03d9-43fd-91a2-f0093064f858.png" />
+              </div>
               
               {/* Image section 5 - Environmental Context */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/878c5f93-e2c2-484e-8701-9673796885d9.png" 
-                alt="Environmental Context" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Environmental Context" className="w-full h-auto object-contain" src="/lovable-uploads/878c5f93-e2c2-484e-8701-9673796885d9.png" />
+              </div>
               
               {/* Image section 6 - Concept Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/959cc7ed-1026-44d6-b91f-dc2af37e47bb.png" 
-                alt="Concept Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Concept Design" className="w-full h-auto object-contain" src="/lovable-uploads/959cc7ed-1026-44d6-b91f-dc2af37e47bb.png" />
+              </div>
               
               {/* Image section 7 - Spatial Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/c032f8c1-ea99-4106-9f55-0359f923d3fe.png" 
-                alt="Spatial Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/c032f8c1-ea99-4106-9f55-0359f923d3fe.png" />
+              </div>
               
               {/* Image section 8 - Bridge Structure */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/9204c7d5-567a-49d6-bed7-2119949f553d.png" 
-                alt="Bridge Structure" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Bridge Structure" className="w-full h-auto object-contain" src="/lovable-uploads/9204c7d5-567a-49d6-bed7-2119949f553d.png" />
+              </div>
               
               {/* Image section 9 - Surface Exposure */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/aa565580-dbc1-4e11-a31f-e11f85c9a5c2.png" 
-                alt="Surface Exposure According to Rainfall" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Surface Exposure According to Rainfall" className="w-full h-auto object-contain" src="/lovable-uploads/aa565580-dbc1-4e11-a31f-e11f85c9a5c2.png" />
+              </div>
               
               {/* Image section 10 - Final Concept Image 1 */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/1368610e-96c5-47b6-a7e2-66e23ebf5c00.png" 
-                alt="Final Concept View 1" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Final Concept View 1" className="w-full h-auto object-contain" src="/lovable-uploads/1368610e-96c5-47b6-a7e2-66e23ebf5c00.png" />
+              </div>
               
               {/* Image section 11 - Final Concept Image 2 */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/c965f215-8575-4d1f-b055-1f1fec8d9cd6.png" 
-                alt="Final Concept Rainy Condition" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Final Concept Rainy Condition" className="w-full h-auto object-contain" src="/lovable-uploads/c965f215-8575-4d1f-b055-1f1fec8d9cd6.png" />
+              </div>
               
               {/* Image section 12 - Final Concept Image 3 */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/773d9087-a073-430f-8510-1fdc452c034d.png" 
-                alt="Final Concept View 2" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Final Concept View 2" className="w-full h-auto object-contain" src="/lovable-uploads/773d9087-a073-430f-8510-1fdc452c034d.png" />
+              </div>
             </>}
           
           {project.slug === "project-5" && <>
               {/* Image section 1 - Project info image section - Added below video */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/f68f467d-89bb-4679-94d1-e354aaa0d733.png" 
-                alt="Project Information" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/f68f467d-89bb-4679-94d1-e354aaa0d733.png" />
+              </div>
               
               {/* Add third image section - Project 5 detailed mockup */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/5469078d-c9df-443d-b9f0-4eab1a57cfbf.png" 
-                alt="Project Details" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Details" className="w-full h-auto object-contain" src="/lovable-uploads/5469078d-c9df-443d-b9f0-4eab1a57cfbf.png" />
+              </div>
               
               {/* Image section 4 - Site Selection */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/bcd77b77-5980-4b25-8c77-668dc97cf557.png" 
-                alt="Site Selection" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/bcd77b77-5980-4b25-8c77-668dc97cf557.png" />
+              </div>
               
               {/* Image section 5 - Context & Problem Analysis */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/b4236ac5-2c03-4dfa-a337-b06457754639.png" 
-                alt="Context & Problem Analysis" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Context & Problem Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/b4236ac5-2c03-4dfa-a337-b06457754639.png" />
+              </div>
               
               {/* Image section 6 - New Museum Perspective */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/10edf164-4c9f-4915-a779-5bb928aeed8b.png" 
-                alt="New Museum Perspective" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="New Museum Perspective" className="w-full h-auto object-contain" src="/lovable-uploads/10edf164-4c9f-4915-a779-5bb928aeed8b.png" />
+              </div>
               
               {/* Image section 7 - Floor Plan / Spatial Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/543f4a31-e026-4287-93b1-9d97726ffd62.png" 
-                alt="Floor Plan and Spatial Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Floor Plan and Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/543f4a31-e026-4287-93b1-9d97726ffd62.png" />
+              </div>
               
               {/* Image section 8 - Material Board */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/ef80e3a5-8484-4a70-8096-237b2bd5f7be.png" 
-                alt="Material Board" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Material Board" className="w-full h-auto object-contain" src="/lovable-uploads/ef80e3a5-8484-4a70-8096-237b2bd5f7be.png" />
+              </div>
               
               {/* Image section 9 - Exhibition Planning and Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/f5645ceb-bc9c-4f26-a391-bd5a5799b169.png" 
-                alt="Exhibition Planning and Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Exhibition Planning and Design" className="w-full h-auto object-contain" src="/lovable-uploads/f5645ceb-bc9c-4f26-a391-bd5a5799b169.png" />
+              </div>
               
               {/* Image section 10 & 11 - Final Concept Images */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/bd60915c-2633-49d1-aff4-fdf44bef9f66.png" 
-                alt="Final Concept Images - Reception Desk" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Final Concept Images - Reception Desk" className="w-full h-auto object-contain mb-10" src="/lovable-uploads/bd60915c-2633-49d1-aff4-fdf44bef9f66.png" />
+              </div>
               
               {/* Image section 11 - 1F Exhibition Hall - Marine Zone */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/c92c8656-cfbf-484d-a548-dcdc5975ff0d.png" 
-                alt="1F Exhibition Hall - Marine Zone" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="1F Exhibition Hall - Marine Zone" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/c92c8656-cfbf-484d-a548-dcdc5975ff0d.png" />
+                <div className="mt-4 text-white">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
               
               {/* Image section 12 - 2F-3F Exhibition Halls - Terrestrial Zone */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/8ce3a4d6-f250-4f97-9fe8-86a67a09329c.png" 
-                alt="2F-3F Exhibition Halls - Terrestrial Zone" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="2F-3F Exhibition Halls - Terrestrial Zone" className="w-full h-auto object-contain" src="/lovable-uploads/8ce3a4d6-f250-4f97-9fe8-86a67a09329c.png" />
+              </div>
               
               {/* Image section 13 - Specimens in Wall Cabinets */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/da6dd76b-4ca9-48ee-99cc-a74ca3ef0efe.png" 
-                alt="Specimens in Wall Cabinets" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Specimens in Wall Cabinets" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/da6dd76b-4ca9-48ee-99cc-a74ca3ef0efe.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
               
               {/* Image section 14 - 2F Rest Area */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/d054f8ad-225d-4b31-b3c9-29d1e14a99cc.png" 
-                alt="2F Rest Area" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="2F Rest Area" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/d054f8ad-225d-4b31-b3c9-29d1e14a99cc.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
               
               {/* Image section 15 - Gift Shop */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/7952248b-ea8e-49b6-94c5-09efb48a1b30.png" 
-                alt="Gift Shop of the Seoul Natural History Museum" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Gift Shop of the Seoul Natural History Museum" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/7952248b-ea8e-49b6-94c5-09efb48a1b30.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
               
               {/* Image section 16 - Product Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/32ccef84-5518-4014-913e-2e08022c55da.png" 
-                alt="Product Design - Museum Souvenirs" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Product Design - Museum Souvenirs" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/32ccef84-5518-4014-913e-2e08022c55da.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
               
               {/* Image section 17 - Product Design Reflecting Brand Identity */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/8047ad6f-738d-475e-8def-43aa9c1f9167.png" 
-                alt="Product Design Reflecting Brand Identity" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Product Design Reflecting Brand Identity" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/8047ad6f-738d-475e-8def-43aa9c1f9167.png" />
+                <div className="mt-4 text-white">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
               
               {/* NEW: Image section 18 - Museum Products Showcase */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/43a439cc-4d86-4b77-8fc7-f8baec95dec2.png" 
-                alt="Museum Products Showcase - Character and Gift Items" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Museum Products Showcase - Character and Gift Items" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/43a439cc-4d86-4b77-8fc7-f8baec95dec2.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
             </>}
           
           {/* Updated all remaining projects to use the consistent text box design */}
@@ -854,67 +731,49 @@ const ProjectDetail = () => {
           {/* New Image sections for Project 4 - Added below YouTube video */}
           {project.slug === "project-4" && <>
               {/* Image section 2 - Project Type */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/9a0882e4-d74a-4b2d-869e-c62d9aabe300.png" 
-                alt="Project Type Information" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Project Type Information" className="w-full h-auto object-contain" src="/lovable-uploads/9a0882e4-d74a-4b2d-869e-c62d9aabe300.png" />
+              </div>
               
               {/* Image section 3 - Process */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/6b64d68c-5c7f-44ff-8622-f0a536eddaa6.png" 
-                alt="Process" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/6b64d68c-5c7f-44ff-8622-f0a536eddaa6.png" />
+              </div>
               
               {/* Image section 4 - Idea Development */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/9a130e34-16ea-4c25-869f-3a31c96c1c5f.png" 
-                alt="Idea Development" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Idea Development" className="w-full h-auto object-contain" src="/lovable-uploads/9a130e34-16ea-4c25-869f-3a31c96c1c5f.png" />
+              </div>
               
               {/* Image section 5 - Core Concept */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/18bece01-dc05-40e1-8bba-f7de8b355ea2.png" 
-                alt="Core Concept" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Core Concept" className="w-full h-auto object-contain" src="/lovable-uploads/18bece01-dc05-40e1-8bba-f7de8b355ea2.png" />
+              </div>
               
               {/* Image section 6 - Product Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/2b8b452b-5418-4a76-9c5f-fcc4cad9ac4a.png" 
-                alt="Product Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Product Design" className="w-full h-auto object-contain" src="/lovable-uploads/2b8b452b-5418-4a76-9c5f-fcc4cad9ac4a.png" />
+              </div>
               
               {/* Image section 7 - Exhibition Elements */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/5d9a94d9-6f1a-4eb3-ae3b-56fd0282a40f.png" 
-                alt="Exhibition Elements" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Exhibition Elements" className="w-full h-auto object-contain" src="/lovable-uploads/5d9a94d9-6f1a-4eb3-ae3b-56fd0282a40f.png" />
+              </div>
               
               {/* Image section 8 - Exhibition Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/3af7f241-2740-4378-b6cd-dd07d9f895d2.png" 
-                alt="Exhibition Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Exhibition Design" className="w-full h-auto object-contain" src="/lovable-uploads/3af7f241-2740-4378-b6cd-dd07d9f895d2.png" />
+              </div>
               
               {/* Image section 9 - Visitor Experience */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/984cf579-cf4a-498b-8582-3b1fdd8f7770.png" 
-                alt="Visitor Experience" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Visitor Experience" className="w-full h-auto object-contain" src="/lovable-uploads/984cf579-cf4a-498b-8582-3b1fdd8f7770.png" />
+              </div>
               
               {/* Image section 10 - AR Application Development */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/588ea4f9-132e-4501-a34a-0d7fdad203ac.png" 
-                alt="AR Application Development" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/588ea4f9-132e-4501-a34a-0d7fdad203ac.png" />
+              </div>
               
               {/* Second YouTube video player - 80% width */}
               <div className="w-full my-10 flex justify-center">
@@ -926,32 +785,24 @@ const ProjectDetail = () => {
               </div>
               
               {/* NEW: Image section 11 - Exhibition & Spatial Design */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/681ca87f-74f0-4b9d-af44-6cbdce8a303a.png" 
-                alt="Exhibition & Spatial Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Exhibition & Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/681ca87f-74f0-4b9d-af44-6cbdce8a303a.png" />
+              </div>
               
               {/* NEW: Image section 12 - Exhibition with Water Ceiling */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/55685a01-35c0-482d-8ee8-9306f497bf3a.png" 
-                alt="Exhibition with Water Ceiling" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Exhibition with Water Ceiling" className="w-full h-auto object-contain" src="/lovable-uploads/55685a01-35c0-482d-8ee8-9306f497bf3a.png" />
+              </div>
               
               {/* NEW: Image section 13 - Night Exhibition View */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/1ae50321-4db0-40a9-b5f4-2d05876f82a9.png" 
-                alt="Night Exhibition View" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Night Exhibition View" className="w-full h-auto object-contain" src="/lovable-uploads/1ae50321-4db0-40a9-b5f4-2d05876f82a9.png" />
+              </div>
               
               {/* NEW: Image section 14 - Rock Character */}
-              <ScrollAnimatedImage 
-                src="/lovable-uploads/b5a559ed-b9a5-45a4-8c87-16a5d3072ec7.png" 
-                alt="Rock Character Design" 
-                className="w-full my-10" 
-              />
+              <div className="w-full my-10">
+                <img alt="Rock Character Design" className="w-full h-auto object-contain" src="/lovable-uploads/b5a559ed-b9a5-45a4-8c87-16a5d3072ec7.png" />
+              </div>
             </>}
           
           {/* Back to Work button at the bottom */}
