@@ -9,6 +9,7 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
+
 interface Project {
   id: string;
   title: string;
@@ -248,6 +249,16 @@ const ProjectDetail = () => {
           {/* IMAGE SECTION 10: Project Detail 8 */}
           <div className="w-full my-10">
             <img alt="Project Detail 8" className="w-full h-auto object-contain" src="/lovable-uploads/5273fb9e-048e-4e4e-8214-6276275e875e.png" />
+          </div>
+
+          {/* IMAGE SECTION 11: Thermal Imaging Examples */}
+          <div className="w-full my-10">
+            <img alt="Thermal Imaging Examples" className="w-full h-auto object-contain" src="/lovable-uploads/645da221-f684-4beb-b134-4a7719207e38.png" />
+          </div>
+
+          {/* IMAGE SECTION 12: Thermal Hand Print */}
+          <div className="w-full my-10">
+            <img alt="Thermal Hand Print" className="w-full h-auto object-contain" src="/lovable-uploads/862f9e58-2ec9-4bfc-b764-90f995e32dfd.png" />
           </div>
         </> : project.imageUrl && <div className="w-full mb-8 relative">
               <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-contain" />
