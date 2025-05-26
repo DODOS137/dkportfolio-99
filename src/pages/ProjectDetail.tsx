@@ -426,7 +426,7 @@ const ProjectDetail = () => {
               
               {/* Image section 1 - Project Type & Info */}
               <div className="w-full my-10">
-                <img alt="Project Type and Info" className="w-full h-auto object-contain" src="/lovable-uploads/940566be-12db-4952-ab5b-ed863bfe1f77.png" />
+                <img alt="Project Type and Info" className="w-full h-auto object-contain" src="/lovable-uploads/ee98462a-374d-43f3-a2d0-b5fb8586168c.png" />
               </div>
               
               {/* Image section 2 - Process */}
