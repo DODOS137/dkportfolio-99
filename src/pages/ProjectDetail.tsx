@@ -451,7 +451,7 @@ const ProjectDetail = () => {
               
               {/* Image section 6 - Robot Models */}
               <div className="w-full my-10">
-                <img alt="Robot Character Models" className="w-full h-auto object-contain" src="/lovable-uploads/78fa77a5-7406-4e19-805a-a6cbd15cab15.png" />
+                <img alt="Robot Character Models" className="w-full h-auto object-contain" src="/lovable-uploads/b767949b-4ac8-4b07-9640-136fafd0f7bf.png" />
               </div>
               
               {/* First 3D model viewer */}
