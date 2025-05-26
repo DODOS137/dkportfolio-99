@@ -9,6 +9,7 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
+
 interface Project {
   id: string;
   title: string;
@@ -713,6 +714,24 @@ const ProjectDetail = () => {
               {/* NEW: Image section 18 - Museum Products Showcase */}
               <div className="w-full my-10">
                 <img alt="Museum Products Showcase - Character and Gift Items" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/e7f73b69-ed67-4890-a0bb-4da80c56a197.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
+              
+              {/* NEW: Image section 19 - Product Design Museum Souvenirs */}
+              <div className="w-full my-10">
+                <img alt="Product Design - Museum Souvenirs" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/21a2f8e7-5e3a-4173-bd24-0469cfb83bf4.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
+              
+              {/* NEW: Image section 20 - Korean Endangered Species Educational Cards */}
+              <div className="w-full my-10">
+                <img alt="Korean Endangered Species - Educational Photo Card Series" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/9e43ee89-d915-496d-bde9-6b62f5aa7148.png" />
+                <div className="mt-4 text-white"></div>
+              </div>
+              
+              {/* NEW: Image section 21 - Complete Museum Product Collection */}
+              <div className="w-full my-10">
+                <img alt="Complete Museum Product Collection Display" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/b7c04a6a-b8f9-4d39-b339-ae915049c167.png" />
                 <div className="mt-4 text-white"></div>
               </div>
             </>}
