@@ -27,14 +27,14 @@ const projects: Project[] = [{
   description: "An interactive digital museum experience",
   fullDescription: "This project is designed as an educational VR experience aimed at helping the general public better understand scientific exhibitions. By presenting complex scientific principles in an intuitive and immersive virtual environment, the content lowers the barrier of entry that many people feel toward science. Through interactive visuals and storytelling, the project seeks to spark curiosity, enhance engagement, and promote more accessible scientific thinking.",
   imageUrl: "/lovable-uploads/a8602589-d1a5-4884-ac8c-6eec67fbc1e7.png",
-  videoId: "7GC2R6GYUrw"
+  videoId: "7GC2R6GYUrw" // Added videoId for the Invisible Space Museum project
 }, {
   id: "2",
   title: "Learn",
   slug: "learn",
   description: "Educational platform for creative professionals",
   fullDescription: "This project centers around three robot characters who serve as the main protagonists, unfolding a narrative set in a vast library after the collapse of human civilization. The story explores themes of memory, knowledge preservation, and the search for meaning in a world without humans. This work involves a comprehensive VR content development process, covering multiple aspects such as detailed level design to create an immersive environment, character design that brings the robots' personalities and roles to life, and storytelling that drives the emotional and conceptual depth of the experience. In addition, spatial design plays a key role in shaping the atmosphere and guiding the user's journey through the virtual world, ensuring that every element contributes to the overall narrative and engagement.",
-  imageUrl: "/lovable-uploads/e6ad8274-f040-4a48-a870-cdaf66392b3e.png"
+  imageUrl: "/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"
 }, {
   id: "3",
   title: "Project 3",
@@ -49,7 +49,7 @@ const projects: Project[] = [{
   description: "Cutting-edge technology implementation",
   fullDescription: "This project focuses on the subtle and often unheard sounds of endangered marine species that live on the ocean floor or hide beneath rocks. These creatures are typically overlooked due to their remote habitats and the inaudibility of their presence in everyday human experience. By highlighting their acoustic environment, the project aims to give these species a stronger voice and presence within the context of an exhibition. It utilizes technologies such as augmented reality (AR) and immersive, spatial sound design to create a deeply engaging sensory experience. Through the combination of visual and auditory storytelling, the installation invites audiences to reflect on the fragility of marine ecosystems and the urgent need for conservation. The project ultimately seeks to shift perception, encouraging empathy for these hidden lives and fostering a deeper connection between visitors and the natural world.",
   imageUrl: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?q=80&w=1936&auto=format&fit=crop",
-  videoId: "zqz3Owz0K3o"
+  videoId: "zqz3Owz0K3o" // Added videoId for the requested YouTube video
 }, {
   id: "5",
   title: "Seoul Natural History Museum",
@@ -58,7 +58,7 @@ const projects: Project[] = [{
   fullDescription: "The Seodaemun Museum of Natural History is dedicated to preserving, researching, and showcasing geological and biological records related to Korea's regional environment. It holds historical significance as the first natural history museum in South Korea founded by a public institution.\nThis project rebrands and redesigns the museum by infusing it with elements of traditional Korean aesthetics. By reinterpreting its existing identity and harmonizing traditional motifs with modern design sensibilities, the project aims to offer a more engaging and immersive experience for visitors. With a holistic approach—encompassing visual identity, spatial design, and content planning—it enhances the museum's distinct character while deepening emotional connection with its audience.",
   imageUrl: "/lovable-uploads/4c29e171-4bbf-4092-854c-13bf32686e5e.png",
   videoId: "8GEK3igRom0",
-  secondaryImageUrl: "/lovable-uploads/64773a01-61f1-46bc-8953-87f1a74a756a.png"
+  secondaryImageUrl: "/lovable-uploads/64773a01-61f1-46bc-8953-87f1a74a756a.png" // Added project info image
 }, {
   id: "6",
   title: "Island",
@@ -426,32 +426,32 @@ const ProjectDetail = () => {
               
               {/* Image section 1 - Project Type & Info */}
               <div className="w-full my-10">
-                <img alt="Project Type and Info" className="w-full h-auto object-contain" src="/lovable-uploads/7ef87db2-c0b5-4b14-9c44-a02673bbfa89.png" />
+                <img alt="Project Type and Info" className="w-full h-auto object-contain" src="/lovable-uploads/940566be-12db-4952-ab5b-ed863bfe1f77.png" />
               </div>
               
               {/* Image section 2 - Process */}
               <div className="w-full my-10">
-                <img alt="Project Process" className="w-full h-auto object-contain" src="/lovable-uploads/9377c794-5dfd-4cbc-95c1-924950254356.png" />
+                <img alt="Project Process" className="w-full h-auto object-contain" src="/lovable-uploads/ee67012e-a3de-4434-8756-5470505cbb8a.png" />
               </div>
               
               {/* Image section 3 - Worldbuilding */}
               <div className="w-full my-10">
-                <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/db878cb6-21bb-45ed-bb18-f32fc6f63ec0.png" />
+                <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/0b2cbece-79ee-49e4-bc1c-f90424c9fe5e.png" />
               </div>
               
               {/* Image section 4 - Story Concept */}
               <div className="w-full my-10">
-                <img alt="Story Concept and Plot" className="w-full h-auto object-contain" src="/lovable-uploads/33404ace-d96d-4d85-ad0e-9528701598b0.png" />
+                <img alt="Story Concept and Plot" className="w-full h-auto object-contain" src="/lovable-uploads/62a5f9bc-5c64-46ae-8980-0dcbecb672d1.png" />
               </div>
               
               {/* Image section 5 - Character Design */}
               <div className="w-full my-10">
-                <img alt="Character Design Details" className="w-full h-auto object-contain" src="/lovable-uploads/21467fb9-09f2-4077-a2c1-0d8a7c478c55.png" />
+                <img alt="Character Design Details" className="w-full h-auto object-contain" src="/lovable-uploads/d2d3c84c-160f-4977-880f-9327f2f7ea65.png" />
               </div>
               
               {/* Image section 6 - Robot Models */}
               <div className="w-full my-10">
-                <img alt="Robot Character Models" className="w-full h-auto object-contain" src="/lovable-uploads/c408582f-77b8-472b-a63a-0044aae0b097.png" />
+                <img alt="Robot Character Models" className="w-full h-auto object-contain" src="/lovable-uploads/78fa77a5-7406-4e19-805a-a6cbd15cab15.png" />
               </div>
               
               {/* First 3D model viewer */}
@@ -459,7 +459,7 @@ const ProjectDetail = () => {
              
               {/* Image section 8 - Robot Specs Detail */}
               <div className="w-full my-10">
-                <img alt="Robot LS1-07 Specifications" className="w-full h-auto object-contain" src="/lovable-uploads/5b3058a3-7730-40e1-a279-239b5c762def.png" />
+                <img alt="Robot LS1-07 Specifications" className="w-full h-auto object-contain" src="/lovable-uploads/faabefcf-ae80-4f2a-900c-362fd79bada3.png" />
               </div>
               
               {/* Use the exact URL provided by the user for the second model */}
@@ -467,7 +467,7 @@ const ProjectDetail = () => {
               
               {/* Image section 9 - 3D Storyboard Development */}
               <div className="w-full my-10">
-                <img alt="3D Storyboard Development" className="w-full h-auto object-contain" src="/lovable-uploads/c3c01f35-32e6-4184-8b0f-4981a9e12657.png" />
+                <img alt="3D Storyboard Development" className="w-full h-auto object-contain" src="/lovable-uploads/f7ea833d-1dc8-4fff-93ef-07b4f1ffb216.png" />
               </div>
 
               {/* YouTube Video Section - 80% width */}
@@ -481,42 +481,42 @@ const ProjectDetail = () => {
               
               {/* NEW: Image section 10 - Level Design */}
               <div className="w-full my-10">
-                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/05b3cbcd-f9ff-4e49-a6c9-332c83271abc.png" />
+                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/6485fafb-6f4c-4df2-8a30-92f56459c08a.png" />
               </div>
               
               {/* NEW: Image section 11 - Artifacts Detail */}
               <div className="w-full my-10">
-                <img alt="Artifact Details and Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/e7e6311d-ad0e-492f-bc55-6f702900d494.png" />
+                <img alt="Artifact Details and Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/e04a0522-d5ea-4f6a-9740-e0ca5aa5950d.png" />
               </div>
               
               {/* NEW: Image section 12 - Player Journey */}
               <div className="w-full my-10">
-                <img alt="Player Journey and Narrative Flow" className="w-full h-auto object-contain" src="/lovable-uploads/139ca29f-9912-4258-8381-65443de63395.png" />
+                <img alt="Player Journey and Narrative Flow" className="w-full h-auto object-contain" src="/lovable-uploads/2397735e-1c9e-4aaf-9d6f-e0a99ac4a20f.png" />
               </div>
               
               {/* NEW: Image section 13 - Final Concept */}
               <div className="w-full my-10">
-                <img alt="Final Concept Images - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/19f88eb1-55fc-447c-9910-a8acad4cdcfe.png" />
+                <img alt="Final Concept Images - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/864cf5be-4bac-4782-b940-e177f068e380.png" />
               </div>
               
               {/* NEW: Image section 14 - Main Hall & Tree */}
               <div className="w-full my-10">
-                <img alt="Main Hall & Tree - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/ccda885d-f430-43ba-8966-4adb619d47a2.png" />
+                <img alt="Main Hall & Tree - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/e5626698-6af1-4e23-aa9e-be7bfc49805d.png" />
               </div>
               
               {/* NEW: Image section 15 - Library Main Hall */}
               <div className="w-full my-10">
-                <img alt="Library Main Hall with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/923720d8-1f64-4936-9a07-71bedb9d4a0e.png" />
+                <img alt="Library Main Hall with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/802f356a-55d0-48dd-907f-cbcb66816631.png" />
               </div>
               
               {/* NEW: Image section 16 - Overhead View */}
               <div className="w-full my-10">
-                <img alt="Overhead View of Library with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/38be711f-81bc-4f86-8fd3-eea0c5226c1a.png" />
+                <img alt="Overhead View of Library with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/5e27fff7-daec-4102-a528-2f7a98573f9a.png" />
               </div>
               
               {/* NEW: Image section 17 - Post-Project Direction */}
               <div className="w-full my-10">
-                <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/2cc04897-cb27-46d1-92b6-76c95a2afbcd.png" />
+                <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/eea5ad47-07fb-49ed-8394-90d23f4dcef3.png" />
               </div>
             </>}
           
