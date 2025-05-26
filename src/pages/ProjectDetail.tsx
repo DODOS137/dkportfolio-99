@@ -9,7 +9,6 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
-
 interface Project {
   id: string;
   title: string;
@@ -175,8 +174,8 @@ const ProjectDetail = () => {
               {isEditing ? <Form {...form}>
                   <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
                     <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
-                  field
-                }) => <FormItem>
+                    field
+                  }) => <FormItem>
                         <FormControl>
                           <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
                         </FormControl>
@@ -293,27 +292,27 @@ const ProjectDetail = () => {
               
               {/* Image section 2 - Approach */}
               <div className="w-full my-10">
-                <img alt="Approach" className="w-full h-auto object-contain" src="/lovable-uploads/69e9a28a-754b-4ea1-8945-946c81453652.png" />
+                <img alt="Approach" className="w-full h-auto object-contain" src="/lovable-uploads/0e65880f-681f-4793-ba4d-19e5629eb0e2.png" />
               </div>
               
               {/* Image section 3 - Process */}
               <div className="w-full my-10">
-                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/b7bcee38-0fa1-4423-8b70-82269a056822.png" />
+                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/64e7f6d7-e42a-4b44-8578-e9ee380d189c.png" />
               </div>
               
               {/* Image section 4 - Worldbuilding */}
               <div className="w-full my-10">
-                <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/501e5230-4841-4922-9d27-c24ede54b1fe.png" />
+                <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/f48414eb-0843-41ca-a7ac-24b47a777836.png" />
               </div>
               
               {/* Image section 5 - Planet A233 */}
               <div className="w-full my-10">
-                <img alt="Planet A233 Concept" className="w-full h-auto object-contain" src="/lovable-uploads/490f1604-abcc-484e-8a48-7105a5fc9f92.png" />
+                <img alt="Planet A233 Concept" className="w-full h-auto object-contain" src="/lovable-uploads/05fad3eb-0a1c-422a-9051-d5c0a07429d2.png" />
               </div>
               
               {/* Image section 6 - Story Concept */}
               <div className="w-full my-10">
-                <img alt="Story Concept & Emotional Logic" className="w-full h-auto object-contain" src="/lovable-uploads/ccc8e848-9291-4f9e-af1f-9363bf39c195.png" />
+                <img alt="Story Concept & Emotional Logic" className="w-full h-auto object-contain" src="/lovable-uploads/ac90b8d0-9933-4710-a8c2-c64c26d5d156.png" />
               </div>
               
               {/* Image section 7 - Video Development */}
@@ -323,17 +322,17 @@ const ProjectDetail = () => {
               
               {/* Image section 8 - Video Series Description */}
               <div className="w-full my-10">
-                <img alt="Video Series Description" className="w-full h-auto object-contain" src="/lovable-uploads/194fd58a-6fcb-41ea-ad9e-e1d5e687e6d6.png" />
+                <img alt="Video Series Description" className="w-full h-auto object-contain" src="/lovable-uploads/545ba2c3-6a0b-4830-a809-d49443554558.png" />
               </div>
               
               {/* Image section 9 - Level Design */}
               <div className="w-full my-10">
-                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/2ced82fe-7596-46c4-971b-9754596a28d3.png" />
+                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/e7b78a92-6b91-4114-92c1-c07f74422417.png" />
               </div>
               
               {/* Image section 10 - User Journey */}
               <div className="w-full my-10">
-                <img alt="User Journey Flow" className="w-full h-auto object-contain" src="/lovable-uploads/005e67f1-2918-488a-bf73-884dcdbe32e7.png" />
+                <img alt="User Journey Flow" className="w-full h-auto object-contain" src="/lovable-uploads/6409b477-6bda-473d-aa60-8768f29cb1cb.png" />
               </div>
               
               {/* Image section 11 - Spatial Design */}
@@ -705,8 +704,8 @@ const ProjectDetail = () => {
                 {isEditing ? <Form {...form}>
                   <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
                     <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
-                field
-              }) => <FormItem>
+                  field
+                }) => <FormItem>
                         <FormControl>
                           <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
                         </FormControl>
