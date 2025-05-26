@@ -270,7 +270,7 @@ const ProjectDetail = () => {
                         저장
                       </Button>
                     </form>
-                  </Form> : <div>{editedDescription || project.fullDescription}</div>}
+                  </Form> : <div className="rounded-xl">{editedDescription || project.fullDescription}</div>}
               </div>
               
               {/* YouTube Video Section for Invisible Space Museum project */}
