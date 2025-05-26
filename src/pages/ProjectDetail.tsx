@@ -253,11 +253,6 @@ const ProjectDetail = () => {
               <div className="absolute inset-0 flex items-center"></div>
             </div>}
           
-          {/* Add text box below image for Invisible Space Museum */}
-          {project.slug === "invisible-space-museum" && <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[30px] px-0">
-              <div>{project.fullDescription}</div>
-            </div>}
-          
           {/* Title and description moved between image and video */}
           {project.slug === "invisible-space-museum" && <>
               <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[100px] px-0">
