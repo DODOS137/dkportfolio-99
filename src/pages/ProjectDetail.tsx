@@ -636,7 +636,7 @@ const ProjectDetail = () => {
               
               {/* Image section 6 - New Museum Perspective */}
               <div className="w-full my-10">
-                <img alt="New Museum Perspective" className="w-full h-auto object-contain" src="/lovable-uploads/89adbe36-6859-44da-8eca-5744c4528def.png" />
+                <img alt="New Museum Perspective" className="w-full h-auto object-contain" src="/lovable-uploads/48e0e71c-26d9-4c1e-acf3-9ed339c4f12a.png" />
               </div>
               
               {/* Image section 7 - Floor Plan / Spatial Design */}
