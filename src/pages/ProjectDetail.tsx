@@ -305,7 +305,17 @@ const ProjectDetail = () => {
                 <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/f48414eb-0843-41ca-a7ac-24b47a777836.png" />
               </div>
               
-              {/* Image section 5 - Planet A233 */}
+              {/* NEW: Added images section 5 - First new image */}
+              <div className="w-full my-10">
+                <img alt="New Content Section 1" className="w-full h-auto object-contain" src="/lovable-uploads/61ac7e81-a1b5-4db6-8766-1d66a6277317.png" />
+              </div>
+              
+              {/* NEW: Added images section 6 - Second new image */}
+              <div className="w-full my-10">
+                <img alt="New Content Section 2" className="w-full h-auto object-contain" src="/lovable-uploads/068639ab-10f9-44a7-8e3a-a9a9b4191bfd.png" />
+              </div>
+              
+              {/* Image section 5 - Planet A233 (renumbered) */}
               <div className="w-full my-10">
                 <img alt="Planet A233 Concept" className="w-full h-auto object-contain" src="/lovable-uploads/05fad3eb-0a1c-422a-9051-d5c0a07429d2.png" />
               </div>
