@@ -9,7 +9,6 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
-
 interface Project {
   id: string;
   title: string;
@@ -68,7 +67,6 @@ const projects: Project[] = [{
   fullDescription: " This project reimagines a bridge as a public space that captures the unique characteristics of an island. By redesigning the bridge, the project aims to bring the diverse and natural beauty of the island into the urban landscape, allowing city dwellers to experience the island's essence within the city environment. The design blends functionality with the island's distinctive features, creating a space that not only connects locations but also serves as a reflection of the island's identity, fostering a deeper connection between nature, architecture, and the urban community.",
   imageUrl: "/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"
 }];
-
 const ProjectDetail = () => {
   const {
     slug
@@ -286,12 +284,12 @@ const ProjectDetail = () => {
               
               {/* Image section 1 - Project Type */}
               <div className="w-full my-10">
-                <img alt="Project Type" className="w-full h-auto object-contain" src="/lovable-uploads/f477124f-9509-4791-95e7-96c76604b152.png" />
+                <img alt="Project Type" className="w-full h-auto object-contain" src="/lovable-uploads/830169e7-f56e-4013-bc24-20cc8dea565a.png" />
               </div>
               
               {/* Image section 2 - Approach */}
               <div className="w-full my-10">
-                <img alt="Approach" className="w-full h-auto object-contain" src="/lovable-uploads/43925604-215e-40c7-b19d-4464841bbb69.png" />
+                <img alt="Approach" className="w-full h-auto object-contain" src="/lovable-uploads/69e9a28a-754b-4ea1-8945-946c81453652.png" />
               </div>
               
               {/* Image section 3 - Process */}
@@ -811,5 +809,4 @@ const ProjectDetail = () => {
         </Button>}
     </div>;
 };
-
 export default ProjectDetail;
