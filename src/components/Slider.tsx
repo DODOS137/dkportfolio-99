@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SliderControls from './SliderControls';
@@ -167,7 +166,7 @@ const Slider = () => {
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full h-full relative bg-gray-400">
             {projects.map((project, index) => (
-              <Link key={`mobile-${index}`} to="/work" className={`absolute top-0 left-0 w-full h-full ${getSlideClass(index)} transition-all duration-${slideTransitionDuration} ease-in-out group`}>
+              <Link key={`mobile-${index}`} to={`/project/${project.slug}`} className={`absolute top-0 left-0 w-full h-full ${getSlideClass(index)} transition-all duration-${slideTransitionDuration} ease-in-out group`}>
                 <div className="relative w-full h-full overflow-hidden flex justify-center items-center">
                   <img 
                     src={project.imageUrl} 
@@ -199,7 +198,7 @@ const Slider = () => {
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full h-full relative bg-gray-400">
             {projects.map((project, index) => (
-              <Link key={`desktop-${index}`} to="/work" className={`absolute top-0 left-0 w-full h-full ${getSlideClass(index)} transition-all duration-${slideTransitionDuration} ease-in-out group`}>
+              <Link key={`desktop-${index}`} to={`/project/${project.slug}`} className={`absolute top-0 left-0 w-full h-full ${getSlideClass(index)} transition-all duration-${slideTransitionDuration} ease-in-out group`}>
                 <div className="relative w-full h-full overflow-hidden flex justify-center items-center">
                   <img 
                     src={project.imageUrl} 
