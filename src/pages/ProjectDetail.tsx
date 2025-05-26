@@ -621,47 +621,47 @@ const ProjectDetail = () => {
               
               {/* Add third image section - Project 5 detailed mockup */}
               <div className="w-full my-10">
-                <img alt="Project Details" className="w-full h-auto object-contain" src="/lovable-uploads/5469078d-c9df-443d-b9f0-4eab1a57cfbf.png" />
+                <img alt="Project Details" className="w-full h-auto object-contain" src="/lovable-uploads/879fe61c-9af9-4fba-ac27-5d8db2213ec2.png" />
               </div>
               
               {/* Image section 4 - Site Selection */}
               <div className="w-full my-10">
-                <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/bcd77b77-5980-4b25-8c77-668dc97cf557.png" />
+                <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/7a2e1d5d-1d2d-4f15-ae7d-e359c8b819b9.png" />
               </div>
               
               {/* Image section 5 - Context & Problem Analysis */}
               <div className="w-full my-10">
-                <img alt="Context & Problem Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/b4236ac5-2c03-4dfa-a337-b06457754639.png" />
+                <img alt="Context & Problem Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/9859d0f1-fea4-4a02-a167-a9f6f46fae36.png" />
               </div>
               
               {/* Image section 6 - New Museum Perspective */}
               <div className="w-full my-10">
-                <img alt="New Museum Perspective" className="w-full h-auto object-contain" src="/lovable-uploads/10edf164-4c9f-4915-a779-5bb928aeed8b.png" />
+                <img alt="New Museum Perspective" className="w-full h-auto object-contain" src="/lovable-uploads/89adbe36-6859-44da-8eca-5744c4528def.png" />
               </div>
               
               {/* Image section 7 - Floor Plan / Spatial Design */}
               <div className="w-full my-10">
-                <img alt="Floor Plan and Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/543f4a31-e026-4287-93b1-9d97726ffd62.png" />
+                <img alt="Floor Plan and Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/41463008-f340-42b9-95c7-a55b9661c035.png" />
               </div>
               
               {/* Image section 8 - Material Board */}
               <div className="w-full my-10">
-                <img alt="Material Board" className="w-full h-auto object-contain" src="/lovable-uploads/ef80e3a5-8484-4a70-8096-237b2bd5f7be.png" />
+                <img alt="Material Board" className="w-full h-auto object-contain" src="/lovable-uploads/b4510869-47ba-463a-b679-bdb58ed7b65b.png" />
               </div>
               
               {/* Image section 9 - Exhibition Planning and Design */}
               <div className="w-full my-10">
-                <img alt="Exhibition Planning and Design" className="w-full h-auto object-contain" src="/lovable-uploads/f5645ceb-bc9c-4f26-a391-bd5a5799b169.png" />
+                <img alt="Exhibition Planning and Design" className="w-full h-auto object-contain" src="/lovable-uploads/bed398f7-fb34-46e0-ad26-ffb824dca924.png" />
               </div>
               
               {/* Image section 10 & 11 - Final Concept Images */}
               <div className="w-full my-10">
-                <img alt="Final Concept Images - Reception Desk" className="w-full h-auto object-contain mb-10" src="/lovable-uploads/bd60915c-2633-49d1-aff4-fdf44bef9f66.png" />
+                <img alt="Final Concept Images - Reception Desk" className="w-full h-auto object-contain mb-10" src="/lovable-uploads/fe779028-c01b-4bf5-9ebc-0a424310336c.png" />
               </div>
               
               {/* Image section 11 - 1F Exhibition Hall - Marine Zone */}
               <div className="w-full my-10">
-                <img alt="1F Exhibition Hall - Marine Zone" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/c92c8656-cfbf-484d-a548-dcdc5975ff0d.png" />
+                <img alt="1F Exhibition Hall - Marine Zone" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/52e5eb3c-2700-4a77-8ea7-9e3b52c29286.png" />
                 <div className="mt-4 text-white">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div></div>
@@ -672,36 +672,36 @@ const ProjectDetail = () => {
               
               {/* Image section 12 - 2F-3F Exhibition Halls - Terrestrial Zone */}
               <div className="w-full my-10">
-                <img alt="2F-3F Exhibition Halls - Terrestrial Zone" className="w-full h-auto object-contain" src="/lovable-uploads/8ce3a4d6-f250-4f97-9fe8-86a67a09329c.png" />
+                <img alt="2F-3F Exhibition Halls - Terrestrial Zone" className="w-full h-auto object-contain" src="/lovable-uploads/f7534ff2-d5a0-497c-8d50-1a9f8a62a525.png" />
               </div>
               
               {/* Image section 13 - Specimens in Wall Cabinets */}
               <div className="w-full my-10">
-                <img alt="Specimens in Wall Cabinets" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/da6dd76b-4ca9-48ee-99cc-a74ca3ef0efe.png" />
+                <img alt="Specimens in Wall Cabinets" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/182830db-3da9-4b94-ac5d-171941471673.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 14 - 2F Rest Area */}
               <div className="w-full my-10">
-                <img alt="2F Rest Area" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/d054f8ad-225d-4b31-b3c9-29d1e14a99cc.png" />
+                <img alt="2F Rest Area" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/4ee0b42f-a392-4e31-ac18-42b5adc383ec.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 15 - Gift Shop */}
               <div className="w-full my-10">
-                <img alt="Gift Shop of the Seoul Natural History Museum" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/7952248b-ea8e-49b6-94c5-09efb48a1b30.png" />
+                <img alt="Gift Shop of the Seoul Natural History Museum" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/813a383c-e871-42ec-9429-009ea532fd60.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 16 - Product Design */}
               <div className="w-full my-10">
-                <img alt="Product Design - Museum Souvenirs" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/32ccef84-5518-4014-913e-2e08022c55da.png" />
+                <img alt="Product Design - Museum Souvenirs" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/6e64316a-8fab-478d-8b4f-656581a9118d.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 17 - Product Design Reflecting Brand Identity */}
               <div className="w-full my-10">
-                <img alt="Product Design Reflecting Brand Identity" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/8047ad6f-738d-475e-8def-43aa9c1f9167.png" />
+                <img alt="Product Design Reflecting Brand Identity" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/f4cdc8c9-8eb5-4bd0-b70d-d684610ba1bf.png" />
                 <div className="mt-4 text-white">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div></div>
@@ -712,7 +712,7 @@ const ProjectDetail = () => {
               
               {/* NEW: Image section 18 - Museum Products Showcase */}
               <div className="w-full my-10">
-                <img alt="Museum Products Showcase - Character and Gift Items" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/43a439cc-4d86-4b77-8fc7-f8baec95dec2.png" />
+                <img alt="Museum Products Showcase - Character and Gift Items" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/e7f73b69-ed67-4890-a0bb-4da80c56a197.png" />
                 <div className="mt-4 text-white"></div>
               </div>
             </>}
