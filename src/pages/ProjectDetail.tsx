@@ -9,7 +9,6 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
-
 interface Project {
   id: string;
   title: string;
@@ -163,7 +162,7 @@ const ProjectDetail = () => {
           
           {/* Image display based on project slug */}
           {project.slug === "project-4" ? <div className="w-full mb-8">
-              <img src="/lovable-uploads/8f1ac9c4-a3f8-4eed-93d3-859b298cea4d.png" alt={project.title} className="w-full h-auto object-contain" />
+              <img alt={project.title} className="w-full h-auto object-contain" src="/lovable-uploads/f5e98b7a-3e8e-452b-b528-71d91c2e803c.png" />
             </div> : project.slug === "project-3" ? <>
           <div className="w-full mb-8 relative">
             <img alt={project.title} className="w-full h-auto object-contain" src="/lovable-uploads/3634679f-46de-467c-8d1d-e5d3132056ab.png" />
@@ -752,47 +751,47 @@ const ProjectDetail = () => {
           {project.slug === "project-4" && <>
               {/* Image section 2 - Project Type */}
               <div className="w-full my-10">
-                <img alt="Project Type Information" className="w-full h-auto object-contain" src="/lovable-uploads/9a0882e4-d74a-4b2d-869e-c62d9aabe300.png" />
+                <img alt="Project Type Information" className="w-full h-auto object-contain" src="/lovable-uploads/a918e484-ffb3-4333-aad6-298cc5115817.png" />
               </div>
               
               {/* Image section 3 - Process */}
               <div className="w-full my-10">
-                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/6b64d68c-5c7f-44ff-8622-f0a536eddaa6.png" />
+                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/52f04aaf-cf6e-4d61-8843-4267bae3cd53.png" />
               </div>
               
               {/* Image section 4 - Idea Development */}
               <div className="w-full my-10">
-                <img alt="Idea Development" className="w-full h-auto object-contain" src="/lovable-uploads/9a130e34-16ea-4c25-869f-3a31c96c1c5f.png" />
+                <img alt="Idea Development" className="w-full h-auto object-contain" src="/lovable-uploads/8be7c53f-ac5e-4eed-b1e6-e86be32c61b3.png" />
               </div>
               
               {/* Image section 5 - Core Concept */}
               <div className="w-full my-10">
-                <img alt="Core Concept" className="w-full h-auto object-contain" src="/lovable-uploads/18bece01-dc05-40e1-8bba-f7de8b355ea2.png" />
+                <img alt="Core Concept" className="w-full h-auto object-contain" src="/lovable-uploads/08abb890-949a-453c-8bb9-aec8041c644b.png" />
               </div>
               
               {/* Image section 6 - Product Design */}
               <div className="w-full my-10">
-                <img alt="Product Design" className="w-full h-auto object-contain" src="/lovable-uploads/2b8b452b-5418-4a76-9c5f-fcc4cad9ac4a.png" />
+                <img alt="Product Design" className="w-full h-auto object-contain" src="/lovable-uploads/2cc0c152-340f-4498-b61e-7b4c763c6cab.png" />
               </div>
               
               {/* Image section 7 - Exhibition Elements */}
               <div className="w-full my-10">
-                <img alt="Exhibition Elements" className="w-full h-auto object-contain" src="/lovable-uploads/5d9a94d9-6f1a-4eb3-ae3b-56fd0282a40f.png" />
+                <img alt="Exhibition Elements" className="w-full h-auto object-contain" src="/lovable-uploads/34d0c9da-7b32-4f52-ab04-30e131e9e593.png" />
               </div>
               
               {/* Image section 8 - Exhibition Design */}
               <div className="w-full my-10">
-                <img alt="Exhibition Design" className="w-full h-auto object-contain" src="/lovable-uploads/3af7f241-2740-4378-b6cd-dd07d9f895d2.png" />
+                <img alt="Exhibition Design" className="w-full h-auto object-contain" src="/lovable-uploads/41427da5-7488-46e2-8e9f-fc76c5262231.png" />
               </div>
               
               {/* Image section 9 - Visitor Experience */}
               <div className="w-full my-10">
-                <img alt="Visitor Experience" className="w-full h-auto object-contain" src="/lovable-uploads/984cf579-cf4a-498b-8582-3b1fdd8f7770.png" />
+                <img alt="Visitor Experience" className="w-full h-auto object-contain" src="/lovable-uploads/69dfc52c-6ef6-4269-ad4b-6a328fbdaf8f.png" />
               </div>
               
               {/* Image section 10 - AR Application Development */}
               <div className="w-full my-10">
-                <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/588ea4f9-132e-4501-a34a-0d7fdad203ac.png" />
+                <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/49981d61-d12b-4075-8adb-0d7a3cef07d3.png" />
               </div>
               
               {/* Second YouTube video player - 80% width */}
@@ -806,17 +805,17 @@ const ProjectDetail = () => {
               
               {/* NEW: Image section 11 - Exhibition & Spatial Design */}
               <div className="w-full my-10">
-                <img alt="Exhibition & Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/681ca87f-74f0-4b9d-af44-6cbdce8a303a.png" />
+                <img alt="Exhibition & Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/659d541c-b696-4743-9fd5-3d08901b9e62.png" />
               </div>
               
               {/* NEW: Image section 12 - Exhibition with Water Ceiling */}
               <div className="w-full my-10">
-                <img alt="Exhibition with Water Ceiling" className="w-full h-auto object-contain" src="/lovable-uploads/55685a01-35c0-482d-8ee8-9306f497bf3a.png" />
+                <img alt="Exhibition with Water Ceiling" className="w-full h-auto object-contain" src="/lovable-uploads/ca5fbebb-09f1-4dbc-9a98-a698a1ccb18a.png" />
               </div>
               
               {/* NEW: Image section 13 - Night Exhibition View */}
               <div className="w-full my-10">
-                <img alt="Night Exhibition View" className="w-full h-auto object-contain" src="/lovable-uploads/1ae50321-4db0-40a9-b5f4-2d05876f82a9.png" />
+                <img alt="Night Exhibition View" className="w-full h-auto object-contain" src="/lovable-uploads/9094c1d8-95be-4d73-a8f3-c3bc882b729c.png" />
               </div>
               
               {/* NEW: Image section 14 - Rock Character */}
