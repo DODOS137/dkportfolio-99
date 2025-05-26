@@ -27,7 +27,7 @@ const projects: Project[] = [{
   slug: "invisible-space-museum",
   description: "An interactive digital museum experience",
   fullDescription: "This project is designed as an educational VR experience aimed at helping the general public better understand scientific exhibitions. By presenting complex scientific principles in an intuitive and immersive virtual environment, the content lowers the barrier of entry that many people feel toward science. Through interactive visuals and storytelling, the project seeks to spark curiosity, enhance engagement, and promote more accessible scientific thinking.",
-  imageUrl: "/lovable-uploads/74e7f7a1-afe3-4fee-b39f-99d5957f0153.png",
+  imageUrl: "/lovable-uploads/eec176ba-ebab-43a9-bb78-e6f08c59771b.png",
   videoId: "7GC2R6GYUrw" // Added videoId for the Invisible Space Museum project
 }, {
   id: "2",
