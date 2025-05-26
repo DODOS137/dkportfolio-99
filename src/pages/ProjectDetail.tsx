@@ -491,7 +491,7 @@ const ProjectDetail = () => {
               
               {/* NEW: Image section 12 - Player Journey */}
               <div className="w-full my-10">
-                <img alt="Player Journey and Narrative Flow" className="w-full h-auto object-contain" src="/lovable-uploads/2397735e-1c9e-4aaf-9d6f-e0a99ac4a20f.png" />
+                <img alt="Player Journey and Narrative Flow" className="w-full h-auto object-contain" src="/lovable-uploads/2dc3125e-e870-4936-86cd-a25499ead211.png" />
               </div>
               
               {/* NEW: Image section 13 - Final Concept */}
