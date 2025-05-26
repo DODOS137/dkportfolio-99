@@ -169,23 +169,24 @@ const ProjectDetail = () => {
             <img src="/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png" alt={project.title} className="w-full h-auto object-contain" />
           </div>
           
-          {/* Changed the text description style to match project-1 (Invisible Space Museum) */}
-          <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[100px] px-0">
-            <h1 className="text-2xl md:text-4xl font-bold mb-4">Thermal Trace</h1>
-            {isEditing ? <Form {...form}>
-                <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
-                  <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
+          <div className="w-full mb-8 flex justify-center">
+            <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4">Thermal Trace</h1>
+              {isEditing ? <Form {...form}>
+                  <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
+                    <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
                   field
                 }) => <FormItem>
                         <FormControl>
                           <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
                         </FormControl>
                       </FormItem>} />
-                  <Button type="submit" className="bg-white text-black hover:bg-gray-200">
-                    저장
-                  </Button>
-                </form>
-              </Form> : <div>{editedDescription || project.fullDescription}</div>}
+                    <Button type="submit" className="bg-white text-black hover:bg-gray-200">
+                      저장
+                    </Button>
+                  </form>
+                </Form> : <div>{editedDescription || project.fullDescription}</div>}
+            </div>
           </div>
           
           {/* Enhanced iframe with better styling and visual elements - Updated with black background */}
@@ -256,22 +257,24 @@ const ProjectDetail = () => {
           
           {/* Title and description moved between image and video */}
           {project.slug === "invisible-space-museum" && <>
-              <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[100px] px-0">
-                <h1 className="text-2xl md:text-4xl font-bold mb-4">Invisible</h1>
-                {isEditing ? <Form {...form}>
-                    <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
-                      <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
-                  field
-                }) => <FormItem>
-                          <FormControl>
-                            <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
-                          </FormControl>
-                        </FormItem>} />
-                      <Button type="submit" className="bg-white text-black hover:bg-gray-200">
-                        저장
-                      </Button>
-                    </form>
-                  </Form> : <div className="rounded-xl">{editedDescription || project.fullDescription}</div>}
+              <div className="w-full mb-8 flex justify-center">
+                <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
+                  <h1 className="text-2xl md:text-4xl font-bold mb-4">Invisible</h1>
+                  {isEditing ? <Form {...form}>
+                      <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
+                        <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
+                    field
+                  }) => <FormItem>
+                            <FormControl>
+                              <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
+                            </FormControl>
+                          </FormItem>} />
+                        <Button type="submit" className="bg-white text-black hover:bg-gray-200">
+                          저장
+                        </Button>
+                      </form>
+                    </Form> : <div className="rounded-xl">{editedDescription || project.fullDescription}</div>}
+                </div>
               </div>
               
               {/* YouTube Video Section for Invisible Space Museum project - 80% width */}
@@ -360,22 +363,24 @@ const ProjectDetail = () => {
           
           {project.slug === "project-5" && <>
               {/* Updated to match Project 1's styling */}
-              <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[100px] px-0">
-                <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
-                {isEditing ? <Form {...form}>
-                    <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
-                      <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
-                  field
-                }) => <FormItem>
-                            <FormControl>
-                              <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
-                            </FormControl>
-                          </FormItem>} />
-                      <Button type="submit" className="bg-white text-black hover:bg-gray-200">
-                        저장
-                      </Button>
-                    </form>
-                  </Form> : <div>{editedDescription || project.fullDescription}</div>}
+              <div className="w-full mb-8 flex justify-center">
+                <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
+                  <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
+                  {isEditing ? <Form {...form}>
+                      <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
+                        <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
+                    field
+                  }) => <FormItem>
+                              <FormControl>
+                                <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
+                              </FormControl>
+                            </FormItem>} />
+                        <Button type="submit" className="bg-white text-black hover:bg-gray-200">
+                          저장
+                        </Button>
+                      </form>
+                    </Form> : <div>{editedDescription || project.fullDescription}</div>}
+                </div>
               </div>
               
               {/* YouTube Video Section - 80% width */}
@@ -390,22 +395,24 @@ const ProjectDetail = () => {
             
           {/* Updated learn project to use the same styling as project-1 (Invisible Space Museum) */}
           {project.slug === "learn" && <>
-              <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[100px] px-0">
-                <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
-                {isEditing ? <Form {...form}>
-                    <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
-                      <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
-                  field
-                }) => <FormItem>
-                            <FormControl>
-                              <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
-                            </FormControl>
-                          </FormItem>} />
-                      <Button type="submit" className="bg-white text-black hover:bg-gray-200">
-                        저장
-                      </Button>
-                    </form>
-                  </Form> : <div className="px-0 py-[30px]">{editedDescription || project.fullDescription}</div>}
+              <div className="w-full mb-8 flex justify-center">
+                <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
+                  <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
+                  {isEditing ? <Form {...form}>
+                      <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
+                        <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
+                    field
+                  }) => <FormItem>
+                              <FormControl>
+                                <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
+                              </FormControl>
+                            </FormItem>} />
+                        <Button type="submit" className="bg-white text-black hover:bg-gray-200">
+                          저장
+                        </Button>
+                      </form>
+                    </Form> : <div className="px-0 py-[30px]">{editedDescription || project.fullDescription}</div>}
+                </div>
               </div>
               
               {/* Image section 1 - Project Type & Info */}
@@ -506,22 +513,24 @@ const ProjectDetail = () => {
           
           {project.slug === "project-6" && <>
               {/* Move text description right after the main image */}
-              <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[100px] px-0">
-                <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
-                {isEditing ? <Form {...form}>
-                    <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
-                      <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
-                  field
-                }) => <FormItem>
-                            <FormControl>
-                              <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
-                            </FormControl>
-                          </FormItem>} />
-                      <Button type="submit" className="bg-white text-black hover:bg-gray-200">
-                        저장
-                      </Button>
-                    </form>
-                  </Form> : <div>{editedDescription || project.fullDescription}</div>}
+              <div className="w-full mb-8 flex justify-center">
+                <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
+                  <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
+                  {isEditing ? <Form {...form}>
+                      <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
+                        <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
+                    field
+                  }) => <FormItem>
+                              <FormControl>
+                                <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
+                              </FormControl>
+                            </FormItem>} />
+                        <Button type="submit" className="bg-white text-black hover:bg-gray-200">
+                          저장
+                        </Button>
+                      </form>
+                    </Form> : <div>{editedDescription || project.fullDescription}</div>}
+                </div>
               </div>
               
               {/* Image section 1 - Project Overview */}
@@ -690,22 +699,24 @@ const ProjectDetail = () => {
             </>}
           
           {/* Updated all remaining projects to use the consistent text box design */}
-          {project.slug !== "project-5" && project.slug !== "invisible-space-museum" && project.slug !== "project-3" && project.slug !== "learn" && project.slug !== "project-6" && <div className="prose prose-invert max-w-none mb-8 rounded-3xl py-[30px] my-[100px] px-0">
-              <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.slug === "project-4" ? "Whispers from the bottom" : project.title}</h1>
-              {isEditing ? <Form {...form}>
-                <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
-                  <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
+          {project.slug !== "project-5" && project.slug !== "invisible-space-museum" && project.slug !== "project-3" && project.slug !== "learn" && project.slug !== "project-6" && <div className="w-full mb-8 flex justify-center">
+              <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
+                <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.slug === "project-4" ? "Whispers from the bottom" : project.title}</h1>
+                {isEditing ? <Form {...form}>
+                  <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
+                    <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
                 field
               }) => <FormItem>
                         <FormControl>
                           <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
                         </FormControl>
                       </FormItem>} />
-                  <Button type="submit" className="bg-white text-black hover:bg-gray-200">
-                    저장
-                  </Button>
-                </form>
-              </Form> : <div>{editedDescription || project.fullDescription}</div>}
+                    <Button type="submit" className="bg-white text-black hover:bg-gray-200">
+                      저장
+                    </Button>
+                  </form>
+                </Form> : <div>{editedDescription || project.fullDescription}</div>}
+              </div>
             </div>}
           
           {/* YouTube Video Section - Show for project-4 right after the text description - 80% width */}
