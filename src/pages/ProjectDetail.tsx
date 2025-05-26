@@ -9,7 +9,6 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
-
 interface Project {
   id: string;
   title: string;
@@ -673,7 +672,7 @@ const ProjectDetail = () => {
               
               {/* Image section 12 - 2F-3F Exhibition Halls - Terrestrial Zone */}
               <div className="w-full my-10">
-                <img alt="2F-3F Exhibition Halls - Terrestrial Zone" className="w-full h-auto object-contain" src="/lovable-uploads/f7534ff2-d5a0-497c-8d50-1a9f8a62a525.png" />
+                <img alt="2F-3F Exhibition Halls - Terrestrial Zone" className="w-full h-auto object-contain" src="/lovable-uploads/4205f60a-6ab5-476a-a7ce-7a6f37dbbce5.png" />
               </div>
               
               {/* Image section 13 - Specimens in Wall Cabinets */}
@@ -684,7 +683,7 @@ const ProjectDetail = () => {
               
               {/* Image section 14 - 2F Rest Area */}
               <div className="w-full my-10">
-                <img alt="2F Rest Area" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/4ee0b42f-a392-4e31-ac18-42b5adc383ec.png" />
+                <img alt="2F Rest Area" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/1782bf36-689f-4119-a4e7-f8415e0dd0a3.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
