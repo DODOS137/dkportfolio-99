@@ -794,6 +794,11 @@ const ProjectDetail = () => {
                 <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/49981d61-d12b-4075-8adb-0d7a3cef07d3.png" />
               </div>
               
+              {/* NEW: Image section 11 - AR Application Interface */}
+              <div className="w-full my-10">
+                <img alt="AR Application Interface and QR Code Demo" className="w-full h-auto object-contain" src="/lovable-uploads/ebbb9da1-9475-4283-8749-c5bc0b05e75f.png" />
+              </div>
+              
               {/* Second YouTube video player - 80% width */}
               <div className="w-full my-10 flex justify-center">
                 <div className="w-[80%]">
@@ -803,22 +808,22 @@ const ProjectDetail = () => {
                 </div>
               </div>
               
-              {/* NEW: Image section 11 - Exhibition & Spatial Design */}
+              {/* Image section 12 - Exhibition & Spatial Design */}
               <div className="w-full my-10">
                 <img alt="Exhibition & Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/659d541c-b696-4743-9fd5-3d08901b9e62.png" />
               </div>
               
-              {/* NEW: Image section 12 - Exhibition with Water Ceiling */}
+              {/* Image section 13 - Exhibition with Water Ceiling */}
               <div className="w-full my-10">
                 <img alt="Exhibition with Water Ceiling" className="w-full h-auto object-contain" src="/lovable-uploads/ca5fbebb-09f1-4dbc-9a98-a698a1ccb18a.png" />
               </div>
               
-              {/* NEW: Image section 13 - Night Exhibition View */}
+              {/* Image section 14 - Night Exhibition View */}
               <div className="w-full my-10">
                 <img alt="Night Exhibition View" className="w-full h-auto object-contain" src="/lovable-uploads/9094c1d8-95be-4d73-a8f3-c3bc882b729c.png" />
               </div>
               
-              {/* NEW: Image section 14 - Rock Character */}
+              {/* Image section 15 - Rock Character */}
               <div className="w-full my-10">
                 <img alt="Rock Character Design" className="w-full h-auto object-contain" src="/lovable-uploads/b5a559ed-b9a5-45a4-8c87-16a5d3072ec7.png" />
               </div>
