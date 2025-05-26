@@ -27,14 +27,14 @@ const projects: Project[] = [{
   description: "An interactive digital museum experience",
   fullDescription: "This project is designed as an educational VR experience aimed at helping the general public better understand scientific exhibitions. By presenting complex scientific principles in an intuitive and immersive virtual environment, the content lowers the barrier of entry that many people feel toward science. Through interactive visuals and storytelling, the project seeks to spark curiosity, enhance engagement, and promote more accessible scientific thinking.",
   imageUrl: "/lovable-uploads/a8602589-d1a5-4884-ac8c-6eec67fbc1e7.png",
-  videoId: "7GC2R6GYUrw" // Added videoId for the Invisible Space Museum project
+  videoId: "7GC2R6GYUrw"
 }, {
   id: "2",
   title: "Learn",
   slug: "learn",
   description: "Educational platform for creative professionals",
   fullDescription: "This project centers around three robot characters who serve as the main protagonists, unfolding a narrative set in a vast library after the collapse of human civilization. The story explores themes of memory, knowledge preservation, and the search for meaning in a world without humans. This work involves a comprehensive VR content development process, covering multiple aspects such as detailed level design to create an immersive environment, character design that brings the robots' personalities and roles to life, and storytelling that drives the emotional and conceptual depth of the experience. In addition, spatial design plays a key role in shaping the atmosphere and guiding the user's journey through the virtual world, ensuring that every element contributes to the overall narrative and engagement.",
-  imageUrl: "/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"
+  imageUrl: "/lovable-uploads/e6ad8274-f040-4a48-a870-cdaf66392b3e.png"
 }, {
   id: "3",
   title: "Project 3",
@@ -49,7 +49,7 @@ const projects: Project[] = [{
   description: "Cutting-edge technology implementation",
   fullDescription: "This project focuses on the subtle and often unheard sounds of endangered marine species that live on the ocean floor or hide beneath rocks. These creatures are typically overlooked due to their remote habitats and the inaudibility of their presence in everyday human experience. By highlighting their acoustic environment, the project aims to give these species a stronger voice and presence within the context of an exhibition. It utilizes technologies such as augmented reality (AR) and immersive, spatial sound design to create a deeply engaging sensory experience. Through the combination of visual and auditory storytelling, the installation invites audiences to reflect on the fragility of marine ecosystems and the urgent need for conservation. The project ultimately seeks to shift perception, encouraging empathy for these hidden lives and fostering a deeper connection between visitors and the natural world.",
   imageUrl: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?q=80&w=1936&auto=format&fit=crop",
-  videoId: "zqz3Owz0K3o" // Added videoId for the requested YouTube video
+  videoId: "zqz3Owz0K3o"
 }, {
   id: "5",
   title: "Seoul Natural History Museum",
@@ -58,7 +58,7 @@ const projects: Project[] = [{
   fullDescription: "The Seodaemun Museum of Natural History is dedicated to preserving, researching, and showcasing geological and biological records related to Korea's regional environment. It holds historical significance as the first natural history museum in South Korea founded by a public institution.\nThis project rebrands and redesigns the museum by infusing it with elements of traditional Korean aesthetics. By reinterpreting its existing identity and harmonizing traditional motifs with modern design sensibilities, the project aims to offer a more engaging and immersive experience for visitors. With a holistic approach—encompassing visual identity, spatial design, and content planning—it enhances the museum's distinct character while deepening emotional connection with its audience.",
   imageUrl: "/lovable-uploads/4c29e171-4bbf-4092-854c-13bf32686e5e.png",
   videoId: "8GEK3igRom0",
-  secondaryImageUrl: "/lovable-uploads/64773a01-61f1-46bc-8953-87f1a74a756a.png" // Added project info image
+  secondaryImageUrl: "/lovable-uploads/64773a01-61f1-46bc-8953-87f1a74a756a.png"
 }, {
   id: "6",
   title: "Island",
