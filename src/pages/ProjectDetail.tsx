@@ -9,6 +9,7 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
+
 interface Project {
   id: string;
   title: string;
@@ -273,9 +274,9 @@ const ProjectDetail = () => {
                   </Form> : <div className="rounded-xl">{editedDescription || project.fullDescription}</div>}
               </div>
               
-              {/* YouTube Video Section for Invisible Space Museum project */}
-              <div className="w-full mb-10">
-                <div className="w-full">
+              {/* YouTube Video Section for Invisible Space Museum project - 80% width */}
+              <div className="w-full mb-10 flex justify-center">
+                <div className="w-[80%]">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId="7GC2R6GYUrw" opts={videoOptions} className="w-full h-full" />
                   </AspectRatio>
@@ -377,9 +378,9 @@ const ProjectDetail = () => {
                   </Form> : <div>{editedDescription || project.fullDescription}</div>}
               </div>
               
-              {/* YouTube Video Section */}
-              <div className="w-full mb-10">
-                <div className="w-full">
+              {/* YouTube Video Section - 80% width */}
+              <div className="w-full mb-10 flex justify-center">
+                <div className="w-[80%]">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId={project.videoId} opts={videoOptions} className="w-full h-full" />
                   </AspectRatio>
@@ -453,11 +454,13 @@ const ProjectDetail = () => {
                 <img alt="3D Storyboard Development" className="w-full h-auto object-contain" src="/lovable-uploads/c3c01f35-32e6-4184-8b0f-4981a9e12657.png" />
               </div>
 
-              {/* YouTube Video Section */}
-              <div className="w-full my-10">
-                <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
-                  <YouTube videoId="aCJblmM9yzs" opts={videoOptions} className="w-full h-full" />
-                </AspectRatio>
+              {/* YouTube Video Section - 80% width */}
+              <div className="w-full my-10 flex justify-center">
+                <div className="w-[80%]">
+                  <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
+                    <YouTube videoId="aCJblmM9yzs" opts={videoOptions} className="w-full h-full" />
+                  </AspectRatio>
+                </div>
               </div>
               
               {/* NEW: Image section 10 - Level Design */}
@@ -705,9 +708,9 @@ const ProjectDetail = () => {
               </Form> : <div>{editedDescription || project.fullDescription}</div>}
             </div>}
           
-          {/* YouTube Video Section - Show for project-4 right after the text description */}
-          {project.slug === "project-4" && <div className="w-full mb-10">
-              <div className="w-full">
+          {/* YouTube Video Section - Show for project-4 right after the text description - 80% width */}
+          {project.slug === "project-4" && <div className="w-full mb-10 flex justify-center">
+              <div className="w-[80%]">
                 <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                   <YouTube videoId="zqz3Owz0K3o" opts={videoOptions} className="w-full h-full" />
                 </AspectRatio>
@@ -761,9 +764,9 @@ const ProjectDetail = () => {
                 <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/588ea4f9-132e-4501-a34a-0d7fdad203ac.png" />
               </div>
               
-              {/* NEW: Second YouTube video player with the provided URL */}
-              <div className="w-full my-10">
-                <div className="w-full">
+              {/* Second YouTube video player - 80% width */}
+              <div className="w-full my-10 flex justify-center">
+                <div className="w-[80%]">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId="M0v75vAVitA" opts={videoOptions} className="w-full h-full" />
                   </AspectRatio>
