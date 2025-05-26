@@ -34,7 +34,7 @@ const projects: Project[] = [{
   slug: "learn",
   description: "Educational platform for creative professionals",
   fullDescription: "This project centers around three robot characters who serve as the main protagonists, unfolding a narrative set in a vast library after the collapse of human civilization. The story explores themes of memory, knowledge preservation, and the search for meaning in a world without humans. This work involves a comprehensive VR content development process, covering multiple aspects such as detailed level design to create an immersive environment, character design that brings the robots' personalities and roles to life, and storytelling that drives the emotional and conceptual depth of the experience. In addition, spatial design plays a key role in shaping the atmosphere and guiding the user's journey through the virtual world, ensuring that every element contributes to the overall narrative and engagement.",
-  imageUrl: "/lovable-uploads/94e55b95-6faf-4ddc-8312-4b5dbf7b609a.png"
+  imageUrl: "/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"
 }, {
   id: "3",
   title: "Project 3",
@@ -496,7 +496,7 @@ const ProjectDetail = () => {
               
               {/* NEW: Image section 13 - Final Concept */}
               <div className="w-full my-10">
-                <img alt="Final Concept Images - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/864cf5be-4bac-4782-b940-e177f068e380.png" />
+                <img alt="Final Concept Images - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/dc6fba69-3787-487e-888d-b6f2bf8a2c85.png" />
               </div>
               
               {/* NEW: Image section 14 - Main Hall & Tree */}
