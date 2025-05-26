@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SliderControls from './SliderControls';
+import ImageWithLoading from './ImageWithLoading';
 
 interface Project {
   id: string;
@@ -168,8 +169,8 @@ const Slider = () => {
             {projects.map((project, index) => (
               <Link key={`mobile-${index}`} to={`/project/${project.slug}`} className={`absolute top-0 left-0 w-full h-full ${getSlideClass(index)} transition-all duration-${slideTransitionDuration} ease-in-out group`}>
                 <div className="relative w-full h-full overflow-hidden flex justify-center items-center">
-                  <img 
-                    src={project.imageUrl} 
+                  <ImageWithLoading 
+                    src={project.imageUrl || ''} 
                     alt={project.title} 
                     className="w-full h-full object-cover" 
                   />
@@ -200,8 +201,8 @@ const Slider = () => {
             {projects.map((project, index) => (
               <Link key={`desktop-${index}`} to={`/project/${project.slug}`} className={`absolute top-0 left-0 w-full h-full ${getSlideClass(index)} transition-all duration-${slideTransitionDuration} ease-in-out group`}>
                 <div className="relative w-full h-full overflow-hidden flex justify-center items-center">
-                  <img 
-                    src={project.imageUrl} 
+                  <ImageWithLoading 
+                    src={project.imageUrl || ''} 
                     alt={project.title} 
                     className="slider-image w-1/2 h-1/2 md:w-full md:h-full object-contain md:object-cover" 
                   />
@@ -243,8 +244,8 @@ const Slider = () => {
             onClick={() => goToSlide(index)}
             className={`w-16 h-12 border-2 cursor-pointer transition-all duration-300 ${currentIndex === index ? 'border-white opacity-100' : 'border-white/40 opacity-60'}`}
           >
-            <img 
-              src={project.imageUrl} 
+            <ImageWithLoading 
+              src={project.imageUrl || ''} 
               alt={`Thumbnail ${index + 1}`} 
               className="w-full h-full object-cover"
             />
