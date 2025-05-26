@@ -337,7 +337,7 @@ const ProjectDetail = () => {
               
               {/* Image section 11 - Spatial Design */}
               <div className="w-full my-10">
-                <img alt="Spatial Design Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/fdbf9b1f-d044-4c35-b65e-e702cd3cb8d3.png" />
+                <img alt="Spatial Design Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/d065433a-59cb-4380-8a3d-efe1ddeaccac.png" />
               </div>
               
               {/* NEW: Additional YouTube Video Section */}
