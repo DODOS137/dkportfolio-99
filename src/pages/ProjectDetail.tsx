@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -10,6 +9,7 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
+
 interface Project {
   id: string;
   title: string;
@@ -160,7 +160,6 @@ const ProjectDetail = () => {
               <ArrowLeft className="mr-2 h-5 w-5" />
               Back to Work
             </Link>
-            
           </div>
           
           {/* Image display based on project slug */}
@@ -812,4 +811,5 @@ const ProjectDetail = () => {
         </Button>}
     </div>;
 };
+
 export default ProjectDetail;
