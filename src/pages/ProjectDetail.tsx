@@ -616,7 +616,7 @@ const ProjectDetail = () => {
           {project.slug === "project-5" && <>
               {/* Image section 1 - Project info image section - Added below video */}
               <div className="w-full my-10">
-                <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/f68f467d-89bb-4679-94d1-e354aaa0d733.png" />
+                <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/4897af92-1df8-42ae-b92f-85594849ca2a.png" />
               </div>
               
               {/* Add third image section - Project 5 detailed mockup */}
