@@ -307,47 +307,47 @@ const ProjectDetail = () => {
               
               {/* NEW: Added images section 5 - First new image */}
               <div className="w-full my-10">
-                <img alt="New Content Section 1" className="w-full h-auto object-contain" src="/lovable-uploads/61ac7e81-a1b5-4db6-8766-1d66a6277317.png" />
+                <img alt="New Content Section 1" className="w-full h-auto object-contain" src="/lovable-uploads/d5cb75e1-942e-4d74-8082-bf5c5207be53.png" />
               </div>
               
               {/* NEW: Added images section 6 - Second new image */}
               <div className="w-full my-10">
-                <img alt="New Content Section 2" className="w-full h-auto object-contain" src="/lovable-uploads/068639ab-10f9-44a7-8e3a-a9a9b4191bfd.png" />
+                <img alt="New Content Section 2" className="w-full h-auto object-contain" src="/lovable-uploads/842728d8-09f4-4f7b-b613-e2bb6e05f8ea.png" />
               </div>
               
               {/* Image section 5 - Planet A233 (renumbered) */}
               <div className="w-full my-10">
-                <img alt="Planet A233 Concept" className="w-full h-auto object-contain" src="/lovable-uploads/05fad3eb-0a1c-422a-9051-d5c0a07429d2.png" />
+                <img alt="Planet A233 Concept" className="w-full h-auto object-contain" src="/lovable-uploads/c1df1907-4ef4-4741-9a7b-70e2e6f116c2.png" />
               </div>
               
               {/* Image section 6 - Story Concept */}
               <div className="w-full my-10">
-                <img alt="Story Concept & Emotional Logic" className="w-full h-auto object-contain" src="/lovable-uploads/ac90b8d0-9933-4710-a8c2-c64c26d5d156.png" />
+                <img alt="Story Concept & Emotional Logic" className="w-full h-auto object-contain" src="/lovable-uploads/9cc70901-2022-4a5e-939b-f88c02068fbd.png" />
               </div>
               
               {/* Image section 7 - Video Development */}
               <div className="w-full my-10">
-                <img alt="Video Development Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/910bd54b-f2a9-4c14-a7eb-1e2fa388c89b.png" />
+                <img alt="Video Development Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/d6d1407b-b465-46d5-ad71-b79279e3e479.png" />
               </div>
               
               {/* Image section 8 - Video Series Description */}
               <div className="w-full my-10">
-                <img alt="Video Series Description" className="w-full h-auto object-contain" src="/lovable-uploads/545ba2c3-6a0b-4830-a809-d49443554558.png" />
+                <img alt="Video Series Description" className="w-full h-auto object-contain" src="/lovable-uploads/6b40ece8-e7f0-4396-8628-8c6d8227f381.png" />
               </div>
               
               {/* Image section 9 - Level Design */}
               <div className="w-full my-10">
-                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/e7b78a92-6b91-4114-92c1-c07f74422417.png" />
+                <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/46d677f1-ba48-4f02-92e5-0132203af2a6.png" />
               </div>
               
               {/* Image section 10 - User Journey */}
               <div className="w-full my-10">
-                <img alt="User Journey Flow" className="w-full h-auto object-contain" src="/lovable-uploads/6409b477-6bda-473d-aa60-8768f29cb1cb.png" />
+                <img alt="User Journey Flow" className="w-full h-auto object-contain" src="/lovable-uploads/a38bd9ef-9d6b-4ad3-b69b-2c40242a3ab6.png" />
               </div>
               
               {/* Image section 11 - Spatial Design */}
               <div className="w-full my-10">
-                <img alt="Spatial Design Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/d065433a-59cb-4380-8a3d-efe1ddeaccac.png" />
+                <img alt="Spatial Design Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/9ee86b31-9b14-4fa1-b6ee-712e724b253d.png" />
               </div>
               
               {/* NEW: Additional YouTube Video Section */}
@@ -361,12 +361,12 @@ const ProjectDetail = () => {
               
               {/* NEW: Image section 13 - Post-Project Direction */}
               <div className="w-full my-10">
-                <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/a96a1fbb-7e20-4e12-83dd-8b2908b357fe.png" />
+                <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/d647163e-b29b-4e71-a2ff-79b820669d03.png" />
               </div>
               
               {/* NEW: Image section 14 - Interactive Evolution Concept */}
               <div className="w-full my-10">
-                <img alt="Interactive Evolution Concept Visualization" className="w-full h-auto object-contain" src="/lovable-uploads/f6086651-deb6-4878-bcb1-bfa446e03f6b.png" />
+                <img alt="Interactive Evolution Concept Visualization" className="w-full h-auto object-contain" src="/lovable-uploads/6d5f6371-aafb-4c95-b8f5-a8f175252cdd.png" />
               </div>
             </>}
           
