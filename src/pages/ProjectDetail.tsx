@@ -9,7 +9,6 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
-
 interface Project {
   id: string;
   title: string;
@@ -555,62 +554,62 @@ const ProjectDetail = () => {
               
               {/* Image section 1 - Project Overview */}
               <div className="w-full my-10">
-                <img alt="Project Overview" className="w-full h-auto object-contain" src="/lovable-uploads/2b2603e2-436b-473e-8a0b-b492246d33d9.png" />
+                <img alt="Project Overview" className="w-full h-auto object-contain" src="/lovable-uploads/d89cc43a-9c25-4153-b9fb-469122dfd41b.png" />
               </div>
               
               {/* Image section 2 - Approach */}
               <div className="w-full my-10">
-                <img alt="Project Approach" className="w-full h-auto object-contain" src="/lovable-uploads/2ad0f781-5bed-4642-8316-6caca0952f3d.png" />
+                <img alt="Project Approach" className="w-full h-auto object-contain" src="/lovable-uploads/d4206bbd-9c36-4b7e-813c-0f5e7d8a710f.png" />
               </div>
               
               {/* Image section 3 - Site Selection */}
               <div className="w-full my-10">
-                <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/a172e8d9-00d6-4b41-ac4e-a54dbfa9386f.png" />
+                <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/038005b4-e4a3-4cea-9150-9e42bfedc6e0.png" />
               </div>
               
               {/* Image section 4 - Bridge Analysis */}
               <div className="w-full my-10">
-                <img alt="Bridge Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/79518ec9-03d9-43fd-91a2-f0093064f858.png" />
+                <img alt="Bridge Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/8922cf72-1049-4af9-bb49-13c2fb763ce8.png" />
               </div>
               
               {/* Image section 5 - Environmental Context */}
               <div className="w-full my-10">
-                <img alt="Environmental Context" className="w-full h-auto object-contain" src="/lovable-uploads/878c5f93-e2c2-484e-8701-9673796885d9.png" />
+                <img alt="Environmental Context" className="w-full h-auto object-contain" src="/lovable-uploads/713d767a-245e-4669-9260-2ffecb67222a.png" />
               </div>
               
               {/* Image section 6 - Concept Design */}
               <div className="w-full my-10">
-                <img alt="Concept Design" className="w-full h-auto object-contain" src="/lovable-uploads/959cc7ed-1026-44d6-b91f-dc2af37e47bb.png" />
+                <img alt="Concept Design" className="w-full h-auto object-contain" src="/lovable-uploads/20ae13cb-0232-48bf-9c63-371c60f9fae5.png" />
               </div>
               
               {/* Image section 7 - Spatial Design */}
               <div className="w-full my-10">
-                <img alt="Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/c032f8c1-ea99-4106-9f55-0359f923d3fe.png" />
+                <img alt="Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/575aafb4-1d49-48af-9e8f-3e46de3c296a.png" />
               </div>
               
               {/* Image section 8 - Bridge Structure */}
               <div className="w-full my-10">
-                <img alt="Bridge Structure" className="w-full h-auto object-contain" src="/lovable-uploads/9204c7d5-567a-49d6-bed7-2119949f553d.png" />
+                <img alt="Bridge Structure" className="w-full h-auto object-contain" src="/lovable-uploads/5ae28b18-5b53-4b30-83d2-a8396b1d831c.png" />
               </div>
               
               {/* Image section 9 - Surface Exposure */}
               <div className="w-full my-10">
-                <img alt="Surface Exposure According to Rainfall" className="w-full h-auto object-contain" src="/lovable-uploads/aa565580-dbc1-4e11-a31f-e11f85c9a5c2.png" />
+                <img alt="Surface Exposure According to Rainfall" className="w-full h-auto object-contain" src="/lovable-uploads/09c8fbd6-c972-46d0-91ed-d7c5f232ea16.png" />
               </div>
               
               {/* Image section 10 - Final Concept Image 1 */}
               <div className="w-full my-10">
-                <img alt="Final Concept View 1" className="w-full h-auto object-contain" src="/lovable-uploads/1368610e-96c5-47b6-a7e2-66e23ebf5c00.png" />
+                <img alt="Final Concept View 1" className="w-full h-auto object-contain" src="/lovable-uploads/96362e70-7f92-4ccc-bded-018ce9529491.png" />
               </div>
               
               {/* Image section 11 - Final Concept Image 2 */}
               <div className="w-full my-10">
-                <img alt="Final Concept Rainy Condition" className="w-full h-auto object-contain" src="/lovable-uploads/c965f215-8575-4d1f-b055-1f1fec8d9cd6.png" />
+                <img alt="Final Concept Rainy Condition" className="w-full h-auto object-contain" src="/lovable-uploads/889f35c5-334f-4291-98ea-b85e3047fae0.png" />
               </div>
               
               {/* Image section 12 - Final Concept Image 3 */}
               <div className="w-full my-10">
-                <img alt="Final Concept View 2" className="w-full h-auto object-contain" src="/lovable-uploads/773d9087-a073-430f-8510-1fdc452c034d.png" />
+                <img alt="Final Concept View 2" className="w-full h-auto object-contain" src="/lovable-uploads/f3be4e0e-10b0-477a-9ff3-44519a154972.png" />
               </div>
             </>}
           
