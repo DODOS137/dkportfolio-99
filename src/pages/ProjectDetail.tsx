@@ -9,7 +9,6 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
-
 interface Project {
   id: string;
   title: string;
@@ -21,7 +20,6 @@ interface Project {
   videoId?: string; // Added videoId field for YouTube videos
   koreanDescription?: string; // Added field for Korean description
 }
-
 const projects: Project[] = [{
   id: "1",
   title: "Invisible Space Museum",
@@ -69,7 +67,6 @@ const projects: Project[] = [{
   fullDescription: " This project reimagines a bridge as a public space that captures the unique characteristics of an island. By redesigning the bridge, the project aims to bring the diverse and natural beauty of the island into the urban landscape, allowing city dwellers to experience the island's essence within the city environment. The design blends functionality with the island's distinctive features, creating a space that not only connects locations but also serves as a reflection of the island's identity, fostering a deeper connection between nature, architecture, and the urban community.",
   imageUrl: "/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"
 }];
-
 const ProjectDetail = () => {
   const {
     slug
@@ -616,122 +613,10 @@ const ProjectDetail = () => {
               </div>
             </>}
           
-          {/* Updated all remaining projects to use the consistent text box design */}
-          {project.slug !== "project-5" && project.slug !== "invisible-space-museum" && project.slug !== "project-3" && project.slug !== "learn" && project.slug !== "project-6" && <div className="w-full mb-8 flex justify-center">
-              <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
-                <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.slug === "project-4" ? "Whispers from the bottom" : project.title}</h1>
-                {isEditing ? <Form {...form}>
-                  <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
-                    <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
-                  field
-                }) => <FormItem>
-                        <FormControl>
-                          <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
-                        </FormControl>
-                      </FormItem>} />
-                    <Button type="submit" className="bg-white text-black hover:bg-gray-200">
-                      저장
-                    </Button>
-                  </form>
-                </Form> : <div>{editedDescription || project.fullDescription}</div>}
-              </div>
-            </div>}
-          
-          {/* YouTube Video Section - Show for project-4 right after the text description - 80% width */}
-          {project.slug === "project-4" && <div className="w-full mb-10 flex justify-center">
-              <div className="w-[80%]">
-                <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
-                  <YouTube videoId="zqz3Owz0K3o" opts={videoOptions} className="w-full h-full" />
-                </AspectRatio>
-              </div>
-            </div>}
-          
-          {/* New Image sections for Project 4 - Added below YouTube video */}
-          {project.slug === "project-4" && <>
-              {/* Image section 2 - Project Type */}
-              <div className="w-full my-10">
-                <img alt="Project Type Information" className="w-full h-auto object-contain" src="/lovable-uploads/a918e484-ffb3-4333-aad6-298cc5115817.png" />
-              </div>
-              
-              {/* Image section 3 - Process */}
-              <div className="w-full my-10">
-                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/52f04aaf-cf6e-4d61-8843-4267bae3cd53.png" />
-              </div>
-              
-              {/* Image section 4 - Idea Development */}
-              <div className="w-full my-10">
-                <img alt="Idea Development" className="w-full h-auto object-contain" src="/lovable-uploads/8be7c53f-ac5e-4eed-b1e6-e86be32c61b3.png" />
-              </div>
-              
-              {/* Image section 5 - Core Concept */}
-              <div className="w-full my-10">
-                <img alt="Core Concept" className="w-full h-auto object-contain" src="/lovable-uploads/08abb890-949a-453c-8bb9-aec8041c644b.png" />
-              </div>
-              
-              {/* Image section 6 - Product Design */}
-              <div className="w-full my-10">
-                <img alt="Product Design" className="w-full h-auto object-contain" src="/lovable-uploads/2cc0c152-340f-4498-b61e-7b4c763c6cab.png" />
-              </div>
-              
-              {/* Image section 7 - Exhibition Elements */}
-              <div className="w-full my-10">
-                <img alt="Exhibition Elements" className="w-full h-auto object-contain" src="/lovable-uploads/34d0c9da-7b32-4f52-ab04-30e131e9e593.png" />
-              </div>
-              
-              {/* Image section 8 - Exhibition Design */}
-              <div className="w-full my-10">
-                <img alt="Exhibition Design" className="w-full h-auto object-contain" src="/lovable-uploads/41427da5-7488-46e2-8e9f-fc76c5262231.png" />
-              </div>
-              
-              {/* Image section 9 - Visitor Experience */}
-              <div className="w-full my-10">
-                <img alt="Visitor Experience" className="w-full h-auto object-contain" src="/lovable-uploads/69dfc52c-6ef6-4269-ad4b-6a328fbdaf8f.png" />
-              </div>
-              
-              {/* Image section 10 - AR Application Development */}
-              <div className="w-full my-10">
-                <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/49981d61-d12b-4075-8adb-0d7a3cef07d3.png" />
-              </div>
-              
-              {/* NEW: Image section 11 - AR Application Interface */}
-              <div className="w-full my-10">
-                <img alt="AR Application Interface and QR Code Demo" className="w-full h-auto object-contain" src="/lovable-uploads/ebbb9da1-9475-4283-8749-c5bc0b05e75f.png" />
-              </div>
-              
-              {/* Second YouTube video player - 80% width */}
-              <div className="w-full my-10 flex justify-center">
-                <div className="w-[80%]">
-                  <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
-                    <YouTube videoId="M0v75vAVitA" opts={videoOptions} className="w-full h-full" />
-                  </AspectRatio>
-                </div>
-              </div>
-              
-              {/* Image section 12 - Exhibition & Spatial Design */}
-              <div className="w-full my-10">
-                <img alt="Exhibition & Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/659d541c-b696-4743-9fd5-3d08901b9e62.png" />
-              </div>
-              
-              {/* Image section 13 - Exhibition with Water Ceiling */}
-              <div className="w-full my-10">
-                <img alt="Exhibition with Water Ceiling" className="w-full h-auto object-contain" src="/lovable-uploads/ca5fbebb-09f1-4dbc-9a98-a698a1ccb18a.png" />
-              </div>
-              
-              {/* Image section 14 - Night Exhibition View */}
-              <div className="w-full my-10">
-                <img alt="Night Exhibition View" className="w-full h-auto object-contain" src="/lovable-uploads/9094c1d8-95be-4d73-a8f3-c3bc882b729c.png" />
-              </div>
-              
-              {/* Image section 15 - Rock Character */}
-              <div className="w-full my-10">
-                <img alt="Rock Character Design" className="w-full h-auto object-contain" src="/lovable-uploads/b5a559ed-b9a5-45a4-8c87-16a5d3072ec7.png" />
-              </div>
-            </>}
-          
           {project.slug === "project-5" && <>
               {/* Image section 1 - Project info image section - Added below video */}
               <div className="w-full my-10">
-                <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/559e1310-22e4-4b77-b007-c07b7bf0eadb.png" />
+                <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/4897af92-1df8-42ae-b92f-85594849ca2a.png" />
               </div>
               
               {/* Add third image section - Project 5 detailed mockup */}
@@ -847,6 +732,118 @@ const ProjectDetail = () => {
               <div className="w-full my-10">
                 <img alt="Complete Museum Product Collection Display" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/b7c04a6a-b8f9-4d39-b339-ae915049c167.png" />
                 <div className="mt-4 text-white"></div>
+              </div>
+            </>}
+          
+          {/* Updated all remaining projects to use the consistent text box design */}
+          {project.slug !== "project-5" && project.slug !== "invisible-space-museum" && project.slug !== "project-3" && project.slug !== "learn" && project.slug !== "project-6" && <div className="w-full mb-8 flex justify-center">
+              <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
+                <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.slug === "project-4" ? "Whispers from the bottom" : project.title}</h1>
+                {isEditing ? <Form {...form}>
+                  <form onSubmit={form.handleSubmit(handleSave)} className="space-y-4">
+                    <FormField control={form.control} name="fullDescription" defaultValue={project.fullDescription} render={({
+                  field
+                }) => <FormItem>
+                        <FormControl>
+                          <Textarea className="min-h-40 bg-gray-800 text-white" {...field} />
+                        </FormControl>
+                      </FormItem>} />
+                    <Button type="submit" className="bg-white text-black hover:bg-gray-200">
+                      저장
+                    </Button>
+                  </form>
+                </Form> : <div>{editedDescription || project.fullDescription}</div>}
+              </div>
+            </div>}
+          
+          {/* YouTube Video Section - Show for project-4 right after the text description - 80% width */}
+          {project.slug === "project-4" && <div className="w-full mb-10 flex justify-center">
+              <div className="w-[80%]">
+                <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
+                  <YouTube videoId="zqz3Owz0K3o" opts={videoOptions} className="w-full h-full" />
+                </AspectRatio>
+              </div>
+            </div>}
+          
+          {/* New Image sections for Project 4 - Added below YouTube video */}
+          {project.slug === "project-4" && <>
+              {/* Image section 2 - Project Type */}
+              <div className="w-full my-10">
+                <img alt="Project Type Information" className="w-full h-auto object-contain" src="/lovable-uploads/a918e484-ffb3-4333-aad6-298cc5115817.png" />
+              </div>
+              
+              {/* Image section 3 - Process */}
+              <div className="w-full my-10">
+                <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/52f04aaf-cf6e-4d61-8843-4267bae3cd53.png" />
+              </div>
+              
+              {/* Image section 4 - Idea Development */}
+              <div className="w-full my-10">
+                <img alt="Idea Development" className="w-full h-auto object-contain" src="/lovable-uploads/8be7c53f-ac5e-4eed-b1e6-e86be32c61b3.png" />
+              </div>
+              
+              {/* Image section 5 - Core Concept */}
+              <div className="w-full my-10">
+                <img alt="Core Concept" className="w-full h-auto object-contain" src="/lovable-uploads/08abb890-949a-453c-8bb9-aec8041c644b.png" />
+              </div>
+              
+              {/* Image section 6 - Product Design */}
+              <div className="w-full my-10">
+                <img alt="Product Design" className="w-full h-auto object-contain" src="/lovable-uploads/2cc0c152-340f-4498-b61e-7b4c763c6cab.png" />
+              </div>
+              
+              {/* Image section 7 - Exhibition Elements */}
+              <div className="w-full my-10">
+                <img alt="Exhibition Elements" className="w-full h-auto object-contain" src="/lovable-uploads/34d0c9da-7b32-4f52-ab04-30e131e9e593.png" />
+              </div>
+              
+              {/* Image section 8 - Exhibition Design */}
+              <div className="w-full my-10">
+                <img alt="Exhibition Design" className="w-full h-auto object-contain" src="/lovable-uploads/41427da5-7488-46e2-8e9f-fc76c5262231.png" />
+              </div>
+              
+              {/* Image section 9 - Visitor Experience */}
+              <div className="w-full my-10">
+                <img alt="Visitor Experience" className="w-full h-auto object-contain" src="/lovable-uploads/69dfc52c-6ef6-4269-ad4b-6a328fbdaf8f.png" />
+              </div>
+              
+              {/* Image section 10 - AR Application Development */}
+              <div className="w-full my-10">
+                <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/49981d61-d12b-4075-8adb-0d7a3cef07d3.png" />
+              </div>
+              
+              {/* NEW: Image section 11 - AR Application Interface */}
+              <div className="w-full my-10">
+                <img alt="AR Application Interface and QR Code Demo" className="w-full h-auto object-contain" src="/lovable-uploads/ebbb9da1-9475-4283-8749-c5bc0b05e75f.png" />
+              </div>
+              
+              {/* Second YouTube video player - 80% width */}
+              <div className="w-full my-10 flex justify-center">
+                <div className="w-[80%]">
+                  <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
+                    <YouTube videoId="M0v75vAVitA" opts={videoOptions} className="w-full h-full" />
+                  </AspectRatio>
+                </div>
+              </div>
+              
+              {/* Image section 12 - Exhibition & Spatial Design */}
+              <div className="w-full my-10">
+                <img alt="Exhibition & Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/659d541c-b696-4743-9fd5-3d08901b9e62.png" />
+              </div>
+              
+              {/* Image section 13 - Exhibition with Water Ceiling */}
+              <div className="w-full my-10">
+                <img alt="Exhibition with Water Ceiling" className="w-full h-auto object-contain" src="/lovable-uploads/ca5fbebb-09f1-4dbc-9a98-a698a1ccb18a.png" />
+              </div>
+              
+              {/* Image section 14 - Night Exhibition View */}
+              <div className="w-full my-10">
+                <img alt="Night Exhibition View" className="w-full h-auto object-contain" src="/lovable-uploads/9094c1d8-95be-4d73-a8f3-c3bc882b729c.png" />
+              </div>
+              
+              {/* Image section 15 - Rock Character */}
+              <div className="w-full my-10">
+                <img alt="Rock Character Design" className="w-full h-auto object-contain" src="/lovable-uploads/b5a559ed-b9a5-45a4-8c87-16a5d3072ec7.png" />
               </div>
             </>}
           
