@@ -77,8 +77,35 @@ const ProjectDetail = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState("");
   const [showScrollToTop, setShowScrollToTop] = useState(false);
+  
+  // Animation hooks for different sections
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
   const mainImageAnimation = useScrollAnimation<HTMLDivElement>();
+  const textBoxAnimation = useScrollAnimation<HTMLDivElement>();
+  const videoAnimation = useScrollAnimation<HTMLDivElement>();
+  const image1Animation = useScrollAnimation<HTMLDivElement>();
+  const image2Animation = useScrollAnimation<HTMLDivElement>();
+  const image3Animation = useScrollAnimation<HTMLDivElement>();
+  const image4Animation = useScrollAnimation<HTMLDivElement>();
+  const image5Animation = useScrollAnimation<HTMLDivElement>();
+  const image6Animation = useScrollAnimation<HTMLDivElement>();
+  const image7Animation = useScrollAnimation<HTMLDivElement>();
+  const image8Animation = useScrollAnimation<HTMLDivElement>();
+  const image9Animation = useScrollAnimation<HTMLDivElement>();
+  const image10Animation = useScrollAnimation<HTMLDivElement>();
+  const image11Animation = useScrollAnimation<HTMLDivElement>();
+  const image12Animation = useScrollAnimation<HTMLDivElement>();
+  const image13Animation = useScrollAnimation<HTMLDivElement>();
+  const image14Animation = useScrollAnimation<HTMLDivElement>();
+  const image15Animation = useScrollAnimation<HTMLDivElement>();
+  const image16Animation = useScrollAnimation<HTMLDivElement>();
+  const image17Animation = useScrollAnimation<HTMLDivElement>();
+  const image18Animation = useScrollAnimation<HTMLDivElement>();
+  const image19Animation = useScrollAnimation<HTMLDivElement>();
+  const image20Animation = useScrollAnimation<HTMLDivElement>();
+  const iframeAnimation = useScrollAnimation<HTMLDivElement>();
+  const modelViewer1Animation = useScrollAnimation<HTMLDivElement>();
+  const modelViewer2Animation = useScrollAnimation<HTMLDivElement>();
 
   // Form setup for editable content
   const form = useForm({
@@ -197,7 +224,14 @@ const ProjectDetail = () => {
                 <img alt={project.title} className="w-full h-auto object-contain" src="/lovable-uploads/3634679f-46de-467c-8d1d-e5d3132056ab.png" />
               </div>
               
-              <div className="w-full mb-8 flex justify-center">
+              <div 
+                ref={textBoxAnimation.ref}
+                className={`w-full mb-8 flex justify-center transition-all duration-1000 delay-500 ${
+                  textBoxAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
                   <h1 className="text-2xl md:text-4xl font-bold mb-4">Thermal Trace</h1>
                   {isEditing ? <Form {...form}>
@@ -216,7 +250,14 @@ const ProjectDetail = () => {
               </div>
               
               {/* Enhanced iframe with better styling and visual elements - Updated with black background */}
-              <div className="w-full my-10">
+              <div 
+                ref={iframeAnimation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-700 ${
+                  iframeAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800">
                   <div className="p-4 bg-opacity-60 flex justify-between items-center bg-black">
                     <h3 className="text-lg font-medium text-white flex items-center">
@@ -233,62 +274,146 @@ const ProjectDetail = () => {
               </div>
               
               {/* IMAGE SECTION 2: Project Information */}
-              <div className="w-full my-10">
+              <div 
+                ref={image1Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image1Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/1b613fef-975b-4b55-b372-66e232aa794c.png" />
               </div>
 
               {/* IMAGE SECTION 3: Project Detail 1 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image2Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image2Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 1" className="w-full h-auto object-contain" src="/lovable-uploads/e8ffa199-e316-4075-a0cf-b1b72a4f690b.png" />
               </div>
 
               {/* IMAGE SECTION 4: Project Detail 2 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image3Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image3Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 2" className="w-full h-auto object-contain" src="/lovable-uploads/0fff2e7a-bb91-47ff-a4e4-330f0f83ea65.png" />
               </div>
 
               {/* IMAGE SECTION 5: Project Detail 3 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image4Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image4Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 3" className="w-full h-auto object-contain" src="/lovable-uploads/2e88ca9a-43c9-4595-ad90-8844c661d086.png" />
               </div>
 
               {/* IMAGE SECTION 6: Project Detail 4 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image5Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image5Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 4" className="w-full h-auto object-contain" src="/lovable-uploads/f3f4863e-6fbd-4b74-bf8b-e692ad885122.png" />
               </div>
 
               {/* IMAGE SECTION 7: Project Detail 5 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image6Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image6Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 5" className="w-full h-auto object-contain" src="/lovable-uploads/07fecdb4-4b8b-4abe-b343-32c0b6550356.png" />
               </div>
 
               {/* IMAGE SECTION 8: Project Detail 6 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image7Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image7Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 6" className="w-full h-auto object-contain" src="/lovable-uploads/6d619edc-0aeb-4cee-88da-2dc1ba2973a5.png" />
               </div>
 
               {/* IMAGE SECTION 9: Project Detail 7 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image8Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image8Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 7" className="w-full h-auto object-contain" src="/lovable-uploads/7483a1cd-91ca-4b71-9f9e-e32acd16486f.png" />
               </div>
 
               {/* IMAGE SECTION 10: Project Detail 8 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image9Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image9Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Detail 8" className="w-full h-auto object-contain" src="/lovable-uploads/5273fb9e-048e-4e4e-8214-6276275e875e.png" />
               </div>
 
               {/* IMAGE SECTION 11: Thermal Imaging Examples */}
-              <div className="w-full my-10">
+              <div 
+                ref={image10Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image10Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Thermal Imaging Examples" className="w-full h-auto object-contain" src="/lovable-uploads/645da221-f684-4beb-b134-4a7719207e38.png" />
               </div>
 
               {/* IMAGE SECTION 12: Thermal Hand Print */}
-              <div className="w-full my-10">
+              <div 
+                ref={image11Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image11Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Thermal Hand Print" className="w-full h-auto object-contain" src="/lovable-uploads/862f9e58-2ec9-4bfc-b764-90f995e32dfd.png" />
               </div>
             </>
           ) : project.imageUrl && (
-            <div className="w-full mb-8 relative">
+            <div 
+              ref={mainImageAnimation.ref}
+              className={`w-full mb-8 relative transition-all duration-1000 delay-300 ${
+                mainImageAnimation.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+              }`}
+            >
               <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-contain" />
               <div className="absolute inset-0 flex items-center"></div>
             </div>
@@ -296,7 +421,14 @@ const ProjectDetail = () => {
           
           {/* Title and description moved between image and video */}
           {project.slug === "invisible-space-museum" && <>
-              <div className="w-full mb-8 flex justify-center">
+              <div 
+                ref={textBoxAnimation.ref}
+                className={`w-full mb-8 flex justify-center transition-all duration-1000 delay-500 ${
+                  textBoxAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
                   <h1 className="text-2xl md:text-4xl font-bold mb-4">Invisible</h1>
                   {isEditing ? <Form {...form}>
@@ -315,7 +447,14 @@ const ProjectDetail = () => {
               </div>
               
               {/* YouTube Video Section for Invisible Space Museum project - 80% width */}
-              <div className="w-full mb-10 flex justify-center">
+              <div 
+                ref={videoAnimation.ref}
+                className={`w-full mb-10 flex justify-center transition-all duration-1000 delay-700 ${
+                  videoAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%]">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId="7GC2R6GYUrw" opts={videoOptions} className="w-full h-full" />
@@ -324,72 +463,170 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 1 - Project Type */}
-              <div className="w-full my-10">
+              <div 
+                ref={image1Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image1Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Type" className="w-full h-auto object-contain" src="/lovable-uploads/830169e7-f56e-4013-bc24-20cc8dea565a.png" />
               </div>
               
               {/* Image section 2 - Approach */}
-              <div className="w-full my-10">
+              <div 
+                ref={image2Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image2Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Approach" className="w-full h-auto object-contain" src="/lovable-uploads/0e65880f-681f-4793-ba4d-19e5629eb0e2.png" />
               </div>
               
               {/* Image section 3 - Process */}
-              <div className="w-full my-10">
+              <div 
+                ref={image3Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image3Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/8fdff91b-0c06-4880-a3db-4d7fb68ee73f.png" />
               </div>
               
               {/* Image section 4 - Worldbuilding */}
-              <div className="w-full my-10">
+              <div 
+                ref={image4Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image4Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/f48414eb-0843-41ca-a7ac-24b47a777836.png" />
               </div>
               
               {/* NEW: Added images section 5 - First new image */}
-              <div className="w-full my-10">
+              <div 
+                ref={image5Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image5Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="New Content Section 1" className="w-full h-auto object-contain" src="/lovable-uploads/d5cb75e1-942e-4d74-8082-bf5c5207be53.png" />
               </div>
               
               {/* NEW: Added images section 6 - Second new image */}
-              <div className="w-full my-10">
+              <div 
+                ref={image6Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image6Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="New Content Section 2" className="w-full h-auto object-contain" src="/lovable-uploads/842728d8-09f4-4f7b-b613-e2bb6e05f8ea.png" />
               </div>
               
               {/* Image section 5 - Planet A233 (renumbered) */}
-              <div className="w-full my-10">
+              <div 
+                ref={image7Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image7Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Planet A233 Concept" className="w-full h-auto object-contain" src="/lovable-uploads/c1df1907-4ef4-4741-9a7b-70e2e6f116c2.png" />
               </div>
               
               {/* Image section 6 - Story Concept */}
-              <div className="w-full my-10">
+              <div 
+                ref={image8Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image8Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Story Concept & Emotional Logic" className="w-full h-auto object-contain" src="/lovable-uploads/9cc70901-2022-4a5e-939b-f88c02068fbd.png" />
               </div>
               
               {/* Image section 7 - Video Development */}
-              <div className="w-full my-10">
+              <div 
+                ref={image9Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image9Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Video Development Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/d6d1407b-b465-46d5-ad71-b79279e3e479.png" />
               </div>
               
               {/* Image section 8 - Video Series Description */}
-              <div className="w-full my-10">
+              <div 
+                ref={image10Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image10Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Video Series Description" className="w-full h-auto object-contain" src="/lovable-uploads/6b40ece8-e7f0-4396-8628-8c6d8227f381.png" />
               </div>
               
               {/* Image section 9 - Level Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image11Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image11Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/46d677f1-ba48-4f02-92e5-0132203af2a6.png" />
               </div>
               
               {/* Image section 10 - User Journey */}
-              <div className="w-full my-10">
+              <div 
+                ref={image12Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image12Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="User Journey Flow" className="w-full h-auto object-contain" src="/lovable-uploads/a38bd9ef-9d6b-4ad3-b69b-2c40242a3ab6.png" />
               </div>
               
               {/* Image section 11 - Spatial Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image13Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image13Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Spatial Design Concepts" className="w-full h-auto object-contain" src="/lovable-uploads/9ee86b31-9b14-4fa1-b6ee-712e724b253d.png" />
               </div>
               
               {/* NEW: Additional YouTube Video Section */}
-              <div className="w-full my-10">
+              <div 
+                ref={image14Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image14Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-full">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId="KT0Cwy9s5n8" opts={videoOptions} className="w-full h-full" />
@@ -398,19 +635,40 @@ const ProjectDetail = () => {
               </div>
               
               {/* NEW: Image section 13 - Post-Project Direction */}
-              <div className="w-full my-10">
+              <div 
+                ref={image15Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image15Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/d647163e-b29b-4e71-a2ff-79b820669d03.png" />
               </div>
               
               {/* NEW: Image section 14 - Interactive Evolution Concept */}
-              <div className="w-full my-10">
+              <div 
+                ref={image16Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image16Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Interactive Evolution Concept Visualization" className="w-full h-auto object-contain" src="/lovable-uploads/6d5f6371-aafb-4c95-b8f5-a8f175252cdd.png" />
               </div>
             </>}
           
           {project.slug === "project-5" && <>
               {/* Updated to match Project 1's styling */}
-              <div className="w-full mb-8 flex justify-center">
+              <div 
+                ref={textBoxAnimation.ref}
+                className={`w-full mb-8 flex justify-center transition-all duration-1000 delay-500 ${
+                  textBoxAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
                   <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
                   {isEditing ? <Form {...form}>
@@ -429,7 +687,14 @@ const ProjectDetail = () => {
               </div>
               
               {/* YouTube Video Section - 80% width */}
-              <div className="w-full mb-10 flex justify-center">
+              <div 
+                ref={videoAnimation.ref}
+                className={`w-full mb-10 flex justify-center transition-all duration-1000 delay-700 ${
+                  videoAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%]">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId={project.videoId} opts={videoOptions} className="w-full h-full" />
@@ -440,7 +705,14 @@ const ProjectDetail = () => {
             
           {/* Updated learn project to use the same styling as project-1 (Invisible Space Museum) */}
           {project.slug === "learn" && <>
-              <div className="w-full mb-8 flex justify-center">
+              <div 
+                ref={textBoxAnimation.ref}
+                className={`w-full mb-8 flex justify-center transition-all duration-1000 delay-500 ${
+                  textBoxAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
                   <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
                   {isEditing ? <Form {...form}>
@@ -459,53 +731,134 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 1 - Project Type & Info */}
-              <div className="w-full my-10">
+              <div 
+                ref={image1Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image1Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Type and Info" className="w-full h-auto object-contain" src="/lovable-uploads/ee98462a-374d-43f3-a2d0-b5fb8586168c.png" />
               </div>
               
               {/* Image section 2 - Process */}
-              <div className="w-full my-10">
+              <div 
+                ref={image2Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image2Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Process" className="w-full h-auto object-contain" src="/lovable-uploads/ee67012e-a3de-4434-8756-5470505cbb8a.png" />
               </div>
               
               {/* Image section 3 - Worldbuilding */}
-              <div className="w-full my-10">
+              <div 
+                ref={image3Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image3Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Worldbuilding - Environmental Setting" className="w-full h-auto object-contain" src="/lovable-uploads/0b2cbece-79ee-49e4-bc1c-f90424c9fe5e.png" />
               </div>
               
               {/* Image section 4 - Story Concept */}
-              <div className="w-full my-10">
+              <div 
+                ref={image4Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image4Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Story Concept and Plot" className="w-full h-auto object-contain" src="/lovable-uploads/62a5f9bc-5c64-46ae-8980-0dcbecb672d1.png" />
               </div>
               
               {/* Image section 5 - Character Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image5Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image5Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Character Design Details" className="w-full h-auto object-contain" src="/lovable-uploads/d2d3c84c-160f-4977-880f-9327f2f7ea65.png" />
               </div>
               
               {/* Image section 6 - Robot Models */}
-              <div className="w-full my-10">
+              <div 
+                ref={image6Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image6Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Robot Character Models" className="w-full h-auto object-contain" src="/lovable-uploads/b767949b-4ac8-4b07-9640-136fafd0f7bf.png" />
               </div>
               
               {/* First 3D model viewer */}
-              <ModelViewer modelPath="https://sketchfab.com/models/ad41a20fb4cb43b5afefa525ddc60ea3/embed" title="Interactive 3D Robot Model" isSketchfab={true} />
+              <div 
+                ref={modelViewer1Animation.ref}
+                className={`transition-all duration-1000 delay-400 ${
+                  modelViewer1Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <ModelViewer modelPath="https://sketchfab.com/models/ad41a20fb4cb43b5afefa525ddc60ea3/embed" title="Interactive 3D Robot Model" isSketchfab={true} />
+              </div>
              
               {/* Image section 8 - Robot Specs Detail */}
-              <div className="w-full my-10">
+              <div 
+                ref={image7Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image7Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Robot LS1-07 Specifications" className="w-full h-auto object-contain" src="/lovable-uploads/faabefcf-ae80-4f2a-900c-362fd79bada3.png" />
               </div>
               
               {/* Use the exact URL provided by the user for the second model */}
-              <ModelViewer modelPath="https://sketchfab.com/models/65e7ff25d71f4512829dfc88c5537add/embed" title="Interactive LS1-07 Robot Model" isSketchfab={true} />
+              <div 
+                ref={modelViewer2Animation.ref}
+                className={`transition-all duration-1000 delay-200 ${
+                  modelViewer2Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <ModelViewer modelPath="https://sketchfab.com/models/65e7ff25d71f4512829dfc88c5537add/embed" title="Interactive LS1-07 Robot Model" isSketchfab={true} />
+              </div>
               
               {/* Image section 9 - 3D Storyboard Development */}
-              <div className="w-full my-10">
+              <div 
+                ref={image8Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image8Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="3D Storyboard Development" className="w-full h-auto object-contain" src="/lovable-uploads/f7ea833d-1dc8-4fff-93ef-07b4f1ffb216.png" />
               </div>
 
               {/* YouTube Video Section - 80% width */}
-              <div className="w-full my-10 flex justify-center">
+              <div 
+                ref={image9Animation.ref}
+                className={`w-full my-10 flex justify-center transition-all duration-1000 delay-400 ${
+                  image9Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%]">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId="aCJblmM9yzs" opts={videoOptions} className="w-full h-full" />
@@ -514,49 +867,112 @@ const ProjectDetail = () => {
               </div>
               
               {/* NEW: Image section 10 - Level Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image10Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image10Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Level Design Layout" className="w-full h-auto object-contain" src="/lovable-uploads/6485fafb-6f4c-4df2-8a30-92f56459c08a.png" />
               </div>
               
               {/* NEW: Image section 11 - Artifacts Detail */}
-              <div className="w-full my-10">
+              <div 
+                ref={image11Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image11Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Artifact Details and Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/e04a0522-d5ea-4f6a-9740-e0ca5aa5950d.png" />
               </div>
               
               {/* NEW: Image section 12 - Player Journey */}
-              <div className="w-full my-10">
+              <div 
+                ref={image12Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image12Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Player Journey and Narrative Flow" className="w-full h-auto object-contain" src="/lovable-uploads/2dc3125e-e870-4936-86cd-a25499ead211.png" />
               </div>
               
               {/* NEW: Image section 13 - Final Concept */}
-              <div className="w-full my-10">
+              <div 
+                ref={image13Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image13Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Final Concept Images - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/dc6fba69-3787-487e-888d-b6f2bf8a2c85.png" />
               </div>
               
               {/* NEW: Image section 14 - Main Hall & Tree */}
-              <div className="w-full my-10">
+              <div 
+                ref={image14Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image14Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Main Hall & Tree - Library Environment" className="w-full h-auto object-contain" src="/lovable-uploads/e5626698-6af1-4e23-aa9e-be7bfc49805d.png" />
               </div>
               
               {/* NEW: Image section 15 - Library Main Hall */}
-              <div className="w-full my-10">
+              <div 
+                ref={image15Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image15Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Library Main Hall with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/802f356a-55d0-48dd-907f-cbcb66816631.png" />
               </div>
               
               {/* NEW: Image section 16 - Overhead View */}
-              <div className="w-full my-10">
+              <div 
+                ref={image16Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image16Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Overhead View of Library with Robot Character" className="w-full h-auto object-contain" src="/lovable-uploads/5e27fff7-daec-4102-a528-2f7a98573f9a.png" />
               </div>
               
               {/* NEW: Image section 17 - Post-Project Direction */}
-              <div className="w-full my-10">
+              <div 
+                ref={image17Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image17Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Post-Project Direction - Interactive Elements" className="w-full h-auto object-contain" src="/lovable-uploads/eea5ad47-07fb-49ed-8394-90d23f4dcef3.png" />
               </div>
             </>}
           
           {project.slug === "project-6" && <>
               {/* Move text description right after the main image */}
-              <div className="w-full mb-8 flex justify-center">
+              <div 
+                ref={textBoxAnimation.ref}
+                className={`w-full mb-8 flex justify-center transition-all duration-1000 delay-500 ${
+                  textBoxAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
                   <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.title}</h1>
                   {isEditing ? <Form {...form}>
@@ -575,114 +991,268 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 1 - Project Overview */}
-              <div className="w-full my-10">
+              <div 
+                ref={image1Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image1Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Overview" className="w-full h-auto object-contain" src="/lovable-uploads/d89cc43a-9c25-4153-b9fb-469122dfd41b.png" />
               </div>
               
               {/* Image section 2 - Approach */}
-              <div className="w-full my-10">
+              <div 
+                ref={image2Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image2Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Approach" className="w-full h-auto object-contain" src="/lovable-uploads/d4206bbd-9c36-4b7e-813c-0f5e7d8a710f.png" />
               </div>
               
               {/* Image section 3 - Site Selection */}
-              <div className="w-full my-10">
+              <div 
+                ref={image3Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image3Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/038005b4-e4a3-4cea-9150-9e42bfedc6e0.png" />
               </div>
               
               {/* Image section 4 - Bridge Analysis */}
-              <div className="w-full my-10">
+              <div 
+                ref={image4Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image4Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Bridge Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/8922cf72-1049-4af9-bb49-13c2fb763ce8.png" />
               </div>
               
               {/* Image section 5 - Environmental Context */}
-              <div className="w-full my-10">
+              <div 
+                ref={image5Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image5Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Environmental Context" className="w-full h-auto object-contain" src="/lovable-uploads/713d767a-245e-4669-9260-2ffecb67222a.png" />
               </div>
               
               {/* Image section 6 - Concept Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image6Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image6Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Concept Design" className="w-full h-auto object-contain" src="/lovable-uploads/20ae13cb-0232-48bf-9c63-371c60f9fae5.png" />
               </div>
               
               {/* Image section 7 - Spatial Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image7Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image7Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/575aafb4-1d49-48af-9e8f-3e46de3c296a.png" />
               </div>
               
               {/* Image section 8 - Bridge Structure */}
-              <div className="w-full my-10">
+              <div 
+                ref={image8Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image8Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Bridge Structure" className="w-full h-auto object-contain" src="/lovable-uploads/5ae28b18-5b53-4b30-83d2-a8396b1d831c.png" />
               </div>
               
               {/* Image section 9 - Surface Exposure */}
-              <div className="w-full my-10">
+              <div 
+                ref={image9Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image9Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Surface Exposure According to Rainfall" className="w-full h-auto object-contain" src="/lovable-uploads/09c8fbd6-c972-46d0-91ed-d7c5f232ea16.png" />
               </div>
               
               {/* Image section 10 - Final Concept Image 1 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image10Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image10Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Final Concept View 1" className="w-full h-auto object-contain" src="/lovable-uploads/96362e70-7f92-4ccc-bded-018ce9529491.png" />
               </div>
               
               {/* Image section 11 - Final Concept Image 2 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image11Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image11Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Final Concept Rainy Condition" className="w-full h-auto object-contain" src="/lovable-uploads/889f35c5-334f-4291-98ea-b85e3047fae0.png" />
               </div>
               
               {/* Image section 12 - Final Concept Image 3 */}
-              <div className="w-full my-10">
+              <div 
+                ref={image12Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image12Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Final Concept View 2" className="w-full h-auto object-contain" src="/lovable-uploads/f3be4e0e-10b0-477a-9ff3-44519a154972.png" />
               </div>
             </>}
           
           {project.slug === "project-5" && <>
               {/* Image section 1 - Project info image section - Added below video */}
-              <div className="w-full my-10">
+              <div 
+                ref={image1Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image1Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/17c9d125-c95d-4f60-8871-4832d52a017f.png" />
               </div>
               
               {/* Add third image section - Project 5 detailed mockup */}
-              <div className="w-full my-10">
+              <div 
+                ref={image2Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image2Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Details" className="w-full h-auto object-contain" src="/lovable-uploads/879fe61c-9af9-4fba-ac27-5d8db2213ec2.png" />
               </div>
               
               {/* Image section 4 - Site Selection */}
-              <div className="w-full my-10">
+              <div 
+                ref={image3Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image3Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Site Selection" className="w-full h-auto object-contain" src="/lovable-uploads/7a2e1d5d-1d2d-4f15-ae7d-e359c8b819b9.png" />
               </div>
               
               {/* Image section 5 - Context & Problem Analysis */}
-              <div className="w-full my-10">
+              <div 
+                ref={image4Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image4Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Context & Problem Analysis" className="w-full h-auto object-contain" src="/lovable-uploads/9859d0f1-fea4-4a02-a167-a9f6f46fae36.png" />
               </div>
               
               {/* Image section 6 - New Museum Perspective */}
-              <div className="w-full my-10">
+              <div 
+                ref={image5Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image5Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="New Museum Perspective" className="w-full h-auto object-contain" src="/lovable-uploads/48e0e71c-26d9-4c1e-acf3-9ed339c4f12a.png" />
               </div>
               
               {/* Image section 7 - Floor Plan / Spatial Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image6Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image6Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Floor Plan and Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/41463008-f340-42b9-95c7-a55b9661c035.png" />
               </div>
               
               {/* Image section 8 - Material Board */}
-              <div className="w-full my-10">
+              <div 
+                ref={image7Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image7Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Material Board" className="w-full h-auto object-contain" src="/lovable-uploads/b4510869-47ba-463a-b679-bdb58ed7b65b.png" />
               </div>
               
               {/* Image section 9 - Exhibition Planning and Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image8Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image8Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Exhibition Planning and Design" className="w-full h-auto object-contain" src="/lovable-uploads/bed398f7-fb34-46e0-ad26-ffb824dca924.png" />
               </div>
               
               {/* Image section 10 & 11 - Final Concept Images */}
-              <div className="w-full my-10">
+              <div 
+                ref={image9Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image9Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Final Concept Images - Reception Desk" className="w-full h-auto object-contain mb-10" src="/lovable-uploads/fe779028-c01b-4bf5-9ebc-0a424310336c.png" />
               </div>
               
               {/* Image section 11 - 1F Exhibition Hall - Marine Zone */}
-              <div className="w-full my-10">
+              <div 
+                ref={image10Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image10Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="1F Exhibition Hall - Marine Zone" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/52e5eb3c-2700-4a77-8ea7-9e3b52c29286.png" />
                 <div className="mt-4 text-white">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -693,36 +1263,78 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 12 - 2F-3F Exhibition Halls - Terrestrial Zone */}
-              <div className="w-full my-10">
+              <div 
+                ref={image11Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image11Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="2F-3F Exhibition Halls - Terrestrial Zone" className="w-full h-auto object-contain" src="/lovable-uploads/4205f60a-6ab5-476a-a7ce-7a6f37dbbce5.png" />
               </div>
               
               {/* Image section 13 - Specimens in Wall Cabinets */}
-              <div className="w-full my-10">
+              <div 
+                ref={image12Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image12Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Specimens in Wall Cabinets" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/182830db-3da9-4b94-ac5d-171941471673.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 14 - 2F Rest Area */}
-              <div className="w-full my-10">
+              <div 
+                ref={image13Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image13Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="2F Rest Area" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/1782bf36-689f-4119-a4e7-f8415e0dd0a3.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 15 - Gift Shop */}
-              <div className="w-full my-10">
+              <div 
+                ref={image14Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image14Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Gift Shop of the Seoul Natural History Museum" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/813a383c-e871-42ec-9429-009ea532fd60.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 16 - Product Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image15Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image15Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Product Design - Museum Souvenirs" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/6e64316a-8fab-478d-8b4f-656581a9118d.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* Image section 17 - Product Design Reflecting Brand Identity */}
-              <div className="w-full my-10">
+              <div 
+                ref={image16Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image16Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Product Design Reflecting Brand Identity" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/f4cdc8c9-8eb5-4bd0-b70d-d684610ba1bf.png" />
                 <div className="mt-4 text-white">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -733,32 +1345,67 @@ const ProjectDetail = () => {
               </div>
               
               {/* NEW: Image section 18 - Museum Products Showcase */}
-              <div className="w-full my-10">
+              <div 
+                ref={image17Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image17Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Museum Products Showcase - Character and Gift Items" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/e7f73b69-ed67-4890-a0bb-4da80c56a197.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* NEW: Image section 19 - Product Design Museum Souvenirs */}
-              <div className="w-full my-10">
+              <div 
+                ref={image18Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image18Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Product Design - Museum Souvenirs" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/21a2f8e7-5e3a-4173-bd24-0469cfb83bf4.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* NEW: Image section 20 - Korean Endangered Species Educational Cards */}
-              <div className="w-full my-10">
+              <div 
+                ref={image19Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image19Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Korean Endangered Species - Educational Photo Card Series" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/9e43ee89-d915-496d-bde9-6b62f5aa7148.png" />
                 <div className="mt-4 text-white"></div>
               </div>
               
               {/* NEW: Image section 21 - Complete Museum Product Collection */}
-              <div className="w-full my-10">
+              <div 
+                ref={image20Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image20Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Complete Museum Product Collection Display" className="w-full h-auto object-contain mb-6" src="/lovable-uploads/b7c04a6a-b8f9-4d39-b339-ae915049c167.png" />
                 <div className="mt-4 text-white"></div>
               </div>
             </>}
           
           {/* Updated all remaining projects to use the consistent text box design */}
-          {project.slug !== "project-5" && project.slug !== "invisible-space-museum" && project.slug !== "project-3" && project.slug !== "learn" && project.slug !== "project-6" && <div className="w-full mb-8 flex justify-center">
+          {project.slug !== "project-5" && project.slug !== "invisible-space-museum" && project.slug !== "project-3" && project.slug !== "learn" && project.slug !== "project-6" && <div 
+              ref={textBoxAnimation.ref}
+              className={`w-full mb-8 flex justify-center transition-all duration-1000 delay-500 ${
+                textBoxAnimation.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+              }`}
+            >
               <div className="w-[80%] prose prose-invert max-w-none rounded-3xl py-[30px] px-0">
                 <h1 className="text-2xl md:text-4xl font-bold mb-4">{project.slug === "project-4" ? "Whispers from the bottom" : project.title}</h1>
                 {isEditing ? <Form {...form}>
@@ -777,7 +1424,14 @@ const ProjectDetail = () => {
             </div>}
           
           {/* YouTube Video Section - Show for project-4 right after the text description - 80% width */}
-          {project.slug === "project-4" && <div className="w-full mb-10 flex justify-center">
+          {project.slug === "project-4" && <div 
+              ref={videoAnimation.ref}
+              className={`w-full mb-10 flex justify-center transition-all duration-1000 delay-700 ${
+                videoAnimation.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+              }`}
+            >
               <div className="w-[80%]">
                 <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                   <YouTube videoId="zqz3Owz0K3o" opts={videoOptions} className="w-full h-full" />
@@ -788,58 +1442,135 @@ const ProjectDetail = () => {
           {/* New Image sections for Project 4 - Added below YouTube video */}
           {project.slug === "project-4" && <>
               {/* Image section 2 - Project Type */}
-              <div className="w-full my-10">
+              <div 
+                ref={image1Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image1Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Project Type Information" className="w-full h-auto object-contain" src="/lovable-uploads/a918e484-ffb3-4333-aad6-298cc5115817.png" />
               </div>
               
               {/* Image section 3 - Process */}
-              <div className="w-full my-10">
+              <div 
+                ref={image2Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image2Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Process" className="w-full h-auto object-contain" src="/lovable-uploads/52f04aaf-cf6e-4d61-8843-4267bae3cd53.png" />
               </div>
               
               {/* Image section 4 - Idea Development */}
-              <div className="w-full my-10">
+              <div 
+                ref={image3Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image3Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Idea Development" className="w-full h-auto object-contain" src="/lovable-uploads/8be7c53f-ac5e-4eed-b1e6-e86be32c61b3.png" />
               </div>
               
               {/* Image section 5 - Core Concept */}
-              <div className="w-full my-10">
+              <div 
+                ref={image4Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image4Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Core Concept" className="w-full h-auto object-contain" src="/lovable-uploads/08abb890-949a-453c-8bb9-aec8041c644b.png" />
               </div>
               
               {/* Image section 6 - Product Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image5Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image5Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Product Design" className="w-full h-auto object-contain" src="/lovable-uploads/2cc0c152-340f-4498-b61e-7b4c763c6cab.png" />
               </div>
               
               {/* Image section 7 - Exhibition Elements */}
-              <div className="w-full my-10">
+              <div 
+                ref={image6Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image6Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Exhibition Elements" className="w-full h-auto object-contain" src="/lovable-uploads/34d0c9da-7b32-4f52-ab04-30e131e9e593.png" />
               </div>
               
               {/* Image section 8 - Exhibition Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image7Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image7Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Exhibition Design" className="w-full h-auto object-contain" src="/lovable-uploads/41427da5-7488-46e2-8e9f-fc76c5262231.png" />
               </div>
               
               {/* Image section 9 - Visitor Experience */}
-              <div className="w-full my-10">
+              <div 
+                ref={image8Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image8Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Visitor Experience" className="w-full h-auto object-contain" src="/lovable-uploads/69dfc52c-6ef6-4269-ad4b-6a328fbdaf8f.png" />
               </div>
               
               {/* Image section 10 - AR Application Development */}
-              <div className="w-full my-10">
+              <div 
+                ref={image9Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image9Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="AR Application Development" className="w-full h-auto object-contain" src="/lovable-uploads/49981d61-d12b-4075-8adb-0d7a3cef07d3.png" />
               </div>
               
               {/* NEW: Image section 11 - AR Application Interface */}
-              <div className="w-full my-10">
+              <div 
+                ref={image10Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image10Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="AR Application Interface and QR Code Demo" className="w-full h-auto object-contain" src="/lovable-uploads/ebbb9da1-9475-4283-8749-c5bc0b05e75f.png" />
               </div>
               
               {/* Second YouTube video player - 80% width */}
-              <div className="w-full my-10 flex justify-center">
-                <div className="w-[80%]">
+              <div 
+                ref={image11Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image11Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <div className="w-full">
                   <AspectRatio ratio={16 / 9} className="bg-gray-900 overflow-hidden rounded-lg">
                     <YouTube videoId="M0v75vAVitA" opts={videoOptions} className="w-full h-full" />
                   </AspectRatio>
@@ -847,22 +1578,50 @@ const ProjectDetail = () => {
               </div>
               
               {/* Image section 12 - Exhibition & Spatial Design */}
-              <div className="w-full my-10">
+              <div 
+                ref={image12Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-500 ${
+                  image12Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Exhibition & Spatial Design" className="w-full h-auto object-contain" src="/lovable-uploads/659d541c-b696-4743-9fd5-3d08901b9e62.png" />
               </div>
               
               {/* Image section 13 - Exhibition with Water Ceiling */}
-              <div className="w-full my-10">
+              <div 
+                ref={image13Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-200 ${
+                  image13Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Exhibition with Water Ceiling" className="w-full h-auto object-contain" src="/lovable-uploads/ca5fbebb-09f1-4dbc-9a98-a698a1ccb18a.png" />
               </div>
               
               {/* Image section 14 - Night Exhibition View */}
-              <div className="w-full my-10">
+              <div 
+                ref={image14Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-300 ${
+                  image14Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Night Exhibition View" className="w-full h-auto object-contain" src="/lovable-uploads/9094c1d8-95be-4d73-a8f3-c3bc882b729c.png" />
               </div>
               
               {/* Image section 15 - Rock Character */}
-              <div className="w-full my-10">
+              <div 
+                ref={image15Animation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-400 ${
+                  image15Animation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 <img alt="Rock Character Design" className="w-full h-auto object-contain" src="/lovable-uploads/b5a559ed-b9a5-45a4-8c87-16a5d3072ec7.png" />
               </div>
             </>}
