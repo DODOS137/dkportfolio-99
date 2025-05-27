@@ -9,6 +9,7 @@ import ModelViewer from '../components/ModelViewer';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
+
 interface Project {
   id: string;
   title: string;
@@ -616,7 +617,7 @@ const ProjectDetail = () => {
           {project.slug === "project-5" && <>
               {/* Image section 1 - Project info image section - Added below video */}
               <div className="w-full my-10">
-                <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/4897af92-1df8-42ae-b92f-85594849ca2a.png" />
+                <img alt="Project Information" className="w-full h-auto object-contain" src="/lovable-uploads/3629d5c0-2319-465a-ac17-a670c7b964dd.png" />
               </div>
               
               {/* Add third image section - Project 5 detailed mockup */}
