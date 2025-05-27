@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -888,7 +887,6 @@ const ProjectDetail = () => {
           aria-label="Scroll to top"
         >
           <ArrowUp className="h-5 w-5" />
-        </ArrowUp>
         </Button>
       )}
     </div>
