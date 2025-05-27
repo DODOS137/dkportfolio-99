@@ -56,7 +56,7 @@ const projects: Project[] = [{
   slug: "project-5",
   description: "Brand Renewal and Environmental Design",
   fullDescription: "The Seodaemun Museum of Natural History is dedicated to preserving, researching, and showcasing geological and biological records related to Korea's regional environment. It holds historical significance as the first natural history museum in South Korea founded by a public institution.\nThis project rebrands and redesigns the museum by infusing it with elements of traditional Korean aesthetics. By reinterpreting its existing identity and harmonizing traditional motifs with modern design sensibilities, the project aims to offer a more engaging and immersive experience for visitors. With a holistic approach—encompassing visual identity, spatial design, and content planning—it enhances the museum's distinct character while deepening emotional connection with its audience.",
-  imageUrl: "/lovable-uploads/4c29e171-4bbf-4092-854c-13bf32686e5e.png",
+  imageUrl: "/lovable-uploads/bbf61a99-9742-401e-9e18-fa7cdb1b4023.png",
   videoId: "8GEK3igRom0",
   secondaryImageUrl: "/lovable-uploads/64773a01-61f1-46bc-8953-87f1a74a756a.png" // Added project info image
 }, {
