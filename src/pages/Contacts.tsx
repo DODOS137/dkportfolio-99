@@ -5,8 +5,8 @@ import { Mail, Phone, Linkedin, Instagram, Youtube } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contacts = () => {
-  const titleAnimation = useScrollAnimation();
-  const cardAnimation = useScrollAnimation();
+  const titleAnimation = useScrollAnimation<HTMLHeadingElement>();
+  const cardAnimation = useScrollAnimation<HTMLDivElement>();
 
   const contacts = [
     {

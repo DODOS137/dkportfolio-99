@@ -60,8 +60,8 @@ const projects: Project[] = [
 ];
 
 const Work = () => {
-  const titleAnimation = useScrollAnimation();
-  const gridAnimation = useScrollAnimation();
+  const titleAnimation = useScrollAnimation<HTMLHeadingElement>();
+  const gridAnimation = useScrollAnimation<HTMLDivElement>();
 
   return (
     <div className="min-h-screen bg-black overflow-y-auto">
