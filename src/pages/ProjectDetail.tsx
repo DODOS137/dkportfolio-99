@@ -23,13 +23,13 @@ interface ProjectData {
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
-    subtitle: "Virtual Reality Contents for Space Museum",
+    subtitle: "Scientific Virtual Reality Contents",
     description: "An immersive virtual reality experience that transforms the traditional museum visit into an extraordinary journey through space and time.",
     challenge: "Creating an engaging and educational VR experience that makes complex astronomical concepts accessible to visitors of all ages while maintaining scientific accuracy.",
     solution: "Developed a comprehensive VR environment featuring interactive stellar formations, planetary systems, and cosmic phenomena with intuitive navigation and real-time educational overlays.",
     result: "Successfully enhanced visitor engagement by 300% and received recognition from the International Museum Association for innovative digital experiences.",
-    year: "2023",
-    client: "National Space Museum",
+    year: "2024",
+    client: "Virtual Reality Design",
     role: "VR Developer & Experience Designer",
     images: [
       "/lovable-uploads/eec176ba-ebab-43a9-bb78-e6f08c59771b.png"
