@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -112,12 +111,8 @@ const ProjectDetail = () => {
   const project = slug ? projectData[slug] : null;
 
   const heroRef = useScrollAnimation<HTMLDivElement>();
-  const contentRef = useScrollAnimation<HTMLDivElement>();
-  const imageRefs = [
-    useScrollAnimation<HTMLDivElement>(),
-    useScrollAnimation<HTMLDivElement>(),
-    useScrollAnimation<HTMLDivElement>()
-  ];
+  const detailsRef = useScrollAnimation<HTMLDivElement>();
+  const imageRef = useScrollAnimation<HTMLDivElement>();
 
   if (!project) {
     return (
@@ -135,70 +130,107 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
+      <nav className="fixed top-0 left-0 right-0 z-50 p-8">
         <Link 
           to="/work" 
-          className="inline-flex items-center text-white hover:text-gray-300 transition-colors text-sm tracking-wide"
+          className="inline-flex items-center text-white hover:text-gray-300 transition-colors font-light tracking-wider"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          BACK TO WORK
+          <ArrowLeft className="w-4 h-4 mr-3" />
+          BACK
         </Link>
       </nav>
 
       {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24">
         <div 
           ref={heroRef.ref}
-          className={`text-center max-w-4xl px-6 transition-all duration-1500 ${
-            heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+          className={`max-w-6xl transition-all duration-1000 ${
+            heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
-            {project.title}
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
-            {project.subtitle}
-          </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.year}</span>
-            <span>•</span>
-            <span>{project.client}</span>
-            <span>•</span>
-            <span>{project.role}</span>
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4">
+              {project.title}
+            </h1>
+            <p className="text-lg md:text-xl text-gray-400 font-light tracking-wide">
+              {project.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm font-light tracking-wider">
+            <div>
+              <div className="text-gray-500 mb-2">YEAR</div>
+              <div>{project.year}</div>
+            </div>
+            <div>
+              <div className="text-gray-500 mb-2">CLIENT</div>
+              <div>{project.client}</div>
+            </div>
+            <div>
+              <div className="text-gray-500 mb-2">ROLE</div>
+              <div>{project.role}</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20 px-6 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div 
-            ref={contentRef.ref}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-1500 ${
-              contentRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
-          >
+      {/* Project Image */}
+      <section className="mb-32">
+        <div 
+          ref={imageRef.ref}
+          className={`transition-all duration-1000 delay-300 ${
+            imageRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <div className="w-full h-screen relative">
+            <img 
+              src={project.images[0]} 
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Project Details */}
+      <section className="px-8 md:px-16 lg:px-24 mb-32">
+        <div 
+          ref={detailsRef.ref}
+          className={`max-w-4xl transition-all duration-1000 delay-500 ${
+            detailsRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-light mb-8 tracking-wide">Overview</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <h2 className="text-2xl font-light mb-8 tracking-wide">Overview</h2>
+              <p className="text-gray-300 leading-relaxed mb-12 text-lg">
                 {project.description}
               </p>
             </div>
+
             <div className="space-y-12">
               <div>
-                <h3 className="text-xl font-light mb-4 text-gray-400 tracking-wide">Challenge</h3>
+                <h3 className="text-lg font-light mb-4 text-gray-400 tracking-wide uppercase">
+                  Challenge
+                </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {project.challenge}
                 </p>
               </div>
+
               <div>
-                <h3 className="text-xl font-light mb-4 text-gray-400 tracking-wide">Solution</h3>
+                <h3 className="text-lg font-light mb-4 text-gray-400 tracking-wide uppercase">
+                  Solution
+                </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {project.solution}
                 </p>
               </div>
+
               <div>
-                <h3 className="text-xl font-light mb-4 text-gray-400 tracking-wide">Result</h3>
+                <h3 className="text-lg font-light mb-4 text-gray-400 tracking-wide uppercase">
+                  Result
+                </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {project.result}
                 </p>
@@ -208,37 +240,19 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Images Section */}
-      <section className="pb-20">
-        {project.images.map((image, index) => (
-          <div 
-            key={index}
-            ref={imageRefs[index]?.ref}
-            className={`mb-20 transition-all duration-1500 ${
-              imageRefs[index]?.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
-          >
-            <div className="w-full h-screen relative overflow-hidden">
-              <img 
-                src={image} 
-                alt={`${project.title} - Image ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-20" />
-            </div>
-          </div>
-        ))}
-      </section>
-
-      {/* Next Project Section */}
-      <section className="py-32 px-6 md:px-8 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-light mb-8 tracking-wide">Explore More Work</h2>
+      {/* Next Project */}
+      <section className="border-t border-gray-800 py-16 px-8 md:px-16 lg:px-24">
+        <div className="max-w-4xl">
           <Link 
             to="/work"
-            className="inline-block border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-12 py-4 text-sm tracking-widest"
+            className="group inline-block"
           >
-            VIEW ALL PROJECTS
+            <div className="text-lg font-light text-gray-400 mb-2 tracking-wide uppercase">
+              Next
+            </div>
+            <div className="text-2xl md:text-3xl font-light tracking-wide group-hover:text-gray-300 transition-colors">
+              View All Projects →
+            </div>
           </Link>
         </div>
       </section>
