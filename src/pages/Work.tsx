@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface Project {
   id: string;
@@ -10,7 +11,7 @@ interface Project {
   description: string;
   imageUrl?: string;
   videoId?: string;
-  koreanDescription?: string; // Added for consistency
+  koreanDescription?: string;
 }
 
 const projects: Project[] = [
@@ -59,37 +60,93 @@ const projects: Project[] = [
 ];
 
 const Work = () => {
-  return <div className="min-h-screen bg-black overflow-y-auto">
+  const headerAnimation = useScrollAnimation<HTMLDivElement>();
+  const projectAnimations = projects.map(() => useScrollAnimation<HTMLDivElement>());
+
+  return (
+    <div className="min-h-screen bg-black">
       <Navbar />
-      <main className="pt-20 md:pt-24 px-4 md:px-8 pb-16">
-        <div className="max-w-5xl mx-auto mt-4 md:mt-8">
-          <h1 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-8">Work</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8">
-            {projects.map((project) => (
-              <Link 
-                key={project.id} 
-                to={`/project/${project.slug}`}
-                className="bg-[#333] aspect-video flex items-center justify-center group relative overflow-hidden hover:bg-[#444] transition-colors duration-300 border border-white/80"
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div 
+            ref={headerAnimation.ref}
+            className={`transition-all duration-1500 ${
+              headerAnimation.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-20'
+            }`}
+          >
+            <h1 className="text-5xl md:text-7xl font-light text-white mb-6">
+              Selected
+              <br />
+              <span className="text-gray-400">Works</span>
+            </h1>
+            <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
+              A collection of immersive experiences, spatial designs, and virtual reality projects 
+              that explore the boundaries of digital interaction and human perception.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Grid */}
+      <section className="pb-20 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                ref={projectAnimations[index].ref}
+                className={`group transition-all duration-1500 ${
+                  projectAnimations[index].isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-20'
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
               >
-                {project.imageUrl && (
-                  <div className="absolute inset-0 opacity-70 group-hover:opacity-40 transition-opacity">
-                    <img 
-                      src={project.imageUrl} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover"
-                    />
+                <Link to={`/project/${project.slug}`}>
+                  <div className="relative overflow-hidden bg-gray-900 aspect-[4/3] rounded-lg">
+                    {project.imageUrl && (
+                      <img 
+                        src={project.imageUrl} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-500" />
+                    <div className="absolute inset-0 flex items-end p-6 md:p-8">
+                      <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        <h3 className="text-2xl md:text-3xl font-light mb-2">{project.title}</h3>
+                        <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                          {project.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                )}
-                <div className="absolute inset-0 flex items-center justify-center flex-col space-y-1 md:space-y-2 p-4 z-10">
-                  <p className="text-white text-center text-base md:text-xl font-medium">{project.title}</p>
-                  <p className="text-gray-300 text-center text-xs md:text-sm group-hover:opacity-100 transition-opacity">{project.description}</p>
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
         </div>
-      </main>
-    </div>;
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 md:px-8 border-t border-gray-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-light text-white mb-8">
+            Interested in Collaboration?
+          </h2>
+          <Link to="/contacts">
+            <button className="border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-8 py-3 rounded">
+              Let's Talk
+            </button>
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default Work;

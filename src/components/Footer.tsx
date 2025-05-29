@@ -1,55 +1,63 @@
 
-import React, { useState } from 'react';
-import { Mail } from 'lucide-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
-import { Button } from './ui/button';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the data to a server
-    console.log('Submitted:', {
-      email,
-      message
-    });
-    setSubmitted(true);
-    setEmail('');
-    setMessage('');
-
-    // Reset the submitted state after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
-  };
-
-  return <footer className="bg-black text-white py-10 mt-8 md:mt-20 md:py-[5px] my-0">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+  return (
+    <footer className="bg-black text-white py-16 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           
-          {/* Contact Information */}
+          {/* Brand */}
+          <div>
+            <h3 className="text-2xl font-light tracking-wider mb-4">DOHYUN KIM</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Creating immersive experiences through VR, spatial design, and innovative digital interactions.
+            </p>
+          </div>
           
+          {/* Navigation */}
+          <div>
+            <h4 className="text-lg font-light mb-4">Navigation</h4>
+            <div className="space-y-2">
+              <Link to="/home" className="block text-gray-400 hover:text-white transition-colors">Home</Link>
+              <Link to="/work" className="block text-gray-400 hover:text-white transition-colors">Work</Link>
+              <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">About</Link>
+              <Link to="/contacts" className="block text-gray-400 hover:text-white transition-colors">Contact</Link>
+            </div>
+          </div>
           
-          {/* Contact Form */}
-          
+          {/* Contact */}
+          <div>
+            <h4 className="text-lg font-light mb-4">Get In Touch</h4>
+            <div className="space-y-2">
+              <a href="mailto:dohyon18@gmail.com" className="block text-gray-400 hover:text-white transition-colors">
+                dohyon18@gmail.com
+              </a>
+              <a href="tel:+447587458797" className="block text-gray-400 hover:text-white transition-colors">
+                +44 (0) 7587-458797
+              </a>
+            </div>
+          </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-400 text-xs md:text-sm">© {new Date().getFullYear()} Do Hyun Kim. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 sm:mt-0 text-xs md:text-sm">
-            <Link to="/home" className="text-gray-400 hover:text-white transition-colors">Home</Link>
-            <Link to="/work" className="text-gray-400 hover:text-white transition-colors">Work</Link>
-            <Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link>
-            <Link to="/contacts" className="text-gray-400 hover:text-white transition-colors">Contacts</Link>
+        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Dohyun Kim. All rights reserved.</p>
+          <div className="flex space-x-6 mt-4 sm:mt-0">
+            <a href="https://www.linkedin.com/in/dohyun-kim-028221343" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/donn_kkim" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              Instagram
+            </a>
+            <a href="https://www.youtube.com/channel/UCwwt3iNyM7nuIx_XbXiqlqw" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              YouTube
+            </a>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 
 export default Footer;

@@ -1,9 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Slider, { autoAdvanceInterval } from '../components/Slider';
 import SearchBox from '../components/SearchBox';
 import { Button } from '../components/ui/button';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 // Create a separate component for the slider controls
 const SliderIndicators = () => {
@@ -33,44 +35,136 @@ const SliderIndicators = () => {
 };
 
 const Home = () => {
-  return <div className="min-h-screen bg-black overflow-hidden">
+  const heroAnimation = useScrollAnimation<HTMLDivElement>();
+  const sliderAnimation = useScrollAnimation<HTMLDivElement>();
+  const introAnimation = useScrollAnimation<HTMLDivElement>();
+
+  return (
+    <div className="min-h-screen bg-black overflow-hidden">
       <Navbar />
-      <main className="flex flex-col md:flex-row relative min-h-[calc(100vh-200px)] md:h-screen">
-        <div className="w-full md:w-1/2 relative flex flex-col justify-between order-2 md:order-1 pt-16 md:pt-0 px-4 md:px-0">
-          {/* Removing the vertical line that was here */}
-          
-          {/* Main heading - increased z-index to ensure it's on top */}
-          <div className="md:absolute left-6 md:left-32 top-8 md:top-1/3 z-50 px-0 md:px-0 mt-4 md:mt-0">
-            <h1 className="text-3xl md:text-7xl font-bold tracking-wide md:tracking-widest text-white">DOHYUN KIM</h1>
-            <p className="text-white mt-2 md:mt-4 text-sm md:text-base">Hello :)</p>
-            
-            <div className="mt-4 md:mt-6">
-              <Link to="/about">
-                <Button variant="outline" className="border-white transition-colors text-black bg-white my-0">
-                  About Me
-                </Button>
-              </Link>
-            </div>
+      
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center relative">
+        <div 
+          ref={heroAnimation.ref}
+          className={`text-center z-10 transition-all duration-1500 ${
+            heroAnimation.isVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-20'
+          }`}
+        >
+          <h1 className="text-6xl md:text-8xl font-light tracking-wider text-white mb-6">
+            DOHYUN KIM
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light">
+            VR & Spatial Design
+          </p>
+          <div className="flex gap-6 justify-center">
+            <Link to="/work">
+              <Button 
+                variant="outline" 
+                className="border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-8 py-3"
+              >
+                View Work
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button 
+                variant="outline" 
+                className="border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-8 py-3"
+              >
+                About Me
+              </Button>
+            </Link>
           </div>
-          
-          <div className="mt-6 md:mt-auto mb-4 md:mb-32 flex flex-col space-y-4 md:space-y-6 px-0 md:pl-32 relative z-20">
-            {/* Slider indicators */}
-            <div className="hidden md:block">
+        </div>
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-1 h-1 bg-white rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute bottom-32 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse delay-2000"></div>
+        </div>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="py-20 px-4 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div 
+            ref={introAnimation.ref}
+            className={`transition-all duration-1500 delay-300 ${
+              introAnimation.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-20'
+            }`}
+          >
+            <h2 className="text-4xl md:text-6xl font-light text-white mb-8 text-center">
+              Creating Immersive
+              <br />
+              <span className="text-gray-400">Experiences</span>
+            </h2>
+            <p className="text-lg text-gray-300 text-center max-w-2xl mx-auto leading-relaxed">
+              Exploring the intersection of virtual reality, spatial design, and human interaction 
+              through innovative digital experiences that challenge perception and inspire curiosity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Slider */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div 
+            ref={sliderAnimation.ref}
+            className={`transition-all duration-1500 delay-600 ${
+              sliderAnimation.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-20'
+            }`}
+          >
+            <h3 className="text-3xl md:text-4xl font-light text-white mb-12 text-center">
+              Featured Projects
+            </h3>
+            <div className="mb-8">
+              <Slider />
+            </div>
+            <div className="flex justify-center">
               <SliderIndicators />
             </div>
-            
-            {/* Search box */}
-            <div className="relative z-20">
-              <SearchBox />
-            </div>
           </div>
         </div>
-        {/* Make the panel visible on mobile with proper height to fill the screen */}
-        <div className="w-full md:w-1/2 h-[30vh] md:h-full order-1 md:order-2">
-          <Slider />
+      </section>
+
+      {/* Search Section */}
+      <section className="py-20 px-4 md:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-light text-white mb-8">
+            Explore My Work
+          </h3>
+          <SearchBox />
         </div>
-      </main>
-    </div>;
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 px-4 md:px-8 border-t border-gray-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl md:text-4xl font-light text-white mb-8">
+            Let's Create Something
+            <br />
+            <span className="text-gray-400">Amazing Together</span>
+          </h3>
+          <Link to="/contacts">
+            <Button 
+              variant="outline" 
+              className="border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-12 py-4 text-lg"
+            >
+              Get In Touch
+            </Button>
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default Home;
