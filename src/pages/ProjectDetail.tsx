@@ -4,7 +4,6 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -20,15 +19,11 @@ interface ProjectData {
     videoId?: string;
   };
 }
-
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
     subtitle: "Scientific Virtual Reality Contents",
     description: "Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.",
-    challenge: "Making complex scientific concepts accessible and engaging for general audiences through immersive technology.",
-    solution: "Developed an intuitive VR environment that translates abstract scientific principles into interactive, visual experiences.",
-    result: "Successfully created an educational platform that significantly improved public engagement with scientific content.",
     year: "2024",
     client: "Virtual Reality Design",
     role: "VR Developer & Experience Designer",
@@ -38,9 +33,6 @@ const projectData: ProjectData = {
     title: "Learn",
     subtitle: "Immersive Virtual Reality Experience",
     description: "A groundbreaking educational platform that revolutionizes learning through immersive virtual reality technology.",
-    challenge: "Bridging the gap between traditional education methods and modern technology to create engaging learning experiences.",
-    solution: "Designed an intuitive VR learning environment with interactive modules, real-time feedback, and personalized learning paths.",
-    result: "Improved learning retention rates by 85% and expanded accessibility to remote education programs worldwide.",
     year: "2023",
     client: "Educational Innovation Institute",
     role: "Lead VR Designer",
@@ -50,9 +42,6 @@ const projectData: ProjectData = {
     title: "Thermal Trace",
     subtitle: "XR & Exhibition Design",
     description: "An innovative mixed reality installation exploring the invisible thermal patterns that surround us in everyday environments.",
-    challenge: "Making invisible thermal data visible and meaningful to general audiences while creating an engaging interactive experience.",
-    solution: "Created a mixed reality system combining thermal imaging, spatial computing, and interactive design to reveal hidden thermal signatures.",
-    result: "Featured in 15 international exhibitions and recognized as a breakthrough in environmental awareness technology.",
     year: "2023",
     client: "Contemporary Art Museum",
     role: "XR Developer & Interaction Designer",
@@ -62,9 +51,6 @@ const projectData: ProjectData = {
     title: "Whispers from the Bottom",
     subtitle: "Exhibition Design",
     description: "An immersive exhibition exploring the hidden stories of ocean depths through interactive installations and spatial design.",
-    challenge: "Creating an emotional connection between visitors and the largely unseen underwater world while addressing environmental concerns.",
-    solution: "Developed a multi-sensory exhibition space with interactive soundscapes, projection mapping, and tactile installations.",
-    result: "Attracted over 500,000 visitors and raised significant awareness about ocean conservation efforts.",
     year: "2022",
     client: "Marine Conservation Society",
     role: "Exhibition Designer & Creative Director",
@@ -74,9 +60,6 @@ const projectData: ProjectData = {
     title: "Seoul Nature History Museum",
     subtitle: "Brand Renewal and Spatial Design",
     description: "A comprehensive rebranding and spatial redesign project that transformed Seoul's premier natural history institution into a modern, engaging cultural destination.",
-    challenge: "Modernizing a traditional institution while preserving its educational mission and cultural significance in Korean society.",
-    solution: "Created a cohesive brand identity and spatial experience that seamlessly blends traditional Korean aesthetics with contemporary design principles.",
-    result: "Increased annual visitors by 250% and established the museum as a leading cultural landmark in Seoul.",
     year: "2022",
     client: "Seoul Metropolitan Government",
     role: "Brand Designer & Spatial Architect",
@@ -86,16 +69,12 @@ const projectData: ProjectData = {
     title: "Island",
     subtitle: "Public Space Design",
     description: "A transformative public space intervention that reimagines urban islands as community gathering points and cultural catalysts.",
-    challenge: "Revitalizing underutilized urban spaces while fostering community engagement and cultural exchange in dense metropolitan areas.",
-    solution: "Designed modular, sustainable installations that adapt to different community needs while maintaining aesthetic cohesion and functional flexibility.",
-    result: "Implemented in 12 cities across Asia, creating vibrant community hubs that serve over 100,000 residents daily.",
     year: "2022",
     client: "Urban Development Consortium",
     role: "Public Space Designer & Community Strategist",
     images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"]
   }
 };
-
 const ProjectDetail = () => {
   const {
     slug
