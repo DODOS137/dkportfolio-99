@@ -119,7 +119,7 @@ const InvisibleProjectDetail = () => {
           </div>
         )}
 
-        {/* Text Box Below YouTube - Approach and Development Strategy */}
+        {/* Approach and Development Strategy */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Approach</h2>
@@ -134,7 +134,7 @@ const InvisibleProjectDetail = () => {
           </div>
         </div>
 
-        {/* Process Section - Separate Container */}
+        {/* Process Section */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
@@ -166,6 +166,13 @@ const InvisibleProjectDetail = () => {
                 </div>
               </div>
             </div>
+
+            <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Approach</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+              {project.approach}
+            </p>
           </div>
         </div>
 
