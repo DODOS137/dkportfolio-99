@@ -72,7 +72,9 @@ const InvisibleProjectDetail = () => {
                 <p className="text-white">{project.projectCategory}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">ROLE</h3>
+                <p className="text-white">{project.teamType}</p>
+                <p className="text-white">{project.teamType}</p>
                 <p className="text-white">{project.teamType}</p>
               </div>
               <div>
@@ -142,6 +144,7 @@ const InvisibleProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
                 <div className="flex-1 flex items-center justify-center">
+                  <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
                 </div>
               </div>
