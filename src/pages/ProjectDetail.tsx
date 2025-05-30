@@ -4,7 +4,6 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -104,7 +103,6 @@ const ProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const contentRef = useScrollAnimation<HTMLDivElement>();
   const imageRefs = [useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>()];
-  
   if (!project) {
     return <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -115,7 +113,6 @@ const ProjectDetail = () => {
         </div>
       </div>;
   }
-  
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -158,11 +155,7 @@ const ProjectDetail = () => {
         {project.images.map((image, index) => <div key={index} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading 
-                  src={image}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
           </div>)}
@@ -170,12 +163,7 @@ const ProjectDetail = () => {
 
       {/* Next Project Section */}
       <section className="py-32 px-6 md:px-8 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-light mb-8 tracking-wide">Explore More Work</h2>
-          <Link to="/work" className="inline-block border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] px-12 py-4 text-sm tracking-widest">
-            VIEW ALL PROJECTS
-          </Link>
-        </div>
+        
       </section>
     </div>;
 };
