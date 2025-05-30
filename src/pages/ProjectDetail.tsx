@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -167,7 +166,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box - Moved here after first image */}
-        <div className="max-w-4xl mx-auto mb-32 px-6 md:px-8">
+        <div className="max-w-4xl mx-auto mb-32 px-6 md:px-8 relative z-10">
           <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
               {project.title}
