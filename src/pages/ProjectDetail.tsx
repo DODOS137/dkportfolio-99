@@ -5,7 +5,6 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -152,20 +151,7 @@ const ProjectDetail = () => {
             </div>
 
             {/* Additional 3 boxes below */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm mt-8">
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">PROJECT INFO</h3>
-                <p className="text-white" data-lovable-editable="true">Additional Info</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">PROJECT INFO</h3>
-                <p className="text-white" data-lovable-editable="true">Additional Info</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">PROJECT INFO</h3>
-                <p className="text-white" data-lovable-editable="true">Additional Info</p>
-              </div>
-            </div>
+            
           </div>
         </div>
 
@@ -216,19 +202,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Copy of Text Box - Moved to bottom */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
-          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Development Strategy</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Four fundamental scientific concepts—gravity, light, life, and time—served as the foundation. The spatial and narrative design aimed to enhance engagement, using symbolism and abstraction to visualise phenomena beyond human perception. Each concept was explored through immersive environments designed to deepen emotional and intellectual connection.</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-              
-              
-              
-              
-            </div>
-          </div>
-        </div>
+        
 
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
