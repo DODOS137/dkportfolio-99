@@ -4,7 +4,6 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -16,7 +15,6 @@ interface ProjectData {
     images: string[];
   };
 }
-
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
@@ -73,34 +71,28 @@ const projectData: ProjectData = {
     images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"]
   }
 };
-
 const ProjectDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const {
+    slug
+  } = useParams<{
+    slug: string;
+  }>();
   const project = slug ? projectData[slug] : null;
   const heroRef = useScrollAnimation<HTMLDivElement>();
-
   if (!project) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+    return <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-light text-white mb-4" data-lovable-editable="true">Project Not Found</h1>
           <Link to="/work" className="text-gray-400 hover:text-white transition-colors" data-lovable-editable="true">
             ← Back to Work
           </Link>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
-        <Link 
-          to="/work" 
-          className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
-          data-lovable-editable="true"
-        >
+        <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide" data-lovable-editable="true">
           <ArrowLeft className="w-4 h-4 mr-2" />
           BACK TO WORK
         </Link>
@@ -108,12 +100,7 @@ const ProjectDetail = () => {
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div 
-          ref={heroRef.ref} 
-          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-            heroRef.isVisible ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
+        <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
             {project.title}
           </h1>
@@ -136,18 +123,14 @@ const ProjectDetail = () => {
         <div className="mb-20">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <ImageWithLoading 
-                src={project.images[0]} 
-                alt={`${project.title} - Image 1`} 
-                className="w-full h-full object-cover" 
-              />
+              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" />
             </AspectRatio>
           </div>
         </div>
 
         {/* Project Description Text Box */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
-          <div className="rounded-lg p-8 md:p-12 bg-black py-[50px] px-[200px]">
+          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
               {project.title}
             </h2>
@@ -177,22 +160,14 @@ const ProjectDetail = () => {
         </div>
 
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading 
-                  src={image} 
-                  alt={`${project.title} - Image ${index + 2}`} 
-                  className="w-full h-full object-cover" 
-                />
+                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default ProjectDetail;
