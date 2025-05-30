@@ -5,6 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
+
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -147,6 +148,22 @@ const ProjectDetail = () => {
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">DURATION</h3>
                 <p className="text-white" data-lovable-editable="true">16 weeks</p>
+              </div>
+            </div>
+
+            {/* Additional 3 boxes below */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm mt-8">
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">PROJECT INFO</h3>
+                <p className="text-white" data-lovable-editable="true">Additional Info</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">PROJECT INFO</h3>
+                <p className="text-white" data-lovable-editable="true">Additional Info</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">PROJECT INFO</h3>
+                <p className="text-white" data-lovable-editable="true">Additional Info</p>
               </div>
             </div>
           </div>
