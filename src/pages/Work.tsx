@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { ChevronLeft, ChevronRight, Grid, Layers } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
 interface Project {
   id: string;
   title: string;
@@ -14,90 +13,69 @@ interface Project {
   videoId?: string;
   koreanDescription?: string;
 }
-
-const projects: Project[] = [
-  {
-    id: "1",
-    title: "Invisible",
-    slug: "invisible-space-museum",
-    description: "Virtual Reality Contents",
-    category: "VR/AR",
-    imageUrl: "/lovable-uploads/eec176ba-ebab-43a9-bb78-e6f08c59771b.png"
-  },
-  {
-    id: "2",
-    title: "Learn",
-    slug: "learn",
-    description: "Immersive Virtual Reality Experience",
-    category: "VR/AR",
-    imageUrl: "/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"
-  },
-  {
-    id: "3",
-    title: "Thermal Trace",
-    slug: "project-3",
-    description: "XR & Exhibition Design",
-    category: "XR",
-    imageUrl: "/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png"
-  },
-  {
-    id: "4",
-    title: "Whispers from the Bottom",
-    slug: "project-4",
-    description: "Exhibition Design",
-    category: "Exhibition",
-    imageUrl: "/lovable-uploads/8f1ac9c4-a3f8-4eed-93d3-859b298cea4d.png"
-  },
-  {
-    id: "5",
-    title: "Seoul Nature history Museum",
-    slug: "project-5",
-    description: "Brand Renewal and Spatial Design",
-    category: "Branding",
-    imageUrl: "/lovable-uploads/4c29e171-4bbf-4092-854c-13bf32686e5e.png"
-  },
-  {
-    id: "6",
-    title: "Island",
-    slug: "project-6",
-    description: "Public Space Design",
-    category: "Spatial",
-    imageUrl: "/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"
-  }
-];
-
+const projects: Project[] = [{
+  id: "1",
+  title: "Invisible",
+  slug: "invisible-space-museum",
+  description: "Virtual Reality Contents",
+  category: "VR/AR",
+  imageUrl: "/lovable-uploads/eec176ba-ebab-43a9-bb78-e6f08c59771b.png"
+}, {
+  id: "2",
+  title: "Learn",
+  slug: "learn",
+  description: "Immersive Virtual Reality Experience",
+  category: "VR/AR",
+  imageUrl: "/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"
+}, {
+  id: "3",
+  title: "Thermal Trace",
+  slug: "project-3",
+  description: "XR & Exhibition Design",
+  category: "XR",
+  imageUrl: "/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png"
+}, {
+  id: "4",
+  title: "Whispers from the Bottom",
+  slug: "project-4",
+  description: "Exhibition Design",
+  category: "Exhibition",
+  imageUrl: "/lovable-uploads/8f1ac9c4-a3f8-4eed-93d3-859b298cea4d.png"
+}, {
+  id: "5",
+  title: "Seoul Nature history Museum",
+  slug: "project-5",
+  description: "Brand Renewal and Spatial Design",
+  category: "Branding",
+  imageUrl: "/lovable-uploads/4c29e171-4bbf-4092-854c-13bf32686e5e.png"
+}, {
+  id: "6",
+  title: "Island",
+  slug: "project-6",
+  description: "Public Space Design",
+  category: "Spatial",
+  imageUrl: "/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"
+}];
 const Work = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [viewMode, setViewMode] = useState<'slider' | 'panel'>('slider');
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
-
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % projects.length);
+    setCurrentSlide(prev => (prev + 1) % projects.length);
   };
-
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
+    setCurrentSlide(prev => (prev - 1 + projects.length) % projects.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
-  return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navbar />
       
       {/* Header Section */}
       <section className="pt-20 pb-8 px-4 md:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div 
-            ref={headerAnimation.ref}
-            className={`transition-all duration-1000 ${
-              headerAnimation.isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-10'
-            }`}
-          >
+          <div ref={headerAnimation.ref} className={`transition-all duration-1000 ${headerAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="text-center">
               <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
                 VIEW ALL PROJECTS
@@ -108,25 +86,11 @@ const Work = () => {
               
               {/* View Toggle */}
               <div className="flex justify-center mt-8 space-x-4">
-                <button
-                  onClick={() => setViewMode('slider')}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                    viewMode === 'slider' 
-                      ? 'bg-white text-black' 
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}
-                >
+                <button onClick={() => setViewMode('slider')} className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${viewMode === 'slider' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}>
                   <Layers className="w-4 h-4" />
                   <span className="text-sm">Slider</span>
                 </button>
-                <button
-                  onClick={() => setViewMode('panel')}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                    viewMode === 'panel' 
-                      ? 'bg-white text-black' 
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}
-                >
+                <button onClick={() => setViewMode('panel')} className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${viewMode === 'panel' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}>
                   <Grid className="w-4 h-4" />
                   <span className="text-sm">Panel</span>
                 </button>
@@ -136,30 +100,16 @@ const Work = () => {
         </div>
       </section>
 
-      {viewMode === 'slider' ? (
-        // ... keep existing code (Main Slider section)
-        <section className="relative h-[calc(100vh-200px)] overflow-hidden">
+      {viewMode === 'slider' ?
+    // ... keep existing code (Main Slider section)
+    <section className="relative h-[calc(100vh-200px)] overflow-hidden">
           <div className="relative w-full h-full">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                  index === currentSlide 
-                    ? 'opacity-100 translate-x-0' 
-                    : index < currentSlide 
-                      ? 'opacity-0 -translate-x-full' 
-                      : 'opacity-0 translate-x-full'
-                }`}
-              >
+            {projects.map((project, index) => <div key={project.id} className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentSlide ? 'opacity-100 translate-x-0' : index < currentSlide ? 'opacity-0 -translate-x-full' : 'opacity-0 translate-x-full'}`}>
                 <Link to={`/project/${project.slug}`} className="block w-full h-full group">
                   <div className="relative w-full h-full">
                     {/* Background Image */}
                     <div className="absolute inset-0">
-                      <img
-                        src={project.imageUrl}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
+                      <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                     </div>
                     
@@ -179,41 +129,21 @@ const Work = () => {
                     </div>
                   </div>
                 </Link>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-            aria-label="Previous project"
-          >
+          <button onClick={prevSlide} className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm" aria-label="Previous project">
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
 
-          <button
-            onClick={nextSlide}
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-            aria-label="Next project"
-          >
+          <button onClick={nextSlide} className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm" aria-label="Next project">
             <ChevronRight className="w-6 h-6 text-white" />
           </button>
 
           {/* Slide Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-white' 
-                    : 'bg-white bg-opacity-40 hover:bg-opacity-60'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+            {projects.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-40 hover:bg-opacity-60'}`} aria-label={`Go to slide ${index + 1}`} />)}
           </div>
 
           {/* Slide Counter */}
@@ -222,24 +152,13 @@ const Work = () => {
               {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
             </span>
           </div>
-        </section>
-      ) : (
-        /* Panel View */
-        <section className="py-8 px-4 md:px-8">
+        </section> : (/* Panel View */
+    <section className="py-8 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <Link
-                  key={project.id}
-                  to={`/project/${project.slug}`}
-                  className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-500 hover:transform hover:scale-105"
-                >
+              {projects.map((project, index) => <Link key={project.id} to={`/project/${project.slug}`} className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-500 hover:transform hover:scale-105">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={project.imageUrl}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
+                    <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300"></div>
                   </div>
                   
@@ -261,12 +180,10 @@ const Work = () => {
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
-                </Link>
-              ))}
+                </Link>)}
             </div>
           </div>
-        </section>
-      )}
+        </section>)}
 
       {/* Bottom Navigation */}
       <section className="py-8 px-4 md:px-8 bg-black bg-opacity-80 backdrop-blur-sm">
@@ -276,15 +193,11 @@ const Work = () => {
               {viewMode === 'slider' ? 'Use arrow keys or click to navigate' : 'Click on any project to view details'}
             </div>
             <Link to="/contacts">
-              <button className="group relative overflow-hidden bg-white text-black px-6 py-2 text-sm transition-all duration-300 hover:bg-gray-100">
-                <span className="relative z-10">Contact Us</span>
-              </button>
+              
             </Link>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Work;
