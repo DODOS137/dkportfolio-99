@@ -5,7 +5,6 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -312,10 +311,10 @@ const ProjectDetail = () => {
               
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">Iterative design process and final implementation</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Iterative design process and final implementation</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Iterative design process and final implementation</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Iterative design process and final implementation</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Worldbuilding</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Video Development</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
               </div>
             </div>
           </div>
