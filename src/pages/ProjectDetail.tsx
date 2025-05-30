@@ -157,19 +157,31 @@ const ProjectDetail = () => {
 
         {/* YouTube Video Player */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
-          <div className="w-full">
+          <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <YouTube videoId="7GC2R6GYUrw" opts={{
-              width: '100%',
-              height: '100%',
-              playerVars: {
-                autoplay: 0,
-                controls: 1,
-                rel: 0,
-                showinfo: 0,
-                modestbranding: 1
-              }
-            }} className="w-full h-full" />
+              <YouTube 
+                videoId="7GC2R6GYUrw" 
+                opts={{
+                  width: '100%',
+                  height: '100%',
+                  playerVars: {
+                    autoplay: 0,
+                    controls: 1,
+                    rel: 0,
+                    showinfo: 0,
+                    modestbranding: 1,
+                    fs: 1,
+                    cc_load_policy: 0,
+                    iv_load_policy: 3,
+                    autohide: 1,
+                    disablekb: 0,
+                    enablejsapi: 1,
+                    origin: window.location.origin
+                  }
+                }} 
+                className="w-full h-full"
+                iframeClassName="w-full h-full border-0"
+              />
             </AspectRatio>
           </div>
         </div>
@@ -202,7 +214,27 @@ const ProjectDetail = () => {
         </div>
 
         {/* Copy of Text Box - Moved to bottom */}
-        
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Impact</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The project successfully demonstrated how VR technology can bridge the gap between complex scientific concepts and public understanding, creating an engaging educational experience that promotes scientific literacy and curiosity among diverse audiences.</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Tools</h3>
+                <p className="text-white" data-lovable-editable="true">Unity, Blender, C#</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Platform</h3>
+                <p className="text-white" data-lovable-editable="true">VR Headset</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Users</h3>
+                <p className="text-white" data-lovable-editable="true">General Public</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
@@ -215,4 +247,5 @@ const ProjectDetail = () => {
       </section>
     </div>;
 };
+
 export default ProjectDetail;
