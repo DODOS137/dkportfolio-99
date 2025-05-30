@@ -138,7 +138,7 @@ const ProjectDetail = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link 
           to="/work" 
-          className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-500 text-sm tracking-wide"
+          className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           BACK TO WORK
@@ -149,8 +149,8 @@ const ProjectDetail = () => {
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
         <div 
           ref={heroRef.ref}
-          className={`text-center max-w-4xl px-6 transition-all duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-            heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-32'
+          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+            heroRef.isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
@@ -174,8 +174,8 @@ const ProjectDetail = () => {
         <div className="max-w-6xl mx-auto">
           <div 
             ref={contentRef.ref}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[1800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              contentRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24'
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+              contentRef.isVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <div>
@@ -214,15 +214,15 @@ const ProjectDetail = () => {
           <div 
             key={index}
             ref={imageRefs[index]?.ref}
-            className={`mb-20 transition-all duration-[2200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              imageRefs[index]?.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-32'
+            className={`mb-20 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+              imageRefs[index]?.isVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <div className="w-full h-screen relative overflow-hidden">
               <img 
                 src={image} 
                 alt={`${project.title} - Image ${index + 1}`}
-                className="w-full h-full object-cover transition-transform duration-[3000ms] ease-out hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105"
               />
               <div className="absolute inset-0 bg-black bg-opacity-20" />
             </div>
@@ -236,7 +236,7 @@ const ProjectDetail = () => {
           <h2 className="text-4xl font-light mb-8 tracking-wide">Explore More Work</h2>
           <Link 
             to="/work"
-            className="inline-block border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-500 px-12 py-4 text-sm tracking-widest"
+            className="inline-block border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] px-12 py-4 text-sm tracking-widest"
           >
             VIEW ALL PROJECTS
           </Link>

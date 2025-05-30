@@ -13,8 +13,8 @@ export const useScrollAnimation = <T extends HTMLElement>() => {
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '100px',
+        threshold: 0.2,
+        rootMargin: '50px',
       }
     );
 

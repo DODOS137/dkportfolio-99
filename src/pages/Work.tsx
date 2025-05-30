@@ -84,8 +84,8 @@ const Work = () => {
         <div className="max-w-7xl mx-auto">
           <div 
             ref={headerAnimation.ref} 
-            className={`transition-all duration-[1800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              headerAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+            className={`transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+              headerAnimation.isVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <div className="text-center">
@@ -100,7 +100,7 @@ const Work = () => {
               <div className="flex justify-center mt-8 space-x-4">
                 <button 
                   onClick={() => setViewMode('slider')} 
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
                     viewMode === 'slider' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'
                   }`}
                 >
@@ -109,7 +109,7 @@ const Work = () => {
                 </button>
                 <button 
                   onClick={() => setViewMode('panel')} 
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
                     viewMode === 'panel' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'
                   }`}
                 >
@@ -129,12 +129,10 @@ const Work = () => {
             {projects.map((project, index) => (
               <div 
                 key={project.id} 
-                className={`absolute inset-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                className={`absolute inset-0 transition-all duration-[2000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
                   index === currentSlide 
-                    ? 'opacity-100 translate-x-0' 
-                    : index < currentSlide 
-                      ? 'opacity-0 -translate-x-full' 
-                      : 'opacity-0 translate-x-full'
+                    ? 'opacity-100 z-10' 
+                    : 'opacity-0 z-0'
                 }`}
               >
                 <Link to={`/project/${project.slug}`} className="block w-full h-full group">
@@ -144,7 +142,7 @@ const Work = () => {
                       <img 
                         src={project.imageUrl} 
                         alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-[3000ms] ease-out group-hover:scale-105" 
+                        className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105" 
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                     </div>
@@ -172,7 +170,7 @@ const Work = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevSlide} 
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-500 backdrop-blur-sm" 
+            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] backdrop-blur-sm" 
             aria-label="Previous project"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
@@ -180,7 +178,7 @@ const Work = () => {
 
           <button 
             onClick={nextSlide} 
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-500 backdrop-blur-sm" 
+            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] backdrop-blur-sm" 
             aria-label="Next project"
           >
             <ChevronRight className="w-6 h-6 text-white" />
@@ -192,7 +190,7 @@ const Work = () => {
               <button 
                 key={index} 
                 onClick={() => goToSlide(index)} 
-                className={`w-3 h-3 rounded-full transition-all duration-500 ${
+                className={`w-3 h-3 rounded-full transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
                   index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-40 hover:bg-opacity-60'
                 }`} 
                 aria-label={`Go to slide ${index + 1}`} 
@@ -216,22 +214,22 @@ const Work = () => {
                 <Link 
                   key={project.id} 
                   to={`/project/${project.slug}`} 
-                  className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:transform hover:scale-105"
+                  className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img 
                       src={project.imageUrl} 
                       alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110" 
+                      className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" 
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
                   </div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                     <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2">
                       {project.category}
                     </span>
-                    <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-500">
+                    <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                       {project.title}
                     </h3>
                     <p className="text-sm text-gray-400 line-clamp-2">
