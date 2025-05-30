@@ -5,7 +5,6 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -157,21 +156,17 @@ const ProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <YouTube
-                videoId="7GC2R6GYUrw"
-                opts={{
-                  width: '100%',
-                  height: '100%',
-                  playerVars: {
-                    autoplay: 0,
-                    controls: 1,
-                    rel: 0,
-                    showinfo: 0,
-                    modestbranding: 1,
-                  },
-                }}
-                className="w-full h-full"
-              />
+              <YouTube videoId="7GC2R6GYUrw" opts={{
+              width: '100%',
+              height: '100%',
+              playerVars: {
+                autoplay: 0,
+                controls: 1,
+                rel: 0,
+                showinfo: 0,
+                modestbranding: 1
+              }
+            }} className="w-full h-full" />
             </AspectRatio>
           </div>
         </div>
@@ -187,5 +182,4 @@ const ProjectDetail = () => {
       </section>
     </div>;
 };
-
 export default ProjectDetail;
