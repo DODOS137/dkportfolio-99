@@ -103,8 +103,8 @@ const ProjectDetail = () => {
   const project = slug ? projectData[slug] : null;
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const contentRef = useScrollAnimation<HTMLDivElement>();
-  const spaceImageRef = useScrollAnimation<HTMLDivElement>();
   const imageRefs = [useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>()];
+  
   if (!project) {
     return <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -115,6 +115,7 @@ const ProjectDetail = () => {
         </div>
       </div>;
   }
+  
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -148,19 +149,6 @@ const ProjectDetail = () => {
         <div className="max-w-6xl mx-auto">
           <div ref={contentRef.ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${contentRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
             
-          </div>
-
-          {/* Space Image Section */}
-          <div ref={spaceImageRef.ref} className={`mb-32 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${spaceImageRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="w-full -mx-6 md:-mx-8">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading 
-                  src="/lovable-uploads/30e45ab0-25a1-4894-b49f-161f3eec42f7.png"
-                  alt="Space atmosphere"
-                  className="w-full h-full object-cover"
-                />
-              </AspectRatio>
-            </div>
           </div>
         </div>
       </section>
