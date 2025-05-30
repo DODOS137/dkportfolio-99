@@ -178,10 +178,8 @@ const InvisibleProjectDetail = () => {
               {project.approach}
             </p>
             
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Development Strategy</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">
-              {project.development}
-            </p>
+            
+            
           </div>
         </div>
           </div>
