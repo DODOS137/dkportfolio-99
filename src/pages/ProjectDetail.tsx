@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -150,45 +151,58 @@ const ProjectDetail = () => {
       <section className="pt-4 px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div ref={contentRef.ref} className={`transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${contentRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            {/* Project Description Text Box */}
-            <div className="max-w-4xl mx-auto mb-32">
-              <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 md:p-12">
-                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
-                  {project.title}
-                </h2>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-                  {project.description}
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-                  <div>
-                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">CLIENT</h3>
-                    <p className="text-white">{project.client}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">ROLE</h3>
-                    <p className="text-white">{project.role}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">DATE</h3>
-                    <p className="text-white">{project.year}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Images Section */}
       <section className="pb-20">
-        {project.images.map((image, index) => <div key={index} className="mb-20">
+        {/* First Image */}
+        <div className="mb-20">
+          <div className="w-full">
+            <AspectRatio ratio={16 / 9} className="w-full">
+              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" />
+            </AspectRatio>
+          </div>
+        </div>
+
+        {/* Project Description Text Box - Moved here after first image */}
+        <div className="max-w-4xl mx-auto mb-32 px-6 md:px-8">
+          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
+              {project.title}
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+              {project.description}
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">CLIENT</h3>
+                <p className="text-white">{project.client}</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">ROLE</h3>
+                <p className="text-white">{project.role}</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">DATE</h3>
+                <p className="text-white">{project.year}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Remaining Images */}
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover" />
+                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
 
       {/* Next Project Section */}
