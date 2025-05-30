@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -6,10 +7,13 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  return <div className="min-h-screen bg-black text-white">
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -68,9 +72,7 @@ const InvisibleProjectDetail = () => {
                 <p className="text-white">{project.projectCategory}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">ROLE</h3>
-                <p className="text-white">{project.teamType}</p>
-                <p className="text-white">{project.teamType}</p>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
                 <p className="text-white">{project.teamType}</p>
               </div>
               <div>
@@ -82,33 +84,40 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* YouTube Video Player */}
-        {project.videoId && <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
+        {project.videoId && (
+          <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId={project.videoId} opts={{
-              width: '100%',
-              height: '100%',
-              playerVars: {
-                autoplay: 0,
-                controls: 1,
-                rel: 0,
-                showinfo: 0,
-                modestbranding: 1,
-                fs: 1,
-                cc_load_policy: 0,
-                iv_load_policy: 3,
-                autohide: 1,
-                disablekb: 0,
-                enablejsapi: 1,
-                origin: window.location.origin,
-                branding: 0,
-                color: 'white',
-                theme: 'dark'
-              }
-            }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                <YouTube 
+                  videoId={project.videoId} 
+                  opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} 
+                  className="w-full h-full" 
+                  iframeClassName="w-full h-full border-0" 
+                />
               </AspectRatio>
             </div>
-          </div>}
+          </div>
+        )}
 
         {/* Approach and Development Strategy */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
@@ -133,7 +142,6 @@ const InvisibleProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
                 <div className="flex-1 flex items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
                 </div>
               </div>
@@ -162,14 +170,18 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                
+                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default InvisibleProjectDetail;
