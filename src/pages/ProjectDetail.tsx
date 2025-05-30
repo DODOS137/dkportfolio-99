@@ -5,6 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
+
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -184,6 +185,9 @@ const ProjectDetail = () => {
         {/* Text Box Below YouTube */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Through research on existing museum formats and traditional science displays, the project identified key barriers to understanding and engagement. Focus was placed on selecting accessible scientific topics and intuitive interaction models to support broader comprehension across diverse audiences.</p>
+            
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Through research on existing museum formats and traditional science displays, the project identified key barriers to understanding and engagement. Focus was placed on selecting accessible scientific topics and intuitive interaction models to support broader comprehension across diverse audiences.</p>
             
