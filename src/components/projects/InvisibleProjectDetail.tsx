@@ -86,7 +86,7 @@ const InvisibleProjectDetail = () => {
         {/* YouTube Video Player */}
         {project.videoId && (
           <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
-            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-800">
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <YouTube 
                   videoId={project.videoId} 
