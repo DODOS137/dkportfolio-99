@@ -4,7 +4,6 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -20,7 +19,6 @@ interface ProjectData {
     videoId?: string;
   };
 }
-
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
@@ -95,7 +93,6 @@ const projectData: ProjectData = {
     images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"]
   }
 };
-
 const ProjectDetail = () => {
   const {
     slug
@@ -106,7 +103,6 @@ const ProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const contentRef = useScrollAnimation<HTMLDivElement>();
   const imageRefs = [useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>()];
-  
   if (!project) {
     return <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -117,7 +113,6 @@ const ProjectDetail = () => {
         </div>
       </div>;
   }
-  
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -166,8 +161,10 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box - Moved here after first image */}
-        <div className="mx-auto mb-32 px-6 md:px-8 relative z-10" style={{ maxWidth: '1540px' }}>
-          <div className="bg-black rounded-lg p-8 md:p-12">
+        <div className="mx-auto mb-32 px-6 md:px-8 relative z-10" style={{
+        maxWidth: '1540px'
+      }}>
+          <div className="rounded-lg p-8 md:p-12 bg-transparent">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
               {project.title}
             </h2>
@@ -193,15 +190,13 @@ const ProjectDetail = () => {
         </div>
 
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
 
       {/* Next Project Section */}
@@ -210,5 +205,4 @@ const ProjectDetail = () => {
       </section>
     </div>;
 };
-
 export default ProjectDetail;
