@@ -245,20 +245,7 @@ const ProjectDetail = () => {
             </div>
 
             {/* Additional 3 boxes below */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm mt-8">
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Tools</h3>
-                <p className="text-white">Unity, Blender, C#</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Platform</h3>
-                <p className="text-white">VR Headset</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Target</h3>
-                <p className="text-white">General Public</p>
-              </div>
-            </div>
+            
           </div>
         </div>
 
