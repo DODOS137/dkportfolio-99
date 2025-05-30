@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
+
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -19,6 +20,7 @@ interface ProjectData {
     videoId?: string;
   };
 }
+
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
@@ -93,6 +95,7 @@ const projectData: ProjectData = {
     images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"]
   }
 };
+
 const ProjectDetail = () => {
   const {
     slug
@@ -103,6 +106,7 @@ const ProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const contentRef = useScrollAnimation<HTMLDivElement>();
   const imageRefs = [useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>()];
+  
   if (!project) {
     return <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -113,6 +117,7 @@ const ProjectDetail = () => {
         </div>
       </div>;
   }
+  
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -144,8 +149,33 @@ const ProjectDetail = () => {
       {/* Main Content */}
       <section className="pt-4 px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <div ref={contentRef.ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${contentRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            
+          <div ref={contentRef.ref} className={`transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${contentRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            {/* Project Description Text Box */}
+            <div className="max-w-4xl mx-auto mb-32">
+              <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 md:p-12">
+                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
+                  {project.title}
+                </h2>
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                  {project.description}
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                  <div>
+                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">CLIENT</h3>
+                    <p className="text-white">{project.client}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">ROLE</h3>
+                    <p className="text-white">{project.role}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">DATE</h3>
+                    <p className="text-white">{project.year}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -167,4 +197,5 @@ const ProjectDetail = () => {
       </section>
     </div>;
 };
+
 export default ProjectDetail;
