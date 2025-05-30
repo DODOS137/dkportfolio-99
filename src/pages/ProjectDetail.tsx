@@ -295,26 +295,34 @@ const ProjectDetail = () => {
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
+                <div className="flex-1 flex items-center justify-center">
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    Concept Sketching
+                  </p>
+                </div>
                 <p className="text-gray-400 text-sm leading-relaxed">Brainstorming</p>
               </div>
               
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">Context & Problem Analysis</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Survey</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
+                <div className="flex-1 flex flex-col items-center justify-center">
+                  <p className="text-gray-400 text-sm leading-relaxed">Context & Problem Analysis</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Survey</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
+                </div>
               </div>
               
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">Worldbuilding</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Video Development</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
-                <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
+                <div className="flex-1 flex flex-col items-center justify-center">
+                  <p className="text-gray-400 text-sm leading-relaxed">Worldbuilding</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Video Development</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
+                </div>
               </div>
             </div>
           </div>
