@@ -84,17 +84,7 @@ const Home = () => {
       {/* Featured Projects Slider */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div ref={sliderAnimation.ref} className={`transition-all duration-1500 delay-600 ${sliderAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <h3 className="text-3xl md:text-4xl font-light text-white mb-12 text-center">
-              Featured Projects
-            </h3>
-            <div className="mb-8">
-              <Slider />
-            </div>
-            <div className="flex justify-center">
-              <SliderIndicators />
-            </div>
-          </div>
+          
         </div>
       </section>
 
