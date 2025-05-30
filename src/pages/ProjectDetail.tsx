@@ -159,7 +159,7 @@ const ProjectDetail = () => {
         {project.images.map((image, index) => <div key={index} ref={imageRefs[index]?.ref} className={`mb-20 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${imageRefs[index]?.isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div className="w-full h-screen relative overflow-hidden">
               <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105" />
-              <div className="absolute inset-0 bg-black bg-opacity-20" />
+              
             </div>
           </div>)}
       </section>
