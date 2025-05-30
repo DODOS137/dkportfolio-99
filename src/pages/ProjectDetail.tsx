@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -84,8 +83,8 @@ const ProjectDetail = () => {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-light text-white mb-4">Project Not Found</h1>
-          <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
+          <h1 className="text-4xl font-light text-white mb-4" data-lovable-editable="true">Project Not Found</h1>
+          <Link to="/work" className="text-gray-400 hover:text-white transition-colors" data-lovable-editable="true">
             ← Back to Work
           </Link>
         </div>
@@ -100,6 +99,7 @@ const ProjectDetail = () => {
         <Link 
           to="/work" 
           className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
+          data-lovable-editable="true"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           BACK TO WORK
@@ -114,18 +114,18 @@ const ProjectDetail = () => {
             heroRef.isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
+          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
             {project.title}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
+          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="true">
             {project.subtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.year}</span>
+            <span data-lovable-editable="true">{project.year}</span>
             <span>•</span>
-            <span>{project.client}</span>
+            <span data-lovable-editable="true">{project.client}</span>
             <span>•</span>
-            <span>{project.role}</span>
+            <span data-lovable-editable="true">{project.role}</span>
           </div>
         </div>
       </section>
@@ -148,29 +148,29 @@ const ProjectDetail = () => {
         {/* Project Description Text Box */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
           <div className="rounded-lg p-8 md:p-12 bg-black py-[50px] px-[200px]">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
               {project.title}
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
               {project.description}
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project type</h3>
-                <p className="text-white">{project.client}</p>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Project type</h3>
+                <p className="text-white" data-lovable-editable="true">{project.client}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">project category</h3>
-                <p className="text-white">{project.role}</p>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project category</h3>
+                <p className="text-white" data-lovable-editable="true">{project.role}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">role</h3>
-                <p className="text-white">{project.year}</p>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">role</h3>
+                <p className="text-white" data-lovable-editable="true">{project.year}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">duration</h3>
-                <p className="text-white">{project.subtitle}</p>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">duration</h3>
+                <p className="text-white" data-lovable-editable="true">{project.subtitle}</p>
               </div>
             </div>
           </div>
