@@ -5,6 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
+
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -275,7 +276,7 @@ const ProjectDetail = () => {
             </div>
           </div>}
 
-        {/* Text Box Below YouTube */}
+        {/* Text Box Below YouTube - Approach and Development Strategy */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Approach</h2>
@@ -284,11 +285,15 @@ const ProjectDetail = () => {
             </p>
             
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Development Strategy</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-16">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
               {project.development}
             </p>
-          
-            {/* Process Section */}
+          </div>
+        </div>
+
+        {/* Process Section - Separate Container */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
@@ -309,13 +314,6 @@ const ProjectDetail = () => {
                   Iterative design process and final implementation
                 </p>
               </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
             </div>
           </div>
         </div>
