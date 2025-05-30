@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -90,10 +91,10 @@ const Work = () => {
             }`}
           >
             <div className="text-center">
-              <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
+              <p className="text-sm text-gray-400 uppercase tracking-wider mb-4" data-lovable-editable="true">
                 VIEW ALL PROJECTS
               </p>
-              <h1 className="text-3xl md:text-5xl font-light">
+              <h1 className="text-3xl md:text-5xl font-light" data-lovable-editable="true">
                 Work
               </h1>
               
@@ -106,7 +107,7 @@ const Work = () => {
                   }`}
                 >
                   <Layers className="w-4 h-4" />
-                  <span className="text-sm">Slider</span>
+                  <span className="text-sm" data-lovable-editable="true">Slider</span>
                 </button>
                 <button 
                   onClick={() => setViewMode('panel')} 
@@ -115,7 +116,7 @@ const Work = () => {
                   }`}
                 >
                   <Grid className="w-4 h-4" />
-                  <span className="text-sm">Panel</span>
+                  <span className="text-sm" data-lovable-editable="true">Panel</span>
                 </button>
               </div>
             </div>
@@ -139,11 +140,12 @@ const Work = () => {
                 <Link to={`/project/${project.slug}`} className="block w-full h-full group">
                   <div className="relative w-full h-full">
                     {/* Background Image */}
-                    <div className="absolute inset-0">
+                    <div className="absolute inset-0" data-lovable-editable="true">
                       <img 
                         src={project.imageUrl} 
                         alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105" 
+                        className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105"
+                        data-lovable-editable="true"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                     </div>
@@ -151,13 +153,13 @@ const Work = () => {
                     {/* Content Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center px-8">
-                        <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4">
+                        <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4" data-lovable-editable="true">
                           {project.category}
                         </span>
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
+                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide" data-lovable-editable="true">
                           {project.title}
                         </h2>
-                        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+                        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto" data-lovable-editable="true">
                           {project.description}
                         </p>
                       </div>
@@ -221,23 +223,24 @@ const Work = () => {
                     to={`/project/${project.slug}`} 
                     className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105 block"
                   >
-                    <div className="aspect-[4/3] overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden" data-lovable-editable="true">
                       <img 
                         src={project.imageUrl} 
                         alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" 
+                        className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
+                        data-lovable-editable="true"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
                     </div>
                     
                     <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                      <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2">
+                      <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2" data-lovable-editable="true">
                         {project.category}
                       </span>
-                      <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                      <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" data-lovable-editable="true">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-gray-400 line-clamp-2">
+                      <p className="text-sm text-gray-400 line-clamp-2" data-lovable-editable="true">
                         {project.description}
                       </p>
                     </div>
@@ -260,7 +263,7 @@ const Work = () => {
       <section className="py-8 px-4 md:px-8 bg-black bg-opacity-80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center">
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-400" data-lovable-editable="true">
               {viewMode === 'slider' ? 'Use arrow keys or click to navigate' : 'Click on any project to view details'}
             </div>
             <Link to="/contacts"></Link>
