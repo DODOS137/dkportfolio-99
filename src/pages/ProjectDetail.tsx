@@ -161,9 +161,9 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box - Moved here after first image */}
-        <div className="mx-auto mb-32 px-6 md:px-8 relative z-10" style={{
+        <div style={{
         maxWidth: '1540px'
-      }}>
+      }} className="mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
           <div className="rounded-lg p-8 md:p-12 bg-black py-[50px] px-[200px]">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
               {project.title}
