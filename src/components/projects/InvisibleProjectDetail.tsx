@@ -94,11 +94,6 @@ const InvisibleProjectDetail = () => {
                     width: '100%',
                     height: '100%',
                     playerVars: {
-                      controls: 0,       // 플레이어 컨트롤러 숨김
-                      modestbranding: 1, // YouTube 로고 최소화
-                      rel: 0,            // 재생 후 관련 영상 비표시
-                      showinfo: 0,       // 제목, 업로더 정보 숨김 (deprecated지만 남겨둠)
-                      iv_load_policy: 3
                       autoplay: 0,
                       controls: 1,
                       rel: 0,
@@ -148,7 +143,6 @@ const InvisibleProjectDetail = () => {
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
                 <div className="flex-1 flex items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
-                
                 </div>
               </div>
               
