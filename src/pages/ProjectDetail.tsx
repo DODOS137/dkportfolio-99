@@ -20,9 +20,9 @@ const projectData: ProjectData = {
     title: "Invisible",
     subtitle: "Scientific Virtual Reality Contents",
     description: "Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.",
-    year: "2024",
-    client: "Virtual Reality Design",
-    role: "VR Developer & Experience Designer",
+    year: "Solo Project, VR Design & Development Animation, Spatial & Environment Design",
+    client: "MA Graduation Project",
+    role: "Virtual Content Design & Development",
     images: ["/lovable-uploads/7c2c11ca-8167-4396-b2b1-e8bed16aa6c0.png"]
   },
   "learn": {
@@ -153,7 +153,7 @@ const ProjectDetail = () => {
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">duration</h3>
-                <p className="text-white" data-lovable-editable="true">{project.subtitle}</p>
+                <p className="text-white" data-lovable-editable="true">16 weeks</p>
               </div>
             </div>
           </div>
