@@ -4,7 +4,6 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -20,7 +19,6 @@ interface ProjectData {
     videoId?: string;
   };
 }
-
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
@@ -95,7 +93,6 @@ const projectData: ProjectData = {
     images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"]
   }
 };
-
 const ProjectDetail = () => {
   const {
     slug
@@ -106,7 +103,6 @@ const ProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const contentRef = useScrollAnimation<HTMLDivElement>();
   const imageRefs = [useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>()];
-
   if (!project) {
     return <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -117,7 +113,6 @@ const ProjectDetail = () => {
         </div>
       </div>;
   }
-
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -179,19 +174,19 @@ const ProjectDetail = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">CLIENT</h3>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project type</h3>
                 <p className="text-white">{project.client}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">ROLE</h3>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">project categoty</h3>
                 <p className="text-white">{project.role}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">DATE</h3>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">role</h3>
                 <p className="text-white">{project.year}</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">CATEGORY</h3>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2">duration</h3>
                 <p className="text-white">{project.subtitle}</p>
               </div>
             </div>
@@ -214,5 +209,4 @@ const ProjectDetail = () => {
       </section>
     </div>;
 };
-
 export default ProjectDetail;
