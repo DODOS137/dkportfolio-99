@@ -5,6 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
+
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -287,12 +288,34 @@ const ProjectDetail = () => {
             </p>
             
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Development Strategy</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-16">
               {project.development}
             </p>
             
-            
-            
+            {/* Process Section */}
+            <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="aspect-square bg-gray-900 rounded-lg p-8 flex flex-col justify-center items-center text-center border border-gray-800">
+                <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Initial concept development and creative exploration
+                </p>
+              </div>
+              
+              <div className="aspect-square bg-gray-900 rounded-lg p-8 flex flex-col justify-center items-center text-center border border-gray-800">
+                <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Research and evaluation of requirements and constraints
+                </p>
+              </div>
+              
+              <div className="aspect-square bg-gray-900 rounded-lg p-8 flex flex-col justify-center items-center text-center border border-gray-800">
+                <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Iterative design process and final implementation
+                </p>
+              </div>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div></div>
