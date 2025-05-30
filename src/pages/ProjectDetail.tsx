@@ -302,7 +302,7 @@ const ProjectDetail = () => {
                     Concept Sketching
                   </p>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">Brainstorming</p>
+                
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
