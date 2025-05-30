@@ -92,27 +92,28 @@ const projectData: ProjectData = {
   }
 };
 const ProjectDetail = () => {
-  const {
-    slug
-  } = useParams<{
-    slug: string;
-  }>();
+  const { slug } = useParams<{ slug: string }>();
   const project = slug ? projectData[slug] : null;
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const contentRef = useScrollAnimation<HTMLDivElement>();
   const spaceImageRef = useScrollAnimation<HTMLDivElement>();
   const imageRefs = [useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>()];
+
   if (!project) {
-    return <div className="min-h-screen bg-black flex items-center justify-center">
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-light text-white mb-4">Project Not Found</h1>
           <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
             ← Back to Work
           </Link>
         </div>
-      </div>;
+      </div>
+    );
   }
-  return <div className="min-h-screen bg-black text-white">
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -141,7 +142,7 @@ const ProjectDetail = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-6 md:px-8">
+      <section className="pt-4 px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div ref={contentRef.ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${contentRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
             
@@ -158,11 +159,13 @@ const ProjectDetail = () => {
 
       {/* Images Section */}
       <section className="pb-20">
-        {project.images.map((image, index) => <div key={index} className="mb-20">
+        {project.images.map((image, index) => (
+          <div key={index} className="mb-20">
             <div className="w-full h-screen relative overflow-hidden">
               <img src={image} alt={`${project.title} ${index + 1}`} className="w-full h-full object-cover" />
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
 
       {/* Next Project Section */}
@@ -174,6 +177,8 @@ const ProjectDetail = () => {
           </Link>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default ProjectDetail;
