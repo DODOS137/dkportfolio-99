@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -18,7 +17,6 @@ interface ProjectData {
     videoId?: string;
   };
 }
-
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
@@ -93,36 +91,31 @@ const projectData: ProjectData = {
     images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"]
   }
 };
-
 const ProjectDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const {
+    slug
+  } = useParams<{
+    slug: string;
+  }>();
   const project = slug ? projectData[slug] : null;
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const contentRef = useScrollAnimation<HTMLDivElement>();
   const spaceImageRef = useScrollAnimation<HTMLDivElement>();
   const imageRefs = [useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>(), useScrollAnimation<HTMLDivElement>()];
-
   if (!project) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+    return <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-light text-white mb-4">Project Not Found</h1>
           <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
             ← Back to Work
           </Link>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
-        <Link
-          to="/work"
-          className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
-        >
+        <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
           <ArrowLeft className="w-4 h-4 mr-2" />
           BACK TO WORK
         </Link>
@@ -130,12 +123,7 @@ const ProjectDetail = () => {
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div
-          ref={heroRef.ref}
-          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-            heroRef.isVisible ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
+        <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
             {project.title}
           </h1>
@@ -155,33 +143,14 @@ const ProjectDetail = () => {
       {/* Main Content */}
       <section className="py-20 px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <div
-            ref={contentRef.ref}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-              contentRef.isVisible ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <div>
-              <h2 className="text-3xl font-light mb-8 tracking-wide">Overview</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                {project.description}
-              </p>
-            </div>
+          <div ref={contentRef.ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${contentRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            
           </div>
 
           {/* Space Image Section */}
-          <div
-            ref={spaceImageRef.ref}
-            className={`mb-32 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-              spaceImageRef.isVisible ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
+          <div ref={spaceImageRef.ref} className={`mb-32 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${spaceImageRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div className="w-full h-screen relative overflow-hidden">
-              <img
-                src="/lovable-uploads/4ea62ea1-ca9d-44f1-963e-371b67c7db23.png"
-                alt="Space atmosphere"
-                className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105"
-              />
+              <img src="/lovable-uploads/4ea62ea1-ca9d-44f1-963e-371b67c7db23.png" alt="Space atmosphere" className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105" />
             </div>
           </div>
         </div>
@@ -189,39 +158,22 @@ const ProjectDetail = () => {
 
       {/* Images Section */}
       <section className="pb-20">
-        {project.images.map((image, index) => (
-          <div
-            key={index}
-            ref={imageRefs[index]?.ref}
-            className={`mb-20 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-              imageRefs[index]?.isVisible ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
+        {project.images.map((image, index) => <div key={index} ref={imageRefs[index]?.ref} className={`mb-20 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${imageRefs[index]?.isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div className="w-full h-screen relative overflow-hidden">
-              <img
-                src={image}
-                alt={`${project.title} - Image ${index + 1}`}
-                className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105"
-              />
+              <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105" />
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
 
       {/* Next Project Section */}
       <section className="py-32 px-6 md:px-8 border-t border-gray-800">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-light mb-8 tracking-wide">Explore More Work</h2>
-          <Link
-            to="/work"
-            className="inline-block border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] px-12 py-4 text-sm tracking-widest"
-          >
+          <Link to="/work" className="inline-block border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] px-12 py-4 text-sm tracking-widest">
             VIEW ALL PROJECTS
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default ProjectDetail;
