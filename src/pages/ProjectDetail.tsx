@@ -164,7 +164,7 @@ const ProjectDetail = () => {
         <div className="mx-auto mb-32 px-6 md:px-8 relative z-10" style={{
         maxWidth: '1540px'
       }}>
-          <div className="rounded-lg p-8 md:p-12 bg-transparent">
+          <div className="rounded-lg p-8 md:p-12 bg-transparent px-[100px] py-[50px]">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
               {project.title}
             </h2>
