@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { ChevronLeft, ChevronRight, Grid, Layers } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 interface Project {
   id: string;
   title: string;
@@ -56,26 +57,37 @@ const projects: Project[] = [{
   category: "Spatial",
   imageUrl: "/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"
 }];
+
 const Work = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [viewMode, setViewMode] = useState<'slider' | 'panel'>('slider');
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
+
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % projects.length);
   };
+
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + projects.length) % projects.length);
   };
+
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-  return <div className="min-h-screen bg-black text-white overflow-hidden">
+
+  return (
+    <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navbar />
       
       {/* Header Section */}
       <section className="pt-20 pb-8 px-4 md:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div ref={headerAnimation.ref} className={`transition-all duration-1000 ${headerAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div 
+            ref={headerAnimation.ref} 
+            className={`transition-all duration-[1800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              headerAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+            }`}
+          >
             <div className="text-center">
               <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
                 VIEW ALL PROJECTS
@@ -86,11 +98,21 @@ const Work = () => {
               
               {/* View Toggle */}
               <div className="flex justify-center mt-8 space-x-4">
-                <button onClick={() => setViewMode('slider')} className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${viewMode === 'slider' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}>
+                <button 
+                  onClick={() => setViewMode('slider')} 
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    viewMode === 'slider' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+                >
                   <Layers className="w-4 h-4" />
                   <span className="text-sm">Slider</span>
                 </button>
-                <button onClick={() => setViewMode('panel')} className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${viewMode === 'panel' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}>
+                <button 
+                  onClick={() => setViewMode('panel')} 
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    viewMode === 'panel' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+                >
                   <Grid className="w-4 h-4" />
                   <span className="text-sm">Panel</span>
                 </button>
@@ -100,16 +122,30 @@ const Work = () => {
         </div>
       </section>
 
-      {viewMode === 'slider' ?
-    // ... keep existing code (Main Slider section)
-    <section className="relative h-[calc(100vh-200px)] overflow-hidden">
+      {viewMode === 'slider' ? (
+        /* Main Slider section */
+        <section className="relative h-[calc(100vh-200px)] overflow-hidden">
           <div className="relative w-full h-full">
-            {projects.map((project, index) => <div key={project.id} className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentSlide ? 'opacity-100 translate-x-0' : index < currentSlide ? 'opacity-0 -translate-x-full' : 'opacity-0 translate-x-full'}`}>
+            {projects.map((project, index) => (
+              <div 
+                key={project.id} 
+                className={`absolute inset-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  index === currentSlide 
+                    ? 'opacity-100 translate-x-0' 
+                    : index < currentSlide 
+                      ? 'opacity-0 -translate-x-full' 
+                      : 'opacity-0 translate-x-full'
+                }`}
+              >
                 <Link to={`/project/${project.slug}`} className="block w-full h-full group">
                   <div className="relative w-full h-full">
                     {/* Background Image */}
                     <div className="absolute inset-0">
-                      <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                      <img 
+                        src={project.imageUrl} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover transition-transform duration-[3000ms] ease-out group-hover:scale-105" 
+                      />
                       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                     </div>
                     
@@ -129,21 +165,39 @@ const Work = () => {
                     </div>
                   </div>
                 </Link>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           {/* Navigation Arrows */}
-          <button onClick={prevSlide} className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm" aria-label="Previous project">
+          <button 
+            onClick={prevSlide} 
+            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-500 backdrop-blur-sm" 
+            aria-label="Previous project"
+          >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
 
-          <button onClick={nextSlide} className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm" aria-label="Next project">
+          <button 
+            onClick={nextSlide} 
+            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-500 backdrop-blur-sm" 
+            aria-label="Next project"
+          >
             <ChevronRight className="w-6 h-6 text-white" />
           </button>
 
           {/* Slide Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
-            {projects.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-40 hover:bg-opacity-60'}`} aria-label={`Go to slide ${index + 1}`} />)}
+            {projects.map((_, index) => (
+              <button 
+                key={index} 
+                onClick={() => goToSlide(index)} 
+                className={`w-3 h-3 rounded-full transition-all duration-500 ${
+                  index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-40 hover:bg-opacity-60'
+                }`} 
+                aria-label={`Go to slide ${index + 1}`} 
+              />
+            ))}
           </div>
 
           {/* Slide Counter */}
@@ -152,21 +206,32 @@ const Work = () => {
               {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
             </span>
           </div>
-        </section> : (/* Panel View */
-    <section className="py-8 px-4 md:px-8">
+        </section>
+      ) : (
+        /* Panel View */
+        <section className="py-8 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => <Link key={project.id} to={`/project/${project.slug}`} className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-500 hover:transform hover:scale-105">
+              {projects.map((project, index) => (
+                <Link 
+                  key={project.id} 
+                  to={`/project/${project.slug}`} 
+                  className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:transform hover:scale-105"
+                >
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300"></div>
+                    <img 
+                      src={project.imageUrl} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110" 
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-500"></div>
                   </div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                     <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2">
                       {project.category}
                     </span>
-                    <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors">
+                    <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-500">
                       {project.title}
                     </h3>
                     <p className="text-sm text-gray-400 line-clamp-2">
@@ -180,10 +245,12 @@ const Work = () => {
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
-                </Link>)}
+                </Link>
+              ))}
             </div>
           </div>
-        </section>)}
+        </section>
+      )}
 
       {/* Bottom Navigation */}
       <section className="py-8 px-4 md:px-8 bg-black bg-opacity-80 backdrop-blur-sm">
@@ -192,12 +259,12 @@ const Work = () => {
             <div className="text-sm text-gray-400">
               {viewMode === 'slider' ? 'Use arrow keys or click to navigate' : 'Click on any project to view details'}
             </div>
-            <Link to="/contacts">
-              
-            </Link>
+            <Link to="/contacts"></Link>
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Work;
