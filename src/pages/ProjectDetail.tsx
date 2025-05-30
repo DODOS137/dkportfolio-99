@@ -126,7 +126,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Invisible</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.</p>
@@ -172,7 +172,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Text Box Below YouTube */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Through research on existing museum formats and traditional science displays, the project identified key barriers to understanding and engagement. Focus was placed on selecting accessible scientific topics and intuitive interaction models to support broader comprehension across diverse audiences.</p>
