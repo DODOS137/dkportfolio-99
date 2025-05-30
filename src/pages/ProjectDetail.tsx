@@ -141,9 +141,7 @@ const ProjectDetail = () => {
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">role</h3>
-                <p className="text-white" data-lovable-editable="true">Solo Project 
-VR Designer & Developer   Animation  
-Spatial & Game Environment  </p>
+                <p className="text-white" data-lovable-editable="true">Solo Project </p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">duration</h3>
