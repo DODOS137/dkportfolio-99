@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { ChevronLeft, ChevronRight, Grid, Layers } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -137,7 +136,7 @@ const Work = () => {
                     : 'opacity-0 z-0'
                 }`}
               >
-                <Link to={`/project/${project.slug}`} className="block w-full h-full group">
+                <div className="block w-full h-full group">
                   <div className="relative w-full h-full">
                     {/* Background Image */}
                     <div className="absolute inset-0" data-lovable-editable="true">
@@ -165,7 +164,7 @@ const Work = () => {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -219,10 +218,7 @@ const Work = () => {
                   className="opacity-100 translate-y-0"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <Link 
-                    to={`/project/${project.slug}`} 
-                    className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105 block"
-                  >
+                  <div className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105 block">
                     <div className="aspect-[4/3] overflow-hidden" data-lovable-editable="true">
                       <img 
                         src={project.imageUrl} 
@@ -251,7 +247,7 @@ const Work = () => {
                         {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -266,7 +262,6 @@ const Work = () => {
             <div className="text-sm text-gray-400" data-lovable-editable="true">
               {viewMode === 'slider' ? 'Use arrow keys or click to navigate' : 'Click on any project to view details'}
             </div>
-            <Link to="/contacts"></Link>
           </div>
         </div>
       </section>
