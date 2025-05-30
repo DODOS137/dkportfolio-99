@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Grid, Layers } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface Project {
@@ -69,6 +68,7 @@ const projects: Project[] = [
 
 const Work = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [viewMode, setViewMode] = useState<'slider' | 'panel'>('slider');
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
 
   const nextSlide = () => {
@@ -105,104 +105,175 @@ const Work = () => {
               <h1 className="text-3xl md:text-5xl font-light">
                 Work
               </h1>
+              
+              {/* View Toggle */}
+              <div className="flex justify-center mt-8 space-x-4">
+                <button
+                  onClick={() => setViewMode('slider')}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
+                    viewMode === 'slider' 
+                      ? 'bg-white text-black' 
+                      : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+                >
+                  <Layers className="w-4 h-4" />
+                  <span className="text-sm">Slider</span>
+                </button>
+                <button
+                  onClick={() => setViewMode('panel')}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
+                    viewMode === 'panel' 
+                      ? 'bg-white text-black' 
+                      : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+                >
+                  <Grid className="w-4 h-4" />
+                  <span className="text-sm">Panel</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Slider */}
-      <section className="relative h-[calc(100vh-200px)] overflow-hidden">
-        <div className="relative w-full h-full">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                index === currentSlide 
-                  ? 'opacity-100 translate-x-0' 
-                  : index < currentSlide 
-                    ? 'opacity-0 -translate-x-full' 
-                    : 'opacity-0 translate-x-full'
-              }`}
-            >
-              <Link to={`/project/${project.slug}`} className="block w-full h-full group">
-                <div className="relative w-full h-full">
-                  {/* Background Image */}
-                  <div className="absolute inset-0">
+      {viewMode === 'slider' ? (
+        // ... keep existing code (Main Slider section)
+        <section className="relative h-[calc(100vh-200px)] overflow-hidden">
+          <div className="relative w-full h-full">
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                  index === currentSlide 
+                    ? 'opacity-100 translate-x-0' 
+                    : index < currentSlide 
+                      ? 'opacity-0 -translate-x-full' 
+                      : 'opacity-0 translate-x-full'
+                }`}
+              >
+                <Link to={`/project/${project.slug}`} className="block w-full h-full group">
+                  <div className="relative w-full h-full">
+                    {/* Background Image */}
+                    <div className="absolute inset-0">
+                      <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                    </div>
+                    
+                    {/* Content Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center px-8">
+                        <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4">
+                          {project.category}
+                        </span>
+                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
+                          {project.title}
+                        </h2>
+                        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+                          {project.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+            aria-label="Previous project"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+            aria-label="Next project"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-white' 
+                    : 'bg-white bg-opacity-40 hover:bg-opacity-60'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Slide Counter */}
+          <div className="absolute bottom-8 right-8 z-20 text-white text-sm">
+            <span className="font-mono">
+              {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
+            </span>
+          </div>
+        </section>
+      ) : (
+        /* Panel View */
+        <section className="py-8 px-4 md:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project, index) => (
+                <Link
+                  key={project.id}
+                  to={`/project/${project.slug}`}
+                  className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-500 hover:transform hover:scale-105"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300"></div>
                   </div>
                   
-                  {/* Content Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center px-8">
-                      <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4">
-                        {project.category}
-                      </span>
-                      <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
-                        {project.title}
-                      </h2>
-                      <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
-                        {project.description}
-                      </p>
-                    </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                    <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2">
+                      {project.category}
+                    </span>
+                    <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 line-clamp-2">
+                      {project.description}
+                    </p>
                   </div>
-                </div>
-              </Link>
+                  
+                  {/* Project Number */}
+                  <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <span className="text-xs text-white font-mono">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
-          ))}
-        </div>
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-          aria-label="Previous project"
-        >
-          <ChevronLeft className="w-6 h-6 text-white" />
-        </button>
-
-        <button
-          onClick={nextSlide}
-          className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-          aria-label="Next project"
-        >
-          <ChevronRight className="w-6 h-6 text-white" />
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-white' 
-                  : 'bg-white bg-opacity-40 hover:bg-opacity-60'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Slide Counter */}
-        <div className="absolute bottom-8 right-8 z-20 text-white text-sm">
-          <span className="font-mono">
-            {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
-          </span>
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* Bottom Navigation */}
       <section className="py-8 px-4 md:px-8 bg-black bg-opacity-80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center">
             <div className="text-sm text-gray-400">
-              Use arrow keys or click to navigate
+              {viewMode === 'slider' ? 'Use arrow keys or click to navigate' : 'Click on any project to view details'}
             </div>
             <Link to="/contacts">
               <button className="group relative overflow-hidden bg-white text-black px-6 py-2 text-sm transition-all duration-300 hover:bg-gray-100">
