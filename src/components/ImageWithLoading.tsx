@@ -27,7 +27,7 @@ const ImageWithLoading: React.FC<ImageWithLoadingProps> = ({
   };
 
   return (
-    <div className={`relative ${className}`} data-lovable-editable="true">
+    <div className={`relative ${className}`}>
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           <div className="w-8 h-8 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
@@ -35,8 +35,8 @@ const ImageWithLoading: React.FC<ImageWithLoadingProps> = ({
       )}
       
       {hasError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center text-gray-500" data-lovable-editable="true">
-          <span data-lovable-editable="true">Failed to load image</span>
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center text-gray-500">
+          <span>Failed to load image</span>
         </div>
       ) : (
         <img 
@@ -46,7 +46,6 @@ const ImageWithLoading: React.FC<ImageWithLoadingProps> = ({
           onLoad={handleLoad} 
           onError={handleError} 
           className={className}
-          data-lovable-editable="true"
         />
       )}
     </div>
