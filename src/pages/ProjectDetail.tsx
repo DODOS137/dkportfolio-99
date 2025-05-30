@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
+
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -19,11 +20,15 @@ interface ProjectData {
     videoId?: string;
   };
 }
+
 const projectData: ProjectData = {
   "invisible-space-museum": {
     title: "Invisible",
     subtitle: "Scientific Virtual Reality Contents",
     description: "Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.",
+    challenge: "Making complex scientific concepts accessible and engaging for general audiences through immersive technology.",
+    solution: "Developed an intuitive VR environment that translates abstract scientific principles into interactive, visual experiences.",
+    result: "Successfully created an educational platform that significantly improved public engagement with scientific content.",
     year: "2024",
     client: "Virtual Reality Design",
     role: "VR Developer & Experience Designer",
@@ -90,6 +95,7 @@ const projectData: ProjectData = {
     images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"]
   }
 };
+
 const ProjectDetail = () => {
   const {
     slug
