@@ -171,7 +171,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
             {/* Approach and Development Strategy */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-0">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-150">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
