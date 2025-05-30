@@ -133,20 +133,20 @@ const ProjectDetail = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project type</h3>
+                <p className="text-white" data-lovable-editable="true">MA Graduation Project</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Project category</h3>
+                <p className="text-white" data-lovable-editable="true">VR Content Design</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
+                <p className="text-white" data-lovable-editable="true">Solo Project</p>
               </div>
               <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">DURATION</h3>
+                <p className="text-white" data-lovable-editable="true">16 weeks</p>
               </div>
             </div>
           </div>
