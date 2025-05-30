@@ -31,7 +31,7 @@ const projectData: ProjectData = {
     year: "2024",
     client: "Virtual Reality Design",
     role: "VR Developer & Experience Designer",
-    images: ["/lovable-uploads/eec176ba-ebab-43a9-bb78-e6f08c59771b.png"]
+    images: ["/lovable-uploads/b0dfe25f-e5d6-43e8-9b65-25b4fb983640.png"]
   },
   "learn": {
     title: "Learn",
