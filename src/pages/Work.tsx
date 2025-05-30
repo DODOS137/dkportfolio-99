@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -212,54 +211,46 @@ const Work = () => {
         <section className="py-8 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => {
-                const projectAnimation = useScrollAnimation<HTMLDivElement>();
-                return (
-                  <div 
-                    key={project.id}
-                    ref={projectAnimation.ref}
-                    className={`transition-all duration-[1000ms] ease-out ${
-                      projectAnimation.isVisible 
-                        ? 'opacity-100 translate-y-0' 
-                        : 'opacity-0 translate-y-8'
-                    }`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+              {projects.map((project, index) => (
+                <div 
+                  key={project.id}
+                  className="opacity-100 translate-y-0"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <Link 
+                    to={`/project/${project.slug}`} 
+                    className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105 block"
                   >
-                    <Link 
-                      to={`/project/${project.slug}`} 
-                      className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105 block"
-                    >
-                      <div className="aspect-[4/3] overflow-hidden">
-                        <img 
-                          src={project.imageUrl} 
-                          alt={project.title} 
-                          className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" 
-                        />
-                        <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
-                      </div>
-                      
-                      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                        <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2">
-                          {project.category}
-                        </span>
-                        <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-                          {project.title}
-                        </h3>
-                        <p className="text-sm text-gray-400 line-clamp-2">
-                          {project.description}
-                        </p>
-                      </div>
-                      
-                      {/* Project Number */}
-                      <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <span className="text-xs text-white font-mono">
-                          {String(index + 1).padStart(2, '0')}
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                );
-              })}
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={project.imageUrl} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" 
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
+                    </div>
+                    
+                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                      <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2">
+                        {project.category}
+                      </span>
+                      <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 line-clamp-2">
+                        {project.description}
+                      </p>
+                    </div>
+                    
+                    {/* Project Number */}
+                    <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <span className="text-xs text-white font-mono">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </section>
