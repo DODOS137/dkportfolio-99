@@ -160,24 +160,25 @@ const projectData: ProjectData = {
   }
 };
 const ProjectDetail = () => {
-  const {
-    slug
-  } = useParams<{
-    slug: string;
-  }>();
+  const { slug } = useParams<{ slug: string; }>();
   const project = slug ? projectData[slug] : null;
   const heroRef = useScrollAnimation<HTMLDivElement>();
+  
   if (!project) {
-    return <div className="min-h-screen bg-black flex items-center justify-center">
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-light text-white mb-4">Project Not Found</h1>
           <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
             Back to Work
           </Link>
         </div>
-      </div>;
+      </div>
+    );
   }
-  return <div className="min-h-screen bg-black text-white">
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -244,40 +245,44 @@ const ProjectDetail = () => {
                 <p className="text-white">{project.duration}</p>
               </div>
             </div>
-
-            {/* Additional 3 boxes below */}
-            
           </div>
         </div>
 
         {/* YouTube Video Player - Only show for invisible-space-museum */}
-        {slug === "invisible-space-museum" && project.videoId && <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
+        {slug === "invisible-space-museum" && project.videoId && (
+          <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-800">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId={project.videoId} opts={{
-              width: '100%',
-              height: '100%',
-              playerVars: {
-                autoplay: 0,
-                controls: 1,
-                rel: 0,
-                showinfo: 0,
-                modestbranding: 1,
-                fs: 1,
-                cc_load_policy: 0,
-                iv_load_policy: 3,
-                autohide: 1,
-                disablekb: 0,
-                enablejsapi: 1,
-                origin: window.location.origin,
-                branding: 0,
-                color: 'white',
-                theme: 'dark'
-              }
-            }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                <YouTube 
+                  videoId={project.videoId} 
+                  opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} 
+                  className="w-full h-full" 
+                  iframeClassName="w-full h-full border-0" 
+                />
               </AspectRatio>
             </div>
-          </div>}
+          </div>
+        )}
 
         {/* Text Box Below YouTube */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
@@ -292,53 +297,58 @@ const ProjectDetail = () => {
               {project.development}
             </p>
           
-          {/* Process Section */}
-          <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
-              <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Initial concept development and creative exploration
-              </p>
+            {/* Process Section */}
+            <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
+                <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Initial concept development and creative exploration
+                </p>
+              </div>
+              
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
+                <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Research and evaluation of requirements and constraints
+                </p>
+              </div>
+              
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
+                <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Iterative design process and final implementation
+                </p>
+              </div>
             </div>
             
-            <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
-              <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Research and evaluation of requirements and constraints
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
-            
-            <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
-              <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Iterative design process and final implementation
-              </p>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
           </div>
         </div>
-      </div>
+
+        {/* Remaining Images */}
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
+            <div className="w-full">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
+              </AspectRatio>
+            </div>
+          </div>
+        ))}
+      </section>
 
       {/* Copy of Text Box - Moved to bottom */}
       <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
         
       </div>
-
-      {/* Remaining Images */}
-      {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
-          <div className="w-full">
-            <AspectRatio ratio={16 / 9} className="w-full">
-              <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
-            </AspectRatio>
-          </div>
-        </div>)}
-    </div>;
+    </div>
+  );
 };
+
 export default ProjectDetail;
