@@ -1,8 +1,7 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useScrollAnimation, useStaggerAnimation } from '@/hooks/useScrollAnimation';
 
 interface ProjectData {
   [key: string]: {
@@ -110,14 +109,23 @@ const projectData: ProjectData = {
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? projectData[slug] : null;
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  const heroRef = useScrollAnimation<HTMLDivElement>();
-  const contentRef = useScrollAnimation<HTMLDivElement>();
-  const imageRefs = [
-    useScrollAnimation<HTMLDivElement>(),
-    useScrollAnimation<HTMLDivElement>(),
-    useScrollAnimation<HTMLDivElement>()
-  ];
+  const heroAnimation = useScrollAnimation<HTMLDivElement>();
+  const contentAnimation = useScrollAnimation<HTMLDivElement>();
+  
+  // 스태거 애니메이션을 위한 refs
+  const titleAnimation = useStaggerAnimation<HTMLHeadingElement>(0);
+  const subtitleAnimation = useStaggerAnimation<HTMLParagraphElement>(1);
+  const metaAnimation = useStaggerAnimation<HTMLDivElement>(2);
+
+  useEffect(() => {
+    // 페이지 로드 후 인트로 애니메이션 시작
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (!project) {
     return (
@@ -134,114 +142,158 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
-        <Link 
-          to="/work" 
-          className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          BACK TO WORK
-        </Link>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div 
-          ref={heroRef.ref}
-          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-            heroRef.isVisible ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
-            {project.title}
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
-            {project.subtitle}
-          </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.year}</span>
-            <span>•</span>
-            <span>{project.client}</span>
-            <span>•</span>
-            <span>{project.role}</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-20 px-6 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div 
-            ref={contentRef.ref}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 transition-all duration-[2500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-              contentRef.isVisible ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <div>
-              <h2 className="text-3xl font-light mb-8 tracking-wide">Overview</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                {project.description}
-              </p>
-            </div>
-            <div className="space-y-12">
-              <div>
-                <h3 className="text-xl font-light mb-4 text-gray-400 tracking-wide">Challenge</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {project.challenge}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-light mb-4 text-gray-400 tracking-wide">Solution</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {project.solution}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-light mb-4 text-gray-400 tracking-wide">Result</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {project.result}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Images Section */}
-      <section className="pb-20">
-        {project.images.map((image, index) => (
-          <div 
-            key={index}
-            ref={imageRefs[index]?.ref}
-            className={`mb-20 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-              imageRefs[index]?.isVisible ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <div className="w-full h-screen relative overflow-hidden">
-              <img 
-                src={image} 
-                alt={`${project.title} - Image ${index + 1}`}
-                className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-20" />
-            </div>
-          </div>
-        ))}
-      </section>
-
-      {/* Next Project Section */}
-      <section className="py-32 px-6 md:px-8 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-light mb-8 tracking-wide">Explore More Work</h2>
+      {/* 배경 페이드인 */}
+      <div className={`fixed inset-0 bg-black transition-opacity duration-500 ease-out ${
+        isLoaded ? 'opacity-100' : 'opacity-0'
+      }`} />
+      
+      <div className="relative z-10">
+        {/* Fixed Navigation - 미니멀 스타일 */}
+        <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
           <Link 
-            to="/work"
-            className="inline-block border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] px-12 py-4 text-sm tracking-widest"
+            to="/work" 
+            className="group inline-flex items-center text-white/80 hover:text-white transition-all duration-500 ease-out text-sm tracking-[0.2em] uppercase"
           >
-            VIEW ALL PROJECTS
+            <ArrowLeft className="w-4 h-4 mr-3 transition-transform duration-300 group-hover:-translate-x-1" />
+            Return
           </Link>
-        </div>
-      </section>
+        </nav>
+
+        {/* Hero Section - 과학적 감성의 인트로 */}
+        <section className="h-screen flex items-center justify-center relative overflow-hidden">
+          <div className="text-center max-w-5xl px-6">
+            {/* 메인 타이틀 - 블러에서 선명하게 */}
+            <h1 
+              ref={titleAnimation.ref}
+              className={`text-6xl md:text-8xl lg:text-9xl font-extralight mb-8 tracking-[0.05em] transition-all duration-[800ms] ease-out ${
+                titleAnimation.isVisible 
+                  ? 'opacity-100 scale-100 blur-0 translate-y-0' 
+                  : 'opacity-0 scale-[0.98] blur-sm translate-y-8'
+              }`}
+            >
+              {project.title}
+            </h1>
+            
+            {/* 서브타이틀 - 스태거 */}
+            <p 
+              ref={subtitleAnimation.ref}
+              className={`text-xl md:text-2xl text-gray-400 font-light tracking-[0.1em] mb-16 transition-all duration-600 ease-out ${
+                subtitleAnimation.isVisible 
+                  ? 'opacity-90 translate-y-0' 
+                  : 'opacity-0 translate-y-5'
+              }`}
+              style={{ transitionDelay: '100ms' }}
+            >
+              {project.subtitle}
+            </p>
+            
+            {/* 메타 정보 - 더 늦은 스태거 */}
+            <div 
+              ref={metaAnimation.ref}
+              className={`flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-[0.3em] uppercase transition-all duration-600 ease-out ${
+                metaAnimation.isVisible 
+                  ? 'opacity-80 translate-y-0' 
+                  : 'opacity-0 translate-y-5'
+              }`}
+              style={{ transitionDelay: '200ms' }}
+            >
+              <span>{project.year}</span>
+              <span className="text-gray-700">•</span>
+              <span>{project.client}</span>
+              <span className="text-gray-700">•</span>
+              <span>{project.role}</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Main Content - 섹션 간 부드러운 전환 */}
+        <section className="py-24 px-6 md:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div 
+              ref={contentAnimation.ref}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                contentAnimation.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-12'
+              }`}
+            >
+              {/* Overview */}
+              <div>
+                <h2 className="text-3xl font-light mb-8 tracking-[0.1em] text-gray-200">Overview</h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                  {project.description}
+                </p>
+              </div>
+              
+              {/* Details */}
+              <div className="space-y-12">
+                <div>
+                  <h3 className="text-xl font-light mb-4 text-gray-400 tracking-[0.15em] uppercase text-sm">Challenge</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {project.challenge}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-light mb-4 text-gray-400 tracking-[0.15em] uppercase text-sm">Solution</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {project.solution}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-light mb-4 text-gray-400 tracking-[0.15em] uppercase text-sm">Result</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {project.result}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Images Section - 유기적 등장 */}
+        <section className="pb-24">
+          {project.images.map((image, index) => {
+            const imageAnimation = useScrollAnimation<HTMLDivElement>();
+            return (
+              <div 
+                key={index}
+                ref={imageAnimation.ref}
+                className={`mb-24 transition-all duration-[1000ms] ease-out ${
+                  imageAnimation.isVisible 
+                    ? 'opacity-100 scale-100 blur-0' 
+                    : 'opacity-0 scale-105 blur-[3px]'
+                }`}
+                style={{ transitionDelay: '200ms' }}
+              >
+                <div className="w-full h-screen relative overflow-hidden">
+                  <img 
+                    src={image} 
+                    alt={`${project.title} - Visual ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.02]"
+                  />
+                  <div className="absolute inset-0 bg-black/10" />
+                </div>
+              </div>
+            );
+          })}
+        </section>
+
+        {/* Next Project Section - 미니멀 CTA */}
+        <section className="py-32 px-6 md:px-8 border-t border-white/5">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-4xl font-light mb-12 tracking-[0.1em] text-gray-200">Continue Exploring</h2>
+            <Link 
+              to="/work"
+              className="group inline-block relative overflow-hidden"
+            >
+              <div className="border border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-500 ease-out px-12 py-4 text-sm tracking-[0.3em] uppercase">
+                <span className="relative z-10">View All Projects</span>
+                <div className="absolute inset-0 bg-white/5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></div>
+              </div>
+            </Link>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
