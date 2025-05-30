@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface Project {
@@ -67,15 +68,27 @@ const projects: Project[] = [
 ];
 
 const Work = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
-  const projectAnimations = projects.map(() => useScrollAnimation<HTMLDivElement>());
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % projects.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navbar />
       
-      {/* Hero Section - 더 미니멀하고 세련된 스타일 */}
-      <section className="pt-20 pb-12 px-4 md:px-8">
+      {/* Header Section */}
+      <section className="pt-20 pb-8 px-4 md:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div 
             ref={headerAnimation.ref}
@@ -85,121 +98,117 @@ const Work = () => {
                 : 'opacity-0 translate-y-10'
             }`}
           >
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
-              <div>
-                <h1 className="text-4xl md:text-6xl font-light mb-4">
-                  Work
-                </h1>
-                <p className="text-lg text-gray-400 max-w-md">
-                  A curated selection of our latest projects exploring digital experiences and spatial design.
-                </p>
-              </div>
-              <div className="text-sm text-gray-500 mt-8 md:mt-0">
-                ({projects.length} projects)
-              </div>
+            <div className="text-center">
+              <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
+                VIEW ALL PROJECTS
+              </p>
+              <h1 className="text-3xl md:text-5xl font-light">
+                Work
+              </h1>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects Grid - RESN 스타일의 레이아웃 */}
-      <section className="pb-20 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="space-y-0">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                ref={projectAnimations[index].ref}
-                className={`group border-t border-gray-800 transition-all duration-700 ${
-                  projectAnimations[index].isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-20'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <Link to={`/project/${project.slug}`}>
-                  <div className="py-8 md:py-12 hover:bg-gray-900/30 transition-all duration-500 cursor-pointer">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                      {/* Project Number */}
-                      <div className="md:col-span-1">
-                        <span className="text-sm text-gray-500 font-mono">
-                          {String(index + 1).padStart(2, '0')}
-                        </span>
-                      </div>
-
-                      {/* Project Info */}
-                      <div className="md:col-span-6">
-                        <div className="mb-2">
-                          <span className="text-xs text-gray-500 uppercase tracking-wider">
-                            {project.category}
-                          </span>
-                        </div>
-                        <h3 className="text-2xl md:text-3xl font-light mb-2 group-hover:text-gray-300 transition-colors">
-                          {project.title}
-                        </h3>
-                        <p className="text-gray-400 text-sm md:text-base">
-                          {project.description}
-                        </p>
-                      </div>
-
-                      {/* Project Image */}
-                      <div className="md:col-span-5">
-                        <div className="relative overflow-hidden bg-gray-900 aspect-[4/3] rounded-lg">
-                          {project.imageUrl && (
-                            <img 
-                              src={project.imageUrl} 
-                              alt={project.title} 
-                              className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            />
-                          )}
-                          <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-500" />
-                        </div>
-                      </div>
+      {/* Main Slider */}
+      <section className="relative h-[calc(100vh-200px)] overflow-hidden">
+        <div className="relative w-full h-full">
+          {projects.map((project, index) => (
+            <div
+              key={project.id}
+              className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                index === currentSlide 
+                  ? 'opacity-100 translate-x-0' 
+                  : index < currentSlide 
+                    ? 'opacity-0 -translate-x-full' 
+                    : 'opacity-0 translate-x-full'
+              }`}
+            >
+              <Link to={`/project/${project.slug}`} className="block w-full h-full group">
+                <div className="relative w-full h-full">
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </div>
+                  
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center px-8">
+                      <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4">
+                        {project.category}
+                      </span>
+                      <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
+                        {project.title}
+                      </h2>
+                      <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+                        {project.description}
+                      </p>
                     </div>
                   </div>
-                </Link>
-              </div>
-            ))}
-          </div>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+          aria-label="Previous project"
+        >
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+          aria-label="Next project"
+        >
+          <ChevronRight className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-white' 
+                  : 'bg-white bg-opacity-40 hover:bg-opacity-60'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Slide Counter */}
+        <div className="absolute bottom-8 right-8 z-20 text-white text-sm">
+          <span className="font-mono">
+            {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
+          </span>
         </div>
       </section>
 
-      {/* Bottom Section */}
-      <section className="py-16 px-4 md:px-8 border-t border-gray-800">
+      {/* Bottom Navigation */}
+      <section className="py-8 px-4 md:px-8 bg-black bg-opacity-80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-light mb-6">
-                Let's Create Together
-              </h2>
-              <p className="text-gray-400 mb-8">
-                Ready to bring your vision to life? We're always excited to explore new possibilities and push creative boundaries.
-              </p>
-              <Link to="/contacts">
-                <button className="group relative overflow-hidden bg-white text-black px-8 py-3 transition-all duration-300 hover:bg-gray-100">
-                  <span className="relative z-10">Start a Project</span>
-                </button>
-              </Link>
+          <div className="flex justify-between items-center">
+            <div className="text-sm text-gray-400">
+              Use arrow keys or click to navigate
             </div>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-light mb-2">Services</h3>
-                <div className="text-sm text-gray-400 space-y-1">
-                  <div>Virtual & Augmented Reality</div>
-                  <div>Exhibition Design</div>
-                  <div>Spatial Design</div>
-                  <div>Brand Identity</div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-light mb-2">Recognition</h3>
-                <div className="text-sm text-gray-400 space-y-1">
-                  <div>International Museum Association</div>
-                  <div>Digital Arts Awards</div>
-                  <div>Design Excellence Recognition</div>
-                </div>
-              </div>
-            </div>
+            <Link to="/contacts">
+              <button className="group relative overflow-hidden bg-white text-black px-6 py-2 text-sm transition-all duration-300 hover:bg-gray-100">
+                <span className="relative z-10">Contact Us</span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
