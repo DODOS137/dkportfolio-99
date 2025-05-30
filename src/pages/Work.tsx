@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -125,6 +126,7 @@ const Work = () => {
       </section>
 
       {viewMode === 'slider' ? (
+        /* Main Slider section */
         <section className="relative h-[calc(100vh-200px)] overflow-hidden">
           <div className="relative w-full h-full">
             {projects.map((project, index) => (
@@ -138,15 +140,18 @@ const Work = () => {
               >
                 <Link to={`/project/${project.slug}`} className="block w-full h-full group">
                   <div className="relative w-full h-full">
-                    <div className="absolute inset-0">
+                    {/* Background Image */}
+                    <div className="absolute inset-0" data-lovable-editable="true">
                       <img 
                         src={project.imageUrl} 
                         alt={project.title} 
                         className="w-full h-full object-cover transition-transform duration-[4000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105"
+                        data-lovable-editable="true"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                     </div>
                     
+                    {/* Content Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center px-8">
                         <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4" data-lovable-editable="true">
@@ -166,6 +171,7 @@ const Work = () => {
             ))}
           </div>
 
+          {/* Navigation Arrows */}
           <button 
             onClick={prevSlide} 
             className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] backdrop-blur-sm" 
@@ -182,6 +188,7 @@ const Work = () => {
             <ChevronRight className="w-6 h-6 text-white" />
           </button>
 
+          {/* Slide Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
             {projects.map((_, index) => (
               <button 
@@ -195,6 +202,7 @@ const Work = () => {
             ))}
           </div>
 
+          {/* Slide Counter */}
           <div className="absolute bottom-8 right-8 z-20 text-white text-sm">
             <span className="font-mono">
               {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
@@ -202,6 +210,7 @@ const Work = () => {
           </div>
         </section>
       ) : (
+        /* Panel View */
         <section className="py-8 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -215,11 +224,12 @@ const Work = () => {
                     to={`/project/${project.slug}`} 
                     className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105 block"
                   >
-                    <div className="aspect-[4/3] overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden" data-lovable-editable="true">
                       <img 
                         src={project.imageUrl} 
                         alt={project.title} 
                         className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
+                        data-lovable-editable="true"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
                     </div>
@@ -236,6 +246,7 @@ const Work = () => {
                       </p>
                     </div>
                     
+                    {/* Project Number */}
                     <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
                       <span className="text-xs text-white font-mono">
                         {String(index + 1).padStart(2, '0')}
@@ -249,6 +260,7 @@ const Work = () => {
         </section>
       )}
 
+      {/* Bottom Navigation */}
       <section className="py-8 px-4 md:px-8 bg-black bg-opacity-80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center">
@@ -263,3 +275,4 @@ const Work = () => {
 };
 
 export default Work;
+
