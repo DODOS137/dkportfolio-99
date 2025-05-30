@@ -2,6 +2,9 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import ImageWithLoading from '@/components/ImageWithLoading';
+
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -149,18 +152,28 @@ const ProjectDetail = () => {
 
           {/* Space Image Section */}
           <div ref={spaceImageRef.ref} className={`mb-32 transition-all duration-[3500ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${spaceImageRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="w-full h-screen relative overflow-hidden">
-              <img alt="Space atmosphere" className="w-full h-full object-cover" src="/lovable-uploads/30e45ab0-25a1-4894-b49f-161f3eec42f7.png" />
-            </div>
+            <AspectRatio ratio={16 / 9} className="w-full">
+              <ImageWithLoading 
+                src="/lovable-uploads/30e45ab0-25a1-4894-b49f-161f3eec42f7.png"
+                alt="Space atmosphere"
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
           </div>
         </div>
       </section>
 
       {/* Images Section */}
       <section className="pb-20">
-        {project.images.map((image, index) => <div key={index} className="mb-20">
-            <div className="w-full h-screen relative overflow-hidden">
-              
+        {project.images.map((image, index) => <div key={index} className="mb-20 px-6 md:px-8">
+            <div className="max-w-6xl mx-auto">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <ImageWithLoading 
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
             </div>
           </div>)}
       </section>
