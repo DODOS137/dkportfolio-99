@@ -5,7 +5,6 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
-
 interface ProjectData {
   [key: string]: {
     title: string;
@@ -188,8 +187,8 @@ const ProjectDetail = () => {
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Through research on existing museum formats and traditional science displays, the project identified key barriers to understanding and engagement. Focus was placed on selecting accessible scientific topics and intuitive interaction models to support broader comprehension across diverse audiences.</p>
             
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Through research on existing museum formats and traditional science displays, the project identified key barriers to understanding and engagement. Focus was placed on selecting accessible scientific topics and intuitive interaction models to support broader comprehension across diverse audiences.</p>
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Development Strategy</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Four fundamental scientific concepts—gravity, light, life, and time—served as the foundation. The spatial and narrative design aimed to enhance engagement, using symbolism and abstraction to visualise phenomena beyond human perception. Each concept was explored through immersive environments designed to deepen emotional and intellectual connection.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
