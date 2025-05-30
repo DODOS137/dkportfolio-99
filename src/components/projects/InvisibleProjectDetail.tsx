@@ -33,9 +33,9 @@ const InvisibleProjectDetail = () => {
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
             <span data-lovable-editable="true">{project.heroYear}</span>
-            <span>•</span>
+            <span data-lovable-editable="true">•</span>
             <span data-lovable-editable="true">{project.heroClient}</span>
-            <span>•</span>
+            <span data-lovable-editable="true">•</span>
             <span data-lovable-editable="true">{project.heroRole}</span>
           </div>
         </div>
@@ -172,17 +172,14 @@ const InvisibleProjectDetail = () => {
             </div>
             
             {/*Preliminary Research*/}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-150">
-          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Preliminary Research</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-              {project.approach}
-            </p>
-            
-            
-            
-          </div>
-        </div>
+            <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-150">
+              <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
+                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Preliminary Research</h2>
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+                  {project.approach}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
