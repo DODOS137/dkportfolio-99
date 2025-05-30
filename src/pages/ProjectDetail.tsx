@@ -299,13 +299,15 @@ const ProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Brainstorming</p>
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Research and evaluation of requirements and constraints
-                </p>
+                <p className="text-gray-400 text-sm leading-relaxed">Context & Problem Analysis</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Survey</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col justify-center items-center text-center border border-white">
