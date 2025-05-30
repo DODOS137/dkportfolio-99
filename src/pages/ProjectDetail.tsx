@@ -153,33 +153,6 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* Copy of Text Box */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
-          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Invisible</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
-                <p className="text-white" data-lovable-editable="true">static text</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* YouTube Video Player */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
           <div className="w-full">
@@ -221,6 +194,33 @@ const ProjectDetail = () => {
               <div>
                 
                 
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Copy of Text Box - Moved to bottom */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Invisible</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
+                <p className="text-white" data-lovable-editable="true">static text</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
+                <p className="text-white" data-lovable-editable="true">static text</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
+                <p className="text-white" data-lovable-editable="true">static text</p>
+              </div>
+              <div>
+                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">static text</h3>
+                <p className="text-white" data-lovable-editable="true">static text</p>
               </div>
             </div>
           </div>
