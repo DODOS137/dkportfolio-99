@@ -178,27 +178,27 @@ const InvisibleProjectDetail = () => {
 </div>
 
 
-          {/* Worldbuilding */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Worldbuilding</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.</p>
-            </div>
-          </div>
+          {/* Worldbuilding + Image Section */}
+   <div className="mb-16">
+  <div className="rounded-lg py-[50px] bg-transparent">
+    <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Worldbuilding</h2>
+    <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+      Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+    </p>
+  </div>
 
-          {/* Second Image */}
-          <div className="z-0 relative" data-lovable-editable="true">
-            <div className="w-full">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading
-                  src="/lovable-uploads/9537a1c9-0a14-4000-81dc-263bdc7b2c84.png"
-                  alt="Planet 0Z33 - VR Environment"
-                  className="w-full h-full object-cover"
-                />
-              </AspectRatio>
-            </div>
-          </div>
-        </div>
+  {/* Second Image - aligned with text width */}
+  <div className="w-full">
+    <AspectRatio ratio={16 / 9} className="w-full">
+      <ImageWithLoading
+        src="/lovable-uploads/9537a1c9-0a14-4000-81dc-263bdc7b2c84.png"
+        alt="Planet 0Z33 - VR Environment"
+        className="w-full h-full object-cover"
+      />
+    </AspectRatio>
+  </div>
+</div>
+
 
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => (
