@@ -185,10 +185,10 @@ const InvisibleProjectDetail = () => {
               </p>
             </div>
 
-            {/* Second Image - aligned with text width - NOW EDITABLE */}
+            {/* Second Image - simple img tag for direct editing */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading
+                <img
                   src="/lovable-uploads/96f4eccf-b0e9-42e0-91c4-0de2033088a5.png"
                   alt="Planet A233 - VR Environment"
                   className="w-full h-full object-cover"
