@@ -235,7 +235,7 @@ const InvisibleProjectDetail = () => {
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
                     </div> 
               
-              {/* YouTube Video Player */}
+              {/* YouTube Video Player2 */}
           {project.videoId && <div className="mb-32">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
