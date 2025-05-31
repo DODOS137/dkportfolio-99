@@ -176,7 +176,7 @@ const InvisibleProjectDetail = () => {
                 Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
               </p>
 
-              {/* Image directly below content and inside the same wrapper */}
+              {/* First image */}
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <img
@@ -209,11 +209,17 @@ const InvisibleProjectDetail = () => {
               </h2>
 
               {/* Image */}
-              <div className="w-full mb-8">
-                <AspectRatio ratio={16 / 9} className="w-full">
-                  <img alt="Planet A233 - VR Environment" className="w-full h-full object-cover" data-lovable-editable="true" src="/lovable-uploads/88d91bc2-548a-4178-9d33-af0635f164eb.png" />
-                </AspectRatio>
-              </div>
+              <div className="w-full">
+  <AspectRatio ratio={16 / 9} className="w-full">
+    <img
+      src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
+      alt="Planet A233 - VR Environment"
+      className="w-full h-full"
+      data-lovable-editable="true"
+    />
+  </AspectRatio>
+</div>
+
 
               {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">
