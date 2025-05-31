@@ -118,7 +118,7 @@ const InvisibleProjectDetail = () => {
           {/* Process Section */}
           <div className="mb-32">
             <div className="rounded-lg pt-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-12 text-white" data-lovable-editable="true">Process</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
@@ -156,7 +156,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Worldbuilding + Image Section */}
-          <div className="mb-16">
+          <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Worldbuilding</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
