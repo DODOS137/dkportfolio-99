@@ -192,19 +192,7 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Slide Indicators */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
-            {projects.map((_, index) => (
-              <button 
-                key={index} 
-                onClick={() => goToSlide(index)} 
-                className={`w-3 h-3 rounded-full transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-                  index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-40 hover:bg-opacity-60'
-                }`} 
-                aria-label={`Go to slide ${index + 1}`} 
-              />
-            ))}
-          </div>
+
 
           {/* Slide Counter */}
           <div className="absolute bottom-8 right-8 z-20 text-white text-sm">
