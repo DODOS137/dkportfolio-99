@@ -184,6 +184,7 @@ const Work = () => {
             </button>
           </div>
 
+          <section className="relative" data-lovable-editable="false"> 
           {/* Navigation Arrows */}
           <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
             <div className="flex items-center gap-8">
@@ -205,7 +206,7 @@ const Work = () => {
               </button>
             </div>
           </div>
-
+          
           {/* Slide Counter */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
             <span className="font-mono">
@@ -213,6 +214,7 @@ const Work = () => {
             </span>
           </div>
         </section>
+          
       ) : (
         /* Panel View */
         <section className="py-8 px-4 md:px-8">
