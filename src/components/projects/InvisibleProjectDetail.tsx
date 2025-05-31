@@ -174,7 +174,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Worldbuilding */}
-          <div className="mb-32">
+          <div className="mb-8">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Worldbuilding</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.</p>
