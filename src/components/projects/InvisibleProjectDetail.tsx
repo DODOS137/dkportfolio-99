@@ -166,13 +166,17 @@ const InvisibleProjectDetail = () => {
     </p>
 
     {/* Image directly below content and inside the same wrapper */}
-    <div className="w-full">
-      <AspectRatio ratio={16 / 9} className="w-full">
-        <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full object-cover" data-lovable-editable="true" />
-      </AspectRatio>
-    </div>
-  </div>
-        </div>
+<div className="w-full">
+  <AspectRatio ratio={16 / 9} className="w-full">
+    <img
+      src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
+      alt="Planet A233 - VR Environment"
+      className="w-full h-full"
+      data-lovable-editable="true"
+    />
+  </AspectRatio>
+</div>
+
 
           {/* Narrative Arc – The Explorer’s Journey &Emotional Logic */}
           <div className="mb-32">
