@@ -185,6 +185,16 @@ const InvisibleProjectDetail = () => {
   </div>
 </div>
 
+          {/* Narrative Arc – The Explorer’s Journey &Emotional Logic */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Arc – The Explorer’s Journey</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.</p>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Emotional Logic</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.</p>
+            </div>
+          </div>
+
 
           {/* Remaining Images */}
           {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
