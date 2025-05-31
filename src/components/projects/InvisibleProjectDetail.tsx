@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -7,19 +6,13 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
-
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
-        <Link
-          to="/work"
-          className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
-        >
+        <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
           <ArrowLeft className="w-4 h-4" />
           <span data-lovable-editable="true">Back to work</span>
         </Link>
@@ -27,10 +20,7 @@ const InvisibleProjectDetail = () => {
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div
-          ref={heroRef.ref}
-          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}
-        >
+        <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
             {project.heroTitle}
           </h1>
@@ -53,11 +43,7 @@ const InvisibleProjectDetail = () => {
         <div className="z-0 relative">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <ImageWithLoading
-                src={project.images[0]}
-                alt={`${project.title} - Image 1`}
-                className="w-full h-full object-cover"
-              />
+              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" />
             </AspectRatio>
           </div>
         </div>
@@ -91,40 +77,33 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* YouTube Video Player */}
-          {project.videoId && (
-            <div className="mb-32">
+          {project.videoId && <div className="mb-32">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <YouTube
-                    videoId={project.videoId}
-                    opts={{
-                      width: '100%',
-                      height: '100%',
-                      playerVars: {
-                        autoplay: 0,
-                        controls: 1,
-                        rel: 0,
-                        showinfo: 0,
-                        modestbranding: 1,
-                        fs: 1,
-                        cc_load_policy: 0,
-                        iv_load_policy: 3,
-                        autohide: 1,
-                        disablekb: 0,
-                        enablejsapi: 1,
-                        origin: window.location.origin,
-                        branding: 0,
-                        color: 'white',
-                        theme: 'dark',
-                      },
-                    }}
-                    className="w-full h-full"
-                    iframeClassName="w-full h-full border-0"
-                  />
+                  <YouTube videoId={project.videoId} opts={{
+                width: '100%',
+                height: '100%',
+                playerVars: {
+                  autoplay: 0,
+                  controls: 1,
+                  rel: 0,
+                  showinfo: 0,
+                  modestbranding: 1,
+                  fs: 1,
+                  cc_load_policy: 0,
+                  iv_load_policy: 3,
+                  autohide: 1,
+                  disablekb: 0,
+                  enablejsapi: 1,
+                  origin: window.location.origin,
+                  branding: 0,
+                  color: 'white',
+                  theme: 'dark'
+                }
+              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
                 </AspectRatio>
               </div>
-            </div>
-          )}
+            </div>}
 
           {/* Approach & Development */}
           <div className="mb-32">
@@ -188,34 +167,21 @@ const InvisibleProjectDetail = () => {
             {/* Second Image - simple img tag for direct editing */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <img
-                  src="/lovable-uploads/96f4eccf-b0e9-42e0-91c4-0de2033088a5.png"
-                  alt="Planet A233 - VR Environment"
-                  className="w-full h-full object-cover"
-                  data-lovable-editable="true"
-                />
+                <img alt="Planet A233 - VR Environment" className="w-full h-full object-cover" data-lovable-editable="true" src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" />
               </AspectRatio>
             </div>
           </div>
 
           {/* Remaining Images */}
-          {project.images.slice(1).map((image, index) => (
-            <div key={index + 1} className="mb-20">
+          {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <ImageWithLoading
-                    src={image}
-                    alt={`${project.title} - Image ${index + 2}`}
-                    className="w-full h-full object-cover"
-                  />
+                  <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
                 </AspectRatio>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default InvisibleProjectDetail;
