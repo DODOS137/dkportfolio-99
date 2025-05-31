@@ -171,21 +171,27 @@ const Work = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <button 
-            onClick={prevSlide} 
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] backdrop-blur-sm" 
-            aria-label="Previous project"
-          >
-            <ChevronLeft className="w-6 h-6 text-white" />
-          </button>
+          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-50">
+            <div className="flex items-center gap-8">
+              <button onClick={prevProject} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
+                <ChevronLeft size={24} />
+              </button>
+              
+              <div className="w-16 h-px bg-white/50 relative">
+                <div 
+                  className="h-full bg-white transition-all duration-300" 
+                  style={{
+                    width: `${((currentProject + 1) / projects.length) * 100}%`
+                  }} 
+                />
+              </div>
+              
+              <button onClick={nextProject} className="p-2 hover:opacity-70 transition-opacity" aria-label="Next project">
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </div>
 
-          <button 
-            onClick={nextSlide} 
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] backdrop-blur-sm" 
-            aria-label="Next project"
-          >
-            <ChevronRight className="w-6 h-6 text-white" />
-          </button>
 
           {/* Slide Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
