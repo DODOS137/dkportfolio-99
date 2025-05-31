@@ -185,7 +185,7 @@ const Work = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-50">
+          <div className="flex justify-center  z-50">
             <div className="flex items-center gap-8">
               <button onClick={prevSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
                 <ChevronLeft size={24} />
