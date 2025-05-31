@@ -94,7 +94,7 @@ const Work = () => {
                 VIEW ALL PROJECTS
               </p>
               <h1 className="text-3xl md:text-5xl font-light" data-lovable-editable="true">
-                Spatial Interface Design
+               WORK
               </h1>
               
               {/* View Toggle */}
