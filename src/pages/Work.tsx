@@ -121,35 +121,6 @@ const Work = () => {
               </div>
             </div>
           </div>
-            {/* Navigation Arrows */}
-          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
-            <div className="flex items-center gap-8">
-              <button onClick={prevSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
-                <ChevronLeft size={24} />
-              </button>
-              
-              <div className="w-16 h-px bg-white/50 relative">
-                <div 
-                  className="h-full bg-white transition-all duration-300" 
-                  style={{
-                    width: `${((currentSlide + 1) / projects.length) * 100}%`
-                  }} 
-                />
-              </div>
-              
-              <button onClick={nextSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Next project">
-                <ChevronRight size={24} />
-              </button>
-            </div>
-          </div>
-
-          {/* Slide Counter */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-            <span className="font-mono">
-              {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
-            </span>
-          </div>
-        </section>
         </div>
       </section>
 
@@ -213,7 +184,35 @@ const Work = () => {
             </button>
           </div>
 
-         
+          {/* Navigation Arrows */}
+          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+            <div className="flex items-center gap-8">
+              <button onClick={prevSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
+                <ChevronLeft size={24} />
+              </button>
+              
+              <div className="w-16 h-px bg-white/50 relative">
+                <div 
+                  className="h-full bg-white transition-all duration-300" 
+                  style={{
+                    width: `${((currentSlide + 1) / projects.length) * 100}%`
+                  }} 
+                />
+              </div>
+              
+              <button onClick={nextSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Next project">
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </div>
+
+          {/* Slide Counter */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
+            <span className="font-mono">
+              {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
+            </span>
+          </div>
+        </section>
       ) : (
         /* Panel View */
         <section className="py-8 px-4 md:px-8">
