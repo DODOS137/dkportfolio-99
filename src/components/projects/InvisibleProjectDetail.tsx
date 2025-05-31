@@ -42,7 +42,7 @@ const InvisibleProjectDetail = () => {
         {/* First Image */}
         <div className="z-0 relative">
           <div className="w-full">
-            <AspectRatio ratio={16 / 9} className="w-full">
+            <AspectRatio  className="w-full h-auto object-contain">
               <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" />
             </AspectRatio>
           </div>
