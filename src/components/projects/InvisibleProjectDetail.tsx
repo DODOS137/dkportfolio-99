@@ -62,8 +62,8 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[150px]">
-          <div className="relative z-10 bg-transparent py-0 px-0 max-w-3xl mx-auto">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6">
+          <div className="relative z-10 bg-transparent py-0 px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="false">
               {project.title}
             </h2>
@@ -94,8 +94,8 @@ const InvisibleProjectDetail = () => {
 
         {/* YouTube Video Player */}
         {project.videoId && (
-          <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[150px]">
-            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent max-w-3xl mx-auto">
+          <div className="max-w-[1540px] mx-auto mb-32 px-6">
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <YouTube
                   videoId={project.videoId}
@@ -129,31 +129,30 @@ const InvisibleProjectDetail = () => {
         )}
 
         {/* Approach and Development Strategy */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[150px]" data-lovable-editable="false">
-          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0 max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6">
+          <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0" id="approach-anchor">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Approach</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               {project.approach}
             </p>
-
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Development Strategy</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Development Strategy</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
               {project.development}
             </p>
           </div>
         </div>
 
         {/* Process Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[150px]" data-lovable-editable="false">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
-            <h2 className="text-2xl md:text-3xl font-light mb-12 text-white" data-lovable-editable="true">Process</h2>
+            <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               {/* Cards... */}
             </div>
 
             {/* Preliminary Research */}
-            <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[150px]">
-              <div className="rounded-lg p-8 md:p-12 bg-transparent py-[50px] px-0 max-w-3xl mx-auto">
+            <div className="w-full">
+              <div className="rounded-lg p-8 md:p-12 bg-transparent py-[50px] px-0">
                 <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
                   {project.approach}
