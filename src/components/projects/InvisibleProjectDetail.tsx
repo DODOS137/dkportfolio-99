@@ -195,10 +195,21 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-           {/* Videodevelopment + Image Section */}
+          
+          {/* Videodevelopment + Image Section */}
 <div className="mb-32">
-  {/* Image directly below content and inside the same wrapper */}
-    <div className="w-full">
+  <div className="rounded-lg py-[50px] bg-transparent">
+    {/* Title */}
+    <h2
+      className="text-2xl md:text-3xl font-light mb-8 text-white"
+      data-lovable-editable="true"
+    >
+      Video Development
+
+    </h2>
+
+    {/* Image */}
+    <div className="w-full mb-8">
       <AspectRatio ratio={16 / 9} className="w-full">
         <img
           src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
@@ -208,23 +219,17 @@ const InvisibleProjectDetail = () => {
         />
       </AspectRatio>
     </div>
-  <div className="rounded-lg py-[50px] bg-transparent">
-    <h2
-      className="text-2xl md:text-3xl font-light mb-8 text-white"
-      data-lovable-editable="true"
-    >
-      Worldbuilding
-    </h2>
-    <p
-      className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8"
-      data-lovable-editable="true"
-    >
-      Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
-    </p>
 
-    
+    {/* Description */}
+    <p
+      className="text-lg md:text-xl text-gray-300 leading-relaxed"
+      data-lovable-editable="true"
+    >
+    Short video sequences functioned as interludes, each exploring a scientific theme—gravity, light, life, or time—through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.
+    </p>
   </div>
 </div>
+
 
           {/* Remaining Images */}
           {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
