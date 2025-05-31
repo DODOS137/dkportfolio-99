@@ -170,6 +170,20 @@ const Work = () => {
             ))}
           </div>
 
+          {/* Previous Project Button - Left */}
+          <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-50">
+            <button onClick={prevProject} className="text-left hover:opacity-70 transition-opacity p-4">
+              <div className="text-sm tracking-wide opacity-60">Previous</div>
+            </button>
+          </div>
+
+          {/* Next Project Button - Right */}
+          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-50">
+            <button onClick={nextProject} className="text-right hover:opacity-70 transition-opacity p-4">
+              <div className="text-sm tracking-wide opacity-60">Next</div>
+            </button>
+          </div>
+
           {/* Navigation Arrows */}
           <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-50">
             <div className="flex items-center gap-8">
