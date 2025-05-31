@@ -49,7 +49,7 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box */}
-        <div className="absolute max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-0">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-0">
           <div className="rounded-lg p-8 md:p-12 py-0 bg-transparent px-[150px]">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="false">
               {project.title}
