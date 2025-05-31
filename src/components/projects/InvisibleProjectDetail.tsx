@@ -49,7 +49,7 @@ const InvisibleProjectDetail = () => {
       {/* Content Section */}
       <section className="pb-20">
         {/* First Image */}
-        <div className="mb-20">
+        <div className="mb-20 z-10 relative">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <ImageWithLoading
@@ -62,7 +62,7 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Shared Container */}
-        <div className="max-w-[1390px] mx-auto px-6 md:px-[150px]">
+        <div className="max-w-[1390px] mx-auto px-6 md:px-[150px] z-10 relative">
           {/* Project Description */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
