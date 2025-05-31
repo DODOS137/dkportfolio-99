@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -206,7 +207,7 @@ const Work = () => {
           </div>
 
           {/* Slide Counter */}
-          <div className=""absolute bottom-8 right-1/2 translate-x-1/2 z-20 text-white text-sm">
+          <div className="absolute bottom-8 right-1/2 translate-x-1/2 z-20 text-white text-sm">
             <span className="font-mono">
               {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
             </span>
