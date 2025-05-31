@@ -12,9 +12,8 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    // Disable component tagger in development to prevent click interference
-    mode === 'production' && componentTagger(),
-  ].filter(Boolean),
+    componentTagger(),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
