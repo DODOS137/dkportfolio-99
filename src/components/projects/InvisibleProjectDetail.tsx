@@ -233,9 +233,55 @@ const InvisibleProjectDetail = () => {
                 {/* 4th image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
+                    </div> 
+              
+              {/* YouTube Video Player */}
+          {project.videoId && <div className="mb-32">
+              <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <YouTube videoId={project.videoId} opts={{
+                width: '100%',
+                height: '100%',
+                playerVars: {
+                  autoplay: 0,
+                  controls: 1,
+                  rel: 0,
+                  showinfo: 0,
+                  modestbranding: 1,
+                  fs: 1,
+                  cc_load_policy: 0,
+                  iv_load_policy: 3,
+                  autohide: 1,
+                  disablekb: 0,
+                  enablejsapi: 1,
+                  origin: window.location.origin,
+                  branding: 0,
+                  color: 'white',
+                  theme: 'dark'
+                }
+              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                </AspectRatio>
+              </div>
+            </div>}
+            </div>
+          </div>
+
+           {/* Spatial Design + Image Section */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              {/* Title */}
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+                Spatial Design
+              </h2>
+                {/* Description */}
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</p>
+                {/* 4th image */}
+              <div className="w-full mb-8">
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
                     </div>
             </div>
           </div>
+        
 
           {/* Remaining Images */}
           {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
