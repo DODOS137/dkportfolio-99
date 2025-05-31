@@ -185,7 +185,7 @@ const Work = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <div className="flex justify-center  z-50">
+          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
             <div className="flex items-center gap-8">
               <button onClick={prevSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
                 <ChevronLeft size={24} />
@@ -207,7 +207,7 @@ const Work = () => {
           </div>
 
           {/* Slide Counter */}
-          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
             <span className="font-mono">
               {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
             </span>
