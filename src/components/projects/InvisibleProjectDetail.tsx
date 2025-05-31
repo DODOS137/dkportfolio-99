@@ -49,8 +49,8 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-[24px] md:px-[150px] relative z-10">
-  <div className="rounded-lg py-0 bg-transparent px-0">
+<div className="w-full px-[24px] md:px-[150px] mb-32">
+  <div className="max-w-[1540px] mx-auto relative z-10 bg-transparent py-0">
     <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="false">
       {project.title}
     </h2>
@@ -78,6 +78,7 @@ const InvisibleProjectDetail = () => {
     </div>
   </div>
 </div>
+
 
         {/* YouTube Video Player */}
         {project.videoId && <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]"data-lovable-editable="false">
