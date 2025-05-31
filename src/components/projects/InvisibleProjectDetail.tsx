@@ -21,7 +21,7 @@ const InvisibleProjectDetail = () => {
           className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to work</span>
+          <span data-lovable-editable="true">Back to work</span>
         </Link>
       </nav>
 
@@ -31,18 +31,18 @@ const InvisibleProjectDetail = () => {
           ref={heroRef.ref}
           className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
+          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
             {project.heroTitle}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
+          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="true">
             {project.heroSubtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.heroYear}</span>
+            <span data-lovable-editable="true">{project.heroYear}</span>
             <span>•</span>
-            <span>{project.heroClient}</span>
+            <span data-lovable-editable="true">{project.heroClient}</span>
             <span>•</span>
-            <span>{project.heroRole}</span>
+            <span data-lovable-editable="true">{project.heroRole}</span>
           </div>
         </div>
       </section>
@@ -67,24 +67,24 @@ const InvisibleProjectDetail = () => {
           {/* Project Description */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">{project.title}</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{project.mainDescription}</p>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">{project.title}</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">{project.mainDescription}</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                  <p className="text-white">{project.projectType}</p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project type</h3>
+                  <p className="text-white" data-lovable-editable="true">{project.projectType}</p>
                 </div>
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                  <p className="text-white">{project.projectCategory}</p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Project category</h3>
+                  <p className="text-white" data-lovable-editable="true">{project.projectCategory}</p>
                 </div>
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
-                  <p className="text-white">{project.teamType}</p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">team</h3>
+                  <p className="text-white" data-lovable-editable="true">{project.teamType}</p>
                 </div>
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
-                  <p className="text-white">{project.duration}</p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">DURATION</h3>
+                  <p className="text-white" data-lovable-editable="true">{project.duration}</p>
                 </div>
               </div>
             </div>
@@ -129,47 +129,47 @@ const InvisibleProjectDetail = () => {
           {/* Approach & Development */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Approach</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{project.approach}</p>
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Development Strategy</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{project.development}</p>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">{project.approach}</p>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Development Strategy</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">{project.development}</p>
             </div>
           </div>
 
           {/* Process Section */}
           <div className="mb-32">
             <div className="rounded-lg pt-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-12 text-white" data-lovable-editable="true">Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                  <h3 className="text-xl font-light text-white mb-4">Research Phase</h3>
+                  <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Research Phase</h3>
                   <div className="flex-1 flex items-center justify-center">
-                    <p className="text-gray-400 text-sm leading-relaxed">Educational Psychology Research</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Educational Psychology Research</p>
                   </div>
                 </div>
 
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                  <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
+                  <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Design Development</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
-                    <p className="text-gray-400 text-sm leading-relaxed">Learning Module Design</p>
-                    <p className="text-gray-400 text-sm leading-relaxed">VR Interface Development</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Learning Module Design</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">VR Interface Development</p>
                   </div>
                 </div>
 
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                  <h3 className="text-xl font-light text-white mb-4">Testing & Iteration</h3>
+                  <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Testing & Iteration</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
-                    <p className="text-gray-400 text-sm leading-relaxed">User Testing</p>
-                    <p className="text-gray-400 text-sm leading-relaxed">Assessment System</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">User Testing</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Assessment System</p>
                   </div>
                 </div>
               </div>
 
               {/* Preliminary Research – Survey Data */}
               <div className="rounded-lg bg-transparent pt-[50px]">
-                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Preliminary Research</h2>
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
                   An online and offline survey involving over 300 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.
                 </p>
               </div>
@@ -179,8 +179,8 @@ const InvisibleProjectDetail = () => {
           {/* Worldbuilding + Image Section */}
           <div className="mb-16">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Worldbuilding</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Worldbuilding</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
                 Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
               </p>
             </div>
@@ -208,13 +208,13 @@ const InvisibleProjectDetail = () => {
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
-                </div>
               </div>
-            ))}
-          </div>
-        </section>
-      </div>
-    );
-  };
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default InvisibleProjectDetail;
