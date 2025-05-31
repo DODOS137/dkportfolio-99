@@ -195,6 +195,36 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+           {/* Videodevelopment + Image Section */}
+<div className="mb-32">
+  {/* Image directly below content and inside the same wrapper */}
+    <div className="w-full">
+      <AspectRatio ratio={16 / 9} className="w-full">
+        <img
+          src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
+          alt="Planet A233 - VR Environment"
+          className="w-full h-full object-cover"
+          data-lovable-editable="true"
+        />
+      </AspectRatio>
+    </div>
+  <div className="rounded-lg py-[50px] bg-transparent">
+    <h2
+      className="text-2xl md:text-3xl font-light mb-8 text-white"
+      data-lovable-editable="true"
+    >
+      Worldbuilding
+    </h2>
+    <p
+      className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8"
+      data-lovable-editable="true"
+    >
+      Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+    </p>
+
+    
+  </div>
+</div>
 
           {/* Remaining Images */}
           {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
