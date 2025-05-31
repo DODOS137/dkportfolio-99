@@ -49,35 +49,35 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Project Description Text Box */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-0">
-          <div className="rounded-lg p-8 md:p-12 py-0 bg-transparent px-[150px]">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="false">
-              {project.title}
-            </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-              {project.mainDescription}
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project type</h3>
-                <p className="text-white" data-lovable-editable="true">{project.projectType}</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Project category</h3>
-                <p className="text-white" data-lovable-editable="true">{project.projectCategory}</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">team</h3>
-                <p className="text-white" data-lovable-editable="true">{project.teamType}</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">DURATION</h3>
-                <p className="text-white" data-lovable-editable="true">{project.duration}</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="max-w-[1540px] mx-auto mb-32 px-[24px] md:px-[150px] relative z-10">
+  <div className="rounded-lg py-0 bg-transparent px-0">
+    <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="false">
+      {project.title}
+    </h2>
+    <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+      {project.mainDescription}
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project type</h3>
+        <p className="text-white" data-lovable-editable="true">{project.projectType}</p>
+      </div>
+      <div>
+        <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Project category</h3>
+        <p className="text-white" data-lovable-editable="true">{project.projectCategory}</p>
+      </div>
+      <div>
+        <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">team</h3>
+        <p className="text-white" data-lovable-editable="true">{project.teamType}</p>
+      </div>
+      <div>
+        <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">DURATION</h3>
+        <p className="text-white" data-lovable-editable="true">{project.duration}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* YouTube Video Player */}
         {project.videoId && <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]"data-lovable-editable="false">
