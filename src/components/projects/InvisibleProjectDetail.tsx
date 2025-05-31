@@ -137,7 +137,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Process Section */}
-          <div className="mb-32">
+          <div className="mb-8">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
