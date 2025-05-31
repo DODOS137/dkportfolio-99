@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -152,18 +153,16 @@ const Work = () => {
                     {/* Content Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center px-8">
+                        <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4" data-lovable-editable="true">
+                          {project.category}
+                        </span>
                         <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide" data-lovable-editable="true">
-                          Spatial Interface Design
+                          {project.title}
                         </h2>
+                        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto" data-lovable-editable="true">
+                          {project.description}
+                        </p>
                       </div>
-                    </div>
-
-                    {/* Navigation Text */}
-                    <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20">
-                      <span className="text-white text-lg font-light tracking-wide" data-lovable-editable="true">Previous</span>
-                    </div>
-                    <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20">
-                      <span className="text-white text-lg font-light tracking-wide" data-lovable-editable="true">Next</span>
                     </div>
                   </div>
                 </Link>
@@ -174,7 +173,7 @@ const Work = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevSlide} 
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-transparent hover:bg-white/10 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" 
+            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] backdrop-blur-sm" 
             aria-label="Previous project"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
@@ -182,7 +181,7 @@ const Work = () => {
 
           <button 
             onClick={nextSlide} 
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-transparent hover:bg-white/10 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" 
+            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] backdrop-blur-sm" 
             aria-label="Next project"
           >
             <ChevronRight className="w-6 h-6 text-white" />
