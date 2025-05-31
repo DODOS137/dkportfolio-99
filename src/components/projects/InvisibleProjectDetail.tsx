@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -21,7 +20,7 @@ const InvisibleProjectDetail = () => {
           className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to work</span>
+          <span data-lovable-editable="true">Back to work</span>
         </Link>
       </nav>
 
@@ -31,18 +30,18 @@ const InvisibleProjectDetail = () => {
           ref={heroRef.ref}
           className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
+          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="false">
             {project.heroTitle}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
+          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="false">
             {project.heroSubtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.heroYear}</span>
-            <span>•</span>
-            <span>{project.heroClient}</span>
-            <span>•</span>
-            <span>{project.heroRole}</span>
+            <span data-lovable-editable="false">{project.heroYear}</span>
+            <span data-lovable-editable="false">•</span>
+            <span data-lovable-editable="false">{project.heroClient}</span>
+            <span data-lovable-editable="false">•</span>
+            <span data-lovable-editable="false">{project.heroRole}</span>
           </div>
         </div>
       </section>
@@ -162,9 +161,20 @@ const InvisibleProjectDetail = () => {
                   </div>
                 </div>
               </div>
+            </div> 
+           
+            {/* Preliminary Research – Survey Data */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{project.Preliminary Research}</p> 
+              
             </div>
           </div>
+          </div>
         </div>
+
+        
 
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => (
