@@ -212,7 +212,7 @@ const InvisibleProjectDetail = () => {
             <div className="rounded-lg py-[50px] bg-transparent">
               {/* Title */}
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-                Video Development
+                Level Design
               </h2>
 
               {/* Thrid Image */}
@@ -221,10 +221,7 @@ const InvisibleProjectDetail = () => {
                       <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4e78837f-cb34-477c-8d64-07f63e184166.png" />
               </div>
               
-
-              {/* Description */}
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.</p>
-            </div>
+           </div>
           </div>
 
           {/* Remaining Images */}
