@@ -267,6 +267,11 @@ const InvisibleProjectDetail = () => {
                     </AspectRatio>
                   </div>
                 </div>
+              {/* Title */}
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+                Full Playing Video
+              </h2>
+            
             </div>
           </div>
 
