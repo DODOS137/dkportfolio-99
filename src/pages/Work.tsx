@@ -207,7 +207,7 @@ const Work = () => {
           </div>
 
           {/* Slide Counter */}
-          <div className="flex justify-center mt-8 space-x-4">
+          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
             <span className="font-mono">
               {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
             </span>
