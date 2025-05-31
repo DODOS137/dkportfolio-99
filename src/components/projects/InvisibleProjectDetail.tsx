@@ -20,7 +20,7 @@ const InvisibleProjectDetail = () => {
           className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
-          <span data-lovable-editable="true">Back to work </span>
+          <span data-lovable-editable="true">Back to work page</span>
         </Link>
       </nav>
 
@@ -49,7 +49,7 @@ const InvisibleProjectDetail = () => {
       {/* Content Section */}
       <section className="pb-20">
         {/* First Image */}
-        <div className="mb-20 z-10 relative">
+        <div className="z-0 relative">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <ImageWithLoading
@@ -62,7 +62,7 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Shared Container */}
-        <div className="max-w-[1390px] mx-auto px-6 md:px-[150px] z-10 relative">
+        <div className="max-w-[1390px] mx-auto px-6 md:px-[150px] z-10 relative -mt-[20%]">
           {/* Project Description */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
