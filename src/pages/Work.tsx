@@ -184,6 +184,7 @@ const Work = () => {
             </button>
           </div>
 
+          <section className="relative"> 
           {/* Navigation Arrows */}
           <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
             <div className="flex items-center gap-8">
@@ -205,6 +206,7 @@ const Work = () => {
               </button>
             </div>
           </div>
+          <section>
 
           {/* Slide Counter */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
