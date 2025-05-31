@@ -161,11 +161,9 @@ const InvisibleProjectDetail = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Preliminary Research – Survey Data */}
+            </div> 
+           
+            {/* Preliminary Research – Survey Data */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
@@ -173,6 +171,10 @@ const InvisibleProjectDetail = () => {
               
             </div>
           </div>
+          </div>
+        </div>
+
+        
 
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => (
