@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -6,10 +7,13 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  return <div className="min-h-screen bg-black text-white">
+  
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
         <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -77,33 +81,40 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* YouTube Video Player */}
-          {project.videoId && <div className="mb-32">
+          {project.videoId && (
+            <div className="mb-32">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <YouTube videoId={project.videoId} opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                  <YouTube 
+                    videoId={project.videoId} 
+                    opts={{
+                      width: '100%',
+                      height: '100%',
+                      playerVars: {
+                        autoplay: 0,
+                        controls: 1,
+                        rel: 0,
+                        showinfo: 0,
+                        modestbranding: 1,
+                        fs: 1,
+                        cc_load_policy: 0,
+                        iv_load_policy: 3,
+                        autohide: 1,
+                        disablekb: 0,
+                        enablejsapi: 1,
+                        origin: window.location.origin,
+                        branding: 0,
+                        color: 'white',
+                        theme: 'dark'
+                      }
+                    }} 
+                    className="w-full h-full" 
+                    iframeClassName="w-full h-full border-0" 
+                  />
                 </AspectRatio>
               </div>
-            </div>}
+            </div>
+          )}
 
           {/* Approach & Development */}
           <div className="mb-32">
@@ -155,74 +166,76 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-         {/* Worldbuilding + Image Section */}
-        <div className="mb-32">
-  <div className="rounded-lg py-[50px] bg-transparent">
-    <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-      Worldbuilding
-    </h2>
-    <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-      Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
-    </p>
-
-    {/* Image directly below content and inside the same wrapper */}
-<div className="w-full">
-  <AspectRatio ratio={16 / 9} className="w-full">
-    <img
-      src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
-      alt="Planet A233 - VR Environment"
-      className="w-full h-full"
-      data-lovable-editable="true"
-    />
-  </AspectRatio>
-</div>
-
-
-          {/* Narrative Arc – The Explorer’s Journey &Emotional Logic */}
+          {/* Worldbuilding + Image Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Arc – The Explorer’s Journey</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+                Worldbuilding
+              </h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+                Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+              </p>
+
+              {/* Image directly below content and inside the same wrapper */}
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <img
+                    src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
+                    alt="Planet A233 - VR Environment"
+                    className="w-full h-full"
+                    data-lovable-editable="true"
+                  />
+                </AspectRatio>
+              </div>
+            </div>
+          </div>
+
+          {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Arc – The Explorer's Journey</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.</p>
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Emotional Logic</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.</p>
             </div>
           </div>
 
-          
-          {/* Videodevelopment + Image Section */}
-        <div className="mb-32">
-  <div className="rounded-lg py-[50px] bg-transparent">
-    {/* Title */}
-    <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-      Video Development
+          {/* Video development + Image Section */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              {/* Title */}
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+                Video Development
+              </h2>
 
-    </h2>
+              {/* Image */}
+              <div className="w-full mb-8">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <img alt="Planet A233 - VR Environment" className="w-full h-full object-cover" data-lovable-editable="true" src="/lovable-uploads/88d91bc2-548a-4178-9d33-af0635f164eb.png" />
+                </AspectRatio>
+              </div>
 
-    {/* Image */}
-    <div className="w-full mb-8">
-      <AspectRatio ratio={16 / 9} className="w-full">
-        <img alt="Planet A233 - VR Environment" className="w-full h-full object-cover" data-lovable-editable="true" src="/lovable-uploads/88d91bc2-548a-4178-9d33-af0635f164eb.png" />
-      </AspectRatio>
-    </div>
-
-    {/* Description */}
-    <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">
-    Short video sequences functioned as interludes, each exploring a scientific theme—gravity, light, life, or time—through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.
-    </p>
-  </div>
-        </div>
-
+              {/* Description */}
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">
+                Short video sequences functioned as interludes, each exploring a scientific theme—gravity, light, life, or time—through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.
+              </p>
+            </div>
+          </div>
 
           {/* Remaining Images */}
-          {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+          {project.images.slice(1).map((image, index) => (
+            <div key={index + 1} className="mb-20">
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
                 </AspectRatio>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default InvisibleProjectDetail;
