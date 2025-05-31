@@ -121,8 +121,7 @@ const Work = () => {
               </div>
             </div>
           </div>
-
-          {/* Navigation Arrows */}
+            {/* Navigation Arrows */}
           <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
             <div className="flex items-center gap-8">
               <button onClick={prevSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
@@ -150,6 +149,7 @@ const Work = () => {
               {String(currentSlide + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
             </span>
           </div>
+        </section>
         </div>
       </section>
 
@@ -212,7 +212,8 @@ const Work = () => {
               <div className="text-sm tracking-wide opacity-60">Next</div>
             </button>
           </div>
-        </section>
+
+         
       ) : (
         /* Panel View */
         <section className="py-8 px-4 md:px-8">
