@@ -173,7 +173,7 @@ const Work = () => {
           {/* Navigation Arrows */}
           <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-50">
             <div className="flex items-center gap-8">
-              <button onClick={prevProject} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
+              <button onClick={prevSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Previous project">
                 <ChevronLeft size={24} />
               </button>
               
@@ -181,17 +181,16 @@ const Work = () => {
                 <div 
                   className="h-full bg-white transition-all duration-300" 
                   style={{
-                    width: `${((currentProject + 1) / projects.length) * 100}%`
+                    width: `${((currentSlide + 1) / projects.length) * 100}%`
                   }} 
                 />
               </div>
               
-              <button onClick={nextProject} className="p-2 hover:opacity-70 transition-opacity" aria-label="Next project">
+              <button onClick={nextSlide} className="p-2 hover:opacity-70 transition-opacity" aria-label="Next project">
                 <ChevronRight size={24} />
               </button>
             </div>
           </div>
-
 
           {/* Slide Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
