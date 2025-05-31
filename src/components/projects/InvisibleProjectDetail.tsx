@@ -203,7 +203,7 @@ const InvisibleProjectDetail = () => {
               </h2>
 
               {/* Second Image */}
-              <div className="w-full mt-8">
+              <div className="w-full mb-8">
                 <img 
                   alt="Planet A233 - VR Environment" 
                  className="w-full h-auto" 
