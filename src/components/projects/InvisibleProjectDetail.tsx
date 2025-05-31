@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -7,13 +6,10 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
-
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
         <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -81,40 +77,33 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* YouTube Video Player */}
-          {project.videoId && (
-            <div className="mb-32">
+          {project.videoId && <div className="mb-32">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <YouTube 
-                    videoId={project.videoId} 
-                    opts={{
-                      width: '100%',
-                      height: '100%',
-                      playerVars: {
-                        autoplay: 0,
-                        controls: 1,
-                        rel: 0,
-                        showinfo: 0,
-                        modestbranding: 1,
-                        fs: 1,
-                        cc_load_policy: 0,
-                        iv_load_policy: 3,
-                        autohide: 1,
-                        disablekb: 0,
-                        enablejsapi: 1,
-                        origin: window.location.origin,
-                        branding: 0,
-                        color: 'white',
-                        theme: 'dark'
-                      }
-                    }} 
-                    className="w-full h-full" 
-                    iframeClassName="w-full h-full border-0" 
-                  />
+                  <YouTube videoId={project.videoId} opts={{
+                width: '100%',
+                height: '100%',
+                playerVars: {
+                  autoplay: 0,
+                  controls: 1,
+                  rel: 0,
+                  showinfo: 0,
+                  modestbranding: 1,
+                  fs: 1,
+                  cc_load_policy: 0,
+                  iv_load_policy: 3,
+                  autohide: 1,
+                  disablekb: 0,
+                  enablejsapi: 1,
+                  origin: window.location.origin,
+                  branding: 0,
+                  color: 'white',
+                  theme: 'dark'
+                }
+              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
                 </AspectRatio>
               </div>
-            </div>
-          )}
+            </div>}
 
           {/* Approach & Development */}
           <div className="mb-32">
@@ -179,12 +168,7 @@ const InvisibleProjectDetail = () => {
               {/* First image */}
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <img
-                    src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
-                    alt="Planet A233 - VR Environment"
-                    className="w-full h-full"
-                    data-lovable-editable="true"
-                  />
+                  <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
                 </AspectRatio>
               </div>
             </div>
@@ -211,14 +195,9 @@ const InvisibleProjectDetail = () => {
               {/* Image */}
               <div className="w-full">
   <AspectRatio ratio={16 / 9} className="w-full">
-    <img
-      src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png"
-      alt="Planet A233 - VR Environment"
-      className="w-full h-full"
-      data-lovable-editable="true"
-    />
+    <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png" />
   </AspectRatio>
-</div>
+            </div>
 
 
               {/* Description */}
@@ -229,19 +208,15 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Remaining Images */}
-          {project.images.slice(1).map((image, index) => (
-            <div key={index + 1} className="mb-20">
+          {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
                 </AspectRatio>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default InvisibleProjectDetail;
