@@ -20,7 +20,7 @@ const InvisibleProjectDetail = () => {
           className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
-          <span data-lovable-editable="true">Back to work page</span>
+          <span data-lovable-editable="true">Back to work </span>
         </Link>
       </nav>
 
