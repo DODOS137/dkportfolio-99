@@ -1,4 +1,4 @@
-
+e
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -181,7 +181,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
           {/* Second Image */}
-        <div className="mb-0" data-lovable-editable="true">
+        <div className="z-0 relative" data-lovable-editable="true">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <ImageWithLoading
