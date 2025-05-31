@@ -165,6 +165,15 @@ const InvisibleProjectDetail = () => {
           </div>
         </div>
 
+        {/* Preliminary Research – Survey Data */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{project.approach}</p>
+              
+            </div>
+          </div>
+
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => (
           <div key={index + 1} className="mb-20">
