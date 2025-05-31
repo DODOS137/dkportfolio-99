@@ -20,7 +20,7 @@ const InvisibleProjectDetail = () => {
           className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span data-lovable-editable="true">Back to work page</span>
+          <span data-lovable-editable="true">Back to work</span>
         </Link>
       </nav>
 
@@ -62,7 +62,7 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[20%]">
+        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
           {/* Project Description */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
