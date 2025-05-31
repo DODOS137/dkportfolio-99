@@ -182,6 +182,10 @@ const InvisibleProjectDetail = () => {
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Emotional Logic</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.</p>
             </div>
+            {/* Second 1-1Image */}
+              <div className="w-full mb-8">
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0ac2b932-80ab-4df3-af9a-b31c2debaa22.png" />
+                    </div>
           </div>
 
           {/* Video development + Image Section */}
@@ -200,10 +204,7 @@ const InvisibleProjectDetail = () => {
               {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.</p>
             </div>
-             {/* Second 1-1Image */}
-              <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0ac2b932-80ab-4df3-af9a-b31c2debaa22.png" />
-                    </div>
+
           </div>
 
            {/* Level Design */}
