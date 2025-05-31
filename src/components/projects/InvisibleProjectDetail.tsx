@@ -147,6 +147,7 @@ const InvisibleProjectDetail = () => {
                     <p className="text-gray-400 text-sm leading-relaxed">Educational Psychology Research</p>
                   </div>
                 </div>
+                
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                   <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
@@ -154,21 +155,24 @@ const InvisibleProjectDetail = () => {
                     <p className="text-gray-400 text-sm leading-relaxed">VR Interface Development</p>
                   </div>
                 </div>
+                
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                   <h3 className="text-xl font-light text-white mb-4">Testing & Iteration</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
                     <p className="text-gray-400 text-sm leading-relaxed">User Testing</p>
                     <p className="text-gray-400 text-sm leading-relaxed">Assessment System</p>
                   </div>
-                </div>
-              </div>
-              {/* Preliminary Research – Survey Data */}
+                </div> 
+                   {/* Preliminary Research – Survey Data */}
           <div className="mb-8">
             <div className="rounded-lg bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">An online and offline survey involving over 300 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
             </div>
           </div>
+                
+              </div>
+           
             </div>
           </div>
 
