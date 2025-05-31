@@ -185,13 +185,14 @@ const InvisibleProjectDetail = () => {
               </p>
             </div>
 
-            {/* Second Image - aligned with text width */}
-            <div className="w-full" data-lovable-editable="true">
+            {/* Second Image - aligned with text width - NOW EDITABLE */}
+            <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading
-                  src="/lovable-uploads/9537a1c9-0a14-4000-81dc-263bdc7b2c84.png"
-                  alt="Planet 0Z33 - VR Environment"
+                  src="/lovable-uploads/96f4eccf-b0e9-42e0-91c4-0de2033088a5.png"
+                  alt="Planet A233 - VR Environment"
                   className="w-full h-full object-cover"
+                  data-lovable-editable="true"
                 />
               </AspectRatio>
             </div>
