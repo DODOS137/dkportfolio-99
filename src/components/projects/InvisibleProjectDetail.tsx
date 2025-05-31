@@ -92,6 +92,42 @@ const InvisibleProjectDetail = () => {
           </div>
         </div>
 
+         {/* YouTube Video Player */}
+        {project.videoId && (
+          <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <YouTube
+                  videoId={project.videoId}
+                  opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark',
+                    },
+                  }}
+                  className="w-full h-full"
+                  iframeClassName="w-full h-full border-0"
+                />
+              </AspectRatio>
+            </div>
+          </div>
+        )}
+
         {/* Text Box - Approach and Development Strategy */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
