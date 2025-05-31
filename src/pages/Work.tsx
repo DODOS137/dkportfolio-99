@@ -250,7 +250,7 @@ const Work = () => {
                     </div>
                     
                     {/* Project Number */}
-                    <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <div className="absolute top-4 right-1/2 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
                       <span className="text-xs text-white font-mono">
                         {String(index + 1).padStart(2, '0')}
                       </span>
