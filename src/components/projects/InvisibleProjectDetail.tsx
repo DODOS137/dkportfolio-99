@@ -216,7 +216,7 @@ const InvisibleProjectDetail = () => {
 
               {/* Thrid Image */}
               <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/55182168-675f-4322-9298-7a00f6bc2ccd.png" />
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
                       <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4e78837f-cb34-477c-8d64-07f63e184166.png" />
               </div>
               
