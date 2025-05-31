@@ -21,18 +21,18 @@ const InvisibleProjectDetail = () => {
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
         <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
+          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="false">
             {project.heroTitle}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="true">
+          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="false">
             {project.heroSubtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span data-lovable-editable="true">{project.heroYear}</span>
-            <span data-lovable-editable="true">•</span>
-            <span data-lovable-editable="true">{project.heroClient}</span>
-            <span data-lovable-editable="true">•</span>
-            <span data-lovable-editable="true">{project.heroRole}</span>
+            <span data-lovable-editable="false">{project.heroYear}</span>
+            <span data-lovable-editable="false">•</span>
+            <span data-lovable-editable="false">{project.heroClient}</span>
+            <span data-lovable-editable="false">•</span>
+            <span data-lovable-editable="false">{project.heroRole}</span>
           </div>
         </div>
       </section>
@@ -51,7 +51,7 @@ const InvisibleProjectDetail = () => {
         {/* Project Description Text Box */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-0">
           <div className="rounded-lg p-8 md:p-12 py-0 bg-transparent px-[150px]">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="false">
               {project.title}
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
@@ -80,7 +80,7 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* YouTube Video Player */}
-        {project.videoId && <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]">
+        {project.videoId && <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[200px]"data-lovable-editable="false">
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <YouTube videoId={project.videoId} opts={{
@@ -109,7 +109,7 @@ const InvisibleProjectDetail = () => {
           </div>}
 
         {/* Approach and Development Strategy */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]"data-lovable-editable="false">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
@@ -124,7 +124,7 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Process Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]"data-lovable-editable="false">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-12 text-white" data-lovable-editable="true">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -157,7 +157,7 @@ const InvisibleProjectDetail = () => {
             </div>
             
             {/*Preliminary Research*/}
-            <div className="max-w-[1540px] mx-auto mb-32 relative z-10 md:px-150 px-0">
+            <div className="max-w-[1540px] mx-auto mb-32 relative z-10 md:px-150 px-0"data-lovable-editable="false">
               <div className="rounded-lg p-8 md:p-12 bg-transparent py-[50px] px-0">
                 <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Preliminary Research</h2>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
