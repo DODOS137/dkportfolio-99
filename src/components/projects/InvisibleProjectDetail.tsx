@@ -181,7 +181,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
           {/* Second Image */}
-        <div className="mb-20" data-lovable-editable="true">
+        <div className="mb-8" data-lovable-editable="true">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <ImageWithLoading
