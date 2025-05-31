@@ -167,7 +167,7 @@ const InvisibleProjectDetail = () => {
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{project.approach}</p>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{project.Preliminary Research}</p> 
               
             </div>
           </div>

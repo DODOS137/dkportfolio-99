@@ -22,4 +22,5 @@ export const invisibleProjectData: ProjectData = {
   approach: "Through research on existing museum formats and traditional science displays, the project identified key barriers to understanding and engagement. Focus was placed on selecting accessible scientific topics and intuitive interaction models to support broader comprehension across diverse audiences.",
   development: "Four fundamental scientific concepts—gravity, light, life, and time—served as the foundation. The spatial and narrative design aimed to enhance engagement, using symbolism and abstraction to visualise phenomena beyond human perception. Each concept was explored through immersive environments designed to deepen emotional and intellectual connection.",
   videoId: "7GC2R6GYUrw"
+  
 };
