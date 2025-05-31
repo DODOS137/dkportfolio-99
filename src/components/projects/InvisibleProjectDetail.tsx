@@ -198,7 +198,7 @@ const InvisibleProjectDetail = () => {
                     </div>
 
               {/* Description */}
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Short video sequences functioned as interludes, each exploring a scientific theme ( gravity, light, life, or time ) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.</p>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.</p>
             </div>
           </div>
 
