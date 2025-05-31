@@ -138,85 +138,83 @@ const InvisibleProjectDetail = () => {
 
           {/* Process Section */}
           <div className="mb-32">
-           <div className="rounded-lg pt-[50px] bg-transparent">
-             <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
+            <div className="rounded-lg pt-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
 
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-              <h3 className="text-xl font-light text-white mb-4">Research Phase</h3>
-                <div className="flex-1 flex items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Educational Psychology Research</p>
-                    </div>
-                      </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
+                  <h3 className="text-xl font-light text-white mb-4">Research Phase</h3>
+                  <div className="flex-1 flex items-center justify-center">
+                    <p className="text-gray-400 text-sm leading-relaxed">Educational Psychology Research</p>
+                  </div>
+                </div>
 
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
-                 <div className="flex-1 flex flex-col items-center justify-center">
-                 <p className="text-gray-400 text-sm leading-relaxed">Learning Module Design</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">VR Interface Development</p>
-                   </div>
-                 </div>
+                <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
+                  <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
+                  <div className="flex-1 flex flex-col items-center justify-center">
+                    <p className="text-gray-400 text-sm leading-relaxed">Learning Module Design</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">VR Interface Development</p>
+                  </div>
+                </div>
 
-      <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-        <h3 className="text-xl font-light text-white mb-4">Testing & Iteration</h3>
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <p className="text-gray-400 text-sm leading-relaxed">User Testing</p>
-          <p className="text-gray-400 text-sm leading-relaxed">Assessment System</p>
-            </div>
-            </div>
-             </div>
+                <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
+                  <h3 className="text-xl font-light text-white mb-4">Testing & Iteration</h3>
+                  <div className="flex-1 flex flex-col items-center justify-center">
+                    <p className="text-gray-400 text-sm leading-relaxed">User Testing</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">Assessment System</p>
+                  </div>
+                </div>
+              </div>
 
               {/* Preliminary Research – Survey Data */}
-            <div className="rounded-lg bg-transparent pt-[50px]">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
+              <div className="rounded-lg bg-transparent pt-[50px]">
+                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Preliminary Research</h2>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-        An online and offline survey involving over 300 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.
-      </p>
-    </div>
-
-  </div>
-</div>
-
+                  An online and offline survey involving over 300 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Worldbuilding + Image Section */}
-   <div className="mb-16">
-  <div className="rounded-lg py-[50px] bg-transparent">
-    <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Worldbuilding</h2>
-    <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-      Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
-    </p>
-  </div>
+          <div className="mb-16">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Worldbuilding</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+              </p>
+            </div>
 
-  {/* Second Image - aligned with text width */}
-  <div className="w-full">
-    <AspectRatio ratio={16 / 9} className="w-full">
-      <ImageWithLoading
-        src="/lovable-uploads/9537a1c9-0a14-4000-81dc-263bdc7b2c84.png"
-        alt="Planet 0Z33 - VR Environment"
-        className="w-full h-full object-cover"
-      />
-    </AspectRatio>
-  </div>
-</div>
-
-
-        {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
-            <div className="w-full">
+            {/* Second Image - aligned with text width */}
+            <div className="w-full" data-lovable-editable="true">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading
-                  src={image}
-                  alt={`${project.title} - Image ${index + 2}`}
+                  src="/lovable-uploads/9537a1c9-0a14-4000-81dc-263bdc7b2c84.png"
+                  alt="Planet 0Z33 - VR Environment"
                   className="w-full h-full object-cover"
                 />
               </AspectRatio>
             </div>
           </div>
-        ))}
-      </section>
-    </div>
-  );
-};
+
+          {/* Remaining Images */}
+          {project.images.slice(1).map((image, index) => (
+            <div key={index + 1} className="mb-20">
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <ImageWithLoading
+                    src={image}
+                    alt={`${project.title} - Image ${index + 2}`}
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    );
+  };
 
 export default InvisibleProjectDetail;
