@@ -194,8 +194,8 @@ const InvisibleProjectDetail = () => {
 
               {/* Image */}
               <div className="w-full">
-  <AspectRatio className="w-full h-auto object-contain">
-    <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png" />
+ 
+    <img alt="Planet A233 - VR Environment" className="w-full h-auto object-contain" data-lovable-editable="true" src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png" />
   </AspectRatio>
             </div>
 
