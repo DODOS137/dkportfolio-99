@@ -182,6 +182,19 @@ const InvisibleProjectDetail = () => {
           </div>
         </div>
 
+        {/* Second Image Section */}
+        <div className="mb-20" data-lovable-editable="true">
+          <div className="w-full">
+            <AspectRatio ratio={16 / 9} className="w-full">
+              <ImageWithLoading
+                src="/lovable-uploads/9537a1c9-0a14-4000-81dc-263bdc7b2c84.png"
+                alt="Planet 0Z33 - VR Environment"
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
+          </div>
+        </div>
+
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => (
           <div key={index + 1} className="mb-20">
