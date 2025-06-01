@@ -42,7 +42,7 @@ const WhispersProjectDetail = () => {
         <div className="mb-20">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" />
+              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" data-lovable-editable="true" />
             </AspectRatio>
           </div>
         </div>

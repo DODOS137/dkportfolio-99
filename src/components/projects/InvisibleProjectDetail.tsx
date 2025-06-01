@@ -8,12 +8,14 @@ import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
   const sliderImages = ["/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png", "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png", "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png", "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png", "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png"];
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+
   useEffect(() => {
     if (!api) {
       return;
@@ -23,7 +25,9 @@ const InvisibleProjectDetail = () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-  return <div className="min-h-screen bg-black text-white">
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
         <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -57,7 +61,7 @@ const InvisibleProjectDetail = () => {
         <div className="z-0 relative">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" />
+              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" data-lovable-editable="true" />
             </AspectRatio>
           </div>
         </div>
@@ -405,6 +409,8 @@ const InvisibleProjectDetail = () => {
 
       {/* Back to Top Button */}
       <BackToTopButton />
-    </div>;
+    </div>
+  );
 };
+
 export default InvisibleProjectDetail;
