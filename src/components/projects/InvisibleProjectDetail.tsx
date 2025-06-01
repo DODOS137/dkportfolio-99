@@ -298,18 +298,19 @@ const InvisibleProjectDetail = () => {
               </h2>
                 {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive simulation. Users entered a liquid-metal (like virtual sea, where their input) commands and data generated living forms. These began as spheres and evolved through self-replication, mutation, and environmental adaptation. Each of the four zones (OCEAN A–D) responded differently depending on user behaviour. Some environments expanded exponentially through interaction, while others diminished due to inactivity. Over time, this created a dynamic ecology shaped by user engagement and emergent logic.</p>
-              
-              {/* 5th & 5-1 image */}
+               {/* 5th & 5-1 image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
                   <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png" />
                     </div> 
-               {/* 6th & 7th & 8th Image */}
+               
+              {/* 6th & 7th & 8th Image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
                       <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
                          <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" />
               </div>
+             
               {/* 9th image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/2d0166fa-d4c0-4e6f-b4b5-acad49fc7cec.png" />
