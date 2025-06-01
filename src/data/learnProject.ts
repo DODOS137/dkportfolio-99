@@ -8,7 +8,7 @@ export const learnProjectData: ProjectData = {
   year: "2023",
   client: "Educational Technology Project",
   role: "VR Developer & UX Designer",
-  images: ["/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"],
+  images: ["/lovable-uploads/bcb13161-d6c2-49e4-a2d1-e44f900743d1.png"],
   heroTitle: "Learn",
   heroSubtitle: "Immersive Virtual Reality Experience",
   heroYear: "2023",
