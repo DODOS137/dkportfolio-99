@@ -8,7 +8,7 @@ export const invisibleProjectData: ProjectData = {
   year: "2024",
   client: "MA Graduation Project",
   role: "Virtual Reality Designer & Developer",
-  images: ["/lovable-uploads/7c2c11ca-8167-4396-b2b1-e8bed16aa6c0.png"],
+  images: ["/lovable-uploads/dc1a05e4-eb51-46c4-bd0a-53778999ec26.png"],
   heroTitle: "Invisible",
   heroSubtitle: "Scientific Virtual Reality Contents",
   heroYear: "2024",
