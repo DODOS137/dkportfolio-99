@@ -41,7 +41,7 @@ const LearnProjectDetail = () => {
       </section>
 
       {/* Images Section */}
-      <section className="pb-20">
+      <section className="pb-20" data-lovable-editable="true>
         {/* First Image */}
         <div className="mb-20">
           <div className="w-full">
