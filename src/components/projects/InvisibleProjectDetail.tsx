@@ -143,7 +143,7 @@ const InvisibleProjectDetail = () => {
                 </div>
 
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                  <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Design Development</h3>
+                  <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Analysis</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Learning Module Design</p>
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">VR Interface Development</p>
