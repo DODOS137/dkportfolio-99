@@ -85,7 +85,12 @@ const InvisibleProjectDetail = () => {
                 </div>
                 <div>
                   <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">ROLE</h3>
+                <div>
                   <p className="text-white" data-lovable-editable="true">{project.teamType}</p>
+                  <p className="text-white" data-lovable-editable="true">{project.teamType}</p>
+                  <p className="text-white" data-lovable-editable="true">{project.teamType}</p>
+                  <p className="text-white" data-lovable-editable="true">{project.teamType}</p>
+                </div>  
                 </div>
                 <div>
                   <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">DURATION</h3>
