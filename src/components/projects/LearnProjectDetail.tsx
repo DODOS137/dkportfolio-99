@@ -45,9 +45,12 @@ const LearnProjectDetail = () => {
         {/* First Image */}
         <div className="mb-20">
           <div className="w-full">
-            <AspectRatio ratio={16 / 9} className="w-full" data-lovable-editable="true">
-              <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" data-lovable-editable="true" />
-            </AspectRatio>
+            <img 
+              src={project.images[0]} 
+              alt={`${project.title} - Image 1`} 
+              className="w-full h-auto object-contain" 
+              data-lovable-editable="true" 
+            />
           </div>
         </div>
 
