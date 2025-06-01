@@ -274,6 +274,8 @@ const InvisibleProjectDetail = () => {
           
           
           
+        
+          
           {/* Spatial Design + Image Section */}
          <div className="mb-32">
          <div className="rounded-lg py-[50px] bg-transparent">
@@ -334,19 +336,15 @@ const InvisibleProjectDetail = () => {
            </div>
            </div>
 
-             
-            
-           
-
-           {/* Evaluation Summary */}
+          {/* Evaluation Summary */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              
-                {/* Description */}
-              
+
+                {/* Title */}
                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
                Post-Project Expansion
               </h2>
+
                 {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
 
@@ -355,14 +353,16 @@ const InvisibleProjectDetail = () => {
               </h2>
                 {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive simulation. Users entered a liquid-metal (like virtual sea, where their input) commands and data generated living forms. These began as spheres and evolved through self-replication, mutation, and environmental adaptation. Each of the four zones (OCEAN A–D) responded differently depending on user behaviour. Some environments expanded exponentially through interaction, while others diminished due to inactivity. Over time, this created a dynamic ecology shaped by user engagement and emergent logic.</p>
+
                {/* 5th & 5-1 image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
                   <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png" />
                     </div> 
-               
+
               </div>
           </div>
+
 
           
           
