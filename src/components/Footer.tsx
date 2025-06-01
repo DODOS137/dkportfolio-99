@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Footer = () => {
@@ -15,7 +16,7 @@ const Footer = () => {
           
         </div>
         
-        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 pt-8 pb-8 mt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm" data-lovable-editable="true">© {new Date().getFullYear()} Dohyun Kim. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <a href="https://www.linkedin.com/in/dohyun-kim-028221343" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" data-lovable-editable="true">
