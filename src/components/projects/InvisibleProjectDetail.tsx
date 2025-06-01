@@ -305,7 +305,7 @@ const InvisibleProjectDetail = () => {
                     </div> 
               {/* 6th image */}
               <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4738cc51-c5ff-45ab-8661-3e4b24347585.png" />
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/25653fdb-24b1-4d42-9473-28b6cbc1e1d5.png" />
                     </div> 
             
             
