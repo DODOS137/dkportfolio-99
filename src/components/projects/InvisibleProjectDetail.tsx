@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -8,7 +8,6 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
-import { useEffect } from 'react';
 
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
@@ -310,11 +309,6 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-                  
-          
-          
-          
-          
           {/* Evaluation Summary */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
@@ -396,12 +390,8 @@ const InvisibleProjectDetail = () => {
               ))}
             </div>
           </div>
-
-
-
-
-
-      
+        </div>
+      </section>
 
       {/* Remaining Images */}
       <div className="max-w-[1540px] mx-auto px-6 md:px-[200px]">
