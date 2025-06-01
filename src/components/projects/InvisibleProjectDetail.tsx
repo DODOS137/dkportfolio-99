@@ -6,27 +6,9 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-
-  // Sample images for the slider - you can replace these with actual project images
-  const sliderImages = [
-    "/lovable-uploads/08a1a3e1-a5c4-427b-b814-0165b80600c7.png",
-    "/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png",
-    "/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png",
-    "/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png",
-    "/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png"
-  ];
-
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
@@ -347,41 +329,31 @@ const InvisibleProjectDetail = () => {
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a8f1645-d55a-441d-896d-44f49c626c94.png" />
                     </div>
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.</p>
+              
 
-            {/* New Slider Component */}
-            <div className="w-full mb-8">
-              <Carousel className="w-full bg-black">
-                <CarouselContent>
-                  {sliderImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative aspect-video">
-                        <img 
-                          src={image} 
-                          alt={`Slider image ${index + 1}`} 
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-4 bg-transparent border-white/20 text-white hover:bg-white/10" />
-                <CarouselNext className="right-4 bg-transparent border-white/20 text-white hover:bg-white/10" />
-              </Carousel>
-            </div>
+                
+              </div>
 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.</p>
-          </div>
+          
+
+          
+
+
+          
+
+              
+            
+        
 
           {/* Remaining Images */}
-          {project.images.slice(1).map((image, index) => (
-            <div key={index + 1} className="mb-20">
+          {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
                 </AspectRatio>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </section>
     </div>;
