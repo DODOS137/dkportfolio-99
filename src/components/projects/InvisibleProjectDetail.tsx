@@ -209,11 +209,13 @@ const InvisibleProjectDetail = () => {
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Emotional Logic</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.</p>
             </div>
-            {/* Second 1-1Image */}
-            <div className="w-full mb-8">
+            {/* Second 1-1 Image */}
+            <div className="w-full mb-32">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
           </div>
+
+          
 
           {/* Video development + Image Section */}
           <div className="mb-32">
@@ -299,7 +301,7 @@ const InvisibleProjectDetail = () => {
                 </div>
               </div>
 
-              {/* Title */}
+              {/* Evaluation Summary */}
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
                 Evaluation Summary
               </h2>
@@ -309,8 +311,11 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-          {/* Evaluation Summary */}
-          <div className="mb-32">
+         
+          
+          
+          {/* Post-Project */}
+          <div className="mt-32 mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               {/* Title */}
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
