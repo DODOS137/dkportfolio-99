@@ -12,7 +12,13 @@ import { useEffect } from 'react';
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  const sliderImages = ["/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png", "/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png", "/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png", "/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png", "/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png"];
+  const sliderImages = [
+    "/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png", 
+    "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png", 
+    "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png", 
+    "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png", 
+    "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png"
+  ];
   
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
