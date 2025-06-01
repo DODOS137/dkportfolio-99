@@ -92,7 +92,7 @@ const Home = () => {
       
 
       {/* Contact CTA */}
-      <section className="py-20 px-4 md:px-8 border-t border-gray-800">
+      <section className="py-20 px-4 md:px-8 border-t border-black">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-4xl font-light text-white mb-8">
             Let's Create Something
