@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -339,7 +340,7 @@ const InvisibleProjectDetail = () => {
                
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" />
                  <div className="rounded-lg py-[50px] bg-transparent">
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth’s primitive seas.</p>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.</p>
               
               </div>
             {/* 10th Image */}
@@ -351,17 +352,6 @@ const InvisibleProjectDetail = () => {
 
                 
               </div>
-
-          
-
-          
-
-
-          
-
-              
-            
-        
 
           {/* Custom Slider */}
           <div className="w-full mb-32">
@@ -383,17 +373,17 @@ const InvisibleProjectDetail = () => {
               </CarouselContent>
               <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
               <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
-              
-              {/* Custom dot indicators */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                {sliderImages.map((_, index) => (
-                  <div 
-                    key={index} 
-                    className="w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 cursor-pointer transition-all"
-                  />
-                ))}
-              </div>
             </Carousel>
+            
+            {/* Bar-shaped indicators below the slider */}
+            <div className="flex justify-center space-x-2 mt-6">
+              {sliderImages.map((_, index) => (
+                <div 
+                  key={index} 
+                  className="w-8 h-1 bg-white/40 hover:bg-white/70 cursor-pointer transition-all"
+                />
+              ))}
+            </div>
           </div>
 
           <div className="rounded-lg py-[50px] bg-transparent">
