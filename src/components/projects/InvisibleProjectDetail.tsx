@@ -189,6 +189,9 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+         
+          
+          
           {/* Worldbuilding + Image Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
@@ -253,21 +256,20 @@ const InvisibleProjectDetail = () => {
           
           
           {/* Level Design */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              {/* Title */}
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-                Level Design
-              </h2>
+           <div className="mb-32">
+           <div className="rounded-lg py-[50px] bg-transparent">
+          {/* Title */}
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+            Level Design
+          </h2>
 
-              {/* Thrid Image */}
-              <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
-                      <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
-              </div>
-              
-           </div>
-          </div>
+          {/* Thrid Image */}
+            <div className="w-full mb-8">
+            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
+            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
+            </div>
+            </div>
+            </div>
 
           
           
