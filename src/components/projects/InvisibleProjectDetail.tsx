@@ -346,7 +346,7 @@ const InvisibleProjectDetail = () => {
               
               </div>
             {/* 10th Image */}
-              <div className="w-full mb-8">
+              <div className="w-full mb-32">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a8f1645-d55a-441d-896d-44f49c626c94.png" />
                     </div>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.</p>
