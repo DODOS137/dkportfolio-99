@@ -320,9 +320,7 @@ const InvisibleProjectDetail = () => {
           {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> 
-              The virtual creatures—visually inspired by early organic matter—formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth’s primitive seas.
-              </p>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth’s primitive seas.</p>
               
               </div>
             {/* Second 1-1Image */}
