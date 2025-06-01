@@ -383,7 +383,7 @@ const InvisibleProjectDetail = () => {
     <div className="pb-40 flex items-center justify-center">
       <Link 
         to="/project/learn" 
-        className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors duration-300 rounded-md text-lg font-medium"
+        className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium"
       >
         <span>Next project</span>
         <ArrowRight className="w-5 h-5" />
