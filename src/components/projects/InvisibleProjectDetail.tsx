@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -6,11 +6,29 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
+import { useEffect } from 'react';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
   const sliderImages = ["/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png", "/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png", "/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png", "/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png", "/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png"];
+  
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
@@ -339,7 +357,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Custom Slider */}
           <div className="w-full mb-32">
-            <Carousel className="w-full bg-black">
+            <Carousel className="w-full bg-black" setApi={setApi}>
               <CarouselContent>
                 {sliderImages.map((image, index) => <CarouselItem key={index}>
                     <div className="relative w-full">
@@ -355,7 +373,13 @@ const InvisibleProjectDetail = () => {
             
             {/* Bar-shaped indicators below the slider */}
             <div className="flex justify-center space-x-2 mt-6">
-              {sliderImages.map((_, index) => <div key={index} className="w-8 h-1 bg-white/40 hover:bg-white/70 cursor-pointer transition-all" />)}
+              {sliderImages.map((_, index) => <div 
+                key={index} 
+                className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${
+                  current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'
+                }`}
+                onClick={() => api?.scrollTo(index)}
+              />)}
             </div>
           </div>
 
