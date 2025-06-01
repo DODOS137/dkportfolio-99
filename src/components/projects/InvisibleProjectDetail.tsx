@@ -296,7 +296,11 @@ const InvisibleProjectDetail = () => {
               </h2>
                 {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
-                
+
+              {/* 5th image */}
+              <div className="w-full mb-8">
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
+                    </div> 
             
             </div>
           </div>
