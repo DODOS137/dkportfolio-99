@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -7,26 +6,11 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-
-  const sliderImages = [
-    "/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png",
-    "/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png",
-    "/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png",
-    "/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png",
-    "/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png"
-  ];
-
+  const sliderImages = ["/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png", "/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png", "/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png", "/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png", "/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png"];
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
@@ -357,19 +341,13 @@ const InvisibleProjectDetail = () => {
           <div className="w-full mb-32">
             <Carousel className="w-full bg-black">
               <CarouselContent>
-                {sliderImages.map((image, index) => (
-                  <CarouselItem key={index}>
+                {sliderImages.map((image, index) => <CarouselItem key={index}>
                     <div className="relative w-full">
                       <AspectRatio ratio={16 / 9} className="w-full">
-                        <img 
-                          src={image} 
-                          alt={`Slider image ${index + 1}`} 
-                          className="w-full h-full object-cover"
-                        />
+                        <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                       </AspectRatio>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
               <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
               <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
@@ -377,18 +355,11 @@ const InvisibleProjectDetail = () => {
             
             {/* Bar-shaped indicators below the slider */}
             <div className="flex justify-center space-x-2 mt-6">
-              {sliderImages.map((_, index) => (
-                <div 
-                  key={index} 
-                  className="w-8 h-1 bg-white/40 hover:bg-white/70 cursor-pointer transition-all"
-                />
-              ))}
+              {sliderImages.map((_, index) => <div key={index} className="w-8 h-1 bg-white/40 hover:bg-white/70 cursor-pointer transition-all" />)}
             </div>
           </div>
 
-          <div className="rounded-lg py-[50px] bg-transparent">
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.</p>
-          </div>
+          
 
           {/* Remaining Images */}
           {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
