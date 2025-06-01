@@ -278,9 +278,7 @@ const InvisibleProjectDetail = () => {
               </h2>
                  {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
-                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-               Post-Project Expansion
-              </h2>
+                
                </div>
              </div>
              
@@ -292,8 +290,8 @@ const InvisibleProjectDetail = () => {
             <div className="rounded-lg py-[50px] bg-transparent">
               
                 {/* Description */}
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
-                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+              
+               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
                Post-Project Expansion
               </h2>
                 {/* Description */}
