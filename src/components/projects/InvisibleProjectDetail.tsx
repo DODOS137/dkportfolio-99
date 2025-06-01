@@ -344,20 +344,32 @@ const InvisibleProjectDetail = () => {
         </div>
       </section>
 
+     
+      
+      
       {/* 9th Image */}
-      <div className="w-full mb-32">
-        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" />
-        <div className="rounded-lg py-[50px] bg-transparent">
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.</p>
-        </div>
+          <div className="w-full mb-32">
+            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" />
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+                The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
+              </p>
+            </div>
 
-        {/* 10th Image */}
-        <div className="w-full mb-32">
-          <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a8f1645-d55a-441d-896d-44f49c626c94.png" />
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.</p>
-        </div>
-      </div>
+            {/* 10th Image */}
+            <div className="w-full mb-32">
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a8f1645-d55a-441d-896d-44f49c626c94.png" />
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+                The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
+              </p>
+            </div>
+          </div>
 
+    
+      
+
+
+      
       {/* Custom Slider */}
       <div className="w-full mb-32">
         <Carousel className="w-full bg-black" setApi={setApi}>
@@ -389,6 +401,11 @@ const InvisibleProjectDetail = () => {
           ))}
         </div>
       </div>
+
+
+
+
+      
 
       {/* Remaining Images */}
       <div className="max-w-[1540px] mx-auto px-6 md:px-[200px]">
