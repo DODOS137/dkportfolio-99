@@ -310,6 +310,11 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+                  
+          
+          
+          
+          
           {/* Evaluation Summary */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
@@ -341,13 +346,8 @@ const InvisibleProjectDetail = () => {
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" />
           </div>
-        </div>
-      </section>
 
-     
-      
-      
-      {/* 9th Image */}
+          {/* 9th Image */}
           <div className="w-full mb-32">
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" />
             <div className="rounded-lg py-[50px] bg-transparent">
@@ -365,42 +365,38 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-    
-      
+          {/* Custom Slider */}
+          <div className="w-full mb-32">
+            <Carousel className="w-full bg-black" setApi={setApi}>
+              <CarouselContent>
+                {sliderImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative w-full">
+                      <AspectRatio ratio={16 / 9} className="w-full">
+                        <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
+                      </AspectRatio>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+            </Carousel>
 
+            {/* Bar-shaped indicators below the slider */}
+            <div className="flex justify-center space-x-2 mt-6">
+              {sliderImages.map((_, index) => (
+                <div 
+                  key={index} 
+                  className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${
+                    current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'
+                  }`}
+                  onClick={() => api?.scrollTo(index)}
+                />
+              ))}
+            </div>
+          </div>
 
-      
-      {/* Custom Slider */}
-      <div className="w-full mb-32">
-        <Carousel className="w-full bg-black" setApi={setApi}>
-          <CarouselContent>
-            {sliderImages.map((image, index) => (
-              <CarouselItem key={index}>
-                <div className="relative w-full">
-                  <AspectRatio ratio={16 / 9} className="w-full">
-                    <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
-                  </AspectRatio>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
-          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
-        </Carousel>
-        
-        {/* Bar-shaped indicators below the slider */}
-        <div className="flex justify-center space-x-2 mt-6">
-          {sliderImages.map((_, index) => (
-            <div 
-              key={index} 
-              className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${
-                current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'
-              }`}
-              onClick={() => api?.scrollTo(index)}
-            />
-          ))}
-        </div>
-      </div>
 
 
 
