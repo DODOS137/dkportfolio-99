@@ -297,7 +297,7 @@ const InvisibleProjectDetail = () => {
                The Ocean (2025)
               </h2>
                 {/* Description */}
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> A responsive virtual ocean simulated autonomous life evolution based on user input. Different environmental conditions triggered emergent behaviours, reinforcing scientific thinking through exploration and experimentation.</p>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Originally conceptualised in 2022, this feature introduced a responsive virtual ocean that simulated autonomous life evolution based on user input. A responsive virtual ocean simulated autonomous life evolution based on user input. Different environmental conditions triggered emergent behaviours, reinforcing scientific thinking through exploration and experimentation.</p>
               
               {/* 5th image */}
               <div className="w-full mb-8">
@@ -305,9 +305,9 @@ const InvisibleProjectDetail = () => {
                     </div> 
                {/* 6th & 7th & 8th Image */}
               <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/ac448d28-2746-4138-aa1e-5f67ecd7b594.png" />
-                      <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/d2e5e774-0ac8-4401-8261-ba9996691882.png" />
-                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/d2e5e774-0ac8-4401-8261-ba9996691882.png" />
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/f649d523-5bba-4fae-8863-e21c4b0c6b70.png" />
+                      <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/618c4d25-4b94-4ebf-a00d-de5a914310f9.png" />
+                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/648bd000-8cec-4dad-bad3-6006fc1c2409.png" />
               </div>
              
             
