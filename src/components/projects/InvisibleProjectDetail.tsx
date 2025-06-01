@@ -275,61 +275,65 @@ const InvisibleProjectDetail = () => {
           
           
           {/* Spatial Design + Image Section */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              {/* Title */}
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-                Spatial Design
-              </h2>
-                {/* Description */}
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</p>
-                {/* 4th image */}
-              <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
-                    </div> 
+         <div className="mb-32">
+         <div className="rounded-lg py-[50px] bg-transparent">
+          {/* Title */}
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+            Spatial Design
+          </h2>
 
-               {/* Title */}
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-                Full Playing Video
-              </h2>
-              
-              {/* YouTube Video Player2 */}
-              <div className="mb-8">
-                  <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-                    <AspectRatio ratio={16 / 9} className="w-full">
-                      <YouTube videoId="KT0Cwy9s5n8" opts={{
-                    width: '100%',
-                    height: '100%',
-                    playerVars: {
-                      autoplay: 0,
-                      controls: 1,
-                      rel: 0,
-                      showinfo: 0,
-                      modestbranding: 1,
-                      fs: 1,
-                      cc_load_policy: 0,
-                      iv_load_policy: 3,
-                      autohide: 1,
-                      disablekb: 0,
-                      enablejsapi: 1,
-                      origin: window.location.origin,
-                      branding: 0,
-                      color: 'white',
-                      theme: 'dark'
-                    }
-                  }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-                    </AspectRatio>
-                  </div>
-                </div>
-                  {/* Title */}
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-               Evaluation Summary
-              </h2>
-                 {/* Description */}
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
-                
-               </div>
-             </div>
+          {/* Description */}
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</p>
+
+          {/* 4th image */}
+          <div className="w-full mb-8">
+            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
+          </div> 
+
+          {/* Title */}
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+            Full Playing Video
+          </h2>
+
+          {/* YouTube Video Player2 */}
+          <div className="mb-8">
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <YouTube videoId="KT0Cwy9s5n8" opts={{
+                  width: '100%',
+                  height: '100%',
+                  playerVars: {
+                    autoplay: 0,
+                    controls: 1,
+                    rel: 0,
+                    showinfo: 0,
+                    modestbranding: 1,
+                    fs: 1,
+                    cc_load_policy: 0,
+                    iv_load_policy: 3,
+                    autohide: 1,
+                    disablekb: 0,
+                    enablejsapi: 1,
+                    origin: window.location.origin,
+                    branding: 0,
+                    color: 'white',
+                    theme: 'dark'
+                  }
+                }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+              </AspectRatio>
+            </div>
+          </div>
+
+          {/* Title */}
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+            Evaluation Summary
+          </h2>
+
+          {/* Description */}
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
+           </div>
+           </div>
+
              
             
            
@@ -360,7 +364,11 @@ const InvisibleProjectDetail = () => {
               </div>
           </div>
 
-           {/* 6th & 7th & 8th Image */}
+          
+          
+          
+          
+          {/* 6th & 7th & 8th Image */}
               <div className="w-full mb-32">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
                       <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
