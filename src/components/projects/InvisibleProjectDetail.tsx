@@ -59,7 +59,7 @@ const InvisibleProjectDetail = () => {
       <section className="pb-20">
         {/* First Image */}
         <div className="z-0 relative">
-          <div className="w-full">
+          <div className="w-full h auto">
             <AspectRatio className="w-full h auto">
               <ImageWithLoading src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-full object-cover" data-lovable-editable="true" />
             </AspectRatio>
