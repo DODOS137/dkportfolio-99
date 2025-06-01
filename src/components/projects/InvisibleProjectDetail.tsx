@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -26,7 +27,8 @@ const InvisibleProjectDetail = () => {
     });
   }, [api]);
 
-  return <div className="min-h-screen bg-black text-white">
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
         <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -161,7 +163,7 @@ const InvisibleProjectDetail = () => {
                   <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Design Development</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Worldbuilding</p>
-                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Video Development</p
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Video Development</p>
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Level Design</p>                                                                                                  
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Spatial Design</p>          
                   </div>
@@ -384,32 +386,32 @@ const InvisibleProjectDetail = () => {
         </div>
       </section>
 
+      {/*Void*/}
+      <div className="pb-40 flex items-center justify-center">
+        <Link 
+          to="/project/learn" 
+          className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium"
+        >
+          <span>Next project</span>
+          <ArrowRight className="w-5 h-5" />
+        </Link>
+      </div>
 
-    {/*Void*/}
-    <div className="pb-40 flex items-center justify-center">
-      <Link 
-        to="/project/learn" 
-        className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium"
-      >
-        <span>Next project</span>
-        <ArrowRight className="w-5 h-5" />
-      </Link>
+      {/* Remaining Images */}
+      <div className="max-w-[1540px] mx-auto px-6 md:px-[200px]">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+            <div className="w-full">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
+              </AspectRatio>
+            </div>
+          </div>)}
+      </div>
+
+      {/* Back to Top Button */}
+      <BackToTopButton />
     </div>
-
-    {/* Remaining Images */}
-    <div className="max-w-[1540px] mx-auto px-6 md:px-[200px]">
-      {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
-          <div className="w-full">
-            <AspectRatio ratio={16 / 9} className="w-full">
-              <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
-            </AspectRatio>
-          </div>
-        </div>)}
-    </div>
-
-    {/* Back to Top Button */}
-    <BackToTopButton />
-  </div>;
+  );
 };
 
 export default InvisibleProjectDetail;
