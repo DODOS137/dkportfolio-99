@@ -294,7 +294,7 @@ const InvisibleProjectDetail = () => {
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
 
                <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-               The Ocean(2025)
+               The Ocean (2025)
               </h2>
                 {/* Description */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> A responsive virtual ocean simulated autonomous life evolution based on user input. Different environmental conditions triggered emergent behaviours, reinforcing scientific thinking through exploration and experimentation.</p>
