@@ -7,6 +7,7 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
+import BackToTopButton from '@/components/BackToTopButton';
 
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
@@ -409,6 +410,9 @@ const InvisibleProjectDetail = () => {
           </div>
         ))}
       </div>
+
+      {/* Back to Top Button */}
+      <BackToTopButton />
     </div>
   );
 };

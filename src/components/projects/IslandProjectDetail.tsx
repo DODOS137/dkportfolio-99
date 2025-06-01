@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -6,6 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import { islandProjectData } from '@/data/islandProject';
+import BackToTopButton from '@/components/BackToTopButton';
 
 const IslandProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
@@ -121,6 +121,9 @@ const IslandProjectDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Back to Top Button */}
+      <BackToTopButton />
     </div>
   );
 };
