@@ -238,6 +238,11 @@ const InvisibleProjectDetail = () => {
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
                     </div> 
+
+               {/* Title */}
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+                Full Playing Video
+              </h2>
               
               {/* YouTube Video Player2 */}
               <div className="mb-32">
@@ -267,13 +272,11 @@ const InvisibleProjectDetail = () => {
                     </AspectRatio>
                   </div>
                 </div>
-              {/* Title */}
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-                Full Playing Video
-              </h2>
+               </div>
+             </div>
+             
             
-            </div>
-          </div>
+           
 
            {/* Spatial Design + Image Section */}
           <div className="mb-32">
