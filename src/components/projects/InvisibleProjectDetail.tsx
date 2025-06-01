@@ -63,7 +63,7 @@ const InvisibleProjectDetail = () => {
         <ImageWithLoading
          src={project.images[0]}
          alt={`${project.title} - Image 1`}
-         className="w-full h-full object-cover"
+         className="w-full h-full object-contain"
           data-lovable-editable="true"
           />
         </AspectRatio>
