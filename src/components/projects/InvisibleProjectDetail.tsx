@@ -141,23 +141,29 @@ const InvisibleProjectDetail = () => {
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                   <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Ideation Phase</h3>
                   <div className="flex-1 flex items-center justify-center">
-                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Educational Psychology Research</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Brainstorming</p>
+                         <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Concept Sketching</p>
                   </div>
                 </div>
 
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                   <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Analysis</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
-                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Learning Module Design</p>
-                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">VR Interface Development</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Context & Problem Analysis</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Survey</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Narrative Flow Analysis</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Precedent Study </p>
+                    
                   </div>
                 </div>
 
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                   <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Design Development</h3>
                   <div className="flex-1 flex flex-col items-center justify-center">
-                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">User Testing</p>
-                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Assessment System</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Worldbuilding</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Video Development</p
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Level Design</p>                                                                                                  
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Spatial Design</p>          
                   </div>
                 </div>
               </div>
