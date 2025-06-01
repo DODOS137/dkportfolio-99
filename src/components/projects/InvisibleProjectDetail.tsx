@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -366,7 +365,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Custom Slider */}
           <div className="w-full mb-32">
-            <Carousel className="w-full bg-black" setApi={setApi}>
+            <Carousel className="w-full bg-black" setApi={setApi} opts={{ loop: true }}>
               <CarouselContent>
                 {sliderImages.map((image, index) => (
                   <CarouselItem key={index}>
