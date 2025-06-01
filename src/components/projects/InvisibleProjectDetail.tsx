@@ -375,6 +375,10 @@ const InvisibleProjectDetail = () => {
         </div>
       </section>
 
+
+    {/*Void*/}
+    <div className="pb-40" />
+
       {/* Remaining Images */}
       <div className="max-w-[1540px] mx-auto px-6 md:px-[200px]">
         {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
