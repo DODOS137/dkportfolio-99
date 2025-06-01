@@ -303,9 +303,10 @@ Each of the four zones (OCEAN A–D) responded differently depending on user beh
 
 The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth’s primitive seas.</p>
               
-              {/* 5th image */}
+              {/* 5th & 5-1 image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
+                  <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
                     </div> 
                {/* 6th & 7th & 8th Image */}
               <div className="w-full mb-8">
