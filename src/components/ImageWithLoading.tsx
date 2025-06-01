@@ -27,7 +27,7 @@ const ImageWithLoading: React.FC<ImageWithLoadingProps> = ({
       
       {hasError ? <div className="absolute inset-0 bg-gray-100 flex items-center justify-center text-gray-500">
           <span>Failed to load image</span>
-        </div> : <img src={src} alt={alt} loading={lazy ? "lazy" : "eager"} onLoad={handleLoad} onError={handleError} className="" />}
+        </div> : <img src={src} alt={alt} loading={lazy ? "lazy" : "eager"} onLoad={handleLoad} onError={handleError} className="data-lovable-editable=\"true" />}
     </div>;
 };
 export default ImageWithLoading;
