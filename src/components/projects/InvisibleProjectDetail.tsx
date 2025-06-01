@@ -147,9 +147,9 @@ const InvisibleProjectDetail = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                   <h3 className="text-xl font-light text-white mb-4" data-lovable-editable="true">Ideation Phase</h3>
-                  <div className="flex-1 flex items-center justify-center">
+                  <div className="flex-1 flex flex-col items-center justify-center">
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Brainstorming</p>
-                         <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Concept Sketching</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Concept Sketching</p>
                   </div>
                 </div>
 
