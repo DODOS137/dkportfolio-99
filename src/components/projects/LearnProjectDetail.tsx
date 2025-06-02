@@ -182,6 +182,11 @@ const LearnProjectDetail = () => {
                   modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
                   isSketchfab={true}
                 />
+                 {/* Above */}
+                <div className="absolute top-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
+
+                 {/* Under */}
+               <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
               </div>
             </div>
           </div>
