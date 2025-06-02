@@ -171,7 +171,7 @@ The library acted as a symbolic setting for memory and ritual. Through environme
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> An AI-driven commander capable of speech, managing logistics and group decisions.
             </p>
       
-            {/* RX-056*/}
+            {/* RX-056 image*/}
             <div className="w-full mb-32">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
