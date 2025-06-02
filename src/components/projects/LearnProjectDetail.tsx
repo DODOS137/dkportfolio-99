@@ -185,36 +185,36 @@ const LearnProjectDetail = () => {
 
              {/* RX-056 LS1-07 3D Model */}
              <div className="relative overflow-hidden">
-             <div className="flex w-full">
-             <div className="w-1/2">
-             <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
-            </div>
-            <div className="w-1/2">
-            <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
-              </div>
+               <div className="flex w-full">
+                 <div className="w-1/2">
+                   <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
+                 </div>
+                 <div className="w-1/2">
+                   <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
+                 </div>
+               </div>
+               {/* 인터페이스 가리기 */}
+               <div className="pointer-events-none absolute top-0 left-0 w-full h-100 bg-black z-[999]" />
+               <div className="pointer-events-none absolute bottom-0 left-0 w-full h-100 bg-black z-[999]" />
              </div>
-            {/* 인터페이스 가리기 */}
-            <div className="pointer-events-none absolute top-0 left-0 w-full h-100 bg-black z-[999]" />
-            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-100 bg-black z-[999]" />
-           </div>
               
               {/* RX-056 3D Model indicator */}
-          <div className="mb-32">
-            <div className="rounded-lg bg-transparent py-0">
-              <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-400 font-light text-center md:text-sm">Click and drag to rotate. Scroll to zoom.</h2>
-            </div>
-          </div>
+              <div className="mb-32">
+                <div className="rounded-lg bg-transparent py-0">
+                  <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-400 font-light text-center md:text-sm">Click and drag to rotate. Scroll to zoom.</h2>
+                </div>
+              </div>
 
               {/* Scriptwriting & Storyboard */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Scriptwriting & Storyboard</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-
-             </p>
+              <div className="mb-32">
+                <div className="rounded-lg py-[50px] bg-transparent">
+                  <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Scriptwriting & Storyboard</h2>
+                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
         </div>
 
         {/* Remaining Images */}
