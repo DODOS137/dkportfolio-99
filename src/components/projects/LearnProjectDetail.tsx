@@ -182,7 +182,21 @@ The library acted as a symbolic setting for memory and ritual. Through environme
               modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
               isSketchfab={true}
             />
+
+            {/* above */}
+             <div className="absolute top-0 left-0 w-full h-12 bg-black opacity-80 z-10 pointer-events-none" />
+
+            {/* under */}
+             <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-80 z-10 pointer-events-none" />
+             </div>
+         
+          
+          
           </div>
+
+    
+
+          
         </div>
         </div>
 
