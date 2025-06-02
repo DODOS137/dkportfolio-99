@@ -2,14 +2,15 @@ import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
 interface ModelProps {
   modelPath: string;
 }
-
-function Model({ modelPath }: ModelProps) {
-  const { scene } = useGLTF(modelPath);
-
+function Model({
+  modelPath
+}: ModelProps) {
+  const {
+    scene
+  } = useGLTF(modelPath);
   scene.traverse((child: any) => {
     if (child.isMesh && child.material) {
       child.material.color.set('#ffffff'); // 모델을 흰색으로
@@ -17,37 +18,31 @@ function Model({ modelPath }: ModelProps) {
       child.material.roughness = 0.6;
     }
   });
-
   return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
 }
-
 function FallbackModel() {
-  return (
-    <mesh position={[0, 0, 0]}>
+  return <mesh position={[0, 0, 0]}>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color="#ff69b4" />
-    </mesh>
-  );
+    </mesh>;
 }
-
 function LoadingModel() {
-  return (
-    <mesh position={[0, 0, 0]}>
+  return <mesh position={[0, 0, 0]}>
       <sphereGeometry args={[0.5, 16, 16]} />
       <meshStandardMaterial color="#0066ff" wireframe />
-    </mesh>
-  );
+    </mesh>;
 }
-
 interface ModelViewerProps {
   modelPath: string;
   title?: string;
   isSketchfab?: boolean;
 }
-
-const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps) => {
+const ModelViewer = ({
+  modelPath,
+  title,
+  isSketchfab = false
+}: ModelViewerProps) => {
   const [modelError, setModelError] = useState(false);
-
   const getSketchfabModelId = (url: string) => {
     const modelsEmbedMatch = url.match(/models\/([^\/]+)\/embed/);
     if (modelsEmbedMatch) return modelsEmbedMatch[1];
@@ -58,79 +53,50 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
     if (/^[a-f0-9]+$/.test(url)) return url;
     return url;
   };
-
   if (isSketchfab) {
     const modelId = getSketchfabModelId(modelPath);
-    const embedUrl = modelPath.includes('/embed')
-      ? modelPath
-      : `https://sketchfab.com/models/${modelId}/embed`;
-
-    return (
-      <div className="w-full my-10">
+    const embedUrl = modelPath.includes('/embed') ? modelPath : `https://sketchfab.com/models/${modelId}/embed`;
+    return <div className="w-full my-10">
         {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
         <div className="bg-black rounded-lg overflow-hidden">
           <AspectRatio ratio={16 / 9}>
-            <iframe
-              title={title || '3D Model Viewer'}
-              className="w-full h-full border-0"
-              src={embedUrl}
-              allowFullScreen
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              loading="lazy"
-            />
+            <iframe title={title || '3D Model Viewer'} className="w-full h-full border-0" src={embedUrl} allowFullScreen allow="autoplay; fullscreen; xr-spatial-tracking" loading="lazy" />
           </AspectRatio>
         </div>
         <p className="text-gray-400 text-sm mt-2">
           클릭하고 드래그하여 회전하세요. 스크롤로 확대/축소할 수 있습니다.
         </p>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="w-full my-10">
-      {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
+  return <div className="w-full my-10">
+      {title}
       <div className="bg-black rounded-lg overflow-hidden">
         <AspectRatio ratio={16 / 9}>
-          <Canvas
-            camera={{ position: [0, 0, 5], fov: 50 }}
-            style={{ background: '#0000ff' }} // 배경 파란색
-          >
+          <Canvas camera={{
+          position: [0, 0, 5],
+          fov: 50
+        }} style={{
+          background: '#0000ff'
+        }} // 배경 파란색
+        >
             <ambientLight intensity={1.2} />
             <directionalLight position={[10, 10, 5]} intensity={2.5} />
             <pointLight position={[-10, -10, -5]} intensity={1.5} />
 
             <Suspense fallback={<LoadingModel />}>
-              {modelError ? (
-                <FallbackModel />
-              ) : (
-                <Model modelPath={modelPath} />
-              )}
+              {modelError ? <FallbackModel /> : <Model modelPath={modelPath} />}
               <Environment preset="city" />
             </Suspense>
 
-            <OrbitControls
-              enablePan={true}
-              enableZoom={true}
-              enableRotate={true}
-              minDistance={2}
-              maxDistance={10}
-            />
+            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} minDistance={2} maxDistance={10} />
           </Canvas>
         </AspectRatio>
       </div>
-      <p className="text-gray-400 text-sm mt-2">
-        클릭하고 드래그하여 회전하세요. 스크롤로 확대/축소할 수 있습니다.
-      </p>
-      {modelError && (
-        <p className="text-red-400 text-sm mt-2">
+      
+      {modelError && <p className="text-red-400 text-sm mt-2">
           모델을 로드할 수 없습니다. 대체 모델을 표시합니다.
-        </p>
-      )}
-    </div>
-  );
+        </p>}
+    </div>;
 };
-
 useGLTF.preload('/lovable-uploads/Rx056.glb');
-
 export default ModelViewer;
