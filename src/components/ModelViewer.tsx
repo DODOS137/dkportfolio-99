@@ -79,7 +79,7 @@ const ModelViewer = ({
     return <div className="w-full my-10">
         {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
         <div className="bg-gray-900 rounded-lg overflow-hidden">
-          <AspectRatio ratio={16 / 9}>
+          <AspectRatio ratio={1 / 1}>
             <iframe title={title || "3D Model Viewer"} className="w-full h-full border-0" src={embedUrl} allowFullScreen allow="autoplay; fullscreen; xr-spatial-tracking" loading="lazy" />
           </AspectRatio>
         </div>
