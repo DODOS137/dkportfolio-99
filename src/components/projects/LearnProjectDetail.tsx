@@ -190,8 +190,8 @@ const LearnProjectDetail = () => {
               </div>
              </div>
             {/* 인터페이스 가리기 */}
-            <div className="pointer-events-none absolute top-0 left-0 w-full h-50 bg-black z-[999]" />
-            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-50 bg-black z-[999]" />
+            <div className="pointer-events-none absolute top-0 left-0 w-full h-100 bg-black z-[999]" />
+            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-100 bg-black z-[999]" />
            </div>
               
               {/* RX-056 3D Model indicator */}
@@ -201,16 +201,25 @@ const LearnProjectDetail = () => {
             </div>
           </div>
 
-              {/* LS1-07 3D Model */}
-              <div className="relative">
-                <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
-                 {/* Above */}
-                <div className="absolute top-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
 
-                 {/* Under */}
-               <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
-              </div>
+              {/* Scriptwriting & Storyboard */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Scriptwriting & Storyboard</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+
+             </p>
             </div>
+          </div>
+
+
+
+
+
+
+
+
+              
           </div>
         </div>
 
