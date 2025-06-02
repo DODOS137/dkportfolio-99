@@ -180,6 +180,7 @@ const LearnProjectDetail = () => {
               {/* RX-056 Image */}
               <div className="w-full mb-32">
                 <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" />
+                <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" />
               </div>
 
              {/* RX-056 LS1-07 3D Model */}
@@ -199,8 +200,8 @@ const LearnProjectDetail = () => {
               </div>
              </div>
             {/* 인터페이스 가리기 */}
-            <div className="pointer-events-none absolute top-0 left-0 w-full h-22 bg-black z-[999]" />
-            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-22 bg-black z-[999]" />
+            <div className="pointer-events-none absolute top-0 left-0 w-full h-50 bg-black z-[999]" />
+            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-50 bg-black z-[999]" />
            </div>
               
               {/* RX-056 3D Model indicator */}
