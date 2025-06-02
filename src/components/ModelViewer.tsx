@@ -1,4 +1,3 @@
-
 import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
@@ -56,13 +55,20 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
     // Extract model ID from various Sketchfab URL formats
     let modelId = '';
     
-    // Handle direct model ID
+    // Handle direct model ID (32 character hex string)
     if (/^[a-f0-9]{32}$/.test(url)) {
       modelId = url;
     }
-    // Handle full URL formats
-    else if (url.includes('sketchfab.com')) {
-      const match = url.match(/\/([a-f0-9]{32})/);
+    // Handle 3d-models URL format: extract ID after the last dash
+    else if (url.includes('3d-models/')) {
+      const match = url.match(/3d-models\/.*-([a-f0-9]{32})$/);
+      if (match) {
+        modelId = match[1];
+      }
+    }
+    // Handle other Sketchfab URL formats
+    else if (url.includes('sketchfab.com/models/')) {
+      const match = url.match(/models\/([a-f0-9]{32})/);
       if (match) {
         modelId = match[1];
       }
