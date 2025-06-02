@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
+import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 
 const LearnProjectDetail = () => {
@@ -175,6 +176,12 @@ The library acted as a symbolic setting for memory and ritual. Through environme
             <div className="w-full mb-32">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
+
+            {/* RX-056 3D Model */}
+            <ModelViewer 
+              modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
+              isSketchfab={true}
+            />
           </div>
         </div>
         </div>
