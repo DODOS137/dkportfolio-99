@@ -213,7 +213,7 @@ const LearnProjectDetail = () => {
                   </p>
 
                   {/* YouTube Video */}
-              <div className="mb-32">
+              <div className="mb-0">
                 <div className="rounded-lg py-[50px] bg-transparent">
                   <div className="w-full max-w-4xl mx-auto">
                     <YouTube
