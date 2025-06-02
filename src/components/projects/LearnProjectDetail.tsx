@@ -178,7 +178,7 @@ The library acted as a symbolic setting for memory and ritual. Through environme
 
             {/* 3D Model Viewer */}
             <ModelViewer 
-              modelPath="https://sketchfab.com/models/abcd1234/embed"
+              modelPath=" https://dodos137.github.io/3Dmodels./"
               title="RX-056 3D Model"
               isSketchfab={true}
             />
