@@ -1,5 +1,5 @@
 
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -9,37 +9,27 @@ interface ModelProps {
 }
 
 function Model({ modelPath }: ModelProps) {
-  const [error, setError] = useState<Error | null>(null);
+  const { scene } = useGLTF(modelPath);
+  console.log("Model loaded successfully:", modelPath);
+  
+  return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
+}
 
-  const ModelContent = () => {
-    try {
-      const { scene } = useGLTF(modelPath);
-      
-      useEffect(() => {
-        console.log("Model loaded successfully:", modelPath);
-      }, []);
-      
-      return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
-    } catch (err) {
-      console.error("Error in ModelContent:", err);
-      setError(err instanceof Error ? err : new Error('Unknown error loading model'));
-      return null;
-    }
-  };
-
-  const FallbackCube = () => {
-    return (
-      <mesh position={[0, 0, 0]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="hotpink" />
-      </mesh>
-    );
-  };
-
+function FallbackModel() {
   return (
-    <>
-      {error ? <FallbackCube /> : <ModelContent />}
-    </>
+    <mesh position={[0, 0, 0]}>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color="#ff69b4" />
+    </mesh>
+  );
+}
+
+function LoadingModel() {
+  return (
+    <mesh position={[0, 0, 0]}>
+      <sphereGeometry args={[0.5, 16, 16]} />
+      <meshStandardMaterial color="#0066ff" wireframe />
+    </mesh>
   );
 }
 
@@ -50,6 +40,8 @@ interface ModelViewerProps {
 }
 
 const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps) => {
+  const [modelError, setModelError] = useState(false);
+  
   console.log("ModelViewer rendering with path:", modelPath);
 
   const getSketchfabModelId = (url: string) => {
@@ -86,7 +78,7 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
             />
           </AspectRatio>
         </div>
-        <p className="text-gray-400 text-sm mt-2">Click and drag to rotate. Scroll to zoom.</p>
+        <p className="text-gray-400 text-sm mt-2">클릭하고 드래그하여 회전하세요. 스크롤로 확대/축소할 수 있습니다.</p>
       </div>
     );
   }
@@ -97,24 +89,40 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
       <div className="bg-black rounded-lg overflow-hidden">
         <AspectRatio ratio={16 / 9}>
           <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} intensity={1} />
-            <Suspense fallback={
-              <mesh position={[0, 0, 0]}>
-                <sphereGeometry args={[0.5, 16, 16]} />
-                <meshStandardMaterial color="blue" wireframe />
-              </mesh>
-            }>
-              <Model modelPath={modelPath} />
+            <ambientLight intensity={0.6} />
+            <directionalLight position={[10, 10, 5]} intensity={1.2} />
+            <pointLight position={[-10, -10, -5]} intensity={0.5} />
+            
+            <Suspense fallback={<LoadingModel />}>
+              {modelError ? (
+                <FallbackModel />
+              ) : (
+                <Model 
+                  modelPath={modelPath} 
+                />
+              )}
               <Environment preset="city" />
             </Suspense>
-            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+            
+            <OrbitControls 
+              enablePan={true} 
+              enableZoom={true} 
+              enableRotate={true}
+              minDistance={2}
+              maxDistance={10}
+            />
           </Canvas>
         </AspectRatio>
       </div>
-      <p className="text-gray-400 text-sm mt-2">Click and drag to rotate. Scroll to zoom.</p>
+      <p className="text-gray-400 text-sm mt-2">클릭하고 드래그하여 회전하세요. 스크롤로 확대/축소할 수 있습니다.</p>
+      {modelError && (
+        <p className="text-red-400 text-sm mt-2">모델을 로드할 수 없습니다. 대체 모델을 표시합니다.</p>
+      )}
     </div>
   );
 };
+
+// Preload the model for better performance
+useGLTF.preload('/lovable-uploads/Rx056.glb');
 
 export default ModelViewer;
