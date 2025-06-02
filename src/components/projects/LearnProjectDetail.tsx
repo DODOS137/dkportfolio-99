@@ -8,7 +8,7 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 
-const LearnProjectDetail: React.FC = () => {
+const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
   
@@ -64,7 +64,7 @@ const LearnProjectDetail: React.FC = () => {
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
                 <p className="text-white">MA Thesis</p>
-                <p className="text-white">(Design Immersive Experience)</p>
+                 <p className="text-white">(Design Immersive Experience)</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
@@ -110,7 +110,7 @@ const LearnProjectDetail: React.FC = () => {
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Environment Research</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Precedent Study </p>
                 </div>
               </div>
               
@@ -119,9 +119,9 @@ const LearnProjectDetail: React.FC = () => {
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Worldbuilding</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Character Design</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Scriptwriting & Storyboarding</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
+                   <p className="text-gray-400 text-sm leading-relaxed">Scriptwriting & Storyboarding</p>
+                   <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
+                   <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
                 </div>
               </div>
             </div>
@@ -137,9 +137,9 @@ const LearnProjectDetail: React.FC = () => {
                 Worldbuilding
               </h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-                Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
+               Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
 
-                The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition?
+  The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
               </p>
 
               {/* world image */}
@@ -155,8 +155,7 @@ const LearnProjectDetail: React.FC = () => {
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Concept & Logic</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-                The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
               </p>
             </div>
           </div>
@@ -165,19 +164,16 @@ const LearnProjectDetail: React.FC = () => {
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
-              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8" data-lovable-editable="true">• FR Pro (Player)</p>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-                A passive cleaning robot with minimal initiative, performing support tasks.
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• FR Pro (Player)</p> 
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A passive cleaning robot with minimal initiative, performing support tasks.
               </p>
 
-              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8" data-lovable-editable="true">• RX-056</p>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-                A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
-              </p>
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• RX-056</p> 
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
+              </p> 
               
-              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8" data-lovable-editable="true">• LS1-07</p>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-                An AI-driven commander capable of speech, managing logistics and group decisions.
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• LS1-07</p> 
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">An AI-driven commander capable of speech, managing logistics and group decisions.
               </p>
         
               {/* RX-056 Image */}
@@ -191,14 +187,11 @@ const LearnProjectDetail: React.FC = () => {
                   modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
                   isSketchfab={true}
                 />
-                {/* Above */}
+                 {/* Above */}
                 <div className="absolute top-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
 
-                {/* Under */}
-                <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
-                <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-                  <span>Rotate it</span>
-                </div>
+                 {/* Under */}
+               <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
               </div>
             </div>
           </div>
