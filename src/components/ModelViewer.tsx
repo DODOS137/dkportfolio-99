@@ -74,7 +74,7 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
     return (
       <div className="w-full my-10">
         {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
-        <div className="bg-gray-900 rounded-lg overflow-hidden">
+        <div className="bg-black rounded-lg overflow-hidden">
           <AspectRatio ratio={16 / 9}>
             <iframe 
               title={title || "3D Model Viewer"} 
@@ -94,11 +94,18 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
   return (
     <div className="w-full my-10">
       {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
-      <div className="bg-gray-900 rounded-lg overflow-hidden">
+      <div className="bg-black rounded-lg overflow-hidden">
         <AspectRatio ratio={16 / 9}>
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} intensity={1} />
+          <Canvas 
+            camera={{ position: [0, 0, 5], fov: 50 }}
+            gl={{ alpha: false }}
+            onCreated={({ gl, scene }) => {
+              gl.setClearColor('#000000');
+              scene.background = null;
+            }}
+          >
+            <ambientLight intensity={0.7} />
+            <directionalLight position={[10, 10, 5]} intensity={1.2} />
             <Suspense fallback={
               <mesh position={[0, 0, 0]}>
                 <sphereGeometry args={[0.5, 16, 16]} />
