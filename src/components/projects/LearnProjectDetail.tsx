@@ -234,6 +234,16 @@ const LearnProjectDetail = () => {
                 </div>
               </div>
 
+              {/* Level Design */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Level Design</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
+              </p>
+            </div>
+             </div>
+
+
               
             </div>
           </div>
