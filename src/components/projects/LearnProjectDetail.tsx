@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -6,13 +5,10 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import { learnProjectData } from '@/data/learnProject';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -45,12 +41,7 @@ const LearnProjectDetail = () => {
         {/* First Image */}
         <div className="mb-20">
           <div className="w-full">
-            <img 
-              src={project.images[0]} 
-              alt={`${project.title} - Image 1`} 
-              className="w-full h-auto object-contain" 
-              data-lovable-editable="true" 
-            />
+            <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" data-lovable-editable="true" />
           </div>
         </div>
 
@@ -150,25 +141,21 @@ const LearnProjectDetail = () => {
               {/* world image */}
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
+                  <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
                 </AspectRatio>
               </div>
             </div>
           </div>
 
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default LearnProjectDetail;
