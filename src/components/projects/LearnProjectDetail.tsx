@@ -4,12 +4,37 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Environment } from '@react-three/drei';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { useLoader } from '@react-three/fiber';
+
 
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
+
+const ModelViewer = ({ modelPath }: { modelPath: string }) => {
+  return (
+    <div className="w-full h-[600px] rounded-xl overflow-hidden bg-black border border-white">
+      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+        <ambientLight intensity={0.7} />
+        <directionalLight position={[5, 5, 5]} intensity={1} />
+        <React.Suspense fallback={null}>
+          <Model url={`${modelPath}/rx056.glb`} />
+          <Environment preset="city" />
+        </React.Suspense>
+        <OrbitControls enablePan enableZoom enableRotate />
+      </Canvas>
+    </div>
+  );
+};
+
+const Model = ({ url }: { url: string }) => {
+  const gltf = useLoader(GLTFLoader, url);
+  return <primitive object={gltf.scene} scale={1.5} />;
+};
   
   return (
     <div className="min-h-screen bg-black text-white">
@@ -176,12 +201,14 @@ The library acted as a symbolic setting for memory and ritual. Through environme
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
 
-            {/* 3D Model Viewer */}
-            <ModelViewer 
-              modelPath=" https://dodos137.github.io/3Dmodels./"
-              title="RX-056 3D Model"
-              isSketchfab={true}
-            />
+
+             {/* RX-056 ModelVeiwer*/}
+            <div className="max-w-[1540px] mx-auto px-6 md:px-[150px] z-10 relative">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Character 3D Model</h2>
+            <ModelViewer modelPath="https://dodos137.github.io/3Dmodels" />
+            </div>
+
+           
           </div>
         </div>
         </div>
