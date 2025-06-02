@@ -199,8 +199,8 @@ const LearnProjectDetail = () => {
               </div>
              </div>
             {/* 인터페이스 가리기 */}
-            <div className="pointer-events-none absolute top-0 left-0 w-full h-16 bg-black z-[999]" />
-            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-16 bg-black z-[999]" />
+            <div className="pointer-events-none absolute top-0 left-0 w-full h-28 bg-black z-[999]" />
+            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-28 bg-black z-[999]" />
            </div>
               
               {/* RX-056 3D Model indicator */}
