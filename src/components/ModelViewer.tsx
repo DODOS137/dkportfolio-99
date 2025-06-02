@@ -1,4 +1,3 @@
-
 import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
@@ -9,23 +8,17 @@ interface ModelProps {
 }
 
 function Model({ modelPath }: ModelProps) {
-  try {
-    const { scene } = useGLTF(modelPath);
-    console.log('Model loaded successfully:', modelPath);
+  const { scene } = useGLTF(modelPath);
 
-    scene.traverse((child: any) => {
-      if (child.isMesh && child.material) {
-        child.material.color.set('#cccccc');
-        child.material.metalness = 0.1;
-        child.material.roughness = 0.6;
-      }
-    });
+  scene.traverse((child: any) => {
+    if (child.isMesh && child.material) {
+      child.material.color.set('#ffffff'); // 모델을 흰색으로
+      child.material.metalness = 0.1;
+      child.material.roughness = 0.6;
+    }
+  });
 
-    return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
-  } catch (error) {
-    console.error('Error loading model:', error);
-    return <FallbackModel />;
-  }
+  return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
 }
 
 function FallbackModel() {
@@ -55,20 +48,14 @@ interface ModelViewerProps {
 const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps) => {
   const [modelError, setModelError] = useState(false);
 
-  console.log('ModelViewer rendering with path:', modelPath);
-
   const getSketchfabModelId = (url: string) => {
     const modelsEmbedMatch = url.match(/models\/([^\/]+)\/embed/);
     if (modelsEmbedMatch) return modelsEmbedMatch[1];
-
     const modelsMatch = url.match(/models\/([^\/]+)/);
     if (modelsMatch) return modelsMatch[1];
-
     const tdModelsMatch = url.match(/3d-models\/.*-([a-f0-9]+)$/);
     if (tdModelsMatch) return tdModelsMatch[1];
-
     if (/^[a-f0-9]+$/.test(url)) return url;
-
     return url;
   };
 
@@ -105,7 +92,10 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
       {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
       <div className="bg-black rounded-lg overflow-hidden">
         <AspectRatio ratio={16 / 9}>
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+          <Canvas
+            camera={{ position: [0, 0, 5], fov: 50 }}
+            style={{ background: '#0000ff' }} // 배경 파란색
+          >
             <ambientLight intensity={1.2} />
             <directionalLight position={[10, 10, 5]} intensity={2.5} />
             <pointLight position={[-10, -10, -5]} intensity={1.5} />
@@ -141,7 +131,6 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
   );
 };
 
-// 미리 로드 (성능 향상)
 useGLTF.preload('/lovable-uploads/Rx056.glb');
 
 export default ModelViewer;
