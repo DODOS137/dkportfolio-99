@@ -126,6 +126,9 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
+
+        {/* Shared Container */}
+        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
         {/* Worldbuilding + Image Section */}
         <div className="mb-32">
           <div className="rounded-lg py-[50px] bg-transparent">
@@ -172,6 +175,7 @@ The library acted as a symbolic setting for memory and ritual. Through environme
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
           </div>
+        </div>
         </div>
 
         {/* Remaining Images */}
