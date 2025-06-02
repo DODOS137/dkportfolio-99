@@ -5,7 +5,6 @@ import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 
 const LearnProjectDetail = () => {
@@ -128,6 +127,7 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
+
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
         {/* Worldbuilding + Image Section */}
@@ -168,19 +168,13 @@ The library acted as a symbolic setting for memory and ritual. Through environme
             </p>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> RX-056: A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
             </p> 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> LS1-07: An AI-driven commander capable of speech, managing logistics and group decisions.
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> An AI-driven commander capable of speech, managing logistics and group decisions.
             </p>
       
-            {/* RX-056 image*/}
-            <div className="w-full mb-16">
-              <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
+            {/* RX-056*/}
+            <div className="w-full mb-32">
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
-
-            {/* 3D Model Viewer for RX-056 */}
-            <ModelViewer 
-              modelPath="/lovable-uploads/Rx056.glb"
-              title="RX-056 3D Model"
-            />
           </div>
         </div>
         </div>
