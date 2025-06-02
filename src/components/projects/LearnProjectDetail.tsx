@@ -62,7 +62,8 @@ const LearnProjectDetail = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">MA Thesis (Design Immersive Experience)</p>
+                <p className="text-white">MA Thesis</p>
+                 <p className="text-white">(Design Immersive Experience)</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
