@@ -164,15 +164,15 @@ const LearnProjectDetail = () => {
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• FR Pro (Player)</p> 
+              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8" data-lovable-editable="true">• FR Pro (Player)</p> 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A passive cleaning robot with minimal initiative, performing support tasks.
               </p>
 
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• RX-056</p> 
+              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8" data-lovable-editable="true">• RX-056</p> 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
               </p> 
               
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• LS1-07</p> 
+              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8" data-lovable-editable="true">• LS1-07</p> 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">An AI-driven commander capable of speech, managing logistics and group decisions.
               </p>
         
@@ -192,7 +192,10 @@ const LearnProjectDetail = () => {
 
                  {/* Under */}
                <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
+               <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
+            <span>Rotate it</span>
               </div>
+            
             </div>
           </div>
         </div>
