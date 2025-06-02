@@ -49,7 +49,7 @@ const LearnProjectDetail = () => {
         {/* Project Description Text Box */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">
+            <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
               {project.title}
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
@@ -161,7 +161,7 @@ const LearnProjectDetail = () => {
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
+              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">Character Design</h2>
               <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• FR Pro (Player)</p> 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A passive cleaning robot with minimal initiative, performing support tasks.
               </p>
@@ -191,10 +191,9 @@ const LearnProjectDetail = () => {
               
               {/* Narrative Concept & Logic */}
           <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Concept & Logic</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-              </p>
+            <div className="rounded-lg bg-transparent py-0">
+              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">Narrative Concept & Logic</h2>
+              
             </div>
           </div>
             </div>
