@@ -196,6 +196,30 @@ const LearnProjectDetail = () => {
               
             </div>
           </div>
+
+
+               {/* LS1-07 Image */}
+              <div className="w-full mb-32">
+                <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" />
+              </div>
+
+              {/* LS1-07 3D Model */}
+              <div className="relative">
+                <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
+                 {/* Above */}
+                <div className="absolute top-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
+
+                 {/* Under */}
+               <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
+              </div>
+              
+              {/* LS1-07 3D Model indicator */}
+            <div className="mb-32">
+            <div className="rounded-lg bg-transparent py-0">
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-400 font-light text-center md:text-sm">Click and drag to rotate. Scroll to zoom.</h2>
+            </div>
+            </div>
+
             </div>
           </div>
 
