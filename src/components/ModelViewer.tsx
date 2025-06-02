@@ -1,3 +1,4 @@
+
 import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
@@ -8,17 +9,23 @@ interface ModelProps {
 }
 
 function Model({ modelPath }: ModelProps) {
-  const { scene } = useGLTF(modelPath);
+  try {
+    const { scene } = useGLTF(modelPath);
+    console.log('Model loaded successfully:', modelPath);
 
-  scene.traverse((child: any) => {
-    if (child.isMesh && child.material) {
-      child.material.color.set('#cccccc'); // 베이스 컬러
-      child.material.metalness = 0.1;       // 메탈릭 정도
-      child.material.roughness = 0.6;       // 거칠기
-    }
-  });
+    scene.traverse((child: any) => {
+      if (child.isMesh && child.material) {
+        child.material.color.set('#cccccc');
+        child.material.metalness = 0.1;
+        child.material.roughness = 0.6;
+      }
+    });
 
-  return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
+    return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
+  } catch (error) {
+    console.error('Error loading model:', error);
+    return <FallbackModel />;
+  }
 }
 
 function FallbackModel() {
@@ -47,6 +54,8 @@ interface ModelViewerProps {
 
 const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps) => {
   const [modelError, setModelError] = useState(false);
+
+  console.log('ModelViewer rendering with path:', modelPath);
 
   const getSketchfabModelId = (url: string) => {
     const modelsEmbedMatch = url.match(/models\/([^\/]+)\/embed/);
