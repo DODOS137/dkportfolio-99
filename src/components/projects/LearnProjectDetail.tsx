@@ -182,23 +182,26 @@ const LearnProjectDetail = () => {
                 <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" />
               </div>
 
-             {/* RX-056 3D Model */}
-             <div className="relative">
-              <div className="flex w-full">
-              <div className="w-1/2">
-              <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
-               </div>
-               <div className="w-1/2">
-              <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
+             {/* RX-056 LS1-07 3D Model */}
+             <div className="relative overflow-hidden">
+             <div className="flex w-full">
+             <div className="w-1/2">
+             <ModelViewer
+             modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
+             isSketchfab={true}
+             />
+            </div>
+            <div className="w-1/2">
+            <ModelViewer
+             modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add"
+             isSketchfab={true}
+             />
               </div>
-                </div>
-
-              {/* 위 검정 가림막 */}
-              <div className="absolute top-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
-
-              {/* 아래 검정 가림막 */}
-               <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
-               </div>
+             </div>
+            {/* 인터페이스 가리기 */}
+            <div className="pointer-events-none absolute top-0 left-0 w-full h-16 bg-black z-[999]" />
+            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-16 bg-black z-[999]" />
+           </div>
               
               {/* RX-056 3D Model indicator */}
           <div className="mb-32">
