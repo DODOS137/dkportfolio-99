@@ -52,24 +52,34 @@ interface ModelViewerProps {
 const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps) => {
   console.log("ModelViewer rendering with path:", modelPath);
 
-  const getSketchfabModelId = (url: string) => {
-    const modelsEmbedMatch = url.match(/models\/([^\/]+)\/embed/);
-    if (modelsEmbedMatch) return modelsEmbedMatch[1];
-
-    const modelsMatch = url.match(/models\/([^\/]+)/);
-    if (modelsMatch) return modelsMatch[1];
-
-    const tdModelsMatch = url.match(/3d-models\/.*-([a-f0-9]+)$/);
-    if (tdModelsMatch) return tdModelsMatch[1];
-
-    if (/^[a-f0-9]+$/.test(url)) return url;
-
+  const getSketchfabEmbedUrl = (url: string) => {
+    // Extract model ID from various Sketchfab URL formats
+    let modelId = '';
+    
+    // Handle direct model ID
+    if (/^[a-f0-9]{32}$/.test(url)) {
+      modelId = url;
+    }
+    // Handle full URL formats
+    else if (url.includes('sketchfab.com')) {
+      const match = url.match(/\/([a-f0-9]{32})/);
+      if (match) {
+        modelId = match[1];
+      }
+    }
+    
+    console.log("Extracted model ID:", modelId);
+    
+    if (modelId) {
+      return `https://sketchfab.com/models/${modelId}/embed?autostart=1&ui_theme=dark`;
+    }
+    
     return url;
   };
   
   if (isSketchfab) {
-    const modelId = getSketchfabModelId(modelPath);
-    const embedUrl = modelPath.includes('/embed') ? modelPath : `https://sketchfab.com/models/${modelId}/embed`;
+    const embedUrl = getSketchfabEmbedUrl(modelPath);
+    console.log("Using embed URL:", embedUrl);
     
     return (
       <div className="w-full my-10">
