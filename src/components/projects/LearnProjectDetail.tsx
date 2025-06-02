@@ -128,76 +128,63 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
-
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
-        {/* Worldbuilding + Image Section */}
-        <div className="mb-32">
-          <div className="rounded-lg py-[50px] bg-transparent">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-              Worldbuilding
-            </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-             Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
+          {/* Worldbuilding + Image Section */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+                Worldbuilding
+              </h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+               Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
 
-The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
-            </p>
+  The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
+              </p>
 
-            {/* world image */}
-            <div className="w-full">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
-              </AspectRatio>
+              {/* world image */}
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
+                </AspectRatio>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Narrative Concept & Logic */}
-        <div className="mb-32">
-          <div className="rounded-lg py-[50px] bg-transparent">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Concept & Logic</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-            </p>
-          </div>
-        </div>
-
-        {/* Character Design */}
-        <div className="mb-32">
-          <div className="rounded-lg py-[50px] bg-transparent">
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> FR Pro (Player): A passive cleaning robot with minimal initiative, performing support tasks.
-            </p>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> RX-056: A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
-            </p> 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> An AI-driven commander capable of speech, managing logistics and group decisions.
-            </p>
-      
-            {/* RX-056*/}
-            <div className="w-full mb-32">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
+          {/* Narrative Concept & Logic */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Concept & Logic</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+              </p>
             </div>
-
-            {/* RX-056 3D Model */}
-            <ModelViewer 
-              modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
-              isSketchfab={true}
-            />
-
-            {/* above */}
-             <div className="absolute top-0 left-0 w-full h-12 bg-black z-10 pointer-events-none" />
-
-            {/* under */}
-             <div className="absolute bottom-0 left-0 w-full h-12 bg-black z-10 pointer-events-none" />
-             </div>
-         
-          
-          
           </div>
 
-    
+          {/* Character Design */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> FR Pro (Player): A passive cleaning robot with minimal initiative, performing support tasks.
+              </p>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> RX-056: A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
+              </p> 
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> LS1-07: An AI-driven commander capable of speech, managing logistics and group decisions.
+              </p>
+        
+              {/* RX-056 Image */}
+              <div className="w-full mb-32">
+                <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
+              </div>
 
-          
-        </div>
+              {/* RX-056 3D Model */}
+              <div className="relative">
+                <ModelViewer 
+                  modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
+                  isSketchfab={true}
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Remaining Images */}
