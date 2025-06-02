@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -5,10 +6,13 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import { learnProjectData } from '@/data/learnProject';
+
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  return <div className="min-h-screen bg-black text-white">
+  
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -83,12 +87,9 @@ const LearnProjectDetail = () => {
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
             </p>
-            
-       
-         </div>
+          </div>
         </div>
 
-       
         {/* Process Section - Separate Container */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
@@ -96,7 +97,7 @@ const LearnProjectDetail = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
-                <div className="flex-1 flex flex-col items-cemter justify-center">
+                <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Brainstorming</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
                 </div>
@@ -119,76 +120,73 @@ const LearnProjectDetail = () => {
                    <p className="text-gray-400 text-sm leading-relaxed">Scriptwriting & Storyboarding</p>
                    <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
                    <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
-                  
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
 
-       
         {/* Worldbuilding + Image Section */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
-                Worldbuilding
-              </h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
-               Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
+        <div className="mb-32">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+              Worldbuilding
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+             Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
 
 The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
-              </p>
+            </p>
 
-              {/* world image */}
-              <div className="w-full">
-                <AspectRatio ratio={16 / 9} className="w-full">
-                  <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
-                </AspectRatio>
-              </div>
+            {/* world image */}
+            <div className="w-full">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
+              </AspectRatio>
             </div>
           </div>
+        </div>
 
         {/* Narrative Concept & Logic */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Concept & Logic</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-              </p>
-              </div>
+        <div className="mb-32">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Concept & Logic</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+            </p>
+          </div>
+        </div>
 
-            {/* Character Design */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> FR Pro (Player): A passive cleaning robot with minimal initiative, performing support tasks.
-              </p>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> RX-056: A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
-              </p> 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> An AI-driven commander capable of speech, managing logistics and group decisions.
-              </p>
-        
-           {/* RX-056*/}
+        {/* Character Design */}
+        <div className="mb-32">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> FR Pro (Player): A passive cleaning robot with minimal initiative, performing support tasks.
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> RX-056: A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
+            </p> 
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> An AI-driven commander capable of speech, managing logistics and group decisions.
+            </p>
+      
+            {/* RX-056*/}
             <div className="w-full mb-32">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
           </div>
-
-
-              
-             </div>
-
-            
+        </div>
 
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default LearnProjectDetail;
