@@ -205,7 +205,7 @@ const LearnProjectDetail = () => {
 
               {/* LS1-07 3D Model */}
               <div className="relative">
-                <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
+                <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
                  {/* Above */}
                 <div className="absolute top-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
 
