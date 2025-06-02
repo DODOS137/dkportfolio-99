@@ -18,7 +18,7 @@ const LearnProjectDetail = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to work page
+          Back to work
         </Link>
       </nav>
 
@@ -164,11 +164,16 @@ const LearnProjectDetail = () => {
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Character Design</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> FR Pro (Player): A passive cleaning robot with minimal initiative, performing support tasks.
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• FR Pro (Player)</p> 
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A passive cleaning robot with minimal initiative, performing support tasks.
               </p>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> RX-056: A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
+
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• RX-056</p> 
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
               </p> 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> LS1-07: An AI-driven commander capable of speech, managing logistics and group decisions.
+              
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• LS1-07</p> 
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">An AI-driven commander capable of speech, managing logistics and group decisions.
               </p>
         
               {/* RX-056 Image */}
