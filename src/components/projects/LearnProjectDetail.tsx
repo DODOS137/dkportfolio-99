@@ -189,10 +189,10 @@ const LearnProjectDetail = () => {
                <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
               </div>
               
-              {/* Narrative Concept & Logic */}
+              {/* RX-056 3D Model indicator */}
           <div className="mb-32">
             <div className="rounded-lg bg-transparent py-0">
-              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">Narrative Concept & Logic</h2>
+              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-gray-500 font-light">Click and drag to rotate. Scroll to zoom.</h2>
               
             </div>
           </div>
