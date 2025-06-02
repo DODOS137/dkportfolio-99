@@ -1,39 +1,14 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import ImageWithLoading from '@/components/ImageWithLoading';
 import { learnProjectData } from '@/data/learnProject';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { useLoader } from '@react-three/fiber';
+import ModelViewer from '@/components/ModelViewer';
 
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-
-  const ModelViewer = ({ modelPath }: { modelPath: string }) => {
-    return (
-      <div className="w-full h-[600px] rounded-xl overflow-hidden bg-black border border-white">
-        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-          <ambientLight intensity={0.7} />
-          <directionalLight position={[5, 5, 5]} intensity={1} />
-          <React.Suspense fallback={null}>
-            <Model url={`${modelPath}/Rx056.glb`} />
-            <Environment preset="city" />
-          </React.Suspense>
-          <OrbitControls enablePan enableZoom enableRotate />
-        </Canvas>
-      </div>
-    );
-  };
-
-  const Model = ({ url }: { url: string }) => {
-    const gltf = useLoader(GLTFLoader, url);
-    return <primitive object={gltf.scene} scale={1.5} />;
-  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -64,7 +39,7 @@ const LearnProjectDetail = () => {
         </div>
       </section>
 
-      {/* Process Section - 복원된 상태로 추가 */}
+      {/* Process Section */}
       <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
         <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
           <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
@@ -100,10 +75,13 @@ const LearnProjectDetail = () => {
         </div>
       </div>
 
-      {/* Character Design 섹션 하단에 3D 모델 뷰어 삽입 */}
+      {/* Character 3D Model Section */}
       <div className="max-w-[1540px] mx-auto px-6 md:px-[150px] z-10 relative mt-[-80px]">
-        <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Character 3D Model</h2>
-        <ModelViewer modelPath="https://dodos137.github.io/3Dmodels" />
+        <ModelViewer 
+          modelPath="https://sketchfab.com/3d-models/rx-056-character-demo-abc123" 
+          title="Character 3D Model"
+          isSketchfab={true}
+        />
       </div>
     </div>
   );
