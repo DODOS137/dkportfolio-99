@@ -49,9 +49,6 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
-
-         {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
         {/* Project Description Text Box */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
@@ -176,12 +173,6 @@ The library acted as a symbolic setting for memory and ritual. Through environme
             </div>
           </div>
         </div>
-         
-        
-        
-        
-        
-        </div>
 
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => (
@@ -192,7 +183,6 @@ The library acted as a symbolic setting for memory and ritual. Through environme
               </AspectRatio>
             </div>
           </div>
-      
         ))}
       </section>
     </div>
