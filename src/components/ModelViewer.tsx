@@ -114,9 +114,7 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
           </Canvas>
         </AspectRatio>
       </div>
-      <p className="text-gray-400 text-sm mt-2">클릭하고 드래그하여 회전하세요. 스크롤로 확대/축소할 수 있습니다.</p>
-      {modelError && (
-        <p className="text-red-400 text-sm mt-2">모델을 로드할 수 없습니다. 대체 모델을 표시합니다.</p>
+        <p className="text-red-400 text-sm mt-2">Try it later :( </p>
       )}
     </div>
   );
