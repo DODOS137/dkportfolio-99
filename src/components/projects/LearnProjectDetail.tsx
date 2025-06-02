@@ -81,6 +81,7 @@ const LearnProjectDetail = () => {
         {/* Text Box - Approach and Development Strategy */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
+            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
