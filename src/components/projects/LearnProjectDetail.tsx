@@ -22,7 +22,7 @@ const ModelViewer = ({ modelPath }: { modelPath: string }) => {
         <ambientLight intensity={0.7} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <React.Suspense fallback={null}>
-          <Model url={`${modelPath}/rx056.glb`} />
+          <Model url={`${modelPath}/Rx056.glb`} />
           <Environment preset="city" />
         </React.Suspense>
         <OrbitControls enablePan enableZoom enableRotate />
