@@ -164,7 +164,6 @@ const LearnProjectDetail = () => {
           {/* Character Design */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              
               <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">Character Design</h2>
               <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• FR Pro (Player)</p> 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A passive cleaning robot with minimal initiative, performing support tasks.
@@ -205,12 +204,9 @@ const LearnProjectDetail = () => {
           <div className="mb-32">
             <div className="rounded-lg bg-transparent py-0">
               <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-400 font-light text-center md:text-sm">Click and drag to rotate. Scroll to zoom.</h2>
-              
             </div>
           </div>
 
-
-               
               {/* LS1-07 3D Model */}
               <div className="relative">
                 <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
@@ -220,11 +216,8 @@ const LearnProjectDetail = () => {
                  {/* Under */}
                <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
               </div>
-              
-              
-
-
-          
+            </div>
+          </div>
         </div>
 
         {/* Remaining Images */}
