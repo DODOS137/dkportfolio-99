@@ -178,7 +178,7 @@ The library acted as a symbolic setting for memory and ritual. Through environme
 
             {/* 3D Model Viewer for RX-056 */}
             <ModelViewer 
-              modelPath="https://raw.githubusercontent.com/DODOS137/3Dmodels/main/models/Rx056.glb"
+              modelPath="/lovable-uploads/Rx056.glb"
               title="RX-056 3D Model"
             />
           </div>
