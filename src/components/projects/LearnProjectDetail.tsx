@@ -186,7 +186,9 @@ const LearnProjectDetail = () => {
 
                  {/* Under */}
                <div className="absolute bottom-0 left-0 w-full h-12 bg-black opacity-100 z-10 pointer-events-none" />
-              </div>
+                 <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8" data-lovable-editable="true">• LS1-07</p> 
+               </div>
+          
             </div>
           </div>
         </div>
