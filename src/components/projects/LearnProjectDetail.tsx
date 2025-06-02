@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -6,7 +7,6 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
-import YouTube from 'react-youtube';
 
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
@@ -211,35 +211,6 @@ const LearnProjectDetail = () => {
                   <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Scriptwriting & Storyboard</h2>
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
                   </p>
-
-                  {/* YouTube Video Player */}
-               {project.videoId && <div className="mb-32">
-              <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-                <AspectRatio ratio={16 / 9} className="w-full">
-                  <YouTube videoId={project.videoId} opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-                </AspectRatio>
-              </div>
-            </div>}
                 </div>
               </div>
             </div>
