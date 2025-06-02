@@ -192,7 +192,7 @@ const LearnProjectDetail = () => {
               {/* RX-056 3D Model indicator */}
           <div className="mb-32">
             <div className="rounded-lg bg-transparent py-0">
-              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-gray-500 font-light">Click and drag to rotate. Scroll to zoom.</h2>
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-400 font-light text-center md:text-sm">Click and drag to rotate. Scroll to zoom.</h2>
               
             </div>
           </div>
