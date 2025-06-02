@@ -61,25 +61,25 @@ const LearnProjectDetail = () => {
               {project.title}
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-              {project.mainDescription}
+              Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">{project.projectType}</p>
+                <p className="text-white">MA Thesis (Design Immersive Experience)</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                <p className="text-white">{project.projectCategory}</p>
+                <p className="text-white">VR Content Design</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
-                <p className="text-white">{project.teamType}</p>
+                <p className="text-white">Solo Project</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
-                <p className="text-white">{project.duration}</p>
+                <p className="text-white">8 weeks</p>
               </div>
             </div>
           </div>
@@ -90,46 +90,71 @@ const LearnProjectDetail = () => {
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-              {project.approach}
+              The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
             </p>
             
-            <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Development Strategy</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              {project.development}
-            </p>
-          </div>
+       
+         </div>
         </div>
 
+       
         {/* Process Section - Separate Container */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl font-light mb-12 text-white">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Research Phase</h3>
-                <div className="flex-1 flex items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Educational Psychology Research</p>
+                <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
+                <div className="flex-1 flex flex-col items-cemter justify-center">
+                  <p className="text-gray-400 text-sm leading-relaxed">Brainstorming</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
+                </div>
+              </div>
+              
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
+                <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
+                <div className="flex-1 flex flex-col items-center justify-center">
+                  <p className="text-gray-400 text-sm leading-relaxed">Environment Research</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Precedent Study </p>
                 </div>
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Learning Module Design</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">VR Interface Development</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Worldbuilding</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Character Design</p>
+                   <p className="text-gray-400 text-sm leading-relaxed">Scriptwriting & Storyboarding</p>
+                   <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
+                   <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
+                  
                 </div>
               </div>
               
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Testing & Iteration</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">User Testing</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Assessment System</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+
+       
+        {/* Worldbuilding + Image Section */}
+          <div className="mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+                Worldbuilding
+              </h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+                Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+              </p>
+
+              {/* world image */}
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
+                </AspectRatio>
+              </div>
+            </div>
+          </div>
 
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => (

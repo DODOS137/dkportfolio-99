@@ -158,7 +158,7 @@ const InvisibleProjectDetail = () => {
                   <div className="flex-1 flex flex-col items-center justify-center">
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Context & Problem Analysis</p>
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Survey</p>
-                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Narrative Flow Analysis</p>
+                    <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Narrative Flow Mapping</p>
                     <p className="text-gray-400 text-sm leading-relaxed" data-lovable-editable="true">Precedent Study </p>
                     
                   </div>
@@ -193,7 +193,7 @@ const InvisibleProjectDetail = () => {
                 Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
               </p>
 
-              {/* First image */}
+              {/* world image */}
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
