@@ -55,7 +55,7 @@ const ModelViewer = ({
     }
     // Handle 3d-models URL format: extract ID after the last dash
     else if (url.includes('3d-models/')) {
-      const match = url.match(/3d-models\/.*-([a-f0-9]{32})$/);
+      const match = url.match(/3d-models\/[^\/]*-([a-f0-9]{32})(?:\/|$)/);
       if (match) {
         modelId = match[1];
       }
@@ -69,7 +69,7 @@ const ModelViewer = ({
     }
     console.log("Extracted model ID:", modelId);
     if (modelId) {
-      return `https://sketchfab.com/models/${modelId}/embed?autostart=1&ui_theme=dark`;
+      return `https://sketchfab.com/models/${modelId}/embed?autostart=1&ui_theme=dark&ui_controls=0&ui_infos=0&ui_stop=0&ui_watermark=0&ui_hint=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0`;
     }
     return url;
   };
