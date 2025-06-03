@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import SliderControls from './SliderControls';
 import ImageWithLoading from './ImageWithLoading';
 
 interface Project {
@@ -62,15 +62,31 @@ export const autoAdvanceInterval = 5000;
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const nextSlide = () => {
     if (!isTransitioning) {
       setIsTransitioning(true);
+      setSlideDirection('right');
       setCurrentIndex(prevIndex => (prevIndex + 1) % projects.length);
 
       setTimeout(() => {
         setIsTransitioning(false);
+        setSlideDirection(null);
+      }, slideTransitionDuration);
+    }
+  };
+
+  const prevSlide = () => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+      setSlideDirection('left');
+      setCurrentIndex(prevIndex => (prevIndex - 1 + projects.length) % projects.length);
+
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setSlideDirection(null);
       }, slideTransitionDuration);
     }
   };
@@ -78,10 +94,12 @@ const Slider = () => {
   const goToSlide = (slideIndex: number) => {
     if (!isTransitioning && slideIndex !== currentIndex) {
       setIsTransitioning(true);
+      setSlideDirection(slideIndex > currentIndex ? 'right' : 'left');
       setCurrentIndex(slideIndex);
 
       setTimeout(() => {
         setIsTransitioning(false);
+        setSlideDirection(null);
       }, slideTransitionDuration);
     }
   };
@@ -181,6 +199,16 @@ const Slider = () => {
               </Link>
             ))}
           </div>
+        </div>
+
+        <div className="absolute bottom-4 left-4 z-10">
+          <SliderControls 
+            totalSlides={projects.length} 
+            currentIndex={currentIndex} 
+            goToSlide={goToSlide} 
+            prevSlide={prevSlide} 
+            nextSlide={nextSlide} 
+          />
         </div>
       </div>
 

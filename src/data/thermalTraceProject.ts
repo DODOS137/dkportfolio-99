@@ -1,26 +1,24 @@
 
-import { ProjectData } from '@/types/project';
+import { ProjectData } from '../types/project';
 
 export const thermalTraceProjectData: ProjectData = {
   title: "Thermal Trace",
   subtitle: "XR & Exhibition Design",
-  description: "XR & Exhibition Design",
+  description: "Interactive thermal visualization experience",
   year: "2023",
-  client: "Design Museum",
+  client: "Science Museum Exhibition",
   role: "XR Designer",
-  images: [
-    "/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png"
-  ],
-  heroTitle: "THERMAL TRACE",
+  images: ["/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png"],
+  heroTitle: "Thermal Trace",
   heroSubtitle: "XR & Exhibition Design",
   heroYear: "2023",
-  heroClient: "Design Museum", 
+  heroClient: "Science Museum Exhibition",
   heroRole: "XR Designer",
-  mainDescription: "An innovative XR installation that visualizes thermal data through augmented reality, creating an immersive experience that bridges the physical and digital worlds.",
-  projectType: "XR Installation",
-  projectCategory: "Exhibition Design",
-  teamType: "Interdisciplinary Team",
-  duration: "6 months",
-  approach: "We developed a comprehensive approach that combines thermal imaging technology with augmented reality to create an interactive exhibition experience. The project explores the invisible thermal patterns in our environment and makes them visible through cutting-edge XR technology.",
-  development: "The development process involved extensive research into thermal imaging capabilities, AR framework integration, and spatial design considerations. We created custom algorithms to translate thermal data into compelling visual narratives that engage visitors in meaningful ways."
+  mainDescription: "An interactive thermal visualization experience that combines augmented reality with physical exhibition elements to educate visitors about heat transfer and thermal dynamics.",
+  projectType: "Science Museum Exhibition",
+  projectCategory: "XR Exhibition Design",
+  teamType: "Team Project",
+  duration: "10 weeks",
+  approach: "Integration of physical and digital elements to create seamless educational experiences.",
+  development: "Focus on real-time thermal data visualization and user interaction design."
 };

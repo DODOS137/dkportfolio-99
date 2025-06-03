@@ -1,25 +1,22 @@
-
 import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import ModelViewerPlaceholder from './ModelViewerPlaceholder';
-
 interface ModelProps {
   modelPath: string;
 }
-
-function Model({ modelPath }: ModelProps) {
+function Model({
+  modelPath
+}: ModelProps) {
   const [error, setError] = useState<Error | null>(null);
-  
   const ModelContent = () => {
     try {
-      const { scene } = useGLTF(modelPath);
-      
+      const {
+        scene
+      } = useGLTF(modelPath);
       useEffect(() => {
         console.log("Model loaded successfully:", modelPath);
       }, []);
-      
       return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
     } catch (err) {
       console.error("Error in ModelContent:", err);
@@ -27,101 +24,82 @@ function Model({ modelPath }: ModelProps) {
       return null;
     }
   };
-
   const FallbackCube = () => {
-    return (
-      <mesh position={[0, 0, 0]}>
+    return <mesh position={[0, 0, 0]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="hotpink" />
-      </mesh>
-    );
+      </mesh>;
   };
-
-  return (
-    <>
+  return <>
       {error ? <FallbackCube /> : <ModelContent />}
-    </>
-  );
+    </>;
 }
-
 interface ModelViewerProps {
   modelPath: string;
   title?: string;
   isSketchfab?: boolean;
 }
-
-const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps) => {
-  // For debugging, return placeholder instead of actual ModelViewer
-  const [useActualViewer] = useState(false); // Set to true to enable real ModelViewer
-  
-  console.log("ModelViewer rendering with path:", modelPath, "useActualViewer:", useActualViewer);
-  
-  if (!useActualViewer) {
-    return <ModelViewerPlaceholder modelPath={modelPath} title={title} isSketchfab={isSketchfab} />;
-  }
-
+const ModelViewer = ({
+  modelPath,
+  title,
+  isSketchfab = false
+}: ModelViewerProps) => {
+  console.log("ModelViewer rendering with path:", modelPath);
   const getSketchfabEmbedUrl = (url: string) => {
+    // Extract model ID from various Sketchfab URL formats
     let modelId = '';
 
+    // Handle direct model ID (32 character hex string)
     if (/^[a-f0-9]{32}$/.test(url)) {
       modelId = url;
-    } else if (url.includes('3d-models/')) {
+    }
+    // Handle 3d-models URL format: extract ID after the last dash
+    else if (url.includes('3d-models/')) {
       const match = url.match(/3d-models\/[^\/]*-([a-f0-9]{32})(?:\/|$)/);
       if (match) {
         modelId = match[1];
       }
-    } else if (url.includes('sketchfab.com/models/')) {
+    }
+    // Handle other Sketchfab URL formats
+    else if (url.includes('sketchfab.com/models/')) {
       const match = url.match(/models\/([a-f0-9]{32})/);
       if (match) {
         modelId = match[1];
       }
     }
-    
     console.log("Extracted model ID:", modelId);
-    
     if (modelId) {
       return `https://sketchfab.com/models/${modelId}/embed?autostart=1&ui_theme=dark&ui_controls=0&ui_infos=0&ui_stop=0&ui_watermark=0&ui_hint=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0`;
     }
     return url;
   };
-
   if (isSketchfab) {
     const embedUrl = getSketchfabEmbedUrl(modelPath);
     console.log("Using embed URL:", embedUrl);
-    
-    return (
-      <div className="w-full my-10">
+    return <div className="w-full my-10">
         {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
         <div className="bg-gray-900 rounded-lg overflow-hidden">
           <AspectRatio ratio={1 / 1}>
-            <iframe 
-              title={title || "3D Model Viewer"} 
-              className="w-full h-full border-0" 
-              src={embedUrl} 
-              allowFullScreen 
-              allow="autoplay; fullscreen; xr-spatial-tracking" 
-              loading="lazy" 
-            />
+            <iframe title={title || "3D Model Viewer"} className="w-full h-full border-0" src={embedUrl} allowFullScreen allow="autoplay; fullscreen; xr-spatial-tracking" loading="lazy" />
           </AspectRatio>
         </div>
-      </div>
-    );
+        
+      </div>;
   }
-
-  return (
-    <div className="w-full my-10">
+  return <div className="w-full my-10">
       {title && <h3 className="text-white text-xl mb-4">{title}</h3>}
       <div className="bg-gray-900 rounded-lg overflow-hidden">
         <AspectRatio ratio={16 / 9}>
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+          <Canvas camera={{
+          position: [0, 0, 5],
+          fov: 50
+        }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
-            <Suspense fallback={
-              <mesh position={[0, 0, 0]}>
+            <Suspense fallback={<mesh position={[0, 0, 0]}>
                 <sphereGeometry args={[0.5, 16, 16]} />
                 <meshStandardMaterial color="blue" wireframe />
-              </mesh>
-            }>
+              </mesh>}>
               <Model modelPath={modelPath} />
               <Environment preset="city" />
             </Suspense>
@@ -130,8 +108,6 @@ const ModelViewer = ({ modelPath, title, isSketchfab = false }: ModelViewerProps
         </AspectRatio>
       </div>
       <p className="text-gray-400 text-sm mt-2">Click and drag to rotate. Scroll to zoom.</p>
-    </div>
-  );
+    </div>;
 };
-
 export default ModelViewer;
