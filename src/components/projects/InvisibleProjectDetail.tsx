@@ -125,7 +125,7 @@ const InvisibleProjectDetail = () => {
           
           {/* Approach & Development */}
           <div className="mb-32">
-          <div className="rounded-lg py-[50px] bg-transparent ">
+          <div className="rounded-lg py-32 bg-transparent ">
 
           {/* Approach Section */}
               <div className="">
@@ -157,7 +157,7 @@ const InvisibleProjectDetail = () => {
           
           {/* Process Section */}
           <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
+            <div className="rounded-lg py-32  bg-transparent">
               <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-300 font-light md:text-xl">Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -210,12 +210,12 @@ const InvisibleProjectDetail = () => {
          {/* world image */}
          <div className="w-full">
          <AspectRatio ratio={16 / 9} className="w-full">
-         <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
+         <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-full " />
          </AspectRatio>
          </div>
 
         {/* Worldbuilding*/}
-        <div className="rounded-lg py-[50px] bg-transparent">
+        <div className="rounded-lg  bg-transparent">
         <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
          <h2 className="text-2xl font-light min-w-[200px] md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
          Worldbuilding
