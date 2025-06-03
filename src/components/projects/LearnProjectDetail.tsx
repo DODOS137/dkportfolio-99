@@ -240,6 +240,12 @@ const LearnProjectDetail = () => {
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Level Design</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
               </p>
+              {/* Level design Images */}
+              <div className="w-full mb-8">
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
+              </div>
+              
             </div>
              </div>
 
