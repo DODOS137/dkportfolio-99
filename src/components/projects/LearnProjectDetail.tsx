@@ -277,11 +277,30 @@ const LearnProjectDetail = () => {
                       <div className="w-full mb-8">
                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
                       </div> 
-                      
-                    
-                    </div>
-                  </div>
-                </div>
+                      </div>
+                      </div>
+                      </div>
+
+            
+                
+                {/* Post-Project */}
+            <div className="mt-32 mb-32">
+            <div className="rounded-lg py-[50px] bg-transparent">
+              {/* Title */}
+              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
+                Post-Project Expansion
+              </h2>
+
+              {/* Description */}
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
+            </div>
+            </div>
+
+
+
+
+
+              
               </div>
             </div>
           </div>
