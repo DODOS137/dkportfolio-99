@@ -211,23 +211,35 @@ const LearnProjectDetail = () => {
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
                   </p>
 
-                  {/* YouTube Video */}
-              <div className="mb-0">
-                <div className="rounded-lg bg-transparent">
-                  <div className="w-full max-w-4xl mx-auto">
-                    <YouTube videoId="aCJblmM9yzs" opts={{
-                        width: '100%',
-                        height: '400',
-                        playerVars: {
-                          autoplay: 0
-                        }
-                      }} className="w-full" />
-                  </div>
+                 {/* YouTube Video Player2 */}
+              <div className="mb-8">
+                <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+                  <AspectRatio ratio={16 / 9} className="w-full">
+                    <YouTube videoId="KT0Cwy9s5n8" opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                  </AspectRatio>
                 </div>
               </div>
-                  
-                </div>
-              </div>
+
 
               {/* Level Design */}
           <div className="mb-32">
