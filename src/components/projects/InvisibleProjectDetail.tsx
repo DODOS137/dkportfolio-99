@@ -209,7 +209,7 @@ const InvisibleProjectDetail = () => {
 
         {/* Worldbuilding*/}
         <div className="rounded-lg py-[50px] bg-transparent">
-        <div className="flex flex-col md:flex-row md:items-start md:space-x-8">
+        <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
          <h2 className="text-2xl font-light mb-4 md:mb-0 md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
          Worldbuilding
          </h2>
