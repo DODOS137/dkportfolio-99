@@ -271,7 +271,14 @@ const LearnProjectDetail = () => {
                           Spatial Design
                         </h2>
                         <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Each location reinforces narrative through design—guiding player decisions and pacing through spatial sequencing.</p>
+                     
                       </div>
+                      {/* Spatial Design image */}
+                      <div className="w-full mb-8">
+                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
+                      </div> 
+                      
+                    
                     </div>
                   </div>
                 </div>
