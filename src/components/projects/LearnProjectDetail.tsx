@@ -239,8 +239,8 @@ const LearnProjectDetail = () => {
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" />
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/beb82307-e156-45a3-b9f0-8de19604e752.png" />
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/d4995d22-3bdd-4625-a6dd-1b2a9fdf6d2f.png" />
+                <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/beb82307-e156-45a3-b9f0-8de19604e752.png" className="w-full h-auto pb-8" />
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3945756b-c0e4-40d7-90ad-f84d1a21c3e7.png" />
               </div>
               
             </div>
