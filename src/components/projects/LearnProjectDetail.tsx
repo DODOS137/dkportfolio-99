@@ -280,7 +280,10 @@ const LearnProjectDetail = () => {
             </div>
             
             <div className="w-full mb-8">
+            
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+            
             </div> 
           </div>
         </div>
