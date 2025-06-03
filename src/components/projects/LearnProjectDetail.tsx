@@ -83,7 +83,7 @@ const LearnProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto pb-8" />
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-32"> 
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
             <h2 className="text-2xl font-light mb-8  md:text-xl text-gray-500">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
@@ -133,7 +133,7 @@ const LearnProjectDetail = () => {
           {/* Worldbuilding + Image Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-500">
                 Worldbuilding
               </h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
@@ -154,7 +154,7 @@ const LearnProjectDetail = () => {
           {/* Narrative Concept & Logic */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Narrative Concept & Logic</h2>
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-500">Narrative Concept & Logic</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
               </p>
             </div>
@@ -163,7 +163,7 @@ const LearnProjectDetail = () => {
           {/* Character Design */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">Character Design</h2>
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 font-light md:text-xl text-gray-500">Character Design</h2>
               <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2" data-lovable-editable="true">• FR Pro (Player)</p> 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A passive cleaning robot with minimal initiative, performing support tasks.
               </p>
@@ -200,14 +200,14 @@ const LearnProjectDetail = () => {
               {/* RX-056 3D Model indicator */}
               <div className="mb-32">
                 <div className="rounded-lg bg-transparent py-0">
-                  <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-400 font-light text-center md:text-sm">Click and drag to rotate. Scroll to zoom.</h2>
+                  <h2 data-lovable-editable="true" className="text-2xl mb-8 font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
                 </div>
               </div>
 
               {/* Scriptwriting & Storyboard */}
               <div className="mb-32">
                 <div className="rounded-lg py-[50px] bg-transparent">
-                  <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Scriptwriting & Storyboard</h2>
+                  <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-500">Scriptwriting & Storyboard</h2>
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
                   </p>
 
@@ -232,7 +232,7 @@ const LearnProjectDetail = () => {
               {/* Level Design */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Level Design</h2>
+              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-500">Level Design</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
               </p>
               {/* Level design Images */}
