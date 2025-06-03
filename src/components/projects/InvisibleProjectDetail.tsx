@@ -275,21 +275,35 @@ const InvisibleProjectDetail = () => {
 
           {/* Video development + Image Section */}
           <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              {/* Title */}
-              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
-                Video Development
-              </h2>
+           {/* Video Image */}
+           <div className="w-full mb-12">
+           <img
+         alt="Planet A233 - VR Environment"
+          className="w-full h-auto"
+          data-lovable-editable="true"
+          src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png"
+         />
+         </div>
 
-              {/* Second Image */}
-              <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png" />
-              </div>
+        {/* Video developmente */}
+       <div className="rounded-lg py-[50px] bg-transparent">
+       <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+        <h2
+        data-lovable-editable="true"
+        className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]"
+       >
+        Video Development
+      </h2>
+      <p
+        data-lovable-editable="true"
+        className="text-lg md:text-xl leading-relaxed text-gray-400"
+      >
+        Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.
+      </p>
+     </div>
+     </div>
+     </div>
 
-              {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.</p>
-            </div>
-          </div>
 
           {/* Level Design */}
           <div className="mb-32">
