@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -7,10 +8,13 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
+
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  return <div className="min-h-screen bg-black text-white">
+  
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -253,34 +257,29 @@ const LearnProjectDetail = () => {
                         <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-auto " src="/lovable-uploads/546d86f0-9150-44b9-9afd-31ef4910aa54.png" />
                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/f93eee66-b3f4-4e3f-a2c6-514144d76976.png" />
                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
-                      
-                     </div>
+                      </div>
                     </div>
                   </div>
                 
-                {/* Spatial Design + Image Section */}
-                 <div className="mb-32">
-                <div className="rounded-lg py-[50px] bg-transparent">
-
-               {/* Spatial Design image */}
-              <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
-              </div> 
-              
-              {/* Spatial Design */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-32">
-                <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
-                  Spatial Design
-                </h2>
-                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                  Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
-                </p>
-              </div>
-               
-                
-                
-                
-                
+                  {/* Spatial Design + Image Section */}
+                  <div className="mb-32">
+                    <div className="rounded-lg py-[50px] bg-transparent">
+                      {/* Spatial Design image */}
+                      <div className="w-full mb-8">
+                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
+                      </div> 
+                      
+                      {/* Spatial Design */}
+                      <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-32">
+                        <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                          Spatial Design
+                        </h2>
+                        <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                          Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -288,14 +287,18 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default LearnProjectDetail;
