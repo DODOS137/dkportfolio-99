@@ -130,18 +130,32 @@ const InvisibleProjectDetail = () => {
             </div>}
 
           {/* Approach & Development */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-               <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">{project.approach}</p>
-               </div>
-               <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Development Strategy</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">{project.development}</p>
-            </div>
+           <div className="mb-32">
+          <div className="rounded-lg py-[50px] bg-transparent space-y-16">
+    
+          {/* Approach Section */}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-2xl md:text-3xl font-light text-white min-w-[200px]" data-lovable-editable="true">
+           Approach
+            </h2>
+           <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">
+           {project.approach}
+          </p>
           </div>
-          </div>
+
+         {/* Development Strategy Section */}
+         <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-2xl md:text-3xl font-light text-white min-w-[200px]" data-lovable-editable="true">
+          Development Strategy
+         </h2>
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">
+          {project.development}
+           </p>
+         </div>
+
+         </div>
+         </div>
+
 
           {/* Process Section */}
           <div className="mb-32">
