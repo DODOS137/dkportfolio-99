@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -7,10 +8,13 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
+
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  return <div className="min-h-screen bg-black text-white">
+  
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -38,16 +42,16 @@ const LearnProjectDetail = () => {
         </div>
       </section>
 
-      {/* Images Section */}
-      <section className="pb-20" data-lovable-editable="true">
+      {/* Main Content */}
+      <section className="pb-20">
         {/* First Image */}
         <div className="mb-20">
           <div className="w-full">
-            <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" data-lovable-editable="true" />
+            <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
           </div>
         </div>
 
-        {/* Project Description Text Box */}
+        {/* Project Description */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
@@ -79,10 +83,10 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
-        {/* Approach and Development Strategy */}
+        {/* Approach Section */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
-            <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto pb-8" />
+            <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto pb-8" />
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
               <h2 className="text-2xl mb-8 font-light text-gray-300 md:text-xl">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed mb-8 font-light text-gray-400">
@@ -92,7 +96,7 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
-        {/* Process Section - Separate Container */}
+        {/* Process Section */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
@@ -128,174 +132,184 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
-        {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
-          {/* Worldbuilding + Image Section */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-300">
-                Worldbuilding
-              </h2>
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
-                Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
+        {/* Worldbuilding Section */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">
+              Worldbuilding
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
+              Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
 
-                The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
-              </p>
+              The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
+            </p>
 
-              {/* world image */}
-              <div className="w-full">
+            <div className="w-full">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <img alt="Planet A233 - VR Environment" className="w-full h-full" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
+              </AspectRatio>
+            </div>
+          </div>
+        </div>
+
+        {/* Narrative Concept Section */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
+              The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+            </p>
+          </div>
+        </div>
+
+        {/* Character Design Section */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-500">Character Design</h2>
+            
+            <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2">• FR Pro (Player)</p> 
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">A passive cleaning robot with minimal initiative, performing support tasks.</p>
+
+            <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2">• RX-056</p> 
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.</p> 
+            
+            <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2">• LS1-07</p> 
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">An AI-driven commander capable of speech, managing logistics and group decisions.</p>
+      
+            {/* Character Images */}
+            <div className="w-full mb-32">
+              <img alt="RX-056 Character Design" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" className="w-full h-auto mb-8" />
+              <img alt="RX-056 Character Design" className="w-full h-auto" src="/lovable-uploads/af70df56-7b0b-4eb6-b02a-535d5e7bab82.png" />
+            </div>
+
+            {/* 3D Models */}
+            <div className="relative overflow-hidden mb-8">
+              <div className="flex w-full">
+                <div className="w-1/2">
+                  <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
+                </div>
+                <div className="w-1/2">
+                  <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
+                </div>
+              </div>
+              <div className="pointer-events-none absolute top-0 left-0 w-full h-[100px] bg-black z-[999]" />
+              <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[100px] bg-black z-[999]" />
+            </div>
+            
+            <div className="mb-32">
+              <h2 className="text-2xl mb-8 font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
+            </div>
+          </div>
+        </div>
+
+        {/* Scriptwriting & Storyboard Section */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Scriptwriting & Storyboard</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+              Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+            </p>
+
+            <div className="mb-8">
+              <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <img alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
+                  <YouTube 
+                    videoId="KT0Cwy9s5n8" 
+                    opts={{
+                      width: '100%',
+                      height: '100%',
+                      playerVars: {
+                        autoplay: 0,
+                        controls: 1,
+                        rel: 0,
+                        showinfo: 0,
+                        modestbranding: 1,
+                        fs: 1,
+                        cc_load_policy: 0,
+                        iv_load_policy: 3,
+                        autohide: 1,
+                        disablekb: 0,
+                        enablejsapi: 1,
+                        origin: window.location.origin,
+                        branding: 0,
+                        color: 'white',
+                        theme: 'dark'
+                      }
+                    }} 
+                    className="w-full h-full" 
+                    iframeClassName="w-full h-full border-0" 
+                  />
                 </AspectRatio>
-              </div>
-            </div>
-          </div>
-
-          {/* Narrative Concept & Logic */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-              </p>
-            </div>
-          </div>
-
-          {/* Character Design */}
-          <div className="mb-32">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl mb-8 font-light md:text-xl text-gray-500">Character Design</h2>
-              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2" data-lovable-editable="true">• FR Pro (Player)</p> 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A passive cleaning robot with minimal initiative, performing support tasks.
-              </p>
-
-              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2" data-lovable-editable="true">• RX-056</p> 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.
-              </p> 
-              
-              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2" data-lovable-editable="true">• LS1-07</p> 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">An AI-driven commander capable of speech, managing logistics and group decisions.
-              </p>
-        
-              {/* RX-056 Image */}
-              <div className="w-full mb-32">
-                <img alt="RX-056 Character Design" data-lovable-editable="true" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" className="w-full h-auto mb-8" />
-                <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/af70df56-7b0b-4eb6-b02a-535d5e7bab82.png" />
-              </div>
-
-              {/* RX-056 LS1-07 3D Model */}
-              <div className="relative overflow-hidden">
-                <div className="flex w-full">
-                  <div className="w-1/2">
-                    <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
-                  </div>
-                  <div className="w-1/2">
-                    <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
-                  </div>
-                </div>
-                {/* 인터페이스 가리기 */}
-                <div className="pointer-events-none absolute top-0 left-0 w-full h-[100px] bg-black z-[999]" />
-                <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[100px] bg-black z-[999]" />
-              </div>
-              
-              {/* RX-056 3D Model indicator */}
-              <div className="mb-32">
-                <div className="rounded-lg bg-transparent py-0">
-                  <h2 data-lovable-editable="true" className="text-2xl mb-8 font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
-                </div>
-              </div>
-
-              {/* Scriptwriting & Storyboard */}
-              <div className="mb-32">
-                <div className="rounded-lg py-[50px] bg-transparent">
-                  <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-500">Scriptwriting & Storyboard</h2>
-                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-                  </p>
-
-                  {/* YouTube Video Player2 */}
-                  <div className="mb-8">
-                    <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-                      <AspectRatio ratio={16 / 9} className="w-full">
-                        <YouTube videoId="KT0Cwy9s5n8" opts={{
-                        width: '100%',
-                        height: '100%',
-                        playerVars: {
-                          autoplay: 0,
-                          controls: 1,
-                          rel: 0,
-                          showinfo: 0,
-                          modestbranding: 1,
-                          fs: 1,
-                          cc_load_policy: 0,
-                          iv_load_policy: 3,
-                          autohide: 1,
-                          disablekb: 0,
-                          enablejsapi: 1,
-                          origin: window.location.origin,
-                          branding: 0,
-                          color: 'white',
-                          theme: 'dark'
-                        }
-                      }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-                      </AspectRatio>
-                    </div>
-                  </div>
-
-                  {/* Level Design */}
-                  <div className="mb-32">
-                    <div className="rounded-lg py-[50px] bg-transparent">
-                      <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-500">Level Design</h2>
-                      <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
-                      </p>
-                      {/* Level design Images */}
-                      <div className="w-full mb-8">
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" />
-                        <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-auto " src="/lovable-uploads/546d86f0-9150-44b9-9afd-31ef4910aa54.png" />
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/f93eee66-b3f4-4e3f-a2c6-514144d76976.png" />
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
-                      </div>
-                    </div>
-                  </div>
-                
-                  {/* Spatial Design + Image Section */}
-                  <div className="mb-32">
-                    <div className="rounded-lg py-[50px] bg-transparent">
-                      {/* Spatial Design image */}
-                      <div className="w-full mb-8">
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
-                      </div> 
-                      
-                      {/* Spatial Design */}
-                      <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-16">
-                        <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
-                          Spatial Design
-                        </h2>
-                        <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Each location reinforces narrative through design—guiding player decisions and pacing through spatial sequencing.</p>
-                     
-                      </div>
-                      {/* Spatial Design image */}
-                      <div className="w-full mb-8">
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
-                      </div> 
-                      
-                    
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Level Design Section */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Level Design</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+              The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
+            </p>
+            
+            <div className="w-full mb-8">
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto " src="/lovable-uploads/546d86f0-9150-44b9-9afd-31ef4910aa54.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/f93eee66-b3f4-4e3f-a2c6-514144d76976.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
+            </div>
+          </div>
+        </div>
+      
+        {/* Spatial Design Section */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+          <div className="rounded-lg bg-transparent">
+            <div className="w-full mb-8">
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
+            </div> 
+            
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-16">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                Spatial Design
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                Each location reinforces narrative through design—guiding player decisions and pacing through spatial sequencing.
+              </p>
+            </div>
+            
+            <div className="w-full mb-8">
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+            </div> 
+          </div>
+        </div>
+
+        {/* Post-Project Section */}
+        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+          <div className="rounded-lg py-[50px] bg-transparent">
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300">
+              Post-Project Expansion
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
+              To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.
+            </p>
+          </div>
+        </div>
+
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default LearnProjectDetail;
