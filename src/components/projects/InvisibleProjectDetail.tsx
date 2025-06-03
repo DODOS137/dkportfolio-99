@@ -129,7 +129,7 @@ const InvisibleProjectDetail = () => {
           <h2 data-lovable-editable="true" className="text-2xl font-light min-w-[200px] md:text-xl text-gray-300">
            Approach
             </h2>
-           <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400">
+           <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-300">
            {project.approach}
           </p>
           </div>
@@ -139,7 +139,7 @@ const InvisibleProjectDetail = () => {
           <h2 data-lovable-editable="true" className="text-2xl min-w-[200px] md:text-xl font-light text-gray-300">
           Development Strategy
          </h2>
-          <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400">
+          <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-300">
           {project.development}
            </p>
          </div>
