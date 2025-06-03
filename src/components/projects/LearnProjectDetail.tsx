@@ -213,7 +213,7 @@ const LearnProjectDetail = () => {
 
                   {/* YouTube Video */}
               <div className="mb-0">
-                <div className="rounded-lg py-[50px] bg-transparent">
+                <div className="rounded-lg bg-transparent">
                   <div className="w-full max-w-4xl mx-auto">
                     <YouTube videoId="aCJblmM9yzs" opts={{
                         width: '100%',
