@@ -197,7 +197,7 @@ const InvisibleProjectDetail = () => {
           
           
           
-         {/* Worldbuilding + Image Section */}
+        {/* Worldbuilding + Image Section */}
           <div className="mb-32">
 
          {/* world image */}
@@ -210,7 +210,7 @@ const InvisibleProjectDetail = () => {
         {/* Worldbuilding*/}
         <div className="rounded-lg py-[50px] bg-transparent">
         <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-         <h2 className="text-2xl font-light mb-4 md:mb-0 md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
+         <h2 className="text-2xl font-light min-w-[200px] md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
          Worldbuilding
          </h2>
          <p className="text-lg md:text-xl leading-relaxed text-gray-400" data-lovable-editable="true">
@@ -219,6 +219,7 @@ const InvisibleProjectDetail = () => {
         </div>
         </div>
         </div>
+
 
 
          
