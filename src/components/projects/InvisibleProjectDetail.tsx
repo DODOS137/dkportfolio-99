@@ -277,7 +277,7 @@ const InvisibleProjectDetail = () => {
           {/* Video development + Image Section */}
           <div className="mb-32">
             {/* Video Image */}
-            <div className="w-full mb-12">
+            <div className="w-full">
               <img
                 alt="Planet A233 - VR Environment"
                 className="w-full h-auto"
