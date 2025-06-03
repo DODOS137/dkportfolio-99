@@ -236,7 +236,7 @@ const LearnProjectDetail = () => {
               {/* Level design Images */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/a5e5f770-b8cf-4cd1-86f6-cf729e9c0a13.png" />
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/d4995d22-3bdd-4625-a6dd-1b2a9fdf6d2f.png" />
               </div>
               
             </div>
