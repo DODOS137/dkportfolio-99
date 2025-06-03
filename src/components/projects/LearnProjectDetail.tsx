@@ -182,7 +182,7 @@ const LearnProjectDetail = () => {
 
              {/* RX-056 LS1-07 3D Model */}
              <div className="relative overflow-hidden">
-               <div className="flex w-full">
+               <div className="flex w-full mb-8 ">
                  <div className="w-1/2">
                    <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
                  </div>
