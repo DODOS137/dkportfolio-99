@@ -83,7 +83,7 @@ const LearnProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto pb-8" />
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-32"> 
             <h2 className="text-2xl font-light mb-8  md:text-xl text-gray-500">Approach</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
