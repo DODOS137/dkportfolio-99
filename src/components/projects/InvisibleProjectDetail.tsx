@@ -120,34 +120,41 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>}
 
+          
+          
+          
           {/* Approach & Development */}
-           <div className="mb-32">
-          <div className="rounded-lg py-[50px] bg-transparent space-y-8">
-    
+          <div className="mb-32">
+          <div className="rounded-lg py-[50px] bg-transparent space-y-16">
+
           {/* Approach Section */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 data-lovable-editable="true" className="text-2xl min-w-[200px] md:text-xl text-white font-light">
-           Approach
-            </h2>
-           <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-white font-light">
-           {project.approach}
-          </p>
+              <div className="space-y-4">
+                <h2 data-lovable-editable="true" className="text-2xl md:text-xl text-white font-light">
+                  Approach
+                </h2>
+                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-white font-light">
+                  {project.approach}
+                </p>
+              </div>
+
+          {/* Development Strategy Section */}
+              <div className="space-y-4">
+                <h2 data-lovable-editable="true" className="text-2xl md:text-xl text-white font-light">
+                  Development Strategy
+                </h2>
+                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-white font-light">
+                  {project.development}
+                </p>
+              </div>
+
+            </div>
           </div>
 
-         {/* Development Strategy Section */}
-         <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 data-lovable-editable="true" className="text-2xl min-w-[200px] md:text-xl font-light text-white">
-          Development Strategy
-         </h2>
-          <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed font-light text-white">
-          {project.development}
-           </p>
-         </div>
 
-         </div>
-         </div>
-
-
+         
+          
+          
+          
           {/* Process Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
