@@ -65,12 +65,12 @@ const InvisibleProjectDetail = () => {
           {/* Project Description */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-medium">{project.title}</h2>
-              <p data-lovable-editable="true" className="text-lg text-gray-300 leading-relaxed mb-8 font-normal md:text-xl">{project.mainDescription}</p>
+              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-normal">{project.title}</h2>
+              <p data-lovable-editable="true" className="text-lg text-gray-300 leading-relaxed mb-8 md:text-xl font-normal">{project.mainDescription}</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
                 <div>
                   <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project type</h3>
-                  <p className="text-white" data-lovable-editable="true">{project.projectType}</p>
+                  <p data-lovable-editable="true" className="text-white font-normal">{project.projectType}</p>
                 </div>
                 <div>
                   <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">Project category</h3>
