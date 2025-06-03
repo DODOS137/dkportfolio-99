@@ -194,35 +194,32 @@ const InvisibleProjectDetail = () => {
           </div>
          </div>
 
-          {/* Worldbuilding + Image Section */}
-         
+          
+          
+          
+         {/* Worldbuilding + Image Section */}
           <div className="mb-32">
-             
-            {/* world image */}
-              <div className="w-full">
-                <AspectRatio ratio={16 / 9} className="w-full">
-                  <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
-                </AspectRatio>
-              </div>
-            
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
-                Worldbuilding
-              </h2>
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">
-                Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
-              </p>
-            </div>
 
-              {/* world image */}
-              <div className="w-full">
-                <AspectRatio ratio={16 / 9} className="w-full">
-                  
-                </AspectRatio>
-              </div>
-            </div>
-          </div>
+         {/* world image */}
+         <div className="w-full">
+         <AspectRatio ratio={16 / 9} className="w-full">
+         <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
+         </AspectRatio>
+         </div>
+
+        {/* Worldbuilding*/}
+        <div className="rounded-lg py-[50px] bg-transparent">
+        <div className="flex flex-col md:flex-row md:items-start md:space-x-8">
+         <h2 className="text-2xl font-light mb-4 md:mb-0 md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
+         Worldbuilding
+         </h2>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400" data-lovable-editable="true">
+         Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+         </p>
+        </div>
+        </div>
+        </div>
+
 
           {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
           <div className="mb-32">
@@ -232,7 +229,7 @@ const InvisibleProjectDetail = () => {
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">Emotional Logic</h2>
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.</p>
             </div>
-            {/* Second 1-1 Image */}
+            {/* DNA Image */}
             <div className="w-full mb-32">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
