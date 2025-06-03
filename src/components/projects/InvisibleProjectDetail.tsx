@@ -65,8 +65,8 @@ const InvisibleProjectDetail = () => {
           {/* Project Description */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">{project.title}</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">{project.mainDescription}</p>
+              <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-medium">{project.title}</h2>
+              <p data-lovable-editable="true" className="text-lg text-gray-300 leading-relaxed mb-8 font-normal md:text-xl">{project.mainDescription}</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
                 <div>
                   <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project type</h3>
@@ -126,20 +126,20 @@ const InvisibleProjectDetail = () => {
     
           {/* Approach Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 data-lovable-editable="true" className="text-2xl font-light min-w-[200px] md:text-xl text-gray-300">
+          <h2 data-lovable-editable="true" className="text-2xl min-w-[200px] md:text-xl text-white font-light">
            Approach
             </h2>
-           <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-300">
+           <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-white font-light">
            {project.approach}
           </p>
           </div>
 
          {/* Development Strategy Section */}
          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 data-lovable-editable="true" className="text-2xl min-w-[200px] md:text-xl font-light text-gray-300">
+          <h2 data-lovable-editable="true" className="text-2xl min-w-[200px] md:text-xl font-light text-white">
           Development Strategy
          </h2>
-          <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-300">
+          <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed font-light text-white">
           {project.development}
            </p>
          </div>
@@ -151,7 +151,7 @@ const InvisibleProjectDetail = () => {
           {/* Process Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">Process</h2>
+              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-white">Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
