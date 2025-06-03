@@ -182,7 +182,7 @@ const LearnProjectDetail = () => {
 
              {/* RX-056 LS1-07 3D Model */}
              <div className="relative overflow-hidden">
-               <div className="flex w-full mb-8 ">
+               <div className="flex w-full">
                  <div className="w-1/2">
                    <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
                  </div>
@@ -236,7 +236,7 @@ const LearnProjectDetail = () => {
               {/* Level design Images */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/ec346b4a-4aec-441a-9628-62716f308de5.png" />
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/d4995d22-3bdd-4625-a6dd-1b2a9fdf6d2f.png" />
               </div>
               
             </div>
