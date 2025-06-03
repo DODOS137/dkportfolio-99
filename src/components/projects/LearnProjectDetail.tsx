@@ -53,7 +53,7 @@ const LearnProjectDetail = () => {
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
               {project.title}
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
               Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
             </p>
             
@@ -84,8 +84,8 @@ const LearnProjectDetail = () => {
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
             <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto pb-8" />
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
-            <h2 className="text-2xl font-light mb-8  md:text-xl text-gray-500">Approach</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+            <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">Approach</h2>
+            <p className="text-lg md:text-xl leading-relaxed mb-8 font-light text-gray-400">
               The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
             </p>
           </div>
@@ -95,7 +95,7 @@ const LearnProjectDetail = () => {
         {/* Process Section - Separate Container */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg p-8 md:p-12 py-[50px] bg-transparent px-0">
-            <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-500">Process</h2>
+            <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
@@ -133,10 +133,10 @@ const LearnProjectDetail = () => {
           {/* Worldbuilding + Image Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-500">
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-300">
                 Worldbuilding
               </h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
                Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
 
   The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
@@ -154,8 +154,8 @@ const LearnProjectDetail = () => {
           {/* Narrative Concept & Logic */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-500">Narrative Concept & Logic</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
               </p>
             </div>
           </div>
