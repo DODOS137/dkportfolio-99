@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -8,13 +7,10 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -220,26 +216,26 @@ const LearnProjectDetail = () => {
                     <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                       <AspectRatio ratio={16 / 9} className="w-full">
                         <YouTube videoId="KT0Cwy9s5n8" opts={{
-                          width: '100%',
-                          height: '100%',
-                          playerVars: {
-                            autoplay: 0,
-                            controls: 1,
-                            rel: 0,
-                            showinfo: 0,
-                            modestbranding: 1,
-                            fs: 1,
-                            cc_load_policy: 0,
-                            iv_load_policy: 3,
-                            autohide: 1,
-                            disablekb: 0,
-                            enablejsapi: 1,
-                            origin: window.location.origin,
-                            branding: 0,
-                            color: 'white',
-                            theme: 'dark'
-                          }
-                        }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                        width: '100%',
+                        height: '100%',
+                        playerVars: {
+                          autoplay: 0,
+                          controls: 1,
+                          rel: 0,
+                          showinfo: 0,
+                          modestbranding: 1,
+                          fs: 1,
+                          cc_load_policy: 0,
+                          iv_load_policy: 3,
+                          autohide: 1,
+                          disablekb: 0,
+                          enablejsapi: 1,
+                          origin: window.location.origin,
+                          branding: 0,
+                          color: 'white',
+                          theme: 'dark'
+                        }
+                      }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
                       </AspectRatio>
                     </div>
                   </div>
@@ -254,8 +250,8 @@ const LearnProjectDetail = () => {
                       <div className="w-full mb-8">
                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" />
-                        <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/beb82307-e156-45a3-b9f0-8de19604e752.png" className="w-full h-auto pb-8" />
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/2d59c835-9b20-447c-9fe0-531162bf2fbb.png" />
+                        <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-auto " src="/lovable-uploads/53fd40a5-107b-445b-aeaa-848cced145ca.png" />
+                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b1303f38-0219-4c5b-a4e9-f212809d57db.png" />
                       </div>
                     </div>
                   </div>
@@ -286,18 +282,14 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default LearnProjectDetail;
