@@ -266,7 +266,7 @@ const LearnProjectDetail = () => {
                       </div> 
                       
                       {/* Spatial Design */}
-                      <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-32">
+                      <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-16">
                         <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                           Spatial Design
                         </h2>
@@ -275,7 +275,7 @@ const LearnProjectDetail = () => {
                       </div>
                       {/* Spatial Design image */}
                       <div className="w-full mb-8">
-                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
+                        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
                       </div> 
                       
                     
