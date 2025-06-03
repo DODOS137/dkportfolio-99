@@ -397,7 +397,7 @@ const InvisibleProjectDetail = () => {
 
           {/* 9th Image */}
           <div className="w-full mb-32">
-            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" />
+            <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto pb-8" />
             <div className="rounded-lg py-[50px] bg-transparent">
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">
                 The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
@@ -406,7 +406,7 @@ const InvisibleProjectDetail = () => {
 
             {/* 10th Image */}
             <div className="w-full mb-32">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" />
+              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" className="w-full h-auto ph-16" />
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">
                 The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
               </p>
