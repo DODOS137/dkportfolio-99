@@ -188,7 +188,7 @@ const InvisibleProjectDetail = () => {
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
               <div className="rounded-lg bg-transparent pt-[50px]">
                 <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
-                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
+                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ const InvisibleProjectDetail = () => {
          <h2 className="text-2xl font-light min-w-[200px] md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
          Worldbuilding
          </h2>
-         <p className="text-lg md:text-xl leading-relaxed text-gray-400" data-lovable-editable="true">
+         <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
          Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
          </p>
         </div>
@@ -237,7 +237,7 @@ const InvisibleProjectDetail = () => {
         <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
         Narrative Arc
          </h2>
-          <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400">
+          <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
         The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.
         </p>
         </div>
@@ -247,7 +247,7 @@ const InvisibleProjectDetail = () => {
         <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
         Emotional Logic
         </h2>
-        <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400">
+        <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
         The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.
            </p>
          </div>
@@ -270,7 +270,7 @@ const InvisibleProjectDetail = () => {
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Video Development
                 </h2>
-                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400">
+                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
                   Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.
                 </p>
               </div>
@@ -310,7 +310,7 @@ const InvisibleProjectDetail = () => {
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Spatial Design
                 </h2>
-                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400">
+                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
                   Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
                 </p>
               </div>
@@ -356,7 +356,7 @@ const InvisibleProjectDetail = () => {
               </h2>
 
               {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
             </div>
           </div>
 
@@ -372,13 +372,13 @@ const InvisibleProjectDetail = () => {
               </h2>
 
               {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
 
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 The Ocean (2025)
               </h2>
               {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive simulation. Users entered a liquid-metal (like virtual sea, where their input) commands and data generated living forms. These began as spheres and evolved through self-replication, mutation, and environmental adaptation. Each of the four zones (OCEAN A–D) responded differently depending on user behaviour. Some environments expanded exponentially through interaction, while others diminished due to inactivity. Over time, this created a dynamic ecology shaped by user engagement and emergent logic.</p>
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive simulation. Users entered a liquid-metal (like virtual sea, where their input) commands and data generated living forms. These began as spheres and evolved through self-replication, mutation, and environmental adaptation. Each of the four zones (OCEAN A–D) responded differently depending on user behaviour. Some environments expanded exponentially through interaction, while others diminished due to inactivity. Over time, this created a dynamic ecology shaped by user engagement and emergent logic.</p>
 
               {/* 5th & 5-1 image */}
               <div className="w-full mb-8">
@@ -399,7 +399,7 @@ const InvisibleProjectDetail = () => {
           <div className="w-full mb-32">
             <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto pb-8" />
             <div className="rounded-lg py-[50px] bg-transparent">
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
                 The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
               </p>
             </div>
@@ -407,7 +407,7 @@ const InvisibleProjectDetail = () => {
             {/* 10th Image */}
             <div className="w-full mb-32">
               <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" className="w-full h-auto pb-24" />
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
                 The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
               </p>
             </div>
