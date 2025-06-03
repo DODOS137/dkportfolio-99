@@ -122,7 +122,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Approach & Development */}
            <div className="mb-32">
-          
+          <div className="rounded-lg py-[50px] bg-transparent space-y-8">
     
           {/* Approach Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -144,7 +144,8 @@ const InvisibleProjectDetail = () => {
            </p>
          </div>
 
-          </div>
+         </div>
+         </div>
 
 
           {/* Process Section */}
