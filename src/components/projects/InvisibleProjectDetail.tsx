@@ -122,7 +122,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Approach & Development */}
            <div className="mb-32">
-          <div className="rounded-lg py-[50px] bg-transparent space-y-16">
+          <div className="rounded-lg py-[50px] bg-transparent space-y-8">
     
           {/* Approach Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -185,15 +185,27 @@ const InvisibleProjectDetail = () => {
               </div>
 
               {/* Preliminary Research – Survey Data */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
               <div className="rounded-lg bg-transparent pt-[50px]">
                 <h2 data-lovable-editable="true" className="text-2xl md:text-3xl font-light mb-8 text-gray-300">Preliminary Research</h2>
                 <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
               </div>
             </div>
           </div>
+         </div>
 
           {/* Worldbuilding + Image Section */}
+         
           <div className="mb-32">
+             
+            {/* world image */}
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" className="w-full h-full" data-lovable-editable="true" />
+                </AspectRatio>
+              </div>
+            
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg py-[50px] bg-transparent">
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 Worldbuilding
@@ -201,6 +213,7 @@ const InvisibleProjectDetail = () => {
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">
                 Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
               </p>
+            </div>
 
               {/* world image */}
               <div className="w-full">
