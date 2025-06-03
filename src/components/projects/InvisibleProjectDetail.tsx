@@ -205,7 +205,7 @@ const InvisibleProjectDetail = () => {
           
           
         {/* Worldbuilding + Image Section */}
-          <div className="mb-32">
+          <div className="py-32">
 
          {/* world image */}
          <div className="w-full">
@@ -232,7 +232,7 @@ const InvisibleProjectDetail = () => {
          
           
           {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
-        <div className="mb-32">
+        <div className="py-32">
         {/* DNA Image */}
         <div className="w-full">
        <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
