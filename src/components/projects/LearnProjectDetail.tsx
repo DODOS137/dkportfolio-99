@@ -176,7 +176,7 @@ const LearnProjectDetail = () => {
         
               {/* RX-056 Image */}
               <div className="w-full mb-32">
-                <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" />
+                <img alt="RX-056 Character Design" data-lovable-editable="true" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" className="w-full h-auto mb-8" />
                 <img alt="RX-056 Character Design" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/af70df56-7b0b-4eb6-b02a-535d5e7bab82.png" />
               </div>
 
