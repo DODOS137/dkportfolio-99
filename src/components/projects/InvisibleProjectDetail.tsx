@@ -135,6 +135,8 @@ const InvisibleProjectDetail = () => {
                <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Approach</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8" data-lovable-editable="true">{project.approach}</p>
+               </div>
+               <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
               <h2 className="text-2xl md:text-3xl font-light mb-8 text-white" data-lovable-editable="true">Development Strategy</h2>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed" data-lovable-editable="true">{project.development}</p>
             </div>
