@@ -243,7 +243,7 @@ const InvisibleProjectDetail = () => {
         data-lovable-editable="true"
         className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]"
           >
-        Narrative Arc – The Explorer's Journey
+        Narrative Arc
          </h2>
           <p
         data-lovable-editable="true"
@@ -309,12 +309,12 @@ const InvisibleProjectDetail = () => {
           {/* Level Design */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              {/* Title */}
+              {/* Level Design */}
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 Level Design
               </h2>
 
-              {/* Third Image */}
+              {/* Level Design Image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
@@ -322,10 +322,18 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+        
+          
           {/* Spatial Design + Image Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              {/* Title */}
+
+               {/* Spatial Design image */}
+              <div className="w-full mb-8">
+                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
+              </div> 
+              
+              {/* Spatial Design */}
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 Spatial Design
               </h2>
@@ -333,10 +341,7 @@ const InvisibleProjectDetail = () => {
               {/* Description */}
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</p>
 
-              {/* 4th image */}
-              <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
-              </div> 
+             
 
               {/* Title */}
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
