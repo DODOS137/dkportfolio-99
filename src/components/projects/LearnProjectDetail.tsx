@@ -259,7 +259,7 @@ const LearnProjectDetail = () => {
                 
                   {/* Spatial Design + Image Section */}
                   <div className="mb-32">
-                    <div className="rounded-lg py-[50px] bg-transparent">
+                    <div className="rounded-lg  bg-transparent">
                       {/* Spatial Design image */}
                       <div className="w-full mb-8">
                         <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
