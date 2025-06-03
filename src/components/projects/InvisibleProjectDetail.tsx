@@ -333,14 +333,21 @@ const InvisibleProjectDetail = () => {
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
               </div> 
               
-              {/* Spatial Design */}
-              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
-                Spatial Design
-              </h2>
-
-              {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</p>
-
+            {/* Spatial Design */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <h2
+                  data-lovable-editable="true"
+                  className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]"
+                >
+                  Spatial Design
+                </h2>
+                <p
+                  data-lovable-editable="true"
+                  className="text-lg md:text-xl leading-relaxed text-gray-400"
+                >
+                  Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
+                </p>
+              </div>
              
 
               {/* Title */}
