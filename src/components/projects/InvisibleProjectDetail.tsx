@@ -158,7 +158,7 @@ const InvisibleProjectDetail = () => {
           {/* Process Section */}
           <div className="mb-32">
             <div className="rounded-lg py-[50px] bg-transparent">
-              <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-white">Process</h2>
+              <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-300 font-light md:text-xl">Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
