@@ -180,8 +180,8 @@ const LearnProjectDetail = () => {
       
             {/* Character Images */}
             <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" className="w-full h-auto mt-40 " src="/lovable-uploads/4ccaf186-d342-457e-9d15-6a2a6bad83e0.png" />
-              <img alt="RX-056 Character Design" className="w-full h-auto" src="/lovable-uploads/da6ff3e1-3a24-468f-89dd-253857754048.png" />
+              <img alt="RX-056 Character Design" className="w-full h-auto mt-40 " src="/lovable-uploads/8f30f1d4-1a98-4bec-aa7f-b791f677dd80.png" />
+              <img alt="RX-056 Character Design" className="w-full h-auto" src="/lovable-uploads/31e955eb-9798-4117-b7aa-a8a9e8bccef4.png" />
             </div>
 
             {/* 3D Models */}
