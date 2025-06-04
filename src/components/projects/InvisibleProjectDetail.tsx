@@ -8,12 +8,22 @@ import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  const sliderImages = ["/lovable-uploads/b3851ebc-35db-4397-8f5e-e5286275ac0d.png", "/lovable-uploads/8f303355-f7f8-417f-a4e4-fa9109e312db.png", "/lovable-uploads/89363d60-1e48-438d-aef9-e1f5b6c4d7df.png", "/lovable-uploads/1c29e559-8fb5-43b8-85cb-bbe881e4b5b5.png", "/lovable-uploads/663f86d2-c014-4d12-bc43-879d35aa70b2.png"];
+  
+  // First spatial slider images (new images)
+  const firstSliderImages = ["/lovable-uploads/b3851ebc-35db-4397-8f5e-e5286275ac0d.png", "/lovable-uploads/8f303355-f7f8-417f-a4e4-fa9109e312db.png", "/lovable-uploads/89363d60-1e48-438d-aef9-e1f5b6c4d7df.png", "/lovable-uploads/1c29e559-8fb5-43b8-85cb-bbe881e4b5b5.png", "/lovable-uploads/663f86d2-c014-4d12-bc43-879d35aa70b2.png"];
+  
+  // Second slider images (original images)
+  const secondSliderImages = ["/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png", "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png", "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png", "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png", "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png"];
+  
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [secondApi, setSecondApi] = useState<CarouselApi>();
+  const [secondCurrent, setSecondCurrent] = useState(0);
+
   useEffect(() => {
     if (!api) {
       return;
@@ -23,7 +33,19 @@ const InvisibleProjectDetail = () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-  return <div className="min-h-screen bg-black text-white">
+
+  useEffect(() => {
+    if (!secondApi) {
+      return;
+    }
+    setSecondCurrent(secondApi.selectedScrollSnap());
+    secondApi.on("select", () => {
+      setSecondCurrent(secondApi.selectedScrollSnap());
+    });
+  }, [secondApi]);
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
         <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -50,9 +72,6 @@ const InvisibleProjectDetail = () => {
           </div>
         </div>
       </section>
-
-
-
 
       {/* Content Section */}
       <section className="pb-20">
@@ -93,17 +112,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-         
-          
-          
-          
-          
-          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-         
-          
-          
-          
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
           
           {/* YouTube Video Player */}
           {project.videoId && <div className="">
@@ -159,12 +169,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-
-          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-          
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Process Section */}
           <div className="">
@@ -211,11 +217,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-          
-          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Worldbuilding + Image Section */}
           <div className="">
@@ -237,10 +240,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-         {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          
+         {/*Line*/} 
+         <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
           <div className="">
@@ -272,11 +273,9 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-          
           {/* Video development + Image Section */}
           <div className="">
             {/* Video Image */}
@@ -297,11 +296,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-          
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Level Design */}
           <div className="">
@@ -319,49 +315,35 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Spatial Design + Image Section */}
           <div className="">
             <div className="rounded-lg bg-transparent">
-              {/* Spatial Design image */}
-              <div className="w-full mb-8">
-                
-              </div> 
+              {/* Spatial Slider 1 - Updated with new images */}
+              <div className="w-full mb-40">
+                <Carousel className="w-full bg-black" setApi={setApi} opts={{
+                    loop: true
+                  }}>
+                  <CarouselContent>
+                    {firstSliderImages.map((image, index) => <CarouselItem key={index}>
+                        <div className="relative w-full">
+                          <AspectRatio ratio={16 / 9} className="w-full">
+                            <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-contain" />
+                          </AspectRatio>
+                        </div>
+                      </CarouselItem>)}
+                  </CarouselContent>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+                </Carousel>
 
-          
-              
-              {/* Spatial Slider 1 */}
-          <div className="w-full mb-40">
-            <Carousel className="w-full bg-black" setApi={setApi} opts={{
-                loop: true
-              }}>
-              <CarouselContent>
-                {sliderImages.map((image, index) => <CarouselItem key={index}>
-                    <div className="relative w-full">
-                      <AspectRatio ratio={16 / 9} className="w-full">
-                        <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-contain" />
-                      </AspectRatio>
-                    </div>
-                  </CarouselItem>)}
-              </CarouselContent>
-              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
-              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
-            </Carousel>
-
-            {/* Bar-shaped indicators below the slider */}
-            <div className="flex justify-center space-x-2 mt-6">
-              {sliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => api?.scrollTo(index)} />)}
-            </div>
-          </div>
-        
-     
-
-
-
+                {/* Bar-shaped indicators below the slider */}
+                <div className="flex justify-center space-x-2 mt-6">
+                  {firstSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => api?.scrollTo(index)} />)}
+                </div>
+              </div>
               
               {/* Spatial Design */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16  mt-40">
@@ -373,13 +355,8 @@ const InvisibleProjectDetail = () => {
                 </p>
               </div>
 
-
-
-              
-             {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-              
+             {/*Line*/} 
+             <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
               {/* Title */}
               <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300  mb-8">
@@ -425,11 +402,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-          
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Post-Project */}
           <div className="">
@@ -481,13 +455,13 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-          {/* Custom Slider */}
+          {/* Second Slider - keeping original images */}
           <div className="w-full mb-40">
-            <Carousel className="w-full bg-black" setApi={setApi} opts={{
+            <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{
             loop: true
           }}>
               <CarouselContent>
-                {sliderImages.map((image, index) => <CarouselItem key={index}>
+                {secondSliderImages.map((image, index) => <CarouselItem key={index}>
                     <div className="relative w-full">
                       <AspectRatio ratio={16 / 9} className="w-full">
                         <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
@@ -501,7 +475,7 @@ const InvisibleProjectDetail = () => {
 
             {/* Bar-shaped indicators below the slider */}
             <div className="flex justify-center space-x-2 mt-6">
-              {sliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => api?.scrollTo(index)} />)}
+              {secondSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />)}
             </div>
           </div>
         </div>
@@ -528,6 +502,8 @@ const InvisibleProjectDetail = () => {
 
       {/* Back to Top Button */}
       <BackToTopButton />
-    </div>;
+    </div>
+  );
 };
+
 export default InvisibleProjectDetail;
