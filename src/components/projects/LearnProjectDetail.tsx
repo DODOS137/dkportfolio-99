@@ -295,7 +295,19 @@ const LearnProjectDetail = () => {
           </div>
         </div>
         </div>
-
+      
+        
+        {/*Void*/}
+      <div className="pb-40 flex items-center justify-center">
+        <Link to="/project/learn" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
+          <span>Next project</span>
+          <ArrowRight className="w-5 h-5" />
+        </Link>
+      </div>
+       
+        
+        
+        
         {/* Remaining Images */}
         {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
