@@ -146,7 +146,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Process Section */}
           <div className="pb-40">
-            <div className="rounded-lg py-32  bg-transparent">
+            <div className="rounded-lg bg-transparent">
               <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-300 font-light md:text-xl">Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
