@@ -245,8 +245,9 @@ const LearnProjectDetail = () => {
           
          
           <div className="rounded-lg bg-transparent">
+           <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
+            
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
             
             <h2 className="text-2xl font-light md:text-xl text-gray-300 min-w-[200px]">Level Design</h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
