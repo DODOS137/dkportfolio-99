@@ -31,7 +31,7 @@ const LearnProjectDetail = () => {
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
             <span>2023</span>
             <span>•</span>
-            <span>Personal Work </span>
+            <span>Personal Project </span>
             <span>•</span>
             <span>Mixed Reality & Exhibition Designer</span>
           </div>
@@ -50,21 +50,22 @@ const LearnProjectDetail = () => {
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
-              {project.title}
+              Thermal Trace
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
-              Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
+              This solo exhibition project reimagined the fashion show format through body-heat detection and spatial camouflage. The experience enabled viewers to uncover concealed figures using only thermal presence, prompting a shift away from conventional spectacle towards perception, proximity, and sensory engagement. 
+              Rather than relying on traditional visuals, the system responded to audience movement and temperature, generating a dynamic interface between human and environment. This approach proposed a new experiential paradigm—where viewers no longer observe passively, but become agents of discovery within a choreographed spatial interaction.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">MA Thesis</p>
-                <p className="text-white">(Design Immersive Experience)</p>
+                <p className="text-white">Personal Project</p>
+                
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                <p className="text-white">VR Content Design</p>
+                <p className="text-white">XR Contents & Exhibition Design</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
@@ -86,8 +87,8 @@ const LearnProjectDetail = () => {
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
-              </p>
+                This project aimed to establish a new language for runway design—less theatrical, more atmospheric. By merging fashion, spatial installation, and extended reality, the work challenged established presentation norms and opened new possibilities for immersive exhibition formats. The audience's presence became part of the scenography, turning observation into interaction.
+                </p>
             </div>
           </div>
 
