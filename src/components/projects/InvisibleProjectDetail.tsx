@@ -97,7 +97,7 @@ const InvisibleProjectDetail = () => {
           
           
           
-          {/*Line*/} <div className="w-full h-px bg-white my-40"></div>
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
          
           
