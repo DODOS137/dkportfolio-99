@@ -92,7 +92,7 @@ const LearnProjectDetail = () => {
         {/* Approach Section */}
         <div className="">
           <div className="rounded-lg  bg-transparent ">
-            <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto" />
+            <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -155,10 +155,10 @@ const LearnProjectDetail = () => {
         {/* Worldbuilding Section */}
         <div className="">
           <div className="rounded-lg  bg-transparent">
-            <h2 className="text-2xl md:text-xl font-light text-gray-300">
+            <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8">
               Worldbuilding
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
               Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
 
               The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
@@ -166,7 +166,7 @@ const LearnProjectDetail = () => {
 
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <img alt="Planet A233 - VR Environment" className="w-full h-full" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" />
+                <img alt="Planet A233 - VR Environment" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" className="w-full h-full " />
               </AspectRatio>
             </div>
           </div>
@@ -175,7 +175,7 @@ const LearnProjectDetail = () => {
 
         {/* Narrative Concept Section */}
         <div className="">
-          <div className="rounded-lg bg-transparent">
+          <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
             <p className="text-lg md:text-xl leading-relaxed  text-gray-400 font-light">
               The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
@@ -193,20 +193,20 @@ const LearnProjectDetail = () => {
         {/* Character Design Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-500">Character Design</h2>
+            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">Character Design</h2>
             
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2">• FR Pro (Player)</p> 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">A passive cleaning robot with minimal initiative, performing support tasks.</p>
+            <p className="text-lg md:text-xl leading-relaxed mb-2 font-light text-gray-300">• FR Pro (Player)</p> 
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">A passive cleaning robot with minimal initiative, performing support tasks.</p>
 
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2">• RX-056</p> 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.</p> 
+            <p className="text-lg md:text-xl leading-relaxed mb-2 text-gray-300 font-light">• RX-056</p> 
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.</p> 
             
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2">• LS1-07</p> 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">An AI-driven commander capable of speech, managing logistics and group decisions.</p>
+            <p className="text-lg md:text-xl leading-relaxed mb-2 font-light text-gray-300">• LS1-07</p> 
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-normal">An AI-driven commander capable of speech, managing logistics and group decisions.</p>
       
             {/* Character Images */}
             <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" className="w-full h-auto mb-8" />
+              <img alt="RX-056 Character Design" src="/lovable-uploads/3a76d550-d6d3-4963-9dd6-538d92cd779e.png" className="w-full h-auto mt-40 " />
               <img alt="RX-056 Character Design" className="w-full h-auto" src="/lovable-uploads/af70df56-7b0b-4eb6-b02a-535d5e7bab82.png" />
             </div>
 
@@ -240,8 +240,8 @@ const LearnProjectDetail = () => {
         {/* Scriptwriting & Storyboard Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Scriptwriting & Storyboard</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed ">
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300">Scriptwriting & Storyboard</h2>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-normal mb-40">
               Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
             </p>
 
@@ -285,16 +285,16 @@ const LearnProjectDetail = () => {
         {/* Level Design Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl font-light  md:text-xl text-gray-500">Level Design</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed ">
+            <h2 className="text-2xl font-light md:text-xl text-gray-300 ">Level Design</h2>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-normal mb-40">
               The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
             </p>
             
             <div className="w-full mb-8">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" />
+              <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-40" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto " src="/lovable-uploads/546d86f0-9150-44b9-9afd-31ef4910aa54.png" />
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/f93eee66-b3f4-4e3f-a2c6-514144d76976.png" />
+              <img alt="Planet A233 - VR Environment" src="/lovable-uploads/f93eee66-b3f4-4e3f-a2c6-514144d76976.png" className="w-full h-auto mb-40" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
             </div>
           </div>
@@ -311,10 +311,10 @@ const LearnProjectDetail = () => {
         <div className="">
           <div className="rounded-lg bg-transparent">
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
+              <img alt="Planet A233 - VR Environment" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-40" />
             </div> 
             
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 ">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16  mb-40">
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Spatial Design
               </h2>
@@ -326,7 +326,7 @@ const LearnProjectDetail = () => {
             <div className="w-full">
             
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+              
             
             </div> 
           </div>
@@ -343,10 +343,10 @@ const LearnProjectDetail = () => {
         {/* Post-Project Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl font-light md:text-xl text-gray-300">
+            <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-8">
               Post-Project Expansion
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
               To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.
             </p>
           </div>
