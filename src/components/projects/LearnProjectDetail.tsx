@@ -155,13 +155,13 @@ const LearnProjectDetail = () => {
                 The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
               </p>
             </div>
-
-            <div className="w-full">
+           </div>
+          {/*world Image*/}     
+             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <img alt="Planet A233 - VR Environment" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" className="w-full h-full " />
               </AspectRatio>
-            </div>
-          </div>
+            </div>          
 
           {/* Narrative Concept Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
