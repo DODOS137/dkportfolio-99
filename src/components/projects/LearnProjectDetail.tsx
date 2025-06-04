@@ -130,11 +130,11 @@ const LearnProjectDetail = () => {
 
         {/* Worldbuilding Section */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
-          <div className="rounded-lg py-[50px] bg-transparent">
-            <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">
+          <div className="rounded-lg  bg-transparent">
+            <h2 className="text-2xl md:text-xl font-light text-gray-300">
               Worldbuilding
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
               Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
 
               The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
@@ -150,7 +150,7 @@ const LearnProjectDetail = () => {
 
         {/* Narrative Concept Section */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
-          <div className="rounded-lg py-[50px] bg-transparent">
+          <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
             <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
               The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
@@ -160,7 +160,7 @@ const LearnProjectDetail = () => {
 
         {/* Character Design Section */}
         <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
-          <div className="rounded-lg py-[50px] bg-transparent">
+          <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-500">Character Design</h2>
             
             <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-2">• FR Pro (Player)</p> 
