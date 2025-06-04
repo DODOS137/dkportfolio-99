@@ -245,7 +245,7 @@ const LearnProjectDetail = () => {
           
          
           <div className="rounded-lg bg-transparent">
-           <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
+           <img alt="Planet A233 - VR Environment" src="/lovable-uploads/a7db0ee1-e0fc-43a5-bd73-c8a6d997abf5.png" className="w-full h-auto mb-40" />
             
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
             
