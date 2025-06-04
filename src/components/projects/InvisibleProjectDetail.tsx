@@ -252,7 +252,7 @@ const InvisibleProjectDetail = () => {
 
             <div className="rounded-lg bg-transparent ">
               {/* Section 1 */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Narrative Arc
                 </h2>
@@ -262,7 +262,7 @@ const InvisibleProjectDetail = () => {
               </div>
 
               {/* Section 2 */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-8">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Emotional Logic
                 </h2>
