@@ -174,13 +174,14 @@ const LearnProjectDetail = () => {
           
 
         {/* Narrative Concept Section */}
-        <div className="">
+        <div className=" <div className="flex flex-col md:flex-row md:items-start md:space-x-16>
           <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
             <p className="text-lg md:text-xl leading-relaxed  text-gray-400 font-light">
               The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
             </p>
           </div>
+        </div>
         </div>
 
 
