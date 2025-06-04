@@ -197,7 +197,7 @@ const LearnProjectDetail = () => {
             </div>
             
             
-              <h2 className="text-2xl mb-8 font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
+              <h2 className="text-2xl font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
             </div>
           </div>
         
@@ -206,7 +206,7 @@ const LearnProjectDetail = () => {
         <div className="">
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Scriptwriting & Storyboard</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed ">
               Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
             </p>
 
@@ -286,7 +286,7 @@ const LearnProjectDetail = () => {
         {/* Post-Project Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300">
+            <h2 className="text-2xl font-light md:text-xl text-gray-300">
               Post-Project Expansion
             </h2>
             <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
