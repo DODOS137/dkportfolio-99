@@ -296,6 +296,12 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
+
           {/* Level Design */}
           <div className="">
             <div className="rounded-lg bg-transparent">
@@ -311,6 +317,11 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
           </div>
+
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+          
 
           {/* Spatial Design + Image Section */}
           <div className="">
@@ -373,6 +384,12 @@ const InvisibleProjectDetail = () => {
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed  text-gray-400 font-light"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
             </div>
           </div>
+
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
 
           {/* Post-Project */}
           <div className="">
