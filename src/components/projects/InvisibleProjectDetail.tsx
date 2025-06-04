@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -9,14 +8,12 @@ import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
-
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
   const sliderImages = ["/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png", "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png", "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png", "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png", "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png"];
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-
   useEffect(() => {
     if (!api) {
       return;
@@ -26,9 +23,7 @@ const InvisibleProjectDetail = () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
         <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -69,7 +64,7 @@ const InvisibleProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
           {/* Project Description */}
           <div className="pb-40">
-            <div className="rounded-lg py-[50px] bg-transparent">
+            <div className="rounded-lg bg-transparent">
               <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">{project.title}</h2>
               <p data-lovable-editable="true" className="text-lg text-gray-300 leading-relaxed mb-8 md:text-xl font-light">{project.mainDescription}</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
@@ -96,35 +91,33 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* YouTube Video Player */}
-          {project.videoId && (
-            <div className="pb-40">
+          {project.videoId && <div className="pb-40">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <YouTube videoId={project.videoId} opts={{
-                    width: '100%',
-                    height: '100%',
-                    playerVars: {
-                      autoplay: 0,
-                      controls: 1,
-                      rel: 0,
-                      showinfo: 0,
-                      modestbranding: 1,
-                      fs: 1,
-                      cc_load_policy: 0,
-                      iv_load_policy: 3,
-                      autohide: 1,
-                      disablekb: 0,
-                      enablejsapi: 1,
-                      origin: window.location.origin,
-                      branding: 0,
-                      color: 'white',
-                      theme: 'dark'
-                    }
-                  }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                width: '100%',
+                height: '100%',
+                playerVars: {
+                  autoplay: 0,
+                  controls: 1,
+                  rel: 0,
+                  showinfo: 0,
+                  modestbranding: 1,
+                  fs: 1,
+                  cc_load_policy: 0,
+                  iv_load_policy: 3,
+                  autohide: 1,
+                  disablekb: 0,
+                  enablejsapi: 1,
+                  origin: window.location.origin,
+                  branding: 0,
+                  color: 'white',
+                  theme: 'dark'
+                }
+              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
                 </AspectRatio>
               </div>
-            </div>
-          )}
+            </div>}
 
           {/* Approach & Development */}
           <div className="pb-40">
@@ -443,8 +436,6 @@ const InvisibleProjectDetail = () => {
 
       {/* Back to Top Button */}
       <BackToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default InvisibleProjectDetail;
