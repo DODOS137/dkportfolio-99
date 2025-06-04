@@ -285,7 +285,7 @@ const InvisibleProjectDetail = () => {
 
             {/* Video Development */}
             <div className="rounded-lg bg-transparent ">
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Video Development
                 </h2>
