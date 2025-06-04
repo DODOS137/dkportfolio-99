@@ -11,7 +11,7 @@ import BackToTopButton from '@/components/BackToTopButton';
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  const sliderImages = ["/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png", "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png", "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png", "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png", "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png"];
+  const sliderImages = ["/lovable-uploads/b3851ebc-35db-4397-8f5e-e5286275ac0d.png", "/lovable-uploads/8f303355-f7f8-417f-a4e4-fa9109e312db.png", "/lovable-uploads/89363d60-1e48-438d-aef9-e1f5b6c4d7df.png", "/lovable-uploads/1c29e559-8fb5-43b8-85cb-bbe881e4b5b5.png", "/lovable-uploads/663f86d2-c014-4d12-bc43-879d35aa70b2.png"];
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   useEffect(() => {
@@ -94,6 +94,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
          
+          
           
           
           
