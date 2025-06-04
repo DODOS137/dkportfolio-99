@@ -46,7 +46,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 mb-60">        
+        <div className="max-w-[1540px] mx-auto  px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
