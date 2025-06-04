@@ -7,7 +7,6 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
@@ -290,7 +289,7 @@ const LearnProjectDetail = () => {
             <h2 className="text-2xl font-light md:text-xl text-gray-300">
               Post-Project Expansion
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
               To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.
             </p>
           </div>
