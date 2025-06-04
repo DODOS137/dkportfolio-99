@@ -238,6 +238,11 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+
+         {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+          
+
           {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
           <div className="">
             {/* DNA Image */}
