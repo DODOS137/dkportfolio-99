@@ -196,11 +196,11 @@ const LearnProjectDetail = () => {
               <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[100px] bg-black z-[999]" />
             </div>
             
-            <div className="mb-32">
+            
               <h2 className="text-2xl mb-8 font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
             </div>
           </div>
-        </div>
+        
 
         {/* Scriptwriting & Storyboard Section */}
         <div className="">
