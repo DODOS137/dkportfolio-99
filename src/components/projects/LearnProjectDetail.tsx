@@ -169,14 +169,9 @@ const LearnProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">Character Design</h2>
             
-            <p className="text-lg md:text-xl leading-relaxed mb-2 font-light text-gray-300">• FR Pro (Player)</p> 
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">A passive cleaning robot with minimal initiative, performing support tasks.</p>
-
-            <p className="text-lg md:text-xl leading-relaxed mb-2 text-gray-300 font-light">• RX-056</p> 
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">A humanoid archival robot that displayed thoughts via facial screen and built understanding through books.</p> 
-            
-            <p className="text-lg md:text-xl leading-relaxed mb-2 font-light text-gray-300">• LS1-07</p> 
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-normal">An AI-driven commander capable of speech, managing logistics and group decisions.</p>
+             <div className="w-full mb-32">
+              <img alt="RX-056 Character Design" className="w-full h-auto mt-40 " src="/lovable-uploads/8f30f1d4-1a98-4bec-aa7f-b791f677dd80.png" />
+              </div>
       
             {/* Character Images */}
             <div className="w-full mb-32">
