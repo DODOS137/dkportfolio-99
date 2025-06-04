@@ -209,7 +209,7 @@ const LearnProjectDetail = () => {
         
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300">Scriptwriting & Storyboard</h2>
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-normal mb-40">
               Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
             </p>
@@ -251,8 +251,8 @@ const LearnProjectDetail = () => {
          
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light md:text-xl text-gray-300">Level Design</h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-normal mb-40">
+            <h2 className="text-2xl font-light md:text-xl text-gray-300 min-w-[200px]">Level Design</h2>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
               The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
             </p>
           </div>
