@@ -121,7 +121,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Approach & Development */}
           <div className="pb-40">
-            <div className="rounded-lg py-32 bg-transparent ">
+            <div className="rounded-lg bg-transparent ">
               {/* Approach Section */}
               <div className="">
                 <h2 data-lovable-editable="true" className="text-2xl md:text-xl text-white font-light mb-8">
