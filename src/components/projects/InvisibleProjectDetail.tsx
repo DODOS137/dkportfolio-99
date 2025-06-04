@@ -231,9 +231,7 @@ const InvisibleProjectDetail = () => {
                 <h2 className="text-2xl font-light min-w-[200px] md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
                   Worldbuilding
                 </h2>
-                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                  Set on a fictional alien planet inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
-                </p>
+                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.</p>
               </div>
             </div>
           </div>
@@ -262,7 +260,7 @@ const InvisibleProjectDetail = () => {
               </div>
 
               {/* Section 2 */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-8">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Emotional Logic
                 </h2>
