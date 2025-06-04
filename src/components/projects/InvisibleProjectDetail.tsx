@@ -341,8 +341,16 @@ const InvisibleProjectDetail = () => {
                 </p>
               </div>
 
+
+
+              
+             {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+              
+
               {/* Title */}
-              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 mt-40 ">
+              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300  ">
                 Full Playing Video
               </h2>
 
