@@ -202,7 +202,7 @@ const InvisibleProjectDetail = () => {
 
               {/* Preliminary Research – Survey Data */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                <div className="rounded-lg bg-transparent  ">
+                <div className="rounded-lg bg-transparent  mt-8">
                   <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
                   <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
                 </div>
