@@ -1,3 +1,4 @@
+import ImageSliceInteraction from '@/components/ImageSliceInteraction';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -11,6 +12,10 @@ const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
   return <div className="min-h-screen bg-black text-white">
+
+
+
+    
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -82,8 +87,13 @@ const LearnProjectDetail = () => {
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Approach Section */}
-          <div className="rounded-lg bg-transparent">
-            <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
+            {/* ⬇️ 슬라이싱 인터랙션 이미지로 대체 시작 */}
+            <div className="w-full h-auto mb-40">
+              <ImageSliceInteraction baseImage="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" overlayImage="/images/overlay-version.png" />
+            </div>
+            {/* ⬆️ 슬라이싱 인터랙션 이미지로 대체 끝 */}
+            
+            
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
