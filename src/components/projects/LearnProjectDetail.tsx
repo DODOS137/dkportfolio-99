@@ -83,6 +83,12 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
+
         {/* Approach Section */}
         <div className="">
           <div className="rounded-lg  bg-transparent ">
@@ -96,6 +102,13 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
+
+          
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+
+          
         {/* Process Section */}
         <div className="">
           <div className="rounded-lg bg-transparent ">
@@ -132,6 +145,13 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
+
+ 
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
+
         {/* Worldbuilding Section */}
         <div className="">
           <div className="rounded-lg  bg-transparent">
@@ -151,6 +171,7 @@ const LearnProjectDetail = () => {
             </div>
           </div>
         </div>
+          
 
         {/* Narrative Concept Section */}
         <div className="">
@@ -161,6 +182,13 @@ const LearnProjectDetail = () => {
             </p>
           </div>
         </div>
+
+
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
 
         {/* Character Design Section */}
         <div className="">
@@ -200,7 +228,14 @@ const LearnProjectDetail = () => {
               <h2 className="text-2xl font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
             </div>
           </div>
-        
+
+
+
+          
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
 
         {/* Scriptwriting & Storyboard Section */}
         <div className="">
@@ -240,6 +275,13 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
+
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
+
         {/* Level Design Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
@@ -257,6 +299,13 @@ const LearnProjectDetail = () => {
             </div>
           </div>
         </div>
+
+
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
       
         {/* Spatial Design Section */}
         <div className="">
@@ -282,6 +331,14 @@ const LearnProjectDetail = () => {
             </div> 
           </div>
         </div>
+
+
+       
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+
+          
 
         {/* Post-Project Section */}
         <div className="">
