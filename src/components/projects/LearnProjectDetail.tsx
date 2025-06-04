@@ -251,7 +251,7 @@ const LearnProjectDetail = () => {
             
           </div>
 
-            <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/8c23c6e9-0ccd-4d22-8b00-7bb79d632941.png" />
+            <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
             
             <div className="w-full ">
