@@ -263,7 +263,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Level Design */}
           <div className="pb-40">
-            <div className="rounded-lg py-[50px] bg-transparent">
+            <div className="rounded-lg bg-transparent">
               {/* Level Design */}
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 Level Design
@@ -279,7 +279,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Spatial Design + Image Section */}
           <div className="pb-40">
-            <div className="rounded-lg py-[50px] bg-transparent">
+            <div className="rounded-lg bg-transparent">
               {/* Spatial Design image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
@@ -341,7 +341,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Post-Project */}
           <div className="pb-40">
-            <div className="rounded-lg py-[50px] bg-transparent">
+            <div className="rounded-lg bg-transparent">
               {/* Title */}
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 Post-Project Expansion
@@ -374,7 +374,7 @@ const InvisibleProjectDetail = () => {
           {/* 9th Image */}
           <div className="w-full pb-40">
             <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto pb-8" />
-            <div className="rounded-lg py-[50px] bg-transparent">
+            <div className="rounded-lg py-20 bg-transparent">
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
                 The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
               </p>
