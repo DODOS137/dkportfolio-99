@@ -138,7 +138,7 @@ const InvisibleProjectDetail = () => {
             <div className="rounded-lg bg-transparent ">
               {/* Approach Section */}
               <div className="">
-                <h2 data-lovable-editable="true" className="text-2xl md:text-xl text-white font-light mb-8 mt-8">
+                <h2 data-lovable-editable="true" className="text-2xl md:text-xl text-white font-light mb-8 mt-32">
                   Approach
                 </h2>
                 <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed font-light text-gray-400  mb-8">
@@ -209,6 +209,12 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
           </div>
+
+
+          
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+          
 
           {/* Worldbuilding + Image Section */}
           <div className="">
