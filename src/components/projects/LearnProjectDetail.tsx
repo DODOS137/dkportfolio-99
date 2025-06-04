@@ -86,7 +86,7 @@ const LearnProjectDetail = () => {
         {/* Approach Section */}
         <div className="">
           <div className="rounded-lg  bg-transparent ">
-            <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto pb-8" />
+            <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto" />
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -100,7 +100,7 @@ const LearnProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg bg-transparent ">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -133,7 +133,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Worldbuilding Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+        <div className="">
           <div className="rounded-lg  bg-transparent">
             <h2 className="text-2xl md:text-xl font-light text-gray-300">
               Worldbuilding
@@ -153,7 +153,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Narrative Concept Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+        <div className="">
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
             <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
@@ -163,7 +163,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Character Design Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+        <div className="">
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-500">Character Design</h2>
             
@@ -203,7 +203,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Scriptwriting & Storyboard Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+        <div className="">
           <div className="rounded-lg py-[50px] bg-transparent">
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Scriptwriting & Storyboard</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
@@ -214,26 +214,26 @@ const LearnProjectDetail = () => {
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <YouTube videoId="KT0Cwy9s5n8" opts={{
-                  width: '100%',
-                  height: '100%',
-                  playerVars: {
-                    autoplay: 0,
-                    controls: 1,
-                    rel: 0,
-                    showinfo: 0,
-                    modestbranding: 1,
-                    fs: 1,
-                    cc_load_policy: 0,
-                    iv_load_policy: 3,
-                    autohide: 1,
-                    disablekb: 0,
-                    enablejsapi: 1,
-                    origin: window.location.origin,
-                    branding: 0,
-                    color: 'white',
-                    theme: 'dark'
-                  }
-                }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
                 </AspectRatio>
               </div>
             </div>
@@ -241,7 +241,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Level Design Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+        <div className="">
           <div className="rounded-lg py-[50px] bg-transparent">
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Level Design</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
@@ -259,7 +259,7 @@ const LearnProjectDetail = () => {
         </div>
       
         {/* Spatial Design Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+        <div className="">
           <div className="rounded-lg bg-transparent">
             <div className="w-full mb-8">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
@@ -284,7 +284,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Post-Project Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 md:px-[200px] z-10 relative">
+        <div className="">
           <div className="rounded-lg py-[50px] bg-transparent">
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300">
               Post-Project Expansion
