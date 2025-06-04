@@ -1,5 +1,6 @@
 
 import React, { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ImageSliceInteractionProps {
   baseImage: string;
@@ -23,6 +24,7 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
     const x = e.clientX - rect.left;
     const percentage = (x / rect.width) * 100;
     
+    // Instant response - no throttling or debouncing
     setSlicePosition(Math.max(0, Math.min(100, percentage)));
   };
 
@@ -42,9 +44,9 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
         draggable={false}
       />
       
-      {/* Overlay Image */}
+      {/* Overlay Image with smooth transition */}
       <div 
-        className="absolute top-0 left-0 w-full h-full overflow-hidden"
+        className="absolute top-0 left-0 w-full h-full overflow-hidden transition-all duration-300 ease-in-out"
         style={{ clipPath: `inset(0 ${100 - slicePosition}% 0 0)` }}
       >
         <img 
@@ -55,12 +57,26 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
         />
       </div>
       
-      {/* Vertical Divider Line */}
+      {/* Vertical Divider Line with arrows */}
       {isHovering && (
-        <div 
-          className="absolute top-0 h-full w-0.5 bg-white shadow-lg pointer-events-none z-10 transition-all duration-75"
-          style={{ left: `${slicePosition}%` }}
-        />
+        <>
+          {/* Main divider line */}
+          <div 
+            className="absolute top-0 h-full w-0.5 bg-white shadow-lg pointer-events-none z-10 transition-all duration-75"
+            style={{ left: `${slicePosition}%` }}
+          />
+          
+          {/* Arrow indicators */}
+          <div 
+            className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 pointer-events-none z-20 flex items-center gap-2 transition-all duration-75"
+            style={{ left: `${slicePosition}%` }}
+          >
+            <div className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg flex items-center gap-1">
+              <ChevronLeft className="w-3 h-3 text-black" />
+              <ChevronRight className="w-3 h-3 text-black" />
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
