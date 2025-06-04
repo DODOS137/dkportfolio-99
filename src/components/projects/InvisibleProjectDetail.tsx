@@ -333,16 +333,16 @@ const InvisibleProjectDetail = () => {
 
           
               
-            {/* Custom Slider1 */}
-             <div className="w-full mb-40">
+              {/* Spatial Slider 1 */}
+          <div className="w-full mb-40">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
-            loop: true
-             }}>
+                loop: true
+              }}>
               <CarouselContent>
                 {sliderImages.map((image, index) => <CarouselItem key={index}>
                     <div className="relative w-full">
-                      <AspectRatio ratio={16 / 9} className="w-full">
-                        <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
+                      <AspectRatio ratio={3 / 4} className="h-[400px] w-[300px] mx-auto">
+                        <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-contain" />
                       </AspectRatio>
                     </div>
                   </CarouselItem>)}
@@ -480,7 +480,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-          {/* Custom Slider2 */}
+          {/* Custom Slider */}
           <div className="w-full mb-40">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
             loop: true
