@@ -51,6 +51,9 @@ const InvisibleProjectDetail = () => {
         </div>
       </section>
 
+    {/*Line*/} <div className="w-full h-px bg-white/10 my-40"></div>
+
+
       {/* Content Section */}
       <section className="pb-20">
         {/* First Image */}
