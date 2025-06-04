@@ -220,11 +220,12 @@ const LearnProjectDetail = () => {
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-normal mb-40">
                 Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
               </p>
+            </div>
 
               <div className="">
                 <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                   <AspectRatio ratio={16 / 9} className="w-full">
-                    <YouTube videoId="KT0Cwy9s5n8" opts={{
+                    <YouTube videoId="https://youtu.be/aCJblmM9yzs" opts={{
                     width: '100%',
                     height: '100%',
                     playerVars: {
