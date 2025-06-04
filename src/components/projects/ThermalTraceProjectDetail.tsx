@@ -1,14 +1,11 @@
 
-import ImageSliceInteraction from '@/components/ImageSliceInteraction';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-import ModelViewer from '@/components/ModelViewer';
 import { thermalTraceProjectData } from '@/data/thermalTraceProject';
-import YouTube from 'react-youtube';
 
 const ThermalTraceProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
@@ -87,7 +84,7 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Approach Section */}
           <div className="w-full h-auto mb-40">
-            <ImageSliceInteraction baseImage="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" overlayImage="/images/overlay-version.png" />
+            <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" alt="Thermal Trace Approach" className="w-full h-auto object-contain" />
           </div>
           
           <div className=""> 
