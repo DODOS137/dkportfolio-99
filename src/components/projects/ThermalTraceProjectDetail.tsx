@@ -23,17 +23,17 @@ const LearnProjectDetail = () => {
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
         <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
-            {project.heroTitle}
+            Thermal Trace
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
-            {project.heroSubtitle}
+            XR & Exhibition Design
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.heroYear}</span>
+            <span>2023</span>
             <span>•</span>
-            <span>MA Thesis</span>
+            <span>Personal Work </span>
             <span>•</span>
-            <span>Virtual Reality Designer</span>
+            <span>Mixed Reality & Exhibition Designer</span>
           </div>
         </div>
       </section>
