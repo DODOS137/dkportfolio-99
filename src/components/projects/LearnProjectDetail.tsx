@@ -97,7 +97,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Process Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+        <div className="">
           <div className="rounded-lg bg-transparent ">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
