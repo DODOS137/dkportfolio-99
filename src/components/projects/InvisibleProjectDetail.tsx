@@ -8,12 +8,14 @@ import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  const sliderImages = ["/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png", "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png", "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png", "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png", "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png"];
+  const sliderImages = ["/lovable-uploads/e9c3e59e-f667-441f-ab0f-dfe2db88c626.png", "/lovable-uploads/05d3de66-0d52-4952-861b-5d6b438d7066.png", "/lovable-uploads/2118efa4-aea4-4fc8-b751-4cc65a13295f.png", "/lovable-uploads/8b1876d6-d569-44d5-b99e-68250b4f1e56.png", "/lovable-uploads/72418785-a3a0-49a4-a660-7ab2507d9d4e.png"];
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+
   useEffect(() => {
     if (!api) {
       return;
@@ -23,6 +25,7 @@ const InvisibleProjectDetail = () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
+
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
@@ -50,9 +53,6 @@ const InvisibleProjectDetail = () => {
           </div>
         </div>
       </section>
-
-
-
 
       {/* Content Section */}
       <section className="pb-20">
@@ -93,17 +93,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-         
-          
-          
-          
           {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-         
-          
-          
-          
-          
           {/* YouTube Video Player */}
           {project.videoId && <div className="">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
@@ -158,12 +149,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-
           {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-          
 
           {/* Process Section */}
           <div className="">
@@ -210,11 +196,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
-          
           {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          
 
           {/* Worldbuilding + Image Section */}
           <div className="">
@@ -236,10 +218,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          
 
           {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
           <div className="">
@@ -271,11 +250,8 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
           {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-
-          
           {/* Video development + Image Section */}
           <div className="">
             {/* Video Image */}
@@ -296,11 +272,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
           {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-          
 
           {/* Level Design */}
           <div className="">
@@ -318,10 +290,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
           {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          
 
           {/* Spatial Design + Image Section */}
           <div className="">
@@ -331,8 +300,6 @@ const InvisibleProjectDetail = () => {
                 
               </div> 
 
-          
-              
               {/* Spatial Slider 1 */}
           <div className="w-full mb-40">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
@@ -357,11 +324,6 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
         
-     
-
-
-
-              
               {/* Spatial Design */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16  mt-40">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
@@ -372,13 +334,7 @@ const InvisibleProjectDetail = () => {
                 </p>
               </div>
 
-
-
-              
              {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-              
 
               {/* Title */}
               <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300  mb-8">
@@ -424,11 +380,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-
           {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-          
 
           {/* Post-Project */}
           <div className="">
@@ -529,4 +481,5 @@ const InvisibleProjectDetail = () => {
       <BackToTopButton />
     </div>;
 };
+
 export default InvisibleProjectDetail;
