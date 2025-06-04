@@ -51,7 +51,7 @@ const InvisibleProjectDetail = () => {
         </div>
       </section>
 
-    {/*Line*/} <div className="w-full h-px bg-white/10 my-40"></div>
+
 
 
       {/* Content Section */}
@@ -92,6 +92,8 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
           </div>
+
+          {/*Line*/} <div className="w-full h-px bg-white/10 my-40"></div>
 
           {/* YouTube Video Player */}
           {project.videoId && <div className="">
