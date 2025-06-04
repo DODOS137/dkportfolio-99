@@ -53,7 +53,7 @@ const LearnProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 ">        
         {/* Project Description */}
         <div className="">
-          <div className="rounded-lg bg-transparent px-0">
+          <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
               {project.title}
             </h2>
