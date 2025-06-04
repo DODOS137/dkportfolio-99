@@ -46,7 +46,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 mb-40">        
+        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 mb-60">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
@@ -295,7 +295,7 @@ const LearnProjectDetail = () => {
         </div>
       
         {/*Void*/}
-        <div className="pb-40 flex items-center justify-center">
+        <div className="pb-60 flex items-center justify-center">
           <Link to="/project/learn" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
             <span>Next project</span>
             <ArrowRight className="w-5 h-5" />
