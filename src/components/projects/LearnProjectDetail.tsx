@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -8,13 +7,10 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -93,7 +89,7 @@ const LearnProjectDetail = () => {
             <div className="rounded-lg  bg-transparent ">
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
-                <h2 className="text-2xl font-light text-gray-300 md:text-xl">Approach</h2>
+                <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px]">Approach</h2>
                 <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                   The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
                 </p>
@@ -229,26 +225,26 @@ const LearnProjectDetail = () => {
                 <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                   <AspectRatio ratio={16 / 9} className="w-full">
                     <YouTube videoId="KT0Cwy9s5n8" opts={{
-                      width: '100%',
-                      height: '100%',
-                      playerVars: {
-                        autoplay: 0,
-                        controls: 1,
-                        rel: 0,
-                        showinfo: 0,
-                        modestbranding: 1,
-                        fs: 1,
-                        cc_load_policy: 0,
-                        iv_load_policy: 3,
-                        autohide: 1,
-                        disablekb: 0,
-                        enablejsapi: 1,
-                        origin: window.location.origin,
-                        branding: 0,
-                        color: 'white',
-                        theme: 'dark'
-                      }
-                    }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
                   </AspectRatio>
                 </div>
               </div>
@@ -326,18 +322,14 @@ const LearnProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default LearnProjectDetail;
