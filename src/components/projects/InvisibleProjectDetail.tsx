@@ -63,7 +63,7 @@ const InvisibleProjectDetail = () => {
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
           {/* Project Description */}
-          <div className="pb-40">
+          <div className="">
             <div className="rounded-lg bg-transparent">
               <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">{project.title}</h2>
               <p data-lovable-editable="true" className="text-lg text-gray-300 leading-relaxed mb-8 md:text-xl font-light">{project.mainDescription}</p>
@@ -91,7 +91,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* YouTube Video Player */}
-          {project.videoId && <div className="pb-40">
+          {project.videoId && <div className="">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <YouTube videoId={project.videoId} opts={{
@@ -120,7 +120,7 @@ const InvisibleProjectDetail = () => {
             </div>}
 
           {/* Approach & Development */}
-          <div className="pb-40">
+          <div className="">
             <div className="rounded-lg bg-transparent ">
               {/* Approach Section */}
               <div className="">
@@ -145,7 +145,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Process Section */}
-          <div className="pb-40">
+          <div className="">
             <div className="rounded-lg bg-transparent">
               <h2 data-lovable-editable="true" className="text-2xl mb-8 text-gray-300 font-light md:text-xl">Process</h2>
 
@@ -181,7 +181,7 @@ const InvisibleProjectDetail = () => {
 
               {/* Preliminary Research – Survey Data */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                <div className="rounded-lg bg-transparent pt-[50px]">
+                <div className="rounded-lg bg-transparent ">
                   <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
                   <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
                 </div>
@@ -190,7 +190,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Worldbuilding + Image Section */}
-          <div className="pb-40">
+          <div className="">
             {/* world image */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
@@ -200,7 +200,7 @@ const InvisibleProjectDetail = () => {
 
             {/* Worldbuilding*/}
             <div className="rounded-lg  bg-transparent">
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pt-8">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 ">
                 <h2 className="text-2xl font-light min-w-[200px] md:text-xl text-gray-300 whitespace-nowrap" data-lovable-editable="true">
                   Worldbuilding
                 </h2>
@@ -212,13 +212,13 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
-          <div className="pb-40">
+          <div className="">
             {/* DNA Image */}
             <div className="w-full">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
 
-            <div className="rounded-lg py-[50px] bg-transparent space-y-8">
+            <div className="rounded-lg py-[50px] bg-transparent ">
               {/* Section 1 */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
@@ -242,14 +242,14 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Video development + Image Section */}
-          <div className="pb-40">
+          <div className="">
             {/* Video Image */}
             <div className="w-full">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png" />
             </div>
 
             {/* Video Development */}
-            <div className="rounded-lg py-[50px] bg-transparent space-y-16">
+            <div className="rounded-lg py-[50px] bg-transparent ">
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Video Development
@@ -262,7 +262,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Level Design */}
-          <div className="pb-40">
+          <div className="">
             <div className="rounded-lg bg-transparent">
               {/* Level Design */}
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
@@ -278,7 +278,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Spatial Design + Image Section */}
-          <div className="pb-40">
+          <div className="">
             <div className="rounded-lg bg-transparent">
               {/* Spatial Design image */}
               <div className="w-full mb-8">
@@ -286,7 +286,7 @@ const InvisibleProjectDetail = () => {
               </div> 
               
               {/* Spatial Design */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-40">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 ">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Spatial Design
                 </h2>
@@ -340,7 +340,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Post-Project */}
-          <div className="pb-40">
+          <div className="">
             <div className="rounded-lg bg-transparent">
               {/* Title */}
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
@@ -365,16 +365,16 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* 6th & 7th & 8th Image */}
-          <div className="w-full pb-40">
+          <div className="w-full ">
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" />
           </div>
 
           {/* 9th Image */}
-          <div className="w-full pb-40">
+          <div className="w-full ">
             <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto pb-8" />
-            <div className="rounded-lg py-20 bg-transparent">
+            <div className="rounded-lg  bg-transparent">
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
                 The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
               </p>
@@ -390,7 +390,7 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/* Custom Slider */}
-          <div className="w-full pb-40">
+          <div className="w-full">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
             loop: true
           }}>
