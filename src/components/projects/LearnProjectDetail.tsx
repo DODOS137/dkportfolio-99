@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -8,13 +7,10 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -145,7 +141,7 @@ const LearnProjectDetail = () => {
 
           {/* Worldbuilding Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg  bg-transparent">
+            <div className="rounded-lg  bg-transparent  flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
                 Worldbuilding
               </h2>
@@ -326,18 +322,14 @@ const LearnProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default LearnProjectDetail;
