@@ -156,7 +156,7 @@ const LearnProjectDetail = () => {
         <div className="">
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300">Narrative Concept & Logic</h2>
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
+            <p className="text-lg md:text-xl leading-relaxed  text-gray-400 font-light">
               The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
             </p>
           </div>
@@ -204,7 +204,7 @@ const LearnProjectDetail = () => {
 
         {/* Scriptwriting & Storyboard Section */}
         <div className="">
-          <div className="rounded-lg py-[50px] bg-transparent">
+          <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Scriptwriting & Storyboard</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
@@ -242,7 +242,7 @@ const LearnProjectDetail = () => {
 
         {/* Level Design Section */}
         <div className="">
-          <div className="rounded-lg py-[50px] bg-transparent">
+          <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Level Design</h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
@@ -265,7 +265,7 @@ const LearnProjectDetail = () => {
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
             </div> 
             
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-16">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 ">
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Spatial Design
               </h2>
@@ -285,7 +285,7 @@ const LearnProjectDetail = () => {
 
         {/* Post-Project Section */}
         <div className="">
-          <div className="rounded-lg py-[50px] bg-transparent">
+          <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300">
               Post-Project Expansion
             </h2>
