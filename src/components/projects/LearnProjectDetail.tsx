@@ -41,7 +41,7 @@ const LearnProjectDetail = () => {
       {/* Main Content */}
       <section className="pb-20">
         {/* First Image */}
-        <div className="mb-20">
+        <div className="">
           <div className="w-full">
             <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
           </div>
