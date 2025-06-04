@@ -64,7 +64,7 @@ const InvisibleProjectDetail = () => {
         </div>
 
         {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto  px-[460px] z-10 ">
+        <div className="max-w-[1540px] mx-auto  px-[240px] z-10 ">
           {/* Project Description */}
           <div className="">
             <div className="rounded-lg bg-transparent ">
