@@ -332,7 +332,7 @@ const InvisibleProjectDetail = () => {
               </div> 
               
               {/* Spatial Design */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 ">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16  mt-40">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Spatial Design
                 </h2>
@@ -342,7 +342,7 @@ const InvisibleProjectDetail = () => {
               </div>
 
               {/* Title */}
-              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300">
+              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 mt-40 ">
                 Full Playing Video
               </h2>
 
