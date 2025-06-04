@@ -286,7 +286,7 @@ const InvisibleProjectDetail = () => {
               </div> 
               
               {/* Spatial Design */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-32">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 pb-40">
                 <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                   Spatial Design
                 </h2>
@@ -381,7 +381,7 @@ const InvisibleProjectDetail = () => {
             </div>
 
             {/* 10th Image */}
-            <div className="w-full pb-40">
+            <div className="w-full ">
               <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" className="w-full h-auto pb-24" />
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">
                 The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
