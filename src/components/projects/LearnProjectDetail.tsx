@@ -210,7 +210,7 @@ const LearnProjectDetail = () => {
               Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
             </p>
 
-            <div className="mb-8">
+            <div className="">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <YouTube videoId="KT0Cwy9s5n8" opts={{
@@ -243,8 +243,8 @@ const LearnProjectDetail = () => {
         {/* Level Design Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-500">Level Design</h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+            <h2 className="text-2xl font-light  md:text-xl text-gray-500">Level Design</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed ">
               The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
             </p>
             
@@ -261,7 +261,7 @@ const LearnProjectDetail = () => {
         {/* Spatial Design Section */}
         <div className="">
           <div className="rounded-lg bg-transparent">
-            <div className="w-full mb-8">
+            <div className="w-full">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" />
             </div> 
             
@@ -274,7 +274,7 @@ const LearnProjectDetail = () => {
               </p>
             </div>
             
-            <div className="w-full mb-8">
+            <div className="w-full">
             
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
