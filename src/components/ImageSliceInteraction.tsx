@@ -47,13 +47,18 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
       {/* Overlay Image with smooth transition */}
       <div 
         className="absolute top-0 left-0 w-full h-full overflow-hidden transition-all duration-300 ease-in-out"
-        style={{ clipPath: `inset(0 ${100 - slicePosition}% 0 0)` }}
+        style={{ 
+          width: `${slicePosition}%`
+        }}
       >
         <img 
           src={overlayImage} 
           alt="Overlay" 
           className="w-full h-full object-cover"
           draggable={false}
+          style={{ 
+            width: `${containerRef.current ? (containerRef.current.offsetWidth * 100) / slicePosition : 100}%`
+          }}
         />
       </div>
       
@@ -63,7 +68,7 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
           {/* Main divider line */}
           <div 
             className="absolute top-0 h-full w-0.5 bg-white shadow-lg pointer-events-none z-10 transition-all duration-75"
-            style={{ left: `${slicePosition}%` }}
+            style={{ left: `${slicePosition}%`, transform: 'translateX(-50%)' }}
           />
           
           {/* Arrow indicators */}
