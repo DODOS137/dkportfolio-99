@@ -148,7 +148,7 @@ const LearnProjectDetail = () => {
           {/*world Image*/}     
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <img alt="Planet A233 - VR Environment" src="/lovable-uploads/1482eec7-ab0c-4bf5-8d36-c7b0a10c5b1b.png" className="w-full h-full" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
             </AspectRatio>
           </div>          
 
