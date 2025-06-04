@@ -350,7 +350,7 @@ const InvisibleProjectDetail = () => {
               
 
               {/* Title */}
-              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300  mb-40">
+              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300  mb-8">
                 Full Playing Video
               </h2>
 
@@ -408,7 +408,7 @@ const InvisibleProjectDetail = () => {
               </h2>
 
               {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 mt-8 text-gray-400 font-light"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-40 mt-8 text-gray-400 font-light"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
 
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 The Ocean (2025)
