@@ -334,7 +334,7 @@ const InvisibleProjectDetail = () => {
           
               
               {/* Custom Slider */}
-          <div className="w-full mb-40">
+          <div className="h-[1080px] mb-40">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
                 loop: true
               }}>
