@@ -271,6 +271,11 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+
+          {/*Line*/} <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
           {/* Video development + Image Section */}
           <div className="">
             {/* Video Image */}
