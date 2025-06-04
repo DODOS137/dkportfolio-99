@@ -246,6 +246,8 @@ const LearnProjectDetail = () => {
          
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+            <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
+            
             <h2 className="text-2xl font-light md:text-xl text-gray-300 min-w-[200px]">Level Design</h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
               The player navigated through interconnected zones, uncovering narrative fragments and artefacts that unlocked the core event.
@@ -257,8 +259,7 @@ const LearnProjectDetail = () => {
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-40" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/2da6f307-3be3-4083-bdc6-f9a6291d8a8d.png" />
-            </div>
+               </div>
           </div>
 
           {/*Line*/} 
