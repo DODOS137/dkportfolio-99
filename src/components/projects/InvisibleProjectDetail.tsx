@@ -64,7 +64,7 @@ const InvisibleProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 relative -mt-[0%]">
           {/* Project Description */}
           <div className="">
-            <div className="rounded-lg bg-transparent">
+            <div className="rounded-lg bg-transparent pb-40">
               <h2 data-lovable-editable="true" className="text-2xl md:text-3xl mb-8 text-white font-light">{project.title}</h2>
               <p data-lovable-editable="true" className="text-lg text-gray-300 leading-relaxed mb-8 md:text-xl font-light">{project.mainDescription}</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
@@ -121,7 +121,7 @@ const InvisibleProjectDetail = () => {
 
           {/* Approach & Development */}
           <div className="">
-            <div className="rounded-lg bg-transparent ">
+            <div className="rounded-lg bg-transparent  pt-8 pb-40">
               {/* Approach Section */}
               <div className="">
                 <h2 data-lovable-editable="true" className="text-2xl md:text-xl text-white font-light mb-8">
@@ -181,9 +181,9 @@ const InvisibleProjectDetail = () => {
 
               {/* Preliminary Research – Survey Data */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                <div className="rounded-lg bg-transparent ">
+                <div className="rounded-lg bg-transparent  ">
                   <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
-                  <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
+                  <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
                 </div>
               </div>
             </div>
