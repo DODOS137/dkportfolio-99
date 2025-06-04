@@ -341,7 +341,7 @@ const InvisibleProjectDetail = () => {
               <CarouselContent>
                 {sliderImages.map((image, index) => <CarouselItem key={index}>
                     <div className="relative w-full">
-                      <AspectRatio ratio={16 / 9} className="w-full">
+                      <AspectRatio ratio={3 / 4} className="h-[1080px] w-[810px] mx-auto">
                         <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-contain" />
                       </AspectRatio>
                     </div>
