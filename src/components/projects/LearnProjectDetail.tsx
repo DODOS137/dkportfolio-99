@@ -140,9 +140,9 @@ const LearnProjectDetail = () => {
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Worldbuilding Section */}
-          <div className="">
+          <div className=" flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg  bg-transparent">
-              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8">
+              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
                 Worldbuilding
               </h2>
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
@@ -150,6 +150,7 @@ const LearnProjectDetail = () => {
 
                 The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
               </p>
+            </div>
 
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
