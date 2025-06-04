@@ -48,7 +48,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Project Description */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+        <div className="max-w-[1540px] mx-auto px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
               {project.title}
