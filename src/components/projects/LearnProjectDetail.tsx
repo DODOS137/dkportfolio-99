@@ -47,6 +47,10 @@ const LearnProjectDetail = () => {
           </div>
         </div>
 
+      
+        
+        {/* Shared Container */}
+        <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 ">        
         {/* Project Description */}
         <div className="max-w-[1540px] mx-auto px-6 relative z-10 md:px-[150px]">
           <div className="rounded-lg bg-transparent px-0">
@@ -289,6 +293,7 @@ const LearnProjectDetail = () => {
               To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.
             </p>
           </div>
+        </div>
         </div>
 
         {/* Remaining Images */}
