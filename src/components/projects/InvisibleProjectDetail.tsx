@@ -333,7 +333,7 @@ const InvisibleProjectDetail = () => {
 
           
               
-              {/* Custom Slider */}
+              {/* Spatial Custom Slider */}
           <div className="w-full mb-40">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
                 loop: true
@@ -341,7 +341,7 @@ const InvisibleProjectDetail = () => {
               <CarouselContent>
                 {sliderImages.map((image, index) => <CarouselItem key={index}>
                     <div className="relative w-full">
-                      <AspectRatio ratio={16 / 9} className="w-full">
+                      <AspectRatio ratio={3 / 4} className="h-full">
                         <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                       </AspectRatio>
                     </div>
