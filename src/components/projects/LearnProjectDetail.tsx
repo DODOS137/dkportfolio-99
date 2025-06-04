@@ -170,12 +170,12 @@ const LearnProjectDetail = () => {
             <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">Character Design</h2>
             
              <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" className="w-full h-auto mt-40 " src="/lovable-uploads/8f30f1d4-1a98-4bec-aa7f-b791f677dd80.png" />
+              <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
               </div>
       
             {/* Character Images */}
             <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" className="w-full h-auto mt-40 " src="/lovable-uploads/8f30f1d4-1a98-4bec-aa7f-b791f677dd80.png" />
+              <img alt="RX-056 Character Design" src="/lovable-uploads/8f30f1d4-1a98-4bec-aa7f-b791f677dd80.png" className="w-full h-auto mt-16" />
               <img alt="RX-056 Character Design" className="w-full h-auto" src="/lovable-uploads/31e955eb-9798-4117-b7aa-a8a9e8bccef4.png" />
             </div>
 
