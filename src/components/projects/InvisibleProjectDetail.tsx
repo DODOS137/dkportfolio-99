@@ -350,7 +350,7 @@ const InvisibleProjectDetail = () => {
               
 
               {/* Title */}
-              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300  ">
+              <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300  mb-40">
                 Full Playing Video
               </h2>
 
@@ -384,12 +384,12 @@ const InvisibleProjectDetail = () => {
               </div>
 
               {/* Evaluation Summary */}
-              <h2 data-lovable-editable="true" className="text-2xl font-light  md:text-xl text-gray-300">
+              <h2 data-lovable-editable="true" className="text-2xl font-light  md:text-xl text-gray-300 mt-32">
                 Evaluation Summary
               </h2>
 
               {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed  text-gray-400 font-light"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed  text-gray-400 font-light mt-8"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
             </div>
           </div>
 
@@ -408,7 +408,7 @@ const InvisibleProjectDetail = () => {
               </h2>
 
               {/* Description */}
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 text-gray-400 font-light"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed mb-8 mt-8 text-gray-400 font-light"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
 
               <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 md:text-xl text-gray-300">
                 The Ocean (2025)
@@ -419,7 +419,7 @@ const InvisibleProjectDetail = () => {
               {/* 5th & 5-1 image */}
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png" />
+                <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png" className="w-full h-auto mb-40" />
               </div> 
             </div>
           </div>
@@ -428,29 +428,29 @@ const InvisibleProjectDetail = () => {
           <div className="w-full ">
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
             <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
-            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" />
+            <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" className="w-full h-auto mb-40" />
           </div>
 
           {/* 9th Image */}
           <div className="w-full ">
-            <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto pb-8" />
+            <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto mb-40" />
             <div className="rounded-lg  bg-transparent">
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
                 The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
               </p>
             </div>
 
             {/* 10th Image */}
             <div className="w-full ">
-              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" className="w-full h-auto pb-24" />
-              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" className="w-full h-auto mb-40" />
+              <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
                 The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
               </p>
             </div>
           </div>
 
           {/* Custom Slider */}
-          <div className="w-full">
+          <div className="w-full mb-40">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
             loop: true
           }}>
