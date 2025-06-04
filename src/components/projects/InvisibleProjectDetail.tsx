@@ -330,6 +330,37 @@ const InvisibleProjectDetail = () => {
               <div className="w-full mb-8">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
               </div> 
+
+          
+              
+              {/* Custom Slider */}
+          <div className="w-full mb-40">
+            <Carousel className="w-full bg-black" setApi={setApi} opts={{
+            loop: true
+          }}>
+              <CarouselContent>
+                {sliderImages.map((image, index) => <CarouselItem key={index}>
+                    <div className="relative w-full">
+                      <AspectRatio ratio={16 / 9} className="w-full">
+                        <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
+                      </AspectRatio>
+                    </div>
+                  </CarouselItem>)}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+            </Carousel>
+
+            {/* Bar-shaped indicators below the slider */}
+            <div className="flex justify-center space-x-2 mt-6">
+              {sliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => api?.scrollTo(index)} />)}
+            </div>
+          </div>
+        
+     
+
+
+
               
               {/* Spatial Design */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16  mt-40">
