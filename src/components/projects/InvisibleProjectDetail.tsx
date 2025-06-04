@@ -93,8 +93,17 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-          {/*Line*/} <div className="w-full h-px bg-white/10 my-40"></div>
+         
+          
+          
+          
+          {/*Line*/} <div className="w-full h-px bg-white my-40"></div>
 
+         
+          
+          
+          
+          
           {/* YouTube Video Player */}
           {project.videoId && <div className="">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
