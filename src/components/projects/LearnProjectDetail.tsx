@@ -52,7 +52,7 @@ const LearnProjectDetail = () => {
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-6 md:px-[200px] z-10 ">        
         {/* Project Description */}
-        <div className="max-w-[1540px] mx-auto px-6 relative z-10 md:px-[150px]">
+        <div className="">
           <div className="rounded-lg bg-transparent px-0">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
               {project.title}
@@ -84,7 +84,7 @@ const LearnProjectDetail = () => {
         </div>
 
         {/* Approach Section */}
-        <div className="max-w-[1540px] mx-auto mb-32 px-6 relative z-10 md:px-[150px]">
+        <div className="">
           <div className="rounded-lg  bg-transparent ">
             <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto pb-8" />
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
