@@ -328,7 +328,7 @@ const InvisibleProjectDetail = () => {
             <div className="rounded-lg bg-transparent">
               {/* Spatial Design image */}
               <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/e12c5252-748d-4ba9-bad7-57ef8697a9a9.png" />
+                
               </div> 
 
           
@@ -336,8 +336,8 @@ const InvisibleProjectDetail = () => {
               {/* Custom Slider */}
           <div className="w-full mb-40">
             <Carousel className="w-full bg-black" setApi={setApi} opts={{
-            loop: true
-          }}>
+                loop: true
+              }}>
               <CarouselContent>
                 {sliderImages.map((image, index) => <CarouselItem key={index}>
                     <div className="relative w-full">
