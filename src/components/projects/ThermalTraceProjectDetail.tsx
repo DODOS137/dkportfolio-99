@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -7,13 +6,10 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import ImageSliceInteraction from '@/components/ImageSliceInteraction';
 import { thermalTraceProjectData } from '@/data/thermalTraceProject';
-
 const ThermalTraceProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = thermalTraceProjectData;
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -55,10 +51,7 @@ const ThermalTraceProjectDetail = () => {
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
               Thermal Trace
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
-              This solo exhibition project reimagined the fashion show format through body-heat detection and spatial camouflage. The experience enabled viewers to uncover concealed figures using only thermal presence, prompting a shift away from conventional spectacle towards perception, proximity, and sensory engagement. 
-              Rather than relying on traditional visuals, the system responded to audience movement and temperature, generating a dynamic interface between human and environment. This approach proposed a new experiential paradigm—where viewers no longer observe passively, but become agents of discovery within a choreographed spatial interaction.
-            </p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
@@ -87,10 +80,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             {/* Interactive Image Slice */}
             <div className="w-full h-auto mb-40">
-              <ImageSliceInteraction 
-                baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" 
-                overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" 
-              />
+              <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
              <h2 className="text-2xl font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
             
             </div>
@@ -98,9 +88,7 @@ const ThermalTraceProjectDetail = () => {
             
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                This project aimed to establish a new language for runway design—less theatrical, more atmospheric. By merging fashion, spatial installation, and extended reality, the work challenged established presentation norms and opened new possibilities for immersive exhibition formats. The audience's presence became part of the scenography, turning observation into interaction.
-              </p>
+              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">The work reimagines the runway as a perceptual landscape rather than a stage. Models and viewers alike are disguised to dissolve the boundary between object and subject. Physical presence becomes the primary interface, with proximity and body temperature guiding interaction. Mixed reality overlays augment the scene, constructing a layered exhibition space that blends tangible matter with ephemeral perception. This approach fosters new ways of engaging with space, narrative, and the concept of visibility.</p>
             </div>
           </div>
 
@@ -143,7 +131,9 @@ const ThermalTraceProjectDetail = () => {
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
                 <div className="rounded-lg bg-transparent  mt-40">
                   <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
-                  <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
+                  <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A preliminary survey involving 56 participants supported the project’s underlying premise. 78% responded positively to the idea that fashion shows should explore new formats beyond traditional spectacle. Notably, 40% of respondents (22 individuals) identified themselves as fashion designers or industry professionals, underscoring the field’s appetite for more experimental modes of presentation.
+
+                </p>
                 </div>
               </div>
 
@@ -190,18 +180,14 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default ThermalTraceProjectDetail;
