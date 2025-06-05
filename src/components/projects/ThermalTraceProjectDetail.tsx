@@ -110,8 +110,8 @@ const ThermalTraceProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Environment Research</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Stage Environment Research</p>
+                  
                   <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
                 </div>
               </div>
@@ -119,10 +119,10 @@ const ThermalTraceProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Thermal Detection</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Idea Development</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
                   <p className="text-gray-400 text-sm leading-relaxed">User Interaction</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Exhibition Layout</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Exhibition Design</p>
                 </div>
               </div>
              
