@@ -129,14 +129,7 @@ const ThermalTraceProjectDetail = () => {
               
           {/* Technology Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
-                Technology
-              </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
-                The installation utilized thermal imaging cameras and computer vision algorithms to detect human body heat signatures in real-time. Custom software processed thermal data to reveal hidden figures through spatial mapping, creating an invisible layer of interaction between viewers and the exhibition space. The system responded to proximity and movement, generating dynamic visual feedback that transformed the traditional fashion runway into an immersive sensory experience.
-              </p>
-            </div>
+            
           </div>
 
 
