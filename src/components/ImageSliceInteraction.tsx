@@ -45,7 +45,7 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
       {/* Overlay Image */}
       <div 
         className="absolute top-0 left-0 w-full h-full overflow-hidden"
-        style={{ clipPath: `inset(0 ${100 - slicePosition}% 0 0)` }}
+        style={{ clipPath: `inset(0 0 0 ${100 - slicePosition}%)` }}
       >
         <img 
           src={overlayImage} 
