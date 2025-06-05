@@ -81,7 +81,7 @@ const ThermalTraceProjectDetail = () => {
             {/* Interactive Image Slice */}
             <div className="w-full h-auto mb-40">
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
-             <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
+             <h2 className="text-2xl font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
             
             </div>
             
@@ -110,8 +110,8 @@ const ThermalTraceProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Stage Environment Research</p>
-                  
+                  <p className="text-gray-400 text-sm leading-relaxed">Environment Research</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
                 </div>
               </div>
@@ -119,10 +119,10 @@ const ThermalTraceProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Idea Development</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Thermal Detection</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
                   <p className="text-gray-400 text-sm leading-relaxed">User Interaction</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Exhibition Design</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Exhibition Layout</p>
                 </div>
               </div>
              
