@@ -275,9 +275,7 @@ const LearnProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Spatial Design
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                Each location reinforces narrative through design—guiding player decisions and pacing through spatial sequencing.
-              </p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.</p>
             </div>
             
             <div className="w-full">
@@ -293,9 +291,15 @@ const LearnProjectDetail = () => {
             <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-8">
               Post-Project Expansion
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
-              To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.
-            </p>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-60">All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
+
+
+
+
+
+
+
+          </p>
           </div>
         </div>
       
