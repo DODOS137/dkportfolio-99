@@ -111,7 +111,7 @@ const ThermalTraceProjectDetail = () => {
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Stage Environment Research</p>
-                  
+                  <p className="text-gray-400 text-sm leading-relaxed">Survey</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
                 </div>
               </div>
@@ -126,19 +126,9 @@ const ThermalTraceProjectDetail = () => {
                 </div>
               </div>
              
-              
-          {/* Technology Section */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            
-          </div>
-
-
-              
             </div>
           </div>
 
-          {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Technology Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
