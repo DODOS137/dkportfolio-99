@@ -98,7 +98,7 @@ const ThermalTraceProjectDetail = () => {
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-40">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -111,7 +111,7 @@ const ThermalTraceProjectDetail = () => {
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Stage Environment Research</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Survey</p>
+                  
                   <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
                 </div>
               </div>
@@ -126,9 +126,19 @@ const ThermalTraceProjectDetail = () => {
                 </div>
               </div>
              
+              
+          {/* Technology Section */}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            
+          </div>
+
+
+              
             </div>
           </div>
 
+          {/* Line */} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Technology Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
