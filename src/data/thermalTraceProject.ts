@@ -9,7 +9,7 @@ export const thermalTraceProjectData: ProjectData = {
   client: "Design Museum",
   role: "XR Designer",
   images: [
-    "/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png"
+    "/lovable-uploads/3fafe769-9913-49df-bb9c-d5f8af99611b.png"
   ],
   heroTitle: "THERMAL TRACE",
   heroSubtitle: "XR & Exhibition Design",
