@@ -58,7 +58,7 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
       {/* Vertical Divider Line */}
       {isHovering && (
         <div 
-          className="absolute top-0 h-full w-0.5 bg-white shadow-lg pointer-events-none z-10 transition-all duration-75"
+          className="absolute top-0 h-full w-0.5 bg-white shadow-lg pointer-events-none z-10 transition-all duration-200 ease-out"
           style={{ left: `${slicePosition}%` }}
         />
       )}
