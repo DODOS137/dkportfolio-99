@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -6,10 +7,13 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import ImageSliceInteraction from '@/components/ImageSliceInteraction';
 import { thermalTraceProjectData } from '@/data/thermalTraceProject';
+
 const ThermalTraceProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = thermalTraceProjectData;
-  return <div className="min-h-screen bg-black text-white">
+  
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -81,10 +85,8 @@ const ThermalTraceProjectDetail = () => {
             {/* Interactive Image Slice */}
             <div className="w-full h-auto mb-40">
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
-             <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
-            
+              <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
             </div>
-            
             
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
@@ -111,7 +113,6 @@ const ThermalTraceProjectDetail = () => {
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Stage Environment Research</p>
-                  
                   <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
                 </div>
               </div>
@@ -125,18 +126,20 @@ const ThermalTraceProjectDetail = () => {
                   <p className="text-gray-400 text-sm leading-relaxed">Exhibition Design</p>
                 </div>
               </div>
-             
+            </div>
+          </div>
+
+          {/* Line */} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
               
           {/* Technology Section */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
-                Technology
-              </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
-                The installation utilized thermal imaging cameras and computer vision algorithms to detect human body heat signatures in real-time. Custom software processed thermal data to reveal hidden figures through spatial mapping, creating an invisible layer of interaction between viewers and the exhibition space. The system responded to proximity and movement, generating dynamic visual feedback that transformed the traditional fashion runway into an immersive sensory experience.
-              </p>
-            </div>
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+            <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
+              Technology
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
+              The installation utilized thermal imaging cameras and computer vision algorithms to detect human body heat signatures in real-time. Custom software processed thermal data to reveal hidden figures through spatial mapping, creating an invisible layer of interaction between viewers and the exhibition space. The system responded to proximity and movement, generating dynamic visual feedback that transformed the traditional fashion runway into an immersive sensory experience.
+            </p>
           </div>
 
           {/* Line */} 
@@ -162,14 +165,18 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default ThermalTraceProjectDetail;
