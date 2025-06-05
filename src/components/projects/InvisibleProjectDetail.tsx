@@ -219,10 +219,7 @@ const InvisibleProjectDetail = () => {
             {/* world image */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                
-              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/d208fad2-7b54-4813-8d7a-93ebd2aaa70e.png" />
-             <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/d208fad2-7b54-4813-8d7a-93ebd2aaa70e.png" />
-              
+                <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/d208fad2-7b54-4813-8d7a-93ebd2aaa70e.png" />
               </AspectRatio>
             </div>
 
