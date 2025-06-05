@@ -8,22 +8,19 @@ import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
-
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
-  
+
   // First spatial slider images (new images)
   const firstSliderImages = ["/lovable-uploads/b3851ebc-35db-4397-8f5e-e5286275ac0d.png", "/lovable-uploads/8f303355-f7f8-417f-a4e4-fa9109e312db.png", "/lovable-uploads/89363d60-1e48-438d-aef9-e1f5b6c4d7df.png", "/lovable-uploads/1c29e559-8fb5-43b8-85cb-bbe881e4b5b5.png", "/lovable-uploads/663f86d2-c014-4d12-bc43-879d35aa70b2.png"];
-  
+
   // Second slider images (original images)
   const secondSliderImages = ["/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png", "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png", "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png", "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png", "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png"];
-  
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
-
   useEffect(() => {
     if (!api) {
       return;
@@ -33,7 +30,6 @@ const InvisibleProjectDetail = () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-
   useEffect(() => {
     if (!secondApi) {
       return;
@@ -43,9 +39,7 @@ const InvisibleProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-6 md:py-8">
         <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -225,7 +219,7 @@ const InvisibleProjectDetail = () => {
             {/* world image */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <img src="/lovable-uploads/3c3c9050-0741-450e-a164-f1dd5c4e7296.png" alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-full " />
+                <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/d208fad2-7b54-4813-8d7a-93ebd2aaa70e.png" />
               </AspectRatio>
             </div>
 
@@ -324,8 +318,8 @@ const InvisibleProjectDetail = () => {
               {/* Spatial Slider 1 - Updated with new images */}
               <div className="w-full mb-40">
                 <Carousel className="w-full bg-black" setApi={setApi} opts={{
-                    loop: true
-                  }}>
+                loop: true
+              }}>
                   <CarouselContent>
                     {firstSliderImages.map((image, index) => <CarouselItem key={index}>
                         <div className="relative w-full">
@@ -502,8 +496,6 @@ const InvisibleProjectDetail = () => {
 
       {/* Back to Top Button */}
       <BackToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default InvisibleProjectDetail;
