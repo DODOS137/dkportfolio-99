@@ -88,8 +88,8 @@ const ThermalTraceProjectDetail = () => {
             {/* Interactive Image Slice */}
             <div className="w-full h-auto mb-40">
               <ImageSliceInteraction 
-                baseImage="/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png" 
-                overlayImage="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" 
+                baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" 
+                overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" 
               />
             </div>
             
