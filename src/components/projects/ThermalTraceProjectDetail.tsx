@@ -91,7 +91,10 @@ const ThermalTraceProjectDetail = () => {
                 baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" 
                 overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" 
               />
+             <h2 className="text-2xl font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
+            
             </div>
+            
             
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
