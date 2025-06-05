@@ -141,7 +141,7 @@ const ThermalTraceProjectDetail = () => {
               <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
                 Technology
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
                 The installation utilized thermal imaging cameras and computer vision algorithms to detect human body heat signatures in real-time. Custom software processed thermal data to reveal hidden figures through spatial mapping, creating an invisible layer of interaction between viewers and the exhibition space. The system responded to proximity and movement, generating dynamic visual feedback that transformed the traditional fashion runway into an immersive sensory experience.
               </p>
             </div>
@@ -150,17 +150,15 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Idea Development Section */}
-       <div className="flex flex-col md:flex-row md:items-start md:space-x-16"> 
+          {/* Impact Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-8">
-              Idea Development
+              Impact & Reception
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
-         This project reframes fashion not as something to be seen, but as something to be discovered. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle cues—heat traces, minor movement, and spatial proximity. This process establishes a reward structure based on attention, shifting the focus from spectacle to perception. Viewers are no longer spectators, but agents of discovery, engaging with presence through sensing rather than simply seeing.
-           </p>
+              The project successfully challenged conventional exhibition formats, demonstrating how technology could enhance rather than overshadow human connection. Visitors reported a heightened sense of awareness and engagement, with many noting how the thermal interaction created moments of unexpected discovery. The work opened new possibilities for integrating invisible technologies into spatial design, influencing subsequent projects in interactive exhibition design.
+            </p>
           </div>
-        </div>
         </div>
       
         {/* Navigation */}
