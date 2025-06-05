@@ -12,8 +12,7 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
   overlayImage,
   className = ""
 }) => {
-  const [slicePosition, setSlicePosition] = useState(50);
-  const [isHovering, setIsHovering] = useState(false);
+  const [slicePosition, setSlicePosition] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -31,8 +30,6 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
       ref={containerRef}
       className={`relative w-full h-auto cursor-none overflow-hidden ${className}`}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
     >
       {/* Base Image */}
       <img 
@@ -54,14 +51,6 @@ const ImageSliceInteraction: React.FC<ImageSliceInteractionProps> = ({
           draggable={false}
         />
       </div>
-      
-      {/* Vertical Divider Line */}
-      {isHovering && (
-        <div 
-          className="absolute top-0 h-full w-0.5 bg-white shadow-lg pointer-events-none z-10 transition-all duration-200 ease-out"
-          style={{ left: `${slicePosition}%` }}
-        />
-      )}
     </div>
   );
 };
