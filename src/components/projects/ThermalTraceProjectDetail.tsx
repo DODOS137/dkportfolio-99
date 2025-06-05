@@ -129,19 +129,6 @@ const ThermalTraceProjectDetail = () => {
               
           {/* Technology Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            
-          </div>
-
-
-              
-            </div>
-          </div>
-
-          {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          {/* Technology Section */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
                 Technology
