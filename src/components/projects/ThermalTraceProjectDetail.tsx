@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -12,6 +13,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -44,10 +46,18 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
+      <ProjectHero 
+        title={project.heroTitle} 
+        subtitle={project.heroSubtitle} 
+        year={project.heroYear} 
+        client="Personal Project" 
+        role="XR & Exhibition Designer" 
+      />
 
       {/* Main Content */}
       <section className="">
@@ -79,10 +89,10 @@ const ThermalTraceProjectDetail = () => {
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 mb-40">
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
-                Idea Development
+                →
               </h2>
-              <p className="text-lg leading-relaxed font-light text-gray-700 md:text-sm">This project reframes fashion not as something to be seen, but as something to be discovered through thermal detection. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle thermal cues—heat traces, environmental temperature shifts, and proximity sensing. The XR installation creates a reward structure based on thermal awareness, shifting the focus from spectacle to sensing. Viewers become thermal explorers, engaging with camouflaged presence through detection rather than simply seeing.</p>
-            </div>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Hover over the image and move your mouse from left to right.</h2>
+              </div>
             </div>
             
             <div className=""> 
@@ -227,6 +237,8 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
