@@ -97,12 +97,13 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Approach Section with Interactive Image */}
           <div className="rounded-lg bg-transparent">
+            {/* Arrow positioned above the image on middle left */}
+            <div className="flex justify-start mb-4">
+              <div className="text-white text-2xl">→</div>
+            </div>
+            
             {/* Interactive Image Slice */}
-            <div className="w-full h-auto mb-40 relative">
-              {/* Arrow positioned on middle left */}
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 z-10">
-                <div className="text-white text-2xl">↓</div>
-              </div>
+            <div className="w-full h-auto mb-40">
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
               <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
             </div>
