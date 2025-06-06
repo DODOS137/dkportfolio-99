@@ -162,7 +162,7 @@ const ThermalTraceProjectDetail = () => {
 
             {/* DNA Image */}
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/50b37e8c-6c9f-4de3-800f-0a7079f38ae1.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" />
             </div>
 
 
