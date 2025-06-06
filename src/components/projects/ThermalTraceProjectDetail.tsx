@@ -20,11 +20,11 @@ const ThermalTraceProjectDetail = () => {
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
   
-  // Updated images for the spatial design carousel
+  // Sample images for the spatial design carousel
   const secondSliderImages = [
-    "/lovable-uploads/9a5669c9-6843-4c93-9b93-c65d497acf1b.png",
-    "/lovable-uploads/9522dd72-0290-4995-b2a6-8533f1487260.png",
-    "/lovable-uploads/7d778c34-de2c-4348-857a-dcd6636ebcc8.png"
+    "/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png",
+    "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png",
+    "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"
   ];
 
   // Process steps data
@@ -163,11 +163,11 @@ const ThermalTraceProjectDetail = () => {
             {/*Spatial Design*/}
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent">
-              <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Spatial Design</h2>
+              <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Transformable stage</h2>
             </div>
             </div>           
 
-          {/* TT Slider - with updated images */}
+          {/* TT Slider - keeping original images */}
           <div className="w-full mb-40">
             <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{
             loop: true
@@ -197,7 +197,22 @@ const ThermalTraceProjectDetail = () => {
                 />
               ))}
             </div>
-          </div>            
+          </div>  
+
+
+          {/* Spatial Design */}
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 mb-40">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
+                Spatial Design
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer’s position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
+              </p>
+              </div>
+
+
+
+            
           </div>
         </ProjectContent>
       
