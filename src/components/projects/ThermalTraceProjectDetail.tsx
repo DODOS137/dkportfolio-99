@@ -155,10 +155,10 @@ const ThermalTraceProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
               <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
-                Technology
+                Narrative
               </h2>
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                The installation utilized thermal imaging cameras and computer vision algorithms to detect human body heat signatures in real-time. Custom software processed thermal data to reveal hidden figures through spatial mapping, creating an invisible layer of interaction between viewers and the exhibition space. The system responded to proximity and movement, generating dynamic visual feedback that transformed the traditional fashion runway into an immersive sensory experience.
+              This project reframes fashion not as something to be seen, but as something to be discovered. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle cues—heat traces, minor movement, and spatial proximity. This process establishes a reward structure based on attention, shifting the focus from spectacle to perception. Viewers are no longer spectators, but agents of discovery, engaging with presence through sensing rather than simply seeing.  
               </p>
             </div>
           </div>
@@ -170,7 +170,12 @@ const ThermalTraceProjectDetail = () => {
 
             {/* Poster Image 2 */}
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-auto mb-40" src="/lovable-uploads/a1ebdba3-23c9-4209-b1e6-13f608275335.png" />
+              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" className="w-full h-auto mb-40" />
+            </div>
+
+           {/* Poster Image 3 */}
+            <div className="w-full">
+              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" className="w-full h-auto mb-40" />
             </div>
 
 
