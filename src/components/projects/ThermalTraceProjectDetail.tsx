@@ -145,6 +145,14 @@ const ThermalTraceProjectDetail = () => {
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">This project reframes fashion not as something to be seen, but as something to be discovered. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle cues—heat traces, minor movement, and spatial proximity. This process establishes a reward structure based on attention, shifting the focus from spectacle to perception. Viewers are no longer spectators, but agents of discovery, engaging with presence through sensing rather than simply seeing.</p>
             </div>
 
+
+            {/*Art Works*/}
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent">
+              <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Arts Works</h2>
+            </div>
+            </div>
+
             {/* Poster Images */}
             <div className="w-full">
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" className="w-full h-auto mb-40" />
@@ -155,7 +163,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/ece1aa37-d3c6-4cb3-8dd6-131fbcb18d63.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
             </div>
 
 
