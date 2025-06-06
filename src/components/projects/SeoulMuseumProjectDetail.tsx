@@ -111,10 +111,12 @@ const SeoulMuseumProjectDetail = () => {
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                The museum’s existing identity suffers from incoherent exhibition flow, high-density displays, and minimal interaction. To address this, the project introduces a cohesive strategy combining spatial clarity with narrative depth. The renewed vision repositions the museum as an interpretive experience rather than a passive repository—fostering a tactile, reflective journey grounded in local heritage.
+                Redefined the museum’s identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
           </div>
+
+          {/*Development Strategy*/}
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
@@ -156,28 +158,24 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Worldbuilding Section */}
+          {/* Site Selection Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
-                Worldbuilding
+                Site Selection
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
-                Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
-
-                The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
-              </p>
+              
             </div>
           </div>
           
-          {/*world Image*/}     
+          {/*Site Image*/}     
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
             </AspectRatio>
           </div>          
 
-          {/* Narrative Concept Section */}
+          {/* Context & Problem Analysis Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Narrative Concept & Logic</h2>
@@ -198,28 +196,13 @@ const SeoulMuseumProjectDetail = () => {
               <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
               </div>
       
-            {/* Character Images */}
+            {/* Brand Identity Redefinition */}
             <div className="w-full mb-32">
               <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
               <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
             </div>
 
-            {/* 3D Models */}
-            <div className="relative overflow-hidden mb-8">
-              <div className="flex w-full">
-                <div className="w-1/2">
-                  <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
-                </div>
-                <div className="w-1/2">
-                  <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
-                </div>
-              </div>
-              <div className="pointer-events-none absolute top-0 left-0 w-full h-[100px] bg-black z-[999]" />
-              <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[100px] bg-black z-[999]" />
-            </div>
-            
-            <h2 className="text-2xl font-light text-center md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
-          </div>
+
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
