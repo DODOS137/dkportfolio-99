@@ -99,28 +99,7 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Interactive Experience Section with iframe */}
-          <div className="rounded-lg bg-transparent mb-40">
-            <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
-            <div 
-              ref={iframeAnimation.ref}
-              className={`w-full transition-all duration-1000 ${
-                iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-            >
-              <AspectRatio ratio={16 / 9} className="w-full bg-black rounded-lg overflow-hidden">
-                <iframe
-                  src="https://thermal-trace-experience.com"
-                  className="w-full h-full border-0"
-                  title="Thermal Trace Interactive Experience"
-                  allowFullScreen
-                />
-              </AspectRatio>
-            </div>
-            <p className="text-sm text-gray-500 mt-4 text-center">
-              Experience the thermal detection interface in real-time
-            </p>
-          </div>
+
 
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
@@ -243,6 +222,29 @@ const ThermalTraceProjectDetail = () => {
 
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+           {/* Interactive Experience Section with iframe */}
+          <div className="rounded-lg bg-transparent mb-40">
+            <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
+            <div 
+              ref={iframeAnimation.ref}
+              className={`w-full transition-all duration-1000 ${
+                iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
+              <AspectRatio ratio={16 / 9} className="w-full h-full bg-black rounded-lg overflow-hidden">
+                <iframe
+                  src="https://thermal-trace-experience.com"
+                  className="w-full h-full border-0"
+                  title="Thermal Trace Interactive Experience"
+                  allowFullScreen
+                />
+              </AspectRatio>
+            </div>
+            <p className="text-sm text-gray-500 mt-4 text-center">
+              Experience the thermal detection interface in real-time
+            </p>
+          </div>
             
           </div>
         </ProjectContent>
