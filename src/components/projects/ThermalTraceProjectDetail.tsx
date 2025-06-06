@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -12,6 +13,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -20,34 +22,52 @@ const ThermalTraceProjectDetail = () => {
   const [secondCurrent, setSecondCurrent] = useState(0);
 
   // Sample images for the spatial design carousel
-  const secondSliderImages = ["/lovable-uploads/9a5669c9-6843-4c93-9b93-c65d497acf1b.png", "/lovable-uploads/9522dd72-0290-4995-b2a6-8533f1487260.png", "/lovable-uploads/7d778c34-de2c-4348-857a-dcd6636ebcc8.png"];
+  const secondSliderImages = [
+    "/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png",
+    "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png",
+    "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"
+  ];
 
   // Process steps data
-  const processSteps = [{
-    title: "Ideation Phase",
-    items: ["Brainstorming", "Concept Sketching"]
-  }, {
-    title: "Analysis",
-    items: ["Stage Environment Research", "Precedent Study"]
-  }, {
-    title: "Design Development",
-    items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
-  }];
+  const processSteps = [
+    {
+      title: "Ideation Phase",
+      items: ["Brainstorming", "Concept Sketching"]
+    },
+    {
+      title: "Analysis",
+      items: ["Stage Environment Research", "Precedent Study"]
+    },
+    {
+      title: "Design Development",
+      items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
+    }
+  ];
 
   // Update current slide when carousel changes
   React.useEffect(() => {
     if (!secondApi) {
       return;
     }
+
     setSecondCurrent(secondApi.selectedScrollSnap());
+
     secondApi.on("select", () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client={project.heroClient} role={project.heroRole} />
+      <ProjectHero
+        title={project.heroTitle}
+        subtitle={project.heroSubtitle}
+        year={project.heroYear}
+        client={project.heroClient}
+        role={project.heroRole}
+      />
 
       {/* Main Content */}
       <section className="">
@@ -64,7 +84,12 @@ const ThermalTraceProjectDetail = () => {
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.</p>
             
-            <ProjectMetadata projectType="Personal Project" projectCategory="XR Contents & Exhibition Design" teamType="Solo Project" duration="8 weeks" />
+            <ProjectMetadata
+              projectType="Personal Project"
+              projectCategory="XR Contents & Exhibition Design"
+              teamType="Solo Project"
+              duration="8 weeks"
+            />
           </div>
 
           {/* Line */} 
@@ -146,16 +171,18 @@ const ThermalTraceProjectDetail = () => {
             {/* TT Slider - keeping original images */}
             <div className="w-full mb-40">
               <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{
-              loop: true
-            }}>
+                loop: true
+              }}>
                 <CarouselContent>
-                  {secondSliderImages.map((image, index) => <CarouselItem key={index}>
+                  {secondSliderImages.map((image, index) => (
+                    <CarouselItem key={index}>
                       <div className="relative w-full">
                         <AspectRatio ratio={16 / 9} className="w-full">
                           <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                         </AspectRatio>
                       </div>
-                    </CarouselItem>)}
+                    </CarouselItem>
+                  ))}
                 </CarouselContent>
                 <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
                 <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
@@ -163,7 +190,13 @@ const ThermalTraceProjectDetail = () => {
 
               {/* Bar-shaped indicators below the slider */}
               <div className="flex justify-center space-x-2 mt-6">
-                {secondSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />)}
+                {secondSliderImages.map((_, index) => (
+                  <div 
+                    key={index} 
+                    className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} 
+                    onClick={() => secondApi?.scrollTo(index)} 
+                  />
+                ))}
               </div>
             </div>  
 
@@ -177,41 +210,29 @@ const ThermalTraceProjectDetail = () => {
               </div>
             </div>
 
-           <div className="w-full">
+            <div className="w-full">
               <img className="w-full h-auto mb-40" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
             </div>
-
-
 
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-
-
-            
-
             {/*Exhibition Design*/}
+
+            {/* Exhibition Design Section with Interactive Image */}
+            <div className="rounded-lg bg-transparent">
+              {/* Interactive Image Slice2 */}
+              <div className="w-full h-auto mb-40">
+                <ImageSliceInteraction baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
+                <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
+              </div>
+            </div>
+
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
               <div className="rounded-lg bg-transparent">
-                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibtion Design</h2>
+                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibition Design</h2>
               </div>
-            </div>  
-           {/* Exhibtion Design Section with Interactive Image */}
-          <div className="rounded-lg bg-transparent">
-            {/* Interactive Image Slice2 */}
-            <div className="w-full h-auto mb-40">
-              <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
-              <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
-              <p>The core prototype features a beach scene (Type A), where white-painted models in swimwear blend seamlessly with a white sand environment. Thermal filters reveal the figures, encouraging a shift in attention from aesthetic display to bodily trace. The work deconstructs the notion of fashion as visibility, presenting instead an immersive search for form and atmosphere.
-              </p>
-            </div>
-           </div>
-
-
-
-
-
-            
+            </div>              
           </div>
         </ProjectContent>
       
@@ -224,14 +245,18 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
