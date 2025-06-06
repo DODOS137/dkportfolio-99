@@ -82,7 +82,7 @@ const LearnProjectDetail = () => {
 
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
-            <img alt="Planet A233 - VR Environment" src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
+            <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -148,7 +148,7 @@ const LearnProjectDetail = () => {
           {/*world Image*/}     
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
+              <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
             </AspectRatio>
           </div>          
 
@@ -251,7 +251,7 @@ const LearnProjectDetail = () => {
             
           </div>
 
-            <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
+            <img className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
             
             <div className="w-full ">
@@ -268,7 +268,7 @@ const LearnProjectDetail = () => {
           {/* Spatial Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-40" />
+              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-40" />
             </div> 
             
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
@@ -279,7 +279,7 @@ const LearnProjectDetail = () => {
             </div>
             
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
             </div> 
           </div>
 
