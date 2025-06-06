@@ -12,7 +12,7 @@ export const islandProjectData: ProjectData = {
   heroTitle: "Island",
   heroSubtitle: "Public Space Design",
   heroYear: "2021",
-  heroClient: "BA Thesis",
+  heroClient: "Bachelor’s Thesis",
   heroRole: "Space Designer",
   mainDescription: "An innovative public space intervention that transforms underutilized urban areas into community gathering spaces through thoughtful design and sustainable materials.",
   projectType: "Urban Planning & Public Space Project",
