@@ -159,6 +159,15 @@ const ThermalTraceProjectDetail = () => {
               The project successfully challenged conventional exhibition formats, demonstrating how technology could enhance rather than overshadow human connection. Visitors reported a heightened sense of awareness and engagement, with many noting how the thermal interaction created moments of unexpected discovery. The work opened new possibilities for integrating invisible technologies into spatial design, influencing subsequent projects in interactive exhibition design.
             </p>
           </div>
+
+            {/* DNA Image */}
+            <div className="w-full">
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
+            </div>
+
+
+
+          
         </div>
       
         {/* Navigation */}
