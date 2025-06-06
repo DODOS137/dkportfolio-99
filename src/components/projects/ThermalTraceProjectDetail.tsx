@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -12,6 +13,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -44,7 +46,9 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -196,19 +200,20 @@ const ThermalTraceProjectDetail = () => {
               {/* Interactive Image Slice2 */}
               <div className="w-full h-auto mb-40">
                 <ImageSliceInteraction baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
-               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-8">
-                <h2 className="text-2xl font-light md:text-xl text-white whitespace-nowrap min-w-8">
-                  →
-                </h2>
-                <p className="text-sm leading-relaxed text-gray-700 font-light md:text-sm">Hover over the image and move your mouse from left to right.</p>
+                <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-8">
+                  <h2 className="text-2xl font-light md:text-xl text-white whitespace-nowrap min-w-8">
+                    →
+                  </h2>
+                  <p className="text-sm leading-relaxed text-gray-700 font-light md:text-sm">Hover over the image and move your mouse from left to right.</p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent">
-                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibition Design</h2>
-              </div>
-            </div>              
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent">
+                  <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibition Design</h2>
+                </div>
+              </div>              
+            </div>
           </div>
         </ProjectContent>
       
@@ -229,6 +234,8 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
