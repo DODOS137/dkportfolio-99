@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -14,7 +13,6 @@ import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -50,9 +48,7 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -99,6 +95,8 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
 
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
@@ -204,7 +202,7 @@ const ThermalTraceProjectDetail = () => {
               {/* Interactive Image Slice2 */}
               <div className="w-full h-auto mb-40">
                 <ImageSliceInteraction baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
-                <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-8">
+                <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-8 text-sm">
                   <h2 className="text-2xl font-light md:text-xl text-white whitespace-nowrap min-w-8">
                     →
                   </h2>
@@ -219,26 +217,16 @@ const ThermalTraceProjectDetail = () => {
               </div>              
             </div>
 
+            {/* Line */} 
+            <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
            {/* Interactive Experience Section with iframe */}
           <div className="rounded-lg bg-transparent mb-40">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
-            <div 
-              ref={iframeAnimation.ref}
-              className={`w-full flex justify-center transition-all duration-1000 ${
-                iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-            >
-              <div className="bg-black rounded-lg overflow-hidden" style={{ width: '1024px', height: '576px' }}>
-                <iframe
-                  src="https://lucent-banoffee-a50286.netlify.app"
-                  width="1024"
-                  height="576"
-                  className="border-0"
-                  style={{ objectFit: 'none', imageRendering: 'pixelated' }}
-                  title="Thermal Trace Interactive Experience"
-                  allowFullScreen
-                />
-              </div>
+            <div ref={iframeAnimation.ref} className={`w-full transition-all duration-1000 ${iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <AspectRatio ratio={16 / 9} className="w-full h-full bg-black rounded-lg overflow-hidden">
+                <iframe src="https://thermal-trace-experience.com" className="w-full h-full border-0" title="Thermal Trace Interactive Experience" allowFullScreen />
+              </AspectRatio>
             </div>
             <p className="text-sm text-gray-500 mt-4 text-center">
               Experience the thermal detection interface in real-time
@@ -265,8 +253,6 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default ThermalTraceProjectDetail;
