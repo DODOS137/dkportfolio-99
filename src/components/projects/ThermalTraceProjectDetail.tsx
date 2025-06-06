@@ -1,15 +1,44 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import ImageSliceInteraction from '@/components/ImageSliceInteraction';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from '@/components/ui/carousel';
 import { thermalTraceProjectData } from '@/data/thermalTraceProject';
+
 const ThermalTraceProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = thermalTraceProjectData;
-  return <div className="min-h-screen bg-black text-white">
+  
+  // Carousel state for the spatial design slider
+  const [secondApi, setSecondApi] = useState<CarouselApi>();
+  const [secondCurrent, setSecondCurrent] = useState(0);
+  
+  // Sample images for the spatial design carousel
+  const secondSliderImages = [
+    "/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png",
+    "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png",
+    "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"
+  ];
+
+  // Update current slide when carousel changes
+  React.useEffect(() => {
+    if (!secondApi) {
+      return;
+    }
+
+    setSecondCurrent(secondApi.selectedScrollSnap());
+
+    secondApi.on("select", () => {
+      setSecondCurrent(secondApi.selectedScrollSnap());
+    });
+  }, [secondApi]);
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -129,7 +158,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent">
               <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.</p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Research into thermal detection technology and alternative fashion presentation methods revealed the potential for creating invisible interactions. Studies of camouflage techniques, thermal imaging capabilities, and XR spatial design informed the conceptual framework. The investigation explored how heat signatures could become a new language for fashion discovery, moving beyond traditional visual consumption to embodied sensing.</p>
             </div>
           </div>
 
@@ -142,9 +171,8 @@ const ThermalTraceProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
                 Idea Development
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">This project reframes fashion not as something to be seen, but as something to be discovered. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle cues—heat traces, minor movement, and spatial proximity. This process establishes a reward structure based on attention, shifting the focus from spectacle to perception. Viewers are no longer spectators, but agents of discovery, engaging with presence through sensing rather than simply seeing.</p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">This project reframes fashion not as something to be seen, but as something to be discovered through thermal detection. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle thermal cues—heat traces, environmental temperature shifts, and proximity sensing. The XR installation creates a reward structure based on thermal awareness, shifting the focus from spectacle to sensing. Viewers become thermal explorers, engaging with camouflaged presence through detection rather than simply seeing.</p>
             </div>
-
 
             {/*Art Works*/}
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -166,11 +194,8 @@ const ThermalTraceProjectDetail = () => {
               <img className="w-full h-auto mb-40" src="/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png" />
             </div>
 
-
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
 
             {/*Spatial Design*/}
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -185,13 +210,15 @@ const ThermalTraceProjectDetail = () => {
             loop: true
           }}>
               <CarouselContent>
-                {secondSliderImages.map((image, index) => <CarouselItem key={index}>
+                {secondSliderImages.map((image, index) => (
+                  <CarouselItem key={index}>
                     <div className="relative w-full">
                       <AspectRatio ratio={16 / 9} className="w-full">
                         <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                       </AspectRatio>
                     </div>
-                  </CarouselItem>)}
+                  </CarouselItem>
+                ))}
               </CarouselContent>
               <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
               <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
@@ -199,12 +226,15 @@ const ThermalTraceProjectDetail = () => {
 
             {/* Bar-shaped indicators below the slider */}
             <div className="flex justify-center space-x-2 mt-6">
-              {secondSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />)}
+              {secondSliderImages.map((_, index) => (
+                <div 
+                  key={index} 
+                  className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} 
+                  onClick={() => secondApi?.scrollTo(index)} 
+                />
+              ))}
             </div>
           </div>            
-
-            
-            
           </div>
         </div>
       
@@ -217,14 +247,18 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default ThermalTraceProjectDetail;
