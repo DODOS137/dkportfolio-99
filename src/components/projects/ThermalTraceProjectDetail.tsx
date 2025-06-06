@@ -12,61 +12,42 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
-
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
-  
+
   // Carousel state for the spatial design slider
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
-  
+
   // Sample images for the spatial design carousel
-  const secondSliderImages = [
-    "/lovable-uploads/9a5669c9-6843-4c93-9b93-c65d497acf1b.png",
-    "/lovable-uploads/9522dd72-0290-4995-b2a6-8533f1487260.png",
-    "/lovable-uploads/7d778c34-de2c-4348-857a-dcd6636ebcc8.png"
-  ];
+  const secondSliderImages = ["/lovable-uploads/9a5669c9-6843-4c93-9b93-c65d497acf1b.png", "/lovable-uploads/9522dd72-0290-4995-b2a6-8533f1487260.png", "/lovable-uploads/7d778c34-de2c-4348-857a-dcd6636ebcc8.png"];
 
   // Process steps data
-  const processSteps = [
-    {
-      title: "Ideation Phase",
-      items: ["Brainstorming", "Concept Sketching"]
-    },
-    {
-      title: "Analysis",
-      items: ["Stage Environment Research", "Precedent Study"]
-    },
-    {
-      title: "Design Development",
-      items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
-    }
-  ];
+  const processSteps = [{
+    title: "Ideation Phase",
+    items: ["Brainstorming", "Concept Sketching"]
+  }, {
+    title: "Analysis",
+    items: ["Stage Environment Research", "Precedent Study"]
+  }, {
+    title: "Design Development",
+    items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
+  }];
 
   // Update current slide when carousel changes
   React.useEffect(() => {
     if (!secondApi) {
       return;
     }
-
     setSecondCurrent(secondApi.selectedScrollSnap());
-
     secondApi.on("select", () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero
-        title={project.heroTitle}
-        subtitle={project.heroSubtitle}
-        year={project.heroYear}
-        client={project.heroClient}
-        role={project.heroRole}
-      />
+      <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client={project.heroClient} role={project.heroRole} />
 
       {/* Main Content */}
       <section className="">
@@ -83,12 +64,7 @@ const ThermalTraceProjectDetail = () => {
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.</p>
             
-            <ProjectMetadata
-              projectType="Personal Project"
-              projectCategory="XR Contents & Exhibition Design"
-              teamType="Solo Project"
-              duration="8 weeks"
-            />
+            <ProjectMetadata projectType="Personal Project" projectCategory="XR Contents & Exhibition Design" teamType="Solo Project" duration="8 weeks" />
           </div>
 
           {/* Line */} 
@@ -173,15 +149,13 @@ const ThermalTraceProjectDetail = () => {
               loop: true
             }}>
                 <CarouselContent>
-                  {secondSliderImages.map((image, index) => (
-                    <CarouselItem key={index}>
+                  {secondSliderImages.map((image, index) => <CarouselItem key={index}>
                       <div className="relative w-full">
                         <AspectRatio ratio={16 / 9} className="w-full">
                           <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                         </AspectRatio>
                       </div>
-                    </CarouselItem>
-                  ))}
+                    </CarouselItem>)}
                 </CarouselContent>
                 <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
                 <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
@@ -189,13 +163,7 @@ const ThermalTraceProjectDetail = () => {
 
               {/* Bar-shaped indicators below the slider */}
               <div className="flex justify-center space-x-2 mt-6">
-                {secondSliderImages.map((_, index) => (
-                  <div 
-                    key={index} 
-                    className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} 
-                    onClick={() => secondApi?.scrollTo(index)} 
-                  />
-                ))}
+                {secondSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />)}
               </div>
             </div>  
 
@@ -210,7 +178,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
            <div className="w-full">
-              <img src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" className="w-full h-auto mb-40" />
+              <img className="w-full h-auto mb-40" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
             </div>
 
 
@@ -230,18 +198,14 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default ThermalTraceProjectDetail;
