@@ -241,6 +241,12 @@ const ThermalTraceProjectDetail = () => {
             </p>
           </div>
 
+           
+            {/*Last Images*/}
+             <div className="w-full">
+              <img src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" className="w-full h-auto mb-40" />
+            </div>
+
 
 
             {/* Line */} 
