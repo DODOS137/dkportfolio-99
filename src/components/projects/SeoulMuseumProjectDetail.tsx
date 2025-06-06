@@ -54,20 +54,20 @@ const SeoulMuseumProjectDetail = () => {
             {project.heroSubtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.heroYear}</span>
+            <span>2021</span>
             <span>•</span>
-            <span>MA Thesis</span>
+            <span>Bachelor’s graduation project</span>
             <span>•</span>
-            <span>Virtual Reality Designer</span>
+            <span>Spatial Designer</span>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="">
-        {/* First Image - Updated */}
+        {/* First Image */}
         <div className="w-full">
-          <img src="/lovable-uploads/c3196d4f-97a0-4a02-892e-907f32615c54.png" alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
+          <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
         {/* Shared Container */}
