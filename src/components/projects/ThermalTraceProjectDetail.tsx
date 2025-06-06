@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -12,7 +13,6 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
@@ -20,9 +20,6 @@ const ThermalTraceProjectDetail = () => {
   // Carousel state for the spatial design slider
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
-
-  // Initialize scroll animation for iframe
-  const iframeAnimation = useScrollAnimation();
 
   // Sample images for the spatial design carousel
   const secondSliderImages = ["/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png", "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png", "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"];
@@ -220,31 +217,6 @@ const ThermalTraceProjectDetail = () => {
 
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-            {/* Enhanced iframe with better styling and visual elements - Updated with black background */}
-              <div 
-                ref={iframeAnimation.ref}
-                className={`w-full my-10 transition-all duration-1000 delay-700 ${
-                  iframeAnimation.isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-10'
-                }`}
-              >
-                <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800">
-                  <div className="p-4 bg-opacity-60 flex justify-between items-center bg-black">
-                    <h3 className="text-lg font-medium text-white flex items-center">
-                      <span>Hidden Objects - Interactive Demo</span>
-                    </h3>
-                    <div className="text-gray-400 text-sm px-[240px]">Press 'X' Key to activate with Full-screen Mode</div>
-                  </div>
-                  <div className="w-full relative">
-                    <AspectRatio ratio={16 / 9}>
-                      <iframe src="https://lucent-banoffee-a50286.netlify.app" title="Hidden Objects WebGL Demo" className="w-full h-full border-0 bg-black" allowFullScreen />
-                    </AspectRatio>
-                  </div>
-                </div>
-              </div>
             
           </div>
         </ProjectContent>
