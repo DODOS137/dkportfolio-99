@@ -13,6 +13,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
@@ -20,6 +21,9 @@ const ThermalTraceProjectDetail = () => {
   // Carousel state for the spatial design slider
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
+
+  // Initialize scroll animation for iframe
+  const iframeAnimation = useScrollAnimation();
 
   // Sample images for the spatial design carousel
   const secondSliderImages = ["/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png", "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png", "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"];
@@ -95,6 +99,29 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+          {/* Interactive Experience Section with iframe */}
+          <div className="rounded-lg bg-transparent mb-40">
+            <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
+            <div 
+              ref={iframeAnimation.ref}
+              className={`w-full transition-all duration-1000 ${
+                iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
+              <AspectRatio ratio={16 / 9} className="w-full bg-black rounded-lg overflow-hidden">
+                <iframe
+                  src="https://thermal-trace-experience.com"
+                  className="w-full h-full border-0"
+                  title="Thermal Trace Interactive Experience"
+                  allowFullScreen
+                />
+              </AspectRatio>
+            </div>
+            <p className="text-sm text-gray-500 mt-4 text-center">
+              Experience the thermal detection interface in real-time
+            </p>
+          </div>
 
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
