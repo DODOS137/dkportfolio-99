@@ -163,7 +163,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
             <div className="w-full">
-              <img className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
+              <img className="w-full h-auto mb-40" src="/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png" />
             </div>
 
 
