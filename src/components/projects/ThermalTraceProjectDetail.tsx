@@ -20,11 +20,11 @@ const ThermalTraceProjectDetail = () => {
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
   
-  // Sample images for the spatial design carousel
+  // Updated images for the spatial design carousel
   const secondSliderImages = [
-    "/lovable-uploads/9a5669c9-6843-4c93-9b93-c65d497acf1b.png",
-    "/lovable-uploads/9522dd72-0290-4995-b2a6-8533f1487260.png",
-    "/lovable-uploads/7d778c34-de2c-4348-857a-dcd6636ebcc8.png"
+    "/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png",
+    "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png",
+    "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"
   ];
 
   // Process steps data
@@ -167,11 +167,11 @@ const ThermalTraceProjectDetail = () => {
               </div>
             </div>           
 
-            {/* TT Slider - keeping original images */}
+            {/* TT Slider - updated with new images */}
             <div className="w-full mb-40">
               <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{
-              loop: true
-            }}>
+                loop: true
+              }}>
                 <CarouselContent>
                   {secondSliderImages.map((image, index) => (
                     <CarouselItem key={index}>
