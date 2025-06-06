@@ -183,6 +183,22 @@ const ThermalTraceProjectDetail = () => {
 
 
 
+            {/* Line */} 
+            <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+
+            
+
+            {/*Exhibition Design*/}
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+              <div className="rounded-lg bg-transparent">
+                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibtion Design</h2>
+              </div>
+            </div>  
+
+
+
 
 
             
