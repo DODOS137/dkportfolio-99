@@ -22,9 +22,9 @@ const ThermalTraceProjectDetail = () => {
   
   // Sample images for the spatial design carousel
   const secondSliderImages = [
-    "/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png",
-    "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png",
-    "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"
+    "/lovable-uploads/9a5669c9-6843-4c93-9b93-c65d497acf1b.png",
+    "/lovable-uploads/9522dd72-0290-4995-b2a6-8533f1487260.png",
+    "/lovable-uploads/7d778c34-de2c-4348-857a-dcd6636ebcc8.png"
   ];
 
   // Process steps data
@@ -139,9 +139,9 @@ const ThermalTraceProjectDetail = () => {
 
             {/*Art Works*/}
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Art Works</h2>
-            </div>
+              <div className="rounded-lg bg-transparent">
+                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Art Works</h2>
+              </div>
             </div>
 
             {/* Poster Images */}
@@ -157,62 +157,57 @@ const ThermalTraceProjectDetail = () => {
               <img className="w-full h-auto mb-40" src="/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png" />
             </div>
 
-          {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+            {/* Line */} 
+            <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
             {/*Spatial Design*/}
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Transformable stage</h2>
-            </div>
+              <div className="rounded-lg bg-transparent">
+                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Transformable stage</h2>
+              </div>
             </div>           
 
-          {/* TT Slider - keeping original images */}
-          <div className="w-full mb-40">
-            <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{
-            loop: true
-          }}>
-              <CarouselContent>
-                {secondSliderImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative w-full">
-                      <AspectRatio ratio={16 / 9} className="w-full">
-                        <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
-                      </AspectRatio>
-                    </div>
-                  </CarouselItem>
+            {/* TT Slider - keeping original images */}
+            <div className="w-full mb-40">
+              <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{
+              loop: true
+            }}>
+                <CarouselContent>
+                  {secondSliderImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative w-full">
+                        <AspectRatio ratio={16 / 9} className="w-full">
+                          <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
+                        </AspectRatio>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
+              </Carousel>
+
+              {/* Bar-shaped indicators below the slider */}
+              <div className="flex justify-center space-x-2 mt-6">
+                {secondSliderImages.map((_, index) => (
+                  <div 
+                    key={index} 
+                    className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} 
+                    onClick={() => secondApi?.scrollTo(index)} 
+                  />
                 ))}
-              </CarouselContent>
-              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
-              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
-            </Carousel>
-
-            {/* Bar-shaped indicators below the slider */}
-            <div className="flex justify-center space-x-2 mt-6">
-              {secondSliderImages.map((_, index) => (
-                <div 
-                  key={index} 
-                  className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} 
-                  onClick={() => secondApi?.scrollTo(index)} 
-                />
-              ))}
-            </div>
-          </div>  
-
-
-          {/* Spatial Design */}
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 mb-40">
-              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
-                Spatial Design
-              </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer’s position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
-              </p>
               </div>
+            </div>  
 
-
-
-            
+            {/* Spatial Design */}
+            <div className="rounded-lg bg-transparent">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 mb-40">
+                <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
+                  Spatial Design
+                </h2>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.</p>
+              </div>
+            </div>
           </div>
         </ProjectContent>
       
