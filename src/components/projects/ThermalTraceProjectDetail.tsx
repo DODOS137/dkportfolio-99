@@ -129,20 +129,30 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>
 
-          {/* Technology Section */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
-                Technology
-              </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                The installation utilized thermal imaging cameras and computer vision algorithms to detect human body heat signatures in real-time. Custom software processed thermal data to reveal hidden figures through spatial mapping, creating an invisible layer of interaction between viewers and the exhibition space. The system responded to proximity and movement, generating dynamic visual feedback that transformed the traditional fashion runway into an immersive sensory experience.
-              </p>
-            </div>
-          </div>
+       {/* Preliminary Research – Survey Data */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent  mt-40">
+                  <h2 data-lovable-editable="true" className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
+                  <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
+                </div>
+              </div>
 
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+          {/* Idea Development */}
+            <div className="rounded-lg bg-transparent ">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40">
+                <h2 data-lovable-editable="true" className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                  Idea Development
+                </h2>
+                <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                  Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.
+                </p>
+              </div>
+
+
+          
 
           {/* Poster Images */}
           <div className="w-full">
