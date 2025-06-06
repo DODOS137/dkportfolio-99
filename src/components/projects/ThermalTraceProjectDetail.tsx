@@ -99,8 +99,6 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-
-
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
@@ -232,7 +230,7 @@ const ThermalTraceProjectDetail = () => {
             >
               <AspectRatio ratio={16 / 9} className="w-full h-full bg-black rounded-lg overflow-hidden">
                 <iframe
-                  src="https://thermal-trace-experience.com"
+                  src="https://lucent-banoffee-a50286.netlify.app"
                   className="w-full h-full border-0"
                   title="Thermal Trace Interactive Experience"
                   allowFullScreen
