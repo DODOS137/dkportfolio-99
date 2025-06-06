@@ -221,7 +221,7 @@ const ThermalTraceProjectDetail = () => {
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
             <div ref={iframeAnimation.ref} className={`w-full transition-all duration-1000 ${iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <AspectRatio ratio={16 / 9} className="w-full h-full bg-black rounded-lg overflow-hidden">
-                <iframe src="https://thermal-trace-experience.com" className="w-full h-full border-0" title="Thermal Trace Interactive Experience" allowFullScreen />
+                <iframe src=""https://lucent-banoffee-a50286.netlify.app"" className="w-full h-full border-0" title="Thermal Trace Interactive Experience" allowFullScreen />
               </AspectRatio>
             </div>
             <p className="text-sm text-gray-500 mt-4 text-center">
