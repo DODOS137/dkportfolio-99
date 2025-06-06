@@ -217,6 +217,31 @@ const ThermalTraceProjectDetail = () => {
 
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+            {/* Enhanced iframe with better styling and visual elements - Updated with black background */}
+              <div 
+                ref={iframeAnimation.ref}
+                className={`w-full my-10 transition-all duration-1000 delay-700 ${
+                  iframeAnimation.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800">
+                  <div className="p-4 bg-opacity-60 flex justify-between items-center bg-black">
+                    <h3 className="text-lg font-medium text-white flex items-center">
+                      <span>Hidden Objects - Interactive Demo</span>
+                    </h3>
+                    <div className="text-gray-400 text-sm px-[240px]">Press 'X' Key to activate with Full-screen Mode</div>
+                  </div>
+                  <div className="w-full relative">
+                    <AspectRatio ratio={16 / 9}>
+                      <iframe src="https://lucent-banoffee-a50286.netlify.app" title="Hidden Objects WebGL Demo" className="w-full h-full border-0 bg-black" allowFullScreen />
+                    </AspectRatio>
+                  </div>
+                </div>
+              </div>
             
           </div>
         </ProjectContent>
