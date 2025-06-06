@@ -219,9 +219,9 @@ const InvisibleProjectDetail = () => {
             {/* world image */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/c300d72e-b010-4ff6-8648-016e4513b308.png" />
+                <img data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/c300d72e-b010-4ff6-8648-016e4513b308.png" />
               </AspectRatio>
-              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" className="w-full h-auto mt-40" src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png" />
+              <img  data-lovable-editable="true" className="w-full h-auto mt-40" src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png" />
             
             </div>
 
@@ -243,7 +243,7 @@ const InvisibleProjectDetail = () => {
           <div className="">
             {/* DNA Image */}
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
+              <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
             </div>
 
             <div className="rounded-lg bg-transparent ">
@@ -276,7 +276,7 @@ const InvisibleProjectDetail = () => {
           <div className="">
             {/* Video Image */}
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png" />
+              <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png" />
             </div>
 
             {/* Video Development */}
@@ -305,8 +305,8 @@ const InvisibleProjectDetail = () => {
 
               {/* Level Design Image */}
               <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
+                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
+                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
               </div>
             </div>
           </div>
@@ -420,22 +420,22 @@ const InvisibleProjectDetail = () => {
 
               {/* 5th & 5-1 image */}
               <div className="w-full mb-8">
-                <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
-                <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png" className="w-full h-auto mb-40" />
+                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
+                <img data-lovable-editable="true" src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png" className="w-full h-auto mb-40" />
               </div> 
             </div>
           </div>
 
           {/* 6th & 7th & 8th Image */}
           <div className="w-full ">
-            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
-            <img alt="Planet A233 - VR Environment" className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
-            <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" className="w-full h-auto mb-40" />
+            <img  className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
+            <img  className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
+            <img  data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" className="w-full h-auto mb-40" />
           </div>
 
           {/* 9th Image */}
           <div className="w-full ">
-            <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto mb-40" />
+            <img data-lovable-editable="true" src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png" className="w-full h-auto mb-40" />
             <div className="rounded-lg  bg-transparent">
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
                 The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
@@ -444,7 +444,7 @@ const InvisibleProjectDetail = () => {
 
             {/* 10th Image */}
             <div className="w-full ">
-              <img alt="Planet A233 - VR Environment" data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" className="w-full h-auto mb-40" />
+              <img data-lovable-editable="true" src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png" className="w-full h-auto mb-40" />
               <p data-lovable-editable="true" className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
                 The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
               </p>
