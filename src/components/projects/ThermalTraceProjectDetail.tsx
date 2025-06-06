@@ -140,7 +140,7 @@ const ThermalTraceProjectDetail = () => {
             {/*Art Works*/}
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent">
-              <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Art Works</h2>
+              <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Art Works</h2>
             </div>
             </div>
 
