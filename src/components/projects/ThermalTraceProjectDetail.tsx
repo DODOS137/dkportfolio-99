@@ -220,8 +220,6 @@ const ThermalTraceProjectDetail = () => {
               </div>              
             </div>
 
-            {/* Line */} 
-            <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
            {/* Interactive Experience Section with iframe */}
           <div className="rounded-lg bg-transparent mb-40">
