@@ -215,6 +215,8 @@ const ThermalTraceProjectDetail = () => {
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
                 <div className="rounded-lg bg-transparent">
                   <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibition Design</h2>
+                   <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The core prototype features a beach scene (Type A), where white-painted models in swimwear blend seamlessly with a white sand environment. Thermal filters reveal the figures, encouraging a shift in attention from aesthetic display to bodily trace. The work deconstructs the notion of fashion as visibility, presenting instead an immersive search for form and atmosphere.
+                  </p>
                 </div>
               </div>              
             </div>
@@ -223,7 +225,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="rounded-lg bg-transparent mb-40">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
             <div ref={iframeAnimation.ref} className={`w-full transition-all duration-1000 ${iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="w-full h-[576px] bg-black rounded-lg overflow-hidden flex items-center justify-center">
+              <div className="w-auto h-[576px] bg-black rounded-lg overflow-hidden flex items-center justify-center">
                 <iframe 
                   src="https://lucent-banoffee-a50286.netlify.app" 
                   className="border-0" 
@@ -238,6 +240,25 @@ const ThermalTraceProjectDetail = () => {
               Experience the thermal detection interface in real-time
             </p>
           </div>
+
+
+
+            {/* Line */} 
+            <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          {/* Post Project Direction */}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent">
+              <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Post Project Direction</h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
+            </p>
+              </div>
+          </div>
+
+
+
+            
             
           </div>
         </ProjectContent>
