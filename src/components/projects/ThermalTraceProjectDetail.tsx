@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -13,6 +14,7 @@ import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -48,7 +50,9 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -96,8 +100,6 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-
-
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
@@ -108,7 +110,8 @@ const ThermalTraceProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent">
               <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.</div>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.</p>
+            </div>
           </div>
 
           {/* Line */} 
@@ -220,9 +223,16 @@ const ThermalTraceProjectDetail = () => {
           <div className="rounded-lg bg-transparent mb-40">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
             <div ref={iframeAnimation.ref} className={`w-full transition-all duration-1000 ${iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <AspectRatio ratio={16 / 9} className="w-full h-full bg-black rounded-lg overflow-hidden">
-                <iframe src=""https://lucent-banoffee-a50286.netlify.app"" className="w-full h-full border-0" title="Thermal Trace Interactive Experience" allowFullScreen />
-              </AspectRatio>
+              <div className="w-full h-[576px] bg-black rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe 
+                  src="https://lucent-banoffee-a50286.netlify.app" 
+                  className="border-0" 
+                  width="1024" 
+                  height="576"
+                  title="Thermal Trace Interactive Experience" 
+                  allowFullScreen 
+                />
+              </div>
             </div>
             <p className="text-sm text-gray-500 mt-4 text-center">
               Experience the thermal detection interface in real-time
@@ -249,6 +259,8 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
