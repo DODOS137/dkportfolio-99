@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -13,7 +12,6 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
-
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -46,18 +44,10 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero 
-        title={project.heroTitle} 
-        subtitle={project.heroSubtitle} 
-        year={project.heroYear} 
-        client="Personal Project" 
-        role="XR & Exhibition Designer" 
-      />
+      <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
 
       {/* Main Content */}
       <section className="">
@@ -89,7 +79,7 @@ const ThermalTraceProjectDetail = () => {
                 <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
                   →
                 </h2>
-                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Hover over the image and move your mouse from left to right.</p>
+                <p className="text-lg leading-relaxed font-light md:text-sm text-gray-700">Hover over the image and move your mouse from left to right.</p>
               </div>
             </div>
             
@@ -164,15 +154,13 @@ const ThermalTraceProjectDetail = () => {
               loop: true
             }}>
                 <CarouselContent>
-                  {secondSliderImages.map((image, index) => (
-                    <CarouselItem key={index}>
+                  {secondSliderImages.map((image, index) => <CarouselItem key={index}>
                       <div className="relative w-full">
                         <AspectRatio ratio={16 / 9} className="w-full">
                           <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                         </AspectRatio>
                       </div>
-                    </CarouselItem>
-                  ))}
+                    </CarouselItem>)}
                 </CarouselContent>
                 <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
                 <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
@@ -180,9 +168,7 @@ const ThermalTraceProjectDetail = () => {
 
               {/* Bar-shaped indicators below the slider */}
               <div className="flex justify-center space-x-2 mt-6">
-                {secondSliderImages.map((_, index) => (
-                  <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />
-                ))}
+                {secondSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />)}
               </div>
             </div>  
 
@@ -231,18 +217,14 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default ThermalTraceProjectDetail;
