@@ -12,6 +12,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -44,7 +45,9 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client={project.heroClient} role={project.heroRole} />
@@ -72,18 +75,19 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Approach Section with Interactive Image */}
           <div className="rounded-lg bg-transparent">
-
+            {/* Arrow positioned above the image on middle left */}
+            <div className="flex justify-start mb-4">
+              <div className="text-white text-2xl">→</div>
+            </div>
             
             {/* Interactive Image Slice */}
             <div className="w-full h-auto mb-40">
-
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
-             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-             <div className="rounded-lg bg-transparent">
-              <div className="text-white text-2xl">→
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent">
+                  <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
+                </div>
               </div>
-              <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
-             </div>
             </div>
             
             <div className=""> 
@@ -228,6 +232,8 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
