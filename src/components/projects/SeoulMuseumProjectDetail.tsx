@@ -54,11 +54,11 @@ const SeoulMuseumProjectDetail = () => {
             {project.heroSubtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.heroYear}</span>
+            <span>2021</span>
             <span>•</span>
-            <span>MA Thesis</span>
+            <span>Bachelor's Graduation Project</span>
             <span>•</span>
-            <span>Virtual Reality Designer</span>
+            <span>Spatial Designer</span>
           </div>
         </div>
       </section>
@@ -75,21 +75,21 @@ const SeoulMuseumProjectDetail = () => {
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
-              {project.title}
+              Seoul Natural History Museum
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
-              Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
+            This project proposes a conceptual and spatial renewal of the Seodaemun Museum of Natural History, Korea’s first public natural history museum. The redesign envisions a new identity—Seoul Natural History Museum—grounded in Korea’s cultural relationship with nature, particularly from the perspective of traditional hunters. The project spans spatial reconfiguration, exhibition curation, branding, and product design.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">MA Thesis</p>
-                <p className="text-white">(Design Immersive Experience)</p>
+                <p className="text-white">Bachelor's Graduation Project</p>
+
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                <p className="text-white">VR Content Design</p>
+                <p className="text-white">Spatial Design</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
@@ -97,7 +97,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
-                <p className="text-white">8 weeks</p>
+                <p className="text-white">16 weeks</p>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ const SeoulMuseumProjectDetail = () => {
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
+                The museum’s existing identity suffers from incoherent exhibition flow, high-density displays, and minimal interaction. To address this, the project introduces a cohesive strategy combining spatial clarity with narrative depth. The renewed vision repositions the museum as an interpretive experience rather than a passive repository—fostering a tactile, reflective journey grounded in local heritage.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ const SeoulMuseumProjectDetail = () => {
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
+                <h3 className="text-xl font-light text-white mb-4">Site Selection</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">Brainstorming</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
@@ -134,8 +134,8 @@ const SeoulMuseumProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Environment Research</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Narrative Flow Mapping</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">On-site Survey & Research</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Context & Problem Analysis</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Precedent Study </p>
                 </div>
               </div>
@@ -143,11 +143,11 @@ const SeoulMuseumProjectDetail = () => {
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Worldbuilding</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Character Design</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Scriptwriting & Storyboarding</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Level Design</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Brand Identity Redefinition</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Floor Plan Analysis & Design</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Product Design</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Exhibition Design</p>
                 </div>
               </div>
             </div>
