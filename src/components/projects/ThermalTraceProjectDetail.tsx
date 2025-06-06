@@ -47,7 +47,7 @@ const ThermalTraceProjectDetail = () => {
   return <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client={project.heroClient} role={project.heroRole} />
+      <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client=<span>Personal Project</span> role=<span>XR & Exhibtion Designer</span> />
 
       {/* Main Content */}
       <section className="">
