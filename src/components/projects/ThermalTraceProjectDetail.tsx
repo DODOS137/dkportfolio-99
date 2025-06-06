@@ -13,6 +13,7 @@ import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -48,7 +49,9 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -193,8 +196,6 @@ const ThermalTraceProjectDetail = () => {
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-            {/*Exhibition Design*/}
-
             {/* Exhibition Design Section with Interactive Image */}
             <div className="rounded-lg bg-transparent">
               {/* Interactive Image Slice2 */}
@@ -208,7 +209,6 @@ const ThermalTraceProjectDetail = () => {
                 </div>
               </div>
 
-            <div className="rounded-lg bg-transparent">
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 mb-40">
                 <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
                   Exhibition Design
@@ -217,49 +217,35 @@ const ThermalTraceProjectDetail = () => {
               </div>
             </div>
 
-              
-            </div>
-
-           {/* Interactive Experience Section with iframe */}
-          <div className="w-full aspect-[16/9] bg-black rounded-lg overflow-hidden">
-          <iframe
-            src="https://lucent-banoffee-a50286.netlify.app"
-            className="w-full h-full border-0"
-            allowFullScreen
-            scrolling="no"
-            title="Thermal Trace Interactive Experience"
-             />
+            {/* Interactive Experience Section with iframe */}
+            <div className="w-full aspect-[16/9] bg-black rounded-lg overflow-hidden">
+              <iframe
+                src="https://lucent-banoffee-a50286.netlify.app"
+                className="w-full h-full border-0"
+                allowFullScreen
+                scrolling="no"
+                title="Thermal Trace Interactive Experience"
+              />
             </div>
             <p className="text-sm text-gray-500 mt-4 text-center">
               Experience the thermal detection interface in real-time
             </p>
-          </div>
 
-           
             {/*Last Images*/}
-             <div className="w-full">
+            <div className="w-full">
               <img className="w-full h-auto mb-40" src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" />
             </div>
-
-
 
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-
-          {/* Post Project Direction */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-60">
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Post Project Direction</h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
-            </p>
+            {/* Post Project Direction */}
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-60">
+              <div className="rounded-lg bg-transparent">
+                <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Post Project Direction</h2>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.</p>
               </div>
-          </div>
-
-
-
-            
-            
+            </div>
           </div>
         </ProjectContent>
       
@@ -280,6 +266,8 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
