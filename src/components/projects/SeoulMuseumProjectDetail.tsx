@@ -65,9 +65,9 @@ const SeoulMuseumProjectDetail = () => {
 
       {/* Main Content */}
       <section className="">
-        {/* First Image */}
+        {/* First Image - Updated */}
         <div className="w-full">
-          <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
+          <img src="/lovable-uploads/c3196d4f-97a0-4a02-892e-907f32615c54.png" alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
         {/* Shared Container */}
