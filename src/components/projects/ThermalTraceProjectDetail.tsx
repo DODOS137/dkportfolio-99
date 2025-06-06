@@ -89,10 +89,11 @@ const ThermalTraceProjectDetail = () => {
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 mb-40">
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
-                Idea Development
+                →
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">This project reframes fashion not as something to be seen, but as something to be discovered through thermal detection. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle thermal cues—heat traces, environmental temperature shifts, and proximity sensing. The XR installation creates a reward structure based on thermal awareness, shifting the focus from spectacle to sensing. Viewers become thermal explorers, engaging with camouflaged presence through detection rather than simply seeing.</p>
-            </div>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Hover over the image and move your mouse from left to right.
+              </p>
+              </div>
             </div>
             
             <div className=""> 
