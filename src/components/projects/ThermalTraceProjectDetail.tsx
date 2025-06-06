@@ -150,7 +150,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Exhibition Design Section with Interactive Image */}
-          <div className="rounded-lg bg-transparent">
+          <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
             <InteractiveImageSection 
               baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" 
               overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" 
@@ -158,8 +158,8 @@ const ThermalTraceProjectDetail = () => {
 
             <ContentSection title="Exhibition Design" layout="two-column">
               <p>
-                By utilizing XR technology to reveal models that lie just beyond the threshold of human perception, the exhibition challenges the audience to engage with the show on a deeper sensory level. Viewers are invited to track the presence of the models not through traditional visual cues, but through their emitted body heat, redirecting attention to the delicate outlines and nuanced movements of each form. This deliberate sensory shift encourages participants to experience fashion in an entirely new dimension—where physical presence, warmth, and subtlety replace spectacle, and perception is broadened to include modes of awareness typically overlooked in conventional shows. Ultimately, the project seeks to redefine the role of the viewer, transforming them from passive observers into active seekers of form and atmosphere.
-              </p>           
+                Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
+              </p>
             </ContentSection>
           </div>
 
