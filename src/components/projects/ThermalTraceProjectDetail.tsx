@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -13,6 +12,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
@@ -20,6 +20,9 @@ const ThermalTraceProjectDetail = () => {
   // Carousel state for the spatial design slider
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
+
+  // Initialize scroll animation for iframe
+  const iframeAnimation = useScrollAnimation();
 
   // Sample images for the spatial design carousel
   const secondSliderImages = ["/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png", "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png", "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"];
