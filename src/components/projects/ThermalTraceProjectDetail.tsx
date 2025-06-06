@@ -155,6 +155,18 @@ const ThermalTraceProjectDetail = () => {
             <div className="w-full">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
             </div>
+
+            <div className="w-full">
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
+            </div>
+
+
+          {/* Line */} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+            
+            
           </div>
         </div>
       
