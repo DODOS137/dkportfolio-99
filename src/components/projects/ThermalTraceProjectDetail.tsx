@@ -243,8 +243,8 @@ const ThermalTraceProjectDetail = () => {
 
 
           {/* Post Project Direction */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-60">
-            <div className="rounded-lg bg-transparent">
+          <div className=rounded-lg bg-transparent>
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-60">
               <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Post Project Direction</h2>
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
             </p>
