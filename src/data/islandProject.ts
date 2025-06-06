@@ -6,7 +6,7 @@ export const islandProjectData: ProjectData = {
   subtitle: "Public Space Design",
   description: "Urban public space intervention project",
   year: "2021",
-  client: "BA Thesis",
+  client: "Bachelor’s Thesis",
   role: "Public Space Designer",
   images: ["/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"],
   heroTitle: "Island",
