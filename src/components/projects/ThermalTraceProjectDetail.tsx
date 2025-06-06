@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -218,24 +219,26 @@ const ThermalTraceProjectDetail = () => {
               </div>              
             </div>
 
-
            {/* Interactive Experience Section with iframe */}
           <div className="rounded-lg bg-transparent mb-40">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Interactive Experience</h2>
             <div 
               ref={iframeAnimation.ref}
-              className={`w-full transition-all duration-1000 ${
+              className={`w-full flex justify-center transition-all duration-1000 ${
                 iframeAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <AspectRatio ratio={16 / 9} className="w-full h-full bg-black rounded-lg overflow-hidden">
+              <div className="bg-black rounded-lg overflow-hidden" style={{ width: '1024px', height: '576px' }}>
                 <iframe
                   src="https://lucent-banoffee-a50286.netlify.app"
-                  className="w-full h-full border-0"
+                  width="1024"
+                  height="576"
+                  className="border-0"
+                  style={{ objectFit: 'none', imageRendering: 'pixelated' }}
                   title="Thermal Trace Interactive Experience"
                   allowFullScreen
                 />
-              </AspectRatio>
+              </div>
             </div>
             <p className="text-sm text-gray-500 mt-4 text-center">
               Experience the thermal detection interface in real-time
