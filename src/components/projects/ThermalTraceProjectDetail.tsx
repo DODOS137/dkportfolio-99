@@ -72,10 +72,7 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Approach Section with Interactive Image */}
           <div className="rounded-lg bg-transparent">
-            {/* Arrow positioned above the image on middle left */}
-            <div className="flex justify-start mb-4">
-              
-            </div>
+
             
             {/* Interactive Image Slice */}
             <div className="w-full h-auto mb-40">
