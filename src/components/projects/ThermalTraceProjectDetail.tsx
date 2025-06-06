@@ -12,7 +12,6 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
-
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -45,9 +44,7 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client={project.heroClient} role={project.heroRole} />
@@ -77,7 +74,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             {/* Arrow positioned above the image on middle left */}
             <div className="flex justify-start mb-4">
-              <div className="text-white text-2xl">→</div>
+              
             </div>
             
             {/* Interactive Image Slice */}
@@ -233,8 +230,6 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default ThermalTraceProjectDetail;
