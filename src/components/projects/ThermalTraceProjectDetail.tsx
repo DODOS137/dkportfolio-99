@@ -191,11 +191,7 @@ const ThermalTraceProjectDetail = () => {
             
 
             {/*Exhibition Design*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent">
-                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibtion Design</h2>
-              </div>
-            </div>  
+
            {/* Exhibtion Design Section with Interactive Image */}
           <div className="rounded-lg bg-transparent">
             {/* Interactive Image Slice2 */}
@@ -204,6 +200,12 @@ const ThermalTraceProjectDetail = () => {
               <h2 className="text-2xl font-light text-center md:text-sm text-gray-700 mt-8">Hover over the image and move your mouse from left to right.</h2>
             </div>
            </div>
+
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+              <div className="rounded-lg bg-transparent">
+                <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Exhibtion Design</h2>
+              </div>
+            </div>              
 
 
 
