@@ -13,6 +13,7 @@ import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -48,7 +49,9 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -230,7 +233,6 @@ const ThermalTraceProjectDetail = () => {
             <p className="text-sm text-gray-500 mt-4 text-center">
               Experience the thermal detection interface in real-time
             </p>
-          </div>
 
            
             {/*Last Images*/}
@@ -238,11 +240,8 @@ const ThermalTraceProjectDetail = () => {
               <img className="w-full h-auto mb-40" src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" />
             </div>
 
-
-
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
 
           {/* Post Project Direction */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-60">
@@ -252,11 +251,6 @@ const ThermalTraceProjectDetail = () => {
             </p>
               </div>
           </div>
-
-
-
-            
-            
           </div>
         </ProjectContent>
       
@@ -277,6 +271,8 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
