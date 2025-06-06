@@ -155,15 +155,15 @@ const ThermalTraceProjectDetail = () => {
 
             {/* Poster Images */}
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" className="w-full h-auto mb-40" />
+              <img src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" className="w-full h-auto mb-40" />
             </div>
 
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
+              <img className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
             </div>
 
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
+              <img className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
             </div>
 
 
