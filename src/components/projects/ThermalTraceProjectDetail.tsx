@@ -1,16 +1,19 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { ArrowRight } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import ImageSliceInteraction from '@/components/ImageSliceInteraction';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from '@/components/ui/carousel';
 import { thermalTraceProjectData } from '@/data/thermalTraceProject';
+import ProjectLayout from './shared/ProjectLayout';
+import ProjectNavigation from './shared/ProjectNavigation';
+import ProjectHero from './shared/ProjectHero';
+import ProjectContent from './shared/ProjectContent';
+import ProjectMetadata from './shared/ProjectMetadata';
+import ProcessGrid from './shared/ProcessGrid';
 
 const ThermalTraceProjectDetail = () => {
-  const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = thermalTraceProjectData;
   
   // Carousel state for the spatial design slider
@@ -22,6 +25,22 @@ const ThermalTraceProjectDetail = () => {
     "/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png",
     "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png",
     "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"
+  ];
+
+  // Process steps data
+  const processSteps = [
+    {
+      title: "Ideation Phase",
+      items: ["Brainstorming", "Concept Sketching"]
+    },
+    {
+      title: "Analysis",
+      items: ["Stage Environment Research", "Precedent Study"]
+    },
+    {
+      title: "Design Development",
+      items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
+    }
   ];
 
   // Update current slide when carousel changes
@@ -38,33 +57,16 @@ const ThermalTraceProjectDetail = () => {
   }, [secondApi]);
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
-        <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to work
-        </Link>
-      </nav>
+    <ProjectLayout>
+      <ProjectNavigation />
 
-      {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
-            Thermal Trace
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
-            XR & Exhibition Design
-          </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>2023</span>
-            <span>•</span>
-            <span>Personal Project</span>
-            <span>•</span>
-            <span>Mixed Reality & Exhibition Designer</span>
-          </div>
-        </div>
-      </section>
+      <ProjectHero
+        title={project.heroTitle}
+        subtitle={project.heroSubtitle}
+        year={project.heroYear}
+        client={project.heroClient}
+        role={project.heroRole}
+      />
 
       {/* Main Content */}
       <section className="">
@@ -73,8 +75,7 @@ const ThermalTraceProjectDetail = () => {
           <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
-        {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-[250px] z-10">        
+        <ProjectContent>        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
@@ -82,24 +83,12 @@ const ThermalTraceProjectDetail = () => {
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">Personal Project</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                <p className="text-white">XR Contents & Exhibition Design</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
-                <p className="text-white">Solo Project</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
-                <p className="text-white">8 weeks</p>
-              </div>
-            </div>
+            <ProjectMetadata
+              projectType="Personal Project"
+              projectCategory="XR Contents & Exhibition Design"
+              teamType="Solo Project"
+              duration="8 weeks"
+            />
           </div>
 
           {/* Line */} 
@@ -125,33 +114,7 @@ const ThermalTraceProjectDetail = () => {
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-40">
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Ideation Phase</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Brainstorming</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Concept Sketching</p>
-                </div>
-              </div>
-              
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Stage Environment Research</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Precedent Study</p>
-                </div>
-              </div>
-              
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Idea Development</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">User Interaction</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Exhibition Design</p>
-                </div>
-              </div>
-            </div>
+            <ProcessGrid steps={processSteps} />
           </div>
 
           {/* Preliminary Research */}
@@ -236,7 +199,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>            
           </div>
-        </div>
+        </ProjectContent>
       
         {/* Navigation */}
         <div className="pb-60 flex items-center justify-center">
@@ -257,7 +220,7 @@ const ThermalTraceProjectDetail = () => {
           </div>
         ))}
       </section>
-    </div>
+    </ProjectLayout>
   );
 };
 
