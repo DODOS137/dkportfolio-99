@@ -108,8 +108,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent">
               <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Research into thermal detection technology and alternative fashion presentation methods revealed the potential for creating invisible interactions. Studies of camouflage techniques, thermal imaging capabilities, and XR spatial design informed the conceptual framework. The investigation explored how heat signatures could become a new language for fashion discovery, moving beyond traditional visual consumption to embodied sensing.</p>
-            </div>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.</div>
           </div>
 
           {/* Line */} 
@@ -216,9 +215,6 @@ const ThermalTraceProjectDetail = () => {
                 </div>
               </div>              
             </div>
-
-            {/* Line */} 
-            <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
            {/* Interactive Experience Section with iframe */}
           <div className="rounded-lg bg-transparent mb-40">
