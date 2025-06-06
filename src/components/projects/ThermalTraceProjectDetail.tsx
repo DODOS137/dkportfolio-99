@@ -76,7 +76,7 @@ const ThermalTraceProjectDetail = () => {
             <div className="w-full h-auto mb-40">
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-8">
-                <h2 className="text-2xl font-light md:text-xl text-white whitespace-nowrap min-w-[50px]">
+                <h2 className="text-2xl font-light md:text-sm text-white whitespace-nowrap min-w-[50px]">
                   →
                 </h2>
                 <p className="text-sm leading-relaxed text-gray-700 font-light md:text-sm">Hover over the image and move your mouse from left to right.</p>
