@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -13,6 +14,7 @@ import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -48,7 +50,9 @@ const ThermalTraceProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle={project.heroSubtitle} year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -158,13 +162,15 @@ const ThermalTraceProjectDetail = () => {
               loop: true
             }}>
                 <CarouselContent>
-                  {secondSliderImages.map((image, index) => <CarouselItem key={index}>
+                  {secondSliderImages.map((image, index) => (
+                    <CarouselItem key={index}>
                       <div className="relative w-full">
                         <AspectRatio ratio={16 / 9} className="w-full">
                           <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                         </AspectRatio>
                       </div>
-                    </CarouselItem>)}
+                    </CarouselItem>
+                  ))}
                 </CarouselContent>
                 <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
                 <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
@@ -172,7 +178,9 @@ const ThermalTraceProjectDetail = () => {
 
               {/* Bar-shaped indicators below the slider */}
               <div className="flex justify-center space-x-2 mt-6">
-                {secondSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />)}
+                {secondSliderImages.map((_, index) => (
+                  <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />
+                ))}
               </div>
             </div>  
 
@@ -218,7 +226,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
            {/* Interactive Experience Section with iframe */}
-          <div className="w-full aspect-[16/9] bg-black rounded-lg overflow-hidden border-2 border-gray500">
+          <div className="w-full aspect-[16/9] bg-black rounded-lg overflow-hidden border-2 border-gray-500">
           <iframe
             src="https://lucent-banoffee-a50286.netlify.app"
             className="w-full h-full border-0"
@@ -230,7 +238,6 @@ const ThermalTraceProjectDetail = () => {
             <p className="text-sm text-gray-500 mt-4 text-center">
               Experience the thermal detection interface in real-time
             </p>
-          </div>
 
            
             {/*Last Images*/}
@@ -238,11 +245,8 @@ const ThermalTraceProjectDetail = () => {
               <img className="w-full h-auto mb-40" src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" />
             </div>
 
-
-
             {/* Line */} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
 
           {/* Post Project Direction */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-60">
@@ -252,11 +256,6 @@ const ThermalTraceProjectDetail = () => {
             </p>
               </div>
           </div>
-
-
-
-            
-            
           </div>
         </ProjectContent>
       
@@ -269,14 +268,18 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
