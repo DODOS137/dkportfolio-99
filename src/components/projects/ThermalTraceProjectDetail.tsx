@@ -129,7 +129,9 @@ const ThermalTraceProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent mt-40">
               <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">Preliminary Research</h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.
+
+            </p>
             </div>
           </div>
 
@@ -142,9 +144,9 @@ const ThermalTraceProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
                 Idea Development
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time) through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the narrative and providing an emotional entry point to complex ideas.
-              </p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">This project reframes fashion not as something to be seen, but as something to be discovered. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle cues—heat traces, minor movement, and spatial proximity. This process establishes a reward structure based on attention, shifting the focus from spectacle to perception. Viewers are no longer spectators, but agents of discovery, engaging with presence through sensing rather than simply seeing.
+
+            </p>
             </div>
 
             {/* Poster Images */}
@@ -157,7 +159,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
             <div className="w-full">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" />
+              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/5d3bd356-3a54-4e55-b080-62da1c8f4350.png" />
             </div>
 
 
