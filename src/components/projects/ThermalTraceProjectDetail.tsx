@@ -82,16 +82,14 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Approach Section with Interactive Image */}
           <div className="rounded-lg bg-transparent">
-            
-            
             {/* Interactive Image Slice */}
             <div className="w-full h-auto mb-40">
               <ImageSliceInteraction baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 mb-40">
-              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
-                →
-              </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Hover over the image and move your mouse from left to right.</h2>
+                <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px] mb-40">
+                  →
+                </h2>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Hover over the image and move your mouse from left to right.</p>
               </div>
             </div>
             
@@ -166,13 +164,15 @@ const ThermalTraceProjectDetail = () => {
               loop: true
             }}>
                 <CarouselContent>
-                  {secondSliderImages.map((image, index) => <CarouselItem key={index}>
+                  {secondSliderImages.map((image, index) => (
+                    <CarouselItem key={index}>
                       <div className="relative w-full">
                         <AspectRatio ratio={16 / 9} className="w-full">
                           <img src={image} alt={`Slider image ${index + 1}`} className="w-full h-full object-cover" />
                         </AspectRatio>
                       </div>
-                    </CarouselItem>)}
+                    </CarouselItem>
+                  ))}
                 </CarouselContent>
                 <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
                 <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-12 h-12" />
@@ -180,7 +180,9 @@ const ThermalTraceProjectDetail = () => {
 
               {/* Bar-shaped indicators below the slider */}
               <div className="flex justify-center space-x-2 mt-6">
-                {secondSliderImages.map((_, index) => <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />)}
+                {secondSliderImages.map((_, index) => (
+                  <div key={index} className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${secondCurrent === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => secondApi?.scrollTo(index)} />
+                ))}
               </div>
             </div>  
 
@@ -229,13 +231,15 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
     </ProjectLayout>
   );
