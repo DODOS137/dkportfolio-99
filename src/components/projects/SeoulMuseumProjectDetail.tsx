@@ -423,9 +423,9 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-auto mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
           
             <div className="w-full ">
-              <img className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
-              <img className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
-              <img className="w-full h-auto mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/6a340977-73e8-41f6-89a9-a62f2ebd938f.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/480fcf6f-8a92-4cab-bd47-0d6364c07c90.png" />
+              
             </div>
           </div>
 
