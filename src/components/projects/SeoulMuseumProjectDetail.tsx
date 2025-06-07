@@ -416,11 +416,7 @@ const SeoulMuseumProjectDetail = () => {
           
           {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Product Design</h2>
-              <p>Souvenirs and printed material were developed to reflect the museum's narrative and pedagogical aims. From endangered species photo cards to object design, each item served as an extension of the museum's identity—intended to emotionally and educationally resonate with visitors.
-              </p>
-            </div>
+            
             <img className="w-full h-auto mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
             <div className="w-full ">
               <img className="w-full h-auto" src="/lovable-uploads/9af82104-3de4-45be-bda6-313f88f638df.png" />
@@ -435,7 +431,7 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Final Outcome */}
           <div className="rounded-lg bg-transparent">
-            <div className="mb-8"> 
+            <div className="mb-40"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Final Outcome</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 Delivered a complete, testable museum experience encompassing space, identity, product, and narrative logic. The project is structured for future feedback loops through public interaction and prototyping.
@@ -446,7 +442,7 @@ const SeoulMuseumProjectDetail = () => {
           
             {/*End Image */}
            <div className="w-full mb-40">
-            <img className="w-full h-auto " src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" />
+            <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-20 " />
               </div>
           </div>
         </div>
