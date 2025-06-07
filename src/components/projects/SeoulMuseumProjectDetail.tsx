@@ -71,14 +71,14 @@ const SeoulMuseumProjectDetail = () => {
         </div>
 
         {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto  px-[250px] z-10 ">        
+        <div className="max-w-[1540px] mx-auto px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-40">
             <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
               Seoul Natural History Museum
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
-            This project proposes a conceptual and spatial renewal of the Seodaemun Museum of Natural History, Korea’s first public natural history museum. The redesign envisions a new identity—Seoul Natural History Museum—grounded in Korea’s cultural relationship with nature, particularly from the perspective of traditional hunters. The project spans spatial reconfiguration, exhibition curation, branding, and product design.
+            This project proposes a conceptual and spatial renewal of the Seodaemun Museum of Natural History, Korea's first public natural history museum. The redesign envisions a new identity—Seoul Natural History Museum—grounded in Korea's cultural relationship with nature, particularly from the perspective of traditional hunters. The project spans spatial reconfiguration, exhibition curation, branding, and product design.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
@@ -111,7 +111,7 @@ const SeoulMuseumProjectDetail = () => {
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                Redefined the museum’s identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
+                Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
           </div>
@@ -164,7 +164,6 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
                 Site Selection
               </h2>
-              
             </div>
           </div>
           
@@ -202,14 +201,10 @@ const SeoulMuseumProjectDetail = () => {
               <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
             </div>
 
-
-
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Scriptwriting & Storyboard Section */}
-         
-        
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
             <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
@@ -249,19 +244,13 @@ const SeoulMuseumProjectDetail = () => {
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Level Design Section */}
-         
-          
-         
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            
             <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
-            
           </div>
 
             <img className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
-            
             <div className="w-full ">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-40" />
@@ -300,13 +289,6 @@ const SeoulMuseumProjectDetail = () => {
               Post-Project Expansion
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-60">All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
-
-
-
-
-
-
-
           </p>
           </div>
         </div>
