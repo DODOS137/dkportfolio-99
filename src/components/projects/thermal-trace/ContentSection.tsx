@@ -23,7 +23,7 @@ const ContentSection = ({
         </div>
       </div>;
   }
-  return <div className="rounded-lg bg-transparent mb-60">
+  return <div className="rounded-lg bg-transparent mb-8">
       <h2 className="text-2xl font-light mb-8 text-gray-300 md:text-xl">{title}</h2>
       {children}
     </div>;
