@@ -223,6 +223,22 @@ const SeoulMuseumProjectDetail = () => {
                   The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
                 </p>
               </div>
+         
+               <div>
+                <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Displays</h3>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                  The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
+                </p>
+              </div>           
+            
+
+              <div>
+                <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Overcrowded</h3>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                  The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
+                </p>
+              </div>              
+            
             </div>
           </div>
 
