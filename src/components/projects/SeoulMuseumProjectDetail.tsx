@@ -452,10 +452,11 @@ const SeoulMuseumProjectDetail = () => {
            <div className="w-full mb-32">
             <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
               </div>
+          </div>
         </div>
       </section>
       
-      {/*Void*/}
+      {/*Navigation Section*/}
       <div className="pb-60 flex items-center justify-center">
         <Link to="/project/learn" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
           <span>Next project</span>
