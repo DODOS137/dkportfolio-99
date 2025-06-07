@@ -420,7 +420,7 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Product Design</h2>
             </div>
 
-            <img className="w-full h-auto mb-40" src="/lovable-uploads/81c99489-b10c-4244-9012-713171a82f8c.png" />
+            <img className="w-full h-auto mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
           
             <div className="w-full ">
               <img className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
