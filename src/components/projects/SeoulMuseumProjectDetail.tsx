@@ -231,10 +231,13 @@ const SeoulMuseumProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Context &amp; Problem Analysis </h2>
-             <h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-              </p>
+                <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Overcrowded Specimen Displays</h2>
+                   <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea’s cultural and ecological context.
+                   </p>
+            
+              
+              
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
                 The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
               </p>           
