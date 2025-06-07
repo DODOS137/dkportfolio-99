@@ -216,24 +216,31 @@ const SeoulMuseumProjectDetail = () => {
           {/*Site Image*/}     
           <div className="w-full">
           <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
-          </div>          
+          </div>   
 
-
-
-          {/*Site Image2*/}     
+          {/*Site Image*/}     
           <div className="w-full">
           <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
-          </div> 
+          </div>     
 
 
+          
+          
+          
           {/* Context & Problem Analysis Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Narrative Concept & Logic</h2>
-           </div>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+              </p>
+            </div>
           </div>
 
 
+          
+          
+          
           
           
           {/*Line*/} 
