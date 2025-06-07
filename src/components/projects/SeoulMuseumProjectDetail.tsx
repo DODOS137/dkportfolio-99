@@ -222,7 +222,7 @@ const SeoulMuseumProjectDetail = () => {
 
            {/* 첫 블록 */}
            <div>
-          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
+          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
          Overcrowded Specimen Displays
           </h3>
          <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The museum’s densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
@@ -230,7 +230,7 @@ const SeoulMuseumProjectDetail = () => {
 
          {/* 두 번째 블록 */}
           <div>
-         <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
+         <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
           Passive Viewing Format
         </h3>
          <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition’s linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
@@ -238,7 +238,7 @@ const SeoulMuseumProjectDetail = () => {
 
          {/* 세 번째 블록 */}
            <div>
-          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
+          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
           Lack of Identity in Spatial Elements
            </h3>
            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.</p>
