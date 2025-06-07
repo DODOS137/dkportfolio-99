@@ -218,7 +218,7 @@ const SeoulMuseumProjectDetail = () => {
             </h2>
 
             {/* 오른쪽: h3 + p 세트들을 세로로 나열 */}
-              <div className="flex flex-col space-y-16">
+              <div className="flex flex-col space-y-8 ">
 
            {/* 첫 블록 */}
            <div>
