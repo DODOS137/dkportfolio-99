@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -106,6 +105,40 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+          {/* YouTube Video Section */}
+          <div className="rounded-lg bg-transparent mb-40">
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <YouTube 
+                  videoId="8GEK3igRom0" 
+                  opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} 
+                  className="w-full h-full" 
+                  iframeClassName="w-full h-full border-0" 
+                />
+              </AspectRatio>
+            </div>
+          </div>
+
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
@@ -125,8 +158,6 @@ const SeoulMuseumProjectDetail = () => {
 
             
           </div>
-
-
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
