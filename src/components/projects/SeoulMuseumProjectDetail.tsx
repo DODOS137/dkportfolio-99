@@ -352,7 +352,7 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-auto " src="/lovable-uploads/eb5ac70e-151e-449b-be5c-1b6fcb42d768.png" />
               </div>
 
-         {/*Lobby comments*/}
+         {/*Exhibition Hall comments*/}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
@@ -364,10 +364,26 @@ const SeoulMuseumProjectDetail = () => {
           </div>
 
 
+           {/*Built-in 1*/}
+           <div className="w-full mb-32">
+            <img className="w-full h-auto " src="/lovable-uploads/2019b69b-609b-4a52-a25a-16b475589716.png" />
+              </div>
+         
+            {/*Builut-in comments*/}
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                Exhibition Hall
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition unfolds across two ecological zones: the first floor (Marine Zone) draws inspiration from ocean currents, with immersive media and fluid spatial divisions that evoke the rhythm of the sea; while the second and third floors (Terrestrial Zone) explore land-based habitats through layered displays that combine natural specimens with historical artefacts, such as traditional hunting tools. A vertical sculptural void connects all levels, symbolising the continuous flow of ecological systems throughout the museum.
+              </p>
+              </div>
+          </div>
           
-
-          
-
+           {/*Built-in 2*/}
+           <div className="w-full mb-32">
+            <img className="w-full h-auto " src="/lovable-uploads/2019b69b-609b-4a52-a25a-16b475589716.png" />
+              </div>
  
           
           
