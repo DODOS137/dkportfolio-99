@@ -215,12 +215,12 @@ const SeoulMuseumProjectDetail = () => {
           
           {/*Site Image*/}     
           <div className="w-full">
-          <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
+          <img src="/lovable-uploads/9c695e2f-9c58-47bf-970e-25734dd7ee11.png" className="w-full h-full mb-40" />
           </div>   
 
           {/*Site Image*/}     
           <div className="w-full">
-          <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
+          <img className="w-full h-full" src="/lovable-uploads/bf121cc4-1175-4554-aa01-dc803a73df3f.png" />
           </div>     
 
 
