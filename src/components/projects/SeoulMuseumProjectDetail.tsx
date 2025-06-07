@@ -261,7 +261,7 @@ const SeoulMuseumProjectDetail = () => {
           {/* Narrative */}
 
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/bf121cc4-1175-4554-aa01-dc803a73df3f.png" />
+            <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" />
           </div> 
 
           {/* Brand Identity Redefinition */}
