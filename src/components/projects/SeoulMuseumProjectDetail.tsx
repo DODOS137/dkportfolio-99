@@ -225,9 +225,7 @@ const SeoulMuseumProjectDetail = () => {
           <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
          Overcrowded Specimen Displays
           </h3>
-         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-        The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea’s cultural and ecological context.
-           </p>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The museum’s densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
           </div>
 
          {/* 두 번째 블록 */}
@@ -235,9 +233,7 @@ const SeoulMuseumProjectDetail = () => {
          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
           Passive Viewing Format
         </h3>
-         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-        Exhibition design follows a one-directional model in which visitors simply view specimens from behind raised boundaries. This format reduces engagement to static observation, with minimal opportunity for interaction or layered interpretation.
-        </p>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition’s linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
        </div>
 
          {/* 세 번째 블록 */}
@@ -245,9 +241,7 @@ const SeoulMuseumProjectDetail = () => {
           <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
           Lack of Identity in Spatial Elements
            </h3>
-           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-           Across the interior, spatial and graphic elements lack cohesive identity. Outdated materials and generic architectural features contribute to a dull and institutional atmosphere—detracting from the museum’s potential as a culturally resonant space.
-          </p>
+           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.</p>
           </div>
 
          </div>
@@ -269,8 +263,9 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Narrative Concept
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">In late Joseon Korea, hunters approached nature not only as a means of survival, but as a realm of deep respect and spiritual presence. Animal tracks and behaviours were read with care and precision, and successful hunts were followed by gestures of reverence. Tigers, for example, were often referred to as San-gun—"Mountain Lord"—a title that reveals their paradoxical image as both predator and guardian. Falconry also reflected a distinct Korean philosophy of coexistence. A Maekkun (falconer) would train a wild hawk not through dominance, but by forming a reciprocal bond rooted in trust. The hawk was never claimed as property, and its eventual release was accepted without hesitation—honouring its innate freedom. This worldview forms the conceptual basis for the exhibition’s curatorial direction. While the existing Seodaemun Museum holds a wide variety of natural specimens, its current presentation is spatially undifferentiated and narratively static. In response, the project titled Through the Eyes of a Hunter reimagines the museum as the Seoul Museum of Natural History. By drawing from late Joseon-era hunting culture, the project introduces a curatorial and spatial framework that reflects a Korean worldview—transforming the museum from a passive display of objects into an interpretive experience grounded in cultural memory and ecological respect.
-              </p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence—tracking animals with care and honoring their lives, often referring to tigers as San-gun, or “Mountain Lord.” This ethos of respect extended to falconry, where Maekkun formed mutual bonds with wild hawks, never claiming ownership and accepting their release with grace. Rooted in this worldview, the project Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space, transforming static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
+
+            </p>
               </div>
           </div>
 
