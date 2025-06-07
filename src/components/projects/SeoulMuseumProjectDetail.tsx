@@ -366,23 +366,20 @@ const SeoulMuseumProjectDetail = () => {
 
            {/*Built-in 1*/}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/2019b69b-609b-4a52-a25a-16b475589716.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" />
               </div>
          
             {/*Builut-in comments*/}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
-              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
-                Exhibition Hall
-              </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition unfolds across two ecological zones: the first floor (Marine Zone) draws inspiration from ocean currents, with immersive media and fluid spatial divisions that evoke the rhythm of the sea; while the second and third floors (Terrestrial Zone) explore land-based habitats through layered displays that combine natural specimens with historical artefacts, such as traditional hunting tools. A vertical sculptural void connects all levels, symbolising the continuous flow of ecological systems throughout the museum.
-              </p>
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">Built-in wall cabinets</h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Visitors encounter a sequence of built-in wall cabinets, each dedicated to a specific theme—from preserved biological specimens to rare books and historical artifacts—creating layered moments of discovery throughout the exhibition.</p>
               </div>
           </div>
           
            {/*Built-in 2*/}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/2019b69b-609b-4a52-a25a-16b475589716.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
               </div>
  
           
