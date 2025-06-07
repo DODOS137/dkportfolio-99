@@ -265,7 +265,7 @@ const SeoulMuseumProjectDetail = () => {
           </div> 
 
           <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Narrative Concept
               </h2>
