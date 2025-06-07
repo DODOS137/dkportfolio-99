@@ -66,7 +66,8 @@ const SeoulMuseumProjectDetail = () => {
       {/* Main Content */}
       <section className="">
         {/* First Image - Updated */}
-        <div className="w-full">
+       
+        <div className="max-w-[1540px] mx-auto px-[250px] z-10">
           <img src="/lovable-uploads/c3196d4f-97a0-4a02-892e-907f32615c54.png" alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
@@ -114,6 +115,15 @@ const SeoulMuseumProjectDetail = () => {
                 Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
+
+            <div className=""> 
+              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
+              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
+                Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
+              </p>
+            </div>
+
+            
           </div>
 
           {/*Development Strategy*/}
