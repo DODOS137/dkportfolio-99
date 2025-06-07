@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -268,16 +267,10 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-full" src="/lovable-uploads/bf121cc4-1175-4554-aa01-dc803a73df3f.png" />
           </div> 
 
-
-
-          
-          
-          
           {/* Brand Identity Redefinition */}
-            <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
-              <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
-            </div>
+          <div className="w-full mb-32">
+            <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
+            <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
           </div>
 
           {/*Line*/} 
@@ -371,26 +364,26 @@ const SeoulMuseumProjectDetail = () => {
             </p>
           </div>
         </div>
-      
-        {/*Void*/}
-        <div className="pb-60 flex items-center justify-center">
-          <Link to="/project/learn" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
-            <span>Next project</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-        
-        {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
-            <div className="w-full">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
-              </AspectRatio>
-            </div>
-          </div>
-        ))}
       </section>
+      
+      {/*Void*/}
+      <div className="pb-60 flex items-center justify-center">
+        <Link to="/project/learn" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
+          <span>Next project</span>
+          <ArrowRight className="w-5 h-5" />
+        </Link>
+      </div>
+      
+      {/* Remaining Images */}
+      {project.images.slice(1).map((image, index) => (
+        <div key={index + 1} className="mb-20">
+          <div className="w-full">
+            <AspectRatio ratio={16 / 9} className="w-full">
+              <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
+            </AspectRatio>
+          </div>
+        </div>
+      ))}
     </ProjectLayout>
   );
 };
