@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -12,20 +13,29 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
-  const processSteps = [{
-    title: "Brand Analysis",
-    items: ["Heritage Study & Identity Research"]
-  }, {
-    title: "Spatial Design",
-    items: ["Wayfinding System", "Visitor Experience"]
-  }, {
-    title: "Implementation",
-    items: ["Brand Integration", "Modern Design Principles"]
-  }];
+
+  const processSteps = [
+    {
+      title: "Brand Analysis",
+      items: ["Heritage Study & Identity Research"]
+    },
+    {
+      title: "Spatial Design",
+      items: ["Wayfinding System", "Visitor Experience"]
+    },
+    {
+      title: "Implementation",
+      items: ["Brand Integration", "Modern Design Principles"]
+    }
+  ];
+
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -99,7 +109,7 @@ const SeoulMuseumProjectDetail = () => {
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
-            <div className="mb-40"> 
+            <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
@@ -107,9 +117,9 @@ const SeoulMuseumProjectDetail = () => {
             </div>
 
             <div className=""> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
+              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
+                Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
               </p>
             </div>
 
@@ -311,6 +321,8 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default SeoulMuseumProjectDetail;
