@@ -345,11 +345,11 @@ const SeoulMuseumProjectDetail = () => {
 
           {/*Exhibtion Hall*/}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/a0af4b52-bcc5-4ee8-9171-1ae2ef9c6900.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/2019b69b-609b-4a52-a25a-16b475589716.png" />
               </div>
 
           <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/7e11991a-387a-48d6-9798-00f17bda6d82.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/eb5ac70e-151e-449b-be5c-1b6fcb42d768.png" />
               </div>
 
          {/*Lobby comments*/}
