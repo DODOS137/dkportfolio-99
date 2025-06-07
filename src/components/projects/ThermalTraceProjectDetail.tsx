@@ -147,7 +147,7 @@ const ThermalTraceProjectDetail = () => {
         </ProjectContent>
       
         {/* Navigation */}
-        <div className="pb-60 flex items-center justify-center">
+        <div className="pb-60 flex items-center justify-center mt-52">
           <Link to="/project/project-4" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
             <span>Next project</span>
             <ArrowRight className="w-5 h-5" />
