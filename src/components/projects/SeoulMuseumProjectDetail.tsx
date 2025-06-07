@@ -214,33 +214,45 @@ const SeoulMuseumProjectDetail = () => {
           </div>     
 
           {/* Context & Problem Analysis Section */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Context &amp; Problem Analysis</h2>
-              <div>
-                <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Overcrowded Specimen Displays</h3>
-                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                  The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
-                </p>
-              </div>
-         
-               <div>
-                <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Displays</h3>
-                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                  The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
-                </p>
-              </div>           
-            
+         <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+         <div className="rounded-lg bg-transparent mt-40 flex flex-col">
+    
+    <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">
+      Context &amp; Problem Analysis
+    </h2>
+    
+    {/* ⬇ h3 + p 그룹만 따로 세로 정렬 */}
+    <div className="flex flex-col space-y-8">
+      <div>
+        <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">
+          Overcrowded Specimen Displays
+        </h3>
+        <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+          The museum's current taxonomic approach results in densely packed displays...
+        </p>
+      </div>
 
-              <div>
-                <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Overcrowded</h3>
-                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                  The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
-                </p>
-              </div>              
-            
-            </div>
-          </div>
+      <div>
+        <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">
+          Displays
+        </h3>
+        <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+          The museum's current taxonomic approach results in densely packed displays...
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">
+          Overcrowded
+        </h3>
+        <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+          The museum's current taxonomic approach results in densely packed displays...
+        </p>
+      </div>
+    </div>
+ 
+  </div>
+</div>
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
