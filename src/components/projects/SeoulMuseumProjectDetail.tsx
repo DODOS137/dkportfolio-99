@@ -278,13 +278,13 @@ const SeoulMuseumProjectDetail = () => {
           
 
           {/* Floor Plan */}
-          <div className="w-full mb-32">
+          <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/158cf471-6a66-466d-b78a-90eb5b9cb682.png" />
             <img className="w-full h-auto" src="/lovable-uploads/fa2525e7-6df4-4a9d-91bf-2fa5260afc6d.png" />
           </div>
 
           {/*Exhibtion Plan*/}
-          <div className="w-full mb-32">
+          <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
            
           </div>
@@ -323,11 +323,11 @@ const SeoulMuseumProjectDetail = () => {
 
           {/*Lobby Images*/}
 
-          <div className="w-full mb-32">
+          <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
               </div>
 
-          <div className="w-full mb-32">
+          <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/2c1579d8-8849-44ef-b82b-60f0a459098c.png" />
               </div>
 
@@ -344,11 +344,11 @@ const SeoulMuseumProjectDetail = () => {
 
 
           {/*Exhibtion Hall*/}
-           <div className="w-full mb-32">
+           <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/6c195957-4548-4480-b204-fa616c83621b.png" />
               </div>
 
-          <div className="w-full mb-32">
+          <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/8c62ae91-46c3-431b-a691-98c542349817.png" />
               </div>
 
@@ -365,7 +365,7 @@ const SeoulMuseumProjectDetail = () => {
 
 
            {/*Built-in 1*/}
-           <div className="w-full mb-32">
+           <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" />
               </div>
          
@@ -378,17 +378,17 @@ const SeoulMuseumProjectDetail = () => {
           </div>
           
            {/*Built-in 2*/}
-           <div className="w-full mb-32">
+           <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/3fa7a7e0-8840-409c-b7c5-025bcb4d027c.png" />
               </div>
 
            {/*Rest Area Image 1*/}
-           <div className="w-full mb-32">
+           <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" />
               </div>
 
           {/*Rest Area Image 2*/}
-           <div className="w-full mb-32">
+           <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/dcb3ac8b-0b01-4f13-8341-e02e026d5c46.png" />
               </div>
 
@@ -436,7 +436,7 @@ const SeoulMuseumProjectDetail = () => {
           {/* Final Outcome */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-8"> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
+              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Final Outcome</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 Delivered a complete, testable museum experience encompassing space, identity, product, and narrative logic. The project is structured for future feedback loops through public interaction and prototyping.
               </p>
@@ -445,7 +445,7 @@ const SeoulMuseumProjectDetail = () => {
           
           
             {/*End Image */}
-           <div className="w-full mb-32">
+           <div className="w-full mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" />
               </div>
           </div>
