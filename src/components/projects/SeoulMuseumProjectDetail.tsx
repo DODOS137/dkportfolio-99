@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -13,7 +12,6 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
   const processSteps = [{
@@ -27,9 +25,7 @@ const SeoulMuseumProjectDetail = () => {
     items: ["Brand Integration", "Modern Design Principles"]
   }];
   const heroRef = useScrollAnimation();
-  
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -450,7 +446,7 @@ const SeoulMuseumProjectDetail = () => {
           
             {/*End Image */}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" />
               </div>
           </div>
         </div>
@@ -465,17 +461,13 @@ const SeoulMuseumProjectDetail = () => {
       </div>
       
       {/* Remaining Images */}
-      {project.images.slice(1).map((image, index) => (
-        <div key={index + 1} className="mb-20">
+      {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
             </AspectRatio>
           </div>
-        </div>
-      ))}
-    </ProjectLayout>
-  );
+        </div>)}
+    </ProjectLayout>;
 };
-
 export default SeoulMuseumProjectDetail;
