@@ -206,7 +206,7 @@ const SeoulMuseumProjectDetail = () => {
 
           {/*Site Image*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/0cd903a1-f9f2-483c-985e-4781c48b2b5b.png" />
+            <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" />
           </div>     
 
           {/* Context & Problem Analysis Section */}
