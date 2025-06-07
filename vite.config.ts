@@ -21,10 +21,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react({
-      // Enable Fast Refresh (correct option name)
-      refresh: true,
-      // Optimize for development
-      jsxImportSource: "@emotion/react",
+      // Use default Fast Refresh behavior for react-swc
     }),
     componentTagger(),
   ],
