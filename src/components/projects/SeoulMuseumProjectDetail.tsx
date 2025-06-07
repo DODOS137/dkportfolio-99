@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -12,6 +13,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
   const processSteps = [{
@@ -25,7 +27,9 @@ const SeoulMuseumProjectDetail = () => {
     items: ["Brand Integration", "Modern Design Principles"]
   }];
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+  
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -56,7 +60,6 @@ const SeoulMuseumProjectDetail = () => {
       {/* Main Content */}
       <section className="">
         {/* First Image - Updated */}
-       
         <div className="max-w-[1540px] mx-auto px-[250px] z-10">
           <img src="/lovable-uploads/c3196d4f-97a0-4a02-892e-907f32615c54.png" alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
@@ -76,7 +79,6 @@ const SeoulMuseumProjectDetail = () => {
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
                 <p className="text-white">Bachelor's Graduation Project</p>
-
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
@@ -127,7 +129,6 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
-            
             <div className="mb-8"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -135,16 +136,13 @@ const SeoulMuseumProjectDetail = () => {
               </p>
             </div>
        
-            
-        {/*Development Strategy*/}
+            {/*Development Strategy*/}
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
               </p>
             </div>
-
-            
           </div>
 
           {/*Line*/} 
@@ -184,26 +182,18 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
 
+          {/*Preliminary Research*/}
+          <div className=""> 
+            <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Preliminary Research</h2>
+            <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
+              A survey was conducted with 213 individuals who had previously visited the Seodaemun Museum of Natural History, either on-site or online. Among them, 32 participants had also experienced renowned natural history museums abroad. While the museum's collection of specimens was largely appreciated, 84% of respondents (179 people) highlighted the need for spatial and interior renewal.
+              Critical feedback pointed to the building's outdated grey façade and lack of distinctive identity, often being compared to a generic municipal office rather than a museum. The results revealed a strong demand for architectural redefinition and experiential enhancement that aligns with contemporary expectations for cultural institutions.
+            </p>
+          </div>
 
-        {/*Preliminary Research*/}
-            <div className=""> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Preliminary Research</h2>
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                A survey was conducted with 213 individuals who had previously visited the Seodaemun Museum of Natural History, either on-site or online. Among them, 32 participants had also experienced renowned natural history museums abroad. While the museum’s collection of specimens was largely appreciated, 84% of respondents (179 people) highlighted the need for spatial and interior renewal.
-                Critical feedback pointed to the building’s outdated grey façade and lack of distinctive identity, often being compared to a generic municipal office rather than a museum. The results revealed a strong demand for architectural redefinition and experiential enhancement that aligns with contemporary expectations for cultural institutions.
-              </p>
-            </div>
-
-
-
-
-          
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-   
-          
-          
           {/* Site Selection Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -215,45 +205,27 @@ const SeoulMuseumProjectDetail = () => {
           
           {/*Site Image*/}     
           <div className="w-full">
-          <img src="/lovable-uploads/9c695e2f-9c58-47bf-970e-25734dd7ee11.png" className="w-full h-full mb-40" />
+            <img src="/lovable-uploads/9c695e2f-9c58-47bf-970e-25734dd7ee11.png" className="w-full h-full mb-40" />
           </div>   
 
           {/*Site Image*/}     
           <div className="w-full">
-          <img className="w-full h-full" src="/lovable-uploads/bf121cc4-1175-4554-aa01-dc803a73df3f.png" />
+            <img className="w-full h-full" src="/lovable-uploads/bf121cc4-1175-4554-aa01-dc803a73df3f.png" />
           </div>     
 
-
-          
-          
-          
           {/* Context & Problem Analysis Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Context &amp; Problem Analysis </h2>
-                <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Overcrowded Specimen Displays</h2>
-                   <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea’s cultural and ecological context.
-                   </p>
-            
-              
-              
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-              </p>           
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-              </p>             
-             </h2>
-             </div>
+              <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Context &amp; Problem Analysis</h2>
+              <div>
+                <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Overcrowded Specimen Displays</h3>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+                  The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
+                </p>
+              </div>
+            </div>
           </div>
 
-
-          
-          
-          
-          
-          
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
@@ -277,12 +249,12 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Scriptwriting & Storyboard Section */}
           <div className="rounded-lg bg-transparent">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
-              Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-            </p>
-          </div>
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+              <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
+                Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+              </p>
+            </div>
 
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
@@ -317,8 +289,8 @@ const SeoulMuseumProjectDetail = () => {
           {/* Level Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
-          </div>
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
+            </div>
 
             <img className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
@@ -327,7 +299,7 @@ const SeoulMuseumProjectDetail = () => {
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-40" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
-               </div>
+            </div>
           </div>
 
           {/*Line*/} 
@@ -360,7 +332,7 @@ const SeoulMuseumProjectDetail = () => {
               Post-Project Expansion
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-60">All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
-          </p>
+            </p>
           </div>
         </div>
       
@@ -373,14 +345,18 @@ const SeoulMuseumProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default SeoulMuseumProjectDetail;
