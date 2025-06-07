@@ -277,27 +277,30 @@ const SeoulMuseumProjectDetail = () => {
 
           
 
-          {/* Brand Identity Redefinition */}
+          {/* Floor Plan */}
           <div className="w-full mb-32">
             <img className="w-full h-auto " src="/lovable-uploads/158cf471-6a66-466d-b78a-90eb5b9cb682.png" />
             <img className="w-full h-auto" src="/lovable-uploads/fa2525e7-6df4-4a9d-91bf-2fa5260afc6d.png" />
           </div>
 
-
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
-
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">As visitors ascend from the first-floor Marine Hall to the third-floor Terrestrial Hall 2, the exhibition textures become increasingly coarse—mirroring the gradual erosion of stone across different ecosystems. Ocean waves smooth, rivers carve, and mountain climates fracture stone surfaces in distinct ways. This progression was embedded into the spatial and sculptural design, using erosion as a visual language to differentiate zones and ground the architecture in natural logic. Each environment leaves its trace on the material, forming a continuous narrative of transformation through stone.
-              </p>
-              </div>
-          </div>          
-
- 
+          {/*Exhibtion Plan*/}
           <div className="w-full mb-32">
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
            
           </div>
 
+          {/*Floor and Exhibition Plans*/}
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                Floor Plan & Exhibtion
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum’s spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
+              </p>
+              </div>
+          </div>
+
+          
 
 
 
@@ -306,45 +309,29 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Scriptwriting & Storyboard Section */}
+       
+          
+          
+          
+          {/* Spatial Design */}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
-                Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-              </p>
-            </div>
+              <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Spatial Design</h2>
+             </div>
+         </div>
 
-            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId="aCJblmM9yzs" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-              </AspectRatio>
-            </div>
-          </div>
-
+ 
+          
+          
+          
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+ 
+          
+          
+          
+          
           {/* Level Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
