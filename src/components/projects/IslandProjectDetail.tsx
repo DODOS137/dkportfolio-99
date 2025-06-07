@@ -129,8 +129,27 @@ const IslandProjectDetail = () => {
             {/*Line*/} 
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+ 
+          {/* Site Section */}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
+                Site Selection
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-40">
+               The project is located at Anyangcheon Stream, part of Seoul’s Dulle-gil Route 6. As an urban corridor between Seoul and Gyeonggi, the stream is both a physical boundary and a shared recreational zone. The Shinjeong Submersible Bridge, with its low elevation and seasonal flooding, presents a compelling opportunity to reinterpret the identity of an island within a metropolitan setting. 
+              </p>
+            </div>
+          </div>
+            
+            
+            
+            
+            
+            
+            
             {/*site Image*/} 
-            <div className="w-full mb-40">
+            <div className="w-full">
               <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
            </div>            
             
