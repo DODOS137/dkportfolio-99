@@ -423,8 +423,8 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-auto mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
           
             <div className="w-full ">
-              <img className="w-full h-auto" src="/lovable-uploads/6a340977-73e8-41f6-89a9-a62f2ebd938f.png" />
-              <img className="w-full h-auto" src="/lovable-uploads/480fcf6f-8a92-4cab-bd47-0d6364c07c90.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/9af82104-3de4-45be-bda6-313f88f638df.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/479a25d0-1252-4373-9a77-ab53ba200abc.png" />
               
             </div>
           </div>
