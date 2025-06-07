@@ -57,7 +57,7 @@ const SeoulMuseumProjectDetail = () => {
       <section className="">
         {/* First Image - Updated */}
         <div className="max-w-[1540px] mx-auto px-[250px] z-10">
-          <img src="/lovable-uploads/c3196d4f-97a0-4a02-892e-907f32615c54.png" alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
+          <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src="/lovable-uploads/db58f1e0-0fea-4b68-953c-59d4580ad411.png" />
         </div>
 
         {/* Shared Container */}
@@ -206,7 +206,7 @@ const SeoulMuseumProjectDetail = () => {
 
           {/*Site Image*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/bf121cc4-1175-4554-aa01-dc803a73df3f.png" />
+            <img className="w-full h-full" src="/lovable-uploads/0cd903a1-f9f2-483c-985e-4781c48b2b5b.png" />
           </div>     
 
           {/* Context & Problem Analysis Section */}
@@ -328,7 +328,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
           <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/7e11991a-387a-48d6-9798-00f17bda6d82.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/8402ec96-d69c-4cbe-acc0-02edcbef3a44.png" />
               </div>
 
          {/*Lobby comments*/}
