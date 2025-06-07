@@ -384,7 +384,7 @@ const SeoulMuseumProjectDetail = () => {
 
            {/*Rest Area Image 1*/}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/7ce5ffff-ff5e-4c37-b796-d0cd1cdf6ee8.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" />
               </div>
 
           {/*Rest Area Image 2*/}
