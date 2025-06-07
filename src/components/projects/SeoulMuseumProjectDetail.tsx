@@ -67,9 +67,33 @@ const SeoulMuseumProjectDetail = () => {
       <section className="">
         {/* First Image - Updated */}
        
-        <div className="max-w-[1540px] mx-auto px-[250px] z-10">
-          <img src="/lovable-uploads/c3196d4f-97a0-4a02-892e-907f32615c54.png" alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
-        </div>
+          {/* YouTube Video Player */}
+          {project.videoId && <div className="">
+              <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <YouTube videoId="8GEK3igRom0" opts={{
+                width: '100%',
+                height: '100%',
+                playerVars: {
+                  autoplay: 0,
+                  controls: 1,
+                  rel: 0,
+                  showinfo: 0,
+                  modestbranding: 1,
+                  fs: 1,
+                  cc_load_policy: 0,
+                  iv_load_policy: 3,
+                  autohide: 1,
+                  disablekb: 0,
+                  enablejsapi: 1,
+                  origin: window.location.origin,
+                  branding: 0,
+                  color: 'white',
+                  theme: 'dark'
+                }
+              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                </AspectRatio>
+              </div>
 
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-[250px] z-10">        
@@ -117,9 +141,9 @@ const SeoulMuseumProjectDetail = () => {
             </div>
 
             <div className=""> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
+              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
+                Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
 
