@@ -12,7 +12,6 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
   const processSteps = [{
@@ -26,9 +25,7 @@ const SeoulMuseumProjectDetail = () => {
     items: ["Brand Integration", "Modern Design Principles"]
   }];
   const heroRef = useScrollAnimation();
-  
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -225,7 +222,7 @@ const SeoulMuseumProjectDetail = () => {
 
            {/* 첫 블록 */}
            <div>
-          <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
          Overcrowded Specimen Displays
           </h3>
          <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
@@ -235,7 +232,7 @@ const SeoulMuseumProjectDetail = () => {
 
          {/* 두 번째 블록 */}
           <div>
-         <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+         <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
           Passive Viewing Format
         </h3>
          <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
@@ -245,7 +242,7 @@ const SeoulMuseumProjectDetail = () => {
 
          {/* 세 번째 블록 */}
            <div>
-          <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-400">
           Lack of Identity in Spatial Elements
            </h3>
            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
@@ -375,17 +372,13 @@ const SeoulMuseumProjectDetail = () => {
       </div>
       
       {/* Remaining Images */}
-      {project.images.slice(1).map((image, index) => (
-        <div key={index + 1} className="mb-20">
+      {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
             </AspectRatio>
           </div>
-        </div>
-      ))}
-    </ProjectLayout>
-  );
+        </div>)}
+    </ProjectLayout>;
 };
-
 export default SeoulMuseumProjectDetail;
