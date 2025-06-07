@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -12,6 +13,7 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
   const processSteps = [{
@@ -25,7 +27,9 @@ const SeoulMuseumProjectDetail = () => {
     items: ["Brand Integration", "Modern Design Principles"]
   }];
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+  
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -225,7 +229,7 @@ const SeoulMuseumProjectDetail = () => {
           <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
          Overcrowded Specimen Displays
           </h3>
-         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The museum’s densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
           </div>
 
          {/* 두 번째 블록 */}
@@ -233,7 +237,7 @@ const SeoulMuseumProjectDetail = () => {
          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
           Passive Viewing Format
         </h3>
-         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition’s linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
        </div>
 
          {/* 세 번째 블록 */}
@@ -263,7 +267,7 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Narrative Concept
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence—tracking animals with care and honoring their lives, often referring to tigers as San-gun, or “Mountain Lord.” This ethos of respect extended to falconry, where Maekkun formed mutual bonds with wild hawks, never claiming ownership and accepting their release with grace. Rooted in this worldview, the project Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space, transforming static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence—tracking animals with care and honoring their lives, often referring to tigers as San-gun, or "Mountain Lord." This ethos of respect extended to falconry, where Maekkun formed mutual bonds with wild hawks, never claiming ownership and accepting their release with grace. Rooted in this worldview, the project Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space, transforming static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
 
             </p>
               </div>
@@ -295,7 +299,7 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Floor Plan & Exhibtion
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum’s spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum's spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
               </p>
               </div>
           </div>
@@ -337,7 +341,7 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
                 Reception Desk 
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The reception area introduces visitors to the museum’s renewed identity through a vertical sculptural installation that spans all three floors. Behind the desk, a folding-screen-inspired frame and mountain-shaped artwork evoke Korean cultural and geographic heritage—establishing a strong sense of place upon entry.
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The reception area introduces visitors to the museum's renewed identity through a vertical sculptural installation that spans all three floors. Behind the desk, a folding-screen-inspired frame and mountain-shaped artwork evoke Korean cultural and geographic heritage—establishing a strong sense of place upon entry.
               </p>
               </div>
           </div>
@@ -396,7 +400,7 @@ const SeoulMuseumProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
               <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">2F Rest Area </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A rest zone designed as a hunter’s study, filled with personal collections, insects, and field objects gathered during expeditions. The space invites quiet observation while offering an elevated view of the vertical glass sculpture that links all three floors.
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A rest zone designed as a hunter's study, filled with personal collections, insects, and field objects gathered during expeditions. The space invites quiet observation while offering an elevated view of the vertical glass sculpture that links all three floors.
               </p>
               </div>
           </div>
@@ -418,7 +422,7 @@ const SeoulMuseumProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
               <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Product Design</h2>
-              <p>Souvenirs and printed material were developed to reflect the museum’s narrative and pedagogical aims. From endangered species photo cards to object design, each item served as an extension of the museum’s identity—intended to emotionally and educationally resonate with visitors.
+              <p>Souvenirs and printed material were developed to reflect the museum's narrative and pedagogical aims. From endangered species photo cards to object design, each item served as an extension of the museum's identity—intended to emotionally and educationally resonate with visitors.
               </p>
             </div>
             <img className="w-full h-auto mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
@@ -448,7 +452,6 @@ const SeoulMuseumProjectDetail = () => {
            <div className="w-full mb-32">
             <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
               </div>
-      
         </div>
       </section>
       
@@ -461,13 +464,17 @@ const SeoulMuseumProjectDetail = () => {
       </div>
       
       {/* Remaining Images */}
-      {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+      {project.images.slice(1).map((image, index) => (
+        <div key={index + 1} className="mb-20">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
             </AspectRatio>
           </div>
-        </div>)}
-    </ProjectLayout>;
+        </div>
+      ))}
+    </ProjectLayout>
+  );
 };
+
 export default SeoulMuseumProjectDetail;
