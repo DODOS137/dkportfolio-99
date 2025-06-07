@@ -12,20 +12,29 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
-  const processSteps = [{
-    title: "Brand Analysis",
-    items: ["Heritage Study & Identity Research"]
-  }, {
-    title: "Spatial Design",
-    items: ["Wayfinding System", "Visitor Experience"]
-  }, {
-    title: "Implementation",
-    items: ["Brand Integration", "Modern Design Principles"]
-  }];
+
+  const processSteps = [
+    {
+      title: "Brand Analysis",
+      items: ["Heritage Study & Identity Research"]
+    },
+    {
+      title: "Spatial Design",
+      items: ["Wayfinding System", "Visitor Experience"]
+    },
+    {
+      title: "Implementation",
+      items: ["Brand Integration", "Modern Design Principles"]
+    }
+  ];
+
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -96,6 +105,40 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+          {/* YouTube Video Section */}
+          <div className="rounded-lg bg-transparent mb-40">
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <YouTube 
+                  videoId="8GEK3igRom0" 
+                  opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} 
+                  className="w-full h-full" 
+                  iframeClassName="w-full h-full border-0" 
+                />
+              </AspectRatio>
+            </div>
+          </div>
+
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
@@ -116,8 +159,6 @@ const SeoulMuseumProjectDetail = () => {
             
           </div>
 
-
-
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
@@ -134,7 +175,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-gray-400">Analysis</h3>
+                <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-sm leading-relaxed">On-site Survey & Research</p>
                   <p className="text-gray-400 text-sm leading-relaxed">Context & Problem Analysis</p>
@@ -311,6 +352,8 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default SeoulMuseumProjectDetail;
