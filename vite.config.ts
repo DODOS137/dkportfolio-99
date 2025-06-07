@@ -11,18 +11,20 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     hmr: {
       overlay: true,
+      port: 24678,
     },
     watch: {
       usePolling: false,
-      interval: 100,
+      interval: 50,
+      ignored: ['**/node_modules/**', '**/.git/**'],
     },
   },
   plugins: [
     react({
-      // Enable Fast Refresh for better development experience
-      fastRefresh: true,
-      // Optimize development builds
-      devTarget: 'es2020',
+      // Enable Fast Refresh (correct option name)
+      refresh: true,
+      // Optimize for development
+      jsxImportSource: "@emotion/react",
     }),
     componentTagger(),
   ],
@@ -31,7 +33,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Optimize dependency pre-bundling
+  // Optimize dependency pre-bundling for faster dev server
   optimizeDeps: {
     include: [
       'react',
@@ -39,6 +41,9 @@ export default defineConfig(({ mode }) => ({
       'react-router-dom',
       'lucide-react',
       '@radix-ui/react-aspect-ratio',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-toast',
+      '@tanstack/react-query',
     ],
     force: mode === 'development',
   },
@@ -49,4 +54,8 @@ export default defineConfig(({ mode }) => ({
   },
   // Cache optimization
   cacheDir: '.vite',
+  // Development optimizations
+  define: {
+    __DEV__: mode === 'development',
+  },
 }));
