@@ -106,6 +106,7 @@ const SeoulMuseumProjectDetail = () => {
               </p>
             </div>
 
+          {/*Development Strategy*/}
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -116,7 +117,7 @@ const SeoulMuseumProjectDetail = () => {
             
           </div>
 
-          {/*Development Strategy*/}
+
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
@@ -167,43 +168,104 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
           
-          {/*Site Image*/}     
+         {/*Site Image*/}     
           <div className="w-full">
-            <AspectRatio ratio={16 / 9} className="w-full">
-              <img className="w-full h-full" src="/lovable-uploads/c846b25b-3bd8-448b-b6d2-824867581bd9.png" />
-            </AspectRatio>
-          </div>          
+          <img className="w-full h-full" src="/lovable-uploads/c846b25b-3bd8-448b-b6d2-824867581bd9.png" />
+          </div>  
 
-          {/* Context & Problem Analysis Section */}
+         {/*Context Problem Image*/}     
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
+          Context & Problem Analysis 
+         </h2>
+         </div>
+         </div>
+          
+          <div className="w-full">
+          <img className="w-full h-full" src="/lovable-uploads/c846b25b-3bd8-448b-b6d2-824867581bd9.png" />
+          </div>  
+
+
+         {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+          
+
+          {/* Narrative Layer/Brand Identity Redefinition */}
+         
+          <div className="w-full">
+          <img className="w-full h-full" src="/lovable-uploads/c846b25b-3bd8-448b-b6d2-824867581bd9.png" />
+          </div>            
+          
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Narrative Concept & Logic</h2>
+              <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Narrative Layer/Brand Identity Redefinition</h2>
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+                Inspired by late Joseon-era hunters who viewed nature as both sustenance and sacred. Their dual relationship with predators like tigers—as threats and protectors—formed a conceptual lens. The falconer tradition further guided exhibition logic, where trust, release, and mutual respect shaped spatial and interpretive design.
               </p>
             </div>
           </div>
 
+        
+          
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Character Design Section */}
+       
+          
+          {/* FloorPlan */}
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">Character Design</h2>
+            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">FloorPlan</h2>
             
-            <div className="w-full mb-32">
+            <div className="w-full">
               <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
             </div>
-      
-            {/* Brand Identity Redefinition */}
-            <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
-              <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
+
+             <div className="w-full">
+             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
             </div>
+
+             <div className="w-full">
+             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            </div>
+
+
+
+         {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+            
+      
+            {/* Exhibition Design */}
+
+          <div className="rounded-lg bg-transparent">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Exhibition Design</h2>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
+            As visitors ascend from the first-floor Marine Hall to the third-floor Terrestrial Hall 2, the material textures of the exhibition elements gradually shift—growing coarser to reflect the natural progression of stone erosion across varied environments. Each ecosystem leaves its own mark on stone: the ocean smooths, rivers carve, and mountain climates fracture. This gradient of erosion was translated into spatial and sculptural design, using stone as a visual metaphor to differentiate environmental zones and embed geological logic into the architecture.  
+            </p>
           </div>
+
+            <div className="w-full">
+             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            </div>
+
+            
+            
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+            {/*Lobby*/}
+            <div className="w-full">
+             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            </div>
+
+            
+            
 
           {/* Scriptwriting & Storyboard Section */}
           <div className="rounded-lg bg-transparent">
