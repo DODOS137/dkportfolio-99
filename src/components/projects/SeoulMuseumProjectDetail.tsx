@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -12,20 +13,29 @@ import ProjectHero from './shared/ProjectHero';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
-  const processSteps = [{
-    title: "Brand Analysis",
-    items: ["Heritage Study & Identity Research"]
-  }, {
-    title: "Spatial Design",
-    items: ["Wayfinding System", "Visitor Experience"]
-  }, {
-    title: "Implementation",
-    items: ["Brand Integration", "Modern Design Principles"]
-  }];
+
+  const processSteps = [
+    {
+      title: "Brand Analysis",
+      items: ["Heritage Study & Identity Research"]
+    },
+    {
+      title: "Spatial Design",
+      items: ["Wayfinding System", "Visitor Experience"]
+    },
+    {
+      title: "Implementation",
+      items: ["Brand Integration", "Modern Design Principles"]
+    }
+  ];
+
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -97,41 +107,14 @@ const SeoulMuseumProjectDetail = () => {
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
           {/* Approach Section */}
-
-          <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId="aCJblmM9yzs" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-              </AspectRatio>
-            </div>
-
-          
-            <div className=""> 
+          <div className="rounded-lg bg-transparent">
+            <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
+            <div className="mb-40"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
-
           {/*Development Strategy*/}
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
@@ -139,6 +122,8 @@ const SeoulMuseumProjectDetail = () => {
                 Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
               </p>
             </div>
+
+            
           </div>
 
 
@@ -192,164 +177,84 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
           
-         {/*Site Image*/}     
+          {/*Site Image*/}     
           <div className="w-full">
-          <img className="w-full h-full" src="/lovable-uploads/c846b25b-3bd8-448b-b6d2-824867581bd9.png" />
-          </div>  
-
-         {/*Context Problem Image*/}     
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
-          Context & Problem Analysis 
-         </h2>
-         </div>
-         </div>
-          
-          <div className="w-full">
-          <img className="w-full h-full" src="/lovable-uploads/c846b25b-3bd8-448b-b6d2-824867581bd9.png" />
-          </div>  
-
-
-         {/*Line*/} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          
-
-          {/* Narrative Layer/Brand Identity Redefinition */}
+           
+              <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
          
-          <div className="w-full">
-          <img className="w-full h-full" src="/lovable-uploads/c846b25b-3bd8-448b-b6d2-824867581bd9.png" />
-          </div>            
-          
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          </div>          
+
+          {/* Context & Problem Analysis Section */}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Narrative Layer/Brand Identity Redefinition</h2>
+              <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">Narrative Concept & Logic</h2>
               <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-                Inspired by late Joseon-era hunters who viewed nature as both sustenance and sacred. Their dual relationship with predators like tigers—as threats and protectors—formed a conceptual lens. The falconer tradition further guided exhibition logic, where trust, release, and mutual respect shaped spatial and interpretive design.
+                The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
               </p>
             </div>
           </div>
 
-        
-          
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-       
-          
-          {/* FloorPlan */}
+          {/* Character Design Section */}
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">FloorPlan</h2>
+            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">Character Design</h2>
             
-            <div className="w-full">
-              <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            <div className="w-full mb-32">
+              <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
             </div>
-
-             <div className="w-full">
-             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+      
+            {/* Brand Identity Redefinition */}
+            <div className="w-full mb-32">
+              <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
+              <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
             </div>
+          </div>
 
-             <div className="w-full">
-             <img  src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-            </div>
-
-
-
-         {/*Line*/} 
+          {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-
-            
-      
-            {/* Exhibition Design */}
-
+          {/* Scriptwriting & Storyboard Section */}
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Exhibition Design</h2>
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
-            As visitors ascend from the first-floor Marine Hall to the third-floor Terrestrial Hall 2, the material textures of the exhibition elements gradually shift—growing coarser to reflect the natural progression of stone erosion across varied environments. Each ecosystem leaves its own mark on stone: the ocean smooths, rivers carve, and mountain climates fracture. This gradient of erosion was translated into spatial and sculptural design, using stone as a visual metaphor to differentiate environmental zones and embed geological logic into the architecture.  
+              Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
             </p>
           </div>
 
-            <div className="w-full">
-             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <YouTube videoId="aCJblmM9yzs" opts={{
+                width: '100%',
+                height: '100%',
+                playerVars: {
+                  autoplay: 0,
+                  controls: 1,
+                  rel: 0,
+                  showinfo: 0,
+                  modestbranding: 1,
+                  fs: 1,
+                  cc_load_policy: 0,
+                  iv_load_policy: 3,
+                  autohide: 1,
+                  disablekb: 0,
+                  enablejsapi: 1,
+                  origin: window.location.origin,
+                  branding: 0,
+                  color: 'white',
+                  theme: 'dark'
+                }
+              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+              </AspectRatio>
             </div>
-
-            
-            
+          </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-
-
-            {/*Spatial Design*/}
-          <div className="rounded-lg bg-transparent">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Spatial Design</h2>
-          </div>
-          </div>
-            
-            {/*Lobby*/}
-            <div className="w-full">
-             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-            </div>
-
-             <div className="w-full">
-             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-            </div>
-
-            
-            
-
-          {/* Exhibition Hall 1&2 */}
-         
-            
-            <div className="w-full">
-             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-            </div>    
-          
-            
-          
-            
-          <div className="rounded-lg bg-transparent">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">1F Marine Zone</h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
-         The ground floor is dedicated to marine life, spanning from prehistoric fossils to contemporary species inhabiting the waters around the Korean Peninsula. The design of each display is shaped by the movement of ocean currents, echoing the fluidity of the sea. 
-         A curved glass gallery divides the hall into two primary sections, functioning both as a visual anchor and immersive passage. Within, large-scale projections of aquatic creatures in motion envelop visitors—offering a vivid, sensory glimpse into the underwater world.</p>
-          </div>
-          </div>
-
-          <div className="rounded-lg bg-transparent">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">2F–3F Terrestrial Zone</h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
-              Spanning the second and third floors, this zone explores life forms native to Korea’s mountains, fields, and inland ecosystems. Alongside biological specimens, the exhibition incorporates historical artefacts—such as topographic maps and traditional hunting rifles—offering both ecological insight and cultural context.
-             Display cases are embedded into recessed wall niches, creating a layered, tactile experience. The vertical void linking the two floors takes inspiration from the form of a cascading waterfall, embodying the natural continuum between elevation and life. Amphibians and other species typically found near waterfalls are placed at its base, reinforcing this spatial metaphor.
-          </p>
-          </div>
-          </div>
-
-         
-            
-            <div className="w-full">
-             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-            </div>               
-
-
-
-
-            
-
-          {/*Line*/} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-
-            
-
-          {/* Storages */}
+          {/* Level Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
             <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
@@ -416,6 +321,8 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>)}
       </section>
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default SeoulMuseumProjectDetail;
