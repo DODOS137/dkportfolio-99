@@ -384,12 +384,12 @@ const SeoulMuseumProjectDetail = () => {
 
            {/*Rest Area Image 1*/}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/7ce5ffff-ff5e-4c37-b796-d0cd1cdf6ee8.png" />
               </div>
 
           {/*Rest Area Image 2*/}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/3e96c6e6-652a-4aa0-b262-c0fc8f3a63ac.png" />
               </div>
 
           {/*RA comments*/}
@@ -420,7 +420,7 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Product Design</h2>
             </div>
 
-            <img className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
+            <img className="w-full h-auto mb-40" src="/lovable-uploads/81c99489-b10c-4244-9012-713171a82f8c.png" />
           
             <div className="w-full ">
               <img className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
