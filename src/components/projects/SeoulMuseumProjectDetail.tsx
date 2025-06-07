@@ -331,6 +331,43 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-auto " src="/lovable-uploads/7e11991a-387a-48d6-9798-00f17bda6d82.png" />
               </div>
 
+         {/*Lobby comments*/}
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                Reception Desk 
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The reception area introduces visitors to the museum’s renewed identity through a vertical sculptural installation that spans all three floors. Behind the desk, a folding-screen-inspired frame and mountain-shaped artwork evoke Korean cultural and geographic heritage—establishing a strong sense of place upon entry.
+              </p>
+              </div>
+          </div>
+
+
+          {/*Exhibtion Hall*/}
+           <div className="w-full mb-32">
+            <img className="w-full h-auto " src="/lovable-uploads/a0af4b52-bcc5-4ee8-9171-1ae2ef9c6900.png" />
+              </div>
+
+          <div className="w-full mb-32">
+            <img className="w-full h-auto " src="/lovable-uploads/7e11991a-387a-48d6-9798-00f17bda6d82.png" />
+              </div>
+
+         {/*Lobby comments*/}
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                Exhibition Hall
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition unfolds across two ecological zones: the first floor (Marine Zone) draws inspiration from ocean currents, with immersive media and fluid spatial divisions that evoke the rhythm of the sea; while the second and third floors (Terrestrial Zone) explore land-based habitats through layered displays that combine natural specimens with historical artefacts, such as traditional hunting tools. A vertical sculptural void connects all levels, symbolising the continuous flow of ecological systems throughout the museum.
+              </p>
+              </div>
+          </div>
+
+
+          
+
+          
+
  
           
           
