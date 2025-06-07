@@ -53,13 +53,13 @@ const IslandProjectDetail = () => {
               {project.title}
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
-              {project.mainDescription}
+              This project reimagines the Shinjeong Submersible Bridge as a public space inspired by the logic of island perimeter trails (Dulle-gil). Rather than serving only as a connection point, the redesigned bridge proposes a spatial and narrative experience shaped by natural rhythms and erosion, embedding the temporal and ecological logic of island environments into an urban site. The result is a hybrid infrastructure that mirrors the identity of an island within the city.{project.mainDescription}
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">{project.projectType}</p>
+                <p className="text-white">Bachelor's Thesis</p>
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
@@ -89,7 +89,7 @@ const IslandProjectDetail = () => {
             <div className="mb-8"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                {project.approach}
+               Island trails, or Dulle-gil, develop organically along the contours of the land. The project began with an analysis of So-Mae-Mul Island’s trail system, identifying how natural topography, erosion, and local behaviour inform its path. This understanding was then abstracted into a spatial framework for the urban bridge. The trail becomes not just a route, but a metaphor for temporality, memory, and environmental engagement.
               </p>
             </div>
 
@@ -132,7 +132,34 @@ const IslandProjectDetail = () => {
             {/*site Image*/} 
             <div className="w-full mb-40">
               <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
-            </div>            
+           </div>            
+            
+         
+            
+           {/*site Image 2*/} 
+            <div className="w-full mb-40">
+              <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+           </div>  
+            
+            
+           {/*site Image 3*/} 
+            <div className="w-full mb-40">
+              <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+           </div>  
+
+
+           {/*Line*/} 
+            <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+        
+            
+            
+            {/*Line*/} 
+            <div className="w-full h-px my-40 bg-gray-500/50"></div>
+            
+            
+            
             
             {/* Final Outcome */}
             <div className="rounded-lg bg-transparent">
