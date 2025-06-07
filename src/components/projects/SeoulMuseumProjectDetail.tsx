@@ -284,8 +284,8 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Brand Identity Redefinition */}
           <div className="w-full mb-32">
-            <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
-            <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
+            <img alt="RX-056 Character Design" src="/lovable-uploads/a68a158f-ae1b-43bd-8ba2-379687ba210a.png" className="w-full h-auto " />
+            <img alt="RX-056 Character Design" src="/lovable-uploads/26aa9f3d-1845-4bb5-84fc-6fc765af5904.png" className="w-full h-auto" />
           </div>
 
           {/*Line*/} 
