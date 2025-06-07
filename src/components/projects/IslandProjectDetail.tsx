@@ -88,6 +88,15 @@ const IslandProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+
+          {/*cover Image*/} 
+          <div className="w-full mb-40">
+            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+              </div>          
+          
+          
+          
+          
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-8"> 
@@ -96,43 +105,39 @@ const IslandProjectDetail = () => {
                 {project.approach}
               </p>
             </div>
-       
-            {/*Development Strategy*/}
-            <div className=""> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                {project.development}
-              </p>
-            </div>
-          </div>
+
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Process Section */}
+ 
+            
+            
+            {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-40">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Community Engagement</h3>
+                <h3 className="text-xl font-light text-white mb-4">Site Selection</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Stakeholder Consultation</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Brain Storming</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Concept sketching</p>
+                </div>
+              </div>
+              
+              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
+                <h3 className="text-xl font-light text-white mb-4">Analysis</h3>
+                <div className="flex-1 flex flex-col items-center justify-center">
+                  <p className="text-gray-400 text-sm leading-relaxed"> Structural Function Review of the Existing Bridg</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Assessment of Existing Bridge Use and Design Logic</p>
                 </div>
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Design Development</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Modular Design</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Sustainable Materials</p>
-                </div>
-              </div>
-              
-              <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
-                <h3 className="text-xl font-light text-white mb-4">Implementation</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-sm leading-relaxed">Adaptive Spaces</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">Community Integration</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Build New Concept</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
                 </div>
               </div>
             </div>
@@ -141,7 +146,17 @@ const IslandProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Final Outcome */}
+
+           {/*site Image*/} 
+          <div className="w-full mb-40">
+            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+              </div>            
+            
+            
+            
+            
+            
+            {/* Final Outcome */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-40"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Final Outcome</h2>
