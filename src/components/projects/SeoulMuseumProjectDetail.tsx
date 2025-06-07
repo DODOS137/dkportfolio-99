@@ -218,7 +218,7 @@ const SeoulMuseumProjectDetail = () => {
 
          {/* 왼쪽: h2 제목 */}
           <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">
-            Context &amp; Problem Analysis
+          Problem Analysis
             </h2>
 
             {/* 오른쪽: h3 + p 세트들을 세로로 나열 */}
@@ -227,32 +227,32 @@ const SeoulMuseumProjectDetail = () => {
            {/* 첫 블록 */}
            <div>
           <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
-        Overcrowded Specimen Displays
-      </h3>
-      <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-        The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent.
-      </p>
-    </div>
+         Overcrowded Specimen Displays
+          </h3>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+        The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent. This obstructs visitor perception and diminishes interpretive clarity. For example, African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea’s cultural and ecological context.
+           </p>
+          </div>
 
          {/* 두 번째 블록 */}
-        <div>
-       <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
-        Displays
-      </h3>
-      <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-        This obstructs visitor perception and diminishes interpretive clarity.
-      </p>
-    </div>
+          <div>
+         <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+          Passive Viewing Format
+        </h3>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+        Exhibition design follows a one-directional model in which visitors simply view specimens from behind raised boundaries. This format reduces engagement to static observation, with minimal opportunity for interaction or layered interpretation.
+        </p>
+       </div>
 
          {/* 세 번째 블록 */}
-        <div>
-      <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
-        Overcrowded
-      </h3>
-      <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-        African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
-      </p>
-    </div>
+           <div>
+          <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+          Lack of Identity in Spatial Elements
+           </h3>
+           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+           Across the interior, spatial and graphic elements lack cohesive identity. Outdated materials and generic architectural features contribute to a dull and institutional atmosphere—detracting from the museum’s potential as a culturally resonant space.
+          </p>
+          </div>
 
          </div>
         </div>
@@ -260,15 +260,20 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Character Design Section */}
-          <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">Character Design</h2>
-            
-            <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-            </div>
-      
-            {/* Brand Identity Redefinition */}
+ 
+          
+          {/* Narrative */}
+
+          <div className="w-full">
+            <img className="w-full h-full" src="/lovable-uploads/bf121cc4-1175-4554-aa01-dc803a73df3f.png" />
+          </div> 
+
+
+
+          
+          
+          
+          {/* Brand Identity Redefinition */}
             <div className="w-full mb-32">
               <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
               <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
