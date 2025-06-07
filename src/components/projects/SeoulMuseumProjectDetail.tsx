@@ -134,7 +134,9 @@ const SeoulMuseumProjectDetail = () => {
                 Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
-          {/*Development Strategy*/}
+       
+            
+        {/*Development Strategy*/}
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -182,9 +184,26 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
 
+
+        {/*Preliminary Research*/}
+            <div className=""> 
+              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Preliminary Research</h2>
+              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
+                A survey was conducted with 213 individuals who had previously visited the Seodaemun Museum of Natural History, either on-site or online. Among them, 32 participants had also experienced renowned natural history museums abroad. While the museum’s collection of specimens was largely appreciated, 84% of respondents (179 people) highlighted the need for spatial and interior renewal.
+                Critical feedback pointed to the building’s outdated grey façade and lack of distinctive identity, often being compared to a generic municipal office rather than a museum. The results revealed a strong demand for architectural redefinition and experiential enhancement that aligns with contemporary expectations for cultural institutions.
+              </p>
+            </div>
+
+
+
+
+          
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+   
+          
+          
           {/* Site Selection Section */}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
