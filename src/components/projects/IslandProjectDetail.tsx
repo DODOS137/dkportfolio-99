@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -8,13 +7,10 @@ import { islandProjectData } from '@/data/islandProject';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
 const IslandProjectDetail = () => {
   const project = islandProjectData;
   const heroRef = useScrollAnimation();
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -25,12 +21,7 @@ const IslandProjectDetail = () => {
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div 
-          ref={heroRef.ref} 
-          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-            heroRef.isVisible ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
+        <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
             {project.heroTitle}
           </h1>
@@ -90,7 +81,7 @@ const IslandProjectDetail = () => {
 
           {/*cover Image*/} 
           <div className="w-full mb-40">
-            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/f71e877e-a998-4cda-a3e2-d771de451638.png" />
           </div>          
           
           {/* Approach Section */}
@@ -165,8 +156,6 @@ const IslandProjectDetail = () => {
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default IslandProjectDetail;
