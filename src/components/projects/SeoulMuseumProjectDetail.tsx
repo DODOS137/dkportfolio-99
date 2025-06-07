@@ -109,13 +109,13 @@ const SeoulMuseumProjectDetail = () => {
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40" />
-            <div className=""> 
+            <div className="mb-40"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
-
+          {/*Development Strategy*/}
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -126,7 +126,7 @@ const SeoulMuseumProjectDetail = () => {
             
           </div>
 
-          {/*Development Strategy*/}
+
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
@@ -179,9 +179,9 @@ const SeoulMuseumProjectDetail = () => {
           
           {/*Site Image*/}     
           <div className="w-full">
-            <AspectRatio ratio={16 / 9} className="w-full">
+           
               <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
-            </AspectRatio>
+         
           </div>          
 
           {/* Context & Problem Analysis Section */}
