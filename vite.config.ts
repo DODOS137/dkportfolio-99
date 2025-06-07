@@ -9,9 +9,21 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    hmr: {
+      overlay: true,
+    },
+    watch: {
+      usePolling: false,
+      interval: 100,
+    },
   },
   plugins: [
-    react(),
+    react({
+      // Enable Fast Refresh for better development experience
+      fastRefresh: true,
+      // Optimize development builds
+      devTarget: 'es2020',
+    }),
     componentTagger(),
   ],
   resolve: {
@@ -19,4 +31,22 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Optimize dependency pre-bundling
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'lucide-react',
+      '@radix-ui/react-aspect-ratio',
+    ],
+    force: mode === 'development',
+  },
+  // Improve build performance
+  esbuild: {
+    target: 'es2020',
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
+  },
+  // Cache optimization
+  cacheDir: '.vite',
 }));
