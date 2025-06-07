@@ -151,7 +151,7 @@ const SeoulMuseumProjectDetail = () => {
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl font-light mb-12 md:text-xl text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-40">
               <div className="aspect-square bg-black rounded-lg p-8 flex flex-col text-center border border-white">
                 <h3 className="text-xl font-light text-white mb-4">Site Selection</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -181,16 +181,6 @@ const SeoulMuseumProjectDetail = () => {
               </div>
             </div>
           </div>
-
-         {/*Preliminary Research*/}
-            <div className=""> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Preliminary Research</h2>
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
-              </p>
-            </div>
-
-          
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
