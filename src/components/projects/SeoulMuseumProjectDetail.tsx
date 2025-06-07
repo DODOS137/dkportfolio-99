@@ -381,6 +381,27 @@ const SeoulMuseumProjectDetail = () => {
            <div className="w-full mb-32">
             <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
               </div>
+
+           {/*Rest Area Image 1*/}
+           <div className="w-full mb-32">
+            <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
+              </div>
+
+          {/*Rest Area Image 2*/}
+           <div className="w-full mb-32">
+            <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
+              </div>
+
+          {/*RA comments*/}
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">2F Rest Area </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">A rest zone designed as a hunter’s study, filled with personal collections, insects, and field objects gathered during expeditions. The space invites quiet observation while offering an elevated view of the vertical glass sculpture that links all three floors.
+              </p>
+              </div>
+          </div>
+
+          
  
           
           
@@ -393,54 +414,33 @@ const SeoulMuseumProjectDetail = () => {
           
           
           
-          {/* Level Design Section */}
+          {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Product Design</h2>
             </div>
 
             <img className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
             <div className="w-full ">
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
-              <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-40" />
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
-              <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
+              <img className="w-full h-auto mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
             </div>
           </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+         {/*End Image */}
+           <div className="w-full mb-32">
+            <img className="w-full h-auto " src="/lovable-uploads/e07cc5fc-8e72-465b-b67e-67f3fa4cf089.png" />
+              </div>
       
-          {/* Spatial Design Section */}
-          <div className="rounded-lg bg-transparent">
-            <div className="w-full">
-              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-40" />
-            </div> 
-            
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
-              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
-                Spatial Design
-              </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.</p>
-            </div>
-            
-            <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
-            </div> 
-          </div>
+         
 
-          {/*Line*/} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
-
-          {/* Post-Project Section */}
-          <div className="rounded-lg bg-transparent">
-            <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-8">
-              Post-Project Expansion
-            </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-60">All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
-            </p>
-          </div>
+          
         </div>
       </section>
       
