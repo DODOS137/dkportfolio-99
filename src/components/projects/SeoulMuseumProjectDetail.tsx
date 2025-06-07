@@ -264,6 +264,24 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" />
           </div> 
 
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 whitespace-nowrap min-w-[200px]">
+                Narrative Concept
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">In late Joseon Korea, hunters approached nature not only as a means of survival, but as a realm of deep respect and spiritual presence. Animal tracks and behaviours were read with care and precision, and successful hunts were followed by gestures of reverence. Tigers, for example, were often referred to as San-gun—"Mountain Lord"—a title that reveals their paradoxical image as both predator and guardian. Falconry also reflected a distinct Korean philosophy of coexistence. A Maekkun (falconer) would train a wild hawk not through dominance, but by forming a reciprocal bond rooted in trust. The hawk was never claimed as property, and its eventual release was accepted without hesitation—honouring its innate freedom. This worldview forms the conceptual basis for the exhibition’s curatorial direction. While the existing Seodaemun Museum holds a wide variety of natural specimens, its current presentation is spatially undifferentiated and narratively static. In response, the project titled Through the Eyes of a Hunter reimagines the museum as the Seoul Museum of Natural History. By drawing from late Joseon-era hunting culture, the project introduces a curatorial and spatial framework that reflects a Korean worldview—transforming the museum from a passive display of objects into an interpretive experience grounded in cultural memory and ecological respect.
+              </p>
+              </div>
+          </div>
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>          
+
+
+
+          
+
           {/* Brand Identity Redefinition */}
           <div className="w-full mb-32">
             <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
