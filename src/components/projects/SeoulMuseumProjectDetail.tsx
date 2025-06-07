@@ -155,17 +155,6 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
 
-
-          {/*Development Strategy*/}
-            <div className=""> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
-              </p>
-            </div>
-
-
-          
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
