@@ -284,9 +284,29 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Brand Identity Redefinition */}
           <div className="w-full mb-32">
-            <img alt="RX-056 Character Design" src="/lovable-uploads/a68a158f-ae1b-43bd-8ba2-379687ba210a.png" className="w-full h-auto " />
-            <img alt="RX-056 Character Design" className="w-full h-auto" src="/lovable-uploads/65a1e97d-15a6-47c1-abca-92ef81deefa0.png" />
+            <img src="/lovable-uploads/a68a158f-ae1b-43bd-8ba2-379687ba210a.png" className="w-full h-auto " />
+            <img className="w-full h-auto" src="/lovable-uploads/65a1e97d-15a6-47c1-abca-92ef81deefa0.png" />
           </div>
+
+
+          <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-40 mt-40">
+
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">As visitors ascend from the first-floor Marine Hall to the third-floor Terrestrial Hall 2, the exhibition textures become increasingly coarse—mirroring the gradual erosion of stone across different ecosystems. Ocean waves smooth, rivers carve, and mountain climates fracture stone surfaces in distinct ways. This progression was embedded into the spatial and sculptural design, using erosion as a visual language to differentiate zones and ground the architecture in natural logic. Each environment leaves its trace on the material, forming a continuous narrative of transformation through stone.
+              </p>
+              </div>
+          </div>          
+
+ 
+          <div className="w-full mb-32">
+            <img src="/lovable-uploads/a68a158f-ae1b-43bd-8ba2-379687ba210a.png" className="w-full h-auto " />
+           
+          </div>
+
+
+
+
+          
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
