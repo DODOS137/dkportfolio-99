@@ -66,34 +66,40 @@ const SeoulMuseumProjectDetail = () => {
       {/* Main Content */}
       <section className="">
         {/* First Image - Updated */}
-       
-          {/* YouTube Video Player */}
-          {project.videoId && <div className="">
-              <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-                <AspectRatio ratio={16 / 9} className="w-full">
-                  <YouTube videoId="8GEK3igRom0" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-                </AspectRatio>
-              </div>
+        <div className="w-full">
+          <img src="/lovable-uploads/c3196d4f-97a0-4a02-892e-907f32615c54.png" alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
+        </div>
+
+        {/* YouTube Video Player */}
+        {project.videoId && (
+          <div className="">
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <YouTube videoId="8GEK3igRom0" opts={{
+                  width: '100%',
+                  height: '100%',
+                  playerVars: {
+                    autoplay: 0,
+                    controls: 1,
+                    rel: 0,
+                    showinfo: 0,
+                    modestbranding: 1,
+                    fs: 1,
+                    cc_load_policy: 0,
+                    iv_load_policy: 3,
+                    autohide: 1,
+                    disablekb: 0,
+                    enablejsapi: 1,
+                    origin: window.location.origin,
+                    branding: 0,
+                    color: 'white',
+                    theme: 'dark'
+                  }
+                }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+              </AspectRatio>
+            </div>
+          </div>
+        )}
 
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-[250px] z-10">        
@@ -110,7 +116,6 @@ const SeoulMuseumProjectDetail = () => {
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
                 <p className="text-white">Bachelor's Graduation Project</p>
-
               </div>
               <div>
                 <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
@@ -139,18 +144,7 @@ const SeoulMuseumProjectDetail = () => {
                 Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
               </p>
             </div>
-
-            <div className=""> 
-              <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
-              </p>
-            </div>
-
-            
           </div>
-
-          {/*Development Strategy*/}
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
@@ -231,7 +225,7 @@ const SeoulMuseumProjectDetail = () => {
       
             {/* Brand Identity Redefinition */}
             <div className="w-full mb-32">
-              <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
+              <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 \" />
               <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
             </div>
           </div>
@@ -241,36 +235,36 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Scriptwriting & Storyboard Section */}
           <div className="rounded-lg bg-transparent">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
-              Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-            </p>
-          </div>
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+              <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
+                Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+              </p>
+            </div>
 
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <YouTube videoId="aCJblmM9yzs" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                  width: '100%',
+                  height: '100%',
+                  playerVars: {
+                    autoplay: 0,
+                    controls: 1,
+                    rel: 0,
+                    showinfo: 0,
+                    modestbranding: 1,
+                    fs: 1,
+                    cc_load_policy: 0,
+                    iv_load_policy: 3,
+                    autohide: 1,
+                    disablekb: 0,
+                    enablejsapi: 1,
+                    origin: window.location.origin,
+                    branding: 0,
+                    color: 'white',
+                    theme: 'dark'
+                  }
+                }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
               </AspectRatio>
             </div>
           </div>
@@ -281,8 +275,8 @@ const SeoulMuseumProjectDetail = () => {
           {/* Level Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
-          </div>
+              <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
+            </div>
 
             <img className="w-full h-auto mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
@@ -291,7 +285,7 @@ const SeoulMuseumProjectDetail = () => {
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-40" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
-               </div>
+            </div>
           </div>
 
           {/*Line*/} 
@@ -324,7 +318,7 @@ const SeoulMuseumProjectDetail = () => {
               Post-Project Expansion
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-60">All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
-          </p>
+            </p>
           </div>
         </div>
       
@@ -337,13 +331,15 @@ const SeoulMuseumProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
     </ProjectLayout>
   );
