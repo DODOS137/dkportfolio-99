@@ -279,8 +279,8 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Brand Identity Redefinition */}
           <div className="w-full mb-32">
-            <img src="/lovable-uploads/a68a158f-ae1b-43bd-8ba2-379687ba210a.png" className="w-full h-auto " />
-            <img className="w-full h-auto" src="/lovable-uploads/65a1e97d-15a6-47c1-abca-92ef81deefa0.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/158cf471-6a66-466d-b78a-90eb5b9cb682.png" />
+            <img className="w-full h-auto" src="/lovable-uploads/fa2525e7-6df4-4a9d-91bf-2fa5260afc6d.png" />
           </div>
 
 
@@ -294,7 +294,7 @@ const SeoulMuseumProjectDetail = () => {
 
  
           <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/3ae37238-050b-4c8f-99e2-2dc365014a12.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
            
           </div>
 
