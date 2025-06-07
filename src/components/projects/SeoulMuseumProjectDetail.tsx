@@ -389,7 +389,7 @@ const SeoulMuseumProjectDetail = () => {
 
           {/*Rest Area Image 2*/}
            <div className="w-full mb-32">
-            <img className="w-full h-auto " src="/lovable-uploads/3e96c6e6-652a-4aa0-b262-c0fc8f3a63ac.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/dcb3ac8b-0b01-4f13-8341-e02e026d5c46.png" />
               </div>
 
           {/*RA comments*/}
