@@ -150,14 +150,14 @@ const IslandProjectDetail = () => {
             
             {/*site Image*/} 
             <div className="w-full">
-              <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+              <img className="w-full h-auto " src="/lovable-uploads/0f705058-38cd-42f8-b003-60abbd2176db.png" />
            </div>            
             
          
             
            {/*site Image 2*/} 
             <div className="w-full mb-40">
-              <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+              <img className="w-full h-auto " src="/lovable-uploads/8285a269-25a6-4332-a937-76ca7910159d.png" />
            </div>  
             
             
