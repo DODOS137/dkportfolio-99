@@ -214,45 +214,48 @@ const SeoulMuseumProjectDetail = () => {
           </div>     
 
           {/* Context & Problem Analysis Section */}
-         <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-         <div className="rounded-lg bg-transparent mt-40 flex flex-col">
-    
-    <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">
-      Context &amp; Problem Analysis
-    </h2>
-    
-    {/* ⬇ h3 + p 그룹만 따로 세로 정렬 */}
-    <div className="flex flex-col space-y-8">
-      <div>
-        <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">
-          Overcrowded Specimen Displays
-        </h3>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-          The museum's current taxonomic approach results in densely packed displays...
-        </p>
-      </div>
+         <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 rounded-lg bg-transparent">
 
-      <div>
-        <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">
-          Displays
-        </h3>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-          The museum's current taxonomic approach results in densely packed displays...
-        </p>
-      </div>
+         {/* 왼쪽: h2 제목 */}
+          <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">
+            Context &amp; Problem Analysis
+            </h2>
 
-      <div>
-        <h3 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">
-          Overcrowded
-        </h3>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
-          The museum's current taxonomic approach results in densely packed displays...
-        </p>
-      </div>
+            {/* 오른쪽: h3 + p 세트들을 세로로 나열 */}
+              <div className="flex flex-col space-y-16">
+
+           {/* 첫 블록 */}
+           <div>
+          <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+        Overcrowded Specimen Displays
+      </h3>
+      <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+        The museum's current taxonomic approach results in densely packed displays where the environmental context of each specimen is largely absent.
+      </p>
     </div>
- 
-  </div>
-</div>
+
+         {/* 두 번째 블록 */}
+        <div>
+       <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+        Displays
+      </h3>
+      <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+        This obstructs visitor perception and diminishes interpretive clarity.
+      </p>
+    </div>
+
+         {/* 세 번째 블록 */}
+        <div>
+      <h3 className="text-2xl font-light text-gray-300 md:text-xl mb-4 min-w-[200px]">
+        Overcrowded
+      </h3>
+      <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+        African wildlife is presented in rigid photographic tableaux that feel disconnected from Korea's cultural and ecological context.
+      </p>
+    </div>
+
+         </div>
+        </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
