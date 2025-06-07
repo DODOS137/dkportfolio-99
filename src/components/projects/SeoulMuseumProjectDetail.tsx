@@ -139,8 +139,6 @@ const SeoulMuseumProjectDetail = () => {
                 Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
               </p>
             </div>
-
-            
           </div>
 
 
@@ -245,15 +243,15 @@ const SeoulMuseumProjectDetail = () => {
             <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">FloorPlan</h2>
             
             <div className="w-full">
-              <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+              <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
             </div>
 
              <div className="w-full">
-             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
             </div>
 
              <div className="w-full">
-             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+             <img  src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
             </div>
 
 
@@ -275,7 +273,7 @@ const SeoulMuseumProjectDetail = () => {
           </div>
 
             <div className="w-full">
-             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
             </div>
 
             
@@ -285,54 +283,73 @@ const SeoulMuseumProjectDetail = () => {
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
 
-            {/*Lobby*/}
-            <div className="w-full">
-             <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-            </div>
 
-            
-            
-
-          {/* Scriptwriting & Storyboard Section */}
+            {/*Spatial Design*/}
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">Spatial Design</h2>
+          </div>
+          </div>
+            
+            {/*Lobby*/}
+            <div className="w-full">
+             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            </div>
+
+             <div className="w-full">
+             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            </div>
+
+            
+            
+
+          {/* Exhibition Hall 1&2 */}
+         
+            
+            <div className="w-full">
+             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            </div>    
+          
+            
+          
+            
+          <div className="rounded-lg bg-transparent">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">1F Marine Zone</h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
-              Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-            </p>
+         The ground floor is dedicated to marine life, spanning from prehistoric fossils to contemporary species inhabiting the waters around the Korean Peninsula. The design of each display is shaped by the movement of ocean currents, echoing the fluidity of the sea. 
+         A curved glass gallery divides the hall into two primary sections, functioning both as a visual anchor and immersive passage. Within, large-scale projections of aquatic creatures in motion envelop visitors—offering a vivid, sensory glimpse into the underwater world.</p>
+          </div>
           </div>
 
-            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId="aCJblmM9yzs" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-              </AspectRatio>
-            </div>
+          <div className="rounded-lg bg-transparent">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+            <h2 className="text-2xl font-light mb-8 md:text-xl text-gray-300 min-w-[200px]">2F–3F Terrestrial Zone</h2>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400 mb-40 font-light">
+              Spanning the second and third floors, this zone explores life forms native to Korea’s mountains, fields, and inland ecosystems. Alongside biological specimens, the exhibition incorporates historical artefacts—such as topographic maps and traditional hunting rifles—offering both ecological insight and cultural context.
+             Display cases are embedded into recessed wall niches, creating a layered, tactile experience. The vertical void linking the two floors takes inspiration from the form of a cascading waterfall, embodying the natural continuum between elevation and life. Amphibians and other species typically found near waterfalls are placed at its base, reinforcing this spatial metaphor.
+          </p>
           </div>
+          </div>
+
+         
+            
+            <div className="w-full">
+             <img src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
+            </div>               
+
+
+
+
+            
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-          {/* Level Design Section */}
+
+            
+
+          {/* Storages */}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
             <h2 className="text-2xl font-light md:text-xl text-gray-300 mb-40">Level Design</h2>
