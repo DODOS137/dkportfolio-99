@@ -285,7 +285,7 @@ const SeoulMuseumProjectDetail = () => {
           {/* Brand Identity Redefinition */}
           <div className="w-full mb-32">
             <img alt="RX-056 Character Design" src="/lovable-uploads/a68a158f-ae1b-43bd-8ba2-379687ba210a.png" className="w-full h-auto " />
-            <img alt="RX-056 Character Design" src="/lovable-uploads/26aa9f3d-1845-4bb5-84fc-6fc765af5904.png" className="w-full h-auto" />
+            <img alt="RX-056 Character Design" className="w-full h-auto" src="/lovable-uploads/65a1e97d-15a6-47c1-abca-92ef81deefa0.png" />
           </div>
 
           {/*Line*/} 
