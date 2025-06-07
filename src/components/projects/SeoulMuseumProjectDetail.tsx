@@ -191,15 +191,16 @@ const SeoulMuseumProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             <h2 className="text-2xl mb-8 font-light md:text-xl text-gray-300">Character Design</h2>
             
-             <div className="w-full mb-32">
+            <div className="w-full mb-32">
               <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-40" />
-              </div>
+            </div>
       
             {/* Brand Identity Redefinition */}
             <div className="w-full mb-32">
               <img alt="RX-056 Character Design" src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png" className="w-full h-auto mt-16 " />
               <img alt="RX-056 Character Design" src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png" className="w-full h-auto mt-40" />
             </div>
+          </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
