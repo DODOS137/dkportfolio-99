@@ -43,7 +43,7 @@ const IslandProjectDetail = () => {
       {/* Main Content */}
       <section className="">
         {/* First Image */}
-        <div className="max-w-[1540px] mx-auto px-[250px] z-10">
+        <div className="max-w-[1540px] mx-auto  z-10">
           <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src={project.images[0]} />
         </div>
 
