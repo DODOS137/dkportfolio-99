@@ -196,11 +196,11 @@ const WhispersProjectDetail = () => {
           
          {/*Development Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/b112ebae-3086-432d-9ccd-ade6466a2878.png" />
+            <img className="w-full h-full" src="/lovable-uploads/d53ecd82-9cb2-41d8-b1bf-ea5c51b298d8.png" />
           </div>  
           {/*Development Image3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/4ecd9bac-003c-42ad-b97e-ecc7e62a5661.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
           </div>   
 
 
