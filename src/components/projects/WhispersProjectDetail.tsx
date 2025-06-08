@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -8,10 +9,24 @@ import { whispersProjectData } from '@/data/whispersProject';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
+
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+
+  const videoOpts = {
+    height: '100%',
+    width: '100%',
+    playerVars: {
+      autoplay: 0,
+      controls: 1,
+      modestbranding: 1,
+      rel: 0,
+    },
+  };
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -87,15 +102,24 @@ const WhispersProjectDetail = () => {
             </div>
           </div>
         
-
-  
-            
-            {/*Line*/} 
+          {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+          {/* YouTube Video Section */}
+          <div className="my-40">
+            <AspectRatio ratio={16 / 9}>
+              <YouTube
+                videoId="zqz3Owz0K3o"
+                opts={videoOpts}
+                className="w-full h-full"
+              />
+            </AspectRatio>
+          </div>
 
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
             
-            {/* Approach Section */}
+          {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-8"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Approach</h2>
@@ -104,7 +128,6 @@ const WhispersProjectDetail = () => {
               </p>
             </div>
             
-       
             {/*Project Purpose*/}
             <div className=""> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Project Purpose</h2>
@@ -113,9 +136,7 @@ const WhispersProjectDetail = () => {
               </p>
             </div>
 
-
-
-           {/*Development Strategy*/}
+            {/*Development Strategy*/}
             <div className="mt-8"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
@@ -155,7 +176,6 @@ const WhispersProjectDetail = () => {
                    <p className="text-gray-400 text-sm leading-relaxed">AR Appication Development</p>
                    <p className="text-gray-400 text-sm leading-relaxed">Spatial Design</p>
                    <p className="text-gray-400 text-sm leading-relaxed">Exhibtion Design</p>
-                  
                 </div>
               </div>
             </div>
@@ -185,6 +205,8 @@ const WhispersProjectDetail = () => {
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default WhispersProjectDetail;
