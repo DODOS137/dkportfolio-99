@@ -7,9 +7,18 @@ import { islandProjectData } from '@/data/islandProject';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import CarouselSection from './thermal-trace/CarouselSection';
+
 const IslandProjectDetail = () => {
   const project = islandProjectData;
   const heroRef = useScrollAnimation();
+  
+  const designImages = [
+    "/lovable-uploads/cc640d0e-7bb1-4ea8-b171-757739c2b705.png",
+    "/lovable-uploads/9c279e6e-b470-4233-b49d-65827db89700.png",
+    "/lovable-uploads/aececcad-74e8-4d74-8f56-a9f2e24e27eb.png"
+  ];
+
   return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -244,7 +253,11 @@ const IslandProjectDetail = () => {
               <img src="/lovable-uploads/6a470e16-2864-4cce-a936-ae10a67d2d06.png" className="w-full h-auto mt-40" />
            </div> 
 
-
+            {/* Design Carousel Section */}
+            <CarouselSection 
+              images={designImages}
+              title="Design Development"
+            />
 
             
 
