@@ -175,6 +175,38 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
+
+          {/* Idea Development Section */}
+ 
+            {/*Development Image1*/}     
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/6738a528-de77-4edc-b034-3e77c4fc50d0.png" />
+          </div>           
+          
+          
+          
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
+                Idea Development
+              </h2>
+              <p>11</p>
+            </div>
+          </div>
+          
+         {/*Development Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/6738a528-de77-4edc-b034-3e77c4fc50d0.png" />
+          </div>   
+
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+          
+
           {/* Final Outcome */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-40"> 
