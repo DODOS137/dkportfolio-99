@@ -8,17 +8,10 @@ import BackToTopButton from '@/components/BackToTopButton';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import CarouselSection from './thermal-trace/CarouselSection';
-
 const IslandProjectDetail = () => {
   const project = islandProjectData;
   const heroRef = useScrollAnimation();
-  
-  const designImages = [
-    "/lovable-uploads/cc640d0e-7bb1-4ea8-b171-757739c2b705.png",
-    "/lovable-uploads/9c279e6e-b470-4233-b49d-65827db89700.png",
-    "/lovable-uploads/aececcad-74e8-4d74-8f56-a9f2e24e27eb.png"
-  ];
-
+  const designImages = ["/lovable-uploads/cc640d0e-7bb1-4ea8-b171-757739c2b705.png", "/lovable-uploads/9c279e6e-b470-4233-b49d-65827db89700.png", "/lovable-uploads/aececcad-74e8-4d74-8f56-a9f2e24e27eb.png"];
   return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -258,10 +251,7 @@ const IslandProjectDetail = () => {
            </div> 
 
             {/* Design Carousel Section */}
-            <CarouselSection 
-              images={designImages}
-              title="Design Development"
-            />
+            <CarouselSection images={designImages} title="Design Development" />
 
             
 
@@ -279,7 +269,7 @@ const IslandProjectDetail = () => {
             <div className="rounded-lg bg-transparent">
               <div className="mb-40"> 
                 <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Final Outcome</h2>
-                <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
+                <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400 mb-20 ">
                   This project challenges the notion of bridges as merely functional. By translating the spatial and narrative logic of island trails into an urban site, it proposes an experiential infrastructure—where users engage with temporality, nature, and memory through design. The result is a small-scale yet conceptually expansive public space that encourages contemplation of place, change, and the unseen rhythms of water.
                 </p>
               </div>
