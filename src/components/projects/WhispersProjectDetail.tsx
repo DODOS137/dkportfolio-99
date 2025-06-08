@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -8,6 +7,7 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import { whispersProjectData } from '@/data/whispersProject';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import BackToTopButton from '@/components/BackToTopButton';
 
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
