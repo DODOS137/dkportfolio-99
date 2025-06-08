@@ -159,9 +159,67 @@ const IslandProjectDetail = () => {
             <div className="w-full mb-40">
               <img className="w-full h-auto " src="/lovable-uploads/2a3370e6-9b65-4915-8a4e-6b4fd2c94622.png" />
            </div>  
+
+
+
+           {/*Line*/} 
+            <div className="w-full h-px my-40 bg-gray-500/50"></div>            
+            
+
+           {/* Design */}
+         <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-40 rounded-lg bg-transparent">
+
+         {/* 왼쪽: h2 제목 */}
+          <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">
+          Problem Analysis
+            </h2>
+
+            {/* 오른쪽: h3 + p 세트들을 세로로 나열 */}
+              <div className="flex flex-col space-y-8 ">
+
+           {/* 첫 블록 */}
+           <div>
+          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
+         Overcrowded Specimen Displays
+          </h3>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
+          </div>
+
+         {/* 두 번째 블록 */}
+          <div>
+         <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
+          Passive Viewing Format
+        </h3>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
+       </div>
+
+         {/* 세 번째 블록 */}
+           <div>
+          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
+          Lack of Identity in Spatial Elements
+           </h3>
+           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.</p>
+          </div>
+
+          {/* 네 번째 블록 */}
+           <div>
+          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
+          Lack of Identity in Spatial Elements
+           </h3>
+           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.</p>
+          </div> 
+              
+              
+              
+          </div>
+        </div>           
             
             
-           {/*site Image 3*/} 
+            
+            
+            
+            
+            {/*site Image 3*/} 
             <div className="w-full mb-40">
               <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
            </div>  
