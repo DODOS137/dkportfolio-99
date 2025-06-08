@@ -234,6 +234,21 @@ const IslandProjectDetail = () => {
             <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
 
+            {/*Design Image 3*/} 
+            <div className="w-full">
+              <img className="w-full h-auto  mt-40" src="/lovable-uploads/3bbed700-bdfa-4934-beda-8b1fdeeabee1.png" />
+           </div>  
+
+            {/*Design Image 4*/} 
+            <div className="w-full mb-40">
+              <img className="w-full h-auto " src="/lovable-uploads/dfaf1402-bf06-4646-9785-a2ad750fcee7.png" />
+           </div> 
+
+
+
+            
+
+
         
             
             
