@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -46,7 +47,7 @@ const WhispersProjectDetail = () => {
       <section className="">
         {/* First Image */}
         <div className="max-w-[1540px] mx-auto px-[250px] z-10">
-          <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src={project.images[0]} />
+          <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src="/lovable-uploads/f5da6b7e-1ade-4051-a7da-9278562e07dd.png" />
         </div>
 
         {/* Shared Container */}
