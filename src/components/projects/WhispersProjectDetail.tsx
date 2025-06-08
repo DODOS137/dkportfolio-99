@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -9,11 +8,9 @@ import { whispersProjectData } from '@/data/whispersProject';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
-
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
-
   const videoOpts = {
     height: '100%',
     width: '100%',
@@ -21,12 +18,10 @@ const WhispersProjectDetail = () => {
       autoplay: 0,
       controls: 1,
       modestbranding: 1,
-      rel: 0,
-    },
+      rel: 0
+    }
   };
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -108,16 +103,12 @@ const WhispersProjectDetail = () => {
           {/* YouTube Video Section */}
           <div className="my-40">
             <AspectRatio ratio={16 / 9}>
-              <YouTube
-                videoId="zqz3Owz0K3o"
-                opts={videoOpts}
-                className="w-full h-full"
-              />
+              <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" />
             </AspectRatio>
           </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+          
             
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
@@ -205,8 +196,6 @@ const WhispersProjectDetail = () => {
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default WhispersProjectDetail;
