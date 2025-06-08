@@ -221,12 +221,12 @@ const IslandProjectDetail = () => {
             
             {/*Design Image 1*/} 
             <div className="w-full">
-              <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+              <img src="/lovable-uploads/6debb3b2-e63b-4300-b256-30e8d29d2c09.png" className="w-full h-auto  mt-40" />
            </div>  
 
             {/*Design Image 2*/} 
             <div className="w-full mb-40">
-              <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+              <img className="w-full h-auto " src="/lovable-uploads/e4c7d092-d403-4d18-8d87-6f1a679d9fa5.png" />
            </div> 
 
 
