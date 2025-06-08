@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -9,13 +8,10 @@ import { whispersProjectData } from '@/data/whispersProject';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
-
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -83,9 +79,9 @@ const WhispersProjectDetail = () => {
 
          {/* Client Section */}
           <div className="rounded-lg bg-transparent">
-            <div className="mb-8"> 
+            <div className="mb-8 mt-40"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Client</h2>
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
+              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-300">
                 UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
               </p>
             </div>
@@ -120,7 +116,7 @@ const WhispersProjectDetail = () => {
 
 
            {/*Development Strategy*/}
-            <div className=""> 
+            <div className="mt-8"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Development Strategy</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
@@ -189,8 +185,6 @@ const WhispersProjectDetail = () => {
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default WhispersProjectDetail;
