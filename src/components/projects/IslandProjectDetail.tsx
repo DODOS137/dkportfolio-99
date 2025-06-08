@@ -38,7 +38,7 @@ const IslandProjectDetail = () => {
             {project.heroSubtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>{project.heroYear}</span>
+            <span>2019</span>
             <span>•</span>
             <span>{project.heroClient}</span>
             <span>•</span>
@@ -180,7 +180,7 @@ const IslandProjectDetail = () => {
 
          {/* 왼쪽: h2 제목 */}
           <h2 className="text-2xl mb-8 md:text-xl font-light text-gray-300 min-w-[200px]">
-          Problem Analysis
+         Design Features & Development
             </h2>
 
             {/* 오른쪽: h3 + p 세트들을 세로로 나열 */}
@@ -189,34 +189,38 @@ const IslandProjectDetail = () => {
            {/* 첫 블록 */}
            <div>
           <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
-         Overcrowded Specimen Displays
+           1. Submersible Infrastructure
           </h3>
-         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
-          </div>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The bridge accepts periodic flooding, allowing it to transform in appearance and accessibility. This responsiveness echoes the fluid boundary between land and sea on actual islands.
+         </p>
+         </div>
 
          {/* 두 번째 블록 */}
           <div>
          <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
-          Passive Viewing Format
+         2. Material Abrasivity
         </h3>
-         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
-       </div>
+         <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The walking surface employs texture gradients that reference stone erosion—polished by water, fractured by exposure—visually expressing geological time.
+         </p>
+         </div>
 
          {/* 세 번째 블록 */}
            <div>
           <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
-          Lack of Identity in Spatial Elements
+          3. Topographic Translation
            </h3>
-           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.</p>
+          <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Railings and edges emulate coastal landforms, turning safety elements into sculptural gestures that evoke island terrain.
+          </p>
           </div>
 
           {/* 네 번째 블록 */}
            <div>
           <h3 className="text-2xl font-light md:text-xl mb-4 min-w-[200px] text-gray-300">
-          Lack of Identity in Spatial Elements
+          4. Environmental Interactivity
            </h3>
-           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.</p>
-          </div> 
+           <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">Seasonal water levels control what parts of the bridge remain visible, encouraging repeat visits and creating a dynamic, responsive experience.
+           </p>
+           </div> 
               
               
               
@@ -276,7 +280,7 @@ const IslandProjectDetail = () => {
               <div className="mb-40"> 
                 <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Final Outcome</h2>
                 <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                  Delivered a comprehensive public space intervention that successfully transforms underutilized urban areas into vibrant community gathering spaces through thoughtful design and sustainable materials.
+                  This project challenges the notion of bridges as merely functional. By translating the spatial and narrative logic of island trails into an urban site, it proposes an experiential infrastructure—where users engage with temporality, nature, and memory through design. The result is a small-scale yet conceptually expansive public space that encourages contemplation of place, change, and the unseen rhythms of water.
                 </p>
               </div>
             </div>
