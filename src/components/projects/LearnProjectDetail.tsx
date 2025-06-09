@@ -213,7 +213,7 @@ const LearnProjectDetail = () => {
             <img className="w-full h-auto z-10 relative" src="/lovable-uploads/de5ea440-7a6f-42f0-8e27-45d9b5b96729.png" />
 
             {/* 유튜브 (겹쳐서 올라오게) */}
-          <div className="absolute z-20" style={{ width: '800px', height: '354px', top: '60%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+          <div className="relative z-20" style={{ width: '600px', height: '266px', top: '60%', left: '50%', transform: 'translate(-50%, -50%)' }}>
           <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-white w-full h-full">
           <YouTube 
         videoId="aCJblmM9yzs"
