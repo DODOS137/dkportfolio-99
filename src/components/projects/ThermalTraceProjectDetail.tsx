@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -16,11 +17,8 @@ import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import ImageGallery from './thermal-trace/ImageGallery';
 import BackToTopButton from '@/components/BackToTopButton';
-import PageLoader from '@/components/PageLoader';
-import { usePageLoading } from '@/hooks/usePageLoading';
 
 const ThermalTraceProjectDetail = () => {
-  const { isLoading } = usePageLoading();
   const project = thermalTraceProjectData;
 
   // Sample images for the spatial design carousel
@@ -40,13 +38,7 @@ const ThermalTraceProjectDetail = () => {
     title: "Design Development",
     items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
   }];
-
-  if (isLoading) {
-    return <PageLoader isVisible={isLoading} />;
-  }
-
-  return (
-    <ProjectLayout>
+  return <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -166,20 +158,16 @@ const ThermalTraceProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
       
       <BackToTopButton />
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default ThermalTraceProjectDetail;

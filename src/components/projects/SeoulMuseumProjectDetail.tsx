@@ -1,27 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import YouTube from 'react-youtube';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
+import ModelViewer from '@/components/ModelViewer';
 import { seoulMuseumProjectData } from '@/data/seoulMuseumProject';
-import YouTube from 'react-youtube';
-import BackToTopButton from '@/components/BackToTopButton';
+import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
-import PageLoader from '@/components/PageLoader';
-import { usePageLoading } from '@/hooks/usePageLoading';
+import ProjectHero from './shared/ProjectHero';
+import ProjectMetadata from './shared/ProjectMetadata';
+import ProcessGrid from './shared/ProcessGrid';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import BackToTopButton from '@/components/BackToTopButton';
 
 const SeoulMuseumProjectDetail = () => {
-  const { isLoading } = usePageLoading();
-  const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = seoulMuseumProjectData;
-
-  if (isLoading) {
-    return <PageLoader isVisible={isLoading} />;
-  }
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  const processSteps = [{
+    title: "Brand Analysis",
+    items: ["Heritage Study & Identity Research"]
+  }, {
+    title: "Spatial Design",
+    items: ["Wayfinding System", "Visitor Experience"]
+  }, {
+    title: "Implementation",
+    items: ["Brand Integration", "Modern Design Principles"]
+  }];
+  const heroRef = useScrollAnimation();
+  return <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -424,8 +430,6 @@ const SeoulMuseumProjectDetail = () => {
         </div>)}
         
       <BackToTopButton />
-    </div>
-  );
+    </ProjectLayout>;
 };
-
 export default SeoulMuseumProjectDetail;
