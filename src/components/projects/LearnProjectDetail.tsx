@@ -198,7 +198,7 @@ const LearnProjectDetail = () => {
 
 
        {/* script 컨테이너1 */}     
-      <div className="w-full mb-20 md:mb-40">
+      <div className="w-full ">
               <img alt="RX-056 Character Design" className="w-full h-auto mt-20" src="/lovable-uploads/4b01aa09-e408-4273-b96a-fe2ad51a3ec6.png" />
               </div>
 
@@ -213,7 +213,7 @@ const LearnProjectDetail = () => {
 
        {/* 유튜브 플레이어 */}
        <div className="absolute" style={{
-              top: '20%',
+              top: '18%',
               // (프레임의 Y 위치 / 전체 이미지 높이) × 100
               left: '50%',
               width: '65.1%',
