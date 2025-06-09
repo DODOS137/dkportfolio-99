@@ -213,32 +213,35 @@ const LearnProjectDetail = () => {
             <img className="w-full h-auto z-10 relative" src="/lovable-uploads/de5ea440-7a6f-42f0-8e27-45d9b5b96729.png" />
 
             {/* 유튜브 (겹쳐서 올라오게) */}
-            <div className="absolute top-1/2 left-1/2 w-4/5 -translate-x-1/2 -translate-y-1/2 z-20">
-           <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-white">
-           <AspectRatio ratio={16 / 9} className="w-full">
-          <YouTube videoId="aCJblmM9yzs" opts={{
-                    width: '100%',
-                    height: '100%',
-                    playerVars: {
-                      autoplay: 0,
-                      controls: 1,
-                      rel: 0,
-                      showinfo: 0,
-                      modestbranding: 1,
-                      fs: 1,
-                      cc_load_policy: 0,
-                      iv_load_policy: 3,
-                      autohide: 1,
-                      disablekb: 0,
-                      enablejsapi: 1,
-                      origin: window.location.origin,
-                      branding: 0,
-                      color: 'white',
-                      theme: 'dark'
-                    }
-                  }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-          </AspectRatio>
-          </div>
+          <div className="absolute z-20" style={{ width: '1250px', height: '550px', top: '60%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+          <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-white w-full h-full">
+          <YouTube 
+        videoId="aCJblmM9yzs"
+        opts={{
+          width: '1250',
+          height: '550',
+          playerVars: {
+            autoplay: 0,
+            controls: 1,
+            rel: 0,
+            showinfo: 0,
+            modestbranding: 1,
+            fs: 1,
+            cc_load_policy: 0,
+            iv_load_policy: 3,
+            autohide: 1,
+            disablekb: 0,
+            enablejsapi: 1,
+            origin: window.location.origin,
+            branding: 0,
+            color: 'white',
+            theme: 'dark'
+          }
+        }}
+        className="w-full h-full"
+        iframeClassName="w-full h-full border-0"
+      />
+    </div>
           </div>
           </div>
 
