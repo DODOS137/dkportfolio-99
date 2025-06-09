@@ -209,31 +209,52 @@ const LearnProjectDetail = () => {
             </p>
           </div>
 
-            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId="aCJblmM9yzs" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-              </AspectRatio>
-            </div>
+        
+            
+            
+           <div className="relative w-full mb-40">
+           {/* 이미지 (위에 표시) */}
+            <img 
+            src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" 
+          className="w-full h-auto z-10 relative"
+            />
+
+            {/* 유튜브 (겹쳐서 올라오게) */}
+            <div className="absolute top-1/2 left-1/2 w-4/5 -translate-x-1/2 -translate-y-1/2 z-20">
+           <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-white">
+           <AspectRatio ratio={16 / 9} className="w-full">
+          <YouTube 
+          videoId="aCJblmM9yzs"
+          opts={{
+            width: '100%',
+            height: '100%',
+            playerVars: {
+              autoplay: 0,
+              controls: 1,
+              rel: 0,
+              showinfo: 0,
+              modestbranding: 1,
+              fs: 1,
+              cc_load_policy: 0,
+              iv_load_policy: 3,
+              autohide: 1,
+              disablekb: 0,
+              enablejsapi: 1,
+              origin: window.location.origin,
+              branding: 0,
+              color: 'white',
+              theme: 'dark'
+            }
+          }}
+          className="w-full h-full"
+          iframeClassName="w-full h-full border-0"
+          />
+          </AspectRatio>
+          </div>
+          </div>
+          </div>
+
+        
           </div>
 
           {/*Line*/} 
