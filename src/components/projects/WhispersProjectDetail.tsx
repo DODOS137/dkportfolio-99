@@ -8,6 +8,7 @@ import { whispersProjectData } from '@/data/whispersProject';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
+
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
@@ -21,6 +22,7 @@ const WhispersProjectDetail = () => {
       rel: 0
     }
   };
+
   return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -176,6 +178,7 @@ const WhispersProjectDetail = () => {
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
 
+          
           {/* Idea Development Section */}
  
             {/*Development Image1*/}     
@@ -270,6 +273,12 @@ const WhispersProjectDetail = () => {
               </div>
           </div>
 
+          {/* Second YouTube Video Section */}
+          <div className="my-40">
+            <AspectRatio ratio={16 / 9}>
+              <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
+            </AspectRatio>
+          </div>
 
           
 
@@ -313,4 +322,5 @@ const WhispersProjectDetail = () => {
       <BackToTopButton />
     </ProjectLayout>;
 };
+
 export default WhispersProjectDetail;
