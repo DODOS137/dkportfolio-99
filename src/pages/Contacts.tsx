@@ -1,18 +1,15 @@
-
 import React from 'react';
 import { Mail, Phone, Linkedin, Instagram, Youtube } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import Navbar from '@/components/Navbar';
-
 const Contacts = () => {
-  return (
-    <div className="min-h-screen bg-black overflow-hidden">
+  return <div className="min-h-screen bg-black overflow-hidden">
       <Navbar />
       <main className="pt-16 px-4 md:px-8">
-        <div className="max-w-3xl mx-auto mt-16">
+        <div className="max-w-3xl mx-auto mt-16 my-[160px]">
           <h1 className="text-4xl font-bold text-white mb-8">Contacts</h1>
           
-          <div className="bg-[#111] rounded-xl p-6 md:p-8 shadow-lg border border-gray-800">
+          <div className="rounded-xl p-6 md:p-8 shadow-lg border border-gray-800 bg-transparent py-[40px]">
             <div className="text-white space-y-6">
               {/* Email Contact */}
               <div className="flex items-center space-x-4 hover:bg-[#222] p-3 rounded-lg transition-all">
@@ -26,15 +23,7 @@ const Contacts = () => {
               </div>
               
               {/* Phone Contact */}
-              <div className="flex items-center space-x-4 hover:bg-[#222] p-3 rounded-lg transition-all">
-                <div className="bg-white p-3 rounded-full">
-                  <Phone className="text-black" size={24} />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Phone</p>
-                  <a href="tel:+447587458797" className="text-white hover:text-gray-300 transition-colors font-medium">+44 (0) 7587-458797</a>
-                </div>
-              </div>
+              
               
               {/* LinkedIn Contact */}
               <div className="flex items-center space-x-4 hover:bg-[#222] p-3 rounded-lg transition-all">
@@ -72,7 +61,7 @@ const Contacts = () => {
           </div>
 
           <div className="mt-16">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto ">
               <h1 className="text-4xl md:text-6xl font-light mb-8 text-center text-white">Get In Touch</h1>
               <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
               </p>
@@ -81,8 +70,6 @@ const Contacts = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Contacts;
