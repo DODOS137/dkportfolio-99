@@ -17,7 +17,7 @@ const projects: Project[] = [{
   id: "1",
   title: "Invisible",
   slug: "invisible-space-museum",
-  description: "Virtual Reality Contents",
+  description: "Scientific Virtual Reality Content",
   category: "VR Design",
   imageUrl: "/lovable-uploads/dd05d902-8937-42b8-bb1e-c6ad7461546b.png"
 }, {
@@ -31,14 +31,14 @@ const projects: Project[] = [{
   id: "3",
   title: "Thermal Trace",
   slug: "project-3",
-  description: "XR & Exhibition Design",
-  category: "XR",
+  description: "Reimagining the Fashion Show Through XR",
+  category: "XR & Exhibition Design",
   imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
 }, {
   id: "4",
   title: "Whispers from the Bottom",
   slug: "project-4",
-  description: "Exhibition Design",
+  description: "An Immersive Exhibition Platform Led by Sound",
   category: "Exhibition Design",
   imageUrl: "/lovable-uploads/89fa6153-0435-48f8-9cc7-7d4eacde6883.png"
 }, {

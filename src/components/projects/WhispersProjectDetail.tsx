@@ -38,7 +38,7 @@ const WhispersProjectDetail = () => {
             {project.heroTitle}
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
-            {project.heroSubtitle}
+            An Immersive Exhibition Platform Led by Sound
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
             <span>{project.heroYear}</span>
