@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -7,10 +8,13 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
 import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
+
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  return <div className="min-h-screen bg-black text-white">
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
         <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
@@ -292,34 +296,31 @@ const LearnProjectDetail = () => {
               Post-Project Expansion
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light mb-60">All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
-
-
-
-
-
-
-
           </p>
           </div>
         </div>
       
         {/*Void*/}
         <div className="pb-60 flex items-center justify-center">
-          <Link to="/project/learn" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
+          <Link to="/project/project-3" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
             <span>Next project</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default LearnProjectDetail;
