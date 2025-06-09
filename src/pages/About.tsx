@@ -48,7 +48,7 @@ const About = () => {
               </div>
             
             <div className="backdrop-blur-sm p-6 border border-black/10 bg-transparent rounded-md px-0 py-0">
-              <h2 className="text-2xl font-semibold mb-4">Design Direction</h2>
+              <h2 className="text-2xl font-semibold mb-8">Design Direction</h2>
               <p className="text-xl leading-relaxed font-light text-gray-400">By focusing on content that reflects shared experiences—familiar objects or commonly felt emotions—I aim to create work that is both relatable and resonant. I believe that when design is grounded in what people already recognise and connect with, it becomes more intuitive, accessible, and meaningful in everyday life.
               </p>
               </div>
