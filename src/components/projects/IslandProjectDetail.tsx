@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -23,7 +22,8 @@ const IslandProjectDetail = () => {
     return <PageLoader isVisible={isLoading} />;
   }
 
-  return <ProjectLayout>
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work page" />
 
@@ -264,7 +264,8 @@ const IslandProjectDetail = () => {
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
 
 export default IslandProjectDetail;
