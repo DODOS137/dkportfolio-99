@@ -262,7 +262,7 @@ const LearnProjectDetail = () => {
       
           
                 <div className="w-full ">
-              <img className="w-full h-auto mt-20" src="/lovable-uploads/6e409061-bf9a-45d0-b365-8888b6ee8fed.png" />
+              <img src="/lovable-uploads/9d2f8b10-a136-4722-821e-acea5f8a8c93.png" className="w-full h-auto mt-20 mb-40" />
               </div>
           
           
@@ -270,11 +270,7 @@ const LearnProjectDetail = () => {
           
           
           <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
             
-            <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-20 md:mb-40">Level Design</h2>
-            
-          </div>
 
             <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
