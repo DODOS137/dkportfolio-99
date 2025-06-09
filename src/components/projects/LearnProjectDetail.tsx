@@ -208,28 +208,28 @@ const LearnProjectDetail = () => {
         
             
          {/* script 컨테이너 */}     
-         <div className="w-full flex justify-center mb-40">
-       {/* 이미지 컨테이너 */}
-       <div className="relative" style={{ width: '1920px' }}>
-    {/* 이미지 (프레임 역할) */}
+        <div className="w-full flex justify-center mb-40">
+  {/* 기준 이미지 컨테이너 */}
+  <div className="relative w-full max-w-[1920px]">
+    {/* 배경 이미지 */}
     <img
       src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png"
-      alt="RX-056 Character Design Frame"
+      alt="RX-056 Character Frame"
       className="w-full h-auto block"
     />
 
-    {/* 유튜브 플레이어 - 이미지 내 프레임에 정확히 삽입 */}
+    {/* 유튜브 플레이어 */}
     <div
       className="absolute"
       style={{
-        top: '28%',          // <-- 프레임 내 위치 보정값 (이미지 상에서 측정해서 조정)
+        top: '40.1%',         // (프레임의 Y 위치 / 전체 이미지 높이) × 100
         left: '50%',
-        width: '65.1%',      // (1250 / 1920) × 100 = 65.1%
-        height: '550px',
+        width: '65.1%',       // 1250 / 1920 = 65.1%
+        aspectRatio: '1250 / 550',
         transform: 'translateX(-50%)',
       }}
     >
-      <div className="w-full h-full bg-black rounded-lg overflow-hidden shadow-2xl border border-white">
+      <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl border border-white">
         <YouTube
           videoId="aCJblmM9yzs"
           opts={{
@@ -238,10 +238,8 @@ const LearnProjectDetail = () => {
             playerVars: {
               autoplay: 0,
               controls: 1,
-              rel: 0,
               modestbranding: 1,
               fs: 1,
-              enablejsapi: 1,
               origin: window.location.origin,
             },
           }}
@@ -252,6 +250,7 @@ const LearnProjectDetail = () => {
     </div>
   </div>
 </div>
+
 
         
           </div>
