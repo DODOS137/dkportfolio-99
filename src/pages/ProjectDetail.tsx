@@ -18,9 +18,9 @@ const ProjectDetail = () => {
         return <InvisibleProjectDetail />;
       case 'learn':
         return <LearnProjectDetail />;
-      case 'project-3':
+      case 'thermal-trace':
         return <ThermalTraceProjectDetail />;
-      case 'project-4':
+      case 'whispers-of-memory':
         return <WhispersProjectDetail />;
       case 'project-5':
         return <SeoulMuseumProjectDetail />;
