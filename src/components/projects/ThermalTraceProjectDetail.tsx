@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -17,8 +16,16 @@ import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import ImageGallery from './thermal-trace/ImageGallery';
 import BackToTopButton from '@/components/BackToTopButton';
+import PageLoader from '@/components/PageLoader';
+import { usePageLoading } from '@/hooks/usePageLoading';
 
 const ThermalTraceProjectDetail = () => {
+  const { isLoading } = usePageLoading();
+
+  if (isLoading) {
+    return <PageLoader />;
+  }
+
   const project = thermalTraceProjectData;
 
   // Sample images for the spatial design carousel

@@ -13,8 +13,16 @@ import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
+import PageLoader from '@/components/PageLoader';
+import { usePageLoading } from '@/hooks/usePageLoading';
 
 const SeoulMuseumProjectDetail = () => {
+  const { isLoading } = usePageLoading();
+
+  if (isLoading) {
+    return <PageLoader />;
+  }
+
   const project = seoulMuseumProjectData;
   const processSteps = [{
     title: "Brand Analysis",
