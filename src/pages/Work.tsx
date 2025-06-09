@@ -208,7 +208,7 @@ const Work = () => {
       <section className="py-8 px-4 md:px-8 bg-black bg-opacity-80 backdrop-blur-sm mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center">
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-700">
               {viewMode === 'slider' ? 'Use arrow keys or click to navigate' : 'Click on any project to view details'}
             </div>
           </div>
