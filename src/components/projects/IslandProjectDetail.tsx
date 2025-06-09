@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -7,6 +6,7 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import { islandProjectData } from '@/data/islandProject';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectLayout from './shared/ProjectLayout';
+import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import CarouselSection from './thermal-trace/CarouselSection';
 
@@ -17,12 +17,7 @@ const IslandProjectDetail = () => {
 
   return <ProjectLayout>
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
-        <Link to="/work" className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to work page
-        </Link>
-      </nav>
+      <ProjectNavigation backText="Back to work page" />
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
