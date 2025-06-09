@@ -66,12 +66,12 @@ const Home = () => {
       <section className="py-40 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <div ref={introAnimation.ref} className={`transition-all duration-1500 delay-300 ${introAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <h2 className="text-4xl md:text-6xl font-light text-white mb-8 text-center">
+            <h2 className="text-4xl md:text-6xl font-light text-white mb-20 text-center">
               Creating Immersive
               <br />
               <span className="text-gray-400">Experiences</span>
             </h2>
-            <p className="text-lg text-gray-300 text-center max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-center max-w-2xl mx-auto leading-relaxed text-gray-400 font-light">
               Exploring the intersection of virtual reality, spatial design, and human interaction 
               through innovative digital experiences that challenge perception and inspire curiosity.
             </p>
@@ -92,10 +92,10 @@ const Home = () => {
       {/* Contact CTA */}
       <section className="py-40 px-4 md:px-8 border-t border-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl md:text-4xl font-light text-white mb-8">
+          <h3 className="text-3xl md:text-4xl font-light text-white mb-20">
             Let's Create Something
             <br />
-            <span className="text-gray-400">Amazing Together</span>
+            <span className="text-gray-400">Together</span>
           </h3>
           <Link to="/contacts">
             <Button variant="outline" className="border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-12 py-4 text-lg">
