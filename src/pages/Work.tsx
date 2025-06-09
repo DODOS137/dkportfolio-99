@@ -118,7 +118,7 @@ const Work = () => {
                         <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
                           {project.title}
                         </h2>
-                        <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto">
+                        <p className="text-lg md:text-xl max-w-2xl mx-auto font-light text-gray-400">
                           {project.description}
                         </p>
                       </div>
