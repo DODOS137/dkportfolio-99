@@ -229,7 +229,7 @@ const WhispersProjectDetail = () => {
 
           {/*Product Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/6e08648d-d487-4f02-94af-21198cb54ddc.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
           </div>   
 
 
@@ -239,7 +239,7 @@ const WhispersProjectDetail = () => {
 
 
 
-           {/*Spatial Design Image2*/} 
+           {/*Spatial Design*/} 
         
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
@@ -253,11 +253,34 @@ const WhispersProjectDetail = () => {
 
           {/*Spatial Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/cf70aa36-ba6c-479a-9358-4abadf91d2d1.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
           </div>   
 
 
-           {/*Spatial Design Image2*/}        
+
+           {/*Exhibition Design*/} 
+        
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
+              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
+                Exhibition Design
+              </h2>
+              <p className="text-xl font-light text-gray-400">The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.
+              </p>
+              </div>
+          </div>
+
+
+          
+
+     
+          
+          
+          
+          
+          
+          
+          {/*Spatial Design Image2*/}        
           <div className="w-full">
             <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
           </div>            
@@ -272,7 +295,7 @@ const WhispersProjectDetail = () => {
             <div className="mb-40"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Final Outcome</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
-                An immersive exhibition that successfully translates the mysteries of deep sea environments into tangible experiences through interactive displays and multimedia installations, creating a profound connection between visitors and marine ecosystems.
+                The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.
               </p>
             </div>
           </div>
