@@ -80,7 +80,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects Slider */}
-      <section className="py-20">
+      <section className="py-0">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
         </div>
