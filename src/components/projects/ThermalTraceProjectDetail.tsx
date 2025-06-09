@@ -45,7 +45,7 @@ const ThermalTraceProjectDetail = () => {
 
       <section className="">
         {/* First Image */}
-        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
+        <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">
           <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
