@@ -61,7 +61,7 @@ const Contacts = () => {
           </div>
 
           <div className="mt-16">
-            <div className="container mx-auto ">
+            <div className="container mx-auto mt-40">
               <h1 className="text-4xl md:text-6xl font-light mb-8 text-center text-white">Get In Touch</h1>
               <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
               </p>
