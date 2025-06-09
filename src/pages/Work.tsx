@@ -18,14 +18,14 @@ const projects: Project[] = [{
   title: "Invisible",
   slug: "invisible-space-museum",
   description: "Virtual Reality Contents",
-  category: "VR/AR",
+  category: "VR Design",
   imageUrl: "/lovable-uploads/eec176ba-ebab-43a9-bb78-e6f08c59771b.png"
 }, {
   id: "2",
   title: "Learn",
   slug: "learn",
   description: "Immersive Virtual Reality Experience",
-  category: "VR/AR",
+  category: "VR Design",
   imageUrl: "/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"
 }, {
   id: "3",
@@ -39,21 +39,21 @@ const projects: Project[] = [{
   title: "Whispers from the Bottom",
   slug: "project-4",
   description: "Exhibition Design",
-  category: "Exhibition",
+  category: "Exhibition Design",
   imageUrl: "/lovable-uploads/8f1ac9c4-a3f8-4eed-93d3-859b298cea4d.png"
 }, {
   id: "5",
   title: "Seoul Nature history Museum",
   slug: "project-5",
   description: "Brand Renewal and Spatial Design",
-  category: "Branding",
+  category: "Spatial Design",
   imageUrl: "/lovable-uploads/4c29e171-4bbf-4092-854c-13bf32686e5e.png"
 }, {
   id: "6",
   title: "Island",
   slug: "project-6",
   description: "Public Space Design",
-  category: "Spatial",
+  category: "Spatial Design",
   imageUrl: "/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"
 }];
 const Work = () => {
