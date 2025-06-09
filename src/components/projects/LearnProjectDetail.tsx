@@ -259,6 +259,16 @@ const LearnProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Level Design Section */}
+      
+          
+                <div className="w-full ">
+              <img className="w-full h-auto mt-20" src="/lovable-uploads/4b01aa09-e408-4273-b96a-fe2ad51a3ec6.png" />
+              </div>
+          
+          
+          
+          
+          
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
             
