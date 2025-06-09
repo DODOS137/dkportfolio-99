@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -10,17 +9,9 @@ import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
-import PageLoader from '@/components/PageLoader';
-import { usePageLoading } from '@/hooks/usePageLoading';
 
 const LearnProjectDetail = () => {
-  const { isLoading } = usePageLoading();
   const heroRef = useScrollAnimation<HTMLDivElement>();
-
-  if (isLoading) {
-    return <PageLoader />;
-  }
-
   const project = learnProjectData;
 
   return (

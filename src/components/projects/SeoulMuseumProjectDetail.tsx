@@ -13,17 +13,8 @@ import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
-import PageLoader from '@/components/PageLoader';
-import { usePageLoading } from '@/hooks/usePageLoading';
 
 const SeoulMuseumProjectDetail = () => {
-  const { isLoading } = usePageLoading();
-  const heroRef = useScrollAnimation();
-
-  if (isLoading) {
-    return <PageLoader />;
-  }
-
   const project = seoulMuseumProjectData;
   const processSteps = [{
     title: "Brand Analysis",
@@ -35,9 +26,8 @@ const SeoulMuseumProjectDetail = () => {
     title: "Implementation",
     items: ["Brand Integration", "Modern Design Principles"]
   }];
-
-  return (
-    <ProjectLayout>
+  const heroRef = useScrollAnimation();
+  return <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -440,8 +430,6 @@ const SeoulMuseumProjectDetail = () => {
         </div>)}
         
       <BackToTopButton />
-    </ProjectLayout>
-  );
+    </ProjectLayout>;
 };
-
 export default SeoulMuseumProjectDetail;
