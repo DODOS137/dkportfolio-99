@@ -196,27 +196,24 @@ const LearnProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          {/* Scriptwriting & Storyboard Section */}
-          <div className="rounded-lg bg-transparent">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 mb-20 md:mb-40 font-light">
-              Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-            </p>
-          </div>
 
-        
+       {/* script 컨테이너1 */}     
+      <div className="w-full mb-20 md:mb-40">
+              <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-20 md:mt-40" />
+              </div>
+
+          
             
-         {/* script 컨테이너 */}     
+       {/* script 컨테이너2 */}     
         <div className="w-full flex justify-center mb-40">
-  {/* 기준 이미지 컨테이너 */}
-  <div className="relative w-full max-w-[1920px]">
-    {/* 배경 이미지 */}
-    <img alt="RX-056 Character Frame" className="w-full h-auto block" src="/lovable-uploads/60cf2641-7eb9-4136-81ce-a3c55d3f16cf.png" />
+       {/* 기준 이미지 컨테이너 */}
+       <div className="relative w-full max-w-[1920px]">
+       {/* 배경 이미지 */}
+       <img alt="RX-056 Character Frame" className="w-full h-auto block" src="/lovable-uploads/60cf2641-7eb9-4136-81ce-a3c55d3f16cf.png" />
 
-    {/* 유튜브 플레이어 */}
-    <div className="absolute" style={{
-                top: '40.1%',
+       {/* 유튜브 플레이어 */}
+       <div className="absolute" style={{
+                top: '20%',
                 // (프레임의 Y 위치 / 전체 이미지 높이) × 100
                 left: '50%',
                 width: '65.1%',
@@ -224,7 +221,7 @@ const LearnProjectDetail = () => {
                 aspectRatio: '1250 / 550',
                 transform: 'translateX(-50%)'
               }}>
-      <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl border border-white">
+        <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl border border-white">
         <YouTube videoId="aCJblmM9yzs" opts={{
                     width: '100%',
                     height: '100%',
@@ -236,13 +233,26 @@ const LearnProjectDetail = () => {
                       origin: window.location.origin
                     }
                   }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
-      </div>
-    </div>
-  </div>
+          </div>
+          </div>
+          </div>
           </div>
 
+          {/* Scriptwriting & Storyboard Section */}
+          <div className="rounded-lg bg-transparent">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+            <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 mb-20 md:mb-40 font-light">
+              Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+            </p>
+          </div>
 
         
+        
+        
+          
+          
+          
           </div>
 
           {/*Line*/} 
