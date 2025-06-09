@@ -215,7 +215,7 @@ const LearnProjectDetail = () => {
            <div className="relative w-full mb-40">
            {/* 이미지 (위에 표시) */}
             <img 
-            src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" 
+            src="/lovable-uploads/9fed6f86-c98f-4399-9613-8146e271c814.png" 
           className="w-full h-auto z-10 relative"
             />
 
