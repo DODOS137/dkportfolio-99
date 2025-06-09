@@ -210,7 +210,7 @@ const WhispersProjectDetail = () => {
 
          {/*Product Design Image3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/89c7da2d-e99e-4a69-b26a-2e596cbed43f.png" />
           </div>   
           
 
