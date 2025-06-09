@@ -26,7 +26,7 @@ const ContactForm = () => {
     alert('Message sent! (This is a demo)');
     form.reset();
   };
-  return <div className="max-w-2xl mx-auto p-6 px-[32px]">
+  return <div className="max-w-2xl mx-auto p-6 px-0">
       <h2 className="text-2xl font-light mb-8 text-white">Contact Me</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
