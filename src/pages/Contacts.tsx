@@ -1,9 +1,12 @@
 
 import React from 'react';
+import { Mail, Phone, Linkedin, Instagram, Youtube } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
+import Navbar from '@/components/Navbar';
 
 const Contacts = () => {
-  return (div className="min-h-screen bg-black overflow-hidden">
+  return (
+    <div className="min-h-screen bg-black overflow-hidden">
       <Navbar />
       <main className="pt-16 px-4 md:px-8">
         <div className="max-w-3xl mx-auto mt-16">
@@ -68,30 +71,16 @@ const Contacts = () => {
             </div>
           </div>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div className="min-h-screen bg-black text-white">
-      {/* Navigation spacing */}
-      <div className="pt-20">
-        <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-light mb-8 text-center">Get In Touch</h1>
-          <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-           
-          </p>
-          <ContactForm />
+          <div className="mt-16">
+            <div className="container mx-auto px-6">
+              <h1 className="text-4xl md:text-6xl font-light mb-8 text-center text-white">Get In Touch</h1>
+              <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+              </p>
+              <ContactForm />
+            </div>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
