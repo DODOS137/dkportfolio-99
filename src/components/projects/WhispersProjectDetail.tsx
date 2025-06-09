@@ -230,7 +230,7 @@ const WhispersProjectDetail = () => {
 
           {/*Product Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/77bb8ff9-d703-4149-a8bb-36d8982d609a.png" />
           </div>   
 
 
@@ -254,7 +254,7 @@ const WhispersProjectDetail = () => {
 
           {/*Spatial Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/78c5f2f0-392a-4247-b514-cc3e8d607988.png" />
           </div>   
 
 
@@ -289,7 +289,7 @@ const WhispersProjectDetail = () => {
           
           {/*Spatial Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
           </div>            
 
 
