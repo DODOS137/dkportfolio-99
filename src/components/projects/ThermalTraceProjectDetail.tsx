@@ -49,7 +49,7 @@ const ThermalTraceProjectDetail = () => {
           <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
-        <ProjectContent>        
+        <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-20 md:mt-40">
             <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
@@ -147,7 +147,7 @@ const ThermalTraceProjectDetail = () => {
               The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
             </p>
           </ContentSection>
-        </ProjectContent>
+        </div>
       
         {/* Navigation */}
         <div className="pb-40 md:pb-60 flex items-center justify-center mt-32 md:mt-52">
