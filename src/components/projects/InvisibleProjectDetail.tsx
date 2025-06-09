@@ -55,7 +55,7 @@ const InvisibleProjectDetail = () => {
             {project.heroTitle}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="true">
-            {project.heroSubtitle}
+            Scientific Virtual Reality Content
           </p>
           <div className="mt-8 md:mt-12 flex flex-wrap justify-center gap-4 md:gap-8 text-xs md:text-sm text-gray-500 tracking-widest">
             <span data-lovable-editable="true">{project.heroYear}</span>
