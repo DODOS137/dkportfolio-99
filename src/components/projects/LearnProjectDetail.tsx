@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -10,13 +9,10 @@ import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -214,41 +210,33 @@ const LearnProjectDetail = () => {
             
            <div className="relative w-full mb-40">
            {/* 이미지 (위에 표시) */}
-            <img 
-            src="/lovable-uploads/9fed6f86-c98f-4399-9613-8146e271c814.png" 
-          className="w-full h-auto z-10 relative"
-            />
+            <img className="w-full h-auto z-10 relative" src="/lovable-uploads/734c6d91-5ebf-4297-9562-cf77560138da.png" />
 
             {/* 유튜브 (겹쳐서 올라오게) */}
             <div className="absolute top-1/2 left-1/2 w-4/5 -translate-x-1/2 -translate-y-1/2 z-20">
            <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-white">
            <AspectRatio ratio={16 / 9} className="w-full">
-          <YouTube 
-          videoId="aCJblmM9yzs"
-          opts={{
-            width: '100%',
-            height: '100%',
-            playerVars: {
-              autoplay: 0,
-              controls: 1,
-              rel: 0,
-              showinfo: 0,
-              modestbranding: 1,
-              fs: 1,
-              cc_load_policy: 0,
-              iv_load_policy: 3,
-              autohide: 1,
-              disablekb: 0,
-              enablejsapi: 1,
-              origin: window.location.origin,
-              branding: 0,
-              color: 'white',
-              theme: 'dark'
-            }
-          }}
-          className="w-full h-full"
-          iframeClassName="w-full h-full border-0"
-          />
+          <YouTube videoId="aCJblmM9yzs" opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
           </AspectRatio>
           </div>
           </div>
@@ -322,20 +310,16 @@ const LearnProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
       
       <BackToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default LearnProjectDetail;
