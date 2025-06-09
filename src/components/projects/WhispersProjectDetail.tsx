@@ -1,9 +1,12 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
+import ModelViewer from '@/components/ModelViewer';
+import YouTube from 'react-youtube';
 import { whispersProjectData } from '@/data/whispersProject';
 
 const WhispersProjectDetail = () => {
