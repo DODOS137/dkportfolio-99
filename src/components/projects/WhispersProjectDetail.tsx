@@ -14,13 +14,13 @@ import { usePageLoading } from '@/hooks/usePageLoading';
 
 const WhispersProjectDetail = () => {
   const { isLoading } = usePageLoading();
+  const heroRef = useScrollAnimation();
 
   if (isLoading) {
     return <PageLoader />;
   }
 
   const project = whispersProjectData;
-  const heroRef = useScrollAnimation();
   const videoOpts = {
     height: '100%',
     width: '100%',
@@ -31,7 +31,9 @@ const WhispersProjectDetail = () => {
       rel: 0
     }
   };
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -311,6 +313,8 @@ const WhispersProjectDetail = () => {
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default WhispersProjectDetail;

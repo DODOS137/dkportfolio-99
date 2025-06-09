@@ -18,6 +18,7 @@ import { usePageLoading } from '@/hooks/usePageLoading';
 
 const InvisibleProjectDetail = () => {
   const { isLoading } = usePageLoading();
+  const heroRef = useScrollAnimation();
 
   if (isLoading) {
     return <PageLoader />;
@@ -38,7 +39,6 @@ const InvisibleProjectDetail = () => {
       items: ["Idea Development", "Spatial Design", "Exhibition Design"]
     }
   ];
-  const heroRef = useScrollAnimation();
 
   return (
     <ProjectLayout>

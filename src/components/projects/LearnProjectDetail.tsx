@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -14,12 +15,12 @@ import { usePageLoading } from '@/hooks/usePageLoading';
 
 const LearnProjectDetail = () => {
   const { isLoading } = usePageLoading();
+  const heroRef = useScrollAnimation<HTMLDivElement>();
 
   if (isLoading) {
     return <PageLoader />;
   }
 
-  const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
 
   return (

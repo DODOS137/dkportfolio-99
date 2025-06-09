@@ -18,6 +18,7 @@ import { usePageLoading } from '@/hooks/usePageLoading';
 
 const SeoulMuseumProjectDetail = () => {
   const { isLoading } = usePageLoading();
+  const heroRef = useScrollAnimation();
 
   if (isLoading) {
     return <PageLoader />;
@@ -34,8 +35,9 @@ const SeoulMuseumProjectDetail = () => {
     title: "Implementation",
     items: ["Brand Integration", "Modern Design Principles"]
   }];
-  const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -438,6 +440,8 @@ const SeoulMuseumProjectDetail = () => {
         </div>)}
         
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default SeoulMuseumProjectDetail;
