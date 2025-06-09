@@ -181,13 +181,13 @@ const Work = () => {
                     </div>
                     
                     <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                      <span className="text-xs text-gray-300 uppercase tracking-wider block mb-2">
+                      <span className="text-xs uppercase tracking-wider block mb-2 text-gray-700">
                         {project.category}
                       </span>
                       <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-gray-400 line-clamp-2">
+                      <p className="text-sm line-clamp-2 text-gray-500">
                         {project.description}
                       </p>
                     </div>
