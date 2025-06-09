@@ -414,7 +414,7 @@ const SeoulMuseumProjectDetail = () => {
       
       {/*Navigation Section*/}
       <div className="pb-40 md:pb-60 flex items-center justify-center mt-40 ">
-        <Link to="/project/island-of-memory" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
+        <Link to="/project/project-6" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
           <span>Next project</span>
           <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
         </Link>
