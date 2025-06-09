@@ -280,26 +280,50 @@ const WhispersProjectDetail = () => {
 
           
 
-     
-          
-          
-          
-          
-          
-          
-          {/*Spatial Design Image2*/}        
+          {/*Exhibition Design Image1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
-          </div>            
+          </div> 
+          
+          
+          
+          
+          
+          
+           {/*Exhibition Design Image2*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
+          </div>    
+
+
+           {/*Exhibition Design Image3*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
+          </div>   
+
+
+
+
+          
 
 
            {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>  
-          
 
+
+
+         {/*End Image*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
+          </div>            
+
+    
+          
+          
+          
           {/* Final Outcome */}
           <div className="rounded-lg bg-transparent">
-            <div className="mb-40"> 
+            <div className="mb-60"> 
               <h2 className="text-2xl font-light text-gray-300 md:text-xl min-w-[200px] mb-8">Final Outcome</h2>
               <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
                 The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.
