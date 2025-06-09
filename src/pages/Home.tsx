@@ -36,12 +36,10 @@ const Home = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative">
         <div ref={heroAnimation.ref} className={`text-center z-10 transition-all duration-1500 ${heroAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h1 className="text-6xl md:text-8xl font-light tracking-wider text-white mb-6">
+          <h1 className="text-6xl md:text-8xl font-light tracking-wider text-white mb-20">
             DOHYUN KIM
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light">
-            VR & Spatial Design
-          </p>
+          
           <div className="flex gap-6 justify-center">
             <Link to="/work">
               <Button variant="outline" className="border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-8 py-3">
@@ -65,7 +63,7 @@ const Home = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 px-4 md:px-8">
+      <section className="py-40 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <div ref={introAnimation.ref} className={`transition-all duration-1500 delay-300 ${introAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <h2 className="text-4xl md:text-6xl font-light text-white mb-8 text-center">
@@ -92,7 +90,7 @@ const Home = () => {
       
 
       {/* Contact CTA */}
-      <section className="py-20 px-4 md:px-8 border-t border-black">
+      <section className="py-40 px-4 md:px-8 border-t border-black">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-4xl font-light text-white mb-8">
             Let's Create Something
