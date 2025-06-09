@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -83,26 +84,35 @@ const InvisibleProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Approach Section */}
-          <ProjectContent title="Approach">
+          <div className="mb-20 md:mb-40">
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+              Approach
+            </h2>
             <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
               Rather than filling space with artifacts, this museum reveals the inherent drama of emptiness. The project treats absence as presence, using architectural intervals, shadows, and atmospheric conditions as primary exhibition elements. Visitors navigate through carefully orchestrated voids that heighten awareness of spatial relationships and sensory perception.
             </p>
-          </ProjectContent>
+          </div>
 
           {/* Line */} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Process Section */}
-          <ProjectContent title="Process">
+          <div className="mb-20 md:mb-40">
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+              Process
+            </h2>
             <ProcessGrid steps={processSteps} />
-          </ProjectContent>
+          </div>
 
           {/* Concept Development */}
-          <ProjectContent title="Concept Development" layout="two-column">
-            <p>
+          <div className="mb-20 md:mb-40">
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+              Concept Development
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
               The project began with investigations into phenomenological architecture and the psychology of empty space. Drawing from Maurice Merleau-Ponty's writings on spatial perception and Rachel Whiteread's cast sculptures of negative space, the design framework positions emptiness as an active agent rather than a passive container. Each gallery is conceived as a spatial instrument that amplifies subtle environmental phenomena.
             </p>
-          </ProjectContent>
+          </div>
 
           <div className="w-full">
             <img 
@@ -116,11 +126,14 @@ const InvisibleProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Spatial Design */}
-          <ProjectContent title="Spatial Design" layout="two-column">
-            <p>
+          <div className="mb-20 md:mb-40">
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+              Spatial Design
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
               The museum consists of five interconnected chambers, each exploring different aspects of invisible space: transitional thresholds, atmospheric density, acoustic voids, temporal intervals, and perceptual boundaries. Materials are limited to concrete, glass, and controlled lighting, ensuring that architectural form serves the revelation of space rather than its decoration.
             </p>
-          </ProjectContent>
+          </div>
 
           <div className="w-full">
             <img 
@@ -133,11 +146,14 @@ const InvisibleProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          <ProjectContent title="Exhibition Framework">
+          <div className="mb-20 md:mb-40">
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+              Exhibition Framework
+            </h2>
             <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
               The exhibition operates without traditional display cases or informational texts. Instead, visitors encounter calibrated environments that foreground spatial phenomena: the weight of silence in an anechoic chamber, the optical density of graduated transparency, the temporal rhythm of shadow movement. Each space becomes both container and content, medium and message.
             </p>
-          </ProjectContent>
+          </div>
         </div>
       
         {/* Navigation */}
