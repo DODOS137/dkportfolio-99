@@ -112,13 +112,13 @@ const Work = () => {
                     {/* Content Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center px-8">
-                        <span className="text-sm text-gray-300 uppercase tracking-wider block mb-4">
+                        <span className="text-sm text-gray-700 uppercase tracking-wider block mb-4">
                           {project.category}
                         </span>
                         <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
                           {project.title}
                         </h2>
-                        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+                        <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto">
                           {project.description}
                         </p>
                       </div>
