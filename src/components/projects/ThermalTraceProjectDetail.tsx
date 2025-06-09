@@ -15,6 +15,8 @@ import CarouselSection from './thermal-trace/CarouselSection';
 import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import ImageGallery from './thermal-trace/ImageGallery';
+import BackToTopButton from '@/components/BackToTopButton';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -148,7 +150,7 @@ const ThermalTraceProjectDetail = () => {
       
         {/* Navigation */}
         <div className="pb-60 flex items-center justify-center mt-52">
-          <Link to="/project/project-4" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
+          <Link to="/project/whispers-of-memory" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
             <span>Next project</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
@@ -163,6 +165,8 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
       </section>
+      
+      <BackToTopButton />
     </ProjectLayout>;
 };
 export default ThermalTraceProjectDetail;
