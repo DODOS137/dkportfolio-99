@@ -31,16 +31,16 @@ const ProjectNavigation = ({
           {/* Dropdown Menu */}
           {isMenuOpen && <div className="absolute top-full right-0 mt-2 w-48 bg-black bg-opacity-90 backdrop-blur-sm rounded-lg shadow-lg border border-gray-800 overflow-hidden">
               <Link to="/" className="block px-4 py-3 text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm tracking-wide" onClick={toggleMenu}>
-                홈
+                HOME
               </Link>
               <Link to="/work" className="block px-4 py-3 text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm tracking-wide" onClick={toggleMenu}>
-                워크
+                WORK
               </Link>
               <Link to="/about" className="block px-4 py-3 text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm tracking-wide" onClick={toggleMenu}>
-                어바웃
+                ABOUT
               </Link>
               <Link to="/contacts" className="block px-4 py-3 text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm tracking-wide" onClick={toggleMenu}>
-                컨텍트
+                CONTACT
               </Link>
             </div>}
         </div>
