@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -9,11 +10,18 @@ import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import CarouselSection from './thermal-trace/CarouselSection';
+import PageLoader from '@/components/PageLoader';
+import { usePageLoading } from '@/hooks/usePageLoading';
 
 const IslandProjectDetail = () => {
+  const { isLoading } = usePageLoading();
   const project = islandProjectData;
   const heroRef = useScrollAnimation();
   const designImages = ["/lovable-uploads/cc640d0e-7bb1-4ea8-b171-757739c2b705.png", "/lovable-uploads/9c279e6e-b470-4233-b49d-65827db89700.png", "/lovable-uploads/aececcad-74e8-4d74-8f56-a9f2e24e27eb.png"];
+
+  if (isLoading) {
+    return <PageLoader isVisible={isLoading} />;
+  }
 
   return <ProjectLayout>
       {/* Fixed Navigation */}

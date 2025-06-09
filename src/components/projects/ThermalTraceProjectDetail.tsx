@@ -17,8 +17,11 @@ import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import ImageGallery from './thermal-trace/ImageGallery';
 import BackToTopButton from '@/components/BackToTopButton';
+import PageLoader from '@/components/PageLoader';
+import { usePageLoading } from '@/hooks/usePageLoading';
 
 const ThermalTraceProjectDetail = () => {
+  const { isLoading } = usePageLoading();
   const project = thermalTraceProjectData;
 
   // Sample images for the spatial design carousel
@@ -38,6 +41,11 @@ const ThermalTraceProjectDetail = () => {
     title: "Design Development",
     items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
   }];
+
+  if (isLoading) {
+    return <PageLoader isVisible={isLoading} />;
+  }
+
   return <ProjectLayout>
       <ProjectNavigation />
 

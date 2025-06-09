@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -9,8 +10,11 @@ import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
+import PageLoader from '@/components/PageLoader';
+import { usePageLoading } from '@/hooks/usePageLoading';
 
 const WhispersProjectDetail = () => {
+  const { isLoading } = usePageLoading();
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
   const videoOpts = {
@@ -23,6 +27,11 @@ const WhispersProjectDetail = () => {
       rel: 0
     }
   };
+
+  if (isLoading) {
+    return <PageLoader isVisible={isLoading} />;
+  }
+
   return <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
