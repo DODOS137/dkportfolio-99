@@ -410,14 +410,14 @@ const SeoulMuseumProjectDetail = () => {
           
             {/*End Image */}
            <div className="w-full mb-20 md:mb-40">
-            <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-20 md:mb-0" />
+            <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-40 md:mb-0" />
               </div>
           </div>
         </div>
       </section>
       
       {/*Navigation Section*/}
-      <div className="pb-40 md:pb-60 flex items-center justify-center mt-40">
+      <div className="pb-40 md:pb-60 flex items-center justify-center mt-40 ">
         <Link to="/project/island-of-memory" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
           <span>Next project</span>
           <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
