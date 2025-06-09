@@ -450,7 +450,7 @@ const SeoulMuseumProjectDetail = () => {
       
       {/*Navigation Section*/}
       <div className="pb-60 flex items-center justify-center">
-        <Link to="/project/learn" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
+        <Link to="/project/project-6" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
           <span>Next project</span>
           <ArrowRight className="w-5 h-5" />
         </Link>
