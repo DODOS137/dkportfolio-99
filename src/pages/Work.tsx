@@ -19,42 +19,42 @@ const projects: Project[] = [{
   slug: "invisible-space-museum",
   description: "Virtual Reality Contents",
   category: "VR Design",
-  imageUrl: "/lovable-uploads/eec176ba-ebab-43a9-bb78-e6f08c59771b.png"
+  imageUrl: "/lovable-uploads/dd05d902-8937-42b8-bb1e-c6ad7461546b.png"
 }, {
   id: "2",
   title: "Learn",
   slug: "learn",
   description: "Immersive Virtual Reality Experience",
   category: "VR Design",
-  imageUrl: "/lovable-uploads/6a322fa7-6135-493f-849b-ca1ad98c7b86.png"
+  imageUrl: "/lovable-uploads/0395cfdd-35e7-4e15-a634-3eab92516d24.png"
 }, {
   id: "3",
   title: "Thermal Trace",
   slug: "project-3",
   description: "XR & Exhibition Design",
   category: "XR",
-  imageUrl: "/lovable-uploads/593420bb-8761-48fc-b4fc-4c74bd31769c.png"
+  imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
 }, {
   id: "4",
   title: "Whispers from the Bottom",
   slug: "project-4",
   description: "Exhibition Design",
   category: "Exhibition Design",
-  imageUrl: "/lovable-uploads/8f1ac9c4-a3f8-4eed-93d3-859b298cea4d.png"
+  imageUrl: "/lovable-uploads/89fa6153-0435-48f8-9cc7-7d4eacde6883.png"
 }, {
   id: "5",
   title: "Seoul Nature history Museum",
   slug: "project-5",
   description: "Brand Renewal and Spatial Design",
   category: "Spatial Design",
-  imageUrl: "/lovable-uploads/4c29e171-4bbf-4092-854c-13bf32686e5e.png"
+  imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
 }, {
   id: "6",
   title: "Island",
   slug: "project-6",
   description: "Public Space Design",
   category: "Spatial Design",
-  imageUrl: "/lovable-uploads/e4ee8415-921a-44fe-bf59-82af2b5be394.png"
+  imageUrl: "/lovable-uploads/ffd0a76e-2666-4bdf-a327-e4ccee348ffe.png"
 }];
 const Work = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
