@@ -8,7 +8,6 @@ import { whispersProjectData } from '@/data/whispersProject';
 import ProjectLayout from './shared/ProjectLayout';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
-
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
@@ -22,7 +21,6 @@ const WhispersProjectDetail = () => {
       rel: 0
     }
   };
-
   return <ProjectLayout>
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
@@ -264,7 +262,7 @@ const WhispersProjectDetail = () => {
            {/*Exhibition Design*/} 
         
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
               <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
                 Exhibition Design
               </h2>
@@ -322,5 +320,4 @@ const WhispersProjectDetail = () => {
       <BackToTopButton />
     </ProjectLayout>;
 };
-
 export default WhispersProjectDetail;
