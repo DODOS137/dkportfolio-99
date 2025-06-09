@@ -8,6 +8,8 @@ import YouTube from 'react-youtube';
 import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
+import ProjectNavigation from './shared/ProjectNavigation';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
@@ -41,12 +43,7 @@ const InvisibleProjectDetail = () => {
   }, [secondApi]);
   return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 lg:px-8 py-4 md:py-6 lg:py-8">
-        <Link to="/work" className="inline-flex items-center gap-3 pl-2 pr-4 text-white hover:text-gray-300 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm tracking-wide">
-          <ArrowLeft className="w-4 h-4" />
-          <span data-lovable-editable="true">Back to work</span>
-        </Link>
-      </nav>
+      <ProjectNavigation backText="Back to work" />
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
