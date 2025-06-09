@@ -208,10 +208,63 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 bg-gray-500/50"></div>
 
-         {/*Product Design Image3*/}        
+
+          
+          {/*Product Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-40" src="/lovable-uploads/89c7da2d-e99e-4a69-b26a-2e596cbed43f.png" />
+            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
           </div>   
+
+
+         <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
+              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
+                Product Design
+              </h2>
+              <p className="text-xl font-light text-gray-400">Custom-designed headset stands emulate smoothed underwater rocks, integrating both audio hardware and tactile visuality. Each plinth invites solitary listening through high-resolution recordings of marine species. The subtlety of these soundscapes becomes a form of protest against the visual-centric bias of most exhibitions.
+              </p>
+              </div>
+          </div>
+
+
+          {/*Product Design Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
+          </div>   
+
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+
+
+
+           {/*Spatial Design Image2*/} 
+        
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-40">
+              <h2 className="text-2xl md:text-xl font-light text-gray-300 mb-8 min-w-[200px]">
+                Spatial Design
+              </h2>
+              <p className="text-xl font-light text-gray-400">Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.
+              </p>
+              </div>
+          </div>
+
+          {/*Spatial Design Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
+          </div>   
+
+
+           {/*Spatial Design Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
+          </div>            
+
+
+           {/*Line*/} 
+          <div className="w-full h-px my-40 bg-gray-500/50"></div>  
           
 
           {/* Final Outcome */}
