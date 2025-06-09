@@ -207,43 +207,51 @@ const LearnProjectDetail = () => {
 
         
             
-            
-           <div className="relative w-full mb-40">
-           {/* 이미지 (위에 표시) */}
-            <img className="w-full h-auto z-10 relative" src="/lovable-uploads/de5ea440-7a6f-42f0-8e27-45d9b5b96729.png" />
+         {/* script 컨테이너 */}     
+         <div className="w-full flex justify-center mb-40">
+       {/* 이미지 컨테이너 */}
+       <div className="relative" style={{ width: '1920px' }}>
+    {/* 이미지 (프레임 역할) */}
+    <img
+      src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png"
+      alt="RX-056 Character Design Frame"
+      className="w-full h-auto block"
+    />
 
-            {/* 유튜브 (겹쳐서 올라오게) */}
-          <div className="relative z-20" style={{ width: '600px', height: '266px', top: '60%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-          <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-white w-full h-full">
-          <YouTube 
-        videoId="aCJblmM9yzs"
-        opts={{
-          width: '1250',
-          height: '550',
-          playerVars: {
-            autoplay: 0,
-            controls: 1,
-            rel: 0,
-            showinfo: 0,
-            modestbranding: 1,
-            fs: 1,
-            cc_load_policy: 0,
-            iv_load_policy: 3,
-            autohide: 1,
-            disablekb: 0,
-            enablejsapi: 1,
-            origin: window.location.origin,
-            branding: 0,
-            color: 'white',
-            theme: 'dark'
-          }
-        }}
-        className="w-full h-full"
-        iframeClassName="w-full h-full border-0"
-      />
+    {/* 유튜브 플레이어 - 이미지 내 프레임에 정확히 삽입 */}
+    <div
+      className="absolute"
+      style={{
+        top: '28%',          // <-- 프레임 내 위치 보정값 (이미지 상에서 측정해서 조정)
+        left: '50%',
+        width: '65.1%',      // (1250 / 1920) × 100 = 65.1%
+        height: '550px',
+        transform: 'translateX(-50%)',
+      }}
+    >
+      <div className="w-full h-full bg-black rounded-lg overflow-hidden shadow-2xl border border-white">
+        <YouTube
+          videoId="aCJblmM9yzs"
+          opts={{
+            width: '100%',
+            height: '100%',
+            playerVars: {
+              autoplay: 0,
+              controls: 1,
+              rel: 0,
+              modestbranding: 1,
+              fs: 1,
+              enablejsapi: 1,
+              origin: window.location.origin,
+            },
+          }}
+          className="w-full h-full"
+          iframeClassName="w-full h-full border-0"
+        />
+      </div>
     </div>
-          </div>
-          </div>
+  </div>
+</div>
 
         
           </div>
