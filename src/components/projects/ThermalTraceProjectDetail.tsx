@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -44,17 +45,17 @@ const ThermalTraceProjectDetail = () => {
 
       <section className="">
         {/* First Image */}
-        <div className="max-w-[1540px] mx-auto px-[250px] z-10">
+        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
           <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
         <ProjectContent>        
           {/* Project Description */}
-          <div className="rounded-lg bg-transparent mt-40">
-            <h2 className="text-2xl md:text-3xl mb-8 text-white font-light">
+          <div className="rounded-lg bg-transparent mt-20 md:mt-40">
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
               Thermal Trace
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
+            <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
               Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.
             </p>
             
@@ -62,21 +63,21 @@ const ThermalTraceProjectDetail = () => {
           </div>
 
           {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Approach Section with Interactive Image */}
           <div className="rounded-lg bg-transparent">
             <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
             
             <ContentSection title="Approach">
-              <p className="text-lg md:text-xl leading-relaxed font-light text-gray-400">
+              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
                 The work reimagines the runway as a perceptual landscape rather than a stage. Models and viewers alike are disguised to dissolve the boundary between object and subject. Physical presence becomes the primary interface, with proximity and body temperature guiding interaction. Mixed reality overlays augment the scene, constructing a layered exhibition space that blends tangible matter with ephemeral perception. This approach fosters new ways of engaging with space, narrative, and the concept of visibility.
               </p>
             </ContentSection>
           </div>
 
           {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Process Section */}
           <ContentSection title="Process">
@@ -85,13 +86,13 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Preliminary Research */}
           <ContentSection title="Preliminary Research">
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
               A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.
             </p>
           </ContentSection>
 
           {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Idea Development */}
           <ContentSection title="Idea Development" layout="two-column">
@@ -103,7 +104,7 @@ const ThermalTraceProjectDetail = () => {
           <ImageGallery images={artWorkImages} title="Art Works" />
 
           {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           <CarouselSection images={carouselImages} title="Transformable stage" />
 
@@ -115,11 +116,11 @@ const ThermalTraceProjectDetail = () => {
           </ContentSection>
 
           <div className="w-full">
-            <img className="w-full h-auto mb-40" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
+            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
           </div>
 
           {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Exhibition Design Section with Interactive Image */}
           <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
@@ -135,24 +136,24 @@ const ThermalTraceProjectDetail = () => {
           <InteractiveExperience src="https://lucent-banoffee-a50286.netlify.app" title="Thermal Trace Interactive Experience" description="Experience the thermal detection interface in real-time" />
 
           <div className="w-full">
-            <img src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" className="w-full h-auto mb-40 mt-40" />
+            <img src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" className="w-full h-auto mb-20 md:mb-40 mt-20 md:mt-40" />
           </div>
 
           {/* Line */} 
-          <div className="w-full h-px my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           <ContentSection title="Post Project Direction">
-            <p className="text-lg md:text-xl leading-relaxed text-gray-400 font-light">
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
               The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
             </p>
           </ContentSection>
         </ProjectContent>
       
         {/* Navigation */}
-        <div className="pb-60 flex items-center justify-center mt-52">
-          <Link to="/project/whispers-of-memory" className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-lg font-medium">
+        <div className="pb-40 md:pb-60 flex items-center justify-center mt-32 md:mt-52">
+          <Link to="/project/whispers-of-memory" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
             <span>Next project</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
           </Link>
         </div>
         
