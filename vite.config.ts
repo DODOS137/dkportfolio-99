@@ -14,9 +14,12 @@ export default defineConfig(({ mode }) => ({
       port: 24678,
     },
     watch: {
-      usePolling: false,
-      interval: 50,
+      usePolling: true,
+      interval: 100,
       ignored: ['**/node_modules/**', '**/.git/**'],
+    },
+    fs: {
+      strict: false,
     },
   },
   plugins: [
@@ -42,17 +45,18 @@ export default defineConfig(({ mode }) => ({
       '@radix-ui/react-toast',
       '@tanstack/react-query',
     ],
-    force: mode === 'development',
+    force: true,
   },
   // Improve build performance
   esbuild: {
     target: 'es2020',
     logOverride: { 'this-is-undefined-in-esm': 'silent' }
   },
-  // Cache optimization
-  cacheDir: '.vite',
+  // Cache optimization - force cache clear
+  cacheDir: '.vite-cache',
   // Development optimizations
   define: {
     __DEV__: mode === 'development',
   },
+  clearScreen: false,
 }));

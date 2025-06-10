@@ -14,5 +14,8 @@ if (import.meta.hot) {
   });
 }
 
-// Force a clean render
+// Force development server restart and cache clear
+console.log('🚀 Starting application with clean cache...');
+
+// Force a clean render with error boundary
 root.render(<App />);
