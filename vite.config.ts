@@ -5,9 +5,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  root: process.cwd(),
-  base: "/",
+export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
@@ -15,31 +13,46 @@ export default defineConfig({
       overlay: true,
       port: 24678,
     },
-    fs: {
-      strict: false,
-      allow: ['..']
-    }
+    watch: {
+      usePolling: false,
+      interval: 50,
+      ignored: ['**/node_modules/**', '**/.git/**'],
+    },
   },
   plugins: [
-    react(),
+    react({
+      // Use default Fast Refresh behavior for react-swc
+    }),
     componentTagger(),
   ],
   resolve: {
     alias: {
-      "@": path.resolve(process.cwd(), "./src"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Simplified dependency optimization
+  // Optimize dependency pre-bundling for faster dev server
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
       'react-router-dom',
       'lucide-react',
+      '@radix-ui/react-aspect-ratio',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-toast',
+      '@tanstack/react-query',
     ],
+    force: mode === 'development',
   },
-  // Basic build settings
+  // Improve build performance
   esbuild: {
     target: 'es2020',
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
   },
-});
+  // Cache optimization
+  cacheDir: '.vite',
+  // Development optimizations
+  define: {
+    __DEV__: mode === 'development',
+  },
+}));

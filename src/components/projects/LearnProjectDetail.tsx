@@ -246,27 +246,41 @@ const LearnProjectDetail = () => {
               Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
             </p>
           </div>
+
+        
+        
+        
+          
+          
+          
           </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Level Design Section */}
-          <div className="rounded-lg bg-transparent">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-xl md:text-2xl font-light mb-40 md:mb-8 text-gray-300 min-w-[200px]">Level Design</h2>
-         </div>
+      
+          
+                <div className="w-full ">
+              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
+              </div>
+          
+          
+          
+          
           
           <div className="rounded-lg bg-transparent">
+            
+
             <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
+            
             <div className="w-full">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-20 md:mb-40" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
-            </div>
-          </div>
+               </div>
           </div>
 
           {/*Line*/} 
@@ -275,13 +289,8 @@ const LearnProjectDetail = () => {
           {/* Spatial Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="w-full">
-              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/46b1c0b5-1254-4482-b716-85133600c0ec.png" />
+              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
             </div> 
-
-           <div className="w-full">
-              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/a28d6ad5-19ad-4934-8470-5af1d0e18ae9.png" />
-            </div> 
-
             
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
               <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
