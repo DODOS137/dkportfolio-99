@@ -311,6 +311,34 @@ const InvisibleProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
+
+          
+           {/* Level Design Image */}
+              <div className="w-full mb-6 md:mb-8">
+                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
+                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
+              </div>          
+ 
+          
+          
+          
+          
+          
+          
+          {/* Spatial Design */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
+                <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
+                  Spatial Design
+                </h2>
+                <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
+                  Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
+                </p>
+              </div>         
+          
+          
+          
+          
+          
           {/* Spatial Design + Image Section */}
           <div className="">
             <div className="rounded-lg bg-transparent">
