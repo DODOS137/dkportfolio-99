@@ -262,7 +262,7 @@ const LearnProjectDetail = () => {
       
           
                 <div className="w-full ">
-              <img src="/lovable-uploads/9d2f8b10-a136-4722-821e-acea5f8a8c93.png" className="w-full h-auto mt-20 mb-40" />
+              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
               </div>
           
           
