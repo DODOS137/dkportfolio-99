@@ -121,6 +121,15 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
+      
+          
+         {/* Exhibition Design Image */}
+              <div className="w-full ">
+              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
+              </div>
+          
+          
+          
           {/* Exhibition Design Section with Interactive Image */}
           <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
             <InteractiveImageSection baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
