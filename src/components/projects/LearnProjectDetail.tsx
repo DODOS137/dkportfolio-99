@@ -260,10 +260,10 @@ const LearnProjectDetail = () => {
 
           {/* Level Design Section */}
       
-          
-                <div className="w-full ">
-              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
-              </div>
+          <div className="rounded-lg bg-transparent">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+            <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Level Design</h2>
+         </div>
           
           
           
