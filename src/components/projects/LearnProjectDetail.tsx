@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -10,13 +9,10 @@ import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -258,7 +254,7 @@ const LearnProjectDetail = () => {
           {/* Level Design Section */}
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-            <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Level Design</h2>
+            <h2 className="text-xl md:text-2xl font-light mb-40 md:mb-8 text-gray-300 min-w-[200px]">Level Design</h2>
          </div>
           
           <div className="rounded-lg bg-transparent">
@@ -279,11 +275,11 @@ const LearnProjectDetail = () => {
           {/* Spatial Design Section */}
           <div className="rounded-lg bg-transparent">
             <div className="w-full">
-              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
+              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/46b1c0b5-1254-4482-b716-85133600c0ec.png" />
             </div> 
 
            <div className="w-full">
-              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
+              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/a28d6ad5-19ad-4934-8470-5af1d0e18ae9.png" />
             </div> 
 
             
@@ -321,20 +317,16 @@ const LearnProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
       
       <BackToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default LearnProjectDetail;
