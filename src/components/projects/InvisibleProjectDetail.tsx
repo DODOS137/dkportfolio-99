@@ -9,7 +9,6 @@ import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
-
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
@@ -218,7 +217,7 @@ const InvisibleProjectDetail = () => {
               <AspectRatio ratio={16 / 9} className="w-full">
                 <img data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/c300d72e-b010-4ff6-8648-016e4513b308.png" />
               </AspectRatio>
-              <img  data-lovable-editable="true" className="w-full h-auto mt-20 md:mt-40" src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png" />
+              <img data-lovable-editable="true" className="w-full h-auto mt-20 md:mt-40" src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png" />
             
             </div>
 
@@ -316,7 +315,7 @@ const InvisibleProjectDetail = () => {
            {/* Level Design Image */}
               <div className="w-full mb-6 md:mb-8">
                 <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
-                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
+                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/d69ef6c7-df6c-4181-87a6-9d2f5eb329cd.png" />
               </div>          
  
           
@@ -326,7 +325,7 @@ const InvisibleProjectDetail = () => {
           
           
           {/* Spatial Design */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 mb-40">
                 <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
                   Spatial Design
                 </h2>
@@ -367,14 +366,7 @@ const InvisibleProjectDetail = () => {
               </div>
               
               {/* Spatial Design */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
-                  Spatial Design
-                </h2>
-                <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
-                  Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
-                </p>
-              </div>
+              
 
              {/*Line*/} 
              <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
@@ -453,9 +445,9 @@ const InvisibleProjectDetail = () => {
 
           {/* 6th & 7th & 8th Image */}
           <div className="w-full ">
-            <img  className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
-            <img  className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
-            <img  data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" className="w-full h-auto mb-20 md:mb-40" />
+            <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" />
+            <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" />
+            <img data-lovable-editable="true" src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png" className="w-full h-auto mb-20 md:mb-40" />
           </div>
 
           {/* 9th Image */}
