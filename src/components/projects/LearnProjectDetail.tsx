@@ -281,6 +281,11 @@ const LearnProjectDetail = () => {
             <div className="w-full">
               <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
             </div> 
+
+           <div className="w-full">
+              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
+            </div> 
+
             
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
               <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
