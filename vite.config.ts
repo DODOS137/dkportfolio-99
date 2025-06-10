@@ -6,6 +6,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: process.cwd(),
+  base: "/",
   server: {
     host: "::",
     port: 8080,
@@ -13,6 +15,10 @@ export default defineConfig({
       overlay: true,
       port: 24678,
     },
+    fs: {
+      strict: false,
+      allow: ['..']
+    }
   },
   plugins: [
     react(),
@@ -20,7 +26,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(process.cwd(), "./src"),
     },
   },
   // Simplified dependency optimization
