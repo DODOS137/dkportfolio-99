@@ -14,4 +14,5 @@ if (import.meta.hot) {
   });
 }
 
+// Force a clean render
 root.render(<App />);
