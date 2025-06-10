@@ -272,7 +272,7 @@ const LearnProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             
 
-            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
+            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/e5285220-a9c9-423e-88b6-5c4c671b55cb.png" />
           
             
             <div className="w-full">
