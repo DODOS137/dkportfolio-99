@@ -302,7 +302,7 @@ const InvisibleProjectDetail = () => {
               {/* Level Design Image */}
               <div className="w-full mb-6 md:mb-8">
                 <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" />
-                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/8eae4ef3-ef38-42b5-aaf5-19fb1d3c1d40.png" />
+                <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/de89b92f-0e81-40b4-9c85-3c26d7bce4dd.png" />
               </div>
             </div>
           </div>
