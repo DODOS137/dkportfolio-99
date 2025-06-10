@@ -16,7 +16,6 @@ import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import ImageGallery from './thermal-trace/ImageGallery';
 import BackToTopButton from '@/components/BackToTopButton';
-
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -125,7 +124,7 @@ const ThermalTraceProjectDetail = () => {
           
          {/* Exhibition Design Image */}
               <div className="w-full ">
-              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
+              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
               </div>
           
           
