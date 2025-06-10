@@ -19,7 +19,12 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
       
       {images.map((image, index) => (
         <div key={index} className="w-full">
-          <img src={image} className="w-full h-auto mb-40" alt={`Gallery image ${index + 1}`} />
+          <img 
+            src={index === 0 ? "/lovable-uploads/ace0408c-15ac-4dfd-92a5-ef10e0b20d70.png" : image} 
+            className="w-full h-auto mb-40" 
+            alt={`Gallery image ${index + 1}`}
+            data-lovable-editable="true"
+          />
         </div>
       ))}
     </>
