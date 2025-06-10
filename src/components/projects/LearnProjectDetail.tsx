@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -9,10 +10,13 @@ import { learnProjectData } from '@/data/learnProject';
 import YouTube from 'react-youtube';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
+
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
-  return <div className="min-h-screen bg-black text-white">
+  
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -246,41 +250,27 @@ const LearnProjectDetail = () => {
               Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
             </p>
           </div>
-
-        
-        
-        
-          
-          
-          
           </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Level Design Section */}
-      
           <div className="rounded-lg bg-transparent">
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
             <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Level Design</h2>
          </div>
           
-          
-          
-          
-          
           <div className="rounded-lg bg-transparent">
-            
-
             <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
-            
             <div className="w-full">
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
               <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-20 md:mb-40" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
               <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
-               </div>
+            </div>
+          </div>
           </div>
 
           {/*Line*/} 
@@ -326,16 +316,20 @@ const LearnProjectDetail = () => {
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
       
       <BackToTopButton />
-    </div>;
+    </div>
+  );
 };
+
 export default LearnProjectDetail;
