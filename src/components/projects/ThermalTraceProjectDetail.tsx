@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -16,7 +15,6 @@ import CarouselSection from './thermal-trace/CarouselSection';
 import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import BackToTopButton from '@/components/BackToTopButton';
-
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -37,7 +35,6 @@ const ThermalTraceProjectDetail = () => {
     title: "Design Development",
     items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
   }];
-  
   return <ProjectLayout>
       <ProjectNavigation />
 
@@ -109,30 +106,15 @@ const ThermalTraceProjectDetail = () => {
           </div>
           
           <div className="w-full">
-            <img 
-              src="/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png" 
-              className="w-full h-auto mb-40" 
-              alt="Art Work 1"
-              data-lovable-editable="true"
-            />
+            <img className="w-full h-auto mb-40" alt="Art Work 1" data-lovable-editable="true" src="/lovable-uploads/1cab7e45-c7f3-4090-8efa-30b83bd90f54.png" />
           </div>
           
           <div className="w-full">
-            <img 
-              src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" 
-              className="w-full h-auto mb-40" 
-              alt="Art Work 2"
-              data-lovable-editable="true"
-            />
+            <img src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" className="w-full h-auto mb-40" alt="Art Work 2" data-lovable-editable="true" />
           </div>
           
           <div className="w-full">
-            <img 
-              src="/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png" 
-              className="w-full h-auto mb-40" 
-              alt="Art Work 3"
-              data-lovable-editable="true"
-            />
+            <img className="w-full h-auto mb-40" alt="Art Work 3" data-lovable-editable="true" src="/lovable-uploads/71597544-19d7-483c-81c4-82bf7b521859.png" />
           </div>
 
           {/* Line */} 
@@ -207,5 +189,4 @@ const ThermalTraceProjectDetail = () => {
       <BackToTopButton />
     </ProjectLayout>;
 };
-
 export default ThermalTraceProjectDetail;
