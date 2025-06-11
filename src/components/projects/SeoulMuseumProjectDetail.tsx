@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -16,24 +17,35 @@ import BackToTopButton from '@/components/BackToTopButton';
 
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
-  const processSteps = [{
-    title: "Brand Analysis",
-    items: ["Heritage Study & Identity Research"]
-  }, {
-    title: "Spatial Design",
-    items: ["Wayfinding System", "Visitor Experience"]
-  }, {
-    title: "Implementation",
-    items: ["Brand Integration", "Modern Design Principles"]
-  }];
+  const processSteps = [
+    {
+      title: "Brand Analysis",
+      items: ["Heritage Study & Identity Research"]
+    },
+    {
+      title: "Spatial Design",
+      items: ["Wayfinding System", "Visitor Experience"]
+    },
+    {
+      title: "Implementation",
+      items: ["Brand Integration", "Modern Design Principles"]
+    }
+  ];
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div 
+          ref={heroRef.ref} 
+          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+            heroRef.isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
             {project.heroTitle}
           </h1>
@@ -54,7 +66,11 @@ const SeoulMuseumProjectDetail = () => {
       <section className="">
         {/* First Image - Updated */}
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
-          <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src="/lovable-uploads/db58f1e0-0fea-4b68-953c-59d4580ad411.png" />
+          <img 
+            alt={`${project.title} - Image 1`} 
+            className="w-full h-auto object-contain" 
+            src="/lovable-uploads/db58f1e0-0fea-4b68-953c-59d4580ad411.png" 
+          />
         </div>
 
         {/* Shared Container */}
@@ -95,27 +111,32 @@ const SeoulMuseumProjectDetail = () => {
           <div className="rounded-lg bg-transparent mb-20 md:mb-40">
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId="8GEK3igRom0" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                <YouTube 
+                  videoId="8GEK3igRom0" 
+                  opts={{
+                    width: '100%',
+                    height: '100%',
+                    playerVars: {
+                      autoplay: 0,
+                      controls: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      modestbranding: 1,
+                      fs: 1,
+                      cc_load_policy: 0,
+                      iv_load_policy: 3,
+                      autohide: 1,
+                      disablekb: 0,
+                      enablejsapi: 1,
+                      origin: window.location.origin,
+                      branding: 0,
+                      color: 'white',
+                      theme: 'dark'
+                    }
+                  }} 
+                  className="w-full h-full" 
+                  iframeClassName="w-full h-full border-0" 
+                />
               </AspectRatio>
             </div>
           </div>
@@ -414,22 +435,33 @@ const SeoulMuseumProjectDetail = () => {
       
       {/*Navigation Section*/}
       <div className="pb-40 md:pb-60 flex items-center justify-center mt-40 ">
-        <Link to="/project/project-6" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
+        <Link 
+          to="/project/project-6" 
+          className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
+        >
           <span>Next project</span>
           <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
         </Link>
       </div>
       
       {/* Remaining Images */}
-      {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+      {project.images.slice(1).map((image, index) => (
+        <div key={index + 1} className="mb-20">
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
-              <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
+              <ImageWithLoading 
+                src={image} 
+                alt={`${project.title} - Image ${index + 2}`} 
+                className="w-full h-full object-cover" 
+              />
             </AspectRatio>
           </div>
-        </div>)}
+        </div>
+      ))}
         
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default SeoulMuseumProjectDetail;

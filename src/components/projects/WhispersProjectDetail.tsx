@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -13,6 +14,7 @@ import BackToTopButton from '@/components/BackToTopButton';
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
+  
   const videoOpts = {
     height: '100%',
     width: '100%',
@@ -20,16 +22,23 @@ const WhispersProjectDetail = () => {
       autoplay: 0,
       controls: 1,
       modestbranding: 1,
-      rel: 0
-    }
+      rel: 0,
+    },
   };
-  return <ProjectLayout>
+
+  return (
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <div ref={heroRef.ref} className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div 
+          ref={heroRef.ref} 
+          className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+            heroRef.isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
             {project.heroTitle}
           </h1>
@@ -50,7 +59,11 @@ const WhispersProjectDetail = () => {
       <section className="">
         {/* First Image */}
         <div className="max-w-[1540px] mx-auto z-10">
-          <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src="/lovable-uploads/801c52bc-cbaa-4c2f-a6ec-6d86c1a70034.png" />
+          <img 
+            alt={`${project.title} - Image 1`} 
+            className="w-full h-auto object-contain" 
+            src="/lovable-uploads/801c52bc-cbaa-4c2f-a6ec-6d86c1a70034.png" 
+          />
         </div>
 
         {/* Shared Container */}
@@ -296,13 +309,18 @@ const WhispersProjectDetail = () => {
       
       {/*Navigation Section*/}
       <div className="pb-40 md:pb-60 flex items-center justify-center">
-        <Link to="/project/project-5" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
+        <Link 
+          to="/project/project-5" 
+          className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
+        >
           <span>Next project</span>
           <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
         </Link>
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default WhispersProjectDetail;

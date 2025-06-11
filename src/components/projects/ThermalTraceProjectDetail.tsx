@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -15,35 +16,60 @@ import CarouselSection from './thermal-trace/CarouselSection';
 import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import BackToTopButton from '@/components/BackToTopButton';
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
   // Sample images for the spatial design carousel
-  const carouselImages = ["/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png", "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png", "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"];
+  const carouselImages = [
+    "/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png",
+    "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png", 
+    "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"
+  ];
 
   // Art work images
-  const artWorkImages = ["/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png", "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png", "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"];
+  const artWorkImages = [
+    "/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png",
+    "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png",
+    "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"
+  ];
 
   // Process steps data
-  const processSteps = [{
-    title: "Ideation Phase",
-    items: ["Brainstorming", "Concept Sketching"]
-  }, {
-    title: "Analysis",
-    items: ["Stage Environment Research", "Precedent Study"]
-  }, {
-    title: "Design Development",
-    items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
-  }];
-  return <ProjectLayout>
+  const processSteps = [
+    {
+      title: "Ideation Phase",
+      items: ["Brainstorming", "Concept Sketching"]
+    },
+    {
+      title: "Analysis", 
+      items: ["Stage Environment Research", "Precedent Study"]
+    },
+    {
+      title: "Design Development",
+      items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
+    }
+  ];
+
+  return (
+    <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
+      <ProjectHero 
+        title={project.heroTitle}
+        subtitle="Reimaging the Fashion Show Through XR"
+        year={project.heroYear}
+        client="Personal Project"
+        role="XR & Exhibition Designer"
+      />
 
       <section className="">
         {/* First Image */}
         <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">
-          <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
+          <img 
+            src={project.images[0]} 
+            alt={`${project.title} - Image 1`} 
+            className="w-full h-auto object-contain" 
+          />
         </div>
 
         <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">        
@@ -56,7 +82,12 @@ const ThermalTraceProjectDetail = () => {
               Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.
             </p>
             
-            <ProjectMetadata projectType="Personal Project" projectCategory="XR Contents & Exhibition Design" teamType="Solo Project" duration="8 weeks" />
+            <ProjectMetadata 
+              projectType="Personal Project"
+              projectCategory="XR Contents & Exhibition Design"
+              teamType="Solo Project"
+              duration="8 weeks"
+            />
           </div>
 
           {/* Line */} 
@@ -64,7 +95,10 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Approach Section with Interactive Image */}
           <div className="rounded-lg bg-transparent">
-            <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
+            <InteractiveImageSection 
+              baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png"
+              overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png"
+            />
             
             <ContentSection title="Approach">
               <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
@@ -106,15 +140,30 @@ const ThermalTraceProjectDetail = () => {
           </div>
           
           <div className="w-full">
-            <img className="w-full h-auto mb-40" alt="Art Work 1" data-lovable-editable="true" src="/lovable-uploads/1cab7e45-c7f3-4090-8efa-30b83bd90f54.png" />
+            <img 
+              className="w-full h-auto mb-40" 
+              alt="Art Work 1" 
+              data-lovable-editable="true" 
+              src="/lovable-uploads/1cab7e45-c7f3-4090-8efa-30b83bd90f54.png" 
+            />
           </div>
           
           <div className="w-full">
-            <img src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" className="w-full h-auto mb-40" alt="Art Work 2" data-lovable-editable="true" />
+            <img 
+              src="/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png" 
+              className="w-full h-auto mb-40" 
+              alt="Art Work 2" 
+              data-lovable-editable="true" 
+            />
           </div>
           
           <div className="w-full">
-            <img className="w-full h-auto mb-40" alt="Art Work 3" data-lovable-editable="true" src="/lovable-uploads/71597544-19d7-483c-81c4-82bf7b521859.png" />
+            <img 
+              className="w-full h-auto mb-40" 
+              alt="Art Work 3" 
+              data-lovable-editable="true" 
+              src="/lovable-uploads/71597544-19d7-483c-81c4-82bf7b521859.png" 
+            />
           </div>
 
           {/* Line */} 
@@ -130,7 +179,10 @@ const ThermalTraceProjectDetail = () => {
           </ContentSection>
 
           <div className="w-full">
-            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
+            <img 
+              className="w-full h-auto mb-20 md:mb-40" 
+              src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" 
+            />
           </div>
 
           {/* Line */} 
@@ -138,12 +190,18 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Exhibition Design Image */}
           <div className="w-full ">
-            <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
+            <img 
+              className="w-full h-auto mt-20 mb-40" 
+              src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" 
+            />
           </div>
           
           {/* Exhibition Design Section with Interactive Image */}
           <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
-            <InteractiveImageSection baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
+            <InteractiveImageSection 
+              baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png"
+              overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png"
+            />
 
             <ContentSection title="Exhibition Design" layout="two-column">
               <p>
@@ -152,10 +210,17 @@ const ThermalTraceProjectDetail = () => {
             </ContentSection>
           </div>
 
-          <InteractiveExperience src="https://lucent-banoffee-a50286.netlify.app" title="Thermal Trace Interactive Experience" description="Experience the thermal detection interface in real-time" />
+          <InteractiveExperience 
+            src="https://lucent-banoffee-a50286.netlify.app"
+            title="Thermal Trace Interactive Experience"
+            description="Experience the thermal detection interface in real-time"
+          />
 
           <div className="w-full">
-            <img src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" className="w-full h-auto mb-20 md:mb-40 mt-20 md:mt-40" />
+            <img 
+              src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" 
+              className="w-full h-auto mb-20 md:mb-40 mt-20 md:mt-40" 
+            />
           </div>
 
           {/* Line */} 
@@ -170,23 +235,34 @@ const ThermalTraceProjectDetail = () => {
       
         {/* Navigation */}
         <div className="pb-40 md:pb-60 flex items-center justify-center mt-32 md:mt-52">
-          <Link to="/project/project-4" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
+          <Link 
+            to="/project/project-4" 
+            className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
+          >
             <span>Next project</span>
             <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
           </Link>
         </div>
         
         {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
+        {project.images.slice(1).map((image, index) => (
+          <div key={index + 1} className="mb-20">
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
+                <ImageWithLoading 
+                  src={image} 
+                  alt={`${project.title} - Image ${index + 2}`} 
+                  className="w-full h-full object-cover" 
+                />
               </AspectRatio>
             </div>
-          </div>)}
+          </div>
+        ))}
       </section>
       
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+  );
 };
+
 export default ThermalTraceProjectDetail;
