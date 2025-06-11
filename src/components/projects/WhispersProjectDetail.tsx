@@ -9,7 +9,6 @@ import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
-
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
   const heroRef = useScrollAnimation();
@@ -218,7 +217,7 @@ const WhispersProjectDetail = () => {
 
           {/*Product Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/77bb8ff9-d703-4149-a8bb-36d8982d609a.png" />
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/de19f864-3631-4d87-bba6-5df640950262.png" />
           </div>  
 
 
@@ -245,7 +244,7 @@ const WhispersProjectDetail = () => {
 
           {/*Spatial Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/78c5f2f0-392a-4247-b514-cc3e8d607988.png" />
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/bd682750-7abf-4b5b-943c-ac51f97e4f59.png" />
           </div>   
 
            {/*Exhibition Design*/} 
