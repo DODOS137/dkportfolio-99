@@ -242,7 +242,7 @@ const WhispersProjectDetail = () => {
 
           {/*Spatial Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/78c5f2f0-392a-4247-b514-cc3e8d607988.png" />
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 12.png" />
           </div>   
 
            {/*Exhibition Design*/} 
