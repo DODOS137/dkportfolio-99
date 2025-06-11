@@ -9,6 +9,7 @@ import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
+
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
@@ -22,6 +23,7 @@ const InvisibleProjectDetail = () => {
   const [current, setCurrent] = useState(0);
   const [secondApi, setSecondApi] = useState<CarouselApi>();
   const [secondCurrent, setSecondCurrent] = useState(0);
+
   useEffect(() => {
     if (!api) {
       return;
@@ -31,6 +33,7 @@ const InvisibleProjectDetail = () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
+
   useEffect(() => {
     if (!secondApi) {
       return;
@@ -40,7 +43,9 @@ const InvisibleProjectDetail = () => {
       setSecondCurrent(secondApi.selectedScrollSnap());
     });
   }, [secondApi]);
-  return <div className="min-h-screen bg-black text-white">
+
+  return (
+    <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -310,19 +315,12 @@ const InvisibleProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-
-          
            {/* Level Design Image */}
               <div className="w-full mb-6 md:mb-8">
                 
                 <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/20f2b6aa-cd9f-443a-83ce-38ea842b8d19.png" />
               </div>          
  
-          
-          
-          
-          
-          
           
           {/* Spatial Design */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 mb-40">
@@ -333,10 +331,6 @@ const InvisibleProjectDetail = () => {
                   Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
                 </p>
               </div>         
-          
-          
-          
-          
           
           {/* Spatial Design + Image Section */}
           <div className="">
@@ -364,9 +358,6 @@ const InvisibleProjectDetail = () => {
                   {firstSliderImages.map((_, index) => <div key={index} className={`w-4 md:w-6 h-0.5 cursor-pointer transition-all duration-300 ${current === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} onClick={() => api?.scrollTo(index)} />)}
                 </div>
               </div>
-              
-              {/* Spatial Design */}
-              
 
              {/*Line*/} 
              <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
@@ -515,6 +506,8 @@ const InvisibleProjectDetail = () => {
 
       {/* Back to Top Button */}
       <BackToTopButton />
-    </div>;
+    </div>
+  );
 };
+
 export default InvisibleProjectDetail;

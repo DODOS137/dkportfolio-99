@@ -4,15 +4,6 @@ import App from './App.tsx'
 import './index.css'
 import './types/unity.d.ts';
 
-// Enable React StrictMode for better development warnings
 const root = createRoot(document.getElementById("root")!);
-
-// Enhanced HMR setup for faster code sync
-if (import.meta.hot) {
-  import.meta.hot.accept();
-  import.meta.hot.accept('./App.tsx', () => {
-    console.log('🔥 Hot reloading App component');
-  });
-}
 
 root.render(<App />);
