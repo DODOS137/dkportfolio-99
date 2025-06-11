@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -8,7 +7,6 @@ import { thermalTraceProjectData } from '@/data/thermalTraceProject';
 import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ProjectHero from './shared/ProjectHero';
-import ProjectContent from './shared/ProjectContent';
 import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import InteractiveImageSection from './thermal-trace/InteractiveImageSection';
