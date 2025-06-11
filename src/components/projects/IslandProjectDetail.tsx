@@ -9,12 +9,10 @@ import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import CarouselSection from './thermal-trace/CarouselSection';
-
 const IslandProjectDetail = () => {
   const project = islandProjectData;
   const heroRef = useScrollAnimation();
   const designImages = ["/lovable-uploads/cc640d0e-7bb1-4ea8-b171-757739c2b705.png", "/lovable-uploads/9c279e6e-b470-4233-b49d-65827db89700.png", "/lovable-uploads/aececcad-74e8-4d74-8f56-a9f2e24e27eb.png"];
-
   return <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work page" />
@@ -225,13 +223,13 @@ const IslandProjectDetail = () => {
 
             {/*Design Image 4*/} 
             <div className="w-full mb-20 md:mb-40">
-              <img src="/lovable-uploads/6a470e16-2864-4cce-a936-ae10a67d2d06.png" className="w-full h-auto mt-20 md:mt-40" />
+              <img className="w-full h-auto mt-20 md:mt-40" src="/lovable-uploads/6dc25c8a-9dd4-4de1-919d-d3236d9a96be.png" />
            </div> 
 
 
             {/*Design Image 5*/} 
             <div className="w-full mb-20 md:mb-40">
-              <img src="/lovable-uploads/6a470e16-2864-4cce-a936-ae10a67d2d06.png" className="w-full h-auto mt-20 md:mt-40" />
+              <img src="/lovable-uploads/073f509e-79c1-4bf4-8fa5-564970ed04a1.png" className="w-full h-auto mt-0 md:mt-0" />
            </div> 
 
 
@@ -266,5 +264,4 @@ const IslandProjectDetail = () => {
       <BackToTopButton />
     </ProjectLayout>;
 };
-
 export default IslandProjectDetail;
