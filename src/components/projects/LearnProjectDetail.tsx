@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -11,27 +10,22 @@ import YouTube from 'react-youtube';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ErrorBoundary from '@/components/ErrorBoundary';
-
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
 
   // Validate project data
   if (!project || !project.images || project.images.length === 0) {
-    return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+    return <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-light text-white mb-4">Project Not Found</h1>
           <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
             Back to Work
           </Link>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <React.Fragment>
+  return <React.Fragment>
       <div className="min-h-screen bg-black text-white">
         {/* Fixed Navigation */}
         <ProjectNavigation backText="Back to work" />
@@ -58,11 +52,9 @@ const LearnProjectDetail = () => {
         {/* Main Content */}
         <section className="">
           {/* First Image */}
-          {project.images[0] && (
-            <div className="w-full">
+          {project.images[0] && <div className="w-full">
               <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
-            </div>
-          )}
+            </div>}
 
           {/* Shared Container */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-8 lg:px-[250px] z-10">        
@@ -231,7 +223,7 @@ const LearnProjectDetail = () => {
          {/* 기준 이미지 컨테이너 */}
          <div className="relative w-full max-w-[1920px]">
          {/* 배경 이미지 */}
-         <img alt="RX-056 Character Frame" className="w-full h-auto block" src="/lovable-uploads/bb95a0a6-e90c-4e9c-b363-df4b7dc7f29c.png" />
+         <img alt="RX-056 Character Frame" className="w-full h-auto block" src="/lovable-uploads/de229615-bd04-4ff5-bd7a-46eb6efc98b0.png" />
 
          {/* 유튜브 플레이어 */}
          <div className="absolute" style={{
@@ -244,16 +236,16 @@ const LearnProjectDetail = () => {
           <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl border border-white">
             <ErrorBoundary fallback={<div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-400">Video Unavailable</div>}>
               <YouTube videoId="aCJblmM9yzs" opts={{
-                        width: '100%',
-                        height: '100%',
-                        playerVars: {
-                          autoplay: 0,
-                          controls: 1,
-                          modestbranding: 1,
-                          fs: 1,
-                          origin: typeof window !== 'undefined' ? window.location.origin : ''
-                        }
-                      }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                      width: '100%',
+                      height: '100%',
+                      playerVars: {
+                        autoplay: 0,
+                        controls: 1,
+                        modestbranding: 1,
+                        fs: 1,
+                        origin: typeof window !== 'undefined' ? window.location.origin : ''
+                      }
+                    }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
             </ErrorBoundary>
             </div>
             </div>
@@ -275,7 +267,7 @@ const LearnProjectDetail = () => {
 
             {/* Level Design Section */}
             <div className="rounded-lg bg-transparent">
-              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
+              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/bf2fe34d-0b83-4063-ac63-3dd0b7d5c8cd.png" />
             
               <div className="w-full">
                 <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
@@ -290,12 +282,12 @@ const LearnProjectDetail = () => {
         
             {/* Spatial Design Section */}
              <div className="w-full ">
-                <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
+                <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/dbc61aac-d704-4f72-9df3-d77191c87385.png" />
                 </div>
             
             <div className="rounded-lg bg-transparent">
               <div className="w-full">
-                <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
+                <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" />
               </div> 
               
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
@@ -310,6 +302,8 @@ const LearnProjectDetail = () => {
               </div> 
             </div>
 
+
+            
             {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
@@ -332,21 +326,17 @@ const LearnProjectDetail = () => {
           </div>
           
           {/* Remaining Images */}
-          {project.images.slice(1).map((image, index) => (
-            <div key={index + 1} className="mb-20">
+          {project.images.slice(1).map((image, index) => <div key={index + 1} className="mb-20">
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <ImageWithLoading src={image} alt={`${project.title} - Image ${index + 2}`} className="w-full h-full object-cover" />
                 </AspectRatio>
               </div>
-            </div>
-          ))}
+            </div>)}
         </section>
         
         <BackToTopButton />
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>;
 };
-
 export default LearnProjectDetail;
