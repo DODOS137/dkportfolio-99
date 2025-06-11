@@ -222,7 +222,7 @@ const WhispersProjectDetail = () => {
 
            {/*Product Design Image3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 12.png" />
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 10.png" />
           </div>  
 
           {/*Line*/} 
