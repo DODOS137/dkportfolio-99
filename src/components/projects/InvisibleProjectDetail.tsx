@@ -111,21 +111,7 @@ const InvisibleProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-          
-          {/* YouTube Video Player */}
+         {/* YouTube Video Player */}
           {project.videoId && <div className="">
               <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
                 <AspectRatio ratio={16 / 9} className="w-full">
