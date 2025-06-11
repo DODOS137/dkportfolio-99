@@ -269,7 +269,7 @@ const LearnProjectDetail = () => {
    
              <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-xl md:text-2xl font-light mb-40 md:mb-0 text-gray-300 min-w-[200px]">Level Design
+              <h2 className="text-xl md:text-2xl font-light mb-40 md:mb-40 text-gray-300 min-w-[200px]">Level Design
               </h2>
             </div>
             </div>           
