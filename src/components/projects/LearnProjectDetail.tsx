@@ -266,6 +266,16 @@ const LearnProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
             {/* Level Design Section */}
+   
+             <div className="rounded-lg bg-transparent">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
+              <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Level Design
+              </h2>
+            </div>
+            </div>           
+            
+            
+            
             <div className="rounded-lg bg-transparent">
               <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/bf2fe34d-0b83-4063-ac63-3dd0b7d5c8cd.png" />
             
