@@ -262,7 +262,7 @@ const LearnProjectDetail = () => {
       
           
                 <div className="w-full ">
-              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
+              
               </div>
           
           
@@ -272,7 +272,7 @@ const LearnProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             
 
-            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
+            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/a1b5f1d3-e0fb-428c-94f2-474130062b8c.png" />
           
             
             <div className="w-full">
@@ -289,7 +289,7 @@ const LearnProjectDetail = () => {
           {/* Spatial Design Section */}
     
              <div className="w-full ">
-              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
+              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/63bb3400-9fc7-4374-8792-f61bacdea165.png" />
               </div>
            
           
@@ -297,7 +297,7 @@ const LearnProjectDetail = () => {
           
           <div className="rounded-lg bg-transparent">
             <div className="w-full">
-              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
+              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/4acac595-3dfc-4285-8437-90b2cdf18f91.png" />
             </div> 
             
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
