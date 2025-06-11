@@ -1,5 +1,5 @@
 
-import { ProjectData } from '../types/project';
+import { ProjectData } from '@/types/project';
 
 export const learnProjectData: ProjectData = {
   title: "Learn",
@@ -8,7 +8,7 @@ export const learnProjectData: ProjectData = {
   year: "2023",
   client: "Educational Technology Project",
   role: "VR Developer & UX Designer",
-  images: ["/lovable-uploads/f72365d7-f106-4d63-bfb6-18051c9cb121.png"],
+  images: ["/lovable-uploads/f72365d7-f106-4d63-bfb6-18051c9cb121.png"].filter(Boolean),
   heroTitle: "Learn",
   heroSubtitle: "Immersive Virtual Reality Experience",
   heroYear: "2023",
