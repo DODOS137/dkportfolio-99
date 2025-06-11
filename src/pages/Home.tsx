@@ -1,36 +1,16 @@
-import React, { useState, useEffect } from 'react';
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Slider, { autoAdvanceInterval } from '../components/Slider';
-import SearchBox from '../components/SearchBox';
 import { Button } from '../components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-// Create a separate component for the slider controls
-const SliderIndicators = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const totalSlides = 6;
-
-  // This effect syncs with the auto-advancing slider in the Slider component
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % totalSlides);
-    }, autoAdvanceInterval);
-
-    // Cleanup on unmount
-    return () => clearInterval(timer);
-  }, []);
-  return <div className="flex space-x-3">
-      {Array.from({
-      length: totalSlides
-    }).map((_, index) => <div key={index} className={`h-2 w-2 rounded-full border border-white transition-all duration-500 ${currentIndex === index ? 'bg-white' : 'bg-transparent'}`} />)}
-    </div>;
-};
 const Home = () => {
   const heroAnimation = useScrollAnimation<HTMLDivElement>();
-  const sliderAnimation = useScrollAnimation<HTMLDivElement>();
   const introAnimation = useScrollAnimation<HTMLDivElement>();
-  return <div className="min-h-screen bg-black overflow-hidden">
+
+  return (
+    <div className="min-h-screen bg-black overflow-hidden">
       <Navbar />
       
       {/* Hero Section */}
@@ -79,16 +59,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Projects Slider */}
-      <section className="py-0">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          
-        </div>
-      </section>
-
-      {/* Search Section */}
-      
-
       {/* Contact CTA */}
       <section className="py-40 px-4 md:px-8 border-t border-black">
         <div className="max-w-4xl mx-auto text-center">
@@ -104,6 +74,8 @@ const Home = () => {
           </Link>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;
