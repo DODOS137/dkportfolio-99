@@ -256,7 +256,7 @@ const LearnProjectDetail = () => {
             <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
               <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 mb-20 md:mb-40 font-light">
+              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 mb-0 md:mb-0 font-light">
                 Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
               </p>
             </div>
@@ -269,7 +269,7 @@ const LearnProjectDetail = () => {
    
              <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Level Design
+              <h2 className="text-xl md:text-2xl font-light mb-40 md:mb-0 text-gray-300 min-w-[200px]">Level Design
               </h2>
             </div>
             </div>           
