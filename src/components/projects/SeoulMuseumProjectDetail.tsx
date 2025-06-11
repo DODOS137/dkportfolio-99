@@ -405,7 +405,7 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           
             {/*End Image */}
-           <div className="w-full mb-20 md:mb-40">
+           <div className="w-full mb-40 md:mb-40">
             <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-40 md:mb-0" />
               </div>
           </div>
