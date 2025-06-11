@@ -228,6 +228,13 @@ const IslandProjectDetail = () => {
               <img src="/lovable-uploads/6a470e16-2864-4cce-a936-ae10a67d2d06.png" className="w-full h-auto mt-20 md:mt-40" />
            </div> 
 
+
+            {/*Design Image 5*/} 
+            <div className="w-full mb-20 md:mb-40">
+              <img src="/lovable-uploads/6a470e16-2864-4cce-a936-ae10a67d2d06.png" className="w-full h-auto mt-20 md:mt-40" />
+           </div> 
+
+            
             {/* Design Carousel Section */}
             <CarouselSection images={designImages} title="Design Development" />
             
