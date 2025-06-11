@@ -250,7 +250,7 @@ const LearnProjectDetail = () => {
         
         
         
-      
+          
           
           
           </div>
@@ -261,11 +261,9 @@ const LearnProjectDetail = () => {
           {/* Level Design Section */}
       
           
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
-                Level Design
-              </h2>
-               </div>
+                <div className="w-full ">
+              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
+              </div>
           
           
           
@@ -274,7 +272,7 @@ const LearnProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             
 
-            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/e5285220-a9c9-423e-88b6-5c4c671b55cb.png" />
+            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/65cd8d34-72ad-46a9-b6a8-b54c3e74873a.png" />
           
             
             <div className="w-full">
@@ -291,7 +289,7 @@ const LearnProjectDetail = () => {
           {/* Spatial Design Section */}
     
              <div className="w-full ">
-              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/c1264919-a25a-4e11-b7d4-293f8dc363e9.png" />
+              <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/28cd941b-a272-4d27-9926-789e1a962d3a.png" />
               </div>
            
           
@@ -299,7 +297,7 @@ const LearnProjectDetail = () => {
           
           <div className="rounded-lg bg-transparent">
             <div className="w-full">
-              <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/ef8bd618-7123-4b1a-889a-36441a08885a.png" />
+              <img src="/lovable-uploads/69b4a2d4-fee6-44be-8e8a-60f3807f0117.png" className="w-full h-auto mb-20 md:mb-40" />
             </div> 
             
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
