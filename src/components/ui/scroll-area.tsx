@@ -1,6 +1,5 @@
 import * as React from "react"
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
-
 import { cn } from "@/lib/utils"
 
 const ScrollArea = React.forwardRef<
@@ -9,6 +8,7 @@ const ScrollArea = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
     ref={ref}
+    type="always"   // ✅ 항상 보이도록 설정
     className={cn("relative overflow-hidden", className)}
     {...props}
   >
@@ -31,15 +31,15 @@ const ScrollBar = React.forwardRef<
     className={cn(
       "flex touch-none select-none transition-all duration-300 ease-out",
       orientation === "vertical" &&
-        "h-full w-3 border-l border-l-transparent p-[2px] hover:w-4 bg-black",
+        "h-full w-4 p-[2px] bg-black hover:w-5",   // 배경을 완전 검정, 넓게 하고 hover 확장
       orientation === "horizontal" &&
-        "h-3 flex-col border-t border-t-transparent p-[2px] hover:h-4 bg-black",
+        "h-4 flex-col p-[2px] bg-black hover:h-5",  // 가로도 동일
       className
     )}
     {...props}
   >
     <ScrollAreaPrimitive.ScrollAreaThumb 
-      className="relative flex-1 rounded-full bg-gray-700 hover:bg-gray-600 transition-all" 
+      className="relative flex-1 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-200" 
     />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
