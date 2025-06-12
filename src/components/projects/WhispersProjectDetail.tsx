@@ -9,6 +9,7 @@ import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
+import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
@@ -23,7 +24,9 @@ const WhispersProjectDetail = () => {
       rel: 0
     }
   };
-  return <ProjectLayout>
+  return (
+    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -320,6 +323,8 @@ const WhispersProjectDetail = () => {
       </div>
       
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+    </ScrollArea>
+  );
 };
 export default WhispersProjectDetail;
