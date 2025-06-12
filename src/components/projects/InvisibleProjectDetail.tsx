@@ -9,6 +9,7 @@ import { invisibleProjectData } from '@/data/invisibleProject';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
+import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
@@ -45,6 +46,7 @@ const InvisibleProjectDetail = () => {
   }, [secondApi]);
 
   return (
+    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
     <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
@@ -508,6 +510,7 @@ const InvisibleProjectDetail = () => {
       {/* Back to Top Button */}
       <BackToTopButton />
     </div>
+   </ScrollArea>
   );
 };
 
