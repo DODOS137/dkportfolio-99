@@ -13,6 +13,7 @@ import ProjectMetadata from './shared/ProjectMetadata';
 import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
+import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
@@ -27,7 +28,9 @@ const SeoulMuseumProjectDetail = () => {
     items: ["Brand Integration", "Modern Design Principles"]
   }];
   const heroRef = useScrollAnimation();
-  return <ProjectLayout>
+  return (
+   <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
+    <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -430,6 +433,10 @@ const SeoulMuseumProjectDetail = () => {
         </div>)}
         
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+      </ScrollArea>
+  );
 };
+
+     
 export default SeoulMuseumProjectDetail;
