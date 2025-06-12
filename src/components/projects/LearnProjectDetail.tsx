@@ -10,13 +10,18 @@ import YouTube from 'react-youtube';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
+
+
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
 
   // Validate project data
   if (!project || !project.images || project.images.length === 0) {
-    return <div className="min-h-screen bg-black text-white flex items-center justify-center">
+    return (
+    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}  
+    <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-light text-white mb-4">Project Not Found</h1>
           <Link to="/work" className="text-gray-400 hover:text-white transition-colors">
@@ -347,6 +352,8 @@ const LearnProjectDetail = () => {
         
         <BackToTopButton />
       </div>
-    </React.Fragment>;
+    </React.Fragment>
+  </ScrollArea>
+  );
 };
 export default LearnProjectDetail;
