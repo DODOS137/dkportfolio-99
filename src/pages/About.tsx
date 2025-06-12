@@ -2,8 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { Button } from '../components/ui/button';
+import { ScrollArea } from '@/components/ui/scroll-area'; // ✅ 추가
+
 const About = () => {
-  return <div className="min-h-screen bg-black overflow-hidden">
+  return 
+  <ScrollArea className="h-screen w-full"> {/* ✅ 스크롤 영역 전체 감싸기 */}
+  <div className="min-h-screen bg-black overflow-hidden">
       <Navbar />
       <main className="pt-16 px-4 md:px-8">
         <div className="max-w-4xl mx-auto mt-40">
@@ -63,6 +67,10 @@ const About = () => {
           </div>
         </div>
       </main>
-    </div>;
+    </div>
+</ScrollArea>
+  );
 };
+
+    
 export default About;
