@@ -5,7 +5,7 @@ import { Button } from '../components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area'; // ✅ 추가
 
 const About = () => {
-  return 
+  return (
   <ScrollArea className="h-screen w-full"> {/* ✅ 스크롤 영역 전체 감싸기 */}
   <div className="min-h-screen bg-black overflow-hidden">
       <Navbar />
