@@ -15,6 +15,9 @@ import CarouselSection from './thermal-trace/CarouselSection';
 import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import BackToTopButton from '@/components/BackToTopButton';
+import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
+
+
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
 
@@ -35,7 +38,10 @@ const ThermalTraceProjectDetail = () => {
     title: "Design Development",
     items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"]
   }];
-  return <ProjectLayout>
+  return (
+  <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}  
+    
+  <ProjectLayout>
       <ProjectNavigation />
 
       <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
@@ -187,6 +193,9 @@ const ThermalTraceProjectDetail = () => {
       </section>
       
       <BackToTopButton />
-    </ProjectLayout>;
+    </ProjectLayout>
+    </ScrollArea>
+  );
 };
+
 export default ThermalTraceProjectDetail;
