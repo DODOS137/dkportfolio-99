@@ -169,6 +169,18 @@ const WhispersProjectDetail = () => {
             </div>
           </div>
 
+
+          {/*Preliminary Research*/}
+          <div className=""> 
+            <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Preliminary Research</h2>
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
+              To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
+            </p>
+          </div>
+
+
+
+          
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
