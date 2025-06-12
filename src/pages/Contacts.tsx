@@ -2,8 +2,13 @@ import React from 'react';
 import { Mail, Phone, Linkedin, Instagram, Youtube } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import Navbar from '@/components/Navbar';
+import { ScrollArea } from '@/components/ui/scroll-area'; // ✅ 추가
+
+
 const Contacts = () => {
-  return <div className="min-h-screen bg-black overflow-hidden">
+  return 
+  <ScrollArea className="h-screen w-full"> {/* ✅ 스크롤 영역 전체 감싸기 */}  
+  <div className="min-h-screen bg-black overflow-hidden">
       <Navbar />
       <main className="pt-16 px-4 md:px-8">
         <div className="max-w-3xl mx-auto mt-16 my-[160px]">
@@ -65,6 +70,8 @@ const Contacts = () => {
           </div>
         </div>
       </main>
-    </div>;
+    </div>
+   </ScrollArea>
+  );
 };
 export default Contacts;
