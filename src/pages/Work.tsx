@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { ChevronLeft, ChevronRight, Grid, Layers } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { ScrollArea } from '@/components/ui/scroll-area'; // ✅ 추가
+
 interface Project {
   id: string;
   title: string;
@@ -66,7 +68,9 @@ const Work = () => {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + projects.length) % projects.length);
   };
-  return <div className="min-h-screen bg-black text-white overflow-hidden">
+  return 
+  <ScrollArea className="h-screen w-full"> {/* ✅ 스크롤 영역 전체 감싸기 */} 
+  <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navbar />
       
       {/* Header Section */}
@@ -214,6 +218,8 @@ const Work = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+   </ScrollArea>
+  );
 };
 export default Work;
