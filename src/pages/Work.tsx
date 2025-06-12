@@ -68,7 +68,7 @@ const Work = () => {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + projects.length) % projects.length);
   };
-  return 
+  return (
   <ScrollArea className="h-screen w-full"> {/* ✅ 스크롤 영역 전체 감싸기 */} 
   <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navbar />
