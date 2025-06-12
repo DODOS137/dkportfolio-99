@@ -28,9 +28,14 @@ const LearnProjectDetail = () => {
             Back to Work
           </Link>
         </div>
-      </div>;
+      </div>
+    </ScrollArea>
+    );
   }
-  return <React.Fragment>
+  
+  return (
+  <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가됨 */}   
+  <React.Fragment>
       <div className="min-h-screen bg-black text-white">
         {/* Fixed Navigation */}
         <ProjectNavigation backText="Back to work" />
