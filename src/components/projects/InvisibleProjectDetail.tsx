@@ -399,7 +399,7 @@ const InvisibleProjectDetail = () => {
 
               {/* Evaluation Summary */}
               <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 mt-16 md:mt-32">
-                Evaluation Summary
+                Final Outcome - Evaluation Summary
               </h2>
 
               {/* Description */}
