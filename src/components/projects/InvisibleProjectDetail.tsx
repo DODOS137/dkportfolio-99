@@ -48,7 +48,7 @@ const InvisibleProjectDetail = () => {
   }, [secondApi]);
 
   return (
-    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
+    <ScrollArea className="h-screen w-screen overflow-auto project-scroll"> {/* ✅ 추가 */}
     <div className="min-h-screen bg-black text-white">
 
       
