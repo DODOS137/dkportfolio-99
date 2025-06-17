@@ -268,7 +268,6 @@ const IslandProjectDetail = () => {
         </Link>
       </div>
       
-      <BackToTopButton />
     </ProjectLayout>
    </ScrollArea>
 
