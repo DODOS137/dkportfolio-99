@@ -17,8 +17,11 @@ const IslandProjectDetail = () => {
   const designImages = ["/lovable-uploads/cc640d0e-7bb1-4ea8-b171-757739c2b705.png", "/lovable-uploads/9c279e6e-b470-4233-b49d-65827db89700.png", "/lovable-uploads/aececcad-74e8-4d74-8f56-a9f2e24e27eb.png"];
 
   return ( 
-    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
-    <ProjectLayout>
+    <ScrollArea className="h-screen w-screen overflow-auto scroll-area"> {/* ✅ 추가 */}
+    <div className="project-scroll min-h-screen bg-black text-white overflow-y-auto">
+      
+      
+      <ProjectLayout>
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work page" />
 
@@ -268,6 +271,9 @@ const IslandProjectDetail = () => {
       <BackToTopButton />
     </ProjectLayout>
    </ScrollArea>
+
+   <BackToTopButton scrollTargetSelector=".scroll-area" />
+  </>
   );
 };
 
