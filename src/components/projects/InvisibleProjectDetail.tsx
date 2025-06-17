@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -14,6 +14,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   // First spatial slider images (new images)
   const firstSliderImages = ["/lovable-uploads/b3851ebc-35db-4397-8f5e-e5286275ac0d.png", "/lovable-uploads/8f303355-f7f8-417f-a4e4-fa9109e312db.png", "/lovable-uploads/89363d60-1e48-438d-aef9-e1f5b6c4d7df.png", "/lovable-uploads/1c29e559-8fb5-43b8-85cb-bbe881e4b5b5.png", "/lovable-uploads/663f86d2-c014-4d12-bc43-879d35aa70b2.png"];
@@ -47,7 +48,8 @@ const InvisibleProjectDetail = () => {
 
   return (
     <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
-    <div className="min-h-screen bg-black text-white">
+    <div ref={scrollRef}> {/* ✅ 여기에 ref 연결 */}
+      <div className="min-h-screen bg-black text-white">
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -508,7 +510,7 @@ const InvisibleProjectDetail = () => {
       </div>
 
       {/* Back to Top Button */}
-      <BackToTopButton />
+      <BackToTopButton scrollTargetRef={scrollRef} /> {/* ✅ ref를 prop으로 전달 */}
     </div>
    </ScrollArea>
   );
