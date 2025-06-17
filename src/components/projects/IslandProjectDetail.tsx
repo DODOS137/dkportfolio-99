@@ -32,7 +32,7 @@ const IslandProjectDetail = () => {
             {project.heroSubtitle}
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-            <span>2019</span>
+            <span>2020</span>
             <span>•</span>
             <span>{project.heroClient}</span>
             <span>•</span>
