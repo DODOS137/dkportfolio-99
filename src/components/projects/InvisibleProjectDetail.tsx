@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -14,6 +14,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = invisibleProjectData;
+  const scrollRef = useRef<HTMLDivElement>(null);
 
 
   // First spatial slider images (new images)
@@ -48,8 +49,10 @@ const InvisibleProjectDetail = () => {
 
   return (
     <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
-   
-      <div className="min-h-screen bg-black text-white">
+    <div ref={scrollRef} className="min-h-screen bg-black text-white">
+
+      
+      
       {/* Fixed Navigation */}
       <ProjectNavigation backText="Back to work" />
 
@@ -510,6 +513,7 @@ const InvisibleProjectDetail = () => {
       </div>
 
       {/* Back to Top Button */}
+       <BackToTopButton scrollTargetRef={scrollRef} />
      
     </div>
    </ScrollArea>
