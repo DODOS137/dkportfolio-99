@@ -514,7 +514,7 @@ const InvisibleProjectDetail = () => {
 
       {/* Back to Top Button */}
     
-     
+       <BackToTopButton />
     </div>
    </ScrollArea>
   );
