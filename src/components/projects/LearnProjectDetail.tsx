@@ -34,8 +34,9 @@ const LearnProjectDetail = () => {
   }
   
   return (
-  <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가됨 */}   
+  <ScrollArea className="h-screen w-screen overflow-auto project-scroll"> {/* ✅ 추가됨 */}   
   <React.Fragment>
+    <BackToTopButton /> 
       <div className="min-h-screen bg-black text-white">
         {/* Fixed Navigation */}
         <ProjectNavigation backText="Back to work" />
@@ -355,7 +356,7 @@ const LearnProjectDetail = () => {
             </div>)}
         </section>
         
-        <BackToTopButton />
+       
       </div>
     </React.Fragment>
   </ScrollArea>
