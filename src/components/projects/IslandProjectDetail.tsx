@@ -270,6 +270,7 @@ const IslandProjectDetail = () => {
       </div>
       <BackToTopButton scrollTargetSelector=".scroll-area" />
     </ProjectLayout>
+     </div>
    </ScrollArea>
 
    
