@@ -268,11 +268,11 @@ const IslandProjectDetail = () => {
           <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
         </Link>
       </div>
-      
+      <BackToTopButton scrollTargetSelector=".scroll-area" />
     </ProjectLayout>
    </ScrollArea>
 
-   <BackToTopButton scrollTargetSelector=".scroll-area" />
+   
   </>
   );
 };
