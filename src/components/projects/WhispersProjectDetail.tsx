@@ -141,7 +141,7 @@ const WhispersProjectDetail = () => {
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-xl md:text-s font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-20 md:mb-40">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-10">
               <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
                 <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4"> Ideation Phase</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -173,10 +173,7 @@ const WhispersProjectDetail = () => {
 
 
 
-
-
-
-          {/*TEXT*/}
+         {/*TEXT*/}
           <div className=""> 
             <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Preliminary Research</h2>
             <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
