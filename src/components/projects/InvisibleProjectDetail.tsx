@@ -153,20 +153,20 @@ const InvisibleProjectDetail = () => {
             <div className="rounded-lg bg-transparent ">
               {/* Approach Section */}
               <div className="">
-                <h2 data-lovable-editable="true" className="text-xl md:text-2xl text-white font-light mb-6 md:mb-8 mt-20 md:mt-40">
+                <h2 data-lovable-editable="true" className="text-s md:text-2xl text-white font-light mb-6 md:mb-8 mt-20 md:mt-40">
                   Approach
                 </h2>
-                <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400 mb-6 md:mb-8">
+                <p data-lovable-editable="true" className="text-s md:text-lg lg:text-xl leading-relaxed font-light text-gray-400 mb-6 md:mb-8">
                   {project.approach}
                 </p>
               </div>
 
               {/* Development Strategy Section */}
               <div className="">
-                <h2 data-lovable-editable="true" className="text-xl md:text-2xl text-white font-light mb-6 md:mb-8">
+                <h2 data-lovable-editable="true" className="text-s md:text-2xl text-white font-light mb-6 md:mb-8">
                   Development Strategy
                 </h2>
-                <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
+                <p data-lovable-editable="true" className="text-s md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
                   {project.development}
                 </p>
               </div>
@@ -179,7 +179,7 @@ const InvisibleProjectDetail = () => {
           {/* Process Section */}
           <div className="">
             <div className="rounded-lg bg-transparent">
-              <h2 data-lovable-editable="true" className="text-xl md:text-2xl mb-6 md:mb-8 text-gray-300 font-light">Process</h2>
+              <h2 data-lovable-editable="true" className="text-s md:text-2xl mb-6 md:mb-8 text-gray-300 font-light">Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <div className="aspect-square bg-black rounded-lg p-6 md:p-8 flex flex-col text-center border border-white">
@@ -213,7 +213,7 @@ const InvisibleProjectDetail = () => {
 
               {/* Preliminary Research – Survey Data */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                <div className="rounded-lg bg-transparent mt-20 md:mt-40">
+                <div className="rounded-lg bg-transparent mt-10 md:mt-20">
                   <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300">Preliminary Research</h2>
                   <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
                 </div>
@@ -221,21 +221,9 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          {/*Text*/}
 
-          {/* Worldbuilding + Image Section */}
-          <div className="">
-            {/* world image */}
-            <div className="w-full">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <img data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/c300d72e-b010-4ff6-8648-016e4513b308.png" />
-              </AspectRatio>
-              <img data-lovable-editable="true" className="w-full h-auto mt-20 md:mt-40" src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png" />
-            
-            </div>
-
-            {/* Worldbuilding*/}
+           {/* Worldbuilding*/}
             <div className="rounded-lg  bg-transparent">
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
                 <h2 className="text-xl md:text-2xl font-light min-w-[200px] text-gray-300 whitespace-nowrap mb-4 md:mb-0" data-lovable-editable="true">
@@ -244,19 +232,10 @@ const InvisibleProjectDetail = () => {
                 <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.</p>
               </div>
             </div>
-          </div>
 
-         {/*Line*/} 
-         <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-          {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
-          <div className="">
-            {/* DNA Image */}
-            <div className="w-full">
-              <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
-            </div>
-
-            <div className="rounded-lg bg-transparent ">
+          
+           {/* Narrtive text*/}
+             <div className="rounded-lg bg-transparent ">
               {/* Section 1 */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
                 <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
@@ -277,6 +256,34 @@ const InvisibleProjectDetail = () => {
                 </p>
               </div>
             </div>
+          
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+          {/* Worldbuilding + Image Section */}
+          <div className="">
+            {/* world image */}
+            <div className="w-full">
+              <AspectRatio ratio={16 / 9} className="w-full">
+                <img data-lovable-editable="true" className="w-full h-full " src="/lovable-uploads/c300d72e-b010-4ff6-8648-016e4513b308.png" />
+              </AspectRatio>
+              <img data-lovable-editable="true" className="w-full h-auto mt-20 md:mt-40" src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png" />
+            
+            </div>  
+          </div>
+
+         {/*Line*/} 
+         <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+          {/* Narrative Arc – The Explorer's Journey & Emotional Logic */}
+          <div className="">
+            {/* DNA Image */}
+            <div className="w-full">
+              <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png" />
+            </div>
+
+
           </div>
 
           {/*Line*/} 
