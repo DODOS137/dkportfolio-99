@@ -108,9 +108,7 @@ const WhispersProjectDetail = () => {
             </AspectRatio>
           </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-            
+
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-8"> 
