@@ -10,7 +10,7 @@ import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
 import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
-import { Cube, Brush, SunMedium, Smartphone, Waves, PanelsTopLeft } from 'lucide-react';
+
 
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
@@ -173,68 +173,7 @@ const WhispersProjectDetail = () => {
             </div>
           </div>
 
-          {/* Tools & Roles Section */}
-         <section className="mt-20 md:mt-40" aria-labelledby="tools-title">
-         <h2 id="tools-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8">
-          Tools & Roles
-         </h2>
-
-         <div className="overflow-hidden rounded-lg border border-white/10 bg-white/5 backdrop-blur">
-         <table className="w-full text-left">
-         <caption className="sr-only">Tools and outputs used per part</caption>
-         <thead className="text-xs uppercase tracking-wider text-gray-400 bg-white/5">
-          <tr className="[&>th]:px-4 [&>th]:py-3">
-          <th className="w-[180px]">Part</th>
-          <th>Tools</th>
-          <th className="w-[320px]">Outputs</th>
-          </tr>
-          </thead>
-          <tbody className="text-sm divide-y divide-white/10 text-gray-200">
-          <tr className="hover:bg-white/5 transition">
-          <td className="px-4 py-4 font-medium flex items-center gap-2">
-            <Cube className="w-4 h-4 opacity-70" /> Modeling
-          </td>
-          <td className="px-4 py-4">Blender, 3ds Max</td>
-          <td className="px-4 py-4">Exhibition modules, headset plinths</td>
-          </tr>
-         <tr className="hover:bg-white/5 transition">
-          <td className="px-4 py-4 font-medium flex items-center gap-2">
-            <Brush className="w-4 h-4 opacity-70" /> Texturing
-          </td>
-          <td className="px-4 py-4">Substance Painter, Photoshop</td>
-          <td className="px-4 py-4">PBR materials (stone, metal)</td>
-        </tr>
-        <tr className="hover:bg-white/5 transition">
-          <td className="px-4 py-4 font-medium flex items-center gap-2">
-            <SunMedium className="w-4 h-4 opacity-70" /> Lighting / Render
-          </td>
-          <td className="px-4 py-4">Unreal Engine, V-Ray</td>
-          <td className="px-4 py-4">Spatial renders, ambience tests</td>
-        </tr>
-        <tr className="hover:bg-white/5 transition">
-          <td className="px-4 py-4 font-medium flex items-center gap-2">
-            <Smartphone className="w-4 h-4 opacity-70" /> Interaction / AR
-          </td>
-          <td className="px-4 py-4">Unity (AR), QR workflow</td>
-          <td className="px-4 py-4">AR species animations, on-site triggers</td>
-        </tr>
-        <tr className="hover:bg-white/5 transition">
-          <td className="px-4 py-4 font-medium flex items-center gap-2">
-            <Waves className="w-4 h-4 opacity-70" /> Audio
-          </td>
-          <td className="px-4 py-4">—</td>
-          <td className="px-4 py-4">Curated soundscapes (endangered species)</td>
-        </tr>
-        <tr className="hover:bg-white/5 transition">
-          <td className="px-4 py-4 font-medium flex items-center gap-2">
-            <PanelsTopLeft className="w-4 h-4 opacity-70" /> Graphics
-          </td>
-          <td className="px-4 py-4">Illustrator, InDesign</td>
-          <td className="px-4 py-4">Labels, panels, accessibility assets</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        
 
 
           {/*TEXT*/}
@@ -245,8 +184,8 @@ const WhispersProjectDetail = () => {
             </p>
           </div>
 
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-6">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-40">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Idea Development
               </h2>
