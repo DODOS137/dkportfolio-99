@@ -10,6 +10,7 @@ import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
 import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
+import { Cube, Brush, SunMedium, Smartphone, Waves, PanelsTopLeft } from 'lucide-react';
 
 const WhispersProjectDetail = () => {
   const project = whispersProjectData;
