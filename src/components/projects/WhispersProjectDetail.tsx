@@ -141,7 +141,7 @@ const WhispersProjectDetail = () => {
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-xl md:text-s font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
               <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
                 <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4"> Ideation Phase</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -175,7 +175,7 @@ const WhispersProjectDetail = () => {
 
          {/*TEXT*/}
           <div className=""> 
-            <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Preliminary Research</h2>
+            <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-10 md:mb-20">Preliminary Research</h2>
             <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
               To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
             </p>
@@ -183,7 +183,7 @@ const WhispersProjectDetail = () => {
 
          {/* Tools & Roles Table */}
        <div className="mt-6 md:mb-8">
-       <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8">
+       <h2 className="text-xl md:text-s font-light text-gray-300 mb-10 md:mb-20">
        Tools & Roles
      </h2>
        <div className="overflow-x-auto rounded-lg border border-white/10 bg-white/5">
@@ -227,8 +227,10 @@ const WhispersProjectDetail = () => {
   </div>
 </div>
 
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+          {/*idea development text start*/}
+           
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-10 md:mb-20">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Idea Development
               </h2>
@@ -249,7 +251,7 @@ const WhispersProjectDetail = () => {
            {/*Spatial Design Text*/} 
         
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-10 md:mb-20">
               <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Spatial Design
               </h2>
