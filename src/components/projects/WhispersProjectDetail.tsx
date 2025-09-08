@@ -174,55 +174,7 @@ const WhispersProjectDetail = () => {
           </div>
 
 
-        {/* Tools & Roles Table */}
-<div className="mt-20 md:mt-40">
-  <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8">
-    Tools & Roles
-  </h2>
-  <div className="overflow-x-auto rounded-lg border border-white/10 bg-white/5">
-    <table className="w-full text-left text-sm text-gray-200">
-      <thead className="bg-white/10 text-gray-400 uppercase text-xs tracking-wider">
-        <tr>
-          <th className="px-4 py-3">Part</th>
-          <th className="px-4 py-3">Tools</th>
-          <th className="px-4 py-3">Outputs</th>
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-white/10">
-        <tr>
-          <td className="px-4 py-4 font-medium">Modeling</td>
-          <td className="px-4 py-4">Blender, 3ds Max</td>
-          <td className="px-4 py-4">Exhibition modules, headset plinths</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-medium">Texturing</td>
-          <td className="px-4 py-4">Substance Painter, Photoshop</td>
-          <td className="px-4 py-4">PBR stone/metal materials</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-medium">Lighting & Render</td>
-          <td className="px-4 py-4">Unreal Engine, V-Ray</td>
-          <td className="px-4 py-4">Spatial ambience renders</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-medium">Interaction / AR</td>
-          <td className="px-4 py-4">Unity (AR Foundation)</td>
-          <td className="px-4 py-4">AR species animations, QR triggers</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-medium">Audio</td>
-          <td className="px-4 py-4">Audition / Reaper</td>
-          <td className="px-4 py-4">Curated marine soundscapes</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-medium">Graphics</td>
-          <td className="px-4 py-4">Illustrator, InDesign</td>
-          <td className="px-4 py-4">Exhibition panels, accessibility assets</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+
 
 
 
@@ -233,6 +185,52 @@ const WhispersProjectDetail = () => {
               To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
             </p>
           </div>
+
+         {/* Tools & Roles Table */}
+       <div className="mt-20 md:mt-40">
+       <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8">
+       Tools & Roles
+     </h2>
+       <div className="overflow-x-auto rounded-lg border border-white/10 bg-white/5">
+      <table className="w-full text-left text-sm text-gray-200">
+      <thead className="bg-white/10 text-gray-400 uppercase text-xs tracking-wider">
+        <tr>
+          <th className="px-4 py-3">Part</th>
+          <th className="px-4 py-3">Tools</th>
+          <th className="px-4 py-3">Outputs</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-white/10">
+        <tr>
+          <td className="px-4 py-4 font-medium">Modeling</td>
+          <td className="px-4 py-4">AutoCAD, 3ds Max</td>
+          <td className="px-4 py-4">Exhibition modules, Space </td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-medium">Texturing</td>
+          <td className="px-4 py-4">Substance Painter, Photoshop</td>
+          <td className="px-4 py-4">PBR stone/metal materials</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-medium">Lighting & Render</td>
+          <td className="px-4 py-4"> V-Ray</td>
+          <td className="px-4 py-4">Spatial ambience renders</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-medium">Interaction / AR</td>
+          <td className="px-4 py-4">Unity (AR Foundation)</td>
+          <td className="px-4 py-4">AR species animations, QR triggers</td>
+        </tr>
+    
+        <tr>
+          <td className="px-4 py-4 font-medium">Graphics</td>
+          <td className="px-4 py-4">Illustrator, Photoshop </td>
+          <td className="px-4 py-4">Exhibition panels, accessibility assets</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-40">
