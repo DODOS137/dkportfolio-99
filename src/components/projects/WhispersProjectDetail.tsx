@@ -141,7 +141,7 @@ const WhispersProjectDetail = () => {
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
             <h2 className="text-xl md:text-s font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-8">
               <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
                 <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4"> Ideation Phase</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -182,7 +182,7 @@ const WhispersProjectDetail = () => {
           </div>
 
          {/* Tools & Roles Table */}
-       <div className="mt-20 md:mt-40">
+       <div className="mt-6 md:mt-8">
        <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8">
        Tools & Roles
      </h2>
@@ -228,7 +228,7 @@ const WhispersProjectDetail = () => {
 </div>
 
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-40">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Idea Development
               </h2>
@@ -237,7 +237,7 @@ const WhispersProjectDetail = () => {
           </div>
         
              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Product Design
               </h2>
@@ -249,7 +249,7 @@ const WhispersProjectDetail = () => {
            {/*Spatial Design Text*/} 
         
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Spatial Design
               </h2>
