@@ -182,7 +182,7 @@ const WhispersProjectDetail = () => {
           </div>
 
          {/* Tools & Roles Table */}
-       <div className="mt-6 md:mt-8">
+       <div className="mt-6 md:mb-8">
        <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8">
        Tools & Roles
      </h2>
