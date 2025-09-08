@@ -221,6 +221,53 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
+              {/* Tools & Roles Table */}
+       <div className="mt-10 md:mb-20">
+       <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8">
+       Tools & Roles
+     </h2>
+       <div className="overflow-x-auto rounded-lg border border-white/10 bg-white/5">
+      <table className="w-full text-left text-sm text-gray-200">
+      <thead className="bg-black text-gray-400 uppercase text-xs tracking-wider">
+        <tr>
+          <th className="px-4 py-3">Part</th>
+          <th className="px-4 py-3">Tools</th>
+          <th className="px-4 py-3">Outputs</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-white/10">
+        <tr>
+          <td className="px-4 py-4 font-medium">Modeling</td>
+          <td className="px-4 py-4">AutoCAD, 3ds Max</td>
+          <td className="px-4 py-4">Exhibition modules, Space </td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-medium">Texturing</td>
+          <td className="px-4 py-4"> Photoshop</td>
+          <td className="px-4 py-4">PBR materials</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-medium">Lighting & Render</td>
+          <td className="px-4 py-4"> Unreal Engine5 </td>
+          <td className="px-4 py-4">Spatial ambience renders</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-medium">Interaction / AR</td>
+          <td className="px-4 py-4"> Unreal Engine5</td>
+          <td className="px-4 py-4">VR Environment</td>
+        </tr>
+    
+        <tr>
+          <td className="px-4 py-4 font-medium">Graphics</td>
+          <td className="px-4 py-4">Illustrator, Photoshop </td>
+          <td className="px-4 py-4">Art works</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
           {/*Text*/}
 
            {/* Worldbuilding*/}
