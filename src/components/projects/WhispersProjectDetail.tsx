@@ -113,24 +113,24 @@ const WhispersProjectDetail = () => {
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-8"> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Approach</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
+              <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Approach</h2>
+              <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
                 Instead of relying on traditional data visualisation or scientific display, the project uses immersive design as an emotional trigger. It explores new ways to communicate marine biodiversity loss, shifting the focus toward sound as a storytelling medium. Visitors are encouraged to pause, listen, and emotionally reconnect with the life forms that often go unnoticed.
               </p>
             </div>
             
             {/*Project Purpose*/}
             <div className=""> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Project Purpose</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
+              <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Project Purpose</h2>
+              <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
                 In alignment with the UN Ocean Decade (2021–2030), the project addresses the global communication gap in ocean awareness. Despite its planetary significance, the ocean remains underrepresented in education and policy. This exhibition reframes that disconnect through interactive design, making invisible marine life more visible—emotionally, sonically, and spatially.
               </p>
             </div>
 
             {/*Development Strategy*/}
             <div className="mt-8"> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Development Strategy</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
+              <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Development Strategy</h2>
+              <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
                 Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
               </p>
             </div>
@@ -141,10 +141,10 @@ const WhispersProjectDetail = () => {
 
           {/* Process Section */}
           <div className="rounded-lg bg-transparent">
-            <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
+            <h2 className="text-xl md:text-s font-light mb-8 md:mb-12 text-gray-300">Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-20 md:mb-40">
               <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4"> Ideation Phase</h3>
+                <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4"> Ideation Phase</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Brainstorming</p>
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Concept Sketching</p>
@@ -152,7 +152,7 @@ const WhispersProjectDetail = () => {
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Analysis</h3>
+                <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4">Analysis</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Precedent Study </p>
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Contemporary Ocean Issues & Marine Species Research</p>
@@ -160,7 +160,7 @@ const WhispersProjectDetail = () => {
               </div>
               
               <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Design Development</h3>
+                <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4">Design Development</h3>
                 <div className="flex-1 flex flex-col items-center justify-center">
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Idea Development</p>
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Product Design</p>
@@ -175,13 +175,13 @@ const WhispersProjectDetail = () => {
 
           {/*Preliminary Research*/}
           <div className=""> 
-            <h2 className="text-xl md:text-xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Preliminary Research</h2>
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
+            <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Preliminary Research</h2>
+            <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
               To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
             </p>
           </div>
 
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-2">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Idea Development
