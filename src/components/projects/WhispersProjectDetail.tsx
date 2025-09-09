@@ -121,7 +121,7 @@ const WhispersProjectDetail = () => {
 
     <div className="grid md:grid-cols-3 gap-4">
    
-    <div className="rounded-lg border border-white/5 bg-black p-4">
+    <div className="rounded-lg border border-white bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Gaps in public understanding of ocean ecosystems</li>
@@ -132,7 +132,7 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Approach */}
-    <div className="rounded-lg border border-white/5 bg-black p-4">
+    <div className="rounded-lg border border-white bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Sound-driven storytelling as the core medium</li>
@@ -143,7 +143,7 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Result */}
-    <div className="rounded-lg border border-white/5 bg-black p-4">
+    <div className="rounded-lg border border-white bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Pause · listen · empathize</li>
@@ -157,28 +157,28 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-8 rounded-lg border border-white/5 bg-black">
+          <details className="mt-8 rounded-lg border border-white bg-black">
   <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
     Full text
   </summary>
   <div className="px-4 pb-4 pt-2 space-y-8">
     <div>
-      <h3 className="text-xl md:text-2xl font-light text-gray-300 mb-3">Approach</h3>
-      <p className="text-base md:text-lg leading-relaxed font-light text-gray-400">
+      <h3 className="text-s md:text-s font-light text-gray-300 mb-3">Approach</h3>
+      <p className="text-s md:text-s leading-relaxed font-light text-gray-400">
         Instead of relying on traditional data visualisation or scientific display, the project uses immersive design as an emotional trigger. It explores new ways to communicate marine biodiversity loss, shifting the focus toward sound as a storytelling medium. Visitors are encouraged to pause, listen, and emotionally reconnect with the life forms that often go unnoticed.
       </p>
     </div>
 
     <div>
-      <h3 className="text-xl md:text-2xl font-light text-gray-300 mb-3">Project Purpose</h3>
-      <p className="text-base md:text-lg leading-relaxed font-light text-gray-400">
+      <h3 className="text-s md:text-s font-light text-gray-300 mb-3">Project Purpose</h3>
+      <p className="text-s md:text-s leading-relaxed font-light text-gray-400">
         In alignment with the UN Ocean Decade (2021–2030), the project addresses the global communication gap in ocean awareness. Despite its planetary significance, the ocean remains underrepresented in education and policy. This exhibition reframes that disconnect through interactive design, making invisible marine life more visible—emotionally, sonically, and spatially.
       </p>
     </div>
 
     <div>
-      <h3 className="text-xl md:text-2xl font-light text-gray-300 mb-3">Development Strategy</h3>
-      <p className="text-base md:text-lg leading-relaxed font-light text-gray-400">
+      <h3 className="text-s md:text-s font-light text-gray-300 mb-3">Development Strategy</h3>
+      <p className="text-s md:text-s leading-relaxed font-light text-gray-400">
         Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
       </p>
     </div>
