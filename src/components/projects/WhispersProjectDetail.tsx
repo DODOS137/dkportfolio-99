@@ -121,9 +121,9 @@ const WhispersProjectDetail = () => {
 
     <div className="grid md:grid-cols-3 gap-4">
    
-    <div className="rounded-lg border border-white/10 bg-black p-4">
+    <div className="rounded-lg border border-white/5 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
-      <ul className="text-sm text-gray-200 space-y-1 list-disc list-inside">
+      <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Gaps in public understanding of ocean ecosystems</li>
         <li>Overemphasis on iconic large marine species</li>
         <li>Overlooked bottom-dwelling and invertebrate life</li>
@@ -132,9 +132,9 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Approach */}
-    <div className="rounded-lg border border-white/10 bg-black p-4">
+    <div className="rounded-lg border border-white/5 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
-      <ul className="text-sm text-gray-200 space-y-1 list-disc list-inside">
+      <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Sound-driven storytelling as the core medium</li>
         <li>Immersive design as emotional trigger</li>
         <li>Hybrid: AR triggers + tactile modules</li>
@@ -143,9 +143,9 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Result */}
-    <div className="rounded-lg border border-white/10 bg-black p-4">
+    <div className="rounded-lg border border-white/5 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
-      <ul className="text-sm text-gray-200 space-y-1 list-disc list-inside">
+      <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Pause · listen · empathize</li>
         <li>Invisible made visible (emotional/sonic/spatial)</li>
         <li>Scalable, mobile exhibition system</li>
@@ -157,8 +157,8 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-8 rounded-lg border border-white/10 bg-white/5">
-  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-200">
+          <details className="mt-8 rounded-lg border border-white/5 bg-black">
+  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
     Full text
   </summary>
   <div className="px-4 pb-4 pt-2 space-y-8">
