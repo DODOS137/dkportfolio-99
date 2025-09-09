@@ -10,6 +10,7 @@ import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
 import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 
 const WhispersProjectDetail = () => {
@@ -106,7 +107,39 @@ const WhispersProjectDetail = () => {
             <AspectRatio ratio={16 / 9}>
               <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" />
             </AspectRatio>
-          </div>
+          </div
+
+
+           
+          {/*approach 접기*/} 
+       
+          <section className="mt-20 md:mt-40" aria-labelledby="method-title">
+          <h2 id="method-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Method</h2>
+           <p className="text-gray-300 text-base md:text-lg mb-6">
+        We replace visual-centric displays with <span className="text-white">sonic storytelling</span> and
+        <span className="text-white"> AR/tactile modules</span> to surface overlooked bottom-dwelling species.
+         </p>
+       <Accordion type="single" collapsible className="border border-white/10 rounded-lg bg-white/5">
+       <AccordionItem value="approach">
+      <AccordionTrigger className="px-4">Approach</AccordionTrigger>
+      <AccordionContent className="px-4 pb-4 text-gray-400">
+        Immersive design as an emotional trigger; sound as the primary narrative; invite pause & listening.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="purpose">
+      <AccordionTrigger className="px-4">Project Purpose</AccordionTrigger>
+      <AccordionContent className="px-4 pb-4 text-gray-400">
+        UN Ocean Decade aligned; reframe awareness gap via interaction to make invisible life visible.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="strategy">
+      <AccordionTrigger className="px-4">Development Strategy</AccordionTrigger>
+      <AccordionContent className="px-4 pb-4 text-gray-400">
+        Focus on sub-rock invertebrates; hybrid of immersive audio, AR interaction, tactile components.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</section>
 
 
           {/* Approach Section */}
