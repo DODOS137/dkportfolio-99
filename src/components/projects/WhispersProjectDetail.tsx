@@ -121,7 +121,7 @@ const WhispersProjectDetail = () => {
 
     <div className="grid md:grid-cols-3 gap-4">
    
-    <div className="rounded-lg border border-white bg-black p-4">
+    <div className="rounded-lg border border-white/5 bg-white/10 p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Gaps in public understanding of ocean ecosystems</li>
@@ -132,7 +132,7 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Approach */}
-    <div className="rounded-lg border border-white bg-black p-4">
+    <div className="rounded-lg border border-white/5 bg-white/10 p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Sound-driven storytelling as the core medium</li>
@@ -143,7 +143,7 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Result */}
-    <div className="rounded-lg border border-white bg-black p-4">
+    <div className="rounded-lg border border-white/5 bg-white/10 p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Pause · listen · empathize</li>
@@ -157,7 +157,7 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-8 rounded-lg border border-white bg-black">
+          <details className="mt-8 rounded-lg border border-black bg-black">
   <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
     Full text
   </summary>
