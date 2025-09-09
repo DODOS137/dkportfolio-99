@@ -107,7 +107,7 @@ const WhispersProjectDetail = () => {
             <AspectRatio ratio={16 / 9}>
               <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" />
             </AspectRatio>
-          </div
+          </div>
 
 
 
