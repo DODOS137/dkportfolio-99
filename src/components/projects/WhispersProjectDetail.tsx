@@ -110,30 +110,7 @@ const WhispersProjectDetail = () => {
           </div
 
 
-           {/* METHOD — 기존 세 문단 대체, imports 없음 */}
-<section className="mt-20 md:mt-40" aria-labelledby="method-title">
-  <h2 id="method-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Method</h2>
 
-  {/* 3줄 요약 */}
-  <p className="text-gray-300 text-base md:text-lg mb-6">
-    We replace visual-centric displays with <span className="text-white">sonic storytelling</span> and
-    <span className="text-white"> AR/tactile modules</span> to surface overlooked bottom-dwelling species.
-  </p>
-
-  {/* 상세는 네이티브 details로 접기 */}
-  <details className="rounded-lg border border-white/10 bg-white/5 p-4">
-    <summary className="cursor-pointer text-sm text-gray-200">Approach</summary>
-    <p className="mt-2 text-sm text-gray-400">Immersive design as an emotional trigger; sound as the primary narrative; invite pause & listening.</p>
-  </details>
-  <details className="mt-2 rounded-lg border border-white/10 bg-white/5 p-4">
-    <summary className="cursor-pointer text-sm text-gray-200">Project Purpose</summary>
-    <p className="mt-2 text-sm text-gray-400">UN Ocean Decade aligned; reframe the awareness gap via interaction to make invisible life visible—emotionally, sonically, spatially.</p>
-  </details>
-  <details className="mt-2 rounded-lg border border-white/10 bg-white/5 p-4">
-    <summary className="cursor-pointer text-sm text-gray-200">Development Strategy</summary>
-    <p className="mt-2 text-sm text-gray-400">Focus on sub-rock invertebrates; hybrid of immersive audio, AR interaction, and tactile components.</p>
-  </details>
-</section>
 
 
 
