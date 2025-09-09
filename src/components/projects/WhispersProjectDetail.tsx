@@ -110,37 +110,27 @@ const WhispersProjectDetail = () => {
           </div>
 
 
+         
 
-<div id="method" className="rounded-lg bg-transparent">
-  <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6">Method</h2>
-  <p className="text-base md:text-lg leading-relaxed font-light text-gray-300 mb-4">
-    We replace visual-centric displays with <span className="text-white">sonic storytelling</span> and
-    <span className="text-white"> AR/tactile modules</span> to surface overlooked bottom-dwelling species.
-  </p>
 
-  <details className="rounded-lg border border-white/10 bg-white/5 p-4">
-    <summary className="cursor-pointer text-sm text-gray-200">Approach</summary>
-    <p className="mt-2 text-sm text-gray-400">
-      Immersive design as an emotional trigger; sound as the primary narrative; invite pause & listening.
-    </p>
-  </details>
+          <section aria-labelledby="car-title" className="mt-10">
+       <h2 id="car-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Summary</h2>
+       <div className="grid md:grid-cols-3 gap-4">
+       <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
+      <p className="text-sm text-gray-200">Overlooked bottom-dwellers; build emotional awareness of biodiversity loss.</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
+      <p className="text-sm text-gray-200">Sonic storytelling + AR + tactile modules; immersive design as trigger.</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
+      <p className="text-sm text-gray-200">Visitors pause, listen, reconnect; invisible life becomes visible emotionally/sonically/spatially.</p>
+    </div>
+    </div>
+   </section>
 
-  <details className="mt-2 rounded-lg border border-white/10 bg-white/5 p-4">
-    <summary className="cursor-pointer text-sm text-gray-200">Project Purpose</summary>
-    <p className="mt-2 text-sm text-gray-400">
-      UN Ocean Decade aligned; reframe the awareness gap to make invisible life visible—emotionally, sonically, spatially.
-    </p>
-  </details>
-
-  <details className="mt-2 rounded-lg border border-white/10 bg-white/5 p-4">
-    <summary className="cursor-pointer text-sm text-gray-200">Development Strategy</summary>
-    <p className="mt-2 text-sm text-gray-400">
-      Focus on sub-rock invertebrates; hybrid of immersive audio, AR interaction, and tactile components.
-    </p>
-  </details>
-</div>
-
-            
 
 
 
@@ -207,6 +197,29 @@ const WhispersProjectDetail = () => {
           </div>
 
 
+          <section id="process" className="rounded-lg bg-transparent">
+  <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
+    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+      <h3 className="text-white font-light mb-3">01 Ideation</h3>
+      <p className="text-gray-400 text-sm">Brainstorming</p>
+      <p className="text-gray-400 text-sm">Concept sketches</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+      <h3 className="text-white font-light mb-3">02 Analysis</h3>
+      <p className="text-gray-400 text-sm">Precedents</p>
+      <p className="text-gray-400 text-sm">Ocean issues & species research</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+      <h3 className="text-white font-light mb-3">03 Development</h3>
+      <p className="text-gray-400 text-sm">Product & spatial design</p>
+      <p className="text-gray-400 text-sm">AR application · Exhibition build</p>
+    </div>
+  </div>
+</section>
+
+
+
 
          {/*TEXT*/}
           <div className=""> 
@@ -215,6 +228,39 @@ const WhispersProjectDetail = () => {
               To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
             </p>
           </div>
+
+
+         <section id="research" aria-labelledby="research-title" className="mt-10">
+  <h2 id="research-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Research Highlights</h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+      <p className="text-3xl md:text-4xl font-light text-white">91%</p>
+      <p className="text-xs text-gray-400 mt-1">only visual-centric exhibitions experienced</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+      <p className="text-3xl md:text-4xl font-light text-white">87%</p>
+      <p className="text-xs text-gray-400 mt-1">most familiar with whales/dolphins</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+      <p className="text-3xl md:text-4xl font-light text-white">108</p>
+      <p className="text-xs text-gray-400 mt-1">participants surveyed</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+      <p className="text-3xl md:text-4xl font-light text-white">UN</p>
+      <p className="text-xs text-gray-400 mt-1">Ocean Decade aligned</p>
+    </div>
+  </div>
+
+  <details className="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
+    <summary className="cursor-pointer text-sm text-gray-200">Full findings</summary>
+    <p className="mt-2 text-sm text-gray-400">
+      {/* 기존 Preliminary Research 문단 붙여넣기 */}
+    </p>
+  </details>
+</section>
+
+          
 
          {/* Tools & Roles Table */}
        <div className="mt-10 md:mb-20">
@@ -262,6 +308,29 @@ const WhispersProjectDetail = () => {
   </div>
 </div>
 
+   
+          
+          <section id="design" className="mt-10">
+  <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6">Design Highlights</h2>
+  <ul className="space-y-3 text-gray-300">
+    <li>• Sound as narrative; invertebrate bioacoustics drive tone & empathy.</li>
+    <li>• Rock-like headset plinths; solitary high-res listening.</li>
+    <li>• Mobile modules; wave fixtures; textured lighting → underwater ambience.</li>
+    <li>• AR scans trigger animated species; touch + sound + vision → active reflection.</li>
+  </ul>
+
+  <details className="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
+    <summary className="cursor-pointer text-sm text-gray-200">Full text</summary>
+    <div className="mt-2 space-y-4 text-sm text-gray-400">
+      {/* 기존 긴 문단 붙여넣기 */}
+    </div>
+  </details>
+</section>
+
+          
+          
+          
+          
           {/*idea development text start*/}
            
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
