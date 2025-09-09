@@ -157,7 +157,7 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-8 rounded-lg border border-white/10 bg-black">
+          <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
   <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
     Full text
   </summary>
@@ -189,7 +189,7 @@ const WhispersProjectDetail = () => {
 
          {/*Research*/}
 
-         <section id="research" aria-labelledby="research-title" className="mt-10">
+         <section id="research" aria-labelledby="research-title" className="mt-8 mb-20">
     <h2 id="research-title" className="text-s md:text-s font-light text-gray-300 mb-6">Research Highlights</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -211,7 +211,7 @@ const WhispersProjectDetail = () => {
     </div>
   </div>
 
-  <details className="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
+  <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
     <summary className="cursor-pointer text-sm text-gray-200">Full findings</summary>
     <p className="mt-2 text-sm text-gray-400">
      To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
