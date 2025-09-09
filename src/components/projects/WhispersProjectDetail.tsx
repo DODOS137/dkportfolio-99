@@ -160,6 +160,67 @@ const WhispersProjectDetail = () => {
             </div>
           </div>
 
+          <section aria-labelledby="car-title" className="mt-10">
+  <h2 id="car-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Summary</h2>
+
+  {/* CAR 요약 */}
+  <div className="grid md:grid-cols-3 gap-4 mb-8">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
+      <p className="text-sm text-gray-200">
+        Public awareness of marine biodiversity remains narrow—focused on whales and dolphins—while
+        invertebrates and bottom-dwellers stay invisible both culturally and ecologically.
+      </p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
+      <p className="text-sm text-gray-200">
+        Replace traditional visual-centric displays with immersive soundscapes, AR triggers, and tactile
+        modules—positioning sound as the primary narrative layer.
+      </p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
+      <p className="text-sm text-gray-200">
+        Visitors pause, listen, and emotionally reconnect—transforming overlooked species into visible
+        presences emotionally, sonically, and spatially.
+      </p>
+    </div>
+  </div>
+
+  {/* 긴 설명 */}
+  <div className="space-y-8">
+    <div>
+      <h3 className="text-xl md:text-2xl font-light text-gray-300 mb-4">Approach</h3>
+      <p className="text-base md:text-lg leading-relaxed font-light text-gray-400">
+        Instead of relying on scientific charts or static data visualisation, the exhibition uses immersive
+        design as an emotional trigger. Sound becomes the primary storytelling medium, inviting audiences
+        to pause, listen, and empathise with life forms usually excluded from conservation narratives.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl md:text-2xl font-light text-gray-300 mb-4">Project Purpose</h3>
+      <p className="text-base md:text-lg leading-relaxed font-light text-gray-400">
+        Aligned with the UN Ocean Decade (2021–2030), the project addresses the communication gap in ocean
+        awareness. By shifting focus from charismatic megafauna to hidden marine species, the exhibition
+        reframes biodiversity loss in a way that is emotional, sonic, and spatial.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl md:text-2xl font-light text-gray-300 mb-4">Development Strategy</h3>
+      <p className="text-base md:text-lg leading-relaxed font-light text-gray-400">
+        Research centred on species inhabiting sub-rock zones, highlighting the acoustic richness of
+        invertebrates and bottom-dwellers. A hybrid strategy—combining immersive audio, AR interaction, and
+        tactile components—was used to craft a layered storytelling platform that makes the invisible
+        tangible.
+      </p>
+    </div>
+  </div>
+</section>
+
+
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
