@@ -121,9 +121,9 @@ const WhispersProjectDetail = () => {
 
     <div className="grid md:grid-cols-3 gap-4">
    
-    <div className="rounded-lg border border-white/10 bg-black p-4">
-      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
-      <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
+      <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
         <li>Gaps in public understanding of ocean ecosystems</li>
         <li>Overemphasis on iconic large marine species</li>
         <li>Overlooked bottom-dwelling and invertebrate life</li>
@@ -132,9 +132,9 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Approach */}
-    <div className="rounded-lg border border-white/10 bg-black p-4">
-      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
-      <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
+      <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
         <li>Sound-driven storytelling as the core medium</li>
         <li>Immersive design as emotional trigger</li>
         <li>Hybrid: AR triggers + tactile modules</li>
@@ -143,9 +143,9 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Result */}
-    <div className="rounded-lg border border-white/10 bg-black p-4">
-      <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
-      <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
+      <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
         <li>Pause · listen · empathize</li>
         <li>Invisible made visible (emotional/sonic/spatial)</li>
         <li>Scalable, mobile exhibition system</li>
@@ -157,7 +157,7 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-8 rounded-lg border border-black bg-black">
+          <details className="mt-8 rounded-lg border border-white/10 bg-black">
   <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
     Full text
   </summary>
@@ -187,43 +187,10 @@ const WhispersProjectDetail = () => {
 
 
 
-
-
-          
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-          {/* Process Section */}
-
-          <section id="process" className="rounded-lg bg-transparent">
-     <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
-    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
-      <h3 className="text-white font-light mb-3">01 Ideation</h3>
-      <p className="text-gray-400 text-sm">Brainstorming</p>
-      <p className="text-gray-400 text-sm">Concept sketches</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
-      <h3 className="text-white font-light mb-3">02 Analysis</h3>
-      <p className="text-gray-400 text-sm">Precedents</p>
-      <p className="text-gray-400 text-sm">Ocean issues & species research</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
-      <h3 className="text-white font-light mb-3">03 Development</h3>
-      <p className="text-gray-400 text-sm">Product & spatial design</p>
-      <p className="text-gray-400 text-sm">AR application · Exhibition build</p>
-    </div>
-  </div>
-</section>
-
-
-
-
          {/*Research*/}
 
          <section id="research" aria-labelledby="research-title" className="mt-10">
-    <h2 id="research-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Research Highlights</h2>
+    <h2 id="research-title" className="text-s md:text-s font-light text-gray-300 mb-6">Research Highlights</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
@@ -251,6 +218,38 @@ const WhispersProjectDetail = () => {
     </p>
   </details>
 </section>
+
+
+          
+
+
+          {/* Process Section */}
+
+          <section id="process" className="rounded-lg bg-transparent">
+     <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
+    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+      <h3 className="text-white font-light mb-3">01 Ideation</h3>
+      <p className="text-gray-400 text-sm">Brainstorming</p>
+      <p className="text-gray-400 text-sm">Concept sketches</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+      <h3 className="text-white font-light mb-3">02 Analysis</h3>
+      <p className="text-gray-400 text-sm">Precedents</p>
+      <p className="text-gray-400 text-sm">Ocean issues & species research</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+      <h3 className="text-white font-light mb-3">03 Development</h3>
+      <p className="text-gray-400 text-sm">Product & spatial design</p>
+      <p className="text-gray-400 text-sm">AR application · Exhibition build</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
           
 
