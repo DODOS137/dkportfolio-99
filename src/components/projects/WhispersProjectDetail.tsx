@@ -158,8 +158,8 @@ const WhispersProjectDetail = () => {
           
    {/* Challenge full text*/}    
           <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
-  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
-    Full text
+         <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
+         Full text
   </summary>
   <div className="px-4 pb-4 pt-2 space-y-8">
     <div>
@@ -189,8 +189,8 @@ const WhispersProjectDetail = () => {
 
          {/*Research*/}
 
-         <section id="research" aria-labelledby="research-title" className="mt-8 mb-20">
-    <h2 id="research-title" className="text-s md:text-s font-light text-gray-300 mb-6">Research Highlights</h2>
+         <section id="research" aria-labelledby="research-title" className="mb-20">
+    <h2 id="research-title" className="text-s md:text-s font-light text-gray-300 mb-6">Research</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
@@ -212,7 +212,7 @@ const WhispersProjectDetail = () => {
   </div>
 
   <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
-    <summary className="cursor-pointer text-s text-gray-400">Full findings</summary>
+    <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
     <p className="mt-8 text-sm text-gray-400">
      To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
     </p>
@@ -225,20 +225,20 @@ const WhispersProjectDetail = () => {
 
           {/* Process Section */}
 
-          <section id="process" className="rounded-lg border border-white/10 bg-white/5">
+          <section id="process" className="rounded-lg bg-black">
      <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
-    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">01 Ideation</h3>
       <p className="text-gray-400 text-sm">Brainstorming</p>
       <p className="text-gray-400 text-sm">Concept sketches</p>
     </div>
-    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">02 Analysis</h3>
       <p className="text-gray-400 text-sm">Precedents</p>
       <p className="text-gray-400 text-sm">Ocean issues & species research</p>
     </div>
-    <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">03 Development</h3>
       <p className="text-gray-400 text-sm">Product & spatial design</p>
       <p className="text-gray-400 text-sm">AR application · Exhibition build</p>
