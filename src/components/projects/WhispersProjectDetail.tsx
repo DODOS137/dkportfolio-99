@@ -114,68 +114,41 @@ const WhispersProjectDetail = () => {
 
 
     
-          {/* Approach Section */}
-          <div className="rounded-lg bg-transparent">
-            <div className="mb-8"> 
-              <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Approach</h2>
-              <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
-                Instead of relying on traditional data visualisation or scientific display, the project uses immersive design as an emotional trigger. It explores new ways to communicate marine biodiversity loss, shifting the focus toward sound as a storytelling medium. Visitors are encouraged to pause, listen, and emotionally reconnect with the life forms that often go unnoticed.
-              </p>
-            </div>
-            
-            {/*Project Purpose*/}
-            <div className=""> 
-              <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Project Purpose</h2>
-              <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
-                In alignment with the UN Ocean Decade (2021–2030), the project addresses the global communication gap in ocean awareness. Despite its planetary significance, the ocean remains underrepresented in education and policy. This exhibition reframes that disconnect through interactive design, making invisible marine life more visible—emotionally, sonically, and spatially.
-              </p>
-            </div>
+     {/* Challenge Summary */}
 
-            {/*Development Strategy*/}
-            <div className="mt-8"> 
-              <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Development Strategy</h2>
-              <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
-                Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
-              </p>
-            </div>
-          </div>
+    <section aria-labelledby="car-title" className="mt-10">
+    <h2 id="car-title" className="text-s md:text-s font-light text-gray-300 mb-6">Summary</h2>
 
-
-
-     {/* Challenge */}
-     <section aria-labelledby="car-title" className="mt-10">
-  <h2 id="car-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Summary</h2>
-
-  <div className="grid md:grid-cols-3 gap-4">
+    <div className="grid md:grid-cols-3 gap-4">
    
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+    <div className="rounded-lg border border-white/10 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
       <ul className="text-sm text-gray-200 space-y-1 list-disc list-inside">
-        <li>Awareness gap in ocean literacy</li>
-        <li>Bias toward charismatic megafauna</li>
-        <li>Invisible bottom-dwelling/invertebrate species</li>
-        <li>Visual-centric exhibition norms</li>
+        <li>Gaps in public understanding of ocean ecosystems</li>
+        <li>Overemphasis on iconic large marine species</li>
+        <li>Overlooked bottom-dwelling and invertebrate life</li>
+        <li>Conventional reliance on visual-only exhibition formats</li>
       </ul>
     </div>
 
     {/* Approach */}
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+    <div className="rounded-lg border border-white/10 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
       <ul className="text-sm text-gray-200 space-y-1 list-disc list-inside">
-        <li>Sonic storytelling as primary medium</li>
+        <li>Sound-driven storytelling as the core medium</li>
         <li>Immersive design as emotional trigger</li>
         <li>Hybrid: AR triggers + tactile modules</li>
-        <li>Focus on sub-rock invertebrates</li>
+        <li>Highlighting overlooked sub-rock invertebrate species</li>
       </ul>
     </div>
 
     {/* Result */}
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+    <div className="rounded-lg border border-white/10 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
       <ul className="text-sm text-gray-200 space-y-1 list-disc list-inside">
         <li>Pause · listen · empathize</li>
         <li>Invisible made visible (emotional/sonic/spatial)</li>
-        <li>Scalable, mobile exhibition modules</li>
+        <li>Scalable, mobile exhibition system</li>
       </ul>
     </div>
   </div>
