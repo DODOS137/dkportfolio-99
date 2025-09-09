@@ -66,7 +66,7 @@ const WhispersProjectDetail = () => {
               {project.title}
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
-              An immersive sound based exhibition that amplifies the unheard voices of endangered marine life. By spotlighting the often-overlooked species dwelling beneath rocks or on the ocean floor, the project reframes ocean conservation narratives and invites audiences to engage through sensory storytelling.
+             Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-sm">
@@ -127,7 +127,7 @@ const WhispersProjectDetail = () => {
         <li>Gaps in public understanding of ocean ecosystems</li>
         <li>Overemphasis on iconic large marine species</li>
         <li>Overlooked bottom-dwelling and invertebrate life</li>
-        <li>Conventional reliance on visual-only exhibition formats</li>
+        <li>Reliance on visual-only formats</li>
       </ul>
     </div>
 
@@ -135,10 +135,10 @@ const WhispersProjectDetail = () => {
     <div className="rounded-lg border border-white/10 bg-white/5 p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
       <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-        <li>Sound-driven storytelling as the core medium</li>
-        <li>Immersive design as emotional trigger</li>
+        <li>Sound-driven storytelling</li>
+        <li>Immersive design for emotional impact</li>
         <li>Hybrid: AR triggers + tactile modules</li>
-        <li>Highlighting overlooked sub-rock invertebrate species</li>
+        <li>Focus on sub-rock invertebrates</li>
       </ul>
     </div>
 
@@ -147,7 +147,7 @@ const WhispersProjectDetail = () => {
       <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
       <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
         <li>Pause · listen · empathize</li>
-        <li>Invisible made visible (emotional/sonic/spatial)</li>
+        <li>Invisible made visible (emotional · sonic · spatial)</li>
         <li>Scalable, mobile exhibition system</li>
       </ul>
     </div>
@@ -157,7 +157,7 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mb-20 rounded-lg border border-white/10 bg-black">
+          <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
          <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full text
   </summary>
@@ -226,7 +226,7 @@ const WhispersProjectDetail = () => {
           {/* Process Section */}
 
           <section id="process" className="rounded-lg bg-black">
-     <h2 className="text-s md:text-s font-light mb-10 md:mb-20 text-gray-300">Process</h2>
+     <h2 className="text-s md:text-s font-light mb-8 md:mb-8 text-gray-300">Process</h2>
      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">01 Ideation</h3>
@@ -255,7 +255,7 @@ const WhispersProjectDetail = () => {
 
          {/* Tools & Roles Table */}
        <div className="mb-20 md:mb-20">
-       <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8">
+       <h2 className="text-s md:text-s font-light text-gray-300 mb-6 md:mb-8">
        Tools & Roles
      </h2>
        <div className="overflow-x-auto rounded-lg border border-white/10 bg-white/5">
@@ -301,16 +301,16 @@ const WhispersProjectDetail = () => {
 
    
           
-          <section id="design" className="mt-10">
+    <section id="design" className="mt-10">
   <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6">Design Highlights</h2>
   <ul className="space-y-3 text-gray-300">
-    <li>• Sound as narrative; invertebrate bioacoustics drive tone & empathy.</li>
-    <li>• Rock-like headset plinths; solitary high-res listening.</li>
-    <li>• Mobile modules; wave fixtures; textured lighting → underwater ambience.</li>
-    <li>• AR scans trigger animated species; touch + sound + vision → active reflection.</li>
+    <li>• Sound as narrative; bioacoustics drive empathy.</li>
+    <li>• Rock-like plinths for solitary listening.</li>
+    <li>• Flexible exhibition format designed for scalability and adaptability across contexts.</li>
+    <li>• AR scans trigger species; touch + sound + vision combined.</li>
   </ul>
 
-  <details className="mt-4 rounded-lg border border-white/10 bg-black p-4">
+  <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
     <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
     <div className="mt-8 space-y-4 text-sm text-gray-400">
 
