@@ -157,7 +157,7 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+          <details className="mb-20 rounded-lg border border-white/10 bg-black">
          <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full text
   </summary>
@@ -226,7 +226,7 @@ const WhispersProjectDetail = () => {
           {/* Process Section */}
 
           <section id="process" className="rounded-lg bg-black">
-     <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
+     <h2 className="text-s md:text-s font-light mb-10 md:mb-20 text-gray-300">Process</h2>
      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">01 Ideation</h3>
@@ -254,7 +254,7 @@ const WhispersProjectDetail = () => {
           
 
          {/* Tools & Roles Table */}
-       <div className="mt-10 md:mb-20">
+       <div className="mb-20 md:mb-20">
        <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8">
        Tools & Roles
      </h2>
@@ -291,7 +291,7 @@ const WhispersProjectDetail = () => {
     
         <tr>
           <td className="px-4 py-4 font-medium">Graphics</td>
-          <td className="px-4 py-4">Illustrator, Photoshop </td>
+          <td className="px-4 py-4">Adobe Suite </td>
           <td className="px-4 py-4">Exhibition panels, accessibility assets</td>
         </tr>
       </tbody>
@@ -311,9 +311,54 @@ const WhispersProjectDetail = () => {
   </ul>
 
   <details className="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
-    <summary className="cursor-pointer text-sm text-gray-200">Full text</summary>
+    <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
     <div className="mt-2 space-y-4 text-sm text-gray-400">
-      {/* 기존 긴 문단 붙여넣기 */}
+
+              {/*idea development text start*/}
+           
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Idea Development
+              </h2>
+              <p className="text-base md:text-lg lg:text-s font-light text-gray-400">Sound is treated not just as data but as a narrative layer. Scientific studies revealing the bioacoustics of marine invertebrates were used to frame the emotional tone of the exhibition. The project highlights how sonic signals from these animals reveal behavioural patterns and ecosystem health. These acoustic ecologies become a channel to foster empathy and reframe conservation dialogue. While marine mammals like whales and dolphins receive outsized attention due to their intelligence and emotional expressiveness, lesser-known species—particularly invertebrates and bottom-dwellers—remain largely excluded from both public empathy and conservation priorities. This project aims to redress that imbalance by amplifying the voices of species that are hidden, both physically and culturally, from mainstream awareness.</p>
+            </div>
+          </div>
+        
+             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Product Design
+              </h2>
+              <p className="text-base md:text-lg lg:text-s font-light text-gray-400">Custom-designed headset stands emulate smoothed underwater rocks, integrating both audio hardware and tactile visuality. Each plinth invites solitary listening through high-resolution recordings of marine species. The subtlety of these soundscapes becomes a form of protest against the visual-centric bias of most exhibitions.
+              </p>
+              </div>
+          </div>
+
+           {/*Spatial Design Text*/} 
+        
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Spatial Design
+              </h2>
+              <p className="text-base md:text-lg lg:text-s font-light text-gray-400">Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.
+              </p>
+              </div>
+          </div>
+
+          {/*Exhibition Design Text*/} 
+        
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
+              <h2 className="text-xl md:text-s font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Exhibition Design
+              </h2>
+              <p className="text-base md:text-lg lg:text-s font-light text-gray-400">The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.
+              </p>
+              </div>
+          </div>
+      
     </div>
   </details>
 </section>
