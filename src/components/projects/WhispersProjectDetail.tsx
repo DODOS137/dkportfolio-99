@@ -116,12 +116,12 @@ const WhispersProjectDetail = () => {
     
      {/* Challenge Summary */}
 
-    <section aria-labelledby="car-title" className="mt-10">
-    <h2 id="car-title" className="text-s md:text-s font-light text-gray-300 mb-6">Summary</h2>
+    <section aria-labelledby="car-title" className="mt-8">
+    <h2 id="car-title" className="text-s md:text-s font-light text-gray-300 mb-8">Summary</h2>
 
     <div className="grid md:grid-cols-3 gap-4">
    
-    <div className="rounded-lg border border-white/5 bg-white/10 p-4">
+    <div className="rounded-lg border border-white/10 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Challenge</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Gaps in public understanding of ocean ecosystems</li>
@@ -132,7 +132,7 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Approach */}
-    <div className="rounded-lg border border-white/5 bg-white/10 p-4">
+    <div className="rounded-lg border border-white/10 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Approach</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Sound-driven storytelling as the core medium</li>
@@ -143,7 +143,7 @@ const WhispersProjectDetail = () => {
     </div>
 
     {/* Result */}
-    <div className="rounded-lg border border-white/5 bg-white/10 p-4">
+    <div className="rounded-lg border border-white/10 bg-black p-4">
       <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Result</h3>
       <ul className="text-sm text-gray-500 space-y-1 list-disc list-inside">
         <li>Pause · listen · empathize</li>
@@ -195,42 +195,10 @@ const WhispersProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Process Section */}
-          <div className="rounded-lg bg-transparent">
-            <h2 className="text-xl md:text-s font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
-              <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4"> Ideation Phase</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Brainstorming</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Concept Sketching</p>
-                </div>
-              </div>
-              
-              <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4">Analysis</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Precedent Study </p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Contemporary Ocean Issues & Marine Species Research</p>
-                </div>
-              </div>
-              
-              <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-s font-light text-white mb-2 md:mb-4">Design Development</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Idea Development</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Product Design</p>
-                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">AR Appication Development</p>
-                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Spatial Design</p>
-                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Exhibtion Design</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
 
           <section id="process" className="rounded-lg bg-transparent">
-  <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
+     <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
     <div className="rounded-lg border border-white/10 bg-black p-6 text-center">
       <h3 className="text-white font-light mb-3">01 Ideation</h3>
       <p className="text-gray-400 text-sm">Brainstorming</p>
@@ -252,17 +220,10 @@ const WhispersProjectDetail = () => {
 
 
 
-         {/*TEXT*/}
-          <div className=""> 
-            <h2 className="text-xl md:text-s font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Preliminary Research</h2>
-            <p className="text-base md:text-lg lg:text-s leading-relaxed font-light text-gray-400">
-              To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
-            </p>
-          </div>
-
+         {/*Research*/}
 
          <section id="research" aria-labelledby="research-title" className="mt-10">
-  <h2 id="research-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Research Highlights</h2>
+    <h2 id="research-title" className="text-xl md:text-2xl font-light text-gray-300 mb-6">Research Highlights</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
@@ -286,7 +247,7 @@ const WhispersProjectDetail = () => {
   <details className="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
     <summary className="cursor-pointer text-sm text-gray-200">Full findings</summary>
     <p className="mt-2 text-sm text-gray-400">
-      {/* 기존 Preliminary Research 문단 붙여넣기 */}
+     To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
     </p>
   </details>
 </section>
