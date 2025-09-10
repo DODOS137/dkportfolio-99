@@ -379,7 +379,7 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          {/* Idea Development Section */}
+          {/* Graphic design images Section */}
  
             {/*Development Image1*/}     
           <div className="w-full">
@@ -394,10 +394,18 @@ const WhispersProjectDetail = () => {
           {/*Development Image3*/}        
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
-          </div>   
+          </div> 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+          {/*Poster Design Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
+          </div>         
+
+
+          
+
+
 
           {/*Product Design Image1*/}        
           <div className="w-full">
@@ -435,10 +443,7 @@ const WhispersProjectDetail = () => {
             </AspectRatio>
           </div>
 
-          {/*Exhibition Design Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
-          </div> 
+
           
            {/*Exhibition Design Image2*/}       
           <div className="w-full">
