@@ -430,10 +430,15 @@ const WhispersProjectDetail = () => {
              {/* 유튜브 플레이어 */}
             <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
             {/* 위/아래만 덮는 박스 */}
-           <div className="absolute top-0 left-0 w-full h-12 bg-black pointer-events-none"></div>
-           <div className="absolute bottom-0 left-0 w-full h-12 bg-black pointer-events-none"></div>
+           <div className="absolute top-0 left-0 w-full h-15 bg-black pointer-events-none"></div>
+           <div className="absolute bottom-0 left-0 w-full h-15 bg-black pointer-events-none"></div>
            </AspectRatio>
            </div>
+
+
+
+
+          
 
          
           
@@ -449,12 +454,7 @@ const WhispersProjectDetail = () => {
 
 
 
-          {/* Second YouTube Video Section */}
-          <div className="my-20 md:my-40">
-            <AspectRatio ratio={16 / 9}>
-              <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
-            </AspectRatio>
-          </div>
+
 
 
           
