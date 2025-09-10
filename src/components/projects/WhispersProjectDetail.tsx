@@ -421,7 +421,7 @@ const WhispersProjectDetail = () => {
 
            {/*Graphic Design Image1-3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom-29.png" />
+            <img className="w-full h-full mb-5 md:mb-5" src="/lovable-uploads/web1920-whispers from the bottom-29.png" />
           </div>  
 
            {/* Second YouTube Video Section */}
@@ -436,17 +436,15 @@ const WhispersProjectDetail = () => {
            </div>
 
 
-
-
-          
-
-         
-          
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px mt-5 mb-20 md:mt-5 mb-20 bg-gray-500/50"></div>
 
 
 
+
+          
+          
+          
           {/*Spatial Design Image1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 12.png" />
