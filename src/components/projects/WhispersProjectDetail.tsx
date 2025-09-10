@@ -195,19 +195,19 @@ const WhispersProjectDetail = () => {
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
       <p className="text-3xl md:text-4xl font-light text-white">91%</p>
-      <p className="text-s text-gray-400 mt-2">only visual-centric exhibitions experienced</p>
+      <p className="text-sm text-gray-400 mt-2">only visual-centric exhibitions experienced</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
       <p className="text-3xl md:text-4xl font-light text-white">87%</p>
-      <p className="text-s text-gray-400 mt-2">most familiar with whales/dolphins</p>
+      <p className="text-sm text-gray-400 mt-2">most familiar with whales/dolphins</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
       <p className="text-3xl md:text-4xl font-light text-white">108</p>
-      <p className="text-s text-gray-400 mt-2">participants surveyed</p>
+      <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-4xl font-light text-white">Awareness Gap</p>
-      <p className="text-s text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
+      <p className="text-2xl md:text-4xl font-light text-white">Awareness Gap</p>
+      <p className="text-sm text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
     </div>
   </div>
 
