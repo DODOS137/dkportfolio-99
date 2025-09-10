@@ -62,10 +62,10 @@ const WhispersProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-20 md:mt-40">
-            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+            <h2 className="text-xl md:text-2xl lg:text-2xl mb-6 md:mb-8 text-white font-light">
               {project.title}
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
+            <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
              Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
             </p>
             
@@ -92,8 +92,8 @@ const WhispersProjectDetail = () => {
          {/* Client Section */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-8 mt-20 md:mt-40"> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Client</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-300">
+              <h2 className="text-base md:text-base font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Client</h2>
+              <p className="text-base md:text-base lg:text-xl leading-relaxed font-light text-gray-300">
                 UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
               </p>
             </div>
@@ -194,19 +194,19 @@ const WhispersProjectDetail = () => {
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-4xl font-light text-white">91%</p>
+      <p className="text-3xl md:text-3xl font-light text-white">91%</p>
       <p className="text-sm text-gray-400 mt-2">only visual-centric exhibitions experienced</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-4xl font-light text-white">87%</p>
+      <p className="text-3xl md:text-3xl font-light text-white">87%</p>
       <p className="text-sm text-gray-400 mt-2">most familiar with whales/dolphins</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-4xl font-light text-white">108</p>
+      <p className="text-3xl md:text-3xl font-light text-white">108</p>
       <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-2xl md:text-4xl font-light text-white">Awareness Gap</p>
+      <p className="text-xl md:text-xl font-light text-white">Awareness Gap</p>
       <p className="text-sm text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
     </div>
   </div>
