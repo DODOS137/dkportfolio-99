@@ -117,7 +117,7 @@ const WhispersProjectDetail = () => {
      {/* Challenge Summary */}
 
     <section aria-labelledby="car-title" className="mt-8">
-    <h2 id="car-title" className="text-s md:text-s font-light text-gray-300 mb-8">Summary</h2>
+    <h2 id="car-title" className="text-sm md:text-sm font-light text-gray-300 mb-8">Summary</h2>
 
     <div className="grid md:grid-cols-3 gap-4">
    
@@ -163,21 +163,21 @@ const WhispersProjectDetail = () => {
   </summary>
   <div className="px-4 pb-4 pt-2 space-y-8">
     <div>
-      <h3 className="text-s md:text-s font-light text-gray-300 mb-3">Approach</h3>
+      <h3 className="text-s md:text-s font-light text-gray-400 mb-3">Approach</h3>
       <p className="text-s md:text-s leading-relaxed font-light text-gray-400">
         Instead of relying on traditional data visualisation or scientific display, the project uses immersive design as an emotional trigger. It explores new ways to communicate marine biodiversity loss, shifting the focus toward sound as a storytelling medium. Visitors are encouraged to pause, listen, and emotionally reconnect with the life forms that often go unnoticed.
       </p>
     </div>
 
     <div>
-      <h3 className="text-s md:text-s font-light text-gray-300 mb-3">Project Purpose</h3>
+      <h3 className="text-s md:text-s font-light text-gray-400 mb-3">Project Purpose</h3>
       <p className="text-s md:text-s leading-relaxed font-light text-gray-400">
         In alignment with the UN Ocean Decade (2021–2030), the project addresses the global communication gap in ocean awareness. Despite its planetary significance, the ocean remains underrepresented in education and policy. This exhibition reframes that disconnect through interactive design, making invisible marine life more visible—emotionally, sonically, and spatially.
       </p>
     </div>
 
     <div>
-      <h3 className="text-s md:text-s font-light text-gray-300 mb-3">Development Strategy</h3>
+      <h3 className="text-s md:text-s font-light text-gray-400 mb-3">Development Strategy</h3>
       <p className="text-s md:text-s leading-relaxed font-light text-gray-400">
         Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
       </p>
@@ -190,30 +190,30 @@ const WhispersProjectDetail = () => {
          {/*Research*/}
 
          <section id="research" aria-labelledby="research-title" className="mb-20">
-    <h2 id="research-title" className="text-s md:text-s font-light text-gray-300 mb-6">Research</h2>
+    <h2 id="research-title" className="text-sm md:text-sm font-light text-gray-300 mb-6">Research</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
       <p className="text-3xl md:text-4xl font-light text-white">91%</p>
-      <p className="text-xs text-gray-400 mt-1">only visual-centric exhibitions experienced</p>
+      <p className="text-s text-gray-400 mt-2">only visual-centric exhibitions experienced</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
       <p className="text-3xl md:text-4xl font-light text-white">87%</p>
-      <p className="text-xs text-gray-400 mt-1">most familiar with whales/dolphins</p>
+      <p className="text-s text-gray-400 mt-2">most familiar with whales/dolphins</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
       <p className="text-3xl md:text-4xl font-light text-white">108</p>
-      <p className="text-xs text-gray-400 mt-1">participants surveyed</p>
+      <p className="text-s text-gray-400 mt-2">participants surveyed</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-4xl font-light text-white">UN</p>
-      <p className="text-xs text-gray-400 mt-1">Ocean Decade aligned</p>
+      <p className="text-3xl md:text-4xl font-light text-white">Awareness Gap</p>
+      <p className="text-s text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
     </div>
   </div>
 
   <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
     <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
-    <p className="mt-8 text-sm text-gray-400">
+    <p className="mt-8 text-s text-gray-400">
      To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
     </p>
   </details>
