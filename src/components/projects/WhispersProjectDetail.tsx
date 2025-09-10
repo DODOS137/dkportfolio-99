@@ -382,27 +382,24 @@ const WhispersProjectDetail = () => {
           {/* Graphic design images Section */}
  
             {/*Development Image1*/}     
-          <div className="w-full">
+          <div className="w-full mb-8">
             <img className="w-full h-full" src="/lovable-uploads/a0b20d87-ef7c-4183-9209-6abb798b0f65.png" />
           </div>           
           
         
-         {/*Development Image2*/}        
+         {/*Research Image2*/}        
           <div className="w-full">
             <img className="w-full h-full" src="/lovable-uploads/d53ecd82-9cb2-41d8-b1bf-ea5c51b298d8.png" />
           </div>  
-          {/*Development Image3*/}        
+         
+          {/*Research Image2-1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/e1c62251-ce6b-45fe-87a1-7a85b8ee604f.png" />
           </div> 
 
 
+   
           {/*Poster Design Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/bb4ee54e-1596-4bbf-aa4d-2fde56ed92dd.png" />
-          </div>    
-
-          {/*Poster Design Image2*/}        
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 13-26.png" />
           </div>     
