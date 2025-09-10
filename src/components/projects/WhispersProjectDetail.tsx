@@ -259,8 +259,8 @@ const WhispersProjectDetail = () => {
        Tools & Roles
      </h2>
        <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-      <table className="w-full text-left text-sm text-gray-200">
-      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+      <table className="w-full text-left text-sm text-gray-300">
+      <thead className="bg-white/5 text-gray-400 uppercase text-sm tracking-wider">
         <tr>
           <th className="px-4 py-3">Part</th>
           <th className="px-4 py-3">Tools</th>
