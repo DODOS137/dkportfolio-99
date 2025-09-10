@@ -409,23 +409,25 @@ const WhispersProjectDetail = () => {
 
 
 
-          {/*Product Design Image1*/}        
+          {/*Graphic Design Image1-1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottomfinal_대지 24.png" />
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 27.png" />
           </div>   
 
 
 
-          {/*Product Design Image2*/}        
+          {/*Graphic Design Image1-2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 12 사본.png" />
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 28.png" />
           </div>   
 
-           {/*Product Design Image3*/}        
+           {/*Graphic Design Image1-3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 10.png" />
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 29.png" />
           </div>  
 
+         
+          
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
