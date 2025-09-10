@@ -206,7 +206,7 @@ const WhispersProjectDetail = () => {
       <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-xl md:text-xl font-light text-white">Awareness Gap</p>
+      <p className="text-xl md:text-xl font-light text-white">Blind Spot</p>
       <p className="text-sm text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
     </div>
   </div>
