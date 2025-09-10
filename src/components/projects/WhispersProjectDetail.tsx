@@ -439,7 +439,17 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px mt-5 mb-20 md:mt-5 mb-20 bg-gray-500/50"></div>
 
+          {/*Product Design Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10.png" />
+          </div> 
 
+          {/*Product Design Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10.png" />
+          </div>  
+
+8
 
 
           
