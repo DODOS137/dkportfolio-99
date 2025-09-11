@@ -17,33 +17,19 @@ const InvisibleProjectDetail = () => {
   const project = invisibleProjectData;
   const heroRef = useScrollAnimation<HTMLDivElement>();
 
-  // Safe origin for SSR
-  const safeOrigin = typeof window !== "undefined" ? window.location.origin : undefined;
-
-  // YouTube common opts
-  const ytOpts = {
+  // YouTube 옵션 (Whispers와 동일 스펙)
+  const videoOpts = {
     height: "100%",
     width: "100%",
     playerVars: {
       autoplay: 0,
       controls: 1,
-      rel: 0,
-      showinfo: 0,
       modestbranding: 1,
-      fs: 1,
-      cc_load_policy: 0,
-      iv_load_policy: 3,
-      autohide: 1,
-      disablekb: 0,
-      enablejsapi: 1,
-      ...(safeOrigin ? { origin: safeOrigin } : {}),
-      branding: 0,
-      color: "white",
-      theme: "dark",
-    } as any,
+      rel: 0,
+    },
   };
 
-  // Slider images
+  // 슬라이더 이미지
   const firstSliderImages = [
     "/lovable-uploads/b3851ebc-35db-4397-8f5e-e5286275ac0d.png",
     "/lovable-uploads/8f303355-f7f8-417f-a4e4-fa9109e312db.png",
@@ -51,7 +37,6 @@ const InvisibleProjectDetail = () => {
     "/lovable-uploads/1c29e559-8fb5-43b8-85cb-bbe881e4b5b5.png",
     "/lovable-uploads/663f86d2-c014-4d12-bc43-879d35aa70b2.png",
   ];
-
   const secondSliderImages = [
     "/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png",
     "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png",
@@ -60,7 +45,7 @@ const InvisibleProjectDetail = () => {
     "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png",
   ];
 
-  // Carousel state (type-safe)
+  // Carousel 상태
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [secondApi, setSecondApi] = useState<CarouselApi | null>(null);
@@ -84,7 +69,7 @@ const InvisibleProjectDetail = () => {
         {/* Fixed Navigation */}
         <ProjectNavigation backText="Back to work" />
 
-        {/* Hero Section */}
+        {/* Hero Section (Whispers와 동일 타이포) */}
         <section className="h-screen flex items-center justify-center relative overflow-hidden">
           <div
             ref={heroRef.ref}
@@ -92,32 +77,31 @@ const InvisibleProjectDetail = () => {
               heroRef.isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
+            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
               {project.heroTitle}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="true">
+            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
               Scientific Virtual Reality Content
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-              <span data-lovable-editable="true">{project.heroYear}</span>
+              <span>{project.heroYear}</span>
               <span>•</span>
-              <span data-lovable-editable="true">{project.heroClient}</span>
+              <span>{project.heroClient}</span>
               <span>•</span>
-              <span data-lovable-editable="true">{project.heroRole}</span>
+              <span>{project.heroRole}</span>
             </div>
           </div>
         </section>
 
-        {/* Main Content */}
+        {/* Main Content (구조/타이포 Whispers 정렬) */}
         <section>
           {/* First Image */}
           <div className="max-w-[1540px] mx-auto z-10">
             <AspectRatio ratio={16 / 9} className="w-full h-auto">
               <ImageWithLoading
-                src={project.images[0]}
+                src={project.images?.[0]}
                 alt={`${project.title} - Image 1`}
                 className="w-full h-full object-contain"
-                data-lovable-editable="true"
               />
             </AspectRatio>
           </div>
@@ -126,62 +110,48 @@ const InvisibleProjectDetail = () => {
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
             {/* Project Description */}
             <div className="rounded-lg bg-transparent mt-20 md:mt-20">
-              <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light" data-lovable-editable="true">
+              <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light">
                 {project.title}
               </h2>
-              <p
-                className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light"
-                data-lovable-editable="true"
-              >
+              <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
                 {project.mainDescription}
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-sm">
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">
-                    project type
-                  </h3>
-                  <p className="text-white" data-lovable-editable="true">
-                    {project.projectType}
-                  </p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
+                  <p className="text-white">{project.projectType}</p>
                 </div>
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">
-                    Project category
-                  </h3>
-                  <p className="text-white" data-lovable-editable="true">
-                    VR Contents Design
-                  </p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
+                  <p className="text-white">VR Contents Design</p>
                 </div>
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">
-                    ROLE
-                  </h3>
-                  <p className="text-white" data-lovable-editable="true">
-                    {project.teamType}
-                  </p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
+                  <p className="text-white">{project.teamType}</p>
                 </div>
                 <div>
-                  <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">
-                    DURATION
-                  </h3>
-                  <p className="text-white" data-lovable-editable="true">
-                    {project.duration}
-                  </p>
+                  <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
+                  <p className="text-white">{project.duration}</p>
                 </div>
               </div>
             </div>
 
-            {/* YouTube Video (if any) */}
+            {/* Client (Whispers에 맞춘 구성/타이틀 크기) */}
+            <div className="rounded-lg bg-transparent">
+              <div className="mb-8 mt-20 md:mt-20">
+                <h2 className="text-xl md:text-xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Client</h2>
+                <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+                  {project.heroClient}
+                </p>
+              </div>
+            </div>
+
+            {/* YouTube (조건부 / 동일 스타일) */}
             {project.videoId && (
-              <div className="my-20 md:my-20">
+              <div className="my-40 md:my-40">
                 <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
-                  <YouTube
-                    videoId={project.videoId}
-                    opts={ytOpts}
-                    className="w-full h-full"
-                    iframeClassName="w-full h-full border-0"
-                  />
+                  <YouTube videoId={project.videoId} opts={videoOpts} className="w-full h-full" />
                 </AspectRatio>
               </div>
             )}
@@ -189,104 +159,130 @@ const InvisibleProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
 
-            {/* Approach */}
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-2xl text-white font-light mb-6 md:mb-8" data-lovable-editable="true">
-                Approach
-              </h2>
-              <p className="text-sm md:text-lg lg:text-xl leading-relaxed font-light text-gray-400" data-lovable-editable="true">
-                {project.approach}
-              </p>
-            </div>
-
-            {/* Development Strategy */}
-            <div className="rounded-lg bg-transparent mt-10">
-              <h2 className="text-xl md:text-2xl text-white font-light mb-6 md:mb-8" data-lovable-editable="true">
-                Development Strategy
-              </h2>
-              <p className="text-sm md:text-lg lg:text-xl leading-relaxed font-light text-gray-400" data-lovable-editable="true">
-                {project.development}
-              </p>
-            </div>
-
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
-            {/* Process Cards */}
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-2xl mb-6 md:mb-8 text-gray-300 font-light" data-lovable-editable="true">
-                Process
+            {/* Summary 섹션 (Whispers와 동일한 3-컬럼 카드) */}
+            <section aria-labelledby="sum-title" className="mt-8">
+              <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
+                Summary
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-                  <h3 className="text-white font-light mb-3" data-lovable-editable="true">
-                    Ideation Phase
-                  </h3>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Brainstorming
-                  </p>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Concept Sketching
-                  </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>Abstract scientific concepts hard to engage</li>
+                    <li>Conventional displays lack spatial narrative</li>
+                    <li>Low immersion in typical exhibitions</li>
+                    <li>Need for experiential learning</li>
+                  </ul>
                 </div>
 
-                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-                  <h3 className="text-white font-light mb-3" data-lovable-editable="true">
-                    Analysis
-                  </h3>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Context & Problem Analysis
-                  </p>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Survey
-                  </p>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Narrative Flow Mapping
-                  </p>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Precedent Study
-                  </p>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>VR-first spatial storytelling</li>
+                    <li>Four themes: Gravity · Light · Life · Time</li>
+                    <li>Video interludes + chambers</li>
+                    <li>Emotion-led comprehension</li>
+                  </ul>
                 </div>
 
-                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-                  <h3 className="text-white font-light mb-3" data-lovable-editable="true">
-                    Design Development
-                  </h3>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Worldbuilding
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>67% felt VR aided understanding</li>
+                    <li>Preference over traditional exhibits</li>
+                    <li>Clear emotional arc across spaces</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Challenge Full text (details) */}
+            <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+              <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
+              <div className="px-4 pb-4 pt-2 space-y-8">
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                    The project uses immersive spatial design and narrative sequencing to make core scientific ideas experientially
+                    felt. Four chambers—Gravity, Light, Life, and Time—guide users through a structured emotional and cognitive arc.
                   </p>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Video Development
+                </div>
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                    It reframes complex science through embodied experience, prioritising clarity, curiosity, and empathy to increase
+                    engagement and retention beyond traditional display formats.
                   </p>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Level Design
-                  </p>
-                  <p className="text-gray-400 text-sm" data-lovable-editable="true">
-                    Spatial Design
+                </div>
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                    The experience blends interactive chamber design, short video interludes, and a consistent visual language to
+                    support comprehension and emotional continuity across the journey.
                   </p>
                 </div>
               </div>
+            </details>
 
-              {/* Preliminary Research */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                <div className="rounded-lg bg-transparent mt-10 md:mt-20">
-                  <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300" data-lovable-editable="true">
-                    Preliminary Research
-                  </h2>
-                  <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light" data-lovable-editable="true">
-                    An online and offline survey involving 306 participants was conducted to examine the limitations of traditional
-                    science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of
-                    respondents believed conventional science displays lacked engaging spatial formats and narrative clarity.
-                    Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract
-                    scientific concepts. These insights informed the design rationale and validated the project's direction.
-                  </p>
+            {/* Research (Whispers와 동일 타이틀/카드 스케일) */}
+            <section id="research" aria-labelledby="research-title" className="mb-20">
+              <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">
+                Research
+              </h2>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">73%</p>
+                  <p className="text-sm text-gray-400 mt-2">found displays lacked spatial clarity</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">76%</p>
+                  <p className="text-sm text-gray-400 mt-2">preferred immersive VR-based learning</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">306</p>
+                  <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-2xl md:text-xl font-light text-white">Validation</p>
+                  <p className="text-sm text-gray-400 mt-2">Supports VR-first design direction</p>
                 </div>
               </div>
-            </div>
 
-            {/* Tools & Roles Table */}
-            <div className="mb-20 md:mb-20 mt-10">
+              <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
+                <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
+                <p className="mt-8 text-sm text-gray-400">
+                  An online/offline survey (n=306) indicated strong interest in immersive educational formats and highlighted limits in
+                  conventional science exhibition formats. These results validated a narrative-led VR design strategy.
+                </p>
+              </details>
+            </section>
+
+            {/* Process (Whispers와 동일 스타일) */}
+            <section id="process" className="rounded-lg bg-black">
+              <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">01 Ideation</h3>
+                  <p className="text-gray-400 text-sm">Brainstorming</p>
+                  <p className="text-gray-400 text-sm">Concept sketches</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">02 Analysis</h3>
+                  <p className="text-gray-400 text-sm">Context & precedents</p>
+                  <p className="text-gray-400 text-sm">Narrative flow</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">03 Development</h3>
+                  <p className="text-gray-400 text-sm">World/spatial/level design</p>
+                  <p className="text-gray-400 text-sm">Video development</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Tools & Roles (Whispers와 동일 스케일) */}
+            <div className="mb-20 md:mb-20">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Tools & Roles</h2>
               <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
                 <table className="w-full text-left text-sm text-gray-400">
@@ -328,210 +324,128 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Worldbuilding */}
+            {/* Worldbuilding / Narrative / Emotional / Spatial (본문 타이포 통일) */}
             <div className="rounded-lg bg-transparent">
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2
-                  className="text-xl md:text-2xl font-light min-w-[200px] text-gray-300 whitespace-nowrap mb-4 md:mb-0"
-                  data-lovable-editable="true"
-                >
+                <h2 className="text-xl md:text-xl font-light min-w-[200px] text-gray-300 whitespace-nowrap mb-4 md:mb-0">
                   Worldbuilding
                 </h2>
-                <p
-                  className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light"
-                  data-lovable-editable="true"
-                >
+                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
                   Set on a fictional alien planet (A233) inhabited by an advanced civilisation. The player, as an interstellar
                   explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species
-                  were assumed to understand the same laws of nature. The narrative explored how universal science transcended
-                  cultural boundaries.
+                  were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural
+                  boundaries.
                 </p>
               </div>
-            </div>
 
-            {/* Narrative Arc */}
-            <div className="rounded-lg bg-transparent">
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2
-                  className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0"
-                  data-lovable-editable="true"
-                >
+                <h2 className="text-xl md:text-xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
                   Narrative Arc
                 </h2>
-                <p
-                  className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light"
-                  data-lovable-editable="true"
-                >
+                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
                   The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on
-                  Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal
-                  scientific principle. The order of progression was intentionally designed to mirror an epistemological
-                  transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and
-                  disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic
-                  language.
+                  Planet A233, the user journeyed through chambers tied to universal scientific principles, progressing from perception
+                  to comprehension and recognition of science as a shared symbolic language.
                 </p>
               </div>
 
-              {/* Emotional Logic */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2
-                  className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0"
-                  data-lovable-editable="true"
-                >
+                <h2 className="text-xl md:text-xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
                   Emotional Logic
                 </h2>
-                <p
-                  className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light"
-                  data-lovable-editable="true"
-                >
-                  The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent
-                  emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity
-                  and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the
-                  experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the
-                  scientific themes, reinforcing understanding by making abstract concepts experientially felt.
+                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
+                  Gravity instils awe and tension; Light encourages curiosity; Life evokes empathy; Time closes with reflective
+                  calm—an emotional rhythm reinforcing the scientific themes.
                 </p>
               </div>
-            </div>
 
-            {/* Spatial Design */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 mb-40">
-              <h2
-                className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0"
-                data-lovable-editable="true"
-              >
-                Spatial Design
-              </h2>
-              <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light"
-                data-lovable-editable="true"
-              >
-                Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects,
-                and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted
-                scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting
-                architecture and transitions evoked temporal flow and cosmic cycles.
-              </p>
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 mb-40">
+                <h2 className="text-xl md:text-xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
+                  Spatial Design
+                </h2>
+                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
+                  Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic
+                  growth/temporal transitions) to translate abstraction into felt experience.
+                </p>
+              </div>
             </div>
 
             {/* Evaluation Summary */}
-            <h2 className="text-xl md:text-2xl font-light text-gray-300 mt-16 md:mt-32" data-lovable-editable="true">
-              Final Outcome - Evaluation Summary
-            </h2>
-            <p
-              className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light mt-6 md:mt-8"
-              data-lovable-editable="true"
-            >
-              The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational
-              backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific
-              concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and
-              time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science
-              after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning
-              effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting
-              the need for further design refinement and user adaptation strategies.
+            <h2 className="text-xl md:text-xl font-light text-gray-300 mt-16 md:mt-32">Final Outcome - Evaluation Summary</h2>
+            <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light mt-6 md:mt-8">
+              Mixed-method study (n=30): 67% said VR aided understanding; equal share preferred it over traditional exhibitions. Gravity
+              (38%) and Time (31%) most impactful. 67% reported increased interest in science; learning effectiveness split—30%
+              effective, 35% neutral, 35% ineffective—suggesting room for refinement.
             </p>
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
 
-            {/* World Image Section */}
+            {/* World / DNA / Video dev 이미지 (alt 포함) */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <img
                   alt="World overview"
-                  data-lovable-editable="true"
                   className="w-full h-full object-contain"
                   src="/lovable-uploads/c300d72e-b010-4ff6-8648-016e4513b308.png"
                 />
               </AspectRatio>
               <img
                 alt="World secondary"
-                data-lovable-editable="true"
                 className="w-full h-auto mt-20 md:mt-40"
                 src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
               />
             </div>
 
-            {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
 
-            {/* DNA Image */}
             <div className="w-full">
               <img
                 className="w-full h-auto"
-                data-lovable-editable="true"
                 src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png"
                 alt="Narrative DNA graphic"
               />
             </div>
 
-            {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
 
-            {/* Video development image + text */}
             <div className="w-full">
               <img
                 className="w-full h-auto"
-                data-lovable-editable="true"
                 src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png"
                 alt="Video development board"
               />
             </div>
 
-            <div className="rounded-lg bg-transparent">
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2
-                  className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0"
-                  data-lovable-editable="true"
-                >
-                  Video Development
-                </h2>
-                <p
-                  className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light"
-                  data-lovable-editable="true"
-                >
-                  Short video sequences functioned as interludes, each exploring a scientific theme (gravity, light, life, or time)
-                  through surreal, symbolic visuals. These videos presented abstract interpretations of cosmic phenomena, expanding the
-                  narrative and providing an emotional entry point to complex ideas.
-                </p>
-              </div>
-            </div>
-
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
             {/* Level Design */}
+            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
             <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300" data-lovable-editable="true">
-                Level Design
-              </h2>
+              <h2 className="text-xl md:text-xl font-light text-gray-300">Level Design</h2>
               <div className="w-full mb-6 md:mb-8">
                 <img
                   className="w-full h-auto"
-                  data-lovable-editable="true"
                   src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png"
                   alt="Level design sheet 1"
                 />
                 <img
                   className="w-full h-auto"
-                  data-lovable-editable="true"
                   src="/lovable-uploads/de89b92f-0e81-40b4-9c85-3c26d7bce4dd.png"
                   alt="Level design sheet 2"
                 />
               </div>
             </div>
 
-            {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
 
-            {/* Floor Image */}
             <div className="w-full mb-6 md:mb-8">
               <img
                 className="w-full h-auto"
-                data-lovable-editable="true"
                 src="/lovable-uploads/web1920-Space Museum_FLOOR1.png"
                 alt="Floor plan"
               />
             </div>
 
-            {/* Spatial Design - Slider 1 */}
+            {/* Spatial Slider 1 (옵션) */}
             <div className="w-full mb-20 md:mb-40">
               <Carousel className="w-full bg-black" setApi={setApi} opts={{ loop: true }}>
                 <CarouselContent>
@@ -539,11 +453,7 @@ const InvisibleProjectDetail = () => {
                     <CarouselItem key={index}>
                       <div className="relative w-full">
                         <AspectRatio ratio={16 / 9} className="w-full">
-                          <img
-                            src={image}
-                            alt={`Spatial slider ${index + 1}`}
-                            className="w-full h-full object-contain"
-                          />
+                          <img src={image} alt={`Spatial slider ${index + 1}`} className="w-full h-full object-contain" />
                         </AspectRatio>
                       </div>
                     </CarouselItem>
@@ -553,7 +463,6 @@ const InvisibleProjectDetail = () => {
                 <CarouselNext className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-8 h-8 md:w-12 md:h-12" />
               </Carousel>
 
-              {/* bar indicators */}
               <div className="flex justify-center space-x-2 mt-4 md:mt-6">
                 {firstSliderImages.map((_, index) => (
                   <div
@@ -567,77 +476,43 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Line */}
+            {/* Full Playing Video (고정 id) */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
-            {/* Full Playing Video (fixed id) */}
-            <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8" data-lovable-editable="true">
-              Full Playing Video
-            </h2>
+            <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Full Playing Video</h2>
             <div className="mb-6 md:mb-8">
               <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
-                <YouTube videoId="KT0Cwy9s5n8" opts={ytOpts} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                <YouTube videoId="KT0Cwy9s5n8" opts={videoOpts} className="w-full h-full" />
               </AspectRatio>
             </div>
 
-            {/* Line */}
+            {/* Post-Project / The Ocean (2025) */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
-            {/* Post-Project Expansion & The Ocean (2025) */}
             <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300" data-lovable-editable="true">
-                Post-Project Expansion
-              </h2>
-              <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed mb-20 md:mb-40 mt-6 md:mt-8 text-gray-400 font-light"
-                data-lovable-editable="true"
-              >
-                To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users
-                input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced
-                educational engagement and thematic depth within the Life Chamber.
+              <h2 className="text-xl md:text-xl font-light text-gray-300">Post-Project Expansion</h2>
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-20 md:mb-40 mt-6 md:mt-8 text-gray-400 font-light">
+                To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input
+                variables that influenced how virtual organisms adapted within a bounded environment.
               </p>
 
-              <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300" data-lovable-editable="true">
-                The Ocean (2025)
-              </h2>
-              <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 text-gray-400 font-light"
-                data-lovable-editable="true"
-              >
+              <h2 className="text-xl md:text-xl font-light mb-6 md:mb-8 text-gray-300">The Ocean (2025)</h2>
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
                 Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive
-                simulation. Users entered a liquid-metal (like virtual sea, where their input) commands and data generated living
-                forms. These began as spheres and evolved through self-replication, mutation, and environmental adaptation. Each of the
-                four zones (OCEAN A–D) responded differently depending on user behaviour. Some environments expanded exponentially
-                through interaction, while others diminished due to inactivity. Over time, this created a dynamic ecology shaped by user
-                engagement and emergent logic.
+                simulation...
               </p>
-              <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 text-gray-400 font-light"
-                data-lovable-editable="true"
-              >
-                The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they
-                proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial
-                compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary
-                patterns found in Earth's primitive seas.
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
+                The virtual creatures formed clusters akin to coral colonies, restructuring environments over time.
               </p>
-              <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 text-gray-400 font-light"
-                data-lovable-editable="true"
-              >
-                The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a
-                new spatial metaphor for understanding complexity, mutation, and environmental feedback.
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
+                The exponential growth demonstrated how input-based ecosystems could reflect evolutionary processes.
               </p>
 
-              {/* images */}
               <div className="w-full mb-6 md:mb-8">
                 <img
                   className="w-full h-auto"
-                  data-lovable-editable="true"
                   src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png"
                   alt="The Ocean - composition 1"
                 />
                 <img
-                  data-lovable-editable="true"
                   src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png"
                   className="w-full h-auto mb-20 md:mb-40"
                   alt="The Ocean - composition 2"
@@ -645,22 +520,11 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* more images */}
+            {/* 추가 이미지 묶음 */}
             <div className="w-full">
+              <img className="w-full h-auto" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" alt="Ocean image 1" />
+              <img className="w-full h-auto" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" alt="Ocean image 2" />
               <img
-                className="w-full h-auto"
-                data-lovable-editable="true"
-                src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png"
-                alt="Ocean image 1"
-              />
-              <img
-                className="w-full h-auto"
-                data-lovable-editable="true"
-                src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png"
-                alt="Ocean image 2"
-              />
-              <img
-                data-lovable-editable="true"
                 src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png"
                 className="w-full h-auto mb-20 md:mb-40"
                 alt="Ocean image 3"
@@ -669,36 +533,24 @@ const InvisibleProjectDetail = () => {
 
             <div className="w-full">
               <img
-                data-lovable-editable="true"
                 src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png"
                 className="w-full h-auto mb-20 md:mb-40"
                 alt="Ocean image 4"
               />
               <div className="rounded-lg bg-transparent">
-                <p
-                  data-lovable-editable="true"
-                  className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light mb-20 md:mb-40"
-                >
-                  The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they
-                  proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial
-                  compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing
-                  evolutionary patterns found in Earth's primitive seas.
+                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light mb-20 md:mb-40">
+                  The virtual creatures (inspired by early organic matter) formed clusters akin to coral colonies...
                 </p>
               </div>
 
               <div className="w-full">
                 <img
-                  data-lovable-editable="true"
                   src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png"
                   className="w-full h-auto mb-20 md:mb-40"
                   alt="Ocean image 5"
                 />
-                <p
-                  data-lovable-editable="true"
-                  className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light mb-20 md:mb-40"
-                >
-                  The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering
-                  a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
+                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light mb-20 md:mb-40">
+                  The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes...
                 </p>
               </div>
             </div>
@@ -734,9 +586,9 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Remaining dynamic images (from data) */}
+            {/* 데이터 이미지 루프 (Whispers에는 없지만 하단 컨테이너 스케일 통일) */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[200px]">
-              {project.images.slice(1).map((image: string, index: number) => (
+              {(project.images || []).slice(1).map((image: string, index: number) => (
                 <div key={index + 1} className="pb-20 md:pb-40">
                   <div className="w-full">
                     <AspectRatio ratio={16 / 9} className="w-full">
@@ -753,7 +605,7 @@ const InvisibleProjectDetail = () => {
           </div>
         </section>
 
-        {/* Navigation Section */}
+        {/* Navigation Section (동일 스타일) */}
         <div className="pb-40 md:pb-60 flex items-center justify-center">
           <Link
             to="/project/learn"
