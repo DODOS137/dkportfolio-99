@@ -569,7 +569,7 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+   
 
       {/*Navigation Section*/}
       <div className="pb-40 md:pb-60 flex items-center justify-center">
