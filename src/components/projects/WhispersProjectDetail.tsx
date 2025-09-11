@@ -61,8 +61,8 @@ const WhispersProjectDetail = () => {
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
           {/* Project Description */}
-          <div className="rounded-lg bg-transparent mt-20 md:mt-40">
-            <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
+          <div className="rounded-lg bg-transparent mt-20 md:mt-20">
+            <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light">
               {project.title}
             </h2>
             <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
@@ -91,7 +91,7 @@ const WhispersProjectDetail = () => {
 
          {/* Client Section */}
           <div className="rounded-lg bg-transparent">
-            <div className="mb-8 mt-20 md:mt-40"> 
+            <div className="mb-8 mt-20 md:mt-20"> 
               <h2 className="text-xl md:text-xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Client</h2>
               <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
                 UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
@@ -101,7 +101,7 @@ const WhispersProjectDetail = () => {
         
 
           {/* YouTube Video Section */}
-          <div className="my-20 md:my-40">
+          <div className="my-40 md:my-40">
             <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
               <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" />
             </AspectRatio>
@@ -425,7 +425,7 @@ const WhispersProjectDetail = () => {
           </div>  
 
            {/* Second YouTube Video Section */}
-            <div className="my-20 md:my-20 relative">
+            <div className="my-40 md:my-40 relative">
             <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
              {/* 유튜브 플레이어 */}
             <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
