@@ -17,7 +17,7 @@ const InvisibleProjectDetail = () => {
   const project = invisibleProjectData;
   const heroRef = useScrollAnimation<HTMLDivElement>();
 
-  // YouTube 옵션 (Whispers와 동일 스펙)
+  // Whispers와 동일 스펙의 YouTube 옵션
   const videoOpts = {
     height: "100%",
     width: "100%",
@@ -77,23 +77,23 @@ const InvisibleProjectDetail = () => {
               heroRef.isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
+            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
               {project.heroTitle}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
+            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="true">
               Scientific Virtual Reality Content
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-              <span>{project.heroYear}</span>
+              <span data-lovable-editable="true">{project.heroYear}</span>
               <span>•</span>
-              <span>{project.heroClient}</span>
+              <span data-lovable-editable="true">{project.heroClient}</span>
               <span>•</span>
-              <span>{project.heroRole}</span>
+              <span data-lovable-editable="true">{project.heroRole}</span>
             </div>
           </div>
         </section>
 
-        {/* Main Content (구조/타이포 Whispers 정렬) */}
+        {/* Main Content (Whispers와 동일 구조/타이포) */}
         <section>
           {/* First Image */}
           <div className="max-w-[1540px] mx-auto z-10">
@@ -102,6 +102,7 @@ const InvisibleProjectDetail = () => {
                 src={project.images?.[0]}
                 alt={`${project.title} - Image 1`}
                 className="w-full h-full object-contain"
+                data-lovable-editable="true"
               />
             </AspectRatio>
           </div>
@@ -110,10 +111,13 @@ const InvisibleProjectDetail = () => {
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
             {/* Project Description */}
             <div className="rounded-lg bg-transparent mt-20 md:mt-20">
-              <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light">
+              <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light" data-lovable-editable="true">
                 {project.title}
               </h2>
-              <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
+              <p
+                className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light"
+                data-lovable-editable="true"
+              >
                 {project.mainDescription}
               </p>
 
@@ -137,7 +141,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Client (Whispers에 맞춘 구성/타이틀 크기) */}
+            {/* Client */}
             <div className="rounded-lg bg-transparent">
               <div className="mb-8 mt-20 md:mt-20">
                 <h2 className="text-xl md:text-xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Client</h2>
@@ -147,7 +151,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* YouTube (조건부 / 동일 스타일) */}
+            {/* YouTube (조건부, 동일 스타일) */}
             {project.videoId && (
               <div className="my-40 md:my-40">
                 <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
@@ -159,7 +163,7 @@ const InvisibleProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
 
-            {/* Summary 섹션 (Whispers와 동일한 3-컬럼 카드) */}
+            {/* Summary */}
             <section aria-labelledby="sum-title" className="mt-8">
               <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
                 Summary
@@ -197,7 +201,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </section>
 
-            {/* Challenge Full text (details) */}
+            {/* Full text (details) */}
             <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
               <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
               <div className="px-4 pb-4 pt-2 space-y-8">
@@ -225,7 +229,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </details>
 
-            {/* Research (Whispers와 동일 타이틀/카드 스케일) */}
+            {/* Research */}
             <section id="research" aria-labelledby="research-title" className="mb-20">
               <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">
                 Research
@@ -259,7 +263,7 @@ const InvisibleProjectDetail = () => {
               </details>
             </section>
 
-            {/* Process (Whispers와 동일 스타일) */}
+            {/* Process */}
             <section id="process" className="rounded-lg bg-black">
               <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
@@ -281,7 +285,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </section>
 
-            {/* Tools & Roles (Whispers와 동일 스케일) */}
+            {/* Tools & Roles */}
             <div className="mb-20 md:mb-20">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Tools & Roles</h2>
               <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
@@ -324,7 +328,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Worldbuilding / Narrative / Emotional / Spatial (본문 타이포 통일) */}
+            {/* 월드/내러티브/감정/공간 디자인 텍스트 (타이포 통일) */}
             <div className="rounded-lg bg-transparent">
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
                 <h2 className="text-xl md:text-xl font-light min-w-[200px] text-gray-300 whitespace-nowrap mb-4 md:mb-0">
@@ -381,7 +385,7 @@ const InvisibleProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
 
-            {/* World / DNA / Video dev 이미지 (alt 포함) */}
+            {/* World / DNA / Video dev 이미지 */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <img
@@ -445,7 +449,7 @@ const InvisibleProjectDetail = () => {
               />
             </div>
 
-            {/* Spatial Slider 1 (옵션) */}
+            {/* Spatial Slider 1 */}
             <div className="w-full mb-20 md:mb-40">
               <Carousel className="w-full bg-black" setApi={setApi} opts={{ loop: true }}>
                 <CarouselContent>
@@ -476,7 +480,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Full Playing Video (고정 id) */}
+            {/* Full Playing Video */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
             <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Full Playing Video</h2>
             <div className="mb-6 md:mb-8">
@@ -586,7 +590,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* 데이터 이미지 루프 (Whispers에는 없지만 하단 컨테이너 스케일 통일) */}
+            {/* 데이터 이미지 루프 (있을 때만) */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[200px]">
               {(project.images || []).slice(1).map((image: string, index: number) => (
                 <div key={index + 1} className="pb-20 md:pb-40">
@@ -605,7 +609,7 @@ const InvisibleProjectDetail = () => {
           </div>
         </section>
 
-        {/* Navigation Section (동일 스타일) */}
+        {/* Navigation Section */}
         <div className="pb-40 md:pb-60 flex items-center justify-center">
           <Link
             to="/project/learn"
@@ -616,6 +620,7 @@ const InvisibleProjectDetail = () => {
           </Link>
         </div>
 
+        {/* Back to top (수정된 컴포넌트) */}
         <BackToTopButton />
       </ProjectLayout>
     </ScrollArea>
