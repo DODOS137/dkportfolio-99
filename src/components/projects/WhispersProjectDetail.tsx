@@ -426,7 +426,7 @@ const WhispersProjectDetail = () => {
 
            {/* Second YouTube Video Section */}
             <div className="my-20 md:my-40 relative">
-            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500 overflow-hidden">
+            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
              {/* 유튜브 플레이어 */}
             <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
            </AspectRatio>
