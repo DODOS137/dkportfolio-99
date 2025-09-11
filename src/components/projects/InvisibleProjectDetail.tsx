@@ -17,19 +17,12 @@ const InvisibleProjectDetail = () => {
   const project = invisibleProjectData;
   const heroRef = useScrollAnimation<HTMLDivElement>();
 
-  // Whispers와 동일 스펙의 YouTube 옵션
   const videoOpts = {
     height: "100%",
     width: "100%",
-    playerVars: {
-      autoplay: 0,
-      controls: 1,
-      modestbranding: 1,
-      rel: 0,
-    },
+    playerVars: { autoplay: 0, controls: 1, modestbranding: 1, rel: 0 },
   };
 
-  // 슬라이더 이미지
   const firstSliderImages = [
     "/lovable-uploads/b3851ebc-35db-4397-8f5e-e5286275ac0d.png",
     "/lovable-uploads/8f303355-f7f8-417f-a4e4-fa9109e312db.png",
@@ -45,7 +38,6 @@ const InvisibleProjectDetail = () => {
     "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png",
   ];
 
-  // Carousel 상태
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [secondApi, setSecondApi] = useState<CarouselApi | null>(null);
@@ -66,10 +58,9 @@ const InvisibleProjectDetail = () => {
   return (
     <ScrollArea className="h-screen w-screen overflow-auto">
       <ProjectLayout>
-        {/* Fixed Navigation */}
         <ProjectNavigation backText="Back to work" />
 
-        {/* Hero Section (Whispers와 동일 타이포) */}
+        {/* Hero */}
         <section className="h-screen flex items-center justify-center relative overflow-hidden">
           <div
             ref={heroRef.ref}
@@ -77,23 +68,19 @@ const InvisibleProjectDetail = () => {
               heroRef.isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider" data-lovable-editable="true">
-              {project.heroTitle}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide" data-lovable-editable="true">
-              Scientific Virtual Reality Content
-            </p>
+            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">{project.heroTitle}</h1>
+            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">Scientific Virtual Reality Content</p>
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-              <span data-lovable-editable="true">{project.heroYear}</span>
+              <span>{project.heroYear}</span>
               <span>•</span>
-              <span data-lovable-editable="true">{project.heroClient}</span>
+              <span>{project.heroClient}</span>
               <span>•</span>
-              <span data-lovable-editable="true">{project.heroRole}</span>
+              <span>{project.heroRole}</span>
             </div>
           </div>
         </section>
 
-        {/* Main Content (Whispers와 동일 구조/타이포) */}
+        {/* Main */}
         <section>
           {/* First Image */}
           <div className="max-w-[1540px] mx-auto z-10">
@@ -102,22 +89,16 @@ const InvisibleProjectDetail = () => {
                 src={project.images?.[0]}
                 alt={`${project.title} - Image 1`}
                 className="w-full h-full object-contain"
-                data-lovable-editable="true"
               />
             </AspectRatio>
           </div>
 
           {/* Shared Container */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
-            {/* Project Description */}
+            {/* Description */}
             <div className="rounded-lg bg-transparent mt-20 md:mt-20">
-              <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light" data-lovable-editable="true">
-                {project.title}
-              </h2>
-              <p
-                className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light"
-                data-lovable-editable="true"
-              >
+              <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light">{project.title}</h2>
+              <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
                 {project.mainDescription}
               </p>
 
@@ -151,7 +132,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* YouTube (조건부, 동일 스타일) */}
+            {/* Video */}
             {project.videoId && (
               <div className="my-40 md:my-40">
                 <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
@@ -168,7 +149,6 @@ const InvisibleProjectDetail = () => {
               <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
                 Summary
               </h2>
-
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
@@ -179,7 +159,6 @@ const InvisibleProjectDetail = () => {
                     <li>Need for experiential learning</li>
                   </ul>
                 </div>
-
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
@@ -189,7 +168,6 @@ const InvisibleProjectDetail = () => {
                     <li>Emotion-led comprehension</li>
                   </ul>
                 </div>
-
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
@@ -201,7 +179,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </section>
 
-            {/* Full text (details) */}
+            {/* Full text */}
             <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
               <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
               <div className="px-4 pb-4 pt-2 space-y-8">
@@ -231,10 +209,7 @@ const InvisibleProjectDetail = () => {
 
             {/* Research */}
             <section id="research" aria-labelledby="research-title" className="mb-20">
-              <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">
-                Research
-              </h2>
-
+              <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
                   <p className="text-3xl md:text-3xl font-light text-white">73%</p>
@@ -328,7 +303,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* 월드/내러티브/감정/공간 디자인 텍스트 (타이포 통일) */}
+            {/* Narrative/Spatial texts */}
             <div className="rounded-lg bg-transparent">
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
                 <h2 className="text-xl md:text-xl font-light min-w-[200px] text-gray-300 whitespace-nowrap mb-4 md:mb-0">
@@ -382,10 +357,8 @@ const InvisibleProjectDetail = () => {
               effective, 35% neutral, 35% ineffective—suggesting room for refinement.
             </p>
 
-            {/* Line */}
+            {/* Lines + images/slider... (생략 없이 유지) */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
-            {/* World / DNA / Video dev 이미지 */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <img
@@ -402,7 +375,6 @@ const InvisibleProjectDetail = () => {
             </div>
 
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
             <div className="w-full">
               <img
                 className="w-full h-auto"
@@ -412,7 +384,6 @@ const InvisibleProjectDetail = () => {
             </div>
 
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
             <div className="w-full">
               <img
                 className="w-full h-auto"
@@ -421,35 +392,21 @@ const InvisibleProjectDetail = () => {
               />
             </div>
 
-            {/* Level Design */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
             <div className="rounded-lg bg-transparent">
               <h2 className="text-xl md:text-xl font-light text-gray-300">Level Design</h2>
               <div className="w-full mb-6 md:mb-8">
-                <img
-                  className="w-full h-auto"
-                  src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png"
-                  alt="Level design sheet 1"
-                />
-                <img
-                  className="w-full h-auto"
-                  src="/lovable-uploads/de89b92f-0e81-40b4-9c85-3c26d7bce4dd.png"
-                  alt="Level design sheet 2"
-                />
+                <img className="w-full h-auto" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" alt="Level design 1" />
+                <img className="w-full h-auto" src="/lovable-uploads/de89b92f-0e81-40b4-9c85-3c26d7bce4dd.png" alt="Level design 2" />
               </div>
             </div>
 
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-
             <div className="w-full mb-6 md:mb-8">
-              <img
-                className="w-full h-auto"
-                src="/lovable-uploads/web1920-Space Museum_FLOOR1.png"
-                alt="Floor plan"
-              />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_FLOOR1.png" alt="Floor plan" />
             </div>
 
-            {/* Spatial Slider 1 */}
+            {/* Slider 1 */}
             <div className="w-full mb-20 md:mb-40">
               <Carousel className="w-full bg-black" setApi={setApi} opts={{ loop: true }}>
                 <CarouselContent>
@@ -466,7 +423,6 @@ const InvisibleProjectDetail = () => {
                 <CarouselPrevious className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-8 h-8 md:w-12 md:h-12" />
                 <CarouselNext className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-8 h-8 md:w-12 md:h-12" />
               </Carousel>
-
               <div className="flex justify-center space-x-2 mt-4 md:mt-6">
                 {firstSliderImages.map((_, index) => (
                   <div
@@ -489,7 +445,7 @@ const InvisibleProjectDetail = () => {
               </AspectRatio>
             </div>
 
-            {/* Post-Project / The Ocean (2025) */}
+            {/* Post-Project */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
             <div className="rounded-lg bg-transparent">
               <h2 className="text-xl md:text-xl font-light text-gray-300">Post-Project Expansion</h2>
@@ -511,20 +467,16 @@ const InvisibleProjectDetail = () => {
               </p>
 
               <div className="w-full mb-6 md:mb-8">
-                <img
-                  className="w-full h-auto"
-                  src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png"
-                  alt="The Ocean - composition 1"
-                />
+                <img className="w-full h-auto" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" alt="The Ocean 1" />
                 <img
                   src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png"
                   className="w-full h-auto mb-20 md:mb-40"
-                  alt="The Ocean - composition 2"
+                  alt="The Ocean 2"
                 />
               </div>
             </div>
 
-            {/* 추가 이미지 묶음 */}
+            {/* extra images */}
             <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" alt="Ocean image 1" />
               <img className="w-full h-auto" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" alt="Ocean image 2" />
@@ -559,7 +511,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Second Slider */}
+            {/* Slider 2 */}
             <div className="w-full mb-20 md:mb-40">
               <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{ loop: true }}>
                 <CarouselContent>
@@ -576,7 +528,6 @@ const InvisibleProjectDetail = () => {
                 <CarouselPrevious className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-8 h-8 md:w-12 md:h-12" />
                 <CarouselNext className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-8 h-8 md:w-12 md:h-12" />
               </Carousel>
-
               <div className="flex justify-center space-x-2 mt-4 md:mt-6">
                 {secondSliderImages.map((_, index) => (
                   <div
@@ -590,7 +541,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* 데이터 이미지 루프 (있을 때만) */}
+            {/* data images (optional) */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[200px]">
               {(project.images || []).slice(1).map((image: string, index: number) => (
                 <div key={index + 1} className="pb-20 md:pb-40">
@@ -609,7 +560,7 @@ const InvisibleProjectDetail = () => {
           </div>
         </section>
 
-        {/* Navigation Section */}
+        {/* Navigation */}
         <div className="pb-40 md:pb-60 flex items-center justify-center">
           <Link
             to="/project/learn"
@@ -620,7 +571,7 @@ const InvisibleProjectDetail = () => {
           </Link>
         </div>
 
-        {/* Back to top (수정된 컴포넌트) */}
+        {/* Back to top */}
         <BackToTopButton />
       </ProjectLayout>
     </ScrollArea>
