@@ -102,7 +102,7 @@ const WhispersProjectDetail = () => {
 
           {/* YouTube Video Section */}
           <div className="my-20 md:my-40">
-            <AspectRatio ratio={16 / 9}>
+            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
               <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" />
             </AspectRatio>
           </div>          
@@ -426,7 +426,7 @@ const WhispersProjectDetail = () => {
 
            {/* Second YouTube Video Section */}
             <div className="my-20 md:my-40 relative">
-            <AspectRatio ratio={16 / 9}>
+            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500 overflow-hidden">
              {/* 유튜브 플레이어 */}
             <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
            </AspectRatio>
