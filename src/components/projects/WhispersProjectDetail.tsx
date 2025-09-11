@@ -401,7 +401,7 @@ const WhispersProjectDetail = () => {
    
           {/*Poster Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 13-26.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 13-26.png" />
           </div>     
 
 
@@ -411,21 +411,21 @@ const WhispersProjectDetail = () => {
 
           {/*Graphic Design Image1-1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom-27.png" />
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom-27.png" />
           </div>   
 
           {/*Graphic Design Image1-2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom-28.png" />
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom-28.png" />
           </div>   
 
            {/*Graphic Design Image1-3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-5 md:mb-5" src="/lovable-uploads/web1920-whispers from the bottom-29.png" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/web1920-whispers from the bottom-29.png" />
           </div>  
 
            {/* Second YouTube Video Section */}
-            <div className="my-20 md:my-40 relative">
+            <div className="my-20 md:my-20 relative">
             <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
              {/* 유튜브 플레이어 */}
             <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
