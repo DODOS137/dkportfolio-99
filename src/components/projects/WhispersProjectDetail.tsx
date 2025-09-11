@@ -429,15 +429,13 @@ const WhispersProjectDetail = () => {
             <AspectRatio ratio={16 / 9}>
              {/* 유튜브 플레이어 */}
             <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" />
-            {/* 위/아래만 덮는 박스 */}
-           <div className="absolute top-0 left-0 w-full h-20 bg-black pointer-events-none"></div>
-           <div className="absolute bottom-0 left-0 w-full h-20 bg-black pointer-events-none"></div>
            </AspectRatio>
            </div>
 
 
           {/*Line*/} 
-          <div className="w-full h-px mt-5 mb-20 md:mt-5 mb-20 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>  
+          
 
           {/*Product Design Image1*/}        
           <div className="w-full">
@@ -449,7 +447,7 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10.png" />
           </div>  
 
-8
+
 
 
           
