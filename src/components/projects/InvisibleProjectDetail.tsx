@@ -91,7 +91,7 @@ const InvisibleProjectDetail = () => {
           <div className="">
             <div className="rounded-lg bg-transparent ">
               <h2 data-lovable-editable="true" className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">{project.title}</h2>
-              <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">{project.mainDescription}</p>
+              <p data-lovable-editable="true" className="text-base md:text-base lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">{project.mainDescription}</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 text-sm">
                 <div>
                   <h3 className="text-gray-400 uppercase tracking-wider mb-2" data-lovable-editable="true">project type</h3>
@@ -115,13 +115,9 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-
-         {/* YouTube Video Player */}
+          {/* YouTube Video Player */}
           {project.videoId && <div className="">
-              <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
+              <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-gray500/50">
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <YouTube videoId={project.videoId} opts={{
                 width: '100%',
@@ -147,6 +143,12 @@ const InvisibleProjectDetail = () => {
                 </AspectRatio>
               </div>
             </div>}
+
+
+           {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+          
 
           {/* Approach & Development */}
           <div className="">
@@ -303,6 +305,29 @@ const InvisibleProjectDetail = () => {
                 </p>
               </div>
             </div>
+
+            {/* Spatial Design Text */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 mb-40">
+                <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
+                  Spatial Design
+                </h2>
+                <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
+                  Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
+                </p>
+              </div>    
+
+             {/* Evaluation Summary Text */}
+              <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 mt-16 md:mt-32">
+                Final Outcome - Evaluation Summary
+              </h2>
+             {/* Description */}
+              <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light mt-6 md:mt-8"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
+            </div>
+          </div>
+
+
+
+          
           
 
           {/*Line*/} 
@@ -385,15 +410,7 @@ const InvisibleProjectDetail = () => {
               </div>          
  
           
-          {/* Spatial Design */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 mb-40">
-                <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
-                  Spatial Design
-                </h2>
-                <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
-                  Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
-                </p>
-              </div>         
+     
           
           {/* Spatial Design + Image Section */}
           <div className="">
@@ -459,15 +476,7 @@ const InvisibleProjectDetail = () => {
                 </div>
               </div>
 
-              {/* Evaluation Summary */}
-              <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light text-gray-300 mt-16 md:mt-32">
-                Final Outcome - Evaluation Summary
-              </h2>
-
-              {/* Description */}
-              <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light mt-6 md:mt-8"> The project was evaluated through a mixed-method study with 30 participants across varied age groups and educational backgrounds. Survey findings revealed that 67% found the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive quality. Gravity (38%) and time (31%) were rated the most impactful scientific themes. Additionally, 67% reported increased interest in science after the VR experience, while 47% expressed excitement about exploring unfamiliar virtual spaces. However, learning effectiveness in such environments was more divided—30% found it effective, 35% neutral, and 35% ineffective—highlighting the need for further design refinement and user adaptation strategies.</p>
-            </div>
-          </div>
+ 
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
@@ -480,15 +489,29 @@ const InvisibleProjectDetail = () => {
                 Post-Project Expansion
               </h2>
 
-              {/* Description */}
+              {/* Post-Projext Text */}
               <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed mb-20 md:mb-40 mt-6 md:mt-8 text-gray-400 font-light"> To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input variables that influenced how virtual organisms adapted within a bounded environment. This dynamic system enhanced educational engagement and thematic depth within the Life Chamber.</p>
 
               <h2 data-lovable-editable="true" className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300">
                 The Ocean (2025)
               </h2>
-              {/* Description */}
+              {/* Description Text1 */}
               <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive simulation. Users entered a liquid-metal (like virtual sea, where their input) commands and data generated living forms. These began as spheres and evolved through self-replication, mutation, and environmental adaptation. Each of the four zones (OCEAN A–D) responded differently depending on user behaviour. Some environments expanded exponentially through interaction, while others diminished due to inactivity. Over time, this created a dynamic ecology shaped by user engagement and emergent logic.</p>
 
+              {/* Description Text2 */}
+              <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
+                The virtual creatures (visually inspired by early organic matter) formed clusters akin to coral colonies. As they proliferated, they merged, divided, and restructured their environments, resulting in uniquely generated spatial compositions across time. The system visualised life as a procedural and decentralised phenomenon, echoing evolutionary patterns found in Earth's primitive seas.
+              </p>
+
+               {/* Description Text3 */}
+              <p data-lovable-editable="true" className="text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
+               The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes, offering a new spatial metaphor for understanding complexity, mutation, and environmental feedback.
+              </p>
+            
+
+
+              
+              
               {/* 5th & 5-1 image */}
               <div className="w-full mb-6 md:mb-8">
                 <img className="w-full h-auto" data-lovable-editable="true" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" />
