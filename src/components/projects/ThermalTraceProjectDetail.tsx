@@ -122,22 +122,17 @@ const ThermalTraceProjectDetail = () => {
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                  The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds
+                  This project reimagines the runway as a perceptual landscape rather than a stage. Boundaries between model and audience dissolve, with physical presence, distance, and body heat driving interaction. Mixed reality overlays merge matter and perception, expanding fashion into an experience to be lived rather than seen
                   </p>
                 </div>
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                  Four universal scientific themes—gravity, light, life, and time—were selected as the foundation of the exhibition. Each theme was spatially embodied in a dedicated immersive environment, combining abstraction with sensory cues.
+                  Fashion is reframed as a medium to be discovered, not displayed. Through thermal detection and environmental response, audiences become thermal explorers, uncovering hidden presence. XR terrains—forests, islands, coastal zones—react in real time, testing visibility and concealment. The strategy layers thermal interfaces, responsive environments, and mixed reality to build a flexible, scalable exhibition format.
                   </p>
                 </div>
-                  <div>
-                  <h3 className="text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
-                  <p className="text-sm leading-relaxed font-light text-gray-400">
-                    A mixed-method study with 30 participants across varied age groups and educational backgrounds evaluated the project’s effectiveness. Findings showed that 67% considered the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive qualities. Among the scientific themes, gravity (38%) and time (31%) were rated as most impactful. Additionally, 67% reported increased interest in science after the experience, and 47% expressed excitement about exploring unfamiliar virtual spaces. However, assessments of learning effectiveness were more divided: 30% found it effective, 35% neutral, and 35% ineffective. These results suggest strong potential for immersive design in science education, while also indicating the need for further refinement and adaptive learning strategies.
-                  </p>
-                </div>
-              </div>
+                 
+               </div>
             </details>
 
           {/* Research */}
@@ -145,20 +140,20 @@ const ThermalTraceProjectDetail = () => {
               <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">73%</p>
-                  <p className="text-sm text-gray-400 mt-2">found displays lacked spatial clarity</p>
+                  <p className="text-3xl md:text-3xl font-light text-white">78%</p>
+                  <p className="text-sm text-gray-400 mt-2">call for experiential formats</p>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">76%</p>
-                  <p className="text-sm text-gray-400 mt-2">preferred immersive VR-based learning</p>
+                  <p className="text-3xl md:text-3xl font-light text-white">40%</p>
+                  <p className="text-sm text-gray-400 mt-2">fashion designers / industry</p>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">306</p>
+                  <p className="text-3xl md:text-3xl font-light text-white">56</p>
                   <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
                   <p className="text-2xl md:text-xl font-light text-white">Immersion Demand</p>
-                  <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
+                  <p className="text-sm text-gray-400 mt-2">beyond conventional runway formats</p>
                 </div>
               </div>
 
@@ -296,13 +291,6 @@ const ThermalTraceProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
  
-
-
-
-          {/* Line */} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-
 
           {/* Art Works Images */}
 
