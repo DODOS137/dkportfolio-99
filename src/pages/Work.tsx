@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [{
   id: "1",
   title: "Whispers from the Bottom",
-  slug: "project-4",
+  slug: "Whispers from the Bottom",
   description: "An Immersive Exhibition Platform Led by Sound",
   category: "Exhibition Design",
   imageUrl: "/lovable-uploads/89fa6153-0435-48f8-9cc7-7d4eacde6883.png"
@@ -40,14 +40,14 @@ const projects: Project[] = [{
 }, {
    id: "4",
   title: "Thermal Trace",
-  slug: "project-3",
+  slug: "Thermal Trace",
   description: "Reimagining the Fashion Show Through XR",
   category: "XR & Exhibition Design",
   imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
 }, {
   id: "5",
   title: "Seoul Nature history Museum",
-  slug: "project-5",
+  slug: "Seoul Nature history Museum",
   description: "Brand Renewal and Spatial Design",
   category: "Spatial Design",
   imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
