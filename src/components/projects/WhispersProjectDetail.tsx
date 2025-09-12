@@ -312,7 +312,7 @@ const WhispersProjectDetail = () => {
 </div>
 
    
-          
+  {/* Design Highlights */}       
     <section id="design" className="mt-10">
   <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
   <ul className="space-y-3 text-gray-300">
