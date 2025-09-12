@@ -216,8 +216,8 @@ const InvisibleProjectDetail = () => {
                   <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-2xl md:text-xl font-light text-white">Validation</p>
-                  <p className="text-sm text-gray-400 mt-2">Supports VR-first design direction</p>
+                  <p className="text-2xl md:text-xl font-light text-white">Immersion Demand</p>
+                  <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
                 </div>
               </div>
 
