@@ -188,6 +188,12 @@ const WhispersProjectDetail = () => {
         Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
       </p>
     </div>
+
+     <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.</p>
+    </div>
   </div>
 </details>
 
@@ -482,15 +488,7 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/a522c24b-08cb-42ad-85ad-aacfd97ff5bc.png" />
           </div>            
           
-          {/* Final Outcome */}
-          <div className="rounded-lg bg-transparent">
-            <div className="mb-40 md:mb-60"> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Final Outcome</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
-                The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </section>
       
