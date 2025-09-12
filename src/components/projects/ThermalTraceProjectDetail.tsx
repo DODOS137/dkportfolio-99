@@ -55,7 +55,7 @@ const ThermalTraceProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-20 md:mt-40">
-            <h2 className="text-xl md:text-xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+            <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
               Thermal Trace
             </h2>
             <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
@@ -88,26 +88,28 @@ const ThermalTraceProjectDetail = () => {
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>Conventional museum format</li>
-                    <li>Abstract scientific concepts inaccessible</li>
-                    <li>Weak emotional engagement</li>
+                    <li>Passive runway experience</li>
+                    <li>Rigid object/subject boundary limits narrative and agency</li>
+                    <li>Bias toward “seeing” hides non-visual presence and environment</li>
+                    <li>Stage treated as set, not as an interactive spatial interface</li>
                   </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>VR-spatial storytelling</li>
-                    <li>Four core themes: gravity · light · life · time</li>
-                    <li>Symbolic + immersive spatial design</li>
-                    <li>Intuitive interactions for accessibility</li>
+                    <li>Thermal interaction: proximity, body heat, environmental temperature (heat traces)</li>
+                    <li>Camouflage for models and viewers to dissolve boundaries</li>
+                    <li>Mixed-reality layering combining material space with ephemeral signals</li>
+                    <li>Discovery loop: sense → explore → reveal</li>
                   </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>67% found VR more effective</li>
-                    <li>Gravity & time most impactfu</li>
-                    <li>Higher curiosity, mixed learning outcomes</li>
+                    <li>Audience shifts from viewer to explorer</li>
+                    <li>Paradigm moves from spectacle to sensing</li>
+                    <li>Space functions as the interface, uniting visible/invisible cues</li>
+                    <li>New runway format that tests visibility, presence, and form</li>
                   </ul>
                 </div>
               </div>
@@ -120,8 +122,7 @@ const ThermalTraceProjectDetail = () => {
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                    The project focused on simplifying complex topics into accessible narratives and designing intuitive interaction models. Symbolism and abstraction were employed to visualise phenomena beyond everyday perception, while immersive environments provided an emotional framework to deepen connection and engagement. This design approach positioned science not only as knowledge to be learned, but as an experience to be felt.
-                  </p>
+                    The work reimagines the runway as a perceptual landscape rather than a stage. Models and viewers alike are disguised to dissolve the boundary between object and subject. Physical presence becomes the primary interface, with proximity and body temperature guiding interaction. Mixed reality overlays augment the scene, constructing a layered exhibition space that blends tangible matter with ephemeral perception. This approach fosters new ways of engaging with space, narrative, and the concept of visibility.</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
@@ -243,11 +244,11 @@ const ThermalTraceProjectDetail = () => {
     <section id="design" className="mt-10">
   <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
   <ul className="space-y-3 text-gray-300">
-    <li>• Virtual environment & worldbuilding.</li>
-    <li>• Perceptual transformation from the explorer’s perspective.</li>
-    <li>• Video production using AI generator.</li>
-    <li>• Spatial design tailored to each chamber’s theme.</li>
-    <li>• Chambers translate abstraction into felt space: distortion, reflection, growth, temporal shifts.</li>
+    <li>• Thermal UX: interactions driven by body heat.</li>
+    <li>• Camouflage performance to blur object/subject roles.</li>
+    <li>• Modular environments for adaptive narrative tension.</li>
+    <li>• Space-as-interface: audience navigates through sensing, not just sight.</li>
+    <li>• Visibility stress-test: challenges how presence and form are perceived.</li>
   </ul>
 
   <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
@@ -259,54 +260,37 @@ const ThermalTraceProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Worldbuilding
+                Idea Development
               </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
-              </p>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">This project reframes fashion not as something to be seen, but as something to be discovered through thermal detection. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle thermal cues—heat traces, environmental temperature shifts, and proximity sensing. The XR installation creates a reward structure based on thermal awareness, shifting the focus from spectacle to sensing. Viewers become thermal explorers, engaging with camouflaged presence through detection rather than simply seeing.
+                </p>
             </div>
           </div>
         
              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Narrative Arc
-              </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.
-              </p>
-              </div>
-          </div>
-
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Emotional Logic
-              </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.
-              </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                 Video Development
-              </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
-              </p>
-              </div>
-            </div>
-
-     
-             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
-              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                Spatial Design
               </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
-              </p>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
+               </p>
               </div>
           </div>
-      
+
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Exhibition Design
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
+                </p>
+              </div>
+            </div>
+
+            
+
+     
+
          
              </div>  
              </details>
@@ -323,21 +307,11 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          {/* Idea Development */}
-          <ContentSection title="Idea Development" layout="two-column">
-            <p>
-              This project reframes fashion not as something to be seen, but as something to be discovered through thermal detection. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle thermal cues—heat traces, environmental temperature shifts, and proximity sensing. The XR installation creates a reward structure based on thermal awareness, shifting the focus from spectacle to sensing. Viewers become thermal explorers, engaging with camouflaged presence through detection rather than simply seeing.
-            </p>
-          </ContentSection>
 
-          {/* Art Works Section - Individual Images */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-2xl font-light mb-40 text-gray-300 md:text-xl">Art Works</h2>
-            </div>
-          </div>
-          
-          <div className="w-full">
+
+          {/* Art Works Images */}
+
+           <div className="w-full">
             <img className="w-full h-auto mb-40" alt="Art Work 1" data-lovable-editable="true" src="/lovable-uploads/1cab7e45-c7f3-4090-8efa-30b83bd90f54.png" />
           </div>
           
@@ -354,12 +328,8 @@ const ThermalTraceProjectDetail = () => {
 
           <CarouselSection images={carouselImages} title="Transformable stage" />
 
-          {/* Spatial Design */}
-          <ContentSection title="Spatial Design" layout="two-column">
-            <p>
-              Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
-            </p>
-          </ContentSection>
+
+          {/* Spatial Design Image */}
 
           <div className="w-full">
             <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
@@ -377,12 +347,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
             <InteractiveImageSection baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
 
-            <ContentSection title="Exhibition Design" layout="two-column">
-              <p>
-                Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
-              </p>
-            </ContentSection>
-          </div>
+
 
           <InteractiveExperience src="https://lucent-banoffee-a50286.netlify.app" title="Thermal Trace Interactive Experience" description="Experience the thermal detection interface in real-time" />
 
