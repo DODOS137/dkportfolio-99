@@ -100,21 +100,15 @@ const LearnProjectDetail = () => {
             </div>
 
          
-            {/*Line*/} 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+      
 
-            {/* Approach Section */}
+            {/* Main Image */}
             <div className="rounded-lg bg-transparent">
               <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-20 md:mb-40" />
-              <div className=""> 
-                <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Approach</h2>
-                <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
-                  The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
-                </p>
-              </div>
             </div>
 
-                        {/* Summary */}
+          
+             {/* Summary */}
             <section aria-labelledby="sum-title" className="mt-8">
               <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
                 Summary
@@ -155,8 +149,8 @@ const LearnProjectDetail = () => {
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                    The project focused on simplifying complex topics into accessible narratives and designing intuitive interaction models. Symbolism and abstraction were employed to visualise phenomena beyond everyday perception, while immersive environments provided an emotional framework to deepen connection and engagement. This design approach positioned science not only as knowledge to be learned, but as an experience to be felt.
-                  </p>
+                    The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
+                </p>
                 </div>
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
