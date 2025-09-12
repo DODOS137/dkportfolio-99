@@ -67,7 +67,7 @@ const LearnProjectDetail = () => {
               <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
             </div>}
 
-          {/* Shared Container */}
+          {/* Shared Container */} 
           <div className="max-w-[1540px] mx-auto px-4 md:px-8 lg:px-[250px] z-10">        
             {/* Project Description */}
             <div className="rounded-lg bg-transparent mt-20 md:mt-40">
