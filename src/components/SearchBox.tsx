@@ -38,19 +38,19 @@ const searchData: SearchResult[] = [
   {
     title: "Thermal Trace",
     description: "XR & Exhibition Design",
-    url: "/project/project-3",
+    url: "/project/Thermal Trace",
     keywords: ["thermal", "trace", "xr", "exhibition"]
   },
   {
     title: "Whispers from the Bottom",
     description: "Exhibition Design",
-    url: "/project/project-4",
+    url: "/project/Whispers from the Bottom",
     keywords: ["whispers", "bottom", "exhibition"]
   },
   {
     title: "Seoul Nature history Museum",
     description: "Brand Renewal and Spatial Design",
-    url: "/project/project-5",
+    url: "/project/Seoul Nature history Museum",
     keywords: ["seoul", "museum", "nature", "history", "brand", "design"]
   },
   {
