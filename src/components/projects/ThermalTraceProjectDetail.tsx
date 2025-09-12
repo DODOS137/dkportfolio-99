@@ -381,7 +381,7 @@ const ThermalTraceProjectDetail = () => {
               </AspectRatio>
             </div>
           </div>)}
-      </section>
+   
       
       <BackToTopButton />
     </ProjectLayout>
