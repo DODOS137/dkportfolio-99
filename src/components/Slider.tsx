@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     id: "1",
     title: "Whispers from the Bottom",
-    slug: "Whispers from the Bottom",
+    slug: "Whispers-from-the-Bottom",
     description: "Exhibition Design",
     imageUrl: "/lovable-uploads/89fa6153-0435-48f8-9cc7-7d4eacde6883.png"
   },
