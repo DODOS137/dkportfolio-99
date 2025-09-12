@@ -44,7 +44,7 @@ const searchData: SearchResult[] = [
   {
     title: "Whispers from the Bottom",
     description: "Exhibition Design",
-    url: "/project/Whispers from the Bottom",
+    url: "/project/Whispers-from-the-Bottom",
     keywords: ["whispers", "bottom", "exhibition"]
   },
   {
