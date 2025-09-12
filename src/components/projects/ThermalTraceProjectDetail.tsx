@@ -55,20 +55,17 @@ const ThermalTraceProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-20 md:mt-40">
-            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+            <h2 className="text-xl md:text-xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
               Thermal Trace
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
+            <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
               Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.
             </p>
             
             <ProjectMetadata projectType="Personal Project" projectCategory="XR Contents & Exhibition Design" teamType="Solo Project" duration="8 weeks" />
           </div>
 
-          {/* Line */} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
-
-          {/* Approach Section with Interactive Image */}
+           {/* Interactive Image 1 */}
           <div className="rounded-lg bg-transparent">
             <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
             
@@ -82,17 +79,246 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          {/* Process Section */}
-          <ContentSection title="Process">
-            <ProcessGrid steps={processSteps} />
-          </ContentSection>
+           {/* Summary */}
+            <section aria-labelledby="sum-title" className="mt-8">
+              <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
+                Summary
+              </h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>Conventional museum format</li>
+                    <li>Abstract scientific concepts inaccessible</li>
+                    <li>Weak emotional engagement</li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>VR-spatial storytelling</li>
+                    <li>Four core themes: gravity · light · life · time</li>
+                    <li>Symbolic + immersive spatial design</li>
+                    <li>Intuitive interactions for accessibility</li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>67% found VR more effective</li>
+                    <li>Gravity & time most impactfu</li>
+                    <li>Higher curiosity, mixed learning outcomes</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
 
-          {/* Preliminary Research */}
-          <ContentSection title="Preliminary Research">
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
-              A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.
-            </p>
-          </ContentSection>
+            {/* Full text */}
+            <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+              <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
+              <div className="px-4 pb-4 mt-6 space-y-8">
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                    The project focused on simplifying complex topics into accessible narratives and designing intuitive interaction models. Symbolism and abstraction were employed to visualise phenomena beyond everyday perception, while immersive environments provided an emotional framework to deepen connection and engagement. This design approach positioned science not only as knowledge to be learned, but as an experience to be felt.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                  The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                  Four universal scientific themes—gravity, light, life, and time—were selected as the foundation of the exhibition. Each theme was spatially embodied in a dedicated immersive environment, combining abstraction with sensory cues.
+                  </p>
+                </div>
+                  <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                    A mixed-method study with 30 participants across varied age groups and educational backgrounds evaluated the project’s effectiveness. Findings showed that 67% considered the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive qualities. Among the scientific themes, gravity (38%) and time (31%) were rated as most impactful. Additionally, 67% reported increased interest in science after the experience, and 47% expressed excitement about exploring unfamiliar virtual spaces. However, assessments of learning effectiveness were more divided: 30% found it effective, 35% neutral, and 35% ineffective. These results suggest strong potential for immersive design in science education, while also indicating the need for further refinement and adaptive learning strategies.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+          {/* Research */}
+            <section id="research" aria-labelledby="research-title" className="mb-20">
+              <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">73%</p>
+                  <p className="text-sm text-gray-400 mt-2">found displays lacked spatial clarity</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">76%</p>
+                  <p className="text-sm text-gray-400 mt-2">preferred immersive VR-based learning</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">306</p>
+                  <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-2xl md:text-xl font-light text-white">Immersion Demand</p>
+                  <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
+                </div>
+              </div>
+
+              <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
+                <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
+                <p className="mt-8 text-sm text-gray-400">
+                 A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.
+              </p>
+              </details>
+            </section>
+
+            {/* Process */}
+            <section id="process" className="rounded-lg bg-black">
+              <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">01 Ideation</h3>
+                  <p className="text-gray-400 text-sm">Brainstorming</p>
+                  <p className="text-gray-400 text-sm">Concept sketches</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">02 Analysis</h3>
+                  <p className="text-gray-400 text-sm">Context & precedents</p>
+                  <p className="text-gray-400 text-sm">Stage Environment Research</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">03 Development</h3>
+                  <p className="text-gray-400 text-sm">Spatial/level design</p>
+                  <p className="text-gray-400 text-sm">User Interactiont</p>
+                </div>
+              </div>
+            </section>
+
+              {/* Tools & Roles */}
+            <div className="mb-20 md:mb-20">
+              <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Tools & Roles</h2>
+              <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
+                <table className="w-full text-left text-sm text-gray-400">
+                  <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+                    <tr>
+                      <th className="px-4 py-3">Part</th>
+                      <th className="px-4 py-3">Tools</th>
+                      <th className="px-4 py-3">Outputs</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/10">
+                    <tr>
+                      <td className="px-4 py-4 font-light">Modeling</td>
+                      <td className="px-4 py-4">AutoCAD, 3ds Max</td>
+                      <td className="px-4 py-4">Stage</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Texturing</td>
+                      <td className="px-4 py-4">Photoshop</td>
+                      <td className="px-4 py-4">PBR materials</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Lighting & Render</td>
+                      <td className="px-4 py-4">Unity, 3ds Max</td>
+                      <td className="px-4 py-4">Spatial Real time renders</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Interaction / VR</td>
+                      <td className="px-4 py-4">Unity</td>
+                      <td className="px-4 py-4">VR Exhibition Prototype</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Graphics</td>
+                      <td className="px-4 py-4">Adobe Suite</td>
+                      <td className="px-4 py-4">Art works</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+    {/* Design Highlights */}       
+    <section id="design" className="mt-10">
+  <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
+  <ul className="space-y-3 text-gray-300">
+    <li>• Virtual environment & worldbuilding.</li>
+    <li>• Perceptual transformation from the explorer’s perspective.</li>
+    <li>• Video production using AI generator.</li>
+    <li>• Spatial design tailored to each chamber’s theme.</li>
+    <li>• Chambers translate abstraction into felt space: distortion, reflection, growth, temporal shifts.</li>
+  </ul>
+
+  <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
+    <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
+    <div className="mt-8 space-y-4 text-sm text-gray-400">
+
+              {/*idea development text start*/}
+           
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Worldbuilding
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+              </p>
+            </div>
+          </div>
+        
+             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Narrative Arc
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.
+              </p>
+              </div>
+          </div>
+
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Emotional Logic
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.
+              </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                 Video Development
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
+              </p>
+              </div>
+            </div>
+
+     
+             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+               Spatial Design
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
+              </p>
+              </div>
+          </div>
+      
+         
+             </div>  
+             </details>
+           </section>
+
+
+          {/* Line */} 
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+ 
+
+
 
           {/* Line */} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
