@@ -46,21 +46,22 @@ const projects: Project[] = [{
   imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
 }, {
   id: "5",
-  title: "Seoul Nature history Museum",
-  slug: "Seoul-Nature-History-Museum",
-  description: "Brand Renewal and Spatial Design",
-  category: "Spatial Design",
-  imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
-}, {
-    id: "6",
   title: "Learn",
   slug: "learn",
   description: "Immersive Virtual Reality Experience",
   category: "VR Design",
   imageUrl: "/lovable-uploads/0395cfdd-35e7-4e15-a634-3eab92516d24.png"
- 
+}, {
+  id: "6",
+  title: "Seoul Nature history Museum",
+  slug: "Seoul-Nature-History-Museum",
+  description: "Brand Renewal and Spatial Design",
+  category: "Spatial Design",
+  imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
 }];
-const Work = () => {
+
+
+  const Work = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [viewMode, setViewMode] = useState<'slider' | 'panel'>('slider');
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
