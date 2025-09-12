@@ -54,7 +54,7 @@ const ThermalTraceProjectDetail = () => {
 
         <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">        
           {/* Project Description */}
-          <div className="rounded-lg bg-transparent mt-20 md:mt-40">
+          <div className="rounded-lg bg-transparent mt-20 mb-40 md:mt-20 mb-40">
             <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
               Thermal Trace
             </h2>
@@ -68,13 +68,8 @@ const ThermalTraceProjectDetail = () => {
            {/* Interactive Image 1 */}
           <div className="rounded-lg bg-transparent">
             <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
-            
-            <ContentSection title="Approach">
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
-                The work reimagines the runway as a perceptual landscape rather than a stage. Models and viewers alike are disguised to dissolve the boundary between object and subject. Physical presence becomes the primary interface, with proximity and body temperature guiding interaction. Mixed reality overlays augment the scene, constructing a layered exhibition space that blends tangible matter with ephemeral perception. This approach fosters new ways of engaging with space, narrative, and the concept of visibility.
-              </p>
-            </ContentSection>
-          </div>
+             </div>
+          
 
           {/* Line */} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
