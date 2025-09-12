@@ -104,8 +104,11 @@ const LearnProjectDetail = () => {
 
             {/* Main Image */}
             <div className="rounded-lg bg-transparent">
-              <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-20 md:mb-40" />
+              <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40 md:mb-40" />
             </div>
+
+            {/*Line*/} 
+            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           
              {/* Summary */}
