@@ -15,7 +15,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
-  const project = learnProjectData;
+  const project = learnProjectData; 
 
   // Validate project data
   if (!project || !project.images || project.images.length === 0) {
