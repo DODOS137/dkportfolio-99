@@ -36,11 +36,11 @@ const ProjectDetail = () => {
         return <InvisibleProjectDetail />;
       case 'learn':
         return <LearnProjectDetail />;
-      case 'project-3':
+      case 'ThermalTrace':
         return <ThermalTraceProjectDetail />;
-      case 'project-4':
+      case 'Whispers From The Bottom':
         return <WhispersProjectDetail />;
-      case 'project-5':
+      case 'SeoulMuseum':
         return <SeoulMuseumProjectDetail />;
       case 'project-6':
         return <IslandProjectDetail />;
