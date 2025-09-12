@@ -294,61 +294,78 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Narrative/Spatial texts */}
-            <div className="rounded-lg bg-transparent">
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2 className="text-xl md:text-xl font-light min-w-[200px] text-gray-300 whitespace-nowrap mb-4 md:mb-0">
-                  Worldbuilding
-                </h2>
-                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
-                  Set on a fictional alien planet (A233) inhabited by an advanced civilisation. The player, as an interstellar
-                  explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species
-                  were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural
-                  boundaries.
-                </p>
-              </div>
+    {/* Design Highlights */}       
+    <section id="design" className="mt-10">
+  <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
+  <ul className="space-y-3 text-gray-300">
+    <li>• Virtual environment & worldbuilding.</li>
+    <li>• Perceptual transformation from the explorer’s perspective.</li>
+    <li>• Spatial design tailored to each chamber’s theme.</li>
+    <li>• Chambers translate abstraction into felt space: distortion, reflection, growth, temporal shifts.</li>
+  </ul>
 
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2 className="text-xl md:text-xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
-                  Narrative Arc
-                </h2>
-                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
-                  The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on
-                  Planet A233, the user journeyed through chambers tied to universal scientific principles, progressing from perception
-                  to comprehension and recognition of science as a shared symbolic language.
-                </p>
-              </div>
+  <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
+    <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
+    <div className="mt-8 space-y-4 text-sm text-gray-400">
 
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40">
-                <h2 className="text-xl md:text-xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
-                  Emotional Logic
-                </h2>
-                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
-                  Gravity instils awe and tension; Light encourages curiosity; Life evokes empathy; Time closes with reflective
-                  calm—an emotional rhythm reinforcing the scientific themes.
-                </p>
+              {/*idea development text start*/}
+           
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Worldbuilding
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+              </p>
+            </div>
+          </div>
+        
+             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Narrative Arc
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.
+              </p>
               </div>
+          </div>
 
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 mb-40">
-                <h2 className="text-xl md:text-xl font-light text-gray-300 whitespace-nowrap min-w-[200px] mb-4 md:mb-0">
-                  Spatial Design
-                </h2>
-                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light">
-                  Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic
-                  growth/temporal transitions) to translate abstraction into felt experience.
-                </p>
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Emotional Logic
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.
+              </p>
               </div>
             </div>
 
-            {/* Evaluation Summary */}
-            <h2 className="text-xl md:text-xl font-light text-gray-300 mt-16 md:mt-32">Final Outcome - Evaluation Summary</h2>
-            <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light mt-6 md:mt-8">
-              Mixed-method study (n=30): 67% said VR aided understanding; equal share preferred it over traditional exhibitions. Gravity
-              (38%) and Time (31%) most impactful. 67% reported increased interest in science; learning effectiveness split—30%
-              effective, 35% neutral, 35% ineffective—suggesting room for refinement.
-            </p>
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+               Video Development
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
+              </p>
+              </div>
+          </div>
 
-            {/* Lines + images/slider... (생략 없이 유지) */}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+             Spatial Design
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
+              </p>
+              </div>
+          </div>
+      
+          </div>
+           </details>
+           </section>
+
+
+             {/* Lines + images/slider... (생략 없이 유지) */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
