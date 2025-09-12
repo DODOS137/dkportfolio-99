@@ -341,19 +341,20 @@ const InvisibleProjectDetail = () => {
             </div>
 
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-               Video Development
+                 Video Development
               </h2>
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
               </p>
               </div>
-          </div>
+            </div>
 
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          </div>
+             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-             Spatial Design
+               Spatial Design
               </h2>
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
               </p>
