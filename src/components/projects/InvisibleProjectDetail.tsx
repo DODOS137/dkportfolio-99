@@ -171,7 +171,7 @@ const InvisibleProjectDetail = () => {
             {/* Full text */}
             <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
               <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
-              <div className="px-4 pb-4 mt-8 space-y-8">
+              <div className="px-4 pb-4 mt-6 space-y-8">
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
