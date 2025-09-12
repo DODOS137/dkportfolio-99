@@ -122,16 +122,6 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-            {/* Client */}
-            <div className="rounded-lg bg-transparent">
-              <div className="mb-8 mt-20 md:mt-20">
-                <h2 className="text-xl md:text-xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Client</h2>
-                <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
-                  {project.heroClient}
-                </p>
-              </div>
-            </div>
-
             {/* Video */}
             {project.videoId && (
               <div className="my-40 md:my-40">
@@ -153,27 +143,26 @@ const InvisibleProjectDetail = () => {
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>Abstract scientific concepts hard to engage</li>
-                    <li>Conventional displays lack spatial narrative</li>
-                    <li>Low immersion in typical exhibitions</li>
-                    <li>Need for experiential learning</li>
+                    <li>Conventional museum format</li>
+                    <li>Abstract scientific concepts inaccessible</li>
+                    <li>Weak emotional engagement</li>
                   </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>VR-first spatial storytelling</li>
-                    <li>Four themes: Gravity · Light · Life · Time</li>
-                    <li>Video interludes + chambers</li>
-                    <li>Emotion-led comprehension</li>
+                    <li>VR-spatial storytelling</li>
+                    <li>Four core themes: gravity · light · life · time</li>
+                    <li>Symbolic + immersive spatial design</li>
+                    <li>Intuitive interactions for accessibility</li>
                   </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>67% felt VR aided understanding</li>
-                    <li>Preference over traditional exhibits</li>
-                    <li>Clear emotional arc across spaces</li>
+                    <li>67% found VR more effective</li>
+                    <li>Gravity & time most impactfu</li>
+                    <li>Higher curiosity, mixed learning outcomes</li>
                   </ul>
                 </div>
               </div>
@@ -186,22 +175,25 @@ const InvisibleProjectDetail = () => {
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                    The project uses immersive spatial design and narrative sequencing to make core scientific ideas experientially
-                    felt. Four chambers—Gravity, Light, Life, and Time—guide users through a structured emotional and cognitive arc.
+                    The project focused on simplifying complex topics into accessible narratives and designing intuitive interaction models. Symbolism and abstraction were employed to visualise phenomena beyond everyday perception, while immersive environments provided an emotional framework to deepen connection and engagement. This design approach positioned science not only as knowledge to be learned, but as an experience to be felt.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                    It reframes complex science through embodied experience, prioritising clarity, curiosity, and empathy to increase
-                    engagement and retention beyond traditional display formats.
+                  The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds
                   </p>
                 </div>
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                    The experience blends interactive chamber design, short video interludes, and a consistent visual language to
-                    support comprehension and emotional continuity across the journey.
+                  Four universal scientific themes—gravity, light, life, and time—were selected as the foundation of the exhibition. Each theme was spatially embodied in a dedicated immersive environment, combining abstraction with sensory cues.
+                  </p>
+                </div>
+                  <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                    A mixed-method study with 30 participants across varied age groups and educational backgrounds evaluated the project’s effectiveness. Findings showed that 67% considered the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive qualities. Among the scientific themes, gravity (38%) and time (31%) were rated as most impactful. Additionally, 67% reported increased interest in science after the experience, and 47% expressed excitement about exploring unfamiliar virtual spaces. However, assessments of learning effectiveness were more divided: 30% found it effective, 35% neutral, and 35% ineffective. These results suggest strong potential for immersive design in science education, while also indicating the need for further refinement and adaptive learning strategies.
                   </p>
                 </div>
               </div>
@@ -232,8 +224,7 @@ const InvisibleProjectDetail = () => {
               <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
                 <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
                 <p className="mt-8 text-sm text-gray-400">
-                  An online/offline survey (n=306) indicated strong interest in immersive educational formats and highlighted limits in
-                  conventional science exhibition formats. These results validated a narrative-led VR design strategy.
+                 An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.
                 </p>
               </details>
             </section>
@@ -276,7 +267,7 @@ const InvisibleProjectDetail = () => {
                     <tr>
                       <td className="px-4 py-4 font-light">Modeling</td>
                       <td className="px-4 py-4">AutoCAD, 3ds Max</td>
-                      <td className="px-4 py-4">Exhibition modules, Space</td>
+                      <td className="px-4 py-4">3D Assets, Space</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-4 font-light">Texturing</td>
@@ -285,17 +276,17 @@ const InvisibleProjectDetail = () => {
                     </tr>
                     <tr>
                       <td className="px-4 py-4 font-light">Lighting & Render</td>
-                      <td className="px-4 py-4">Unreal Engine 5</td>
-                      <td className="px-4 py-4">Spatial ambience renders</td>
+                      <td className="px-4 py-4">Unreal Engine, 3ds Max</td>
+                      <td className="px-4 py-4">Spatial Real time renders</td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-4 font-light">Interaction / AR</td>
-                      <td className="px-4 py-4">Unreal Engine 5</td>
+                      <td className="px-4 py-4 font-light">Interaction / VR</td>
+                      <td className="px-4 py-4">Unreal Engine</td>
                       <td className="px-4 py-4">VR Environment</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-4 font-light">Graphics</td>
-                      <td className="px-4 py-4">Illustrator, Photoshop</td>
+                      <td className="px-4 py-4">Adobe Suite</td>
                       <td className="px-4 py-4">Art works</td>
                     </tr>
                   </tbody>
