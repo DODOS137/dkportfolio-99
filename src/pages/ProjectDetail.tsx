@@ -38,7 +38,7 @@ const ProjectDetail = () => {
         return <LearnProjectDetail />;
       case 'ThermalTrace':
         return <ThermalTraceProjectDetail />;
-      case 'Whispers-From-the-Bottom':
+      case 'Whispers-from-the-Bottom':
         return <WhispersProjectDetail />;
       case 'Seoul Nature history Museum':
         return <SeoulMuseumProjectDetail />;
