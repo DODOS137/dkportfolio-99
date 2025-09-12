@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [{
   id: "1",
   title: "Whispers from the Bottom",
-  slug: "Whispers from the Bottom",
+  slug: "Whispers-from-the-Bottom",
   description: "An Immersive Exhibition Platform Led by Sound",
   category: "Exhibition Design",
   imageUrl: "/lovable-uploads/89fa6153-0435-48f8-9cc7-7d4eacde6883.png"
