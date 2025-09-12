@@ -20,7 +20,7 @@ const LearnProjectDetail = () => {
   // Validate project data
   if (!project || !project.images || project.images.length === 0) {
     return (
-    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}  
+    <ScrollArea className="h-screen w-screen overflow-auto"> 
     <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-light text-white mb-4">Project Not Found</h1>
@@ -34,7 +34,7 @@ const LearnProjectDetail = () => {
   }
   
   return (
-  <ScrollArea className="h-screen w-screen overflow-auto project-scroll"> {/* ✅ 추가됨 */}   
+  <ScrollArea className="h-screen w-screen overflow-auto project-scroll">   
   <React.Fragment>
     <BackToTopButton /> 
       <div className="min-h-screen bg-black text-white">
