@@ -60,7 +60,7 @@ const SeoulMuseumProjectDetail = () => {
           <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src="/lovable-uploads/db58f1e0-0fea-4b68-953c-59d4580ad411.png" />
         </div>
 
-        {/* Shared Container */}
+        {/* Shared Container */} 
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-20 md:mt-40">
