@@ -285,8 +285,8 @@ const InvisibleProjectDetail = () => {
                       <td className="px-4 py-4">VR Environment</td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-4 font-light">Graphics</td>
-                      <td className="px-4 py-4">Adobe Suite</td>
+                      <td className="px-4 py-4 font-light">Graphics & Video</td>
+                      <td className="px-4 py-4">Adobe Suite, Runway AI</td>
                       <td className="px-4 py-4">Art works</td>
                     </tr>
                   </tbody>
@@ -300,6 +300,7 @@ const InvisibleProjectDetail = () => {
   <ul className="space-y-3 text-gray-300">
     <li>• Virtual environment & worldbuilding.</li>
     <li>• Perceptual transformation from the explorer’s perspective.</li>
+    <li>• Video production using AI generator.</li>
     <li>• Spatial design tailored to each chamber’s theme.</li>
     <li>• Chambers translate abstraction into felt space: distortion, reflection, growth, temporal shifts.</li>
   </ul>
@@ -350,7 +351,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
-          </div>
+     
              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
@@ -361,8 +362,9 @@ const InvisibleProjectDetail = () => {
               </div>
           </div>
       
-          </div>
-           </details>
+         
+             </div>  
+             </details>
            </section>
 
 
