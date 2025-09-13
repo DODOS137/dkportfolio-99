@@ -27,21 +27,21 @@ const projects: Project[] = [
   },
  
   {
-    id: "4",
+    id: "3",
     title: "Thermal Trace",
     slug: "Thermal-Trace",
     description: "XR & Exhibition Design",
     imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
   },
   {
-    id: "5",
+    id: "4",
     title: "Seoul Nature history Museum",
     slug: "Seoul-Nature-History-Museum",
     description: "Brand Renewal and Spatial Design",
     imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
   },
   {
-    id: "6",
+    id: "5",
     title: "Learn",
     slug: "learn",
     description: "Immersive Virtual Reality Experience",
