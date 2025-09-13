@@ -151,7 +151,7 @@ const SeoulMuseumProjectDetail = () => {
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
                     <li>67% found VR more effective</li>
-                    <li>Gravity & time most impactfu</li>
+                    <li>Gravity & time most impactfulㄹ</li>
                     <li>Higher curiosity, mixed learning outcomes</li>
                   </ul>
                 </div>
@@ -317,7 +317,7 @@ const SeoulMuseumProjectDetail = () => {
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-              Spacial & Exhibtion
+              Spatial & Exhibition
 
               </h2>
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum's spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
@@ -519,7 +519,7 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" />
               </div>
          
-            {/*Builut-in comments*/}
+            {/*Built-in comments*/}
           <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40 mt-20 md:mt-40">
               <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">Built-in wall cabinets</h2>
