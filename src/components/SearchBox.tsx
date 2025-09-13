@@ -53,12 +53,7 @@ const searchData: SearchResult[] = [
     url: "/project/Seoul-Nature-History-Museum",
     keywords: ["seoul", "museum", "nature", "history", "brand", "design"]
   },
-  {
-    title: "Island",
-    description: "Public Space Design",
-    url: "/project/project-6",
-    keywords: ["island", "public", "space", "design"]
-  },
+
   {
     title: "About Me",
     description: "Information about Dohyun Kim",
