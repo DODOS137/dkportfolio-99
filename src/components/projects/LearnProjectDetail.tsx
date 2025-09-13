@@ -10,7 +10,7 @@ import YouTube from 'react-youtube';
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
+import { ScrollArea } from "@/components/ui/scroll-area"; 
 
 
 const LearnProjectDetail = () => {
