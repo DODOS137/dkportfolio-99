@@ -64,10 +64,10 @@ const SeoulMuseumProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-20 md:mt-40">
-            <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white font-light">
+            <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
               Seoul Natural History Museum
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
+            <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
             This project proposes a conceptual and spatial renewal of the Seodaemun Museum of Natural History, Korea's first public natural history museum. The redesign envisions a new identity—Seoul Natural History Museum—grounded in Korea's cultural relationship with nature, particularly from the perspective of traditional hunters. The project spans spatial reconfiguration, exhibition curation, branding, and product design.
             </p>
             
@@ -91,11 +91,10 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+       
 
           {/* YouTube Video Section */}
-          <div className="rounded-lg bg-transparent mb-20 md:mb-40">
+          <div className="rounded-lg bg-transparent mb-40 mt-40 md:mb-40">
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <YouTube videoId="8GEK3igRom0" opts={{
@@ -123,6 +122,227 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
 
+
+
+          {/* Summary */}
+            <section aria-labelledby="sum-title" className="mt-8">
+              <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
+                Summary
+              </h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>Conventional museum format</li>
+                    <li>Abstract scientific concepts inaccessible</li>
+                    <li>Weak emotional engagement</li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>VR-spatial storytelling</li>
+                    <li>Four core themes: gravity · light · life · time</li>
+                    <li>Symbolic + immersive spatial design</li>
+                    <li>Intuitive interactions for accessibility</li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
+                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                    <li>67% found VR more effective</li>
+                    <li>Gravity & time most impactfu</li>
+                    <li>Higher curiosity, mixed learning outcomes</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Full text */}
+            <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+              <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
+              <div className="px-4 pb-4 mt-6 space-y-8">
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                    Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.</p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                  The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
+                  <p className="text-sm leading-relaxed font-light text-gray-400">
+                  Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
+                  </p>
+                </div>
+                  
+              </div>
+            </details>
+
+            {/* Research */}
+            <section id="research" aria-labelledby="research-title" className="mb-20">
+              <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">84%</p>
+                  <p className="text-sm text-gray-400 mt-2">demand renewal</p>
+                </div>
+
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl md:text-3xl font-light text-white">213</p>
+                  <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-2xl md:text-xl font-light text-white">Insight</p>
+                  <p className="text-sm text-gray-400 mt-2">Need for architectural redefinition and experiential enhancement
+                  </p>
+                </div>
+              </div>
+
+              <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
+                <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
+                <p className="mt-8 text-sm text-gray-400">
+                A survey was conducted with 213 individuals who had previously visited the Seodaemun Museum of Natural History, either on-site or online. Among them, 32 participants had also experienced renowned natural history museums abroad. While the museum's collection of specimens was largely appreciated, 84% of respondents (179 people) highlighted the need for spatial and interior renewal. Critical feedback pointed to the building's outdated grey façade and lack of distinctive identity, often being compared to a generic municipal office rather than a museum. The results revealed a strong demand for architectural redefinition and experiential enhancement that aligns with contemporary expectations for cultural institutions.
+                </p>
+              </details>
+            </section>
+
+            {/* Process */}
+            <section id="process" className="rounded-lg bg-black">
+              <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">01 Ideation</h3>
+                  <p className="text-gray-400 text-sm">Brainstorming</p>
+                  <p className="text-gray-400 text-sm">Concept sketches</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">02 Analysis</h3>
+                  <p className="text-gray-400 text-sm">Context & Problem Analysis</p>
+                  <p className="text-gray-400 text-sm">Context & precedents</p>
+                  
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+                  <h3 className="text-white font-light mb-3">03 Development</h3>
+                  <p className="text-gray-400 text-sm">Brand identity redefinition</p>
+                  <p className="text-gray-400 text-sm">Spatial / Product / Exhibition design</p>
+                
+                </div>
+              </div>
+            </section>
+
+            {/* Tools & Roles */}
+            <div className="mb-20 md:mb-20">
+              <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Tools & Roles</h2>
+              <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
+                <table className="w-full text-left text-sm text-gray-400">
+                  <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+                    <tr>
+                      <th className="px-4 py-3">Part</th>
+                      <th className="px-4 py-3">Tools</th>
+                      <th className="px-4 py-3">Outputs</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/10">
+                    <tr>
+                      <td className="px-4 py-4 font-light">Modeling</td>
+                      <td className="px-4 py-4">AutoCAD, 3ds Max</td>
+                      <td className="px-4 py-4">3D Assets, Space, Product </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Texturing</td>
+                      <td className="px-4 py-4">Photoshop</td>
+                      <td className="px-4 py-4">PBR materials</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Lighting & Render</td>
+                      <td className="px-4 py-4">V-Ray</td>
+                      <td className="px-4 py-4">Spatial ambience renders</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Interaction / VR</td>
+                      <td className="px-4 py-4">Unreal Engine</td>
+                      <td className="px-4 py-4">VR Environment</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-light">Graphics</td>
+                      <td className="px-4 py-4">Adobe Suite, Runway AI</td>
+                      <td className="px-4 py-4">Exhibition panels, accessibility assets</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+    {/* Design Highlights */}       
+    <section id="design" className="mt-10">
+  <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
+  <ul className="space-y-3 text-gray-300">
+    <li>• Identity: Rebranded through hunter’s worldview.</li>
+    <li>• Space: From static to immersive, participatory layouts.</li>
+    <li>• Narrative: Respectful coexistence with nature as storyline.</li>
+   
+  </ul>
+
+  <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
+    <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
+    <div className="mt-8 space-y-4 text-sm text-gray-400">
+
+              {/*idea development text start*/}
+           
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Problem Analysis
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+              </p>
+            </div>
+          </div>
+        
+             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                Narrative Arc
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence—tracking animals with care and honoring their lives, often referring to tigers as San-gun, or "Mountain Lord." This ethos of respect extended to falconry, where Maekkun formed mutual bonds with wild hawks, never claiming ownership and accepting their release with grace. Rooted in this worldview, the project Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space, transforming static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
+              </p>
+              </div>
+          </div>
+
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+              Spacial & Exhibtion
+
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum's spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
+              </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                 Final Outcome
+              </h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Delivered a complete, testable museum experience encompassing space, identity, product, and narrative logic. The project is structured for future feedback loops through public interaction and prototyping.
+              </p>
+              </div>
+            </div>
+
+     
+
+               </div>  
+             </details>
+           </section>
+
+          
+
           {/* Approach Section */}
           <div className="rounded-lg bg-transparent">
             <div className="mb-8"> 
@@ -144,48 +364,7 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          {/* Process Section */}
-          <div className="rounded-lg bg-transparent">
-            <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-20 md:mb-40">
-              <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Site Selection</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Brainstorming</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Concept Sketching</p>
-                </div>
-              </div>
-              
-              <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Analysis</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">On-site Survey & Research</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Context & Problem Analysis</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Precedent Study </p>
-                </div>
-              </div>
-              
-              <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Design Development</h3>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Brand Identity Redefinition</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Floor Plan Analysis & Design</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Spatial Design</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Product Design</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Exhibition Design</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/*Preliminary Research*/}
-          <div className=""> 
-            <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Preliminary Research</h2>
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
-              A survey was conducted with 213 individuals who had previously visited the Seodaemun Museum of Natural History, either on-site or online. Among them, 32 participants had also experienced renowned natural history museums abroad. While the museum's collection of specimens was largely appreciated, 84% of respondents (179 people) highlighted the need for spatial and interior renewal.
-              Critical feedback pointed to the building's outdated grey façade and lack of distinctive identity, often being compared to a generic municipal office rather than a museum. The results revealed a strong demand for architectural redefinition and experiential enhancement that aligns with contemporary expectations for cultural institutions.
-            </p>
-          </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
@@ -256,16 +435,7 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" />
           </div> 
 
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40 mt-20 md:mt-40">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
-                Narrative Concept
-              </h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence—tracking animals with care and honoring their lives, often referring to tigers as San-gun, or "Mountain Lord." This ethos of respect extended to falconry, where Maekkun formed mutual bonds with wild hawks, never claiming ownership and accepting their release with grace. Rooted in this worldview, the project Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space, transforming static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
 
-            </p>
-              </div>
-          </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>          
@@ -398,14 +568,7 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          {/* Final Outcome */}
-          <div className="rounded-lg bg-transparent">
-            <div className="mb-20 md:mb-40"> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Final Outcome</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
-                Delivered a complete, testable museum experience encompassing space, identity, product, and narrative logic. The project is structured for future feedback loops through public interaction and prototyping.
-              </p>
-            </div>
+ 
           
             {/*End Image */}
            <div className="w-full mb-40 md:mb-40">
