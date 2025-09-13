@@ -32,27 +32,20 @@ const projects: Project[] = [{
 
 }, {
    id: "3",
-  title: "Island",
-  slug: "project-6",
-  description: "Public Space Design",
-  category: "Spatial Design",
-  imageUrl: "/lovable-uploads/ffd0a76e-2666-4bdf-a327-e4ccee348ffe.png"
-}, {
-   id: "4",
   title: "Thermal Trace",
   slug: "Thermal-Trace",
   description: "Reimagining the Fashion Show Through XR",
   category: "XR & Exhibition Design",
   imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
 }, {
-  id: "5",
+  id: "4",
   title: "Learn",
   slug: "learn",
   description: "Immersive Virtual Reality Experience",
   category: "VR Design",
   imageUrl: "/lovable-uploads/0395cfdd-35e7-4e15-a634-3eab92516d24.png"
 }, {
-  id: "6",
+  id: "5",
   title: "Seoul Nature history Museum",
   slug: "Seoul-Nature-History-Museum",
   description: "Brand Renewal and Spatial Design",
