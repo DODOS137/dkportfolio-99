@@ -25,13 +25,7 @@ const projects: Project[] = [
     description: "Virtual Reality Contents",
     imageUrl: "/lovable-uploads/dd05d902-8937-42b8-bb1e-c6ad7461546b.png"
   },
-  {
-    id: "3",
-    title: "Island",
-    slug: "Island",
-    description: "Public Space Design",
-    imageUrl: "/lovable-uploads/ffd0a76e-2666-4bdf-a327-e4ccee348ffe.png"
-  },
+ 
   {
     id: "4",
     title: "Thermal Trace",
