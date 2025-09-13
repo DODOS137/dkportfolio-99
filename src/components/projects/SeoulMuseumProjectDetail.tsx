@@ -136,26 +136,26 @@ const SeoulMuseumProjectDetail = () => {
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>Conventional museum format</li>
-                    <li>Abstract scientific concepts inaccessible</li>
-                    <li>Weak emotional engagement</li>
+                    <li>Outdated façade & interiors</li>
+                    <li>Weak cultural identity</li>
+                    <li>Limited visitor engagement</li>
                   </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>VR-spatial storytelling</li>
-                    <li>Four core themes: gravity · light · life · time</li>
-                    <li>Symbolic + immersive spatial design</li>
-                    <li>Intuitive interactions for accessibility</li>
+                    <li>Contemporary landmark façade</li>
+                    <li>Spatial renewal & circulation upgrade</li>
+                    <li>Immersive storytelling + interactive media</li>
+                    
                   </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>67% found VR more effective</li>
-                    <li>Gravity & time most impactfulㄹ</li>
-                    <li>Higher curiosity, mixed learning outcomes</li>
+                    <li>Repositioned as cultural landmark</li>
+                    <li>Enhanced visitor experience</li>
+                    <li>Alignment with modern expectations</li>
                   </ul>
                 </div>
               </div>
@@ -173,7 +173,7 @@ const SeoulMuseumProjectDetail = () => {
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                  The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds
+                 The museum’s collection is valued, yet its outdated grey façade, obsolete interiors, and weak identity limit its appeal—often compared to a municipal office rather than a cultural institution. A renewal strategy is proposed: redefine the façade with a contemporary landmark identity, update interiors for better circulation and engagement, and integrate immersive storytelling and interactive media. These changes would reposition the museum as a dynamic cultural space aligned with modern expectations.
                   </p>
                 </div>
                 <div>
@@ -313,18 +313,18 @@ const SeoulMuseumProjectDetail = () => {
               </h2>
              <div className="flex flex-col space-y-6 md:space-y-8 ">
             <div>
-              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-4 min-w-[200px] text-gray-400">
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-6 md:mb-8 min-w-[200px] text-gray-400">
                Overcrowded Specimen Displays
                </h3>
               <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
 
-              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-4 min-w-[200px] text-gray-400">
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-6 md:mb-8 min-w-[200px] text-gray-400">
                Passive Viewing Format
                </h3>
               <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.
               </p>
 
-              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-4 min-w-[200px] text-gray-400">
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-6 md:mb-8 min-w-[200px] text-gray-400">
                Lack of Identity in Spatial Elements
                </h3>
               <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.
@@ -396,33 +396,7 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" />
           </div>     
 
-          {/* Context & Problem Analysis Section */}
-         <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 rounded-lg bg-transparent">
-          <h2 className="text-xl md:text-2xl mb-6 md:mb-8 font-light text-gray-300 min-w-[200px]">
-          Problem Analysis
-            </h2>
-          <div className="flex flex-col space-y-6 md:space-y-8 ">
-            <div>
-          <h3 className="text-lg md:text-xl lg:text-2xl font-light mb-3 md:mb-4 min-w-[200px] text-gray-300">
-         Overcrowded Specimen Displays
-          </h3>
-         <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
-          </div>
-         <div>
-         <h3 className="text-lg md:text-xl lg:text-2xl font-light mb-3 md:mb-4 min-w-[200px] text-gray-300">
-          Passive Viewing Format
-        </h3>
-         <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
-       </div>
-        <div>
-          <h3 className="text-lg md:text-xl lg:text-2xl font-light mb-3 md:mb-4 min-w-[200px] text-gray-300">
-          Lack of Identity in Spatial Elements
-           </h3>
-           <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.</p>
-          </div>
-
-         </div>
-        </div>
+ 
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
@@ -447,19 +421,9 @@ const SeoulMuseumProjectDetail = () => {
           {/*Exhibtion Plan*/}
           <div className="w-full mb-20 md:mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
-           
-          </div>
+             </div>
 
-          {/*Floor and Exhibition Plans*/}
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40 mt-20 md:mt-40">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
-                Floor Plan & Exhibtion
-              </h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum's spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
-              </p>
-              </div>
-          </div>
+ 
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
