@@ -103,7 +103,7 @@ const LearnProjectDetail = () => {
       
 
             {/* Main Image */}
-            <div className="rounded-lg bg-transparent">
+            <div className="rounded-lg bg-transparent mt-40">
               <img src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png" className="w-full h-auto mb-40 md:mb-40" />
             </div>
 
@@ -217,13 +217,13 @@ const LearnProjectDetail = () => {
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
                   <h3 className="text-white font-light mb-3">02 Analysis</h3>
-                  <p className="text-gray-400 text-sm">Context & precedents</p>
-                  <p className="text-gray-400 text-sm">Narrative flow</p>
+                  <p className="text-gray-400 text-sm">Environment Research</p>
+                  <p className="text-gray-400 text-sm">Narrative Flow Mapping</p>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
                   <h3 className="text-white font-light mb-3">03 Development</h3>
-                  <p className="text-gray-400 text-sm">World/spatial/level design</p>
-                  <p className="text-gray-400 text-sm">Video development</p>
+                  <p className="text-gray-400 text-sm">World/Character/spatial/level design</p>
+                  <p className="text-gray-400 text-sm">Scriptwriting & Storyboarding</p>
                 </div>
               </div>
             </section>
@@ -244,7 +244,7 @@ const LearnProjectDetail = () => {
                     <tr>
                       <td className="px-4 py-4 font-light">Modeling</td>
                       <td className="px-4 py-4">AutoCAD, 3ds Max</td>
-                      <td className="px-4 py-4">3D Assets, Space</td>
+                      <td className="px-4 py-4">3D Assets,Characters,Space</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-4 font-light">Texturing</td>
@@ -253,16 +253,16 @@ const LearnProjectDetail = () => {
                     </tr>
                     <tr>
                       <td className="px-4 py-4 font-light">Lighting & Render</td>
-                      <td className="px-4 py-4">Unreal Engine, 3ds Max</td>
+                      <td className="px-4 py-4">3ds Max</td>
                       <td className="px-4 py-4">Spatial Real time renders</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-4 font-light">Interaction / VR</td>
-                      <td className="px-4 py-4">Unreal Engine</td>
-                      <td className="px-4 py-4">VR Environment</td>
+                      <td className="px-4 py-4">Shape XR</td>
+                      <td className="px-4 py-4">Environment, Interaction sketch</td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-4 font-light">Graphics & Video</td>
+                      <td className="px-4 py-4 font-light">Graphics</td>
                       <td className="px-4 py-4">Adobe Suite, Runway AI</td>
                       <td className="px-4 py-4">Art works</td>
                     </tr>
@@ -293,27 +293,29 @@ const LearnProjectDetail = () => {
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Worldbuilding
               </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
-              </p>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
+
+                  The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
+                </p>
             </div>
           </div>
         
              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Narrative Arc
+                Narrative Arc &   Emotional Logic
               </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.
-              </p>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+                </p>
               </div>
           </div>
 
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Emotional Logic
+                Scriptwriting & Storyboard
               </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
               </p>
               </div>
             </div>
@@ -321,80 +323,25 @@ const LearnProjectDetail = () => {
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                 Video Development
+                Spatial Design
               </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.
               </p>
               </div>
             </div>
 
      
-             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 ">
-              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-               Spatial Design
-              </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
-              </p>
-              </div>
-          </div>
-      
-         
-             </div>  
+              </div>  
              </details>
            </section>
 
 
-            {/* Process Section */}
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-2xl font-light mb-8 md:mb-12 text-gray-300">Process</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-                <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                  <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Ideation Phase</h3>
-                  <div className="flex-1 flex flex-col items-center justify-center">
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Brainstorming</p>
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Concept Sketching</p>
-                  </div>
-                </div>
-                
-                <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                  <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Analysis</h3>
-                  <div className="flex-1 flex flex-col items-center justify-center">
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Environment Research</p>
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Narrative Flow Mapping</p>
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Precedent Study </p>
-                  </div>
-                </div>
-                
-                <div className="aspect-square bg-black rounded-lg p-4 md:p-8 flex flex-col text-center border border-white">
-                  <h3 className="text-lg md:text-xl font-light text-white mb-2 md:mb-4">Design Development</h3>
-                  <div className="flex-1 flex flex-col items-center justify-center">
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Worldbuilding</p>
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Character Design</p>
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Scriptwriting & Storyboarding</p>
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Level Design</p>
-                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed">Spatial Design</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
 
             {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-            {/* Worldbuilding Section */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                  Worldbuilding
-                </h2>
-                <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light mb-20 md:mb-40">
-                  Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
-
-                  The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition? 
-                </p>
-              </div>
-            </div>
+          
             
             {/*world Image*/}     
             <div className="w-full">
@@ -403,15 +350,6 @@ const LearnProjectDetail = () => {
               </AspectRatio>
             </div>          
 
-            {/* Narrative Concept Section */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent mt-20 md:mt-40 flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-xl md:text-2xl mb-6 md:mb-8 font-light text-gray-300 min-w-[200px]">Narrative Concept & Logic</h2>
-                <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
-                  The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-                </p>
-              </div>
-            </div>
 
             {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
@@ -449,8 +387,9 @@ const LearnProjectDetail = () => {
               <h2 className="text-lg md:text-2xl font-light text-center text-xs md:text-sm text-gray-700">Click and drag to rotate. Scroll to zoom.</h2>
             </div>
 
-            {/*Line*/} 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+
+            
 
          {/* script 컨테이너1 */}     
         <div className="w-full ">
@@ -492,18 +431,8 @@ const LearnProjectDetail = () => {
             </div>
             </div>
 
-            {/* Scriptwriting & Storyboard Section */}
-            <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Scriptwriting & Storyboard</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 mb-0 md:mb-0 font-light">
-                Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-              </p>
-            </div>
-            </div>
-
-            {/*Line*/} 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+ 
+  
 
             {/* Level Design Section */}
    
@@ -527,8 +456,7 @@ const LearnProjectDetail = () => {
                  </div>
             </div>
 
-            {/*Line*/} 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+            
         
             {/* Spatial Design Section */}
              <div className="w-full ">
@@ -554,8 +482,7 @@ const LearnProjectDetail = () => {
 
 
             
-            {/*Line*/} 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
 
             {/* Post-Project Section */}
             <div className="rounded-lg bg-transparent">
