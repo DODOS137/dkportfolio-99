@@ -120,27 +120,24 @@ const LearnProjectDetail = () => {
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>Conventional museum format</li>
-                    <li>Abstract scientific concepts inaccessible</li>
-                    <li>Weak emotional engagement</li>
-                  </ul>
+                    <li>Creation of an original VR storytelling format</li>
+                    <li>Harmonising narrative, space, and interaction into one cohesive whole</li>
+                    </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>VR-spatial storytelling</li>
-                    <li>Four core themes: gravity · light · life · time</li>
-                    <li>Symbolic + immersive spatial design</li>
-                    <li>Intuitive interactions for accessibility</li>
-                  </ul>
+                    <li>Building an original world ·story · characters  · spatial setting</li>
+                    <li>Sketching interaction flows directly within VR environments</li>
+                    <li>Scriptwriting tailored to narrative situations and emotional pacing</li>
+                   </ul>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>67% found VR more effective</li>
-                    <li>Gravity & time most impactfu</li>
-                    <li>Higher curiosity, mixed learning outcomes</li>
-                  </ul>
+                    <li>Immersive VR narrative centred on empathy and memory</li>
+                    <li>Demonstrates emotional storytelling in VR</li>
+                   </ul>
                 </div>
               </div>
             </section>
@@ -158,53 +155,20 @@ const LearnProjectDetail = () => {
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                  The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds
+                  This project set out to create an original VR storytelling experience exploring empathy in a post-human world. By following service robots in an abandoned library, the narrative asked whether meaning and emotional understanding could persist without their human creators.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
                   <p className="text-sm leading-relaxed font-light text-gray-400">
-                  Four universal scientific themes—gravity, light, life, and time—were selected as the foundation of the exhibition. Each theme was spatially embodied in a dedicated immersive environment, combining abstraction with sensory cues.
+                  The project was developed through integrated worldbuilding, interaction design, and spatial storytelling. Distinct robot characters and moral decision points shaped the narrative arc. VR sketching tools enabled real-time storyboard testing, refining pacing and navigation early on. Spatial contrasts—light and shadow, architecture and decay, digital and analogue—were choreographed to guide attention and embed symbolic meaning. Together, these strategies built a cohesive, emotionally driven VR narrative.
                   </p>
                 </div>
-                  <div>
-                  <h3 className="text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
-                  <p className="text-sm leading-relaxed font-light text-gray-400">
-                    A mixed-method study with 30 participants across varied age groups and educational backgrounds evaluated the project’s effectiveness. Findings showed that 67% considered the VR experience helpful in understanding abstract scientific concepts, and the same percentage preferred it over traditional exhibitions for its immersive qualities. Among the scientific themes, gravity (38%) and time (31%) were rated as most impactful. Additionally, 67% reported increased interest in science after the experience, and 47% expressed excitement about exploring unfamiliar virtual spaces. However, assessments of learning effectiveness were more divided: 30% found it effective, 35% neutral, and 35% ineffective. These results suggest strong potential for immersive design in science education, while also indicating the need for further refinement and adaptive learning strategies.
-                  </p>
-                </div>
+              
               </div>
             </details>
 
-            {/* Research */}
-            <section id="research" aria-labelledby="research-title" className="mb-20">
-              <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">73%</p>
-                  <p className="text-sm text-gray-400 mt-2">found displays lacked spatial clarity</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">76%</p>
-                  <p className="text-sm text-gray-400 mt-2">preferred immersive VR-based learning</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">306</p>
-                  <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-2xl md:text-xl font-light text-white">Immersion Demand</p>
-                  <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
-                </div>
-              </div>
 
-              <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
-                <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
-                <p className="mt-8 text-sm text-gray-400">
-                 An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.
-                </p>
-              </details>
-            </section>
 
             {/* Process */}
             <section id="process" className="rounded-lg bg-black">
@@ -276,10 +240,9 @@ const LearnProjectDetail = () => {
   <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
   <ul className="space-y-3 text-gray-300">
     <li>• Virtual environment & worldbuilding.</li>
-    <li>• Perceptual transformation from the explorer’s perspective.</li>
-    <li>• Video production using AI generator.</li>
-    <li>• Spatial design tailored to each chamber’s theme.</li>
-    <li>• Chambers translate abstraction into felt space: distortion, reflection, growth, temporal shifts.</li>
+    <li>• Three distinct robot characters.</li>
+    <li>• Original VR storytelling.</li>
+    <li>• VR sketching & 3D storyboards for pacing and navigation.</li>
   </ul>
 
   <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
@@ -351,12 +314,10 @@ const LearnProjectDetail = () => {
             </div>          
 
 
-            {/*Line*/} 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
             {/* Character Design Section */}
             <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-2xl mb-6 md:mb-8 font-light text-gray-300">Character Design</h2>
+            
               
                <div className="w-full mb-20 md:mb-40">
                 <img alt="RX-056 Character Design" src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png" className="w-full h-auto mt-20 md:mt-40" />
@@ -438,8 +399,7 @@ const LearnProjectDetail = () => {
    
              <div className="rounded-lg bg-transparent">
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-xl md:text-2xl font-light mb-40 text-gray-300 min-w-[200px]">Level Design
-              </h2>
+            
             </div>
             </div>           
             
@@ -468,21 +428,19 @@ const LearnProjectDetail = () => {
                 <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" />
               </div> 
               
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40">
-                <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
-                  Spatial Design
-                </h2>
-                <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.</p>
-              </div>
-              
-              <div className="w-full">
+
+               <div className="w-full">
                 <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
               </div> 
             </div>
 
 
-            
 
+             {/*Line*/} 
+            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+
+            
 
             {/* Post-Project Section */}
             <div className="rounded-lg bg-transparent">
