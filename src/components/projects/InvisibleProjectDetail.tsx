@@ -161,7 +161,7 @@ const InvisibleProjectDetail = () => {
                   <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
                   <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
                     <li>67% found VR more effective</li>
-                    <li>Gravity & time most impactfu</li>
+                    <li>Gravity & time most impactful</li>
                     <li>Higher curiosity, mixed learning outcomes</li>
                   </ul>
                 </div>
