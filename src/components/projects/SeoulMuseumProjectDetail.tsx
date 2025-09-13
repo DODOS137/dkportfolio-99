@@ -311,13 +311,28 @@ const SeoulMuseumProjectDetail = () => {
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Problem Analysis
               </h2>
+             <div className="flex flex-col space-y-6 md:space-y-8 ">
+            <div>
               <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-4 min-w-[200px] text-gray-400">
                Overcrowded Specimen Displays
                </h3>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
-          
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
+
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-4 min-w-[200px] text-gray-400">
+               Passive Viewing Format
+               </h3>
+              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.
               </p>
+
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-4 min-w-[200px] text-gray-400">
+               Lack of Identity in Spatial Elements
+               </h3>
+              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.
+              </p>
+              </div>
+             </div>
+          
+  
             </div>
           </div>
         
