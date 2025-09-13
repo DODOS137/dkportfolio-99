@@ -123,6 +123,9 @@ const SeoulMuseumProjectDetail = () => {
           </div>
 
 
+         {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          
 
           {/* Summary */}
             <section aria-labelledby="sum-title" className="mt-8">
@@ -293,12 +296,26 @@ const SeoulMuseumProjectDetail = () => {
     <div className="mt-8 space-y-4 text-sm text-gray-400">
 
               {/*idea development text start*/}
-           
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+               Site Selection
+              </h2>
+            </div>
+          </div>
+      
+      
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Problem Analysis
               </h2>
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-4 min-w-[200px] text-gray-400">
+               Overcrowded Specimen Displays
+               </h3>
+              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
+          
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
               </p>
             </div>
@@ -343,40 +360,16 @@ const SeoulMuseumProjectDetail = () => {
 
           
 
-          {/* Approach Section */}
-          <div className="rounded-lg bg-transparent">
-            <div className="mb-8"> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Approach</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
-                Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
-              </p>
-            </div>
-       
-            {/*Development Strategy*/}
-            <div className=""> 
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Development Strategy</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-light text-gray-400">
-                Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
-              </p>
-            </div>
-          </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+
 
 
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-          {/* Site Selection Section */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Site Selection
-              </h2>
-            </div>
-          </div>
+
           
           {/*Site Image*/}     
           <div className="w-full">
@@ -390,33 +383,23 @@ const SeoulMuseumProjectDetail = () => {
 
           {/* Context & Problem Analysis Section */}
          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mt-20 md:mt-40 rounded-lg bg-transparent">
-
-         {/* 왼쪽: h2 제목 */}
           <h2 className="text-xl md:text-2xl mb-6 md:mb-8 font-light text-gray-300 min-w-[200px]">
           Problem Analysis
             </h2>
-
-            {/* 오른쪽: h3 + p 세트들을 세로로 나열 */}
-              <div className="flex flex-col space-y-6 md:space-y-8 ">
-
-           {/* 첫 블록 */}
-           <div>
+          <div className="flex flex-col space-y-6 md:space-y-8 ">
+            <div>
           <h3 className="text-lg md:text-xl lg:text-2xl font-light mb-3 md:mb-4 min-w-[200px] text-gray-300">
          Overcrowded Specimen Displays
           </h3>
          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
           </div>
-
-         {/* 두 번째 블록 */}
-          <div>
+         <div>
          <h3 className="text-lg md:text-xl lg:text-2xl font-light mb-3 md:mb-4 min-w-[200px] text-gray-300">
           Passive Viewing Format
         </h3>
          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.</p>
        </div>
-
-         {/* 세 번째 블록 */}
-           <div>
+        <div>
           <h3 className="text-lg md:text-xl lg:text-2xl font-light mb-3 md:mb-4 min-w-[200px] text-gray-300">
           Lack of Identity in Spatial Elements
            </h3>
