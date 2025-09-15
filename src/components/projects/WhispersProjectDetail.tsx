@@ -430,7 +430,12 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/web1920-whispers from the bottom-29.png" />
           </div>  
 
-           {/* Second YouTube Video Section */}
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+          
+           {/* AR APP YouTube Video Section */}
             <div className="my-40 md:my-40 relative">
             <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
              {/* 유튜브 플레이어 */}
