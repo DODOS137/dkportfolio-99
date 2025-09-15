@@ -443,6 +443,11 @@ const WhispersProjectDetail = () => {
            </AspectRatio>
            </div>
 
+          {/*Process Rendering Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본.png" />
+          </div>
+
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>  
