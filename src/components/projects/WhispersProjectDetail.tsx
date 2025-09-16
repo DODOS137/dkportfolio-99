@@ -93,7 +93,7 @@ const WhispersProjectDetail = () => {
           <div className="rounded-lg bg-transparent">
             <div className="mb-8 mt-20 md:mt-20"> 
               <h2 className="text-xl md:text-xl font-light text-gray-300 min-w-[200px] mb-6 md:mb-8">Client</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+              <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-white">
                 UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
               </p>
             </div>
@@ -218,7 +218,7 @@ const WhispersProjectDetail = () => {
       <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-2xl md:text-xl font-light text-white">Blind Spot</p>
+      <p className="text-2xl md:text-xl font-light text-white">Insight</p>
       <p className="text-sm text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
     </div>
   </div>
