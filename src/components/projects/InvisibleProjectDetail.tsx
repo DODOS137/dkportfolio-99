@@ -469,8 +469,10 @@ const InvisibleProjectDetail = () => {
               </AspectRatio>
             </div>
 
-            {/* Post-Project */}
+            {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+
+            {/* Post-Project */}
             <div className="rounded-lg bg-transparent">
               <h2 className="text-xl md:text-xl font-light text-gray-300">Post-Project Expansion</h2>
               <p className="text-base md:text-base lg:text-base leading-relaxed mb-20 md:mb-40 mt-6 md:mt-8 text-gray-400 font-light">
@@ -489,16 +491,12 @@ const InvisibleProjectDetail = () => {
               <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
                 The exponential growth demonstrated how input-based ecosystems could reflect evolutionary processes.
               </p>
+             </div>
 
-              <div className="w-full mb-6 md:mb-8">
-                <img className="w-full h-auto" src="/lovable-uploads/b4351222-63be-41f6-8fe3-5328dd307929.png" alt="The Ocean 1" />
-                <img
-                  src="/lovable-uploads/e59b9231-29a1-4281-a51d-f6b88b3b2754.png"
-                  className="w-full h-auto mb-20 md:mb-40"
-                  alt="The Ocean 2"
-                />
-              </div>
-            </div>
+          {/*Ocean Web Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
+          </div>
 
             {/* extra images */}
             <div className="w-full">
