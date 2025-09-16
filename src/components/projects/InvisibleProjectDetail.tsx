@@ -368,8 +368,14 @@ const InvisibleProjectDetail = () => {
            </section>
 
 
+
+
              {/* Lines + images/slider... (생략 없이 유지) */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+           
+            {/* Line */}
+            <div className="w-full h-px my-40 md:my-40 bg-gray-500/50" />
+           
+            {/* World buliding Image 1,2*/}
             <div className="w-full">
               <AspectRatio ratio={16 / 9} className="w-full">
                 <img
@@ -380,21 +386,22 @@ const InvisibleProjectDetail = () => {
               </AspectRatio>
               <img
                 alt="World secondary"
-                className="w-full h-auto mt-20 md:mt-40"
+                className="w-full h-auto mt-10 md:mt-10"
                 src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
               />
             </div>
 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+        
+             {/* Red DNA Image 1*/}
             <div className="w-full">
               <img
-                className="w-full h-auto"
+                className="w-full h-auto mb-10 md:mb-10"
                 src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png"
                 alt="Narrative DNA graphic"
               />
             </div>
 
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+            {/* Video Development Image 1*/}
             <div className="w-full">
               <img
                 className="w-full h-auto"
@@ -403,7 +410,11 @@ const InvisibleProjectDetail = () => {
               />
             </div>
 
+             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+           
+            
+            
             <div className="rounded-lg bg-transparent">
               <h2 className="text-xl md:text-xl font-light text-gray-300">Level Design</h2>
               <div className="w-full mb-6 md:mb-8">
