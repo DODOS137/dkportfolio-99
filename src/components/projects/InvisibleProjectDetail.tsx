@@ -395,8 +395,8 @@ const InvisibleProjectDetail = () => {
              {/* Red DNA Image 1*/}
             <div className="w-full">
               <img
-                className="w-full h-auto mt-10 mb-10 md:mt-10 mb-10"
-                src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png"
+                className="w-full h-auto mt-20 mb-20 md:mt-20 mb-20"
+                src="/lovable-uploads/cweb1920-Space Museum_대지 37 사본.png.png"
                 alt="Narrative DNA graphic"
               />
             </div>
