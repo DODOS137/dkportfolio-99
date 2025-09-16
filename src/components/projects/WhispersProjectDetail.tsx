@@ -454,7 +454,7 @@ const WhispersProjectDetail = () => {
 
           {/*Bridge Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/33-1.png" />
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/33_1.png" />
           </div>
 
           
