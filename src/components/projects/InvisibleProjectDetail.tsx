@@ -395,7 +395,7 @@ const InvisibleProjectDetail = () => {
              {/* Red DNA Image 1*/}
             <div className="w-full">
               <img
-                className="w-full h-auto mb-10 md:mb-10"
+                className="w-full h-auto mt-10 mb-10 md:mt-10 mb-10"
                 src="/lovable-uploads/c1d66b75-3492-498c-b403-7745f0656549.png"
                 alt="Narrative DNA graphic"
               />
@@ -414,7 +414,7 @@ const InvisibleProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
            
             
-            
+           {/* Level Image 1,2*/}
             <div className="rounded-lg bg-transparent">
               <h2 className="text-xl md:text-xl font-light text-gray-300">Level Design</h2>
               <div className="w-full mb-6 md:mb-8">
@@ -422,11 +422,13 @@ const InvisibleProjectDetail = () => {
                 <img className="w-full h-auto" src="/lovable-uploads/de89b92f-0e81-40b4-9c85-3c26d7bce4dd.png" alt="Level design 2" />
               </div>
             </div>
-
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-            <div className="w-full mb-6 md:mb-8">
+         
+            {/* Floor Plan Image 1*/}
+             <div className="w-full mb-6 md:mb-8">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_FLOOR1.png" alt="Floor plan" />
             </div>
+
+            
 
             {/* Slider 1 */}
             <div className="w-full mb-20 md:mb-40">
