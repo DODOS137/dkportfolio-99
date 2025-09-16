@@ -448,16 +448,24 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본.png" />
           </div>
 
-          {/*Bridge Image1*/}        
+
+                    
+          {/*Spatial Design Process Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/33_1.png" />
-          </div>
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom1_대지 12.png" />
+          </div>   
+
+
 
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>  
 
-
+       
+          {/*Bridge Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/33_1.png" />
+          </div>
 
           
 
@@ -474,21 +482,7 @@ const WhispersProjectDetail = () => {
 
 
 
-          
-          
-          
-          {/*Spatial Design Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom1_대지 12.png" />
-          </div>   
-
-
-
-
-
-
-          
-           {/*Exhibition Design Image2*/}       
+          {/*Exhibition Design Image2*/}       
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/18099fde-1b4b-4c1b-b9a3-776444f17c15.png" />
           </div>    
