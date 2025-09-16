@@ -396,7 +396,7 @@ const InvisibleProjectDetail = () => {
             <div className="w-full">
               <img
                 className="w-full h-auto mt-20 mb-20 md:mt-20 mb-20"
-                src="/lovable-uploads/cweb1920-Space Museum_대지 37 사본.png.png"
+                src="/lovable-uploads/web1920-Space Museum_대지 37 사본.png"
                 alt="Narrative DNA graphic"
               />
             </div>
@@ -485,12 +485,7 @@ const InvisibleProjectDetail = () => {
                 Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive
                 simulation...
               </p>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
-                The virtual creatures formed clusters akin to coral colonies, restructuring environments over time.
-              </p>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
-                The exponential growth demonstrated how input-based ecosystems could reflect evolutionary processes.
-              </p>
+           
              </div>
 
           {/*Ocean Web Image1*/}        
@@ -500,10 +495,10 @@ const InvisibleProjectDetail = () => {
 
             {/* extra images */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/fa8b3919-07d8-4526-be0b-bc8fc17a65ad.png" alt="Ocean image 1" />
-              <img className="w-full h-auto" src="/lovable-uploads/0e3392f5-3c64-49f8-8f2e-b596c7825eb9.png" alt="Ocean image 2" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 23.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 24.png" alt="Ocean image 2" />
               <img
-                src="/lovable-uploads/521c678d-b282-4234-b283-b5e10cc689b7.png"
+                src="/lovable-uploads/web1920-Space Museum_대지 25.png"
                 className="w-full h-auto mb-20 md:mb-40"
                 alt="Ocean image 3"
               />
@@ -511,15 +506,11 @@ const InvisibleProjectDetail = () => {
 
             <div className="w-full">
               <img
-                src="/lovable-uploads/4e61eb63-34b2-41a8-ba00-18c70125dd28.png"
+                src="/lovable-uploads/web1920-Space Museum_대지 28.png"
                 className="w-full h-auto mb-20 md:mb-40"
                 alt="Ocean image 4"
               />
-              <div className="rounded-lg bg-transparent">
-                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light mb-20 md:mb-40">
-                  The virtual creatures (inspired by early organic matter) formed clusters akin to coral colonies...
-                </p>
-              </div>
+
 
               <div className="w-full">
                 <img
