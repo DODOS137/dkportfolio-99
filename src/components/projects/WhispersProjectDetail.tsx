@@ -53,13 +53,13 @@ const WhispersProjectDetail = () => {
   };
 
   /* ============================
-     ✅ NEW: 이미지 LQIP 지연 로딩 + 스크롤 페이드(이미지/텍스트) + content-visibility
+     ✅ NEW: 이미지 LQIP + 지연 로딩 큐 + 스크롤 페이드 + content-visibility
      ============================ */
   useEffect(() => {
-    // 🔧 FIX: ScrollArea는 자체 스크롤 컨테이너라서, IO root를 그 컨테이너로 지정해야 함
+    // 🔧 FIX: ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
     const scrollRoot =
-      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') // shadcn ScrollArea viewport
-      || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto') // 너가 준 클래스
+      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') // shadcn
+      || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto')
       || null;
 
     // 투명 1x1 픽셀 (초기 네트워크 요청 차단용)
@@ -76,7 +76,7 @@ const WhispersProjectDetail = () => {
       lcpImg.decoding = 'async';
     }
 
-    // 나머지 이미지는 공격적 지연 로딩 (근접 시 data-src -> src)
+    // 나머지 이미지는 공격적 지연 로딩 준비
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
@@ -91,29 +91,75 @@ const WhispersProjectDetail = () => {
       img.decoding = 'async';
       (img as any).fetchPriority = 'low';
 
-      // LQIP 블러 스타일 부여 → 로드 후 자연 전환
-      img.classList.add('img-lqip', 'reveal-init', 'micro-wiggle'); // ✅ NEW: 이미지도 페이드 클래스
-      const onLoad = () => img.classList.remove('img-lqip');
-      img.addEventListener('load', onLoad, { once: true });
+      // LQIP 블러 + 페이드 초기 상태
+      img.classList.add('img-lqip', 'reveal-init'); // 🚀 PERF: micro-wiggle 기본 끔
     });
 
-    // 근접 시 실제 로드 + 페이드 표시
+    /* ----------------------------
+       🚀 PERF: 지연 로딩 큐 (동시 2개)
+       ---------------------------- */
+    const MAX_CONCURRENT = 2;
+    const queue: HTMLImageElement[] = [];
+    let inFlight = 0;
+
+    const processQueue = () => {
+      while (inFlight < MAX_CONCURRENT && queue.length) {
+        const img = queue.shift()!;
+        if (!img || img.dataset.loaded === '1') continue;
+
+        inFlight++;
+        const doReveal = () => {
+          requestAnimationFrame(() => {
+            img.classList.add('reveal-show');
+            img.classList.add('play-wiggle'); // 🚀 PERF: 보일 때만 모션 켬
+            img.dataset.loaded = '1';
+            inFlight--;
+            processQueue();
+          });
+        };
+
+        const ds = img.getAttribute('data-src');
+        if (ds && img.src !== ds) img.src = ds;
+
+        // decode()로 메인 스레드 끊김 최소화
+        if (typeof (img as any).decode === 'function') {
+          (img as any).decode().then(() => {
+            img.classList.remove('img-lqip');
+            doReveal();
+          }).catch(() => {
+            img.classList.remove('img-lqip');
+            doReveal();
+          });
+        } else {
+          const onLoad = () => {
+            img.removeEventListener('load', onLoad);
+            img.classList.remove('img-lqip');
+            doReveal();
+          };
+          img.addEventListener('load', onLoad);
+        }
+      }
+    };
+
+    // 이미지 관찰자: 근접 시 큐에 추가 (오프스크린은 애니메이션/디코딩 안 함)
     const imgIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const img = entry.target as HTMLImageElement;
           if (entry.isIntersecting) {
-            const ds = img.getAttribute('data-src');
-            if (ds && img.src !== ds) img.src = ds;
-            img.classList.add('reveal-show'); // ✅ NEW: 보일 때 페이드 인
             imgIO.unobserve(img);
+            queue.push(img);
+            processQueue();
+          } else {
+            // 오프스크린 되면 미세 모션 중지
+            img.classList.remove('play-wiggle');
           }
         });
       },
       {
-        root: scrollRoot,               // 🔧 FIX: ScrollArea viewport 기준으로 관찰
-        rootMargin: '300px 0px',
-        threshold: 0.01
+        root: scrollRoot,
+        rootMargin: '200px 0px', // 🚀 PERF: 과도한 프리로딩 완화
+        threshold: 0.05
       }
     );
     lazyImgs.forEach((img) => imgIO.observe(img));
@@ -137,7 +183,7 @@ const WhispersProjectDetail = () => {
         });
       },
       {
-        root: scrollRoot,              // 🔧 FIX: 동일하게 ScrollArea 기준
+        root: scrollRoot,
         rootMargin: '0px 0px -10% 0px',
         threshold: 0.12
       }
@@ -545,7 +591,7 @@ const WhispersProjectDetail = () => {
           </div>
         
              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+            <div className="rounded-lg bg-transparent flex flex_col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                 Product Design
               </h2>
@@ -730,34 +776,34 @@ const WhispersProjectDetail = () => {
       <BackToTopButton />
 
       {/* ============================
-          ✅ NEW: 전용 스타일 (LQIP + 이미지/텍스트 페이드 + content-visibility)
+          ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션)
           ============================ */}
       <style>{`
         /* LQIP 블러 상태 */
-        .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 480ms ease; }
+        .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
         .img-lqip.reveal-show { filter: blur(4px); }
 
         /* 이미지: 스크롤 페이드 */
-        .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 900ms ease-out, filter 900ms ease-out; }
+        .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
         .reveal-show { opacity: 1; filter: blur(0); }
 
-        /* 이미지: 미세 '숨쉬기' 모션 */
+        /* 이미지: '보일 때만' 미세 모션 */
         @keyframes microWiggle {
-          0%   { transform: translate3d(0, 1px, 0) scale(1.002); }
-          50%  { transform: translate3d(0, -1px, 0) scale(1.006); }
-          100% { transform: translate3d(0, 1px, 0) scale(1.002); }
+          0%   { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+          50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
+          100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
         }
-        .micro-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
+        .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
 
         /* 텍스트: 페이드 인/아웃 */
-        .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 600ms ease-out, transform 600ms ease-out; will-change: opacity, transform; }
+        .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
         .text-reveal-show { opacity: 1; transform: translateY(0); }
 
         /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
         .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
 
         @media (prefers-reduced-motion: reduce) {
-          .micro-wiggle { animation: none !important; }
+          .play-wiggle { animation: none !important; }
           .reveal-init, .text-reveal-init { transition-duration: 1ms; filter: none; transform: none; }
         }
       `}</style>
