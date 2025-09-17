@@ -268,6 +268,74 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
 
+
+  {/* Client Section */}
+   {/* 반반 레이아웃 */}
+   <div className="rounded-lg bg-transparent cv-auto"> {/* ✅ NEW */}
+  <div className="mb-8 mt-20 md:mt-20 px-0"> 
+    <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
+      Client
+    </h2>
+
+    {/* 텍스트:로고 = 1fr : auto, 오른쪽 딱 붙이기 */}
+    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-start gap-0">
+      {/* 텍스트 영역 */}
+      <div className="min-w-0">
+        <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+         Seodaemun Museum of Natural Hisoty
+        </p>
+      </div>
+
+      {/* 로고 영역 (우측 끝에 붙임) */}
+      <div className="min-w-0 m-0 p-0 justify-self-end">
+        <img
+          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
+          alt="UNESCO Logo"
+          className="block m-0 w-auto max-h-28 md:max-h-32 object-contain border-0 ring-0 outline-none shadow-none"
+          loading="lazy"        // ✅ NEW
+          decoding="async"      // ✅ NEW
+          fetchpriority="low"   // ✅ NEW
+        />
+      </div>
+      
+    </div>
+   
+    
+    <div className="mb-8 mt-20 md:mt-20"> 
+         <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
+      The Brief
+          </h2>
+       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+       Design a spatial renewal strategy that increases visitor engagement through immersive storytelling and interactive media. The proposal should address outdated interiors, limited identity, and reposition the museum as a dynamic hub for science and culture.
+      (Developed as a bachelor’s graduation project, the work involved proposing a reverse brief to the Seodaemun Museum of Natural History. The project received institutional feedback, enabling design refinement based on real-world expectations for museum renewal.
+
+While not a direct commission, the project was conducted in dialogue with the museum, positioning the work within a professional framework of client-oriented research and feedback.)
+       </p>
+       
+      </div>
+
+     <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+      <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
+         Full Brief
+  </summary>
+  <div className="px-4 pb-4 pt-6 space-y-8">
+    <div>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        1. Renewal – Redefine outdated spaces with a contemporary design language.
+      </p>
+    </div>
+
+    <div>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        2. Interior & Circulation – Upgrade spatial flow and modernise interiors to enhance visitor comfort.
+      </p>
+    </div>
+
+  </div>
+</details>
+ </div>
+</div>
+
           {/* YouTube Video Section */}
           <div className="rounded-lg bg-transparent mb-40 mt-40 md:mb-40">
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
@@ -279,7 +347,7 @@ const SeoulMuseumProjectDetail = () => {
           </div>
 
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
           
           {/* Summary */}
             <section aria-labelledby="sum-title" className="mt-8">
@@ -525,11 +593,11 @@ const SeoulMuseumProjectDetail = () => {
            </section>
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
           {/*Site Image*/}     
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/6738a528-de77-4edc-b034-3e77c4fc50d0.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/6738a528-de77-4edc-b034-3e77c4fc50d0.png" />
           </div>   
 
           {/*Site Image*/}     
@@ -538,15 +606,14 @@ const SeoulMuseumProjectDetail = () => {
           </div>     
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
 
           {/* Narrative */}
           <div className="w-full">
             <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" />
           </div> 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>          
+                
 
           {/* Floor Plan */}
           <div className="w-full mb-20 md:mb-40">
@@ -559,8 +626,6 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
              </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Spatial Design */}
           <div className="rounded-lg bg-transparent">
