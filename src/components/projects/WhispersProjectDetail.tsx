@@ -103,7 +103,7 @@ const WhispersProjectDetail = () => {
       <img 
         src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png" 
         alt="UNESCO Logo" 
-        className="h-8 w-auto"
+        className="h-8 w-Full"
       />
     </div>
     <div className="mb-8 mt-20 md:mt-20"> 
