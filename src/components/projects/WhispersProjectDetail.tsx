@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'; // ✅ NEW
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube'; // (미사용) 성능 최적화로 대체
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import { whispersProjectData } from '@/data/whispersProject';
@@ -12,7 +12,7 @@ import BackToTopButton from '@/components/BackToTopButton';
 import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 
 /* ============================
-   ✅ NEW: 경량 YouTube 컴포넌트 (썸네일 → 클릭 시 iframe 로드)
+   ✅ NEW: 경량 YouTube (썸네일 → 클릭 시 iframe 로드)
    ============================ */
 const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
   const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
@@ -52,15 +52,17 @@ const WhispersProjectDetail = () => {
     }
   };
 
-  // ✅ NEW: 고급 이미지 지연 로딩(LQIP) + 이미지/텍스트 스크롤 페이드/미세모션
+  /* ============================
+     ✅ NEW: 이미지 LQIP 지연 로딩 + 스크롤 페이드(이미지/텍스트) + content-visibility
+     ============================ */
   useEffect(() => {
-    // 1x1 투명 픽셀
+    // 투명 1x1 픽셀 (초기 네트워크 요청 차단용)
     const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
 
-    // 섹션 내 모든 이미지 수집
+    // 모든 이미지 수집
     const allImgs = Array.from(document.querySelectorAll<HTMLImageElement>('section img'));
 
-    // 첫 번째 이미지(LCP 후보)는 빠르게
+    // LCP 후보(맨 위 큰 이미지)는 즉시 로드
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
@@ -68,28 +70,28 @@ const WhispersProjectDetail = () => {
       lcpImg.decoding = 'async';
     }
 
-    // 나머지 이미지는 공격적 지연 로딩 (근접 시에만 실제 src 주입)
+    // 나머지 이미지는 공격적 지연 로딩 (근접 시 data-src -> src)
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
-      if (img.dataset.lazyEnhanced === '1') return;
+      if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
       img.dataset.lazyEnhanced = '1';
 
       const originalSrc = img.getAttribute('src');
       if (!originalSrc) return;
 
       img.setAttribute('data-src', originalSrc);
-      img.setAttribute('src', transparentPixel); // 초기 네트워크 요청 방지
+      img.setAttribute('src', transparentPixel);
       img.loading = 'lazy';
       img.decoding = 'async';
       (img as any).fetchPriority = 'low';
 
-      // LQIP 블러로 자연스러운 전환
+      // LQIP 블러 스타일 부여 → 로드 후 자연 전환
       img.classList.add('img-lqip');
       const onLoad = () => img.classList.remove('img-lqip');
       img.addEventListener('load', onLoad, { once: true });
     });
 
-    // 근접 시 실제 로드 수행
+    // 근접 시 실제 로드
     const imgIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -107,10 +109,10 @@ const WhispersProjectDetail = () => {
     );
     lazyImgs.forEach((img) => imgIO.observe(img));
 
-    // 이미지: 스크롤 페이드 + 미세 모션
+    // 이미지: 스크롤 페이드 및 미세 모션
     allImgs.forEach((el) => el.classList.add('reveal-init', 'micro-wiggle'));
 
-    // 텍스트 노드: 스크롤 페이드 인
+    // 텍스트 노드: 스크롤 페이드 인/아웃
     const textNodes = document.querySelectorAll<HTMLElement>(
       'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
@@ -119,6 +121,7 @@ const WhispersProjectDetail = () => {
         el.classList.add('text-reveal-init');
       }
     });
+
     const textIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -135,7 +138,7 @@ const WhispersProjectDetail = () => {
       imgIO.disconnect();
       textIO.disconnect();
     };
-  }, []);
+  }, []); // ✅ NEW
 
   return (
     <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
@@ -163,16 +166,16 @@ const WhispersProjectDetail = () => {
         </section>
 
         {/* Main Content */}
-        <section className="cv-auto"> {/* ✅ NEW: content-visibility로 뷰포트 밖 렌더 비용 절감 */}
+        <section className="cv-auto"> {/* ✅ NEW: content-visibility */}
           {/* First Image */}
           <div className="max-w-[1540px] mx-auto z-10">
             <img
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               src="/lovable-uploads/801c52bc-cbaa-4c2f-a6ec-6d86c1a70034.png"
-              loading="eager"                // ✅ NEW
-              fetchpriority="high"          // ✅ NEW
-              decoding="async"              // ✅ NEW
+              loading="eager"           // ✅ NEW
+              fetchpriority="high"     // ✅ NEW
+              decoding="async"         // ✅ NEW
             />
           </div>
 
@@ -186,7 +189,7 @@ const WhispersProjectDetail = () => {
               <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
                 Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
               </p>
-
+              
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-sm">
                 <div>
                   <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
@@ -209,8 +212,8 @@ const WhispersProjectDetail = () => {
 
             {/* Client Section */}
             {/* 반반 레이아웃 */}
-            <div className="rounded-lg bg-transparent cv-auto"> {/* ✅ NEW */}
-              <div className="mb-8 mt-20 md:mt-20 px-0">
+            <div className="rounded-lg bg-transparent cv-auto"> {/* ✅ NEW: content-visibility */}
+              <div className="mb-8 mt-20 md:mt-20 px-0"> 
                 <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
                   Client
                 </h2>
@@ -236,9 +239,11 @@ const WhispersProjectDetail = () => {
                       fetchpriority="low"   // ✅ NEW
                     />
                   </div>
+                  
                 </div>
-
-                <div className="mb-8 mt-20 md:mt-20">
+              
+                
+                <div className="mb-8 mt-20 md:mt-20"> 
                   <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
                     The Brief
                   </h2>
@@ -282,18 +287,19 @@ const WhispersProjectDetail = () => {
               </div>
             </div>
 
-            {/* YouTube Video Section (Lite) */}
-            <div className="my-40 md:my-40 relative cv-auto"> {/* ✅ NEW */}
+            {/* YouTube Video Section */}
+            <div className="my-40 md:my-40"> 
               <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
-                <LiteYouTube id="zqz3Owz0K3o" title="Project video" /> {/* ✅ NEW */}
+                {/* <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" /> */}
+                <LiteYouTube id="zqz3Owz0K3o" title="Project video" /> {/* ✅ NEW: 경량 임베드 */}
               </AspectRatio>
-            </div>
-
-            {/*Line*/}
+            </div>          
+            
+            {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* Challenge Summary */}
-            <section aria-labelledby="car-title" className="mt-8 cv-auto"> {/* ✅ NEW */}
+            <section aria-labelledby="car-title" className="mt-8">
               <h2 id="car-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">Summary</h2>
 
               <div className="grid md:grid-cols-3 gap-4">
@@ -331,7 +337,7 @@ const WhispersProjectDetail = () => {
             </section>
 
             {/* Challenge full text*/}    
-            <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black cv-auto"> {/* ✅ NEW */}
+            <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
               <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
                 Full text
               </summary>
@@ -367,7 +373,7 @@ const WhispersProjectDetail = () => {
             </details>
 
             {/*Research*/}
-            <section id="research" aria-labelledby="research-title" className="mb-20 cv-auto"> {/* ✅ NEW */}
+            <section id="research" aria-labelledby="research-title" className="mb-20">
               <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -398,7 +404,7 @@ const WhispersProjectDetail = () => {
             </section>
 
             {/* Process Section */}
-            <section id="process" className="rounded-lg bg-black cv-auto"> {/* ✅ NEW */}
+            <section id="process" className="rounded-lg bg-black">
               <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
                 <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
@@ -420,7 +426,7 @@ const WhispersProjectDetail = () => {
             </section>
 
             {/* Tools & Roles Table */}
-            <div className="mb-20 md:mb-20 cv-auto"> {/* ✅ NEW */}
+            <div className="mb-20 md:mb-20">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">
                 Tools & Roles
               </h2>
@@ -466,7 +472,7 @@ const WhispersProjectDetail = () => {
             </div>
 
             {/* Design Highlights */}       
-            <section id="design" className="mt-10 cv-auto"> {/* ✅ NEW */}
+            <section id="design" className="mt-10">
               <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
               <ul className="space-y-3 text-gray-300">
                 <li>• Sound as narrative; bioacoustics drive empathy.</li>
@@ -485,9 +491,7 @@ const WhispersProjectDetail = () => {
                       <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                         Idea Development
                       </h2>
-                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                        Sound is treated not just as data but as a narrative layer. Scientific studies revealing the bioacoustics of marine invertebrates were used to frame the emotional tone of the exhibition. The project highlights how sonic signals from these animals reveal behavioural patterns and ecosystem health. These acoustic ecologies become a channel to foster empathy and reframe conservation dialogue. While marine mammals like whales and dolphins receive outsized attention due to their intelligence and emotional expressiveness, lesser-known species—particularly invertebrates and bottom-dwellers—remain largely excluded from both public empathy and conservation priorities. This project aims to redress that imbalance by amplifying the voices of species that are hidden, both physically and culturally, from mainstream awareness.
-                      </p>
+                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is treated not just as data but as a narrative layer. Scientific studies revealing the bioacoustics of marine invertebrates were used to frame the emotional tone of the exhibition. The project highlights how sonic signals from these animals reveal behavioural patterns and ecosystem health. These acoustic ecologies become a channel to foster empathy and reframe conservation dialogue. While marine mammals like whales and dolphins receive outsized attention due to their intelligence and emotional expressiveness, lesser-known species—particularly invertebrates and bottom-dwellers—remain largely excluded from both public empathy and conservation priorities. This project aims to redress that imbalance by amplifying the voices of species that are hidden, both physically and culturally, from mainstream awareness.</p>
                     </div>
                   </div>
                 
@@ -496,8 +500,7 @@ const WhispersProjectDetail = () => {
                       <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                         Product Design
                       </h2>
-                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                        Custom-designed headset stands emulate smoothed underwater rocks, integrating both audio hardware and tactile visuality. Each plinth invites solitary listening through high-resolution recordings of marine species. The subtlety of these soundscapes becomes a form of protest against the visual-centric bias of most exhibitions.
+                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Custom-designed headset stands emulate smoothed underwater rocks, integrating both audio hardware and tactile visuality. Each plinth invites solitary listening through high-resolution recordings of marine species. The subtlety of these soundscapes becomes a form of protest against the visual-centric bias of most exhibitions.
                       </p>
                     </div>
                   </div>
@@ -508,8 +511,7 @@ const WhispersProjectDetail = () => {
                       <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                         Spatial Design
                       </h2>
-                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                        Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.
+                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.
                       </p>
                     </div>
                   </div>
@@ -520,8 +522,7 @@ const WhispersProjectDetail = () => {
                       <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
                         Exhibition Design
                       </h2>
-                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                        The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.
+                      <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.
                       </p>
                     </div>
                   </div>
@@ -572,10 +573,12 @@ const WhispersProjectDetail = () => {
             {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* AR APP YouTube Video Section (Lite) */}
-            <div className="my-40 md:my-40 relative cv-auto">
+            {/* AR APP YouTube Video Section */}
+            <div className="my-40 md:my-40 relative">
               <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
-                <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
+                {/* 유튜브 플레이어 */}
+                {/* <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" /> */}
+                <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW: 경량 임베드 */}
               </AspectRatio>
             </div>
 
@@ -624,10 +627,10 @@ const WhispersProjectDetail = () => {
             <div className="w-full">
               <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/a522c24b-08cb-42ad-85ad-aacfd97ff5bc.png" />
             </div>            
-          
+            
           </div>
         </section>
-      
+        
         {/*Navigation Section*/}
         <div className="pb-40 md:pb-60 flex items-center justify-center">
           <Link to="/project/invisible-space-museum" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
@@ -635,13 +638,15 @@ const WhispersProjectDetail = () => {
             <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
           </Link>
         </div>
-      
+        
         <BackToTopButton />
 
-        {/* ✅ NEW: 전용 스타일 (LQIP + 이미지/텍스트 페이드 + content-visibility) */}
+        {/* ============================
+            ✅ NEW: 전용 스타일 (LQIP + 이미지/텍스트 페이드 + content-visibility)
+            ============================ */}
         <style>{`
           /* LQIP 블러 상태 */
-          .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 500ms ease; }
+          .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 480ms ease; }
           .img-lqip.reveal-show { filter: blur(4px); }
 
           /* 이미지: 스크롤 페이드 */
@@ -656,11 +661,11 @@ const WhispersProjectDetail = () => {
           }
           .micro-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
 
-          /* 텍스트: 페이드 인 */
+          /* 텍스트: 페이드 인/아웃 */
           .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 600ms ease-out, transform 600ms ease-out; will-change: opacity, transform; }
           .text-reveal-show { opacity: 1; transform: translateY(0); }
 
-          /* content-visibility 로 뷰포트 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
+          /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
           .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
 
           @media (prefers-reduced-motion: reduce) {
