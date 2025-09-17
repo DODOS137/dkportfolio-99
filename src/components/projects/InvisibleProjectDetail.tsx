@@ -608,8 +608,10 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
 
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
+            
             {/* Full Playing Video */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
             <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8"></h2>
             <div className="mb-6 md:mb-8">
               <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
@@ -624,13 +626,13 @@ const InvisibleProjectDetail = () => {
             {/* Post-Project */}
             <div className="rounded-lg bg-transparent">
               <h2 className="text-xl md:text-xl font-light text-gray-300">Post-Project Expansion</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-10 md:mb-6 mt-0 md:mt-0 mb-6 text-gray-400 font-light">
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-6 mt-0 md:mt-0 mb-6 text-gray-400 font-light">
                 To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input
                 variables that influenced how virtual organisms adapted within a bounded environment.
               </p>
 
-              <h2 className="text-xl md:text-xl font-light mb-10 md:mb-10 text-gray-300">The Ocean (2025)</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-6 text-gray-400 font-light">
+              <h2 className="text-xl md:text-xl font-light mb-6 md:mb-6 text-gray-300">The Ocean (2025)</h2>
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-20 md:mb-20 text-gray-400 font-light">
                 Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive
                 simulation...
               </p>
@@ -639,7 +641,7 @@ const InvisibleProjectDetail = () => {
 
           {/*Ocean Web Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
           </div>
 
             {/* extra images */}
@@ -656,21 +658,21 @@ const InvisibleProjectDetail = () => {
             <div className="w-full">
               <img
                 src="/lovable-uploads/web1920-Space Museum_대지 28.png"
-                className="w-full h-auto mb-20 md:mb-40"
+                className="w-full h-auto mb-20 md:mb-20"
                 alt="Ocean image 4"
               />
 
               <div className="w-full">
                 <img
                   src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png"
-                  className="w-full h-auto mb-20 md:mb-40"
+                  className="w-full h-auto mb-20 md:mb-20"
                   alt="Ocean image 5"
                 />
               </div>
             </div>
 
             {/* Slider 2 */}
-            <div className="w-full mb-20 md:mb-40">
+            <div className="w-full mb-40 md:mb-40">
               <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{ loop: true }}>
                 <CarouselContent>
                   {secondSliderImages.map((image, index) => (
