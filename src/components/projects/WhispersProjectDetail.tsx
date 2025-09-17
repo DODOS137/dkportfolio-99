@@ -101,7 +101,7 @@ const WhispersProjectDetail = () => {
     {/* 텍스트:로고 = 1fr : auto, 오른쪽 딱 붙이기 */}
     <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-0">
       {/* 텍스트 영역 */}
-      <div className="min-w-0 pr-6">
+      <div className="min-w-0">
         <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
           UNESCO IOC (Intergovernmental Oceanographic Commission), 
           in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
