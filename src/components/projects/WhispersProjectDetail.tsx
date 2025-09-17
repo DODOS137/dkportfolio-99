@@ -101,12 +101,21 @@ const WhispersProjectDetail = () => {
         in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
       <img 
-        src="/images/web1920-whispers from the bottom_대지 24 사본.png" 
+        src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png" 
         alt="UNESCO Logo" 
         className="h-8 w-auto"
       />
     </div>
-  </div>
+    <div className="mb-8 mt-20 md:mt-20"> 
+         <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
+      The Brief
+          </h2>
+       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+        Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of Ocean Science for Sustainable Development (2021-2030), tasks students to explore the crucial intersection between the ocean and the climate
+      </p>
+      </div>
+
+ </div>
 </div>
 
         
