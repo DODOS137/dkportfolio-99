@@ -190,6 +190,50 @@ const WhispersProjectDetail = () => {
     );
     textNodes.forEach((el) => textIO.observe(el));
 
+    /* ============================
+       ✅ NEW: 베이지 레이어 자동화 (라인을 경계로 섹션 분리)
+       - 시작 위치: 히어로 첫 이미지 '아래'의 공유 컨테이너(data-layer-scope="1")
+       ============================ */
+    const scope = document.querySelector<HTMLElement>('[data-layer-scope="1"]');
+    if (scope && scope.dataset.layerized !== '1') {
+      const isSeparator = (el: Element) => {
+        if (!(el instanceof HTMLElement)) return false;
+        const cls = el.className?.toString() || '';
+        // 네가 사용하는 라인 패턴을 식별
+        return cls.includes('w-full') && cls.includes('h-px');
+      };
+
+      const children = Array.from(scope.children);
+      let chunk: HTMLElement[] = [];
+      let toneIndex = 0; // 0=low-saturation beige, 1=high-saturation beige
+
+      const wrapChunk = (nodes: HTMLElement[]) => {
+        if (!nodes.length) return;
+        // 이미 래핑되었는지 체크
+        if (nodes[0].parentElement && nodes[0].parentElement.classList.contains('beige-layer')) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = `beige-layer tone-${toneIndex % 2}`;
+        // 노드 앞에 삽입하고 차례로 이동
+        nodes[0].parentElement?.insertBefore(wrapper, nodes[0]);
+        nodes.forEach(n => wrapper.appendChild(n));
+        toneIndex += 1;
+      };
+
+      for (const el of children) {
+        if (isSeparator(el)) {
+          // 직전 chunk를 래핑하고, 구분선은 그대로 유지
+          wrapChunk(chunk);
+          chunk = [];
+        } else {
+          chunk.push(el as HTMLElement);
+        }
+      }
+      // 마지막 남은 chunk
+      wrapChunk(chunk);
+      scope.dataset.layerized = '1';
+    }
+
     return () => {
       imgIO.disconnect();
       textIO.disconnect();
@@ -235,8 +279,8 @@ const WhispersProjectDetail = () => {
           />
         </div>
 
-        {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
+        {/* Shared Container (⬇️ 여기부터 레이어 적용 범위) */}
+        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10" data-layer-scope="1">        
           {/* Project Description */}
           <div className="rounded-lg bg-transparent mt-20 md:mt-20">
             <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light">
@@ -776,9 +820,16 @@ const WhispersProjectDetail = () => {
       <BackToTopButton />
 
       {/* ============================
-          ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션)
+          ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션 + 베이지 레이어)
           ============================ */}
       <style>{`
+        :root {
+          --beige-low:  #F1ECE3; /* 저채도 베이지 */
+          --beige-high: #E6D8BF; /* 상대적으로 높은 채도 */
+          --beige-shadow: rgba(20, 16, 8, 0.25);
+          --beige-border: rgba(20, 16, 8, 0.08);
+        }
+
         /* LQIP 블러 상태 */
         .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
         .img-lqip.reveal-show { filter: blur(4px); }
@@ -801,6 +852,39 @@ const WhispersProjectDetail = () => {
 
         /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
         .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
+
+        /* ✅ 베이지 레이어 (라인을 경계로 자동 번갈아 적용) */
+        .beige-layer {
+          position: relative;
+          border-radius: 1.25rem; /* 20px */
+          padding: 1.25rem;       /* 내부 여백 살짝 */
+          margin: 2rem 0;         /* 레이어 간격 */
+          overflow: hidden;
+          border: 1px solid var(--beige-border);
+          box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.35),
+            0 24px 40px -24px var(--beige-shadow);
+        }
+        .beige-layer.tone-0 {
+          background: radial-gradient(120% 120% at 50% -10%, rgba(255,255,255,0.55) 0%, transparent 55%), var(--beige-low);
+        }
+        .beige-layer.tone-1 {
+          background: radial-gradient(120% 120% at 50% -10%, rgba(255,255,255,0.45) 0%, transparent 55%), var(--beige-high);
+        }
+        .beige-layer::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: linear-gradient(to bottom, rgba(255,255,255,0.07), transparent 18%, transparent 82%, rgba(0,0,0,0.06));
+          mix-blend-mode: soft-light;
+        }
+
+        /* 레이어 안의 본문 대비 유지 */
+        .beige-layer :is(p, li, h2, h3, h4, h5, h6, td, th, summary) { color: rgba(12, 10, 6, 0.82); }
+        .beige-layer .text-gray-300 { color: rgba(12, 10, 6, 0.75) !important; }
+        .beige-layer .text-gray-400 { color: rgba(12, 10, 6, 0.68) !important; }
+        .beige-layer .bg-black { background-color: rgba(0,0,0,0.75) !important; } /* 비디오 섹션 보호 */
 
         @media (prefers-reduced-motion: reduce) {
           .play-wiggle { animation: none !important; }
