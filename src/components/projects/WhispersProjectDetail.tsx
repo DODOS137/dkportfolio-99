@@ -89,9 +89,11 @@ const WhispersProjectDetail = () => {
             </div>
           </div>
 
-         {/* Client Section */}
-
-    {/* 반반 레이아웃 */}
+    
+          
+          
+  {/* Client Section */}
+   {/* 반반 레이아웃 */}
    <div className="rounded-lg bg-transparent">
   <div className="mb-8 mt-20 md:mt-20 px-0"> 
     <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
@@ -180,7 +182,7 @@ const WhispersProjectDetail = () => {
           
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
 
 
@@ -395,7 +397,8 @@ const WhispersProjectDetail = () => {
     <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
     <div className="mt-8 space-y-4 text-sm text-gray-400">
 
-              {/*idea development text start*/}
+      
+  {/*idea development text start*/}
            
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
@@ -452,8 +455,12 @@ const WhispersProjectDetail = () => {
 
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+         
+          
+          
+          
           {/* Graphic design images Section */}
  
             {/*Development Image1*/}     
@@ -501,7 +508,7 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
           
            {/* AR APP YouTube Video Section */}
@@ -528,7 +535,7 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>  
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>  
 
        
           {/*Bridge Image1*/}        
@@ -561,10 +568,15 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/f0ebae04-0162-4e48-8470-2fc716cc1f31.png" />
           </div>   
 
-           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>  
+       
+          
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>  
 
-         {/*End Image*/}       
+       
+          
+          
+          {/*End Image*/}       
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/a522c24b-08cb-42ad-85ad-aacfd97ff5bc.png" />
           </div>            
