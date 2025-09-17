@@ -98,6 +98,26 @@ const WhispersProjectDetail = () => {
               </p>
             </div>
           </div>
+
+          <div className="rounded-lg bg-transparent">
+       <div className="mb-8 mt-20 md:mt-20"> 
+         <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
+        Client
+        </h2>
+       <div className="flex items-center gap-4">
+      <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+        UNESCO IOC (Intergovernmental Oceanographic Commission), 
+        in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
+      </p>
+      <img 
+        src="/images/unesco-logo.png" 
+        alt="UNESCO Logo" 
+        className="h-8 w-auto"
+      />
+    </div>
+  </div>
+</div>
+
         
 
           {/* YouTube Video Section */}
