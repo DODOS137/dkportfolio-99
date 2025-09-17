@@ -353,7 +353,7 @@ const WhispersProjectDetail = () => {
 
           {/* YouTube Video Section */}
           <div className="my-40 md:my-40">
-            <AspectRatio ratio={16 / 9} className="rounded-lg border border-black overflow-hidden">
+            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
               {/* 유튜브 플레이어 */}
               {/* <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" /> */}
               <LiteYouTube id="zqz3Owz0K3o" title="Project video" /> {/* ✅ NEW */}
@@ -694,7 +694,7 @@ const WhispersProjectDetail = () => {
           
            {/* AR APP YouTube Video Section */}
             <div className="my-40 md:my-40 relative">
-            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
+            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
              {/* 유튜브 플레이어 */}
             {/* <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" /> */}
             <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
