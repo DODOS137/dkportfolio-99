@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // ✅ NEW
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube'; // (미사용) 성능 최적화로 대체 ✅ NEW
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import ModelViewer from '@/components/ModelViewer';
@@ -14,6 +14,33 @@ import ProcessGrid from './shared/ProcessGrid';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
 import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
+
+/* ============================
+   ✅ NEW: 경량 YouTube (썸네일 → 클릭 시 iframe 로드)
+   ============================ */
+const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
+  const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  const src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
+  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const wrapper = (e.currentTarget.parentElement as HTMLElement);
+    if (!wrapper) return;
+    wrapper.innerHTML = `<iframe title="${title}" src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
+  };
+  return (
+    <div className={`relative w-full h-full bg-black ${className}`}>
+      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+      <button
+        onClick={onClick}
+        className="absolute inset-0 w-full h-full flex items-center justify-center"
+        aria-label="Play video"
+      >
+        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
+          ▶ PLAY
+        </span>
+      </button>
+    </div>
+  );
+};
 
 const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
@@ -28,6 +55,149 @@ const SeoulMuseumProjectDetail = () => {
     items: ["Brand Integration", "Modern Design Principles"]
   }];
   const heroRef = useScrollAnimation();
+
+  /* ============================
+     ✅ NEW: 이미지 LQIP + 지연 로딩 큐 + 스크롤 페이드 + content-visibility
+     ============================ */
+  useEffect(() => {
+    // 🔧 ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
+    const scrollRoot =
+      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') // shadcn
+      || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto')
+      || null;
+
+    // 투명 1x1 픽셀 (초기 네트워크 요청 차단용)
+    const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+
+    // 모든 이미지 수집
+    const allImgs = Array.from(document.querySelectorAll<HTMLImageElement>('section img'));
+
+    // LCP 후보(맨 위 큰 이미지)는 즉시 로드
+    const lcpImg = allImgs[0];
+    if (lcpImg) {
+      lcpImg.loading = 'eager';
+      (lcpImg as any).fetchPriority = 'high';
+      lcpImg.decoding = 'async';
+    }
+
+    // 나머지 이미지는 공격적 지연 로딩 준비
+    const lazyImgs = allImgs.slice(1);
+    lazyImgs.forEach((img) => {
+      if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
+      img.dataset.lazyEnhanced = '1';
+
+      const originalSrc = img.getAttribute('src');
+      if (!originalSrc) return;
+
+      img.setAttribute('data-src', originalSrc);
+      img.setAttribute('src', transparentPixel);
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      (img as any).fetchPriority = 'low';
+
+      // LQIP 블러 + 페이드 초기 상태
+      img.classList.add('img-lqip', 'reveal-init'); // 보일 때만 해제
+    });
+
+    /* ----------------------------
+       🚀 PERF: 지연 로딩 큐 (동시 2개)
+       ---------------------------- */
+    const MAX_CONCURRENT = 2;
+    const queue: HTMLImageElement[] = [];
+    let inFlight = 0;
+
+    const processQueue = () => {
+      while (inFlight < MAX_CONCURRENT && queue.length) {
+        const img = queue.shift()!;
+        if (!img || img.dataset.loaded === '1') continue;
+
+        inFlight++;
+        const doReveal = () => {
+          requestAnimationFrame(() => {
+            img.classList.add('reveal-show');
+            img.classList.add('play-wiggle'); // 보일 때만 모션 켬
+            img.dataset.loaded = '1';
+            inFlight--;
+            processQueue();
+          });
+        };
+
+        const ds = img.getAttribute('data-src');
+        if (ds && img.src !== ds) img.src = ds;
+
+        if (typeof (img as any).decode === 'function') {
+          (img as any).decode().then(() => {
+            img.classList.remove('img-lqip');
+            doReveal();
+          }).catch(() => {
+            img.classList.remove('img-lqip');
+            doReveal();
+          });
+        } else {
+          const onLoad = () => {
+            img.removeEventListener('load', onLoad);
+            img.classList.remove('img-lqip');
+            doReveal();
+          };
+          img.addEventListener('load', onLoad);
+        }
+      }
+    };
+
+    // 이미지 관찰자: 근접 시 큐에 추가
+    const imgIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const img = entry.target as HTMLImageElement;
+          if (entry.isIntersecting) {
+            imgIO.unobserve(img);
+            queue.push(img);
+            processQueue();
+          } else {
+            img.classList.remove('play-wiggle');
+          }
+        });
+      },
+      {
+        root: scrollRoot,
+        rootMargin: '200px 0px',
+        threshold: 0.05
+      }
+    );
+    lazyImgs.forEach((img) => imgIO.observe(img));
+
+    // 텍스트 노드: 스크롤 페이드 인/아웃
+    const textNodes = document.querySelectorAll<HTMLElement>(
+      'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
+    );
+    textNodes.forEach((el) => {
+      if (!el.classList.contains('text-reveal-init')) {
+        el.classList.add('text-reveal-init');
+      }
+    });
+
+    const textIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
+          if (entry.isIntersecting) el.classList.add('text-reveal-show');
+          else el.classList.remove('text-reveal-show');
+        });
+      },
+      {
+        root: scrollRoot,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.12
+      }
+    );
+    textNodes.forEach((el) => textIO.observe(el));
+
+    return () => {
+      imgIO.disconnect();
+      textIO.disconnect();
+    };
+  }, []); // ✅ NEW
+
   return (
    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
     <ProjectLayout>
@@ -54,10 +224,17 @@ const SeoulMuseumProjectDetail = () => {
       </section>
 
       {/* Main Content */}
-      <section className="">
+      <section className="cv-auto"> {/* ✅ NEW: content-visibility */}
         {/* First Image - Updated */}
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
-          <img alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" src="/lovable-uploads/db58f1e0-0fea-4b68-953c-59d4580ad411.png" />
+          <img
+            alt={`${project.title} - Image 1`}
+            className="w-full h-auto object-contain"
+            src="/lovable-uploads/db58f1e0-0fea-4b68-953c-59d4580ad411.png"
+            loading="eager"           // ✅ NEW
+            fetchpriority="high"     // ✅ NEW
+            decoding="async"         // ✅ NEW
+          />
         </div>
 
         {/* Shared Container */} 
@@ -91,42 +268,19 @@ const SeoulMuseumProjectDetail = () => {
             </div>
           </div>
 
-       
-
           {/* YouTube Video Section */}
           <div className="rounded-lg bg-transparent mb-40 mt-40 md:mb-40">
             <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
               <AspectRatio ratio={16 / 9} className="w-full">
-                <YouTube videoId="8GEK3igRom0" opts={{
-                width: '100%',
-                height: '100%',
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  showinfo: 0,
-                  modestbranding: 1,
-                  fs: 1,
-                  cc_load_policy: 0,
-                  iv_load_policy: 3,
-                  autohide: 1,
-                  disablekb: 0,
-                  enablejsapi: 1,
-                  origin: window.location.origin,
-                  branding: 0,
-                  color: 'white',
-                  theme: 'dark'
-                }
-              }} className="w-full h-full" iframeClassName="w-full h-full border-0" />
+                {/* <YouTube videoId="8GEK3igRom0" ... />  */} {/* ✅ REPLACED */}
+                <LiteYouTube id="8GEK3igRom0" title="Seoul Museum Project Video" /> {/* ✅ NEW */}
               </AspectRatio>
             </div>
           </div>
 
-
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
           
-
           {/* Summary */}
             <section aria-labelledby="sum-title" className="mt-8">
               <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
@@ -332,7 +486,6 @@ const SeoulMuseumProjectDetail = () => {
               </div>
              </div>
           
-  
             </div>
           </div>
         
@@ -367,25 +520,13 @@ const SeoulMuseumProjectDetail = () => {
               </div>
             </div>
 
-     
-
-               </div>  
+             </div>  
              </details>
            </section>
-
-          
-
-
-
-
-
-
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
-
-          
           {/*Site Image*/}     
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/6738a528-de77-4edc-b034-3e77c4fc50d0.png" />
@@ -396,18 +537,13 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" />
           </div>     
 
- 
-
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
           {/* Narrative */}
-
           <div className="w-full">
             <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" />
           </div> 
-
-
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>          
@@ -423,8 +559,6 @@ const SeoulMuseumProjectDetail = () => {
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
              </div>
 
- 
-
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
@@ -436,7 +570,6 @@ const SeoulMuseumProjectDetail = () => {
          </div>
 
           {/*Lobby Images*/}
-
           <div className="w-full mb-20 md:mb-40">
             <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
               </div>
@@ -530,8 +663,6 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
 
- 
-          
             {/*End Image */}
            <div className="w-full mb-40 md:mb-40">
             <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-40 md:mb-0" />
@@ -558,10 +689,42 @@ const SeoulMuseumProjectDetail = () => {
         </div>)}
         
       <BackToTopButton />
+
+      {/* ============================
+          ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션)
+          ============================ */}
+      <style>{`
+        /* LQIP 블러 상태 */
+        .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
+        .img-lqip.reveal-show { filter: blur(4px); }
+
+        /* 이미지: 스크롤 페이드 */
+        .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
+        .reveal-show { opacity: 1; filter: blur(0); }
+
+        /* 이미지: '보일 때만' 미세 모션 */
+        @keyframes microWiggle {
+          0%   { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+          50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
+          100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+        }
+        .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
+
+        /* 텍스트: 페이드 인/아웃 */
+        .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
+        .text-reveal-show { opacity: 1; transform: translateY(0); }
+
+        /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
+        .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .play-wiggle { animation: none !important; }
+          .reveal-init, .text-reveal-init { transition-duration: 1ms; filter: none; transform: none; }
+        }
+      `}</style>
     </ProjectLayout>
       </ScrollArea>
   );
 };
 
-     
 export default SeoulMuseumProjectDetail;
