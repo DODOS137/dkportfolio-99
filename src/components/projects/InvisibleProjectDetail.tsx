@@ -33,7 +33,7 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
         className="absolute inset-0 w-full h-full flex items-center justify-center"
         aria-label="Play video"
       >
-        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
+        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-black">
           ▶ PLAY
         </span>
       </button>
@@ -277,7 +277,7 @@ const InvisibleProjectDetail = () => {
             {/* Video */}
             {project.videoId && (
               <div className="my-40 md:my-40">
-                <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
+                <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
                   {/* <YouTube videoId={project.videoId} opts={videoOpts} className="w-full h-full" /> */}
                   <LiteYouTube id={project.videoId} title="Project video" /> {/* ✅ NEW */}
                 </AspectRatio>
@@ -285,7 +285,7 @@ const InvisibleProjectDetail = () => {
             )}
 
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
 
             {/* Summary */}
             <section aria-labelledby="sum-title" className="mt-8">
@@ -523,7 +523,7 @@ const InvisibleProjectDetail = () => {
              {/* Lines + images/slider... (생략 없이 유지) */}
            
             {/* Line */}
-            <div className="w-full h-px my-40 md:my-40 bg-gray-500/50" />
+            <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
            
             {/* World buliding Image 1,2*/}
             <div className="w-full">
@@ -561,12 +561,12 @@ const InvisibleProjectDetail = () => {
             </div>
 
              {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
            
             
            {/* Level Image 1,2*/}
             <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-xl font-light text-gray-300">Level Design</h2>
+              <h2 className="text-xl md:text-xl font-light text-gray-300"></h2>
               <div className="w-full mb-6 md:mb-8">
                 <img className="w-full h-auto" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" alt="Level design 1" />
                 <img className="w-full h-auto" src="/lovable-uploads/de89b92f-0e81-40b4-9c85-3c26d7bce4dd.png" alt="Level design 2" />
@@ -574,12 +574,12 @@ const InvisibleProjectDetail = () => {
             </div>
          
             {/* Floor Plan Image 1*/}
-             <div className="w-full mb-6 md:mb-8">
+             <div className="w-full mb-20 md:mb-20">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_FLOOR1.png" alt="Floor plan" />
             </div>
 
             {/* Slider 1 */}
-            <div className="w-full mb-20 md:mb-40">
+            <div className="w-full mb-20 md:mb-20">
               <Carousel className="w-full bg-black" setApi={setApi} opts={{ loop: true }}>
                 <CarouselContent>
                   {firstSliderImages.map((image, index) => (
@@ -610,27 +610,27 @@ const InvisibleProjectDetail = () => {
 
             {/* Full Playing Video */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
-            <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Full Playing Video</h2>
+            <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8"></h2>
             <div className="mb-6 md:mb-8">
-              <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
+              <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
                 {/* <YouTube videoId="KT0Cwy9s5n8" opts={videoOpts} className="w-full h-full" /> */}
                 <LiteYouTube id="KT0Cwy9s5n8" title="Full Playing Video" /> {/* ✅ NEW */}
               </AspectRatio>
             </div>
 
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-500/50" />
+            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
 
             {/* Post-Project */}
             <div className="rounded-lg bg-transparent">
               <h2 className="text-xl md:text-xl font-light text-gray-300">Post-Project Expansion</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-20 md:mb-40 mt-6 md:mt-8 text-gray-400 font-light">
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-10 md:mb-6 mt-0 md:mt-0 mb-6 text-gray-400 font-light">
                 To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input
                 variables that influenced how virtual organisms adapted within a bounded environment.
               </p>
 
-              <h2 className="text-xl md:text-xl font-light mb-6 md:mb-8 text-gray-300">The Ocean (2025)</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-8 text-gray-400 font-light">
+              <h2 className="text-xl md:text-xl font-light mb-10 md:mb-10 text-gray-300">The Ocean (2025)</h2>
+              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-6 text-gray-400 font-light">
                 Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive
                 simulation...
               </p>
@@ -666,9 +666,6 @@ const InvisibleProjectDetail = () => {
                   className="w-full h-auto mb-20 md:mb-40"
                   alt="Ocean image 5"
                 />
-                <p className="text-base md:text-base lg:text-base leading-relaxed text-gray-400 font-light mb-20 md:mb-40">
-                  The exponential growth demonstrated how input-based virtual ecosystems could reflect evolutionary processes...
-                </p>
               </div>
             </div>
 
