@@ -90,16 +90,7 @@ const WhispersProjectDetail = () => {
           </div>
 
          {/* Client Section */}
-          <div className="rounded-lg bg-transparent">
-            <div className="mb-8 mt-20 md:mt-20"> 
-              <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">Client</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
-                UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-lg bg-transparent">
+       <div className="rounded-lg bg-transparent">
        <div className="mb-8 mt-20 md:mt-20"> 
          <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
         Client
@@ -110,7 +101,7 @@ const WhispersProjectDetail = () => {
         in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
       <img 
-        src="/images/unesco-logo.png" 
+        src="/images/web1920-whispers from the bottom_대지 24 사본.png" 
         alt="UNESCO Logo" 
         className="h-8 w-auto"
       />
