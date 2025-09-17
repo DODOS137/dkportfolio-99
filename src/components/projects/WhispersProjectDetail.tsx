@@ -111,7 +111,7 @@ const WhispersProjectDetail = () => {
       {/* 로고 영역 (우측 끝에 붙임) */}
       <div className="min-w-0 m-0 p-0 justify-self-end">
         <img
-          src="/lovable-uploads/web1920-whispers-from-the-bottom_daeji-24.png"
+          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
           alt="UNESCO Logo"
           className="block m-0 w-auto max-h-28 md:max-h-32 object-contain border-0 ring-0 outline-none shadow-none"
         />
@@ -135,31 +135,30 @@ const WhispersProjectDetail = () => {
   </summary>
   <div className="px-4 pb-4 pt-6 space-y-8">
     <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Approach</h3>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        Instead of relying on traditional data visualisation or scientific display, the project uses immersive design as an emotional trigger. It explores new ways to communicate marine biodiversity loss, shifting the focus toward sound as a storytelling medium. Visitors are encouraged to pause, listen, and emotionally reconnect with the life forms that often go unnoticed.
+        1. Effectively communicating the ocean’s importance, to change existing perceptions and
+ enhance public awareness and appreciation of ocean science.
       </p>
     </div>
 
     <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        In alignment with the UN Ocean Decade (2021–2030), the project addresses the global communication gap in ocean awareness. Despite its planetary significance, the ocean remains underrepresented in education and policy. This exhibition reframes that disconnect through interactive design, making invisible marine life more visible—emotionally, sonically, and spatially.
+        2. Driving global recognition of the ocean’s vital role to inspire all nations to prioritise its
+ inclusion in their national curriculum (as called for by UNESCO).
       </p>
     </div>
 
     <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
+         3. Inspiring tangible actions that reflect a newfound understanding and appreciation for the ocean’s importance and potential, among diverse audiences.
       </p>
     </div>
 
      <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.</p>
-    </div>
+      4. Engaging the next generation, to raise awareness of the ocean’s importance and/or inspire the next generation of ocean scientists
+       </p>
+     </div>
   </div>
 </details>
 
