@@ -30,7 +30,7 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
         className="absolute inset-0 w-full h-full flex items-center justify-center"
         aria-label="Play video"
       >
-        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
+        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-black">
           ▶ PLAY
         </span>
       </button>
@@ -353,7 +353,7 @@ const WhispersProjectDetail = () => {
 
           {/* YouTube Video Section */}
           <div className="my-40 md:my-40">
-            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-500/50 overflow-hidden">
+            <AspectRatio ratio={16 / 9} className="rounded-lg border border-black overflow-hidden">
               {/* 유튜브 플레이어 */}
               {/* <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" /> */}
               <LiteYouTube id="zqz3Owz0K3o" title="Project video" /> {/* ✅ NEW */}
