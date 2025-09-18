@@ -664,7 +664,7 @@ const WhispersProjectDetail = () => {
    
           {/*Poster Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom_대지 13-26.png" />
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom-26.png" />
           </div>     
 
 
