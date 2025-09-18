@@ -703,7 +703,7 @@ const WhispersProjectDetail = () => {
 
           {/*Process Rendering Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom-33.png" />
           </div>
 
 
@@ -722,7 +722,7 @@ const WhispersProjectDetail = () => {
        
           {/*Bridge Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/33_1.png" />
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom-34.png" />
           </div>
 
           
