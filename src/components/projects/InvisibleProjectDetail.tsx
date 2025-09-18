@@ -542,14 +542,7 @@ const InvisibleProjectDetail = () => {
             </div>
 
         
-             {/* Red DNA Image 1*/}
-            <div className="w-full">
-              <img
-                className="w-full h-auto mt-20 mb-20 md:mt-20 mb-20"
-                src="/lovable-uploads/web1920-Space Museum_대지 37 사본.png"
-                alt="Narrative DNA graphic"
-              />
-            </div>
+
 
             {/* Video Development Image 1*/}
             <div className="w-full">
