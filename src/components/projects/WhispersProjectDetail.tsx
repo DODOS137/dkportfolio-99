@@ -645,7 +645,7 @@ const WhispersProjectDetail = () => {
           {/* Graphic design images Section */}
  
             {/*Development Image1*/}     
-          <div className="w-full">
+          <div className="w-full mb-2">
             <img className="w-full h-full" src="/lovable-uploads/a0b20d87-ef7c-4183-9209-6abb798b0f65.png" />
           </div>           
           
@@ -664,7 +664,7 @@ const WhispersProjectDetail = () => {
    
           {/*Poster Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom-26.png" />
+            <img className="w-full h-full mb-2 md:mb-2" src="/lovable-uploads/web1920-whispers from the bottom-26.png" />
           </div>     
 
 
