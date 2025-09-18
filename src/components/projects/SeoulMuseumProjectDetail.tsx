@@ -289,7 +289,7 @@ const SeoulMuseumProjectDetail = () => {
       {/* 로고 영역 (우측 끝에 붙임) */}
       <div className="min-w-0 m-0 p-0 justify-self-end">
         <img
-          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
+          src="/lovable-uploads/web1920-S.N-25.png"
           alt="UNESCO Logo"
           className="block m-0 w-auto max-h-28 md:max-h-32 object-contain border-0 ring-0 outline-none shadow-none"
           loading="lazy"        // ✅ NEW
