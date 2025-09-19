@@ -580,16 +580,6 @@ const InvisibleProjectDetail = () => {
             </div>
          
             
-           {/* Level Image 1,2*/}
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-xl font-light text-gray-300"></h2>
-              <div className="w-full mb-6 md:mb-8">
-                <img className="w-full h-auto" src="/lovable-uploads/90d8e758-d99e-406b-bcc3-23d3648c8a75.png" alt="Level design 1" />
-                <img className="w-full h-auto" src="/lovable-uploads/de89b92f-0e81-40b4-9c85-3c26d7bce4dd.png" alt="Level design 2" />
-              </div>
-            </div>
-         
- 
 
             {/* Slider 1 */}
             <div className="w-full mb-20 md:mb-20">
@@ -622,10 +612,9 @@ const InvisibleProjectDetail = () => {
             </div>
 
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
             
             {/* Full Playing Video */}
-            <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8"></h2>
             <div className="mb-6 md:mb-8">
               <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
                 {/* <YouTube videoId="KT0Cwy9s5n8" opts={videoOpts} className="w-full h-full" /> */}
@@ -634,7 +623,7 @@ const InvisibleProjectDetail = () => {
             </div>
 
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
+            <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
 
             {/* Post-Project */}
             <div className="rounded-lg bg-transparent">
