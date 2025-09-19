@@ -558,9 +558,27 @@ const InvisibleProjectDetail = () => {
 
             {/* Floor Plan Image 1*/}
              <div className="w-full mb-20 md:mb-20">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_FLOOR1.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 35 사본.png" alt="Floor plan" />
             </div>
-           
+
+            {/* Exterior Image 1*/}
+             <div className="w-full">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
+            </div>
+            {/* Exterior Image 1*/}
+             <div className="w-full mb-20 md:mb-20">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-42.png" alt="Floor plan" />
+            </div>
+
+            {/* Space Image 1*/}
+             <div className="w-full mb-10 md:mb-10">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-43.png" alt="Floor plan" />
+            </div>
+            {/* Space Image 2*/}
+             <div className="w-full mb-20 md:mb-20">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-44.png" alt="Floor plan" />
+            </div>
+         
             
            {/* Level Image 1,2*/}
             <div className="rounded-lg bg-transparent">
