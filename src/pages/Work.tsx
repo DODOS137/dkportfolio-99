@@ -31,26 +31,28 @@ const projects: Project[] = [{
   imageUrl: "/lovable-uploads/dd05d902-8937-42b8-bb1e-c6ad7461546b.png"
 
 }, {
-   id: "3",
-  title: "Thermal Trace",
-  slug: "Thermal-Trace",
-  description: "Reimagining the Fashion Show Through XR",
-  category: "XR & Exhibition Design",
-  imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
-}, {
-  id: "4",
-  title: "Learn",
-  slug: "learn",
-  description: "Immersive Virtual Reality Experience",
-  category: "VR Design",
-  imageUrl: "/lovable-uploads/0395cfdd-35e7-4e15-a634-3eab92516d24.png"
-}, {
-  id: "5",
+  id: "3",
   title: "Seoul Nature history Museum",
   slug: "Seoul-Nature-History-Museum",
   description: "Brand Renewal and Spatial Design",
   category: "Spatial Design",
   imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
+
+}, {
+  id: "4",
+  title: "Thermal Trace",
+  slug: "Thermal-Trace",
+  description: "Reimagining the Fashion Show Through XR",
+  category: "XR & Exhibition Design",
+  imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
+
+}, {
+  id: "5",
+  title: "Learn",
+  slug: "learn",
+  description: "Immersive Virtual Reality Experience",
+  category: "VR Design",
+  imageUrl: "/lovable-uploads/0395cfdd-35e7-4e15-a634-3eab92516d24.png"
 }];
 
 
