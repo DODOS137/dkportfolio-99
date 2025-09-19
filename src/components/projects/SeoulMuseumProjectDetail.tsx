@@ -307,10 +307,7 @@ const SeoulMuseumProjectDetail = () => {
           </h2>
        <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
        Design a spatial renewal strategy that increases visitor engagement through immersive storytelling and interactive media. The proposal should address outdated interiors, limited identity, and reposition the museum as a dynamic hub for science and culture.
-      (Developed as a bachelor’s graduation project, the work involved proposing a reverse brief to the Seodaemun Museum of Natural History. The project received institutional feedback, enabling design refinement based on real-world expectations for museum renewal.
-
-While not a direct commission, the project was conducted in dialogue with the museum, positioning the work within a professional framework of client-oriented research and feedback.)
-       </p>
+      </p>
        
       </div>
 
@@ -319,7 +316,14 @@ While not a direct commission, the project was conducted in dialogue with the mu
          Full Brief
   </summary>
   <div className="px-4 pb-4 pt-6 space-y-8">
-    <div>
+     <div>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+       (Developed as a bachelor’s graduation project, the work involved proposing a reverse brief to the Seodaemun Museum of Natural History. The project received institutional feedback, enabling design refinement based on real-world expectations for museum renewal.
+         While not a direct commission, the project was conducted in dialogue with the museum, positioning the work within a professional framework of client-oriented research and feedback.)
+       </p>
+    </div>
+     
+     <div>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
         1. Renewal – Redefine outdated spaces with a contemporary design language.
       </p>
