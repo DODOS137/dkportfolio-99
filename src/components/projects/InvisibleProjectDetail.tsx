@@ -531,13 +531,13 @@ const InvisibleProjectDetail = () => {
                 <img
                   alt="World overview"
                   className="w-full h-full object-contain"
-                  src="/lovable-uploads/c300d72e-b010-4ff6-8648-016e4513b308.png"
+                  src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
                 />
               </AspectRatio>
               <img
                 alt="World secondary"
                 className="w-full h-auto mt-10 mb-10 md:mt-10 mb-10"
-                src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
+                src="/lovable-uploads/web1920-Space Museum_대지 6.png"
               />
             </div>
 
@@ -557,7 +557,7 @@ const InvisibleProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
 
             {/* Floor Plan Image 1*/}
-             <div className="w-full mb-20 md:mb-20">
+             <div className="w-full mb-10 md:mb-10">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 35 사본.png" alt="Floor plan" />
             </div>
 
