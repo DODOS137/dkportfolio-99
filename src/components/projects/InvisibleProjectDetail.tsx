@@ -536,7 +536,7 @@ const InvisibleProjectDetail = () => {
               </AspectRatio>
               <img
                 alt="World secondary"
-                className="w-full h-auto mt-10 md:mt-10"
+                className="w-full h-auto mt-10 mb-10 md:mt-10 mb-10"
                 src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
               />
             </div>
@@ -555,6 +555,11 @@ const InvisibleProjectDetail = () => {
 
              {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
+
+            {/* Floor Plan Image 1*/}
+             <div className="w-full mb-20 md:mb-20">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_FLOOR1.png" alt="Floor plan" />
+            </div>
            
             
            {/* Level Image 1,2*/}
@@ -566,10 +571,7 @@ const InvisibleProjectDetail = () => {
               </div>
             </div>
          
-            {/* Floor Plan Image 1*/}
-             <div className="w-full mb-20 md:mb-20">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_FLOOR1.png" alt="Floor plan" />
-            </div>
+ 
 
             {/* Slider 1 */}
             <div className="w-full mb-20 md:mb-20">
