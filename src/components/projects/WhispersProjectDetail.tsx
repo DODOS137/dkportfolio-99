@@ -244,13 +244,13 @@ const WhispersProjectDetail = () => {
        {/* Left Column */}
        <div>
        {/* Title */}
-       <h2 className="text-xl md:text-xl font-light text-white leading-tight mb-6">
+       <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
        {project.title}
        </h2>
 
       {/* Location + Year */}
-      <p className="text-base md:text-base text-gray-500 mb-10">
-        Exhibition Design │ Solo Project │ 12 weeks
+      <p className="text-base md:text-base font-bold text-gray-500 mb-10">
+        2024 │ Exhibition Design │ Solo Project │ 12 weeks
       </p>
 
       {/* ✅ NEW: Image under location/year */}
@@ -271,20 +271,20 @@ const WhispersProjectDetail = () => {
     Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
     </p>
        
-    <div className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+    <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
    <p className="text-base md:text-base mb-2 text-gray-300 leading-relaxed font-light">
       Client
     </p>
-     <p className="text-base md:text-base text-gray-500 leading-relaxed font-light">
+     <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
      UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
       </div>
     
       <div className="mb-6 mt-6 md:mt-6"> 
-         <h2 className="text-base md:text-base font-light text-white min-w-[200px] mb-6 md:mb-8">
+         <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
       The Brief
           </h2>
-       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
         Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of Ocean Science for Sustainable Development (2021-2030), tasks students to explore the crucial intersection between the ocean and the climate.
       </p>
       </div>
