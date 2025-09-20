@@ -30,7 +30,7 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
         className="absolute inset-0 w-full h-full flex items-center justify-center"
         aria-label="Play video"
       >
-        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-black">
+        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
           ▶ PLAY
         </span>
       </button>
