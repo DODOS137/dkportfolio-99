@@ -272,7 +272,7 @@ const WhispersProjectDetail = () => {
     </p>
        
     <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
-   <p className="text-base md:text-base mb-2 text-gray-300 leading-relaxed font-light">
+   <p className="text-base md:text-base mb-2 text-gray-300 leading-relaxed font-Medium">
       Client
     </p>
      <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
@@ -341,14 +341,21 @@ const WhispersProjectDetail = () => {
 
         
 
-          {/* YouTube Video Section */}
-          <div className="my-40 md:my-40">
-            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
-              {/* 유튜브 플레이어 */}
-              {/* <YouTube videoId="zqz3Owz0K3o" opts={videoOpts} className="w-full h-full" /> */}
-              <LiteYouTube id="zqz3Owz0K3o" title="Project video" /> {/* ✅ NEW */}
-            </AspectRatio>
-          </div>          
+{/* YouTube Video Section */}
+<div className="my-40 md:my-40">
+  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
+    {/* <YouTube ... /> */}
+    <LiteYouTube id="zqz3Owz0K3o" title="Project video" />
+  </AspectRatio>
+</div>
+
+{/* ✅ NEW: Full-bleed beige panel (16:9) */}
+<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen"> {/* 화면 가로 꽉참 */}
+  <AspectRatio ratio={16 / 9}>
+    <div className="w-full h-full bg-[#EFE8DC]" /> {/* 베이지 색상 */}
+  </AspectRatio>
+</div>
+     
           
           
           
