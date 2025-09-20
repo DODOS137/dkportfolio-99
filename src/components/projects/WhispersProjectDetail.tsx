@@ -377,7 +377,7 @@ const WhispersProjectDetail = () => {
      {/* Challenge Summary */}
 
     <section aria-labelledby="car-title" className="mt-8">
-    <h2 id="car-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">Summary</h2>
+    <h2 id="car-title" className="text-xl md:text-xl font-light text-gray-300 mb-2">Summary</h2>
 
     <div className="grid md:grid-cols-3 gap-4">
    
@@ -417,7 +417,7 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+          <details className="mt-2 mb-6 rounded-lg border border-white/10 bg-black">
          <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full text
   </summary>
