@@ -244,12 +244,12 @@ const WhispersProjectDetail = () => {
        {/* Left Column */}
        <div>
        {/* Title */}
-       <h2 className="text-xl md:text-5xl font-light text-white leading-tight mb-6">
+       <h2 className="text-xl md:text-xl font-light text-white leading-tight mb-6">
        {project.title}
        </h2>
 
       {/* Location + Year */}
-      <p className="text-base md:text-base text-gray-400 mb-6">
+      <p className="text-base md:text-base text-gray-500 mb-10">
         Exhibition Design │ Solo Project │ 12 weeks
       </p>
 
@@ -267,16 +267,16 @@ const WhispersProjectDetail = () => {
 
     {/* Right Column */}
     <div className="space-y-6">
-    <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+    <p className="text-base md:text-base text-gray-500 leading-relaxed font-light">
     Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
     </p>
     <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
     Client
     </p>
-     <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+     <p className="text-base md:text-base text-gray-500 leading-relaxed font-light">
      UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
-    <div className="mb-8 mt-20 md:mt-20"> 
+    <div className="mb-6 mt-6 md:mt-6"> 
          <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
       The Brief
           </h2>
@@ -285,7 +285,7 @@ const WhispersProjectDetail = () => {
       </p>
       </div>
 
-     <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+     <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
       <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full Brief
        </summary>
@@ -327,119 +327,12 @@ const WhispersProjectDetail = () => {
 
 
          
-        {/* Shared Container */}
-        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
-          {/* Project Description */}
-          <div className="rounded-lg bg-transparent mt-20 md:mt-20">
-            <h2 className="text-xl md:text-xl lg:text-xl mb-8 md:mb-8 text-white font-light">
-              {project.title}
-            </h2>
-            <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
-             Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
-            </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-sm">
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">{project.projectType}</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                <p className="text-white">{project.projectCategory}</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
-                <p className="text-white">{project.teamType}</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
-                <p className="text-white">{project.duration}</p>
-              </div>
-            </div>
-          </div>
+ 
 
     
           
           
-  {/* Client Section */}
-   {/* 반반 레이아웃 */}
-   <div className="rounded-lg bg-transparent cv-auto"> {/* ✅ NEW */}
-  <div className="mb-8 mt-20 md:mt-20 px-0"> 
-    <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
-      Client
-    </h2>
 
-    {/* 텍스트:로고 = 1fr : auto, 오른쪽 딱 붙이기 */}
-    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-start gap-0">
-      {/* 텍스트 영역 */}
-      <div className="min-w-0">
-        <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
-          UNESCO IOC (Intergovernmental Oceanographic Commission), 
-          in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
-        </p>
-      </div>
-
-      {/* 로고 영역 (우측 끝에 붙임) */}
-      <div className="min-w-0 m-0 p-0 justify-self-end">
-        <img
-          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
-          alt="UNESCO Logo"
-          className="block m-0 w-auto max-h-28 md:max-h-32 object-contain border-0 ring-0 outline-none shadow-none"
-          loading="lazy"        // ✅ NEW
-          decoding="async"      // ✅ NEW
-          fetchpriority="low"   // ✅ NEW
-        />
-      </div>
-      
-    </div>
-   
-    
-    <div className="mb-8 mt-20 md:mt-20"> 
-         <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
-      The Brief
-          </h2>
-       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
-        Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of Ocean Science for Sustainable Development (2021-2030), tasks students to explore the crucial intersection between the ocean and the climate.
-      </p>
-      </div>
-
-     <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
-      <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
-         Full Brief
-  </summary>
-  <div className="px-4 pb-4 pt-6 space-y-8">
-    <div>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        1. Effectively communicating the ocean’s importance, to change existing perceptions and
- enhance public awareness and appreciation of ocean science.
-      </p>
-    </div>
-
-    <div>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        2. Driving global recognition of the ocean’s vital role to inspire all nations to prioritise its
- inclusion in their national curriculum (as called for by UNESCO).
-      </p>
-    </div>
-
-    <div>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-         3. Inspiring tangible actions that reflect a newfound understanding and appreciation for the ocean’s importance and potential, among diverse audiences.
-      </p>
-    </div>
-
-     <div>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-      4. Engaging the next generation, to raise awareness of the ocean’s importance and/or inspire the next generation of ocean scientists
-       </p>
-     </div>
-  </div>
-</details>
-
-
-
- </div>
-</div>
 
         
 
