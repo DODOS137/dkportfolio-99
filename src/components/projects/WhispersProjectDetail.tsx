@@ -244,12 +244,12 @@ const WhispersProjectDetail = () => {
        {/* Left Column */}
        <div>
        {/* Title */}
-       <h2 className="text-3xl md:text-5xl font-light text-white leading-tight mb-6">
+       <h2 className="text-xl md:text-5xl font-light text-white leading-tight mb-6">
        {project.title}
        </h2>
 
       {/* Location + Year */}
-      <p className="text-base md:text-lg text-gray-400 mb-6">
+      <p className="text-base md:text-base text-gray-400 mb-6">
         Exhibition Design │ Solo Project │ 12 weeks
       </p>
 
@@ -267,11 +267,14 @@ const WhispersProjectDetail = () => {
 
     {/* Right Column */}
     <div className="space-y-6">
-      <p className="text-base md:text-lg text-gray-300 leading-relaxed font-light">
-        Client
-      </p>
-      <p className="text-base md:text-lg text-gray-300 leading-relaxed font-light">
-        UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
+    <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+    Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
+    </p>
+    <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+    Client
+    </p>
+     <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+     UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
     <div className="mb-8 mt-20 md:mt-20"> 
          <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
@@ -285,8 +288,9 @@ const WhispersProjectDetail = () => {
      <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
       <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full Brief
-  </summary>
-  <div className="px-4 pb-4 pt-6 space-y-8">
+       </summary>
+
+        <div className="px-4 pb-4 pt-6 space-y-8">
     <div>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
         1. Effectively communicating the ocean’s importance, to change existing perceptions and
