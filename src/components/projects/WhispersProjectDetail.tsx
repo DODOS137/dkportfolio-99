@@ -296,7 +296,7 @@ const WhispersProjectDetail = () => {
          Full Brief
        </summary>
 
-        <div className="px-4 pb-4 pt-6 space-y-8">
+        <div className="px-4 pb-4 pt-6 space-y-4">
     <div>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
         1. Effectively communicating the ocean’s importance, to change existing perceptions and
