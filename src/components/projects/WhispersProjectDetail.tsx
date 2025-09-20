@@ -267,20 +267,22 @@ const WhispersProjectDetail = () => {
 
     {/* Right Column */}
     <div className="space-y-6">
-    <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
     Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
     </p>
        
     <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
-   <p className="text-base md:text-base mb-2 text-gray-300 leading-relaxed font-Medium">
+   <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
       Client
     </p>
      <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-     UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
+     UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution.
       </p>
       </div>
     
-      <div className="mb-6 mt-6 md:mt-6"> 
+
+       
+       <div className="mb-6 mt-6 md:mt-6"> 
          <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
       The Brief
           </h2>
@@ -289,7 +291,7 @@ const WhispersProjectDetail = () => {
       </p>
       </div>
 
-     <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
+     <details className="mt-4 mb-6 rounded-lg border border-white/10 bg-black">
       <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full Brief
        </summary>
@@ -377,7 +379,7 @@ const WhispersProjectDetail = () => {
      {/* Challenge Summary */}
 
     <section aria-labelledby="car-title" className="mt-8">
-    <h2 id="car-title" className="text-xl md:text-xl font-light text-gray-300 mb-4">Summary</h2>
+    <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Summary</h2>
 
     <div className="grid md:grid-cols-3 gap-4">
    
@@ -456,7 +458,7 @@ const WhispersProjectDetail = () => {
          {/*Research*/}
 
          <section id="research" aria-labelledby="research-title" className="mb-6">
-    <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-4">Research</h2>
+    <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Research</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
@@ -492,9 +494,10 @@ const WhispersProjectDetail = () => {
           {/* Process Section */}
 
           <section id="process" className="rounded-lg bg-black">
-     <h2 className="text-xl md:text-xl font-light mb-4 md:mb-4 text-gray-300">Process</h2>
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+     <h2 className="text-xl md:text-xl font-Medium mb-4 md:mb-4 text-gray-300">Process</h2>
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-6">
+  
+      <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">01 Ideation</h3>
       <p className="text-gray-400 text-sm">Brainstorming</p>
       <p className="text-gray-400 text-sm">Concept sketches</p>
@@ -521,7 +524,7 @@ const WhispersProjectDetail = () => {
 
          {/* Tools & Roles Table */}
        <div className="mb-6 md:mb-6">
-       <h2 className="text-xl md:text-xl font-light text-gray-300 mb-4 md:mb-4">
+       <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-4 md:mb-4">
        Tools & Roles
      </h2>
        <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
@@ -568,8 +571,8 @@ const WhispersProjectDetail = () => {
    
   {/* Design Highlights */}       
     <section id="design" className="mt-6">
-  <h2 className="text-xl md:text-xl font-light text-gray-300 mb-4">Design Highlights</h2>
-  <ul className="space-y-3 text-gray-300">
+  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Design Highlights</h2>
+  <ul className="space-y-3 text-gray-400">
     <li>• Sound as narrative; bioacoustics drive empathy.</li>
     <li>• Rock-like plinths for solitary listening.</li>
     <li>• Flexible exhibition format designed for scalability and adaptability across contexts.</li>
