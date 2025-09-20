@@ -417,7 +417,7 @@ const WhispersProjectDetail = () => {
       
           
    {/* Challenge full text*/}    
-          <details className="mt-4 mb-4 rounded-lg border border-white/10 bg-black">
+          <details className="mt-4 mb-6 rounded-lg border border-white/10 bg-black">
          <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full text
   </summary>
@@ -455,8 +455,8 @@ const WhispersProjectDetail = () => {
 
          {/*Research*/}
 
-         <section id="research" aria-labelledby="research-title" className="mb-20">
-    <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
+         <section id="research" aria-labelledby="research-title" className="mb-6">
+    <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-4">Research</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
@@ -477,7 +477,7 @@ const WhispersProjectDetail = () => {
     </div>
   </div>
 
-  <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
+  <details className="mt-4 rounded-lg border border-white/10 bg-black p-4">
     <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
     <p className="mt-8 text-sm text-gray-400">
      To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
@@ -492,7 +492,7 @@ const WhispersProjectDetail = () => {
           {/* Process Section */}
 
           <section id="process" className="rounded-lg bg-black">
-     <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
+     <h2 className="text-xl md:text-xl font-light mb-4 md:mb-4 text-gray-300">Process</h2>
      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">01 Ideation</h3>
@@ -520,8 +520,8 @@ const WhispersProjectDetail = () => {
           
 
          {/* Tools & Roles Table */}
-       <div className="mb-20 md:mb-20">
-       <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">
+       <div className="mb-6 md:mb-6">
+       <h2 className="text-xl md:text-xl font-light text-gray-300 mb-4 md:mb-4">
        Tools & Roles
      </h2>
        <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
@@ -567,8 +567,8 @@ const WhispersProjectDetail = () => {
 
    
   {/* Design Highlights */}       
-    <section id="design" className="mt-10">
-  <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
+    <section id="design" className="mt-6">
+  <h2 className="text-xl md:text-xl font-light text-gray-300 mb-4">Design Highlights</h2>
   <ul className="space-y-3 text-gray-300">
     <li>• Sound as narrative; bioacoustics drive empathy.</li>
     <li>• Rock-like plinths for solitary listening.</li>
