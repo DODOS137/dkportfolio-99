@@ -322,8 +322,8 @@ const WhispersProjectDetail = () => {
     </div>
 
   </div>
-</div>
-</div>
+
+
 
 
 
