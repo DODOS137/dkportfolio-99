@@ -278,6 +278,7 @@ const WhispersProjectDetail = () => {
      <p className="text-base md:text-base text-gray-500 leading-relaxed font-light">
      UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
+      </div>
     
       <div className="mb-6 mt-6 md:mt-6"> 
          <h2 className="text-base md:text-base font-light text-white min-w-[200px] mb-6 md:mb-8">
