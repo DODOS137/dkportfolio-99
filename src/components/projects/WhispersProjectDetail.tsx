@@ -238,7 +238,7 @@ const WhispersProjectDetail = () => {
 
       
       {/* Shared Container */}
-       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 mb-40 md:mt-20 mb-40">
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
     
        {/* Left Column */}
@@ -256,7 +256,7 @@ const WhispersProjectDetail = () => {
       {/* ✅ NEW: Image under location/year */}
       <div className="w-full h-[400px] bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
         <img
-          src={project.heroImage || "/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"}
+          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
           alt={project.title}
           className="w-full h-full"
           loading="lazy"
@@ -330,7 +330,8 @@ const WhispersProjectDetail = () => {
 
 
 
-
+         {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
          
  
 
