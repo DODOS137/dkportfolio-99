@@ -535,7 +535,7 @@ const SeoulMuseumProjectDetail = () => {
     <div className="mt-4 space-y-4 text-sm text-gray-400">
 
       {/* Idea Development */}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
+      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
         <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
           <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 min-w-[200px]">
             Idea Development
@@ -547,7 +547,7 @@ const SeoulMuseumProjectDetail = () => {
       </div>
 
       {/* Product Design */}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
+      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
         <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
           <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 min-w-[200px]">
             Product Design
@@ -559,7 +559,7 @@ const SeoulMuseumProjectDetail = () => {
       </div>
 
       {/* Spatial Design */}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
+      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
         <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
           <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 min-w-[200px]">
             Spatial Design
