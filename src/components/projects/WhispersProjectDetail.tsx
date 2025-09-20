@@ -236,25 +236,27 @@ const WhispersProjectDetail = () => {
         </div>
 
 
- <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-32">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+      
+      {/* Shared Container */}
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
     
-    {/* Left Column */}
-    <div>
-      {/* Title */}
-      <h2 className="text-3xl md:text-5xl font-light text-white leading-tight mb-6">
-        {project.title}
-      </h2>
+       {/* Left Column */}
+       <div>
+       {/* Title */}
+       <h2 className="text-3xl md:text-5xl font-light text-white leading-tight mb-6">
+       {project.title}
+       </h2>
 
       {/* Location + Year */}
       <p className="text-base md:text-lg text-gray-400 mb-6">
-        {project.location} │ {project.year}
+        Exhibition Design │ Solo Project │ 12 weeks
       </p>
 
       {/* ✅ NEW: Image under location/year */}
       <div className="w-full h-[400px] bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
         <img
-          src={project.heroImage || "/lovable-uploads/placeholder.png"}
+          src={project.heroImage || "/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"}
           alt={project.title}
           className="w-full h-full object-cover"
           loading="lazy"
@@ -266,14 +268,53 @@ const WhispersProjectDetail = () => {
     {/* Right Column */}
     <div className="space-y-6">
       <p className="text-base md:text-lg text-gray-300 leading-relaxed font-light">
-        {project.paragraph1}
+        Client
       </p>
       <p className="text-base md:text-lg text-gray-300 leading-relaxed font-light">
-        {project.paragraph2}
+        UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
-      <p className="text-base md:text-lg text-gray-300 leading-relaxed font-light">
-        {project.paragraph3}
+    <div className="mb-8 mt-20 md:mt-20"> 
+         <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
+      The Brief
+          </h2>
+       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
+        Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of Ocean Science for Sustainable Development (2021-2030), tasks students to explore the crucial intersection between the ocean and the climate.
       </p>
+      </div>
+
+     <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+      <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
+         Full Brief
+  </summary>
+  <div className="px-4 pb-4 pt-6 space-y-8">
+    <div>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        1. Effectively communicating the ocean’s importance, to change existing perceptions and
+ enhance public awareness and appreciation of ocean science.
+      </p>
+    </div>
+
+    <div>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        2. Driving global recognition of the ocean’s vital role to inspire all nations to prioritise its
+ inclusion in their national curriculum (as called for by UNESCO).
+      </p>
+    </div>
+
+    <div>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+         3. Inspiring tangible actions that reflect a newfound understanding and appreciation for the ocean’s importance and potential, among diverse audiences.
+      </p>
+    </div>
+
+     <div>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+      4. Engaging the next generation, to raise awareness of the ocean’s importance and/or inspire the next generation of ocean scientists
+       </p>
+     </div>
+  </div>
+</details>
+
     </div>
 
   </div>
