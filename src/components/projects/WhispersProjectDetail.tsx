@@ -588,7 +588,7 @@ const WhispersProjectDetail = () => {
   {/*idea development text start*/}
            
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-4 md:mb-4">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 md:mb-4 min-w-[200px]">
                 Idea Development
               </h2>
