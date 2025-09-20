@@ -343,13 +343,18 @@ const WhispersProjectDetail = () => {
 
 {/* YouTube Video Section */}
 <div className="my-40 md:my-40 relative">
-  {/* ✅ 베이지 배경판 */}
-  <AspectRatio ratio={16 / 9}>
-    <div className="absolute inset-0 w-full h-full bg-[#EFE8DC]" />
-  </AspectRatio>
+  {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
+  <div
+    className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+    style={{ width: '100vw' }} // 화면 가로 꽉참
+  >
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#EFE8DC]" />
+    </AspectRatio>
+  </div>
 
-  {/* ✅ 유튜브 영상 */}
-  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden relative z-10">
+  {/* 기존 플레이어: 그대로 */}
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
     <LiteYouTube id="zqz3Owz0K3o" title="Project video" />
   </AspectRatio>
 </div>
