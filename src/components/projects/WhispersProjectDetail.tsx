@@ -582,7 +582,7 @@ const WhispersProjectDetail = () => {
   <details className="mt-6 mb-8 rounded-lg border border-white/10 bg-black p-4">
    
      <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
-    <div className="space-y-4 text-sm text-gray-400">
+    <div className="mt-8 space-y-4 text-sm text-gray-400">
 
       
   {/*idea development text start*/}
