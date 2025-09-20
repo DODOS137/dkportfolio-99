@@ -235,6 +235,59 @@ const WhispersProjectDetail = () => {
           />
         </div>
 
+
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
+  {/* Project Title + Meta */}
+  <div className="rounded-lg bg-transparent mt-20 md:mt-20">
+    <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6">
+      Whispers from the bottom
+    </h2>
+    <p className="text-base md:text-lg text-gray-400 mb-8">
+      {project.location} │ {project.year}
+    </p>
+
+    {/* ✅ NEW: Title 아래 이미지 */}
+    <div className="w-full h-[400px] mb-12 bg-gray-800 flex items-center justify-center rounded-lg overflow-hidden">
+      <img
+        src={project.heroImage || "/lovable-uploads/placeholder.png"}
+        alt={project.title}
+        className="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+
+  {/* Project Content */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    {/* Left Column */}
+    <div>
+      <p className="text-base md:text-lg lg:text-lg text-gray-300 leading-relaxed font-light">
+        Immersive sound-led exhibition amplifying overlooked marine life.
+        Reframes ocean conservation through emotional and sensory storytelling.
+      </p>
+    </div>
+
+    {/* Right Column */}
+    <div>
+      <p className="text-base md:text-lg lg:text-lg text-gray-300 leading-relaxed font-light">
+        Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of
+        Ocean Science for Sustainable Development (2021-2030), tasks students to
+        explore the crucial intersection between the ocean and the climate.
+      </p>
+    </div>
+  </div>
+
+  {/* Footnote */}
+  <p className="mt-12 text-sm text-gray-500">
+    *Developed with motion-capture and authentic field recordings to recreate
+    the experience of oceanic biodiversity through sound.
+  </p>
+</div>
+
+
+         
         {/* Shared Container */}
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
           {/* Project Description */}
