@@ -446,7 +446,7 @@ const WhispersProjectDetail = () => {
     </div>
 
      <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-4">Final Outcome</h3>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-2">Final Outcome</h3>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
         The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.</p>
     </div>
@@ -597,7 +597,7 @@ const WhispersProjectDetail = () => {
           </div>
         
              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex_col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+            <div className="rounded-lg bg-transparent flex flex_col md:flex-row md:items-start md:space-x-16 mb-4 md:mb-4">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 md:mb-4 min-w-[200px]">
                 Product Design
               </h2>
@@ -609,7 +609,7 @@ const WhispersProjectDetail = () => {
            {/*Spatial Design Text*/} 
         
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-4 md:mb-4">
               <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 md:mb-4 min-w-[200px]">
                 Spatial Design
               </h2>
