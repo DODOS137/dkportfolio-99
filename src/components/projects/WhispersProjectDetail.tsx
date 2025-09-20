@@ -258,7 +258,7 @@ const WhispersProjectDetail = () => {
         <img
           src={project.heroImage || "/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"}
           alt={project.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full"
           loading="lazy"
           decoding="async"
         />
@@ -267,7 +267,7 @@ const WhispersProjectDetail = () => {
 
     {/* Right Column */}
     <div className="space-y-6">
-    <p className="text-base md:text-base text-gray-500 leading-relaxed font-light">
+    <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
     Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
     </p>
     <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
