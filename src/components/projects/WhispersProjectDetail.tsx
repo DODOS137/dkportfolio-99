@@ -342,19 +342,18 @@ const WhispersProjectDetail = () => {
         
 
 {/* YouTube Video Section */}
-<div className="my-40 md:my-40">
-  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
-    {/* <YouTube ... /> */}
+<div className="my-40 md:my-40 relative">
+  {/* ✅ 베이지 배경판 */}
+  <AspectRatio ratio={16 / 9}>
+    <div className="absolute inset-0 w-full h-full bg-[#EFE8DC]" />
+  </AspectRatio>
+
+  {/* ✅ 유튜브 영상 */}
+  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden relative z-10">
     <LiteYouTube id="zqz3Owz0K3o" title="Project video" />
   </AspectRatio>
 </div>
 
-{/* ✅ NEW: Full-bleed beige panel (16:9) */}
-<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen"> {/* 화면 가로 꽉참 */}
-  <AspectRatio ratio={16 / 9}>
-    <div className="w-full h-full bg-[#EFE8DC]" /> {/* 베이지 색상 */}
-  </AspectRatio>
-</div>
      
           
           
