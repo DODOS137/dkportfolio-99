@@ -270,14 +270,17 @@ const WhispersProjectDetail = () => {
     <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
     Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
     </p>
-    <p className="text-base md:text-base text-gray-300 leading-relaxed font-light">
-    Client
+       
+    <div className="text-base md:text-base text-gray-300 leading-relaxed font-light">
+   <p className="text-base md:text-base mb-2 text-gray-300 leading-relaxed font-light">
+      Client
     </p>
      <p className="text-base md:text-base text-gray-500 leading-relaxed font-light">
      UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution
       </p>
-    <div className="mb-6 mt-6 md:mt-6"> 
-         <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
+    
+      <div className="mb-6 mt-6 md:mt-6"> 
+         <h2 className="text-base md:text-base font-light text-white min-w-[200px] mb-6 md:mb-8">
       The Brief
           </h2>
        <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
