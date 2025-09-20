@@ -238,7 +238,7 @@ const WhispersProjectDetail = () => {
 
       
       {/* Shared Container */}
-       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 mb-40 md:mt-20 mb-40">
        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
     
        {/* Left Column */}
