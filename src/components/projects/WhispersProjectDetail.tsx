@@ -615,7 +615,7 @@ const WhispersProjectDetail = () => {
 {/* AR APP YouTube Video Section */}
 <div className="mt-40 mb-20 md:mt-40 relative">
   {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
-  <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-[#C7B299] rounded-lg z-0" />
+  <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-[#C7B299]  z-0" />
 
   {/* 유튜브 플레이어 */}
   <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
