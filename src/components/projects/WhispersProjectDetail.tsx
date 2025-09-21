@@ -694,14 +694,12 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom-33.png" />
           </div>
 
-
-                    
-          {/*Spatial Design Process Image1*/}        
+          {/*Process Rendering Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom1_대지 12.png" />
-          </div> 
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom-33.png" />
+          </div>
 
-          {/*Spatial Design Text*/} 
+           {/*Spatial Design Text*/} 
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
@@ -719,6 +717,14 @@ const WhispersProjectDetail = () => {
           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.</p>
           </div>
          </div>
+
+                    
+          {/*Spatial Design Process Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom1_대지 12.png" />
+          </div> 
+
+
 
  
 
