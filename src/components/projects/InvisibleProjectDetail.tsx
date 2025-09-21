@@ -266,16 +266,7 @@ const InvisibleProjectDetail = () => {
       </p>
 
       {/* ✅ NEW: Image under location/year */}
-      <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
-        <img
-          src=""
-          alt={project.title}
-          className="w-full h-full"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    </div>
+   </div>
 
     {/* Right Column */}
     <div className="space-y-6">
@@ -318,7 +309,7 @@ const InvisibleProjectDetail = () => {
     style={{ width: '100vw' }} // 화면 가로 꽉참
   >
     <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#EFE8DC]" />
+      <div className="w-full h-full bg-[#AE0200]" />
     </AspectRatio>
   </div>
 
@@ -328,7 +319,7 @@ const InvisibleProjectDetail = () => {
   </AspectRatio>
 </div>
 
-]
+
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
