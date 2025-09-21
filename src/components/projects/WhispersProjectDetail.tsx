@@ -627,6 +627,14 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 19.png" />
           </div> 
 
+          {/*idea development text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Idea Development</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is treated not just as data but as a narrative layer. Scientific studies revealing the bioacoustics of marine invertebrates were used to frame the emotional tone of the exhibition. The project highlights how sonic signals from these animals reveal behavioural patterns and ecosystem health. These acoustic ecologies become a channel to foster empathy and reframe conservation dialogue. While marine mammals like whales and dolphins receive outsized attention due to their intelligence and emotional expressiveness, lesser-known species—particularly invertebrates and bottom-dwellers—remain largely excluded from both public empathy and conservation priorities. This project aims to redress that imbalance by amplifying the voices of species that are hidden, both physically and culturally, from mainstream awareness.</p>
+           </div>
+           </div>
+
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
@@ -664,13 +672,23 @@ const WhispersProjectDetail = () => {
 
           
            {/* AR APP YouTube Video Section */}
-            <div className="mt-40 mb-10 md:mt-40 mb-10 relative">
+            <div className="mt-40 mb-20 md:mt-40 mb-20 relative">
             <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
              {/* 유튜브 플레이어 */}
             {/* <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" /> */}
             <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
            </AspectRatio>
            </div>
+
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex_col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Product Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Custom-designed headset stands emulate smoothed underwater rocks, integrating both audio hardware and tactile visuality. Each plinth invites solitary listening through high-resolution recordings of marine species. The subtlety of these soundscapes becomes a form of protest against the visual-centric bias of most exhibitions.</p>
+          </div>
+          </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
           {/*Process Rendering Image1*/}        
           <div className="w-full">
@@ -682,7 +700,26 @@ const WhispersProjectDetail = () => {
           {/*Spatial Design Process Image1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom1_대지 12.png" />
-          </div>  
+          </div> 
+
+          {/*Spatial Design Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.</p>
+         </div>
+         </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+          {/*Exhibition Design Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.</p>
+          </div>
+         </div>
 
  
 
