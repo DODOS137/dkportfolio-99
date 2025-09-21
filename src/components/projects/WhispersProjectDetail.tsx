@@ -612,14 +612,17 @@ const WhispersProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
           
-           {/* AR APP YouTube Video Section */}
-            <div className="mt-40 mb-20 md:mt-40 mb-20 relative">
-            <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
-             {/* 유튜브 플레이어 */}
-            {/* <YouTube videoId="M0v75vAVitA" opts={videoOpts} className="w-full h-full" /> */}
-            <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
-           </AspectRatio>
-           </div>
+{/* AR APP YouTube Video Section */}
+<div className="mt-40 mb-20 md:mt-40 relative">
+  {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
+  <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-[#EFE8DC] rounded-lg z-0" />
+
+  {/* 유튜브 플레이어 */}
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
+  </AspectRatio>
+</div>
+
 
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
           <div className="rounded-lg bg-transparent flex flex_col md:flex-row md:items-start md:space-x-16">
