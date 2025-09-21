@@ -351,7 +351,7 @@ const WhispersProjectDetail = () => {
   />
 
   {/* 플레이어(그대로) */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+  <AspectRatio ratio={16 / 9} className="relative z-10  border border-transparent overflow-hidden">
     <LiteYouTube id="zqz3Owz0K3o" title="Project video" />
   </AspectRatio>
 </div>
