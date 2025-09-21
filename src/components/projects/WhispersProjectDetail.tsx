@@ -332,14 +332,15 @@ const WhispersProjectDetail = () => {
 
 
 
-   
+         {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>   
          
  
 
     
           
 {/* YouTube Video Section */}
-<div className="my-40 md:my-40 relative">
+<div className="my-20 md:my-20 relative">
   {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
   <div
     className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
