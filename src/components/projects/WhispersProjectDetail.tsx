@@ -332,8 +332,7 @@ const WhispersProjectDetail = () => {
 
 
 
-         {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+   
          
  
 
@@ -344,14 +343,14 @@ const WhispersProjectDetail = () => {
 
         
 {/* YouTube Video Section */}
-<div className="my-40 md:my-40 relative">
+<div className="mt-20 mb-40 md:mt-20 mb-40 relative">
   {/* ✅ 배경 판: 가로 = 화면 전체, 세로 = 플레이어와 동일(부모 높이) */}
   <div
     className="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen z-0 bg-[#EFE8DC]"
   />
 
   {/* 플레이어(그대로) */}
-  <AspectRatio ratio={16 / 9} className="relative z-10  border border-transparent overflow-hidden">
+  <AspectRatio ratio={16 / 9} className="relative z-10  border border-black overflow-hidden">
     <LiteYouTube id="zqz3Owz0K3o" title="Project video" />
   </AspectRatio>
 </div>
@@ -621,7 +620,7 @@ const WhispersProjectDetail = () => {
          
           {/*Research Image2-1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/web1920-whispers from the bottom_대지 19.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 19.png" />
           </div> 
 
           {/*idea development text start*/}
@@ -634,7 +633,7 @@ const WhispersProjectDetail = () => {
 
    
           {/*Poster Design Image1*/}        
-          <div className="w-full">
+          <div className="w-full mt-20">
             <img className="w-full h-full mb-4 md:mb-4" src="/lovable-uploads/web1920-whispers from the bottom-26.png" />
           </div>     
 
@@ -656,7 +655,7 @@ const WhispersProjectDetail = () => {
 
            {/*Graphic Design Image1-3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/web1920-whispers from the bottom-29.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom-29.png" />
           </div>  
          
            {/*Product Design Text*/} 
@@ -694,7 +693,7 @@ const WhispersProjectDetail = () => {
           </div>  
 
           {/*Spatial Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="mb-20 md:mb-20 flex flex-col md:flex-row md:items-start md:space-x-16">
           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
           <h2 className="text-sm md:text-sm font-light text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.</p>
