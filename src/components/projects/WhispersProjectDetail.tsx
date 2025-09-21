@@ -623,13 +623,12 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 19.png" />
           </div> 
 
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-
-
-   
-          {/*Poster Design Image1*/}        
+         {/*Poster Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-4 mt-20 md:mb-4 mt-20" src="/lovable-uploads/web1920-whispers from the bottom-26.png" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/lovable-uploads/web1920-whispers from the bottom-26.png" />
           </div>     
 
 
