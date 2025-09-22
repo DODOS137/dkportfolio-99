@@ -302,22 +302,22 @@ const InvisibleProjectDetail = () => {
 
 
            {/* YouTube Video Section */}
-<div className="my-40 md:my-40 relative">
-  {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
-  <div
-    className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
-    style={{ width: '100vw' }} // 화면 가로 꽉참
-  >
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#AE0200]" />
-    </AspectRatio>
-  </div>
 
-  {/* 기존 플레이어: 그대로 */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <LiteYouTube id={project.videoId} title="Project video" />
+          <div className="my-40 md:my-40">
+  <AspectRatio ratio={16 / 9} className="relative rounded-lg border border-gray-800/50 overflow-hidden">
+    {/* ✅ NEW: 베이지판 — 컨테이너 기준 꽉 채움 */}
+    <div className="absolute inset-0 bg-[#AE0200]" />
+
+    {/* ✅ NEW: 플레이어 — 같은 박스 기준으로 중앙 정렬 */}
+    <div className="absolute inset-0 z-10">
+      <LiteYouTube id={project.videoId} title="Project video" className="w-full h-full" />
+    </div>
   </AspectRatio>
-</div>
+</div
+
+
+  
+
 
 
 
@@ -635,33 +635,26 @@ const InvisibleProjectDetail = () => {
 
 
            {/* Full playing Video Section */}
-           <div className="my-40 md:my-40 relative">
-             {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
-             {/*Full playing video*/}
-           <div className="z-50 flex flex-col md:flex-row md:items-center md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Full Playing Video</h2>
-           </div>
-           </div>
+ <div className="my-40 md:my-40">
+  {/* ✅ NEW: 위쪽 캡션 */}
+  <p className="mb-8 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
+    Full playing Video
+  </p>
 
-              
-  <div
-    className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
-    style={{ width: '100vw' }} // 화면 가로 꽉참
-  >
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#AE0200]" />
-    </AspectRatio>
-  </div>
-
-  {/* 기존 플레이어: 그대로 */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <LiteYouTube id="KT0Cwy9s5n8" title="Project video" />
+  {/* 기존 플레이어 블록 그대로 */}
+  <AspectRatio ratio={16 / 9} className="relative rounded-lg border border-gray-800/50 overflow-hidden">
+    {/* 배경색 판 */}
+    <div className="absolute inset-0 bg-[#AE0200]" />
+    {/* 플레이어 */}
+    <div className="absolute inset-0 z-10">
+      <LiteYouTube id="KT0Cwy9s5n8" title="Project video" className="w-full h-full" />
+    </div>
   </AspectRatio>
 </div>
 
           
-          
+             {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
           
           
            {/*Post-Project Direction text start*/}
@@ -692,7 +685,7 @@ const InvisibleProjectDetail = () => {
 
            {/*Ocean Web Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
           </div>
 
 
