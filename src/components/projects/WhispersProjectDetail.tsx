@@ -692,52 +692,49 @@ const WhispersProjectDetail = () => {
        
           {/*Bridge Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom-34.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 7.png" />
           </div>
 
           
 
           {/*Product Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-whispers from the bottom_대지 10-31.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10-30.png" />
           </div>
 
           {/*Product Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 2.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 2.png" />
           </div>  
 
           {/*Detail Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 3.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 3.png" />
           </div> 
 
-          {/*Detail Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 4.png" />
-          </div> 
+
 
 
 
           {/*Exhibition Design Image2*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/18099fde-1b4b-4c1b-b9a3-776444f17c15.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 13.png" />
           </div>    
 
           {/*Detail Image3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 5.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 5.png" />
           </div> 
 
            {/*Exhibition Design Image3*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/f0ebae04-0162-4e48-8470-2fc716cc1f31.png" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/web1920-whispers from the bottom_대지 14.png" />
           </div>   
 
        
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>  
+          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>  
 
        
           
