@@ -526,7 +526,7 @@ const InvisibleProjectDetail = () => {
            <div className="w-full">   
               <img
                 alt="World secondary"
-                className="w-full h-auto mt-20 mb-20 md:mt-10 mb-20"
+                className="w-full h-auto mt-20 mb-20 md:mt-20 mb-20"
                 src="/lovable-uploads/web1920-Space Museum_대지 6.png"
               />
             </div>
@@ -564,6 +564,9 @@ const InvisibleProjectDetail = () => {
             </p>
            </div> 
            </div>
+
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
 
         
 
@@ -635,7 +638,7 @@ const InvisibleProjectDetail = () => {
            <div className="my-40 md:my-40 relative">
              {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
              {/*Full playing video*/}
-           <div className="flex flex-col md:flex-row md:items-center md:space-x-16">
+           <div className="z-50 flex flex-col md:flex-row md:items-center md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Full Playing Video</h2>
            </div>
@@ -656,17 +659,11 @@ const InvisibleProjectDetail = () => {
     <LiteYouTube id="KT0Cwy9s5n8" title="Project video" />
   </AspectRatio>
 </div>
-            
 
-
-            {/* Line */}
-            <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
-
-           {/*Ocean Web Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
-          </div>
-
+          
+          
+          
+          
            {/*Post-Project Direction text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -687,6 +684,18 @@ const InvisibleProjectDetail = () => {
            </p>
            </div> 
            </div>
+            
+
+
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+
+           {/*Ocean Web Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-10 md:mb-10" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
+          </div>
+
+
 
  
 
