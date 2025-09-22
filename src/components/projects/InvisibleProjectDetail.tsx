@@ -509,6 +509,10 @@ const InvisibleProjectDetail = () => {
                   src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
                 />
               </AspectRatio>
+                   </div>
+
+           {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
 
            {/*Would building text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -519,10 +523,10 @@ const InvisibleProjectDetail = () => {
            </div> 
            </div>
 
-               
+           <div className="w-full">   
               <img
                 alt="World secondary"
-                className="w-full h-auto mt-10 mb-20 md:mt-10 mb-20"
+                className="w-full h-auto mt-20 mb-20 md:mt-10 mb-20"
                 src="/lovable-uploads/web1920-Space Museum_대지 6.png"
               />
             </div>
@@ -536,12 +540,23 @@ const InvisibleProjectDetail = () => {
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Narrative Arc</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.
            </p>
+           </div> 
+           </div> 
+
+           {/*Narrative Arc text start2*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.
            </p>
            </div> 
            </div> 
 
-           {/*Vdieo Development text start*/}
+            {/* Line */}
+            <div className="w-full h-px my-4 md:my-4 bg-gray-black" />
+
+                    
+          {/*Vdieo Development text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Video Development</h2>
@@ -566,9 +581,11 @@ const InvisibleProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
 
             {/* Floor Plan Image 1*/}
-             <div className="w-full mb-10 md:mb-10">
+             <div className="w-full mb-20 md:mb-20">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 35 사본.png" alt="Floor plan" />
             </div>
+
+          
 
            {/*Space text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -579,13 +596,16 @@ const InvisibleProjectDetail = () => {
            </div> 
            </div>
 
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+
 
             {/* Exterior Image 1*/}
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
             </div>
             {/* Exterior Image 1*/}
-             <div className="w-full mb-20 md:mb-20">
+             <div className="w-full mb-10 md:mb-10">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-42.png" alt="Floor plan" />
             </div>
 
@@ -594,11 +614,11 @@ const InvisibleProjectDetail = () => {
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-38.png" alt="Floor plan" />
             </div>
             {/* Space Image 2*/}
-             <div className="w-full mb-20 md:mb-20">
+             <div className="w-full mb-10 md:mb-10">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-39.png" alt="Floor plan" />
             </div>
             {/* Space Image 3*/}
-             <div className="w-full mb-20 md:mb-20">
+             <div className="w-full mb-40">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
             </div>
          
@@ -611,9 +631,17 @@ const InvisibleProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
 
 
-{/* Full playing Video Section */}
-<div className="my-40 md:my-40 relative">
-  {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
+           {/* Full playing Video Section */}
+           <div className="my-40 md:my-40 relative">
+             {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
+             {/*Full playing video*/}
+           <div className="flex flex-col md:flex-row md:items-center md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Full Playing Video</h2>
+           </div>
+           </div>
+
+              
   <div
     className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
     style={{ width: '100vw' }} // 화면 가로 꽉참
@@ -629,13 +657,7 @@ const InvisibleProjectDetail = () => {
   </AspectRatio>
 </div>
             
-            {/* Full Playing Video */}
-            <div className="mb-6 md:mb-8">
-              <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
-                {/* <YouTube videoId="KT0Cwy9s5n8" opts={videoOpts} className="w-full h-full" /> */}
-                <LiteYouTube id="KT0Cwy9s5n8" title="Full Playing Video" /> {/* ✅ NEW */}
-              </AspectRatio>
-            </div>
+
 
             {/* Line */}
             <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
@@ -645,22 +667,28 @@ const InvisibleProjectDetail = () => {
             <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
           </div>
 
-            {/* Post-Project */}
-            <div className="rounded-lg bg-transparent">
-              <h2 className="text-xl md:text-xl font-light text-gray-300">Post-Project Expansion</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-6 md:mb-6 mt-0 md:mt-0 mb-6 text-gray-400 font-light">
-                To address limitations in interactivity, a simulation based on evolution was integrated into the experience. Users input
-                variables that influenced how virtual organisms adapted within a bounded environment.
-              </p>
+           {/*Post-Project Direction text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Direction</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A virtual ocean environment is constructed where objects evolve autonomously in response to user-input variables, based on the concept of "evolution." Within this bounded space, the mechanism simulates how lifeforms might adapt to their environment over time. The system is designed to generate diverse outcomes depending on the data provided by the user, offering a dynamic and interactive experience. This concept is being developed as the primary content for the Life Chamber, enhancing the thematic depth and educational engagement of the exhibit.
+           </p>
+           </div> 
+           </div>
 
-              <h2 className="text-xl md:text-xl font-light mb-6 md:mb-6 text-gray-300">The Ocean (2025)</h2>
-              <p className="text-base md:text-base lg:text-base leading-relaxed mb-20 md:mb-20 text-gray-400 font-light">
-                Originally developed as a conceptual prototype in 2022, The Ocean explored autonomous evolution through interactive
-                simulation...
-              </p>
-           
-             </div>
+            {/* Line */}
+            <div className="w-full h-px my-4 md:my-4 bg-gray-black" />
 
+           {/*The Ocean text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">The Ocean</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A responsive virtual ocean simulated autonomous life evolution based on user input. Different environmental conditions triggered emergent behaviours, reinforcing scientific thinking through exploration and experimentation.
+           </p>
+           </div> 
+           </div>
+
+ 
 
 
             {/* extra images */}
