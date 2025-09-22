@@ -368,27 +368,22 @@ const InvisibleProjectDetail = () => {
     <div>
       <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
       <p className="text-sm leading-relaxed font-light text-gray-400">
-        The project focused on simplifying complex topics into accessible narratives and designing intuitive interaction models...
-      </p>
+       The project focused on simplifying complex topics into accessible narratives and designing intuitive interaction models. Symbolism and abstraction were employed to visualise phenomena beyond everyday perception, while immersive environments provided an emotional framework to deepen connection and engagement. This design approach positioned science not only as knowledge to be learned, but as an experience to be felt.
+    </p>
     </div>
     <div>
       <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
       <p className="text-sm leading-relaxed font-light text-gray-400">
-        The project sought to reimagine the communication of science in cultural institutions...
+        The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds.
       </p>
     </div>
     <div>
       <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
       <p className="text-sm leading-relaxed font-light text-gray-400">
-        Four universal scientific themes—gravity, light, life, and time—were selected as the foundation of the exhibition...
+        Four universal scientific themes—gravity, light, life, and time—were selected as the foundation of the exhibition. Each theme was spatially embodied in a dedicated immersive environment, combining abstraction with sensory cues.
       </p>
     </div>
-    <div>
-      <h3 className="text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
-      <p className="text-sm leading-relaxed font-light text-gray-400">
-        A mixed-method study with 30 participants across varied age groups and educational backgrounds evaluated the project’s effectiveness...
-      </p>
-    </div>
+   
   </div>
 </details>
 
@@ -409,7 +404,7 @@ const InvisibleProjectDetail = () => {
       <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-2xl md:text-xl font-light text-white">Immersion Demand</p>
+      <p className="text-2xl md:text-xl font-light text-white">Insight</p>
       <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
     </div>
   </div>
@@ -417,7 +412,7 @@ const InvisibleProjectDetail = () => {
   <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black p-4">
     <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
     <p className="mt-6 text-sm text-gray-400">
-      An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions...
+      An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.
     </p>
   </details>
 </section>
@@ -497,69 +492,6 @@ const InvisibleProjectDetail = () => {
     <li>• Spatial design tailored to each chamber’s theme.</li>
     <li>• Chambers translate abstraction into felt space: distortion, reflection, growth, temporal shifts.</li>
   </ul>
-
-  <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black p-4">
-    <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
-    <div className="mt-6 space-y-6 text-sm text-gray-400">
-
-      {/*idea development text start*/}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-3 min-w-[200px]">
-            Worldbuilding
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            Set on a fictional alien planet(A233) inhabited by an advanced civilisation...
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-3 min-w-[200px]">
-            Narrative Arc
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            The experience followed a narrative arc centred around an unnamed interstellar explorer...
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-3 min-w-[200px]">
-            Emotional Logic
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm...
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-3 min-w-[200px]">
-            Video Development
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            Each chamber embodied its theme via interactive and environmental cues...
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-3 min-w-[200px]">
-            Spatial Design
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            Each chamber embodied its theme through interactive and environmental cues...
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </details>
 </section>
 
 
@@ -577,12 +509,46 @@ const InvisibleProjectDetail = () => {
                   src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
                 />
               </AspectRatio>
+
+           {/*Would building text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Worldbuilding</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set on a fictional alien planet(A233) inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovered abandoned structures, artefacts, and messages. Despite a lack of shared language, both species were assumed to understand the same laws of nature. The narrative explored how universal science transcended cultural boundaries.
+           </p>
+           </div> 
+           </div>
+
+               
               <img
                 alt="World secondary"
-                className="w-full h-auto mt-10 mb-10 md:mt-10 mb-10"
+                className="w-full h-auto mt-10 mb-20 md:mt-10 mb-20"
                 src="/lovable-uploads/web1920-Space Museum_대지 6.png"
               />
             </div>
+
+          
+
+
+           {/*Narrative Arc text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Narrative Arc</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience followed a narrative arc centred around an unnamed interstellar explorer. Beginning with arrival on Planet A233, the user journeyed through a sequence of abandoned chambers, each corresponding to a universal scientific principle. The order of progression was intentionally designed to mirror an epistemological transformation—from perception to comprehension. As the user advanced, they transitioned from a sense of wonder and disorientation to clarity and resonance, ultimately recognising science as a shared, emotional, and symbolic language.
+           </p
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The spatial progression of the chambers was crafted not only to convey scientific ideas, but to evoke a coherent emotional rhythm. Gravity aimed to instil awe and tension through vast, distorted space. Light encouraged curiosity and wonder through refractive spectacle. Life evoked empathy through growth and unpredictability. Time concluded the experience with a quiet sense of introspection and impermanence. These emotional states were interwoven with the scientific themes, reinforcing understanding by making abstract concepts experientially felt.
+           </p>
+           </div> 
+           </div> 
+
+           {/*Vdieo Development text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Video Development</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
+            </p>
+           </div> 
+           </div>
 
         
 
@@ -604,6 +570,16 @@ const InvisibleProjectDetail = () => {
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 35 사본.png" alt="Floor plan" />
             </div>
 
+           {/*Space text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
+           </p>
+           </div> 
+           </div>
+
+
             {/* Exterior Image 1*/}
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
@@ -615,47 +591,43 @@ const InvisibleProjectDetail = () => {
 
             {/* Space Image 1*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-43.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-38.png" alt="Floor plan" />
             </div>
             {/* Space Image 2*/}
              <div className="w-full mb-20 md:mb-20">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-44.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-39.png" alt="Floor plan" />
+            </div>
+            {/* Space Image 3*/}
+             <div className="w-full mb-20 md:mb-20">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
             </div>
          
             
 
-            {/* Slider 1 */}
-            <div className="w-full mb-20 md:mb-20">
-              <Carousel className="w-full bg-black" setApi={setApi} opts={{ loop: true }}>
-                <CarouselContent>
-                  {firstSliderImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative w-full">
-                        <AspectRatio ratio={16 / 9} className="w-full">
-                          <img src={image} alt={`Spatial slider ${index + 1}`} className="w-full h-full object-contain" />
-                        </AspectRatio>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-8 h-8 md:w-12 md:h-12" />
-                <CarouselNext className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-transparent border-none text-white hover:bg-white/10 w-8 h-8 md:w-12 md:h-12" />
-              </Carousel>
-              <div className="flex justify-center space-x-2 mt-4 md:mt-6">
-                {firstSliderImages.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-6 h-0.5 cursor-pointer transition-all duration-300 ${
-                      current === index ? "bg-white" : "bg-white/40 hover:bg-white/70"
-                    }`}
-                    onClick={() => api?.scrollTo(index)}
-                  />
-                ))}
-              </div>
-            </div>
+ 
+     
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
+
+
+{/* Full playing Video Section */}
+<div className="my-40 md:my-40 relative">
+  {/* ✅ NEW: 화면 가로 꽉차는 16:9 베이지 판 (플레이어 뒤, 같은 중심) */}
+  <div
+    className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+    style={{ width: '100vw' }} // 화면 가로 꽉참
+  >
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#AE0200]" />
+    </AspectRatio>
+  </div>
+
+  {/* 기존 플레이어: 그대로 */}
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <LiteYouTube id="KT0Cwy9s5n8" title="Project video" />
+  </AspectRatio>
+</div>
             
             {/* Full Playing Video */}
             <div className="mb-6 md:mb-8">
@@ -667,6 +639,11 @@ const InvisibleProjectDetail = () => {
 
             {/* Line */}
             <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
+
+           {/*Ocean Web Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
+          </div>
 
             {/* Post-Project */}
             <div className="rounded-lg bg-transparent">
@@ -684,10 +661,7 @@ const InvisibleProjectDetail = () => {
            
              </div>
 
-          {/*Ocean Web Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
-          </div>
+
 
             {/* extra images */}
             <div className="w-full">
