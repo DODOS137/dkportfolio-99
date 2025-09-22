@@ -314,7 +314,7 @@ const InvisibleProjectDetail = () => {
 
   <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
     <LiteYouTube
-      id="{project.videoId}"
+      id={project.videoId}
       title="Project video"
       className="w-full h-full bg-transparent"  {/* ✅ NEW: 배경 투명화 */}
     />
