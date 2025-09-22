@@ -635,7 +635,7 @@ const InvisibleProjectDetail = () => {
 
 
            {/* Full playing Video Section */}
- <div className="my-40 md:my-40">
+<div className="my-40 md:my-40">
   {/* ✅ NEW: 위쪽 캡션 */}
   <p className="mb-8 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
     Full playing Video
@@ -647,10 +647,12 @@ const InvisibleProjectDetail = () => {
     <div className="absolute inset-0 bg-[#AE0200]" />
     {/* 플레이어 */}
     <div className="absolute inset-0 z-10">
+      {/* ✅ LiteYouTube에서 bg-black 제거 필요 */}
       <LiteYouTube id="KT0Cwy9s5n8" title="Project video" className="w-full h-full" />
     </div>
   </AspectRatio>
 </div>
+
 
           
              {/* Line */}
