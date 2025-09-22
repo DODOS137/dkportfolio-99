@@ -316,7 +316,7 @@ const InvisibleProjectDetail = () => {
     <LiteYouTube
       id={project.videoId}
       title="Project video"
-      className="w-full h-full bg-transparent"  {/* ✅ NEW: 배경 투명화 */}
+      className="w-full h-full bg-transparent"  
     />
   </AspectRatio>
 </div>
@@ -661,7 +661,7 @@ const InvisibleProjectDetail = () => {
     <LiteYouTube
       id="KT0Cwy9s5n8"
       title="Project video"
-      className="w-full h-full bg-transparent"  {/* ✅ NEW: 배경 투명화 */}
+      className="w-full h-full bg-transparent" 
     />
   </AspectRatio>
 </div>
