@@ -313,7 +313,7 @@ const InvisibleProjectDetail = () => {
       <LiteYouTube id={project.videoId} title="Project video" className="w-full h-full" />
     </div>
   </AspectRatio>
-</div
+</div>
 
 
   
