@@ -303,15 +303,21 @@ const InvisibleProjectDetail = () => {
 
            {/* YouTube Video Section */}
 
-          <div className="my-40 md:my-40">
-  <AspectRatio ratio={16 / 9} className="relative rounded-lg border border-gray-800/50 overflow-hidden">
-    {/* ✅ NEW: 베이지판 — 컨테이너 기준 꽉 채움 */}
-    <div className="absolute inset-0 bg-[#AE0200]" />
+  <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
+  <div
+    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
+  >
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#AE0200]" />
+    </AspectRatio>
+  </div>
 
-    {/* ✅ NEW: 플레이어 — 같은 박스 기준으로 중앙 정렬 */}
-    <div className="absolute inset-0 z-10">
-      <LiteYouTube id={project.videoId} title="Project video" className="w-full h-full" />
-    </div>
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <LiteYouTube
+      id="{project.videoId}"
+      title="Project video"
+      className="w-full h-full bg-transparent"  {/* ✅ NEW: 배경 투명화 */}
+    />
   </AspectRatio>
 </div>
 
@@ -635,23 +641,31 @@ const InvisibleProjectDetail = () => {
 
 
            {/* Full playing Video Section */}
-<div className="my-40 md:my-40">
-  {/* ✅ NEW: 위쪽 캡션 */}
+<div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */}
+  {/* ✅ 캡션 */}
   <p className="mb-8 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
     Full playing Video
   </p>
 
-  {/* 기존 플레이어 블록 그대로 */}
-  <AspectRatio ratio={16 / 9} className="relative rounded-lg border border-gray-800/50 overflow-hidden">
-    {/* 배경색 판 */}
-    <div className="absolute inset-0 bg-[#AE0200]" />
-    {/* 플레이어 */}
-    <div className="absolute inset-0 z-10">
-      {/* ✅ LiteYouTube에서 bg-black 제거 필요 */}
-      <LiteYouTube id="KT0Cwy9s5n8" title="Project video" className="w-full h-full" />
-    </div>
+  {/* ✅ FULL-BLEED 빨강판 (뷰포트 가로 100%) */}
+  <div
+    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
+  >
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#AE0200]" />
+    </AspectRatio>
+  </div>
+
+  {/* ✅ 플레이어 (위에 겹침) */}
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <LiteYouTube
+      id="KT0Cwy9s5n8"
+      title="Project video"
+      className="w-full h-full bg-transparent"  {/* ✅ NEW: 배경 투명화 */}
+    />
   </AspectRatio>
 </div>
+
 
 
           
