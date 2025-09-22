@@ -643,7 +643,7 @@ const InvisibleProjectDetail = () => {
            {/* Full playing Video Section */}
 <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */}
   {/* ✅ 캡션 */}
-  <p className="mb-8 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
+  <p className="relative z-20 mb-8 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
     Full playing Video
   </p>
 
