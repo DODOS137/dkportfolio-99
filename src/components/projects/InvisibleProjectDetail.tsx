@@ -666,14 +666,39 @@ const InvisibleProjectDetail = () => {
   </AspectRatio>
 </div>
 
+           
 
 
           
              {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+
+            {/*Final Outcome text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A virtual ocean environment is constructed where objects evolve autonomously in response to user-input variables, based on the concept of "evolution." Within this bounded space, the mechanism simulates how lifeforms might adapt to their environment over time. The system is designed to generate diverse outcomes depending on the data provided by the user, offering a dynamic and interactive experience. This concept is being developed as the primary content for the Life Chamber, enhancing the thematic depth and educational engagement of the exhibit.
+           </p>
+           </div> 
+           </div>
+
+             {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
           
+
+
+           {/*Ocean Web Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
+          </div>
+
+           
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+
           
-           {/*Post-Project Direction text start*/}
+
+            {/*Post-Project Direction text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Direction</h2>
@@ -693,16 +718,11 @@ const InvisibleProjectDetail = () => {
            </p>
            </div> 
            </div>
-            
 
+                    
 
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
-
-           {/*Ocean Web Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
-          </div>
 
 
 
