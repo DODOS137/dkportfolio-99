@@ -62,94 +62,69 @@ const WhispersProjectDetail = () => {
       || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto')
       || null;
 
-    // 투명 1x1 픽셀 (초기 네트워크 요청 차단용)
-    const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+    // 모든 섹션 내 이미지 수집
+    const allImgs = Array.from(
+      document.querySelectorAll<HTMLImageElement>('section img')
+    );
 
-    // 모든 이미지 수집
-    const allImgs = Array.from(document.querySelectorAll<HTMLImageElement>('section img'));
-
-    // LCP 후보(맨 위 큰 이미지)는 즉시 로드
+    // LCP 후보(맨 위 큰 이미지)는 즉시/고우선 로드
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
       (lcpImg as any).fetchPriority = 'high';
       lcpImg.decoding = 'async';
+      // 컨테이너 최대폭 기준 힌트
+      if (!lcpImg.hasAttribute('sizes')) {
+        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
+      }
     }
 
-    // 나머지 이미지는 공격적 지연 로딩 준비
+    // 나머지 이미지는 native lazy + LQIP 효과만 (src는 건드리지 않음)
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
       img.dataset.lazyEnhanced = '1';
 
-      const originalSrc = img.getAttribute('src');
-      if (!originalSrc) return;
-
-      img.setAttribute('data-src', originalSrc);
-      img.setAttribute('src', transparentPixel);
+      // 브라우저 네이티브 힌트
       img.loading = 'lazy';
       img.decoding = 'async';
       (img as any).fetchPriority = 'low';
+      if (!img.hasAttribute('sizes')) {
+        img.setAttribute('sizes', '100vw'); // 안전 기본값
+      }
 
-      // LQIP 블러 + 페이드 초기 상태
-      img.classList.add('img-lqip', 'reveal-init'); // 🚀 PERF: micro-wiggle 기본 끔
+      // LQIP/페이드 초기 상태만 부여
+      img.classList.add('img-lqip', 'reveal-init');
     });
 
-    /* ----------------------------
-       🚀 PERF: 지연 로딩 큐 (동시 2개)
-       ---------------------------- */
-    const MAX_CONCURRENT = 2;
-    const queue: HTMLImageElement[] = [];
-    let inFlight = 0;
-
-    const processQueue = () => {
-      while (inFlight < MAX_CONCURRENT && queue.length) {
-        const img = queue.shift()!;
-        if (!img || img.dataset.loaded === '1') continue;
-
-        inFlight++;
-        const doReveal = () => {
-          requestAnimationFrame(() => {
-            img.classList.add('reveal-show');
-            img.classList.add('play-wiggle'); // 🚀 PERF: 보일 때만 모션 켬
-            img.dataset.loaded = '1';
-            inFlight--;
-            processQueue();
-          });
-        };
-
-        const ds = img.getAttribute('data-src');
-        if (ds && img.src !== ds) img.src = ds;
-
-        // decode()로 메인 스레드 끊김 최소화
+    // 보이면 decode → 클래스 토글 (JS 큐/1px 치환 없음)
+    const decodeOnIdle = (img: HTMLImageElement) => {
+      const run = () => {
         if (typeof (img as any).decode === 'function') {
-          (img as any).decode().then(() => {
+          (img as any).decode().catch(() => {}).finally(() => {
             img.classList.remove('img-lqip');
-            doReveal();
-          }).catch(() => {
-            img.classList.remove('img-lqip');
-            doReveal();
+            img.classList.add('reveal-show', 'play-wiggle');
           });
         } else {
           const onLoad = () => {
             img.removeEventListener('load', onLoad);
             img.classList.remove('img-lqip');
-            doReveal();
+            img.classList.add('reveal-show', 'play-wiggle');
           };
           img.addEventListener('load', onLoad);
         }
-      }
+      };
+      (window as any).requestIdleCallback ? (window as any).requestIdleCallback(run, { timeout: 500 }) : run();
     };
 
-    // 이미지 관찰자: 근접 시 큐에 추가 (오프스크린은 애니메이션/디코딩 안 함)
+    // 이미지 관찰자: 근접 시 decode & 표시
     const imgIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const img = entry.target as HTMLImageElement;
           if (entry.isIntersecting) {
             imgIO.unobserve(img);
-            queue.push(img);
-            processQueue();
+            decodeOnIdle(img);
           } else {
             // 오프스크린 되면 미세 모션 중지
             img.classList.remove('play-wiggle');
@@ -158,7 +133,7 @@ const WhispersProjectDetail = () => {
       },
       {
         root: scrollRoot,
-        rootMargin: '200px 0px', // 🚀 PERF: 과도한 프리로딩 완화
+        rootMargin: '600px 0px', // 더 이르게 프리로드
         threshold: 0.05
       }
     );
@@ -684,7 +659,6 @@ const WhispersProjectDetail = () => {
 
 
 
- 
 
 
 
