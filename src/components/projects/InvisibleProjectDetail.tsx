@@ -613,14 +613,14 @@ const InvisibleProjectDetail = () => {
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-36.png" alt="Floor plan" />
             </div>
-            {/* Exterior Image 1*/}
+            {/* 증빙컷 Image */}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-42.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37.png" alt="Floor plan" />
             </div>
 
-            {/* Space Image 1*/}
+            {/* 증빙컷 2*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-38.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
             </div>
             {/* Space Image 2*/}
              <div className="w-full mb-10 md:mb-10">
