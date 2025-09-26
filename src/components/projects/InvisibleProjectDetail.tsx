@@ -611,7 +611,7 @@ const InvisibleProjectDetail = () => {
 
             {/* Exterior Image 1*/}
              <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-36.png" alt="Floor plan" />
             </div>
             {/* Exterior Image 1*/}
              <div className="w-full mb-10 md:mb-10">
