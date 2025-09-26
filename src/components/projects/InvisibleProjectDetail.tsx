@@ -550,7 +550,7 @@ const InvisibleProjectDetail = () => {
            </div> 
           
            {/* Line */}
-            <div className="w-full h-px my-4 md:my-4 bg-gray-black" />
+            <div className="w-full h-px my-2 md:my-2 bg-gray-black" />
 
            {/*Narrative Arc text start2*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -635,11 +635,17 @@ const InvisibleProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
 
+             {/* Space Image 1*/}
+             <div className="w-full mb-10 md:mb-10">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-38.png" alt="Floor plan" />
+            </div>
+
           
             {/* Space Image 2*/}
              <div className="w-full mb-10 md:mb-10">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-39.png" alt="Floor plan" />
             </div>
+          
             {/* Space Image 3*/}
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
