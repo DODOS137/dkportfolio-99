@@ -616,29 +616,38 @@ const InvisibleProjectDetail = () => {
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-36.png" alt="Floor plan" />
             </div>
+
+            {/* Line */}
+            <div className="w-full h-px my-5 md:my-5 bg-gray-black" />
+
             {/* 증빙컷 Image */}
              <div className="w-full mb-10 md:mb-10">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-gray-black" />
+
 
             {/* 증빙컷 2*/}
-             <div className="w-full mb-10 md:mb-10">
+             <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37.png" alt="Floor plan" />
             </div>
+
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+
+          
             {/* Space Image 2*/}
              <div className="w-full mb-10 md:mb-10">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-39.png" alt="Floor plan" />
             </div>
             {/* Space Image 3*/}
-             <div className="w-full mb-40">
+             <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
             </div>
          
             
-
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
  
      
 
