@@ -548,6 +548,9 @@ const InvisibleProjectDetail = () => {
            </p>
            </div> 
            </div> 
+          
+           {/* Line */}
+            <div className="w-full h-px my-4 md:my-4 bg-gray-black" />
 
            {/*Narrative Arc text start2*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -615,12 +618,15 @@ const InvisibleProjectDetail = () => {
             </div>
             {/* 증빙컷 Image */}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
             </div>
+
+            {/* Line */}
+            <div className="w-full h-px my-5 md:my-5 bg-gray-black" />
 
             {/* 증빙컷 2*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37.png" alt="Floor plan" />
             </div>
             {/* Space Image 2*/}
              <div className="w-full mb-10 md:mb-10">
