@@ -286,8 +286,10 @@ const InvisibleProjectDetail = () => {
       The Brief
           </h2>
        <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
-        Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of Ocean Science for Sustainable Development (2021-2030), tasks students to explore the crucial intersection between the ocean and the climate.
-      </p>
+        Create an XR product which is underpinned by the research and critical analysis within your thesis. The
+final major project and the portfolio of supplementary design materials represent the culmination of
+your research abilities. They should reflect your own interests and support your career development.
+       </p>
       </div>
 
     </div>
