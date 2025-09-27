@@ -633,11 +633,11 @@ const InvisibleProjectDetail = () => {
             </div>
 
             {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
 
              {/* Space Image 1*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-38.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37-37.png" alt="Floor plan" />
             </div>
 
           
