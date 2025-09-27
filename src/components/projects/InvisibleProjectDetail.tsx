@@ -643,10 +643,17 @@ const InvisibleProjectDetail = () => {
           
             {/* Space Image 2*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-39.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37-37.png" alt="Floor plan" />
             </div>
+
+             {/* Space Image 3*/}
+             <div className="w-full mb-10 md:mb-10">
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37-37.png" alt="Floor plan" />
+            </div>
+
           
-            {/* Space Image 3*/}
+          
+            {/* Space Image 4*/}
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
             </div>
