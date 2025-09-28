@@ -657,7 +657,7 @@ your research abilities. They should reflect your own interests and support your
           
             {/* Space Image 4*/}
              <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
             </div>
          
             
