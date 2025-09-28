@@ -338,18 +338,32 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
-          {/* YouTube Video Section */}
-          <div className="rounded-lg bg-transparent mb-40 mt-40 md:mb-40">
-            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl border border-transparent">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                {/* <YouTube videoId="8GEK3igRom0" ... />  */} {/* ✅ REPLACED */}
-                <LiteYouTube id="8GEK3igRom0" title="Seoul Museum Project Video" /> {/* ✅ NEW */}
-              </AspectRatio>
-            </div>
-          </div>
+           {/* YouTube Video Section */}
+  <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
+  <div
+    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
+  >
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#FBB03B]" />
+    </AspectRatio>
+  </div>
+
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <LiteYouTube
+      id="8GEK3igRom0" 
+      title="Seoul Museum Project Video"
+      className="w-full h-full bg-transparent"  
+    />
+  </AspectRatio>
+</div>
+          
+          
+
 
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+
+
           
 {/* Challenge Summary */}
 <section aria-labelledby="car-title" className="mt-8 mb-8"> {/* ✅ 섹션 간격 8 */}
