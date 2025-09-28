@@ -344,7 +344,7 @@ const SeoulMuseumProjectDetail = () => {
     className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
   >
     <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#FBB03B]" />
+      <div className="w-full h-full bg-[#F7931E]" />
     </AspectRatio>
   </div>
 
