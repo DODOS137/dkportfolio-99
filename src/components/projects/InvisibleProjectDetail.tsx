@@ -436,7 +436,7 @@ your research abilities. They should reflect your own interests and support your
         <tr>
           <td className="px-4 py-4 font-light">Texturing</td>
           <td className="px-4 py-4">Photoshop</td>
-          <td className="px-4 py-4">PBR materials</td>
+          <td className="px-4 py-4">PBR material maps</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Lighting & Render</td>
