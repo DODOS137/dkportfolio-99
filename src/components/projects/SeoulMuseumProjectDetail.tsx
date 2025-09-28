@@ -711,7 +711,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
 
-           {/*Built-in display cases Text 2*/}
+           {/*Built-in display cases Text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Built-in display cases</h2>
@@ -721,7 +721,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            </div> 
 
           {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-black"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
            {/*Built-in 1*/}
            <div className="w-full mb-20 md:mb-40">
