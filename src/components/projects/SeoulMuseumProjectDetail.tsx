@@ -504,13 +504,13 @@ Moved away from passive, linear layouts towards participatory and immersive expe
       <tbody className="divide-y divide-white/10">
         <tr>
           <td className="px-4 py-4 font-light">Modeling</td>
-          <td className="px-4 py-4">AutoCAD, 3ds Max</td>
+          <td className="px-4 py-4">AutoCAD, 3ds Max, Blender</td>
           <td className="px-4 py-4">3D Product images, Space</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Texturing</td>
           <td className="px-4 py-4">Photoshop</td>
-          <td className="px-4 py-4">PBR materials</td>
+          <td className="px-4 py-4">PBR material maps</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Lighting & Render</td>
