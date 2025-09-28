@@ -237,108 +237,106 @@ const SeoulMuseumProjectDetail = () => {
           />
         </div>
 
-        {/* Shared Container */} 
-        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">        
-          {/* Project Description */}
-          <div className="rounded-lg bg-transparent mt-20 md:mt-40">
-            <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
-              Seoul Natural History Museum
-            </h2>
-            <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
-            This project proposes a conceptual and spatial renewal of the Seodaemun Museum of Natural History, Korea's first public natural history museum. The redesign envisions a new identity—Seoul Natural History Museum—grounded in Korea's cultural relationship with nature, particularly from the perspective of traditional hunters. The project spans spatial reconfiguration, exhibition curation, branding, and product design.
-            </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-sm">
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                <p className="text-white">Bachelor's Graduation Project</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                <p className="text-white">Spatial Design</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
-                <p className="text-white">Solo Project</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
-                <p className="text-white">16 weeks</p>
-              </div>
-            </div>
-          </div>
+  
+         
+         
+         
+         
+      {/* Shared Container */}
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+    
+       {/* Left Column */}
+       <div>
+       {/* Title */}
+       <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
+       Seoul Natural History Museum
+       </h2>
 
+      {/* Location + Year */}
+      <p className="text-base md:text-base font-bold text-gray-500 mb-10">
+        2021 │ Spatial Design │ Solo Project │ 16 weeks
+      </p>
 
-  {/* Client Section */}
-   {/* 반반 레이아웃 */}
-   <div className="rounded-lg bg-transparent cv-auto"> {/* ✅ NEW */}
-  <div className="mb-8 mt-20 md:mt-20 px-0"> 
-    <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
-      Client
-    </h2>
-
-    {/* 텍스트:로고 = 1fr : auto, 오른쪽 딱 붙이기 */}
-    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-start gap-0">
-      {/* 텍스트 영역 */}
-      <div className="min-w-0">
-        <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
-         Seodaemun Museum of Natural Hisoty
-        </p>
-      </div>
-
-      {/* 로고 영역 (우측 끝에 붙임) */}
-      <div className="min-w-0 m-0 p-0 justify-self-end">
+      {/* ✅ NEW: Image under location/year */}
+      <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
         <img
-          src="/lovable-uploads/web1920-S.N-25.png"
-          alt="UNESCO Logo"
-          className="block m-0 w-auto max-h-28 md:max-h-32 object-contain border-0 ring-0 outline-none shadow-none"
-          loading="lazy"        // ✅ NEW
-          decoding="async"      // ✅ NEW
-          fetchpriority="low"   // ✅ NEW
+          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
+          alt={project.title}
+          className="w-full h-full"
+          loading="lazy"
+          decoding="async"
         />
       </div>
-      
     </div>
+
+    {/* Right Column */}
+    <div className="space-y-6">
+
    
+    <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
+     BA Graduation Project
+    </p>   
+       
+    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+    This project proposes a conceptual and spatial renewal of the Seodaemun Museum of Natural History, Korea's first public natural history museum. The redesign envisions a new identity—Seoul Natural History Museum—grounded in Korea's cultural relationship with nature, particularly from the perspective of traditional hunters. The project spans spatial reconfiguration, exhibition curation, branding, and product design.
+    </p>
+
+       <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+    Initiated as a graduation project, the proposal was developed by requesting a brief from Seodaemun Museum of Natural History and receiving curatorial feedback during the process.
+       </p>
+       
+    <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
+   <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
+      Client
+    </p>
+     <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+     Seodaemun Museum of Natural Hisoty
+     </p>
+      </div>
     
-    <div className="mb-8 mt-20 md:mt-20"> 
-         <h2 className="text-xl md:text-xl font-light text-white min-w-[200px] mb-6 md:mb-8">
+
+       
+       <div className="mb-6 mt-6 md:mt-6"> 
+         <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
       The Brief
           </h2>
-       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-300">
-       Design a spatial renewal strategy that increases visitor engagement through immersive storytelling and interactive media. The proposal should address outdated interiors, limited identity, and reposition the museum as a dynamic hub for science and culture.
-      </p>
-       
+       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+        As one of Seoul’s earliest natural history museums, the institution has served the public for decades. However, much of its spatial layout and exhibition language remain rooted in traditional display methods, limiting its relevance to contemporary audiences.
+       </p>
       </div>
 
-     <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
+     <details className="mt-4 mb-6 rounded-lg border border-white/10 bg-black">
       <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
          Full Brief
-  </summary>
-  <div className="px-4 pb-4 pt-6 space-y-8">
-     <div>
+       </summary>
+
+        <div className="px-4 pb-4 pt-6 space-y-4">
+    <div>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-       (Developed as a bachelor’s graduation project, the work involved proposing a reverse brief to the Seodaemun Museum of Natural History. The project received institutional feedback, enabling design refinement based on real-world expectations for museum renewal.
-         While not a direct commission, the project was conducted in dialogue with the museum, positioning the work within a professional framework of client-oriented research and feedback.)
-       </p>
-    </div>
-     
-     <div>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        1. Renewal – Redefine outdated spaces with a contemporary design language.
+        1. Propose a new, distinctly Korean concept not previously introduced.
       </p>
     </div>
 
     <div>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        2. Interior & Circulation – Upgrade spatial flow and modernise interiors to enhance visitor comfort.
+        2. Maximize the use of the existing spatial framework.
       </p>
     </div>
 
+
   </div>
 </details>
- </div>
-</div>
+
+    </div>
+
+  </div>
+
+
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
           {/* YouTube Video Section */}
           <div className="rounded-lg bg-transparent mb-40 mt-40 md:mb-40">
