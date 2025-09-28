@@ -500,7 +500,7 @@ const WhispersProjectDetail = () => {
         <tr>
           <td className="px-4 py-4 font-light">Texturing</td>
           <td className="px-4 py-4">Substance Painter, Photoshop</td>
-          <td className="px-4 py-4">PBR stone/metal materials</td>
+          <td className="px-4 py-4">PBR stone/metal material maps</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Lighting & Render</td>
