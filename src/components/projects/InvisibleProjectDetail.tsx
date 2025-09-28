@@ -514,7 +514,7 @@ your research abilities. They should reflect your own interests and support your
            </div> 
           
            {/* Line */}
-            <div className="w-full h-px my-2 md:my-2 bg-gray-black" />
+            <div className="w-full h-px mb-3 md:mb-3 bg-gray-black" />
 
            {/*Narrative Arc text start2*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
