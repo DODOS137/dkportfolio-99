@@ -261,7 +261,7 @@ const SeoulMuseumProjectDetail = () => {
       {/* ✅ NEW: Image under location/year */}
       <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
         <img
-          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
+          src="/lovable-uploads/web1920-SeoulNatural-25.png"
           alt={project.title}
           className="w-full h-full"
           loading="lazy"
@@ -291,7 +291,7 @@ const SeoulMuseumProjectDetail = () => {
       Client
     </p>
      <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-     Seodaemun Museum of Natural Hisoty
+     Seodaemun Museum of Natural History
      </p>
       </div>
     
