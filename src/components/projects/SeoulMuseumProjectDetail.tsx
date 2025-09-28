@@ -554,24 +554,70 @@ Moved away from passive, linear layouts towards participatory and immersive expe
          
 
            {/*Site Selection text start*/}
+
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Site Selection</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">서울특별시 서대문구 연희로 32길 51 (연희동 서대문자연사 박물관)</p>
-
-            <p className="mt-3 text-sm md:text-sm lg:text-sm font-light text-gray-400">51, Yeonhui-ro, 32-gil, Seodaemun-gu. Seoul, Republic of Korea</p>
+           </div> 
+           </div> 
+           {/* Line */}
+            <div className="w-full h-px mb-3 md:mb-3 bg-gray-black" />
+         
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">51, Yeonhui-ro, 32-gil, Seodaemun-gu. Seoul, Republic of Korea</p>
            </div> 
            </div>
 
+         
+          
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
           
 
-          {/*Site Image2*/}     
+          {/*Problem Image2*/}     
           <div className="w-full">
             <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" />
           </div>     
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          
+          
+          {/*Problem Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+              <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">
+                Problem Analysis
+              </h2>
+             <div className="flex flex-col space-y-4 md:space-y-4 ">
+            <div>
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-6 md:mb-8 min-w-[200px] text-gray-300">
+               Overcrowded Specimen Displays
+               </h3>
+              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
+
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-6 md:mb-8 min-w-[200px] text-gray-300">
+               Passive Viewing Format
+               </h3>
+              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.
+              </p>
+
+              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-6 md:mb-8 min-w-[200px] text-gray-300">
+               Lack of Identity in Spatial Elements
+               </h3>
+              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.
+              </p>
+              </div>
+             </div>
+          
+  
+            </div>
+          </div>
 
           {/* Narrative */}
           <div className="w-full">
