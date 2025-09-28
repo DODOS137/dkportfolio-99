@@ -686,7 +686,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project involved iterative testing and feedback to refine the spatial atmosphere, while custom built-in furniture was modeled to reflect the museum’s identity and reinforce its relationship with the surrounding space
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project involved iterative testing and feedback to refine the spatial atmosphere, while custom built-in furniture was modeled to reflect the museum’s identity and reinforce its relationship with the surrounding space.
            </p>
            </div> 
            </div> 
@@ -696,7 +696,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*증빙 Images*/}
           <div className="w-full mb-20 md:mb-40">
-            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본.png" />
               </div>
 
 
