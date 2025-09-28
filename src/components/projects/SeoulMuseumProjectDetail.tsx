@@ -645,10 +645,25 @@ Moved away from passive, linear layouts towards participatory and immersive expe
                 
 
           {/* Floor Plan */}
-          <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/158cf471-6a66-466d-b78a-90eb5b9cb682.png" />
-            <img className="w-full h-auto" src="/lovable-uploads/fa2525e7-6df4-4a9d-91bf-2fa5260afc6d.png" />
-          </div>
+            <div className="w-full">
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 8.png" />
+             </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-black"></div>
+
+          {/* Floor Plan2 */}
+            <div className="w-full">
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 9.png" />
+             </div>
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+
+
+
+          
 
           {/*Exhibtion Plan*/}
           <div className="w-full">
