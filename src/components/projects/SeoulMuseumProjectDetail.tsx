@@ -670,13 +670,20 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
              </div>
 
+            {/*Spatial & Exhibition text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial & Exhibition Design</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum's spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
+           </p>
+           </div> 
+           </div> 
 
-          {/* Spatial Design */}
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">  
-              <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-8 text-gray-300 min-w-[200px]">Spatial Design</h2>
-             </div>
-         </div>
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+
+
 
           {/*Lobby Images*/}
           <div className="w-full mb-20 md:mb-40">
