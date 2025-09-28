@@ -707,6 +707,37 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본 2.png" />
               </div>
 
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+
+           {/*Built-in display cases Text 2*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Built-in display cases</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Visitors encounter a sequence of built-in wall cabinets, each dedicated to a specific theme—from preserved biological specimens to rare books and historical artifacts—creating layered moments of discovery throughout the exhibition.
+           </p>
+           </div> 
+           </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-black"></div>
+
+           {/*Built-in 1*/}
+           <div className="w-full mb-20 md:mb-40">
+            <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" />
+           </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+
+           {/*Built-in 2*/}
+           <div className="w-full mb-20 md:mb-40">
+           <img className="w-full h-auto " src="/lovable-uploads/3fa7a7e0-8840-409c-b7c5-025bcb4d027c.png" />
+           </div>
+
+
 
 
 
@@ -750,23 +781,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
               </div>
           </div>
 
-           {/*Built-in 1*/}
-           <div className="w-full mb-20 md:mb-40">
-            <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" />
-              </div>
-         
-            {/*Built-in comments*/}
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40 mt-20 md:mt-40">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">Built-in wall cabinets</h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">Visitors encounter a sequence of built-in wall cabinets, each dedicated to a specific theme—from preserved biological specimens to rare books and historical artifacts—creating layered moments of discovery throughout the exhibition.</p>
-              </div>
-          </div>
-          
-           {/*Built-in 2*/}
-           <div className="w-full mb-20 md:mb-40">
-            <img className="w-full h-auto " src="/lovable-uploads/3fa7a7e0-8840-409c-b7c5-025bcb4d027c.png" />
-              </div>
+
 
            {/*Rest Area Image 1*/}
            <div className="w-full mb-20 md:mb-40">
