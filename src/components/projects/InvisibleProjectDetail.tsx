@@ -84,111 +84,97 @@ const InvisibleProjectDetail = () => {
   }, [secondApi]);
 
   /* ============================
-     ✅ NEW: 이미지 최적화 + 스크롤 페이드 + 미세 모션
-     - ScrollArea의 viewport를 IO root로 지정
-     - 동시 로드 2개로 제한하는 지연 로딩 큐
-     - 텍스트/이미지 페이드 인/아웃
-     - 보일 때만 micro-wiggle
-     - content-visibility
+     ✅ 최적화 전용 useEffect (구조/내용 불변)
+     - 1px 투명픽셀/JS 큐 제거 → 브라우저 네이티브 스케줄링 활용
+     - LCP: eager + fetchpriority=high + sizes 힌트
+     - 나머지: lazy + decode + sizes=100vw + 근접 프리로드
+     - 텍스트/이미지 페이드 & 보일 때만 미세 모션 유지
      ============================ */
   useEffect(() => {
-    // 🔧 FIX: shadcn ScrollArea viewport를 root로 사용
+    // ScrollArea viewport를 IO root로 사용(shadcn)
     const scrollRoot =
       document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') ||
       document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto') ||
       null;
 
-    // 모든 섹션 내 이미지 수집
-    const allImgs = Array.from(document.querySelectorAll<HTMLImageElement>('section img'));
+    // 섹션 내 모든 이미지
+    const allImgs = Array.from(
+      document.querySelectorAll<HTMLImageElement>('section img')
+    );
 
-    // LCP 후보(첫 이미지) 우선 로드 + fetchpriority
+    // LCP 후보(가장 위 이미지): 즉시/고우선 + 반응형 힌트
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
+      (lcpImg as any).fetchPriority = 'high';
       lcpImg.decoding = 'async';
-      try { lcpImg.setAttribute('fetchpriority', 'high'); } catch {}
+      if (!lcpImg.hasAttribute('sizes')) {
+        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
+      }
     }
 
-    // 나머지 레이지 준비
-    const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+    // 나머지: 네이티브 lazy + decode + LQIP/페이드 클래스만 (src/경로는 그대로 유지)
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
-      const originalSrc = img.getAttribute('src');
-      if (!originalSrc) return;
-      img.setAttribute('data-src', originalSrc);
-      img.setAttribute('src', transparentPixel);
       img.loading = 'lazy';
       img.decoding = 'async';
-      img.classList.add('img-lqip', 'reveal-init'); // 초기 블러+페이드 (모션은 보일 때 켬)
+      (img as any).fetchPriority = 'low';
+      if (!img.hasAttribute('sizes')) {
+        img.setAttribute('sizes', '100vw');
+      }
+      img.classList.add('img-lqip', 'reveal-init');
     });
 
-    // 🚀 PERF: 동시 2개만 디코드/표시
-    const MAX_CONCURRENT = 2;
-    const queue: HTMLImageElement[] = [];
-    let inFlight = 0;
-
-    const processQueue = () => {
-      while (inFlight < MAX_CONCURRENT && queue.length) {
-        const img = queue.shift()!;
-        if (!img || img.dataset.loaded === '1') continue;
-
-        inFlight++;
-        const ds = img.getAttribute('data-src');
-        if (ds && img.src !== ds) img.src = ds;
-
-        const reveal = () => {
-          requestAnimationFrame(() => {
-            img.classList.add('reveal-show', 'play-wiggle');
-            img.dataset.loaded = '1';
-            inFlight--;
-            processQueue();
-          });
-        };
-
+    // 근접 시 decode → 표시 (큐/치환 없음)
+    const decodeOnIdle = (img: HTMLImageElement) => {
+      const run = () => {
         if (typeof (img as any).decode === 'function') {
-          (img as any).decode().then(() => {
+          (img as any).decode().catch(() => {}).finally(() => {
             img.classList.remove('img-lqip');
-            reveal();
-          }).catch(() => {
-            img.classList.remove('img-lqip');
-            reveal();
+            img.classList.add('reveal-show', 'play-wiggle');
           });
         } else {
           const onLoad = () => {
             img.removeEventListener('load', onLoad);
             img.classList.remove('img-lqip');
-            reveal();
+            img.classList.add('reveal-show', 'play-wiggle');
           };
           img.addEventListener('load', onLoad);
         }
-      }
+      };
+      (window as any).requestIdleCallback
+        ? (window as any).requestIdleCallback(run, { timeout: 500 })
+        : run();
     };
 
-    // 이미지 관찰자
     const imgIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const img = entry.target as HTMLImageElement;
           if (entry.isIntersecting) {
             imgIO.unobserve(img);
-            queue.push(img);
-            processQueue();
+            decodeOnIdle(img);
           } else {
-            img.classList.remove('play-wiggle'); // 오프스크린이면 모션 중지
+            img.classList.remove('play-wiggle'); // 오프스크린 시 모션 중지
           }
         });
       },
-      { root: scrollRoot, rootMargin: '200px 0px', threshold: 0.05 }
+      { root: scrollRoot, rootMargin: '600px 0px', threshold: 0.05 }
     );
     lazyImgs.forEach((img) => imgIO.observe(img));
 
-    // 텍스트 페이드
+    // 텍스트 페이드(내용 변경 없이 class만)
     const textNodes = document.querySelectorAll<HTMLElement>(
       'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
-    textNodes.forEach((el) => el.classList.add('text-reveal-init'));
+    textNodes.forEach((el) => {
+      if (!el.classList.contains('text-reveal-init')) {
+        el.classList.add('text-reveal-init');
+      }
+    });
+
     const textIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -245,10 +231,6 @@ const InvisibleProjectDetail = () => {
             </AspectRatio>
           </div>
 
-      
-           
-           
-           
       {/* Shared Container */}
        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
@@ -296,15 +278,10 @@ your research abilities. They should reflect your own interests and support your
 
   </div> 
 
-
-
-
          {/*Line*/} 
           <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
-
            {/* YouTube Video Section */}
-
   <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
   <div
     className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
@@ -323,18 +300,9 @@ your research abilities. They should reflect your own interests and support your
   </AspectRatio>
 </div>
 
-
-  
-
-
-
-
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
 
-
-          
-          
 {/* Summary */}
 <section aria-labelledby="sum-title" className="mt-6 mb-6">
   <h2 id="sum-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">
@@ -502,9 +470,6 @@ your research abilities. They should reflect your own interests and support your
   </ul>
 </section>
 
-
-          
-           
             {/* Line */}
             <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
            
@@ -539,9 +504,6 @@ your research abilities. They should reflect your own interests and support your
               />
             </div>
 
-          
-
-
            {/*Narrative Arc text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -566,7 +528,6 @@ your research abilities. They should reflect your own interests and support your
             {/* Line */}
             <div className="w-full h-px my-4 md:my-4 bg-gray-black" />
 
-                    
           {/*Vdieo Development text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -578,9 +539,6 @@ your research abilities. They should reflect your own interests and support your
 
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
-
-        
-
 
             {/* Video Development Image 1*/}
             <div className="w-full">
@@ -599,8 +557,6 @@ your research abilities. They should reflect your own interests and support your
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 35 사본.png" alt="Floor plan" />
             </div>
 
-          
-
            {/*Space text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -612,7 +568,6 @@ your research abilities. They should reflect your own interests and support your
 
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
-
 
             {/* Exterior Image 1*/}
              <div className="w-full">
@@ -627,8 +582,6 @@ your research abilities. They should reflect your own interests and support your
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
             </div>
 
-
-
             {/* 증빙컷 2*/}
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37.png" alt="Floor plan" />
@@ -642,7 +595,6 @@ your research abilities. They should reflect your own interests and support your
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37-37.png" alt="Floor plan" />
             </div>
 
-          
             {/* Space Image 2*/}
              <div className="w-full mb-10 md:mb-10">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-38.png" alt="Floor plan" />
@@ -653,22 +605,16 @@ your research abilities. They should reflect your own interests and support your
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-39.png" alt="Floor plan" />
             </div>
 
-          
-          
             {/* Space Image 4*/}
              <div className="w-full">
               <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
             </div>
          
-            
             {/* Line */}
             <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
  
-     
-
             {/* Line */}
             <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
-
 
            {/* Full playing Video Section */}
 <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */}
@@ -696,10 +642,6 @@ your research abilities. They should reflect your own interests and support your
   </AspectRatio>
 </div>
 
-           
-
-
-          
              {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
 
@@ -715,18 +657,13 @@ your research abilities. They should reflect your own interests and support your
              {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
           
-
-
            {/*Ocean Web Image1*/}        
           <div className="w-full">
             <img className="w-full h-full" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
           </div>
 
-           
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
-
-          
 
             {/*Post-Project Direction text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -749,15 +686,8 @@ your research abilities. They should reflect your own interests and support your
            </div> 
            </div>
 
-                    
-
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
-
-
-
- 
-
 
             {/* extra images */}
             <div className="w-full">
