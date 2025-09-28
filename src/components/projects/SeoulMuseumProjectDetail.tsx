@@ -365,112 +365,112 @@ const SeoulMuseumProjectDetail = () => {
 
 
           
-{/* Challenge Summary */}
-<section aria-labelledby="car-title" className="mt-8 mb-8"> {/* ✅ 섹션 간격 8 */}
-  <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Summary</h2> {/* ✅ 제목 밑 4 */}
 
-  <div className="grid md:grid-cols-3 gap-4">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
-      <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-        <li>Gaps in public understanding of ocean ecosystems</li>
-        <li>Overemphasis on iconic large marine species</li>
-        <li>Overlooked bottom-dwelling and invertebrate life</li>
-        <li>Reliance on visual-only formats</li>
+          
+          
+{/* Summary */}
+<section aria-labelledby="sum-title" className="mt-6 mb-6">
+  <h2 id="sum-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">
+    Summary
+  </h2>
+  <div className="grid md:grid-cols-3 gap-6">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+         <li>Outdated façade & interiors</li>
+         <li>Weak cultural identity</li>
+         <li>Limited visitor engagement</li>
       </ul>
     </div>
-
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
-      <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-        <li>Sound-driven storytelling</li>
-        <li>Immersive design for emotional impact</li>
-        <li>Hybrid: AR triggers + tactile modules</li>
-        <li>Focus on sub-rock invertebrates</li>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+                    <li>Contemporary landmark façade</li>
+                    <li>Spatial renewal & circulation upgrade</li>
+                    <li>Immersive storytelling + interactive media</li>
+     
       </ul>
     </div>
-
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
-      <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-        <li>Pause · listen · empathize</li>
-        <li>Invisible made visible (emotional · sonic · spatial)</li>
-        <li>Scalable, mobile exhibition system</li>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+                    <li>Repositioned as cultural landmark</li>
+                    <li>Enhanced visitor experience</li>
+                    <li>Alignment with modern expectations</li>
       </ul>
     </div>
   </div>
 </section>
 
-{/* Challenge full text */}
-<details className="mt-4 mb-8 rounded-lg border border-white/10 bg-black"> {/* ✅ full text도 4 */}
-  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
-    Full text
-  </summary>
-  <div className="px-4 pb-4 pt-6 space-y-4">
+{/* Full text */}
+<details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
+  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
+  <div className="px-4 pb-6 mt-6 space-y-6">
     <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-2">Approach</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        Instead of relying on traditional data visualisation or scientific display, the project uses immersive design as an emotional trigger. It explores new ways to communicate marine biodiversity loss, shifting the focus toward sound as a storytelling medium. Visitors are encouraged to pause, listen, and emotionally reconnect with the life forms that often go unnoticed.
+      <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
+      <p className="text-sm leading-relaxed font-light text-gray-400">
+      Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
       </p>
     </div>
-
     <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-2">Project Purpose</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        In alignment with the UN Ocean Decade (2021–2030), the project addresses the global communication gap in ocean awareness. Despite its planetary significance, the ocean remains underrepresented in education and policy. This exhibition reframes that disconnect through interactive design, making invisible marine life more visible—emotionally, sonically, and spatially.
-      </p>
+      <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
+      <p className="text-sm leading-relaxed font-light text-gray-400">
+     The museum’s collection is valued, yet its outdated grey façade, obsolete interiors, and weak identity limit its appeal—often compared to a municipal office rather than a cultural institution. A renewal strategy is proposed: redefine the façade with a contemporary landmark identity, update interiors for better circulation and engagement, and integrate immersive storytelling and interactive media. These changes would reposition the museum as a dynamic cultural space aligned with modern expectations.
+     </p>
     </div>
-
     <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-2">Development Strategy</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
-      </p>
+      <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
+      <p className="text-sm leading-relaxed font-light text-gray-400">
+Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
+     </p>
     </div>
-
-    <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-4">Final Outcome</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.
-      </p>
-    </div>
+   
   </div>
 </details>
 
 {/* Research */}
-<section id="research" aria-labelledby="research-title" className="mb-8">
-  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Research</h2>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">91%</p>
-      <p className="text-sm text-gray-400 mt-2">only visual-centric exhibitions experienced</p>
+<section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
+  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Research</h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <p className="text-3xl md:text-3xl font-light text-white">84%</p>
+      <p className="text-sm text-gray-400 mt-2">demand renewal</p>
     </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">87%</p>
-      <p className="text-sm text-gray-400 mt-2">most familiar with whales/dolphins</p>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <p className="text-3xl md:text-3xl font-light text-white">64%</p>
+      <p className="text-sm text-gray-400 mt-2">lacked a uniquely Korean perspective</p>
     </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">108</p>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <p className="text-3xl md:text-3xl font-light text-white">213</p>
       <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
     </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <p className="text-2xl md:text-xl font-light text-white">Insight</p>
-      <p className="text-sm text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
+      <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
     </div>
   </div>
 
-  <details className="mt-4 rounded-lg border border-white/10 bg-black p-4">
+  <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black p-4">
     <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
-    <p className="mt-4 text-sm text-gray-400">
-      To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight.
+    <p className="mt-6 text-sm text-gray-400">
+     A survey was conducted with 213 individuals who had previously visited the Seodaemun Museum of Natural History, either on-site or online. Among them, 32 participants had also experienced renowned natural history museums abroad. While the museum's collection of specimens was largely appreciated, 84% of respondents (179 people) highlighted the need for spatial and interior renewal. Critical feedback pointed to the building's outdated grey façade and lack of distinctive identity, often being compared to a generic municipal office rather than a museum.
     </p>
+
+   <p className="mt-3 text-sm text-gray-400">
+    In addition, 72% (153 people) felt that the exhibitions relied too heavily on static text and specimens, lacking engaging storytelling or interactive interpretation. 67% (142 people) expressed disappointment at the absence of digital media or interactive technologies such as AR and VR. 59% (126 people) noted insufficient accessibility and inclusivity, citing limited multilingual support and lack of tactile features for disabled visitors. Importantly, 64% (137 people) highlighted the absence of a uniquely Korean perspective, observing that the museum resembled a generic international format rather than reflecting local cultural identity. Finally, 71% (151 people) emphasized the need for stronger community and educational engagement, pointing out the lack of workshops, public programs, and collaborations with schools.
+   </p>
+
+   <p className="mt-3 text-sm text-gray-400">
+    The findings reveal a strong demand not only for architectural redefinition but also for narrative, technological, and cultural transformation that aligns with contemporary expectations for cultural institutions.
+   </p>
+     
   </details>
 </section>
 
-{/* Process Section */}
-<section id="process" className="rounded-lg bg-black mb-8">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Process</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-4">
+{/* Process */}
+<section id="process" className="rounded-lg bg-black mt-6 mb-6">
+  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Process</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">01 Ideation</h3>
       <p className="text-gray-400 text-sm">Brainstorming</p>
@@ -478,21 +478,21 @@ const SeoulMuseumProjectDetail = () => {
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">02 Analysis</h3>
-      <p className="text-gray-400 text-sm">Precedents</p>
-      <p className="text-gray-400 text-sm">Ocean issues & species research</p>
+      <p className="text-gray-400 text-sm">Context & precedents</p>
+      <p className="text-gray-400 text-sm">Context & Problem Analysis</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <h3 className="text-white font-light mb-3">03 Development</h3>
-      <p className="text-gray-400 text-sm">Product & spatial design</p>
-      <p className="text-gray-400 text-sm">AR application · Exhibition build</p>
+      <p className="text-gray-400 text-sm">Brand identity redefinition</p>
+      <p className="text-gray-400 text-sm">Spatial / Product / Exhibition design</p>
     </div>
   </div>
 </section>
 
-{/* Tools & Roles Table */}
-<div className="mb-8">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Tools & Roles</h2>
-  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black mb-4">
+{/* Tools & Roles */}
+<div className="mt-6 mb-6">
+  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
+  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
     <table className="w-full text-left text-sm text-gray-400">
       <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
         <tr>
@@ -505,98 +505,43 @@ const SeoulMuseumProjectDetail = () => {
         <tr>
           <td className="px-4 py-4 font-light">Modeling</td>
           <td className="px-4 py-4">AutoCAD, 3ds Max</td>
-          <td className="px-4 py-4">Exhibition modules, Space </td>
+          <td className="px-4 py-4">3D Product images, Space</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Texturing</td>
-          <td className="px-4 py-4">Substance Painter, Photoshop</td>
-          <td className="px-4 py-4">PBR stone/metal materials</td>
+          <td className="px-4 py-4">Photoshop</td>
+          <td className="px-4 py-4">PBR materials</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Lighting & Render</td>
-          <td className="px-4 py-4"> V-Ray</td>
-          <td className="px-4 py-4">Spatial ambience renders</td>
+          <td className="px-4 py-4">V-Ray</td>
+          <td className="px-4 py-4">Spatial Real time renders</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Interaction / AR</td>
-          <td className="px-4 py-4">Unity (AR Foundation)</td>
-          <td className="px-4 py-4">AR species animations, QR triggers</td>
+          <td className="px-4 py-4 font-light">VR Museum</td>
+          <td className="px-4 py-4">Unreal Engine</td>
+          <td className="px-4 py-4">Spatial Real time renders</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Graphics</td>
-          <td className="px-4 py-4">Adobe Suite </td>
-          <td className="px-4 py-4">Exhibition panels, accessibility assets</td>
+          <td className="px-4 py-4">Adobe Suite</td>
+          <td className="px-4 py-4">Exhibition panels, accessibility assets, Art works</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-{/* Design Highlights */}
-<section id="design" className="mt-8 mb-8">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-4">Design Highlights</h2>
-  <ul className="space-y-3 text-gray-400 mb-4">
-    <li>• Sound as narrative; bioacoustics drive empathy.</li>
-    <li>• Rock-like plinths for solitary listening.</li>
-    <li>• Flexible exhibition format designed for scalability and adaptability across contexts.</li>
-    <li>• AR scans trigger species; touch + sound + vision combined.</li>
+{/* Design Highlights */}       
+<section id="design" className="mt-6 mb-6">
+  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
+  <ul className="space-y-3 text-gray-400">
+    <li>• Identity: Rebranded through hunter’s worldview.</li>
+    <li>• Space: From static to immersive, participatory layouts.</li>
+    <li>• Narrative: Respectful coexistence with nature as storyline.</li>
   </ul>
-
-  <details className="mt-4 rounded-lg border border-white/10 bg-black p-4">
-    <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
-    <div className="mt-4 space-y-4 text-sm text-gray-400">
-
-      {/* Idea Development */}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 min-w-[200px]">
-            Idea Development
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            Sound is treated not just as data but as a narrative layer. Scientific studies revealing the bioacoustics of marine invertebrates were used to frame the emotional tone of the exhibition. The project highlights how sonic signals from these animals reveal behavioural patterns and ecosystem health. These acoustic ecologies become a channel to foster empathy and reframe conservation dialogue. While marine mammals like whales and dolphins receive outsized attention due to their intelligence and emotional expressiveness, lesser-known species—particularly invertebrates and bottom-dwellers—remain largely excluded from both public empathy and conservation priorities. This project aims to redress that imbalance by amplifying the voices of species that are hidden, both physically and culturally, from mainstream awareness.
-          </p>
-        </div>
-      </div>
-
-      {/* Product Design */}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 min-w-[200px]">
-            Product Design
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            Custom-designed headset stands emulate smoothed underwater rocks, integrating both audio hardware and tactile visuality. Each plinth invites solitary listening through high-resolution recordings of marine species. The subtlety of these soundscapes becomes a form of protest against the visual-centric bias of most exhibitions.
-          </p>
-        </div>
-      </div>
-
-      {/* Spatial Design */}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 min-w-[200px]">
-            Spatial Design
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.
-          </p>
-        </div>
-      </div>
-
-      {/* Exhibition Design */}
-      <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-        <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-light text-gray-300 mb-4 min-w-[200px]">
-            Exhibition Design
-          </h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-            The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </details>
 </section>
+
 
 
           {/*Line*/} 
