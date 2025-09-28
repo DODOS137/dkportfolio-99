@@ -670,8 +670,11 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
              </div>
 
-            {/*Spatial & Exhibition text start*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+            {/*Spatial & Exhibition text 1*/}
+           <div className="mb-3 flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial & Exhibition Design</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum's spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
@@ -679,8 +682,22 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            </div> 
            </div> 
 
+           {/*Spatial & Exhibition text 2*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project involved iterative testing and feedback to refine the spatial atmosphere, while custom built-in furniture was modeled to reflect the museum’s identity and reinforce its relationship with the surrounding space
+           </p>
+           </div> 
+           </div> 
+
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          {/*증빙 Images*/}
+          <div className="w-full mb-20 md:mb-40">
+            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+              </div>
 
 
 
