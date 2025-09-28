@@ -624,7 +624,7 @@ your research abilities. They should reflect your own interests and support your
 
             {/* 증빙컷 Image */}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
             </div>
 
 
