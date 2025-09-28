@@ -549,10 +549,23 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Site Image*/}     
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/6738a528-de77-4edc-b034-3e77c4fc50d0.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-SeoulNatural_대지 4.png" />
           </div>   
+         
 
-          {/*Site Image*/}     
+           {/*Site Selection text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Site Selection</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">서울특별시 서대문구 연희로 32길 51 (연희동 서대문자연사 박물관)</p>
+
+            <p className="mt-3 text-sm md:text-sm lg:text-sm font-light text-gray-400">51, Yeonhui-ro, 32-gil, Seodaemun-gu. Seoul, Republic of Korea</p>
+           </div> 
+           </div>
+
+          
+
+          {/*Site Image2*/}     
           <div className="w-full">
             <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" />
           </div>     
