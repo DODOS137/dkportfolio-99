@@ -724,12 +724,12 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
            {/*Built-in 1*/}
-           <div className="w-full mb-20 md:mb-40">
+           <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" />
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-black"></div>
 
 
            {/*Built-in 2*/}
@@ -869,10 +869,36 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             </div>
           </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-gray-500/50"></div>
 
-            {/*End Image */}
+           {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-gray-black"></div>
+
+
+          
+          {/*증빙 Images 2*/}
+          <div className="w-full">
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본 2.png" />
+              </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+
+            {/*Final Outcome Text*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Delivered a complete, testable museum experience encompassing space, identity, product, and narrative logic. With the support of Seodaemun Museum of Natural History, a seven-day solo exhibition was conducted within the museum, incorporating feedback from both visitors and staff. Structured for ongoing refinement, the work anticipates future feedback loops through public interaction and prototyping.
+           </p>
+           </div> 
+           </div>   
+
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>      
+
+
+          {/*End Image */}
            <div className="w-full mb-40 md:mb-40">
             <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-40 md:mb-0" />
               </div>
