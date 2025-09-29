@@ -844,7 +844,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
             
-            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
+            <img className="w-full h-auto" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
 
            {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
