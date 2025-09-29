@@ -772,7 +772,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
               </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
 
 
 
@@ -802,9 +802,19 @@ Moved away from passive, linear layouts towards participatory and immersive expe
               </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
 
-          {/*2F Rest Area Text*/}
+
+
+
+
+
+           {/*Rest Area Image 1*/}
+           <div className="w-full">
+            <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" />
+              </div>
+
+           {/*2F Rest Area Text*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
@@ -813,13 +823,9 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            </div> 
            </div> 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
-
-
-           {/*Rest Area Image 1*/}
+            {/*Rest Area Image 2*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-S.N.M_대지 24.png" />
               </div>
 
            {/*Line*/} 
