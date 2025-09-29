@@ -734,7 +734,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
            {/*Built-in 2*/}
            <div className="w-full">
-           <img className="w-full h-auto " src="/lovable-uploads/3fa7a7e0-8840-409c-b7c5-025bcb4d027c.png" />
+           <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural.png" />
            </div>
 
 
