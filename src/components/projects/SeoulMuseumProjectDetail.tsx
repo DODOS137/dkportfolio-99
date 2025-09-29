@@ -733,77 +733,101 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
 
            {/*Built-in 2*/}
-           <div className="w-full mb-20 md:mb-40">
+           <div className="w-full">
            <img className="w-full h-auto " src="/lovable-uploads/3fa7a7e0-8840-409c-b7c5-025bcb4d027c.png" />
            </div>
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
 
 
 
 
 
           {/*Lobby Images*/}
-          <div className="w-full mb-20 md:mb-40">
+          <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
               </div>
 
-          <div className="w-full mb-20 md:mb-40">
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+           {/*Reception Desk Text 1*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Reception Desk</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The reception area introduces visitors to the museum's renewed identity through a vertical sculptural installation that spans all three floors. Behind the desk, a folding-screen-inspired frame and mountain-shaped artwork evoke Korean cultural and geographic heritage—establishing a strong sense of place upon entry.
+           </p>
+           </div> 
+           </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          
+         {/*Lobby Images2*/}
+          <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/2c1579d8-8849-44ef-b82b-60f0a459098c.png" />
               </div>
 
-         {/*Lobby comments*/}
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40 mt-20 md:mt-40">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
-                Reception Desk 
-              </h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The reception area introduces visitors to the museum's renewed identity through a vertical sculptural installation that spans all three floors. Behind the desk, a folding-screen-inspired frame and mountain-shaped artwork evoke Korean cultural and geographic heritage—establishing a strong sense of place upon entry.
-              </p>
-              </div>
-          </div>
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+
 
           {/*Exhibtion Hall*/}
-           <div className="w-full mb-20 md:mb-40">
+           <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/6c195957-4548-4480-b204-fa616c83621b.png" />
               </div>
 
-          <div className="w-full mb-20 md:mb-40">
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          {/*Exhibition Hall comments*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Exhibition Hall</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition unfolds across two ecological zones: the first floor (Marine Zone) draws inspiration from ocean currents, with immersive media and fluid spatial divisions that evoke the rhythm of the sea; while the second and third floors (Terrestrial Zone) explore land-based habitats through layered displays that combine natural specimens with historical artefacts, such as traditional hunting tools. A vertical sculptural void connects all levels, symbolising the continuous flow of ecological systems throughout the museum.
+              </p>
+           </div> 
+           </div> 
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          {/*Exhibtion Hall 2*/} 
+            <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/8c62ae91-46c3-431b-a691-98c542349817.png" />
               </div>
 
-         {/*Exhibition Hall comments*/}
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40 mt-20 md:mt-40">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">
-                Exhibition Hall
-              </h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">The exhibition unfolds across two ecological zones: the first floor (Marine Zone) draws inspiration from ocean currents, with immersive media and fluid spatial divisions that evoke the rhythm of the sea; while the second and third floors (Terrestrial Zone) explore land-based habitats through layered displays that combine natural specimens with historical artefacts, such as traditional hunting tools. A vertical sculptural void connects all levels, symbolising the continuous flow of ecological systems throughout the museum.
-              </p>
-              </div>
-          </div>
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
+          {/*2F Rest Area Text*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A rest zone designed as a hunter's study, filled with personal collections, insects, and field objects gathered during expeditions. The space invites quiet observation while offering an elevated view of the vertical glass sculpture that links all three floors.
+              </p>
+           </div> 
+           </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
 
            {/*Rest Area Image 1*/}
-           <div className="w-full mb-20 md:mb-40">
+           <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" />
               </div>
 
-          {/*Rest Area Image 2*/}
-           <div className="w-full mb-20 md:mb-40">
-            <img className="w-full h-auto " src="/lovable-uploads/dcb3ac8b-0b01-4f13-8341-e02e026d5c46.png" />
-              </div>
+           {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
 
-          {/*RA comments*/}
-          <div className="rounded-lg bg-transparent">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-20 md:mb-40 mt-20 md:mt-40">
-              <h2 className="text-xl md:text-2xl font-light text-gray-300 whitespace-nowrap min-w-[200px]">2F Rest Area </h2>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">A rest zone designed as a hunter's study, filled with personal collections, insects, and field objects gathered during expeditions. The space invites quiet observation while offering an elevated view of the vertical glass sculpture that links all three floors.
-              </p>
-              </div>
-          </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+
 
           {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
