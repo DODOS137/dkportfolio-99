@@ -875,9 +875,9 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
 
           
-          {/*증빙 Images 2*/}
+          {/*Final Outcome image*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본 2.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_1.png" />
               </div>
 
           {/*Line*/} 
@@ -887,7 +887,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             {/*Final Outcome Text*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Delivered a complete, testable museum experience encompassing space, identity, product, and narrative logic. With the support of Seodaemun Museum of Natural History, a seven-day solo exhibition was conducted within the museum, incorporating feedback from both visitors and staff. Structured for ongoing refinement, the work anticipates future feedback loops through public interaction and prototyping.
            </p>
            </div> 
