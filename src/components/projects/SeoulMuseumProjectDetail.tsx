@@ -847,7 +847,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
 
            {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
             
              
             {/*2F Gift Shop Text*/}
@@ -860,7 +860,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            </div>   
 
            {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
              
               <div className="w-full ">
               <img className="w-full h-auto" src="/lovable-uploads/9af82104-3de4-45be-bda6-313f88f638df.png" />
@@ -870,7 +870,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-40 md:my-40 bg-gray-500/50"></div>
 
             {/*End Image */}
            <div className="w-full mb-40 md:mb-40">
