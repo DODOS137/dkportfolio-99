@@ -814,6 +814,9 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" />
               </div>
 
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
            {/*2F Rest Area Text*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -822,6 +825,9 @@ Moved away from passive, linear layouts towards participatory and immersive expe
               </p>
            </div> 
            </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
             {/*Rest Area Image 2*/}
            <div className="w-full">
@@ -839,7 +845,24 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           <div className="rounded-lg bg-transparent">
             
             <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
-            <div className="w-full ">
+
+           {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+            
+             
+            {/*2F Gift Shop Text*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A rest zone designed as a hunter's study, filled with personal collections, insects, and field objects gathered during expeditions. The space invites quiet observation while offering an elevated view of the vertical glass sculpture that links all three floors.
+              </p>
+           </div> 
+           </div>   
+
+           {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+             
+              <div className="w-full ">
               <img className="w-full h-auto" src="/lovable-uploads/9af82104-3de4-45be-bda6-313f88f638df.png" />
               <img className="w-full h-auto" src="/lovable-uploads/479a25d0-1252-4373-9a77-ab53ba200abc.png" />
               
