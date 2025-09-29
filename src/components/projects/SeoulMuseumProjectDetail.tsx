@@ -863,8 +863,8 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
              
               <div className="w-full ">
-              <img className="w-full h-auto" src="/lovable-uploads/9af82104-3de4-45be-bda6-313f88f638df.png" />
-              <img className="w-full h-auto" src="/lovable-uploads/479a25d0-1252-4373-9a77-ab53ba200abc.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 19.png" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 20.png" />
               
             </div>
           </div>
