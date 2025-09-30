@@ -611,38 +611,83 @@ const LearnProjectDetail = () => {
                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 18.png" />
                </div> 
                
+              
+               
+               
+               {/* Line */}
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
                
                
                
                
-               {/* Spatial Design Section */}
+               {/* Spatial Design Image1 */}
               <div className="w-full ">
-                <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/dbc61aac-d704-4f72-9df3-d77191c87385.png" />
+                <img className="w-full h-auto" src="/lovable-uploads/dbc61aac-d704-4f72-9df3-d77191c87385.png" />
               </div>
 
+               {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+          {/*    Spatial Design Design Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.
+                        </p>
+          </div>
+         </div>
+
+ 
+               {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+               
+               {/* Spatial Design Image2 */}
               <div className="rounded-lg bg-transparent">
                 <div className="w-full">
-                  <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" />
+                  <img className="w-full h-auto" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" />
                 </div>
 
+               {/* Line */}
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+                 {/* Spatial Design Image3 */}
+                <div className="w-full">
+                  <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+                </div>
+              </div>
+
+
+              {/* Line */}
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+               
+                {/* Spatial Design Image 4 */}
                 <div className="w-full">
                   <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
                 </div>
               </div>
 
               {/* Line */}
-              <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-              {/* Post-Project Section */}
-              <div className="rounded-lg bg-transparent">
-                <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-6 md:mb-8">
-                  Post-Project Expansion
-                </h2>
-                <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light mb-40 md:mb-60">
-                  All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
+
+          {/*   Post-Project Section  Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Expansion</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
                 </p>
-              </div>
-            </div>
+          </div>
+         </div>
+
+
+              {/* Line */}
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+ 
 
             {/* Navigation */}
             <div className="pb-40 md:pb-60 flex items-center justify-center">
