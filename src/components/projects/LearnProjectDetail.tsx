@@ -567,7 +567,7 @@ const LearnProjectDetail = () => {
            {/*Scriptwriting & Storyboard Text*/} 
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Scriptwriting & Storyboard</h2>
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300  min-w-[200px]">Scriptwriting & Storyboard</h2>
           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
           </p>
           </div>
