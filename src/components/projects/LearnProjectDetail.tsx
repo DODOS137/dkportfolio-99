@@ -473,6 +473,7 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                   <li>• Original VR storytelling.</li>
                   <li>• VR sketching & 3D storyboards for pacing and navigation.</li>
                 </ul>
+                </section>
 
 
 
