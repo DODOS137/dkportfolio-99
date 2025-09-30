@@ -32,6 +32,39 @@ const LearnProjectDetail = () => {
     );
   }
 
+  /* ============================
+     ✅ 성능 힌트: preconnect/preload (헤드에 주입)
+     - YouTube/ytimg에 미리 연결
+     - LCP 이미지, YT 썸네일(가능 시) preload
+     ============================ */
+  useEffect(() => {
+    const head = document.head;
+
+    const addLink = (rel: string, href: string, extra: Record<string, string> = {}) => {
+      const exists = Array.from(head.querySelectorAll<HTMLLinkElement>(`link[rel="${rel}"]`)).some(l => l.href === href || l.getAttribute('href') === href);
+      if (exists) return;
+      const link = document.createElement('link');
+      link.rel = rel;
+      link.href = href;
+      Object.entries(extra).forEach(([k, v]) => link.setAttribute(k, v));
+      head.appendChild(link);
+    };
+
+    // YouTube 성능 힌트
+    addLink('preconnect', 'https://www.youtube.com', { crossorigin: '' });
+    addLink('preconnect', 'https://i.ytimg.com', { crossorigin: '' });
+
+    // LCP 후보(첫 이미지) preload (가능할 때만)
+    const lcp = project.images?.[0];
+    if (lcp) {
+      addLink('preload', lcp, { as: 'image', imagesrcset: '', fetchpriority: 'high' });
+    }
+
+    // 페이지 내 임베드된 YouTube 썸네일을 추정(preload) – 영상 ID가 코드에 고정되어 있으므로 명시
+    const ytThumb = 'https://i.ytimg.com/vi/aCJblmM9yzs/hqdefault.jpg';
+    addLink('preload', ytThumb, { as: 'image' });
+  }, [project.images]);
+
   // ✅ 이미지 LQIP/지연 로딩 + 텍스트 페이드 인 최적화
   useEffect(() => {
     // ScrollArea가 뷰포트일 수 있으므로 root 지정
@@ -187,7 +220,7 @@ const LearnProjectDetail = () => {
           </section>
 
           {/* Main Content */}
-          <section className="">
+          <section className="cv-auto">
             {/* First Image (LCP) */}
             {project.images[0] && (
               <div className="w-full">
@@ -395,7 +428,7 @@ const LearnProjectDetail = () => {
 
                     <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
                       <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-                        <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
+                        <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w=[200px]">
                           Narrative Arc &   Emotional Logic
                         </h2>
                         <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
@@ -607,7 +640,7 @@ const LearnProjectDetail = () => {
           </section>
         </div>
 
-        {/* ✅ 전역 스타일: 이미지 LQIP + 텍스트 페이드 인 */}
+        {/* ✅ 전역 스타일: 이미지 LQIP + 텍스트 페이드 인 + content-visibility */}
         <style>{`
           /* 이미지 LQIP + 리빌 */
           .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
@@ -617,6 +650,9 @@ const LearnProjectDetail = () => {
           /* 텍스트 페이드 인 */
           .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
           .text-reveal-show { opacity: 1; transform: translateY(0); }
+
+          /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
+          .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
 
           @media (prefers-reduced-motion: reduce) {
             .reveal-init, .text-reveal-init { transition-duration: 1ms; filter: none; transform: none; }
