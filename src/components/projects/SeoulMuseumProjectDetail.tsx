@@ -28,7 +28,7 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
   };
   return (
     <div className={`relative w-full h-full bg-black ${className}`}>
-      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" fetchPriority="low" />
       <button
         onClick={onClick}
         className="absolute inset-0 w-full h-full flex items-center justify-center"
@@ -237,11 +237,6 @@ const SeoulMuseumProjectDetail = () => {
           />
         </div>
 
-  
-         
-         
-         
-         
       {/* Shared Container */}
        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
@@ -266,6 +261,7 @@ const SeoulMuseumProjectDetail = () => {
           className="w-full h-full"
           loading="lazy"
           decoding="async"
+          fetchPriority="low"
         />
       </div>
     </div>
@@ -332,9 +328,6 @@ const SeoulMuseumProjectDetail = () => {
 
   </div>
 
-
-
-
           {/*Line*/} 
           <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
@@ -357,17 +350,9 @@ const SeoulMuseumProjectDetail = () => {
   </AspectRatio>
 </div>
           
-          
-
-
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
-
-          
-
-          
-          
 {/* Summary */}
 <section aria-labelledby="sum-title" className="mt-6 mb-6">
   <h2 id="sum-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">
@@ -542,17 +527,14 @@ Moved away from passive, linear layouts towards participatory and immersive expe
   </ul>
 </section>
 
-
-
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
           {/*Site Image*/}     
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-SeoulNatural_대지 4.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-SeoulNatural_대지 4.png" loading="lazy" decoding="async" fetchPriority="low" />
           </div>   
          
-
            {/*Site Selection text start*/}
 
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -571,23 +553,17 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            </div> 
            </div>
 
-         
-          
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-          
-
           {/*Problem Image2*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" />
+            <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" loading="lazy" decoding="async" fetchPriority="low" />
           </div>     
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-          
-          
           {/*Problem Text*/} 
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -617,14 +593,12 @@ Moved away from passive, linear layouts towards participatory and immersive expe
             </div>
           </div>
 
-
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
           
-
           {/* Narrative */}
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" />
+            <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" loading="lazy" decoding="async" fetchPriority="low" />
           </div> 
 
           {/*Line*/} 
@@ -642,11 +616,9 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-                
-
           {/* Floor Plan */}
             <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 8.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 8.png" loading="lazy" decoding="async" fetchPriority="low" />
              </div>
 
           {/*Line*/} 
@@ -654,20 +626,15 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/* Floor Plan2 */}
             <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 9.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 9.png" loading="lazy" decoding="async" fetchPriority="low" />
              </div>
-
 
           {/*Line*/} 
           <div className="w-full h-px my-40 md:my-40 bg-black"></div>
 
-
-
-          
-
           {/*Exhibtion Plan*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" loading="lazy" decoding="async" fetchPriority="low" />
              </div>
 
           {/*Line*/} 
@@ -696,7 +663,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*증빙 Images*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -704,12 +671,11 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*증빙 Images 2*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본 2.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본 2.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
            {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
-
 
            {/*Built-in display cases Text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -725,29 +691,23 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
            {/*Built-in 1*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" loading="lazy" decoding="async" fetchPriority="low" />
            </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-black"></div>
 
-
            {/*Built-in 2*/}
            <div className="w-full">
-           <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural.png" />
+           <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural.png" loading="lazy" decoding="async" fetchPriority="low" />
            </div>
-
 
           {/*Line*/} 
           <div className="w-full h-px my-40 md:my-40 bg-black"></div>
 
-
-
-
-
           {/*Lobby Images*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -765,20 +725,17 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-          
          {/*Lobby Images2*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/2c1579d8-8849-44ef-b82b-60f0a459098c.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/2c1579d8-8849-44ef-b82b-60f0a459098c.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-20 bg-black"></div>
 
-
-
           {/*Exhibtion Hall*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/6c195957-4548-4480-b204-fa616c83621b.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/6c195957-4548-4480-b204-fa616c83621b.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -798,20 +755,15 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Exhibtion Hall 2*/} 
             <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/8c62ae91-46c3-431b-a691-98c542349817.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/8c62ae91-46c3-431b-a691-98c542349817.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-20 bg-black"></div>
 
-
-
-
-
-
            {/*Rest Area Image 1*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
            {/*Line*/} 
@@ -831,25 +783,19 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
             {/*Rest Area Image 2*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-S.N.M_대지 24.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-S.N.M_대지 24.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
            {/*Line*/} 
           <div className="w-full h-px my-40 md:my-40 bg-black"></div>
 
-
-
-
-
           {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
-            
-            <img className="w-full h-auto" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" />
+            <img className="w-full h-auto" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" loading="lazy" decoding="async" fetchPriority="low" />
 
            {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
             
-             
             {/*2F Gift Shop Text*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -863,26 +809,21 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
              
               <div className="w-full ">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 19.png" />
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 20.png" />
-              
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 19.png" loading="lazy" decoding="async" fetchPriority="low" />
+              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 20.png" loading="lazy" decoding="async" fetchPriority="low" />
             </div>
           </div>
-
 
            {/*Line*/} 
           <div className="w-full h-px my-40 md:my-40 bg-gray-black"></div>
 
-
-          
           {/*Final Outcome image*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_1.png" />
+            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_1.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
-
 
             {/*Final Outcome Text*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -893,14 +834,12 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            </div> 
            </div>   
 
-
            {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>      
 
-
           {/*End Image */}
            <div className="w-full mb-40 md:mb-40">
-            <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-40 md:mb-0" />
+            <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-40 md:mb-0" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
           
         </div>
@@ -908,7 +847,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
       
       {/*Navigation Section*/}
       <div className="pb-40 md:pb-60 flex items-center justify-center mt-40 ">
-        <Link to="/project/Whispers-from-the-Bottom" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
+        <Link to="/project/Learn" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
           <span>Next project</span>
           <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
         </Link>
