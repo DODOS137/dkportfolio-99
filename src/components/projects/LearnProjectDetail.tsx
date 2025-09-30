@@ -301,7 +301,25 @@ presenting: the concept, interactive and navigation elements, etc. </p>
            
          
          
-         
+  {/* Main Image with background plate like YouTube */}
+<div className="my-40 md:my-40 relative">
+  {/* 뒤 배경판: 유튜브 플레이어와 같은 16:9 크기 유지 */}
+  <AspectRatio ratio={16 / 9}>
+    <div className="absolute inset-0 w-full h-full bg-[#FF7F00] rounded-lg" /> {/* ✅ 판 */}
+  </AspectRatio>
+
+  {/* 앞 이미지: 같은 16:9 박스 안에 겹침 */}
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <img
+      src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
+      className="w-full h-full object-contain"
+      loading="lazy"
+      decoding="async"
+      alt="Main Project Image"
+    />
+  </AspectRatio>
+</div>       
+
          
 {/* Main Image (with full-bleed colored plate behind) */}
 <div className="my-40 md:my-40 relative">
@@ -478,8 +496,14 @@ presenting: the concept, interactive and navigation elements, etc. </p>
 
 
               {/* Line */}
-              <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+    
+         
+         
+         
+         
+         
               {/* World Image */}
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
@@ -487,27 +511,68 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                 </AspectRatio>
               </div>
 
+              {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+          {/*World Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Worldbuilding</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
+                          The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition?
+                        </p>
+         </div>
+         </div>
+
+
+              {/* Line */}
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+
+          {/*  Narrative ArcText*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+          </p>
+         </div>
+         </div>
+
+
+            
+         
+         
+         
+         
+         
+         {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+         
+
               {/* Character Design Section */}
               <div className="rounded-lg bg-transparent">
-                <div className="w-full mb-20 md:mb-40">
+                <div className="w-full">
                   <img
                     alt="RX-056 Character Design"
                     src="/lovable-uploads/b4ec2d65-81f7-4f6d-99be-3fcfc1b790ed.png"
-                    className="w-full h-auto mt-20 md:mt-40"
+                    className="w-full h-auto"
                   />
                 </div>
 
                 {/* Character Images */}
-                <div className="w-full mb-20 md:mb-40">
+                <div className="w-full">
                   <img
                     alt="RX-056 Character Design"
                     src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png"
-                    className="w-full h-auto mt-8 md:mt-16"
+                    className="w-full h-auto"
                   />
                   <img
                     alt="RX-056 Character Design"
                     src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png"
-                    className="w-full h-auto mt-20 md:mt-40"
+                    className="w-full h-auto"
                   />
                 </div>
 
@@ -531,6 +596,10 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                   Click and drag to rotate. Scroll to zoom.
                 </h2>
               </div>
+
+
+
+         
 
               {/* script 컨테이너1 */}
               <div className="w-full ">
