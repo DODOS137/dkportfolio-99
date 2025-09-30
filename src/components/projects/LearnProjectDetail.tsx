@@ -564,7 +564,7 @@ presenting: the concept, interactive and navigation elements, etc. </p>
 
                 {/* 3D Models */}
                 <ErrorBoundary fallback={<div className="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">3D Model Viewer Unavailable</div>}>
-                  <div className="relative overflow-hidden mb-8">
+                  <div className="relative overflow-hidden">
                     <div className="flex w-full">
                       <div className="w-1/2">
                         <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
@@ -583,6 +583,30 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                 </h2>
               </div>
 
+
+                  {/* Line */}
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+           {/* YouTube Video Section */}
+  <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
+  <div
+    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
+  >
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#FF7F00]" />
+    </AspectRatio>
+  </div>
+
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <LiteYouTube
+      id="aCJblmM9yzs"
+      title="Project video"
+      className="w-full h-full bg-transparent"  
+    />
+  </AspectRatio>
+</div>
 
 
          
