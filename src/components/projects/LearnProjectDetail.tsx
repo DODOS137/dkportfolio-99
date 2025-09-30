@@ -679,7 +679,7 @@ const LearnProjectDetail = () => {
           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Expansion</h2>
           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
-                </p>
+           </p>
           </div>
          </div>
 
