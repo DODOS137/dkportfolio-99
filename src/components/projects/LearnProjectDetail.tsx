@@ -552,12 +552,12 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                 <div className="w-full">
                   <img
                     alt="RX-056 Character Design"
-                    src="/lovable-uploads/acc09a93-1341-41eb-b938-8bad8f514163.png"
+                    src="/lovable-uploads/web1920-Learn_대지 7.png"
                     className="w-full h-auto"
                   />
                   <img
                     alt="RX-056 Character Design"
-                    src="/lovable-uploads/7a7449ff-c56f-4964-acd1-fcfdeae91b9c.png"
+                    src="/lovable-uploads/web1920-Learn_대지 8.png"
                     className="w-full h-auto"
                   />
                 </div>
