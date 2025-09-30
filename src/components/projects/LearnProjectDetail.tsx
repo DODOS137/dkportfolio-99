@@ -259,7 +259,7 @@ const LearnProjectDetail = () => {
       {/* ✅ NEW: Image under location/year */}
       <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
         <img
-          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
+          src=""
           alt={project.title}
           className="w-full h-full"
           loading="lazy"
@@ -293,6 +293,11 @@ presenting: the concept, interactive and navigation elements, etc. </p>
       </div>
     </div>
   </div>
+
+
+                   
+          {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
            
          
          
@@ -308,7 +313,7 @@ presenting: the concept, interactive and navigation elements, etc. </p>
   </div>
 
   {/* 앞 이미지: 배경판 위에 겹침 */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-transparent overflow-hidden">
     <img
       src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
       className="w-full h-full object-contain"
@@ -320,64 +325,79 @@ presenting: the concept, interactive and navigation elements, etc. </p>
 </div>
 
 
-              {/* Line */}
-              <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          
+          {/*Line*/} 
+          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
-              {/* Summary */}
-              <section aria-labelledby="sum-title" className="mt-8">
-                <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
-                  Summary
-                </h2>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                    <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
-                    <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+
+{/* Challenge Summary */}
+<section aria-labelledby="car-title" className="mt-6 mb-6">
+  <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
+
+  <div className="grid md:grid-cols-3 gap-6">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
                       <li>Creation of an original VR storytelling format</li>
                       <li>Harmonising narrative, space, and interaction into one cohesive whole</li>
-                    </ul>
-                  </div>
-                  <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                    <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
-                    <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+      </ul>
+    </div>
+
+    {/* Approach */}
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
                       <li>Building an original world ·story · characters  · spatial setting</li>
                       <li>Sketching interaction flows directly within VR environments</li>
                       <li>Scriptwriting tailored to narrative situations and emotional pacing</li>
-                    </ul>
-                  </div>
-                  <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                    <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
-                    <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+      </ul>
+    </div>
+
+    {/* Result */}
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
                       <li>Immersive VR narrative centred on empathy and memory</li>
                       <li>Demonstrates emotional storytelling in VR</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      </ul>
+    </div>
+  </div>
+</section>
 
-              {/* Full text */}
-              <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
-                <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
-                <div className="px-4 pb-4 mt-6 space-y-8">
-                  <div>
-                    <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
-                    <p className="text-sm leading-relaxed font-light text-gray-400">
+{/* Challenge full text*/}    
+<details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
+  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
+    Full text
+  </summary>
+  <div className="px-4 pb-6 pt-6 space-y-6">
+    <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Approach</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
                     </p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
-                    <p className="text-sm leading-relaxed font-light text-gray-400">
+    </div>
+
+    <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       This project set out to create an original VR storytelling experience exploring empathy in a post-human world. By following service robots in an abandoned library, the narrative asked whether meaning and emotional understanding could persist without their human creators.
                     </p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
-                    <p className="text-sm leading-relaxed font-light text-gray-400">
+    </div>
+
+    <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       The project was developed through integrated worldbuilding, interaction design, and spatial storytelling. Distinct robot characters and moral decision points shaped the narrative arc. VR sketching tools enabled real-time storyboard testing, refining pacing and navigation early on. Spatial contrasts—light and shadow, architecture and decay, digital and analogue—were choreographed to guide attention and embed symbolic meaning. Together, these strategies built a cohesive, emotionally driven VR narrative.
                     </p>
-                  </div>
-                </div>
-              </details>
+    </div>
+
+  </div>
+</details>
+
+
+
+
+    
 
               {/* Process */}
               <section id="process" className="rounded-lg bg-black">
@@ -422,12 +442,12 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                       <tr>
                         <td className="px-4 py-4 font-light">Texturing</td>
                         <td className="px-4 py-4">Photoshop</td>
-                        <td className="px-4 py-4">PBR materials</td>
+                        <td className="px-4 py-4">PBR material Maps</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-4 font-light">Lighting & Render</td>
-                        <td className="px-4 py-4">3ds Max</td>
-                        <td className="px-4 py-4">Spatial Real time renders</td>
+                        <td className="px-4 py-4">V-Ray, Unity</td>
+                        <td className="px-4 py-4">Spatial ambience, Real time renders</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-4 font-light">Interaction / VR</td>
@@ -436,7 +456,7 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                       </tr>
                       <tr>
                         <td className="px-4 py-4 font-light">Graphics</td>
-                        <td className="px-4 py-4">Adobe Suite, Runway AI</td>
+                        <td className="px-4 py-4">Adobe Suite</td>
                         <td className="px-4 py-4">Art works</td>
                       </tr>
                     </tbody>
@@ -454,56 +474,7 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                   <li>• VR sketching & 3D storyboards for pacing and navigation.</li>
                 </ul>
 
-                <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
-                  <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
-                  <div className="mt-8 space-y-4 text-sm text-gray-400">
-                    <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                      <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-                        <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                          Worldbuilding
-                        </h2>
-                        <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                          Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
-                          The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition?
-                        </p>
-                      </div>
-                    </div>
 
-                    <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                      <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-                        <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w=[200px]">
-                          Narrative Arc &   Emotional Logic
-                        </h2>
-                        <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                          The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                      <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-                        <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                          Scriptwriting & Storyboard
-                        </h2>
-                        <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                          Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                      <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-                        <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                          Spatial Design
-                        </h2>
-                        <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                          Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </section>
 
               {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
