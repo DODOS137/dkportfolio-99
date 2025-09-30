@@ -235,47 +235,90 @@ const LearnProjectDetail = () => {
               </div>
             )}
 
-            {/* Shared Container */}
-            <div className="max-w-[1540px] mx-auto px-4 md:px-8 lg:px-[250px] z-10">
-              {/* Project Description */}
-              <div className="rounded-lg bg-transparent mt-20 md:mt-40">
-                <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
-                  {project.title}
-                </h2>
-                <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
-                  Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
-                </p>
+ 
+            
+            
+            
+            
+       {/* Shared Container */}
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+    
+       {/* Left Column */}
+       <div>
+       {/* Title */}
+       <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
+       {project.title}
+       </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-sm">
-                  <div>
-                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">project type</h3>
-                    <p className="text-white">MA Thesis</p>
-                    <p className="text-white">(Design Immersive Experience)</p>
-                  </div>
-                  <div>
-                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">Project category</h3>
-                    <p className="text-white">VR Content Design</p>
-                  </div>
-                  <div>
-                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">team</h3>
-                    <p className="text-white">Solo Project</p>
-                  </div>
-                  <div>
-                    <h3 className="text-gray-400 uppercase tracking-wider mb-2">DURATION</h3>
-                    <p className="text-white">8 weeks</p>
-                  </div>
-                </div>
-              </div>
+      {/* Location + Year */}
+      <p className="text-base md:text-base font-bold text-gray-500 mb-10">
+        2024 │ VR Content Design │ Solo Project │ 8 weeks
+      </p>
 
-              {/* Main Image */}
-              <div className="rounded-lg bg-transparent mt-40">
-                <img
-                  src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
-                  className="w-full h-auto mb-40 md:mb-40"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+      {/* ✅ NEW: Image under location/year */}
+      <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
+        <img
+          src="/lovable-uploads/web1920-whispers from the bottom_대지 24 사본.png"
+          alt={project.title}
+          className="w-full h-full"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+
+    {/* Right Column */}
+    <div className="space-y-6">
+    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+   Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
+    </p>
+       
+
+    
+
+       
+       <div className="mb-6 mt-6 md:mt-6"> 
+         <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
+      The Brief
+          </h2>
+       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+        Create a short script for a VR linear narrative experience of up to 10 minutes. You can also
+add a graph of your narrative (e.g., from Celtex to your submission, not compulsory). You will
+illustrate the story through a VR storyboard in one of the available VR apps, suh as Open Brush or
+similar. You must demonstrate through the storyboard that you integrated VR-related concepts
+relevant to your story, such as interaction, embodiment, etc. You will be given examples of scripts
+and VR storyboards in class. You will create a recording of your storyboard with a voiceover
+presenting: the concept, interactive and navigation elements, etc. </p>
+      </div>
+    </div>
+  </div>
+           
+         
+         
+         
+         
+{/* Main Image (with full-bleed colored plate behind) */}
+<div className="my-40 md:my-40 relative">
+  {/* 뒤 배경판: 뷰포트 가로 100%로 깔림 */}
+  <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#FF7F00]" /> {/* ← 여기 색상 변경 */}
+    </AspectRatio>
+  </div>
+
+  {/* 앞 이미지: 배경판 위에 겹침 */}
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <img
+      src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
+      className="w-full h-full object-contain"
+      loading="lazy"
+      decoding="async"
+      alt=""
+    />
+  </AspectRatio>
+</div>
+
 
               {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
