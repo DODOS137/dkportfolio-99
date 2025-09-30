@@ -534,6 +534,13 @@ const LearnProjectDetail = () => {
               {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+              {/* Line */}
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+               
+
               {/* YouTube Video Section */}
               <div className="my-40 md:my-40 relative">
                 <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
@@ -552,20 +559,45 @@ const LearnProjectDetail = () => {
               </div>
 
 
+               {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
-              {/* Level Design Section */}
-              <div className="rounded-lg bg-transparent">
-                <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/bf2fe34d-0b83-4063-ac63-3dd0b7d5c8cd.png" />
-                <div className="w-full">
-                  <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/48a61eae-cd06-4f3a-b893-7a18d76443c9.png" />
-                  <img alt="Planet A233 - VR Environment" src="/lovable-uploads/98c6f72e-e8ff-4a84-9966-5dba0fb2e7df.png" className="w-full h-auto mb-20 md:mb-40" />
-                  <img alt="Planet A233 - VR Environment" className="w-full h-auto" src="/lovable-uploads/82ed2977-afd6-4043-881b-b523083b8a93.png" />
-                  <img alt="Planet A233 - VR Environment" className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/eb13ecfc-480b-4823-bb52-d408778963e9.png" />
-                </div>
-              </div>
 
-              {/* Spatial Design Section */}
+           {/*Scriptwriting & Storyboard Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Scriptwriting & Storyboard</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+          </p>
+          </div>
+          </div>
+
+
+              {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+               
+
+
+
+
+               
+               
+               
+               {/* Level Design Section */}
+
+              {/*Level Design Image1*/}        
+               <div className="w-full">
+               <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 12.png" />
+               </div> 
+   
+               
+               
+               
+               
+               
+               
+               {/* Spatial Design Section */}
               <div className="w-full ">
                 <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/dbc61aac-d704-4f72-9df3-d77191c87385.png" />
               </div>
