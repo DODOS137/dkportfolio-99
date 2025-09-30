@@ -307,12 +307,12 @@ presenting: the concept, interactive and navigation elements, etc. </p>
 {/* Main Image (full-bleed, no letterbox) */}
 <div className="my-40 md:my-40 relative">
   {/* 뒤 배경판 */}
-  <div className="pointer-events-none absolute inset-0 z-0">
-    <AspectRatio ratio={16 / 9} className="w-[101vw] bg-[#FF7F00]">
-      <div className="w-full h-full" />
+  <div     className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
+  >
+    <AspectRatio ratio={16 / 9}>
+      <div className="w-full h-full bg-[#FF7F00]" />
     </AspectRatio>
   </div>
-
   {/* 앞 이미지 */}
   <AspectRatio
     ratio={16 / 9}
