@@ -12,6 +12,34 @@ import ProjectNavigation from './shared/ProjectNavigation';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+/* ============================
+   ✅ 경량 YouTube 썸네일 플레이어 (정의 누락 보완)
+   ============================ */
+const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
+  const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  const src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
+  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const wrapper = e.currentTarget.parentElement as HTMLElement | null;
+    if (!wrapper) return;
+    wrapper.innerHTML =
+      `<iframe title="${title}" src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
+  };
+  return (
+    <div className={`relative w-full h-full bg-black ${className}`}>
+      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+      <button
+        onClick={onClick}
+        className="absolute inset-0 w-full h-full flex items-center justify-center"
+        aria-label="Play video"
+      >
+        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
+          ▶ PLAY
+        </span>
+      </button>
+    </div>
+  );
+};
+
 const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
@@ -34,12 +62,9 @@ const LearnProjectDetail = () => {
 
   /* ============================
      ✅ 성능 힌트: preconnect/preload (헤드에 주입)
-     - YouTube/ytimg에 미리 연결
-     - LCP 이미지, YT 썸네일(가능 시) preload
      ============================ */
   useEffect(() => {
     const head = document.head;
-
     const addLink = (rel: string, href: string, extra: Record<string, string> = {}) => {
       const exists = Array.from(head.querySelectorAll<HTMLLinkElement>(`link[rel="${rel}"]`)).some(l => l.href === href || l.getAttribute('href') === href);
       if (exists) return;
@@ -50,24 +75,18 @@ const LearnProjectDetail = () => {
       head.appendChild(link);
     };
 
-    // YouTube 성능 힌트
     addLink('preconnect', 'https://www.youtube.com', { crossorigin: '' });
     addLink('preconnect', 'https://i.ytimg.com', { crossorigin: '' });
 
-    // LCP 후보(첫 이미지) preload (가능할 때만)
     const lcp = project.images?.[0];
-    if (lcp) {
-      addLink('preload', lcp, { as: 'image', imagesrcset: '', fetchpriority: 'high' });
-    }
+    if (lcp) addLink('preload', lcp, { as: 'image', fetchpriority: 'high' });
 
-    // 페이지 내 임베드된 YouTube 썸네일을 추정(preload) – 영상 ID가 코드에 고정되어 있으므로 명시
     const ytThumb = 'https://i.ytimg.com/vi/aCJblmM9yzs/hqdefault.jpg';
     addLink('preload', ytThumb, { as: 'image' });
   }, [project.images]);
 
   // ✅ 이미지 LQIP/지연 로딩 + 텍스트 페이드 인 최적화
   useEffect(() => {
-    // ScrollArea가 뷰포트일 수 있으므로 root 지정
     const scrollRoot =
       document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') ||
       document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto') ||
@@ -79,7 +98,6 @@ const LearnProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    // LCP 후보(맨 위 이미지)는 즉시 로드
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
@@ -87,7 +105,6 @@ const LearnProjectDetail = () => {
       lcpImg.decoding = 'async';
     }
 
-    // 나머지 이미지 → 공격적 지연 로딩 + LQIP + 근접 로딩 큐
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
@@ -151,15 +168,10 @@ const LearnProjectDetail = () => {
           }
         });
       },
-      {
-        root: scrollRoot,
-        rootMargin: '200px 0px',
-        threshold: 0.05,
-      }
+      { root: scrollRoot, rootMargin: '200px 0px', threshold: 0.05 }
     );
     lazyImgs.forEach((img) => imgIO.observe(img));
 
-    // 텍스트 페이드 인
     const textNodes = document.querySelectorAll<HTMLElement>(
       'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
@@ -173,11 +185,7 @@ const LearnProjectDetail = () => {
           else el.classList.remove('text-reveal-show');
         });
       },
-      {
-        root: scrollRoot,
-        rootMargin: '0px 0px -10% 0px',
-        threshold: 0.12,
-      }
+      { root: scrollRoot, rootMargin: '0px 0px -10% 0px', threshold: 0.12 }
     );
     textNodes.forEach((el) => textIO.observe(el));
 
@@ -199,9 +207,7 @@ const LearnProjectDetail = () => {
           <section className="h-screen flex items-center justify-center relative overflow-hidden">
             <div
               ref={heroRef.ref}
-              className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-                heroRef.isVisible ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}
             >
               <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
                 {project.heroTitle}
@@ -235,173 +241,138 @@ const LearnProjectDetail = () => {
               </div>
             )}
 
- 
-            
-            
-            
-            
-       {/* Shared Container */}
-       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-    
-       {/* Left Column */}
-       <div>
-       {/* Title */}
-       <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
-       {project.title}
-       </h2>
+            {/* Shared Container */}
+            <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+                {/* Left Column */}
+                <div>
+                  <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
+                    {project.title}
+                  </h2>
+                  <p className="text-base md:text-base font-bold text-gray-500 mb-10">
+                    2024 │ VR Content Design │ Solo Project │ 8 weeks
+                  </p>
+                  <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
+                    <img
+                      src=""
+                      alt={project.title}
+                      className="w-full h-full"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
 
-      {/* Location + Year */}
-      <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-        2024 │ VR Content Design │ Solo Project │ 8 weeks
-      </p>
+                {/* Right Column */}
+                <div className="space-y-6">
+                  <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+                    Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
+                  </p>
 
-      {/* ✅ NEW: Image under location/year */}
-      <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
-        <img
-          src=""
-          alt={project.title}
-          className="w-full h-full"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    </div>
+                  <div className="mb-6 mt-6 md:mt-6">
+                    <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
+                      The Brief
+                    </h2>
+                    <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+                      Create a short script for a VR linear narrative experience of up to 10 minutes. You can also
+                      add a graph of your narrative (e.g., from Celtex to your submission, not compulsory). You will
+                      illustrate the story through a VR storyboard in one of the available VR apps, suh as Open Brush or
+                      similar. You must demonstrate through the storyboard that you integrated VR-related concepts
+                      relevant to your story, such as interaction, embodiment, etc. You will be given examples of scripts
+                      and VR storyboards in class. You will create a recording of your storyboard with a voiceover
+                      presenting: the concept, interactive and navigation elements, etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-    {/* Right Column */}
-    <div className="space-y-6">
-    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-   Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
-    </p>
-       
+              {/* Line */}
+              <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
-    
+              {/* Main Image (full-bleed colored plate behind) */}
+              <div className="my-40 md:my-40 relative">
+                {/* 뒤 배경판 */}
+                <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
+                  <AspectRatio ratio={16 / 9}>
+                    <div className="w-full h-full bg-[#FF7F00]" />
+                  </AspectRatio>
+                </div>
+                {/* 앞 이미지 */}
+                <AspectRatio
+                  ratio={16 / 9}
+                  className="relative z-10 bg-[#FF7F00] border-none overflow-hidden"
+                >
+                  <img
+                    src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
+                    alt=""
+                    className="block w-full h-full object-contain"
+                    /* 레터박스 제거용 object-cover를 원하면 여기만 object-cover로 교체 */
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </AspectRatio>
+              </div>
 
-       
-       <div className="mb-6 mt-6 md:mt-6"> 
-         <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
-      The Brief
-          </h2>
-       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
-        Create a short script for a VR linear narrative experience of up to 10 minutes. You can also
-add a graph of your narrative (e.g., from Celtex to your submission, not compulsory). You will
-illustrate the story through a VR storyboard in one of the available VR apps, suh as Open Brush or
-similar. You must demonstrate through the storyboard that you integrated VR-related concepts
-relevant to your story, such as interaction, embodiment, etc. You will be given examples of scripts
-and VR storyboards in class. You will create a recording of your storyboard with a voiceover
-presenting: the concept, interactive and navigation elements, etc. </p>
-      </div>
-    </div>
-  </div>
+              {/* Line */}
+              <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
-
-                   
-          {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
-           
-         
-         
-  
-
-         
-{/* Main Image (full-bleed, no letterbox) */}
-<div className="my-40 md:my-40 relative">
-  {/* 뒤 배경판 */}
-  <div     className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
-  >
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#FF7F00]" />
-    </AspectRatio>
-  </div>
-  {/* 앞 이미지 */}
-  <AspectRatio
-    ratio={16 / 9}
-    className="relative z-10 bg-[#FF7F00] border-none overflow-hidden"
-  >
-    <img
-      src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
-      alt=""
-      className="block w-full h-full object-contain" // ✅ 레터박스 제거
-      loading="lazy"
-      decoding="async"
-    />
-  </AspectRatio>
-</div>
-
-
-          
-          {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
-
-
-{/* Challenge Summary */}
-<section aria-labelledby="car-title" className="mt-6 mb-6">
-  <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
-
-  <div className="grid md:grid-cols-3 gap-6">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+              {/* Summary */}
+              <section aria-labelledby="car-title" className="mt-6 mb-6">
+                <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+                    <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
+                    <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
                       <li>Creation of an original VR storytelling format</li>
                       <li>Harmonising narrative, space, and interaction into one cohesive whole</li>
-      </ul>
-    </div>
-
-    {/* Approach */}
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+                    </ul>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+                    <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
+                    <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
                       <li>Building an original world ·story · characters  · spatial setting</li>
                       <li>Sketching interaction flows directly within VR environments</li>
                       <li>Scriptwriting tailored to narrative situations and emotional pacing</li>
-      </ul>
-    </div>
-
-    {/* Result */}
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+                    </ul>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+                    <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
+                    <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
                       <li>Immersive VR narrative centred on empathy and memory</li>
                       <li>Demonstrates emotional storytelling in VR</li>
-      </ul>
-    </div>
-  </div>
-</section>
+                    </ul>
+                  </div>
+                </div>
+              </section>
 
-{/* Challenge full text*/}    
-<details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
-  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
-    Full text
-  </summary>
-  <div className="px-4 pb-6 pt-6 space-y-6">
-    <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Approach</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+              {/* Challenge full text */}
+              <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
+                <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
+                  Full text
+                </summary>
+                <div className="px-4 pb-6 pt-6 space-y-6">
+                  <div>
+                    <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Approach</h3>
+                    <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       The aim was to integrate all key components of VR content—character design, level design, narrative structure, and spatial interaction—into a unified experience. Emphasis was placed on the emotional potential of non-verbal storytelling and how spatial choreography could express moral and symbolic choices. Design decisions were grounded in research into emotional logic, human-object memory, and the aesthetic of decay.
                     </p>
-    </div>
+                  </div>
 
-    <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+                  <div>
+                    <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
+                    <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       This project set out to create an original VR storytelling experience exploring empathy in a post-human world. By following service robots in an abandoned library, the narrative asked whether meaning and emotional understanding could persist without their human creators.
                     </p>
-    </div>
+                  </div>
 
-    <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+                  <div>
+                    <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
+                    <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       The project was developed through integrated worldbuilding, interaction design, and spatial storytelling. Distinct robot characters and moral decision points shaped the narrative arc. VR sketching tools enabled real-time storyboard testing, refining pacing and navigation early on. Spatial contrasts—light and shadow, architecture and decay, digital and analogue—were choreographed to guide attention and embed symbolic meaning. Together, these strategies built a cohesive, emotionally driven VR narrative.
                     </p>
-    </div>
-
-  </div>
-</details>
-
-
-
-
-    
+                  </div>
+                </div>
+              </details>
 
               {/* Process */}
               <section id="process" className="rounded-lg bg-black">
@@ -477,19 +448,11 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                   <li>• Original VR storytelling.</li>
                   <li>• VR sketching & 3D storyboards for pacing and navigation.</li>
                 </ul>
-                </section>
-
-
+              </section>
 
               {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-    
-         
-         
-         
-         
-         
               {/* World Image */}
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
@@ -500,43 +463,30 @@ presenting: the concept, interactive and navigation elements, etc. </p>
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-
-          {/*World Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Worldbuilding</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
-                          The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition?
-                        </p>
-         </div>
-         </div>
-
+              {/* World Text */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                  <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Worldbuilding</h2>
+                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> Set in a distant dystopian future, the story took place in a world void of humans, where robots continued to perform their long-obsolete tasks with mechanical precision. These machines, bound to designated zones, preserved human knowledge in silence—echoes of a civilisation long gone.
+                    The library acted as a symbolic setting for memory and ritual. Through environmental storytelling, the world posed existential questions: When creators vanish, does legacy remain? Can purpose emerge from repetition?
+                  </p>
+                </div>
+              </div>
 
               {/* Line */}
               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
+              {/* Narrative Arc Text */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                  <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
+                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
+                  </p>
+                </div>
+              </div>
 
-          {/*  Narrative ArcText*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> The story followed three robots—FR Pro, RX-056, and LS1-07—as they managed their duties inside the abandoned library. The player, as FR Pro, learned indirectly about empathy by observing the others. A critical moment occurred when the group discovered a dying tree, prompting a moral choice: preserve it or preserve themselves. This symbolised post-human emotional logic—questioning whether machines could perform gestures of empathy without biological emotion. Through ritualistic action, sacrifice became a form of symbolic communication.
-          </p>
-         </div>
-         </div>
-
-
-            
-         
-         
-         
-         
-         
-         {/* Line */}
+              {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-
-         
 
               {/* Character Design Section */}
               <div className="rounded-lg bg-transparent">
@@ -548,7 +498,6 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                   />
                 </div>
 
-                {/* Character Images */}
                 <div className="w-full">
                   <img
                     alt="RX-056 Character Design"
@@ -562,7 +511,6 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                   />
                 </div>
 
-                {/* 3D Models */}
                 <ErrorBoundary fallback={<div className="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">3D Model Viewer Unavailable</div>}>
                   <div className="relative overflow-hidden">
                     <div className="flex w-full">
@@ -583,33 +531,25 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                 </h2>
               </div>
 
-
-                  {/* Line */}
+              {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+              {/* YouTube Video Section */}
+              <div className="my-40 md:my-40 relative">
+                <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
+                  <AspectRatio ratio={16 / 9}>
+                    <div className="w-full h-full bg-[#FF7F00]" />
+                  </AspectRatio>
+                </div>
 
-
-           {/* YouTube Video Section */}
-  <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
-  <div
-    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
-  >
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#FF7F00]" />
-    </AspectRatio>
-  </div>
-
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <LiteYouTube
-      id="aCJblmM9yzs"
-      title="Project video"
-      className="w-full h-full bg-transparent"  
-    />
-  </AspectRatio>
-</div>
-
-
-         
+                <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+                  <LiteYouTube
+                    id="aCJblmM9yzs"
+                    title="Project video"
+                    className="w-full h-full bg-transparent"
+                  />
+                </AspectRatio>
+              </div>
 
               {/* script 컨테이너1 */}
               <div className="w-full ">
@@ -622,16 +562,13 @@ presenting: the concept, interactive and navigation elements, etc. </p>
 
               {/* script 컨테이너2 */}
               <div className="w-full flex justify-center mb-40">
-                {/* 기준 이미지 컨테이너 */}
                 <div className="relative w-full max-w-[1920px]">
-                  {/* 배경 이미지 */}
                   <img
                     alt="RX-056 Character Frame"
                     className="w-full h-auto block"
                     src="/lovable-uploads/de229615-bd04-4ff5-bd7a-46eb6efc98b0.png"
                   />
 
-                  {/* 유튜브 플레이어 */}
                   <div
                     className="absolute"
                     style={{
@@ -666,7 +603,7 @@ presenting: the concept, interactive and navigation elements, etc. </p>
                 </div>
               </div>
 
-              {/* Level Design Section (이미지 묶음) */}
+              {/* Level Design Section */}
               <div className="rounded-lg bg-transparent">
                 <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/bf2fe34d-0b83-4063-ac63-3dd0b7d5c8cd.png" />
                 <div className="w-full">
@@ -736,18 +673,12 @@ presenting: the concept, interactive and navigation elements, etc. </p>
 
         {/* ✅ 전역 스타일: 이미지 LQIP + 텍스트 페이드 인 + content-visibility */}
         <style>{`
-          /* 이미지 LQIP + 리빌 */
           .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
           .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
           .reveal-show { opacity: 1; filter: blur(0); }
-
-          /* 텍스트 페이드 인 */
           .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
           .text-reveal-show { opacity: 1; transform: translateY(0); }
-
-          /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
           .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
-
           @media (prefers-reduced-motion: reduce) {
             .reveal-init, .text-reveal-init { transition-duration: 1ms; filter: none; transform: none; }
           }
