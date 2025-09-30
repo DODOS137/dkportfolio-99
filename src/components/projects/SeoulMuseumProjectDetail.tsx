@@ -809,7 +809,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
              
               <div className="w-full ">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 19.png" loading="lazy" decoding="async" fetchPriority="low" />
+ 
               <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 20.png" loading="lazy" decoding="async" fetchPriority="low" />
             </div>
           </div>
