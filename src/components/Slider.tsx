@@ -36,17 +36,18 @@ const projects: Project[] = [
   },
   {
     id: "4",
-    title: "Thermal Trace",
-    slug: "Thermal-Trace",
-    description: "XR & Exhibition Design",
-    imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
-  },
-  {
-    id: "5",
     title: "Learn",
     slug: "learn",
     description: "Immersive Virtual Reality Experience",
     imageUrl: "/lovable-uploads/0395cfdd-35e7-4e15-a634-3eab92516d24.png"
+
+  },
+  {
+    id: "5",
+    title: "Thermal Trace",
+    slug: "Thermal-Trace",
+    description: "XR & Exhibition Design",
+    imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
   }
 ];
 
