@@ -1,49 +1,55 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dohyun Kim - Portfolio | 3D & Spatial Design</title>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dohyun Kim - Portfolio | 3D & Spatial Design</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Dohyun Kim's portfolio showcasing VR experiences, exhibition design, and spatial design projects including Invisible Space Museum, Learn VR, and more." />
-    <meta name="keywords" content="VR, Virtual Reality, Exhibition Design, Spatial Design, Dohyun Kim, Portfolio" />
-    <meta name="author" content="Dohyun Kim" />
-    
-    <!-- Open Graph Tags for Social Sharing -->
-    <meta property="og:title" content="Dohyun Kim - Portfolio | VR & Spatial Design" />
-    <meta property="og:description" content="Explore innovative VR experiences and spatial design projects by Dohyun Kim" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.dkdon.com" />
-    <meta property="og:image" content="/thumbnaildk.png" />
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dohyun Kim - Portfolio" />
-    <meta name="twitter:description" content="Explore innovative VR experiences and spatial design projects" />
-    <meta name="twitter:image" content="/thumbnaildk.png" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="thumbnaildk.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/thumbnaildk.png" />
-    
-    <!-- Google Fonts - Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/src/index.css" as="style" />
-    
-    <!-- Performance Hints -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  </head>
+  <!-- SEO -->
+  <meta name="description" content="Dohyun Kim's portfolio showcasing VR experiences, exhibition design, and spatial design projects including Invisible Space Museum, Learn VR, and more." />
+  <meta name="keywords" content="VR, Virtual Reality, Exhibition Design, Spatial Design, Dohyun Kim, Portfolio" />
+  <meta name="author" content="Dohyun Kim" />
 
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+  <!-- Open Graph (공유 썸네일은 파비콘과 별개) -->
+  <meta property="og:title" content="Dohyun Kim - Portfolio | VR & Spatial Design" />
+  <meta property="og:description" content="Explore innovative VR experiences and spatial design projects by Dohyun Kim" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.dkdon.com" />
+  <!-- ✅ 절대경로로 고정 -->
+  <meta property="og:image" content="https://www.dkdon.com/thumbnaildk.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dohyun Kim - Portfolio" />
+  <meta name="twitter:description" content="Explore innovative VR experiences and spatial design projects" />
+  <!-- ✅ 절대경로로 고정 -->
+  <meta name="twitter:image" content="https://www.dkdon.com/thumbnaildk.png" />
+
+  <!-- ✅ Favicon / App Icons (웹 탭 썸네일 강제) -->
+  <!-- 파일이 하나(thumbnaildk.png)만 있어도 동작하지만, 가능하면 16/32 추가 권장 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/thumbnaildk.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/thumbnaildk.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/thumbnaildk.png" />
+  <!-- (선택) 안드로이드/크롬용 -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/thumbnaildk.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/thumbnaildk.png" />
+
+  <!-- (선택) PWA manifest가 있으면 등록 -->
+  <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+
+  <!-- 브라우저 테마 컬러 -->
+  <meta name="theme-color" content="#000000" />
+  <meta name="msapplication-TileColor" content="#000000" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Preload Critical CSS (빌드 체인에 따라 선택) -->
+  <link rel="preload" href="/src/index.css" as="style" />
+
+  <!-- DNS Prefetch (선택) -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+</head>
+
