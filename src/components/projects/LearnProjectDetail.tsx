@@ -301,43 +301,29 @@ presenting: the concept, interactive and navigation elements, etc. </p>
            
          
          
-  {/* Main Image with background plate like YouTube */}
-<div className="my-40 md:my-40 relative">
-  {/* 뒤 배경판: 유튜브 플레이어와 같은 16:9 크기 유지 */}
-  <AspectRatio ratio={16 / 9}>
-    <div className="absolute inset-0 w-full h-full bg-[#FF7F00] rounded-lg" /> {/* ✅ 판 */}
-  </AspectRatio>
-
-  {/* 앞 이미지: 같은 16:9 박스 안에 겹침 */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <img
-      src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
-      className="w-full h-full object-contain"
-      loading="lazy"
-      decoding="async"
-      alt="Main Project Image"
-    />
-  </AspectRatio>
-</div>       
+  
 
          
-{/* Main Image (with full-bleed colored plate behind) */}
+{/* Main Image (full-bleed, no letterbox) */}
 <div className="my-40 md:my-40 relative">
-  {/* 뒤 배경판: 뷰포트 가로 100%로 깔림 */}
-  <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#FF7F00]" /> {/* ← 여기 색상 변경 */}
+  {/* 뒤 배경판 */}
+  <div className="pointer-events-none absolute inset-0 z-0">
+    <AspectRatio ratio={16 / 9} className="w-[101vw] bg-[#FF7F00]">
+      <div className="w-full h-full" />
     </AspectRatio>
   </div>
 
-  {/* 앞 이미지: 배경판 위에 겹침 */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-transparent overflow-hidden">
+  {/* 앞 이미지 */}
+  <AspectRatio
+    ratio={16 / 9}
+    className="relative z-10 bg-[#FF7F00] border-none overflow-hidden"
+  >
     <img
       src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
-      className="w-full h-full object-contain"
+      alt=""
+      className="block w-full h-full object-contain" // ✅ 레터박스 제거
       loading="lazy"
       decoding="async"
-      alt=""
     />
   </AspectRatio>
 </div>
