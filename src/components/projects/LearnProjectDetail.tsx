@@ -606,7 +606,7 @@ const LearnProjectDetail = () => {
                <div className="w-full">
                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 11.png" />
                </div> 
-               {/*Level Design Image3*/}        
+               {/*Level Design Image5*/}        
                <div className="w-full">
                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 18.png" />
                </div> 
