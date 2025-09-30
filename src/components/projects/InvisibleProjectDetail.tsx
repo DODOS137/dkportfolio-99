@@ -768,7 +768,7 @@ your research abilities. They should reflect your own interests and support your
         {/* Navigation */}
         <div className="pb-40 md:pb-60 flex items-center justify-center">
           <Link
-            to="/project/Thermal-Trace"
+            to="/project/Seoul-Nature-History-Museum"
             className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
           >
             <span>Next project</span>
