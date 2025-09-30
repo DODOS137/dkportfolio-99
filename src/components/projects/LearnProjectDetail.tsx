@@ -551,57 +551,8 @@ const LearnProjectDetail = () => {
                 </AspectRatio>
               </div>
 
-              {/* script 컨테이너1 */}
-              <div className="w-full ">
-                <img
-                  alt="RX-056 Character Design"
-                  className="w-full h-auto mt-20"
-                  src="/lovable-uploads/4b01aa09-e408-4273-b96a-fe2ad51a3ec6.png"
-                />
-              </div>
 
-              {/* script 컨테이너2 */}
-              <div className="w-full flex justify-center mb-40">
-                <div className="relative w-full max-w-[1920px]">
-                  <img
-                    alt="RX-056 Character Frame"
-                    className="w-full h-auto block"
-                    src="/lovable-uploads/de229615-bd04-4ff5-bd7a-46eb6efc98b0.png"
-                  />
 
-                  <div
-                    className="absolute"
-                    style={{
-                      top: '18%',
-                      left: '50%',
-                      width: '65.1%',
-                      aspectRatio: '1250 / 550',
-                      transform: 'translateX(-50%)',
-                    }}
-                  >
-                    <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl border border-white">
-                      <ErrorBoundary fallback={<div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-400">Video Unavailable</div>}>
-                        <YouTube
-                          videoId="aCJblmM9yzs"
-                          opts={{
-                            width: '100%',
-                            height: '100%',
-                            playerVars: {
-                              autoplay: 0,
-                              controls: 1,
-                              modestbranding: 1,
-                              fs: 1,
-                              origin: typeof window !== 'undefined' ? window.location.origin : '',
-                            },
-                          }}
-                          className="w-full h-full"
-                          iframeClassName="w-full h-full border-0"
-                        />
-                      </ErrorBoundary>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               {/* Level Design Section */}
               <div className="rounded-lg bg-transparent">
