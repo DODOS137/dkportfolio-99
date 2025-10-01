@@ -262,22 +262,13 @@ const LearnProjectDetail = () => {
                   <p className="text-base md:text-base font-bold text-gray-500 mb-10">
                     2024 │ VR Content Design │ Solo Project │ 8 weeks
                   </p>
-                  <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
-                    <img
-                      src={PIXEL} /* 기존 src="" → 불필요 네트워크요청 방지 */
-                      alt={project.title}
-                      className="w-full h-full"
-                      loading="lazy"
-                      decoding="async"
-                      sizes="100vw"
-                    />
-                  </div>
+        
                 </div>
 
                 {/* Right Column */}
                 <div className="space-y-6">
                   <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-                    Set in a dystopian future where humans have vanished, this project followed the journey of three service robots as they continued to perform long-abandoned duties within a decaying library. The player took the role of FR Pro, one of the robots, gradually uncovering the fragments of human memory while learning to interpret empathy and emotion. The project investigated whether emotional understanding could emerge in non-human entities through narrative interaction and symbolic decision-making. Each robot had distinct roles, personalities, and limitations, framing a world where meaning persisted without its makers.
+                    A comprehensive project that developed an original storyline, character scripts, and overall planning for a VR content experience.
                   </p>
 
                   <div className="mb-6 mt-6 md:mt-6">
