@@ -6,149 +6,144 @@ import ImageWithLoading from '@/components/ImageWithLoading';
 import { thermalTraceProjectData } from '@/data/thermalTraceProject';
 import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import ProjectHero from './shared/ProjectHero';
+
+import ProjectMetadata from './shared/ProjectMetadata';
+
+import InteractiveImageSection from './thermal-trace/InteractiveImageSection';
+import CarouselSection from './thermal-trace/CarouselSection';
+import ContentSection from './thermal-trace/ContentSection';
+import InteractiveExperience from './thermal-trace/InteractiveExperience';
 import BackToTopButton from '@/components/BackToTopButton';
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-/* =============== Whispers 포맷: 경량 YouTube 컴포넌트 =============== */
-/* Thermal Trace에는 유튜브 영상이 없어도 포맷 통일을 위해 컴포넌트 정의만 유지 (미사용 가능) */
-const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
-  const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-  const src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
-  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const wrapper = (e.currentTarget.parentElement as HTMLElement);
-    if (!wrapper) return;
-    wrapper.innerHTML = `<iframe title="${title}" src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
-  };
-  return (
-    <div className={`relative w-full h-full bg-black ${className}`}>
-      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
-      <button
-        onClick={onClick}
-        className="absolute inset-0 w-full h-full flex items-center justify-center"
-        aria-label="Play video"
-      >
-        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
-          ▶ PLAY
-        </span>
-      </button>
-    </div>
-  );
-};
-
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
-  const heroRef = useScrollAnimation();
 
-  // 앞선 4개 프로젝트와 동일한 컨테이너 규격
   const CONTAINER = "max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10";
 
-  // Sample images for the spatial design carousel
   const carouselImages = [
     "/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png",
     "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png",
     "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"
   ];
 
-  /* ============================
-     Whispers 포맷: 이미지 LQIP + 지연 로딩 + 스크롤 페이드 + content-visibility
-     ============================ */
+  const artWorkImages = [
+    "/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png",
+    "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png",
+    "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"
+  ];
+
+  const processSteps = [
+    { title: "Ideation Phase", items: ["Brainstorming", "Concept Sketching"] },
+    { title: "Analysis", items: ["Stage Environment Research", "Precedent Study"] },
+    { title: "Design Development", items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"] }
+  ];
+
   useEffect(() => {
+    // ✅ TS 제네릭 제거
     const scrollRoot =
-      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') ||
-      document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto') ||
+      document.querySelector('[data-radix-scroll-area-viewport]') ||
+      document.querySelector('.h-screen.w-screen.overflow-auto') ||
       null;
 
-    const allImgs = Array.from(
-      document.querySelectorAll<HTMLImageElement>('section img')
-    );
+    const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
 
-    // LCP 후보(맨 위 큰 이미지)는 즉시/고우선 로드
+    // ✅ TS 제네릭 제거
+    const allImgs = Array.from(document.querySelectorAll('section img'));
+
+    // LCP 즉시 로드
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
-      (lcpImg as any).fetchPriority = 'high';
+      // (lcpImg as any).fetchPriority = 'high'; // 필요시 활성화
       lcpImg.decoding = 'async';
-      if (!lcpImg.hasAttribute('sizes')) {
-        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
-      }
     }
 
-    // 나머지 이미지는 네이티브 lazy + LQIP 클래스만 부여
+    // 나머지 LQIP + lazy
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
+
+      const originalSrc = img.getAttribute('src');
+      if (!originalSrc) return;
+
+      img.setAttribute('data-src', originalSrc);
+      img.setAttribute('src', transparentPixel);
       img.loading = 'lazy';
       img.decoding = 'async';
-      (img as any).fetchPriority = 'low';
-      if (!img.hasAttribute('sizes')) img.setAttribute('sizes', '100vw');
+      img.fetchPriority = 'low';
+
       img.classList.add('img-lqip', 'reveal-init');
     });
 
-    // 보이면 decode → 클래스 토글
-    const decodeOnIdle = (img: HTMLImageElement) => {
-      const run = () => {
-        if (typeof (img as any).decode === 'function') {
-          (img as any).decode().catch(() => {}).finally(() => {
+    const MAX_CONCURRENT = 2;
+    // ✅ TS 타입 제거
+    const queue = [];
+    let inFlight = 0;
+
+    const processQueue = () => {
+      while (inFlight < MAX_CONCURRENT && queue.length) {
+        const img = queue.shift();
+        if (!img || img.dataset.loaded === '1') continue;
+        inFlight++;
+
+        const doReveal = () => {
+          requestAnimationFrame(() => {
             img.classList.remove('img-lqip');
-            img.classList.add('reveal-show', 'play-wiggle');
+            img.classList.add('reveal-show');
+            img.dataset.loaded = '1';
+            inFlight--;
+            processQueue();
           });
+        };
+
+        const ds = img.getAttribute('data-src');
+        if (ds && img.src !== ds) img.src = ds;
+
+        if (typeof img.decode === 'function') {
+          img.decode().then(doReveal).catch(doReveal);
         } else {
           const onLoad = () => {
             img.removeEventListener('load', onLoad);
-            img.classList.remove('img-lqip');
-            img.classList.add('reveal-show', 'play-wiggle');
+            doReveal();
           };
           img.addEventListener('load', onLoad);
         }
-      };
-      (window as any).requestIdleCallback ? (window as any).requestIdleCallback(run, { timeout: 500 }) : run();
+      }
     };
 
     const imgIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const img = entry.target as HTMLImageElement;
+          const img = entry.target;
           if (entry.isIntersecting) {
             imgIO.unobserve(img);
-            decodeOnIdle(img);
-          } else {
-            img.classList.remove('play-wiggle');
+            queue.push(img);
+            processQueue();
           }
         });
       },
-      {
-        root: scrollRoot,
-        rootMargin: '600px 0px',
-        threshold: 0.05
-      }
+      { root: scrollRoot, rootMargin: '200px 0px', threshold: 0.05 }
     );
     lazyImgs.forEach((img) => imgIO.observe(img));
 
-    // 텍스트 노드: 스크롤 페이드 인/아웃
-    const textNodes = document.querySelectorAll<HTMLElement>(
+    // 텍스트 페이드
+    const textNodes = document.querySelectorAll(
       'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
-    textNodes.forEach((el) => {
-      if (!el.classList.contains('text-reveal-init')) {
-        el.classList.add('text-reveal-init');
-      }
-    });
+    textNodes.forEach((el) => el.classList.add('text-reveal-init'));
 
     const textIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const el = entry.target as HTMLElement;
+          const el = entry.target;
           if (entry.isIntersecting) el.classList.add('text-reveal-show');
           else el.classList.remove('text-reveal-show');
         });
       },
-      {
-        root: scrollRoot,
-        rootMargin: '0px 0px -10% 0px',
-        threshold: 0.12
-      }
+      { root: scrollRoot, rootMargin: '0px 0px -10% 0px', threshold: 0.12 }
     );
     textNodes.forEach((el) => textIO.observe(el));
 
@@ -161,49 +156,30 @@ const ThermalTraceProjectDetail = () => {
   return (
     <ScrollArea className="h-screen w-screen overflow-auto">
       <ProjectLayout>
-        {/* Fixed Navigation */}
-        <ProjectNavigation backText="Back to work" />
+        <ProjectNavigation />
 
-        {/* ============== Whispers형 Hero ============== */}
-        <section className="h-screen flex items-center justify-center relative overflow-hidden">
-          <div
-            ref={heroRef.ref}
-            className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}
-          >
-            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
-              {project.heroTitle}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
-              Reimaging the Fashion Show Through XR
-            </p>
-            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
-              <span>2022–2025</span>
-              <span>•</span>
-              <span>Personal Project</span>
-              <span>•</span>
-              <span>XR & Exhibition Designer</span>
-            </div>
-          </div>
-        </section>
+        <ProjectHero
+          title={project.heroTitle}
+          subtitle="Reimaging the Fashion Show Through XR"
+          year="2022–2025"
+          client="Personal Project"
+          role="XR & Exhibition Designer"
+        />
 
-        {/* ================= Main Content (Whispers 포맷) ================= */}
         <section className="cv-auto">
-          {/* First Image (LCP) */}
-          <div className="max-w-[1540px] mx-auto z-10">
+          <div className={CONTAINER}>
             <img
+              src={project.images[0]}
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
-              src={project.images[0]}
               loading="eager"
-              fetchpriority="high"
               decoding="async"
+              sizes="100vw"
             />
           </div>
 
-          {/* Shared Container (좌: 타이틀/메타 + 이미지, 우: 본문/브리프) */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-              {/* Left Column */}
               <div>
                 <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
                   {project.title}
@@ -211,19 +187,8 @@ const ThermalTraceProjectDetail = () => {
                 <p className="text-base md:text-base font-bold text-gray-500 mb-10">
                   2022–2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
                 </p>
-                {/* 포맷 일치용 이미지 슬롯 (Thermal 전용 대표컷 사용 가능) */}
-                <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
-                  <img
-                    src="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png"
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
               </div>
 
-              {/* Right Column */}
               <div className="space-y-6">
                 <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
                   An exhibition design project developed in 2022 as a self-initiated extension of undergraduate coursework.
@@ -241,30 +206,27 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>
 
-          {/* ========= Interactive Image (Whispers 포맷: 배경판 + 앞 레이어) ========= */}
+          {/* 배경판 + 인터랙티브 이미지 */}
           <div className="my-40 md:my-40 relative">
-            {/* 뒤 배경판 */}
             <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
               <AspectRatio ratio={16 / 9}>
                 <div className="w-full h-full bg-[#0044FA]" />
               </AspectRatio>
             </div>
 
-            {/* 실제 인터랙티브 이미지 */}
-            <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+            <div className="relative z-10 rounded-xl overflow-hidden">
               <InteractiveImageSection
                 baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png"
                 overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png"
               />
-            </AspectRatio>
+            </div>
           </div>
 
-          {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          {/* ===== Summary (텍스트/구성 Thermal 그대로) ===== */}
-          <section aria-labelledby="sum-title" className="mt-6 mb-6">
-            <h2 id="sum-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
+          {/* Summary */}
+          <section aria-labelledby="car-title" className="mt-6 mb-6">
+            <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-lg border border-white/10 bg-white/5 p-6">
                 <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
@@ -296,7 +258,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </section>
 
-          {/* Full text (details) */}
+          {/* Full text */}
           <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
             <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
               Full text
@@ -328,6 +290,7 @@ const ThermalTraceProjectDetail = () => {
           {/* Research */}
           <section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
             <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Research</h2>
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
                 <p className="text-3xl md:text-3xl font-light text-white">78%</p>
@@ -425,10 +388,8 @@ const ThermalTraceProjectDetail = () => {
             </ul>
           </section>
 
-          {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          {/* Carousel */}
           <div className={CONTAINER}>
             <CarouselSection images={carouselImages} title="Transformable stage" />
           </div>
@@ -464,7 +425,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>
 
-          {/* Exhibition Design Section with Interactive Image + InteractiveExperience */}
+          {/* Exhibition Design Section with Interactive Image */}
           <div className={`${CONTAINER} rounded-lg bg-transparent overflow-hidden`}>
             <InteractiveImageSection
               baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png"
@@ -492,25 +453,26 @@ const ThermalTraceProjectDetail = () => {
           {/* Divider */}
           <div className={`${CONTAINER} w-full h-px my-20 md:my-40 bg-gray-500/50`} />
 
-          {/* Post Project Direction */}
           <div className={CONTAINER}>
-            <section>
-              <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Post Project Direction</h2>
+            <ContentSection title="Post Project Direction">
               <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
                 The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
               </p>
-            </section>
+            </ContentSection>
           </div>
 
           {/* Navigation */}
-          <div className="pb-40 md:pb-60 flex items-center justify-center">
-            <Link to="/project/Learn" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
+          <div className="pb-40 md:pb-60 flex items-center justify-center mt-32 md:mt-52">
+            <Link
+              to="/project/Learn"
+              className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
+            >
               <span>Next project</span>
               <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
             </Link>
           </div>
 
-          {/* Remaining Images (원본 Thermal 구성 유지 시 필요하면 사용) */}
+          {/* Remaining Images */}
           <div className={CONTAINER}>
             {project.images.slice(1).map((image, index) => (
               <div key={index + 1} className="mb-20">
@@ -530,33 +492,17 @@ const ThermalTraceProjectDetail = () => {
 
         <BackToTopButton />
 
-        {/* 전용 스타일 (Whispers 포맷 동일) */}
         <style>{`
-          /* LQIP 블러 상태 */
           .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
-          .img-lqip.reveal-show { filter: blur(4px); }
-
-          /* 이미지: 스크롤 페이드 */
           .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
           .reveal-show { opacity: 1; filter: blur(0); }
 
-          /* 이미지: '보일 때만' 미세 모션 */
-          @keyframes microWiggle {
-            0%   { transform: translate3d(0, 0.6px, 0) scale(1.001); }
-            50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
-            100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
-          }
-          .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
-
-          /* 텍스트: 페이드 인/아웃 */
           .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
           .text-reveal-show { opacity: 1; transform: translateY(0); }
 
-          /* content-visibility */
           .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
 
           @media (prefers-reduced-motion: reduce) {
-            .play-wiggle { animation: none !important; }
             .reveal-init, .text-reveal-init { transition-duration: 1ms; filter: none; transform: none; }
           }
         `}</style>
