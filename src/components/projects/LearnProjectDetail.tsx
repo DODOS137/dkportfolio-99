@@ -651,11 +651,11 @@ const LearnProjectDetail = () => {
                 <div className="w-full">
                   <img className="w-full h-auto" src="/lovable-uploads/web1920-Learn-26.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 </div>
-              </div>
+              
 
                 <div className="w-full">
                   <img className="w-full h-auto" src="/lovable-uploads/web1920-Learn-27.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
-                </div>
+                
               </div>
 
               {/* Line */}
