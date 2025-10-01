@@ -1,19 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
-import ModelViewer from '@/components/ModelViewer';
+// import ModelViewer from '@/components/ModelViewer'; // ⬅ lazy 로 대체
 import { learnProjectData } from '@/data/learnProject';
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube'; // ⬅ lazy 로 대체
 import BackToTopButton from '@/components/BackToTopButton';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+/* === 지연 로딩: 큰 의존성들 번들 분리 === */
+const ModelViewer = React.lazy(() => import('@/components/ModelViewer'));
+const YouTube = React.lazy(() => import('react-youtube'));
+
 /* ============================
-   ✅ 경량 YouTube 썸네일 플레이어 (정의 누락 보완)
+   경량 YouTube 썸네일 플레이어
    ============================ */
 const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
   const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
@@ -26,7 +30,14 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
   };
   return (
     <div className={`relative w-full h-full bg-black ${className}`}>
-      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+      <img
+        src={thumb}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+        sizes="100vw"
+      />
       <button
         onClick={onClick}
         className="absolute inset-0 w-full h-full flex items-center justify-center"
@@ -44,7 +55,6 @@ const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const project = learnProjectData;
 
-  // 데이터 검증
   if (!project || !project.images || project.images.length === 0) {
     return (
       <ScrollArea className="h-screen w-screen overflow-auto">
@@ -60,9 +70,7 @@ const LearnProjectDetail = () => {
     );
   }
 
-  /* ============================
-     ✅ 성능 힌트: preconnect/preload (헤드에 주입)
-     ============================ */
+  /* === 성능 힌트: preconnect/preload === */
   useEffect(() => {
     const head = document.head;
     const addLink = (rel: string, href: string, extra: Record<string, string> = {}) => {
@@ -85,7 +93,7 @@ const LearnProjectDetail = () => {
     addLink('preload', ytThumb, { as: 'image' });
   }, [project.images]);
 
-  // ✅ 이미지 LQIP/지연 로딩 + 텍스트 페이드 인 최적화
+  // 이미지 LQIP/지연 로딩 + 텍스트 페이드 인
   useEffect(() => {
     const scrollRoot =
       document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') ||
@@ -94,9 +102,7 @@ const LearnProjectDetail = () => {
 
     const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
 
-    const allImgs = Array.from(
-      document.querySelectorAll<HTMLImageElement>('section img')
-    );
+    const allImgs = Array.from(document.querySelectorAll<HTMLImageElement>('section img'));
 
     const lcpImg = allImgs[0];
     if (lcpImg) {
@@ -195,6 +201,9 @@ const LearnProjectDetail = () => {
     };
   }, []);
 
+  /* 투명 픽셀 (빈 이미지 자리용 – 화면엔 동일) */
+  const PIXEL = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+
   return (
     <ScrollArea className="h-screen w-screen overflow-auto project-scroll">
       <React.Fragment>
@@ -235,8 +244,9 @@ const LearnProjectDetail = () => {
                   alt={`${project.title} - Image 1`}
                   className="w-full h-auto object-contain"
                   loading="eager"
-                  fetchpriority="high"
                   decoding="async"
+                  fetchPriority="high"
+                  sizes="100vw"
                 />
               </div>
             )}
@@ -254,11 +264,12 @@ const LearnProjectDetail = () => {
                   </p>
                   <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
                     <img
-                      src=""
+                      src={PIXEL} /* 기존 src="" → 불필요 네트워크요청 방지 */
                       alt={project.title}
                       className="w-full h-full"
                       loading="lazy"
                       decoding="async"
+                      sizes="100vw"
                     />
                   </div>
                 </div>
@@ -306,9 +317,9 @@ const LearnProjectDetail = () => {
                     src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
                     alt=""
                     className="block w-full h-full object-contain"
-                    /* 레터박스 제거용 object-cover를 원하면 여기만 object-cover로 교체 */
                     loading="lazy"
                     decoding="async"
+                    sizes="100vw"
                   />
                 </AspectRatio>
               </div>
@@ -456,7 +467,14 @@ const LearnProjectDetail = () => {
               {/* World Image */}
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="w-full">
-                  <img className="w-full h-full" src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png" />
+                  <img
+                    className="w-full h-full"
+                    src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    sizes="100vw"
+                  />
                 </AspectRatio>
               </div>
 
@@ -495,6 +513,9 @@ const LearnProjectDetail = () => {
                     alt="RX-056 Character Design"
                     src="/lovable-uploads/web1920-Learn_대지 17 사본.png"
                     className="w-full h-auto"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="100vw"
                   />
                 </div>
 
@@ -503,11 +524,17 @@ const LearnProjectDetail = () => {
                     alt="RX-056 Character Design"
                     src="/lovable-uploads/web1920-Learn_대지 7.png"
                     className="w-full h-auto"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="100vw"
                   />
                   <img
                     alt="RX-056 Character Design"
                     src="/lovable-uploads/web1920-Learn_대지 8.png"
                     className="w-full h-auto"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="100vw"
                   />
                 </div>
 
@@ -515,10 +542,14 @@ const LearnProjectDetail = () => {
                   <div className="relative overflow-hidden">
                     <div className="flex w-full">
                       <div className="w-1/2">
-                        <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
+                        <Suspense fallback={<div className="w-full h-64 bg-gray-900/60" />}>
+                          <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
+                        </Suspense>
                       </div>
                       <div className="w-1/2">
-                        <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
+                        <Suspense fallback={<div className="w-full h-64 bg-gray-900/60" />}>
+                          <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
+                        </Suspense>
                       </div>
                     </div>
                     <div className="pointer-events-none absolute top-0 left-0 w-full h-[100px] bg-black z-[999]" />
@@ -533,13 +564,7 @@ const LearnProjectDetail = () => {
 
               {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-              {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-
-
-               
 
               {/* YouTube Video Section */}
               <div className="my-40 md:my-40 relative">
@@ -558,175 +583,132 @@ const LearnProjectDetail = () => {
                 </AspectRatio>
               </div>
 
-
-               {/* Line */}
+              {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-
-
-           {/*Scriptwriting & Storyboard Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300  min-w-[200px]">Scriptwriting & Storyboard</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
-          </p>
-          </div>
-          </div>
-
+              {/* Scriptwriting & Storyboard Text */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                  <h2 className="text-sm md:text-sm font-Medium text-gray-300  min-w-[200px]">Scriptwriting & Storyboard</h2>
+                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+                  </p>
+                </div>
+              </div>
 
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-               
 
-
-
-
-               
-               
-               
-               {/* Level Design Section */}
-
-              {/*Level Design Image1*/}        
-               <div className="w-full">
-               <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 12.png" />
-               </div> 
-              {/*Level Design Image2*/}        
-               <div className="w-full">
-               <img className="w-full h-full" src="/lovable-uploads/web1920-Learn1_대지 10.png" />
-               </div> 
- 
-               {/* Line */}
-              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-                {/*Level Design Image4*/}        
-               <div className="w-full">
-               <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 11.png" />
-               </div> 
-               {/*Level Design Image5*/}        
-               <div className="w-full">
-               <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 18.png" />
-               </div> 
-               
-              
-               
-               
-               {/* Line */}
-              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-               
-               
-               
-               
-               {/* Spatial Design Image1 */}
-              <div className="w-full ">
-                <img className="w-full h-auto" src="/lovable-uploads/dbc61aac-d704-4f72-9df3-d77191c87385.png" />
+              {/* Level Design Section */}
+              <div className="w-full">
+                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 12.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+              </div>
+              <div className="w-full">
+                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn1_대지 10.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
               </div>
 
-               {/* Line */}
+              {/* Line */}
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+              <div className="w-full">
+                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 11.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+              </div>
+              <div className="w-full">
+                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 18.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+              </div>
+
+              {/* Line */}
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+              {/* Spatial Design Image1 */}
+              <div className="w-full ">
+                <img className="w-full h-auto" src="/lovable-uploads/dbc61aac-d704-4f72-9df3-d77191c87385.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+              </div>
+
+              {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
+              {/* Spatial Design Text */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                  <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
+                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.
+                  </p>
+                </div>
+              </div>
 
-          {/*    Spatial Design Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.
-                        </p>
-          </div>
-         </div>
-
- 
-               {/* Line */}
+              {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-
-               
-               {/* Spatial Design Image2 */}
+              {/* Spatial Design Images */}
               <div className="rounded-lg bg-transparent">
                 <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" />
+                  <img className="w-full h-auto" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 </div>
 
-               {/* Line */}
-              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+                {/* Line */}
+                <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-                 {/* Spatial Design Image3 */}
                 <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
-                </div>
-              </div>
-
-
-              {/* Line */}
-              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-               
-                {/* Spatial Design Image 4 */}
-                <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
-                </div>
-              </div>
-
-               
-             
-              {/* Line */}
-              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-               
-                {/* Spatial Design Image 4 */}
-                <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+                  <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 </div>
               </div>
 
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
+              {/* Post-Project Section Text */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                  <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Expansion</h2>
+                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
+                  </p>
+                </div>
+              </div>
 
-          {/*   Post-Project Section  Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Expansion</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> All core systems have been implemented, with cutscene animations currently in development to enhance narrative pacing and emotional peaks. Once completed, the project will be released as a fully playable experience, with the aim of gathering user feedback to inform future iterations and refinement.
-           </p>
-          </div>
-         </div>
+              {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+              <div className="w-full">
+                <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+              </div>
+
+
+
 
 
               {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
- 
-
-            {/* Navigation */}
-            <div className="pb-40 md:pb-60 flex items-center justify-center">
-              <Link
-                to="/project/Seoul-Nature-history-Museum"
-                className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
-              >
-                <span>Next project</span>
-                <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
-              </Link>
-            </div>
-
-            {/* Remaining Images */}
-            {project.images.slice(1).map((image, index) => (
-              <div key={index + 1} className="mb-20">
-                <div className="w-full">
-                  <AspectRatio ratio={16 / 9} className="w-full">
-                    <ImageWithLoading
-                      src={image}
-                      alt={`${project.title} - Image ${index + 2}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </AspectRatio>
-                </div>
+              {/* Navigation */}
+              <div className="pb-40 md:pb-60 flex items-center justify-center">
+                <Link
+                  to="/project/Seoul-Nature-history-Museum"
+                  className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
+                >
+                  <span>Next project</span>
+                  <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
+                </Link>
               </div>
-            ))}
-             </div>
+
+              {/* Remaining Images */}
+              {project.images.slice(1).map((image, index) => (
+                <div key={index + 1} className="mb-20">
+                  <div className="w-full">
+                    <AspectRatio ratio={16 / 9} className="w-full">
+                      <ImageWithLoading
+                        src={image}
+                        alt={`${project.title} - Image ${index + 2}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
+                  </div>
+                </div>
+              ))}
+            </div>
           </section>
         </div>
 
-        {/* ✅ 전역 스타일: 이미지 LQIP + 텍스트 페이드 인 + content-visibility */}
+        {/* 전역 스타일: 이미지 LQIP + 텍스트 페이드 인 + content-visibility */}
         <style>{`
           .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
           .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
@@ -746,3 +728,4 @@ const LearnProjectDetail = () => {
 };
 
 export default LearnProjectDetail;
+
