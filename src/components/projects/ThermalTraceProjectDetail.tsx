@@ -218,6 +218,7 @@ const ThermalTraceProjectDetail = () => {
                   </div>
                 </div>
               </div>
+             </div>
 
 
 
