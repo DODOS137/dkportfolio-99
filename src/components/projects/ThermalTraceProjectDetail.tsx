@@ -44,7 +44,7 @@ const ThermalTraceProjectDetail = () => {
   <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
+      <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year="2022-2025" client="Personal Project" role="XR & Exhibition Designer" />
 
       <section className="">
         {/* First Image */}
@@ -52,18 +52,54 @@ const ThermalTraceProjectDetail = () => {
           <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
-        <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">        
-          {/* Project Description */}
-          <div className="rounded-lg bg-transparent mt-20 mb-40 md:mt-20 mb-40">
-            <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
-              Thermal Trace
-            </h2>
-            <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
-              Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.
-            </p>
-            
-            <ProjectMetadata projectType="Personal Project" projectCategory="XR Contents & Exhibition Design" teamType="Solo Project" duration="8 weeks" />
-          </div>
+
+
+
+           {/* Shared Container */}
+            <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+                {/* Left Column */}
+                <div>
+                  <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
+                    {project.title}
+                  </h2>
+                  <p className="text-base md:text-base font-bold text-gray-500 mb-10">
+                    2022-2025 │ VR Content Design │ Solo Project │ 8 weeks
+                  </p>
+        
+                </div>
+
+                {/* Right Column */}
+                <div className="space-y-6">
+                  <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+                    A comprehensive project that developed an original storyline, character scripts, and overall planning for a VR content experience.
+                  </p>
+
+                  <div className="mb-6 mt-6 md:mt-6">
+                    <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
+                      The Brief
+                    </h2>
+                    <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+                      Create a short script for a VR linear narrative experience of up to 10 minutes. You can also
+                      add a graph of your narrative (e.g., from Celtex to your submission, not compulsory). You will
+                      illustrate the story through a VR storyboard in one of the available VR apps, suh as Open Brush or
+                      similar. You must demonstrate through the storyboard that you integrated VR-related concepts
+                      relevant to your story, such as interaction, embodiment, etc. You will be given examples of scripts
+                      and VR storyboards in class. You will create a recording of your storyboard with a voiceover
+                      presenting: the concept, interactive and navigation elements, etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+          
 
            {/* Interactive Image 1 */}
           <div className="rounded-lg bg-transparent">
@@ -366,6 +402,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
          </section>
+     </div>
       
       
       <BackToTopButton />
