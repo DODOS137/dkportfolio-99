@@ -163,7 +163,7 @@ const ThermalTraceProjectDetail = () => {
         <ProjectHero
           title={project.heroTitle}
           subtitle="Reimaging the Fashion Show Through XR"
-          year=2022.2025
+          year=2022-2025
           client="Personal Project"
           role="XR & Exhibition Designer"
         />
@@ -197,7 +197,7 @@ const ThermalTraceProjectDetail = () => {
                     {project.title}
                   </h2>
                   <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-                    2022.2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
+                    2022-2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
                   </p>
         
                 </div>
