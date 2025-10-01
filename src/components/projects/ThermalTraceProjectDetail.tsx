@@ -342,6 +342,9 @@ const ThermalTraceProjectDetail = () => {
             <img className="w-full h-full" src="/lovable-uploads/web1920-Fashion Show-26" />
           </div> 
 
+           {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
               {/*Art works images3*/}     
           <div className="w-full">
             <img className="w-full h-full" src="/lovable-uploads/web1920-Fashion Show_대지 19.png" />
