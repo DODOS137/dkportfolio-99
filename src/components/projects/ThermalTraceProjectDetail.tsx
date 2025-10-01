@@ -339,11 +339,11 @@ const ThermalTraceProjectDetail = () => {
 
               {/*Art works images2*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/web1920-Fashion Show-26" />
+            <img className="w-full h-full" src="/lovable-uploads/web1920-Fashion Show-26.png" />
           </div> 
 
            {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Art works images3*/}     
           <div className="w-full">
@@ -361,8 +361,7 @@ const ThermalTraceProjectDetail = () => {
           <CarouselSection images={carouselImages} title="Transformable stage" />
 
 
-           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+       
 
               
               
@@ -429,20 +428,26 @@ const ThermalTraceProjectDetail = () => {
 
           <InteractiveExperience src="https://lucent-banoffee-a50286.netlify.app" title="Thermal Trace Interactive Experience" description="Experience the thermal detection interface in real-time" />
 
-      
-           {/*exhibition design text start*/}
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+            
+           {/*Post Project Direction text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post Project Direction</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
             </p>
            </div>
            </div>
             
-            
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
             
             <div className="w-full">
-            <img src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" className="w-full h-auto mb-20 md:mb-40 mt-20 md:mt-40" />
+            <img src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" className="w-full h-auto" />
           </div>
            </div>
 
