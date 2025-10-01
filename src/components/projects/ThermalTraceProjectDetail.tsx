@@ -315,9 +315,9 @@ const ThermalTraceProjectDetail = () => {
           {/* Art Works Images */}
 
             {/*Art works images1*/}     
-          <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/final poster.png" />
-          </div> 
+          <div className="w-full ">
+            <img className="w-full h-auto" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
+          </div>
 
 
             {/*Line*/} 
@@ -339,7 +339,7 @@ const ThermalTraceProjectDetail = () => {
 
               {/*Art works images2*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/26_대지 25.png" />
+            <img className="w-full h-full" src="/lovable-uploads/web1920-Fashion Show-26" />
           </div> 
 
               {/*Art works images3*/}     
@@ -390,23 +390,24 @@ const ThermalTraceProjectDetail = () => {
 
  
 
-          {/* Exhibition Design Image */}
-          <div className="w-full ">
-            <img className="w-full h-auto" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
-          </div>
 
 
-           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
+            {/* Exhibition Design Section with Interactive Image */}
+          <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
+            <InteractiveImageSection baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
+
+
+             {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>   
               
               
            {/*exhibition design text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
-               </p>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> By utilizing XR technology to reveal models that lie just beyond the threshold of human perception, the exhibition challenges the audience to engage with the show on a deeper sensory level. Viewers are invited to track the presence of the models not through traditional visual cues, but through their emitted body heat, redirecting attention to the delicate outlines and nuanced movements of each form. This deliberate sensory shift encourages participants to experience fashion in an entirely new dimension—where physical presence, warmth, and subtlety replace spectacle, and perception is broadened to include modes of awareness typically overlooked in conventional shows. Ultimately, the project seeks to redefine the role of the viewer, transforming them from passive observers into active seekers of form and atmosphere.
+           </p>
            </div>
            </div>
 
@@ -421,15 +422,23 @@ const ThermalTraceProjectDetail = () => {
 
               
           
-          {/* Exhibition Design Section with Interactive Image */}
-          <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
-            <InteractiveImageSection baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png" overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png" />
-
 
 
           <InteractiveExperience src="https://lucent-banoffee-a50286.netlify.app" title="Thermal Trace Interactive Experience" description="Experience the thermal detection interface in real-time" />
 
-          <div className="w-full">
+      
+           {/*exhibition design text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
+            </p>
+           </div>
+           </div>
+            
+            
+            
+            <div className="w-full">
             <img src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" className="w-full h-auto mb-20 md:mb-40 mt-20 md:mt-40" />
           </div>
            </div>
@@ -442,11 +451,7 @@ const ThermalTraceProjectDetail = () => {
 
               
 
-          <ContentSection title="Post Project Direction">
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
-              The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
-            </p>
-          </ContentSection>
+       
         </div>
       
         {/* Navigation */}
