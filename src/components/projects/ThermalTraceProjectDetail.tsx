@@ -116,7 +116,7 @@ const ThermalTraceProjectDetail = () => {
            <div className="rounded-lg bg-transparent">
             <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
              </div>
-                  />
+                  
                 </AspectRatio>
               </div>
 
