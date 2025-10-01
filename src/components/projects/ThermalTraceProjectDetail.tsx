@@ -358,19 +358,68 @@ const ThermalTraceProjectDetail = () => {
           <CarouselSection images={carouselImages} title="Transformable stage" />
 
 
-          {/* Spatial Design Image */}
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
+              
+              
+           {/*space design text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
+               </p>
+           </div>
+           </div>
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+              
+
+
+          {/* Spatial Design Image */}
           <div className="w-full">
-            <img className="w-full h-auto mb-20 md:mb-40" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
+            <img className="w-full h-auto" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
           </div>
 
-          {/* Line */} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+
+
+
+             {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>            
+
+ 
 
           {/* Exhibition Design Image */}
           <div className="w-full ">
-            <img className="w-full h-auto mt-20 mb-40" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
+            <img className="w-full h-auto" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
           </div>
+
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+              
+              
+           {/*exhibition design text start*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
+               </p>
+           </div>
+           </div>
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+
+
+
+
+
+              
           
           {/* Exhibition Design Section with Interactive Image */}
           <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
@@ -386,7 +435,12 @@ const ThermalTraceProjectDetail = () => {
            </div>
 
           {/* Line */} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+
+              
 
           <ContentSection title="Post Project Direction">
             <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
