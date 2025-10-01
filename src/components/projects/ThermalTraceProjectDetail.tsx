@@ -281,7 +281,7 @@ const ThermalTraceProjectDetail = () => {
         <tr>
           <td className="px-4 py-4 font-light">Interaction / VR</td>
           <td className="px-4 py-4">Unity</td>
-          <td className="px-4 py-4">Exhibition Prototype/td>
+          <td className="px-4 py-4">Exhibition Prototype</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Graphics</td>
