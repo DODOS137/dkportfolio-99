@@ -722,6 +722,7 @@ const LearnProjectDetail = () => {
                 </div>
               </div>
             ))}
+             </div>
           </section>
         </div>
 
