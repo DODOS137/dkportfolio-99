@@ -1,144 +1,133 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 import { thermalTraceProjectData } from '@/data/thermalTraceProject';
 import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
-import ProjectHero from './shared/ProjectHero';
-
-import ProjectMetadata from './shared/ProjectMetadata';
-
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import BackToTopButton from '@/components/BackToTopButton';
+import { ScrollArea } from "@/components/ui/scroll-area";
 import InteractiveImageSection from './thermal-trace/InteractiveImageSection';
 import CarouselSection from './thermal-trace/CarouselSection';
 import ContentSection from './thermal-trace/ContentSection';
 import InteractiveExperience from './thermal-trace/InteractiveExperience';
-import BackToTopButton from '@/components/BackToTopButton';
-import { ScrollArea } from "@/components/ui/scroll-area";
+
+/* ============================
+   Whispers와 동일: LiteYouTube 컴포넌트 (형식 유지, Thermal은 사용 안함)
+   ============================ */
+const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
+  const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  const src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
+  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const wrapper = (e.currentTarget.parentElement as HTMLElement);
+    if (!wrapper) return;
+    wrapper.innerHTML = `<iframe title="${title}" src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
+  };
+  return (
+    <div className={`relative w-full h-full bg-black ${className}`}>
+      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+      <button
+        onClick={onClick}
+        className="absolute inset-0 w-full h-full flex items-center justify-center"
+        aria-label="Play video"
+      >
+        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
+          ▶ PLAY
+        </span>
+      </button>
+    </div>
+  );
+};
 
 const ThermalTraceProjectDetail = () => {
   const project = thermalTraceProjectData;
+  const heroRef = useScrollAnimation();
 
-  const CONTAINER = "max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10";
-
-  const carouselImages = [
-    "/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png",
-    "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png",
-    "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png"
-  ];
-
-  const artWorkImages = [
-    "/lovable-uploads/31568277-b7f9-4571-80b7-33c38ee874f8.png",
-    "/lovable-uploads/3acaab47-3d89-4589-92c7-2be3cf679ffa.png",
-    "/lovable-uploads/2d907dcd-422c-4ace-856b-a3b65d53ab17.png"
-  ];
-
-  const processSteps = [
-    { title: "Ideation Phase", items: ["Brainstorming", "Concept Sketching"] },
-    { title: "Analysis", items: ["Stage Environment Research", "Precedent Study"] },
-    { title: "Design Development", items: ["Idea Development", "Spatial Design", "User Interaction", "Exhibition Design"] }
-  ];
-
+  /* ============================
+     Whispers와 동일: 이미지 LQIP + 스크롤 페이드 + content-visibility
+     ============================ */
   useEffect(() => {
-    // ✅ TS 제네릭 제거
     const scrollRoot =
-      document.querySelector('[data-radix-scroll-area-viewport]') ||
-      document.querySelector('.h-screen.w-screen.overflow-auto') ||
-      null;
+      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]')
+      || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto')
+      || null;
 
-    const transparentPixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+    const allImgs = Array.from(
+      document.querySelectorAll<HTMLImageElement>('section img')
+    );
 
-    // ✅ TS 제네릭 제거
-    const allImgs = Array.from(document.querySelectorAll('section img'));
-
-    // LCP 즉시 로드
+    // LCP
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
-      // (lcpImg as any).fetchPriority = 'high'; // 필요시 활성화
+      (lcpImg as any).fetchPriority = 'high';
       lcpImg.decoding = 'async';
+      if (!lcpImg.hasAttribute('sizes')) {
+        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
+      }
     }
 
-    // 나머지 LQIP + lazy
+    // lazy + LQIP
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
-
-      const originalSrc = img.getAttribute('src');
-      if (!originalSrc) return;
-
-      img.setAttribute('data-src', originalSrc);
-      img.setAttribute('src', transparentPixel);
       img.loading = 'lazy';
       img.decoding = 'async';
-      img.fetchPriority = 'low';
-
+      (img as any).fetchPriority = 'low';
+      if (!img.hasAttribute('sizes')) img.setAttribute('sizes', '100vw');
       img.classList.add('img-lqip', 'reveal-init');
     });
 
-    const MAX_CONCURRENT = 2;
-    // ✅ TS 타입 제거
-    const queue = [];
-    let inFlight = 0;
-
-    const processQueue = () => {
-      while (inFlight < MAX_CONCURRENT && queue.length) {
-        const img = queue.shift();
-        if (!img || img.dataset.loaded === '1') continue;
-        inFlight++;
-
-        const doReveal = () => {
-          requestAnimationFrame(() => {
+    const decodeOnIdle = (img: HTMLImageElement) => {
+      const run = () => {
+        if (typeof (img as any).decode === 'function') {
+          (img as any).decode().catch(() => {}).finally(() => {
             img.classList.remove('img-lqip');
-            img.classList.add('reveal-show');
-            img.dataset.loaded = '1';
-            inFlight--;
-            processQueue();
+            img.classList.add('reveal-show', 'play-wiggle');
           });
-        };
-
-        const ds = img.getAttribute('data-src');
-        if (ds && img.src !== ds) img.src = ds;
-
-        if (typeof img.decode === 'function') {
-          img.decode().then(doReveal).catch(doReveal);
         } else {
           const onLoad = () => {
             img.removeEventListener('load', onLoad);
-            doReveal();
+            img.classList.remove('img-lqip');
+            img.classList.add('reveal-show', 'play-wiggle');
           };
           img.addEventListener('load', onLoad);
         }
-      }
+      };
+      (window as any).requestIdleCallback ? (window as any).requestIdleCallback(run, { timeout: 500 }) : run();
     };
 
     const imgIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const img = entry.target;
+          const img = entry.target as HTMLImageElement;
           if (entry.isIntersecting) {
             imgIO.unobserve(img);
-            queue.push(img);
-            processQueue();
+            decodeOnIdle(img);
+          } else {
+            img.classList.remove('play-wiggle');
           }
         });
       },
-      { root: scrollRoot, rootMargin: '200px 0px', threshold: 0.05 }
+      { root: scrollRoot, rootMargin: '600px 0px', threshold: 0.05 }
     );
     lazyImgs.forEach((img) => imgIO.observe(img));
 
     // 텍스트 페이드
-    const textNodes = document.querySelectorAll(
+    const textNodes = document.querySelectorAll<HTMLElement>(
       'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
-    textNodes.forEach((el) => el.classList.add('text-reveal-init'));
+    textNodes.forEach((el) => {
+      if (!el.classList.contains('text-reveal-init')) el.classList.add('text-reveal-init');
+    });
 
     const textIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const el = entry.target;
+          const el = entry.target as HTMLElement;
           if (entry.isIntersecting) el.classList.add('text-reveal-show');
           else el.classList.remove('text-reveal-show');
         });
@@ -156,30 +145,49 @@ const ThermalTraceProjectDetail = () => {
   return (
     <ScrollArea className="h-screen w-screen overflow-auto">
       <ProjectLayout>
-        <ProjectNavigation />
+        {/* 상단 네비 (Whispers와 동일) */}
+        <ProjectNavigation backText="Back to work" />
 
-        <ProjectHero
-          title={project.heroTitle}
-          subtitle="Reimaging the Fashion Show Through XR"
-          year="2022–2025"
-          client="Personal Project"
-          role="XR & Exhibition Designer"
-        />
+        {/* Hero Section (Whispers와 동일) */}
+        <section className="h-screen flex items-center justify-center relative overflow-hidden">
+          <div
+            ref={heroRef.ref}
+            className={`text-center max-w-4xl px-6 transition-all duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${heroRef.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-wider">
+              {project.heroTitle}
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
+              Reimagining the Fashion Show Through XR
+            </p>
+            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 tracking-widest">
+              <span>2022–2025</span>
+              <span>•</span>
+              <span>Personal Project</span>
+              <span>•</span>
+              <span>XR & Exhibition Designer</span>
+            </div>
+          </div>
+        </section>
 
+        {/* Main Content (Whispers 컨테이너/구조 동일) */}
         <section className="cv-auto">
-          <div className={CONTAINER}>
+          {/* First Image (LCP) */}
+          <div className="max-w-[1540px] mx-auto z-10">
             <img
-              src={project.images[0]}
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
+              src={project.images?.[0] ?? '/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png'}
               loading="eager"
+              fetchpriority="high"
               decoding="async"
-              sizes="100vw"
             />
           </div>
 
+          {/* Shared Container: 좌/우 2열 */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+              {/* Left */}
               <div>
                 <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
                   {project.title}
@@ -187,26 +195,62 @@ const ThermalTraceProjectDetail = () => {
                 <p className="text-base md:text-base font-bold text-gray-500 mb-10">
                   2022–2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
                 </p>
+
+                {/* Thermal: 서브 이미지 */}
+                <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
+                  <img
+                    src="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png"
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </div>
 
+              {/* Right */}
               <div className="space-y-6">
                 <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-                  An exhibition design project developed in 2022 as a self-initiated extension of undergraduate coursework.
+                  An experimental runway/exhibition system where proximity and body heat drive mixed-reality interactions.
                 </p>
+
+                <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
+                  <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
+                    Role
+                  </p>
+                  <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+                    XR & Exhibition Design · Solo
+                  </p>
+                </div>
 
                 <div className="mb-6 mt-6 md:mt-6">
                   <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
                     The Brief
                   </h2>
                   <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
-                    Design a fashion show environment that delivers a powerful and unprecedented spatial experience. The garments and the space must interact organically, and the setting should evoke a strong sense of novelty and intensity.
+                    Design a fashion show environment that delivers unprecedented spatial experience.
+                    Garments and space must interact organically to evoke novelty and intensity.
                   </p>
                 </div>
+
+                <details className="mt-4 mb-6 rounded-lg border border-white/10 bg-black">
+                  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
+                    Full Brief
+                  </summary>
+                  <div className="px-4 pb-4 pt-6 space-y-4 text-sm text-gray-400">
+                    <p>• Transform the passive runway into an interactive interface.</p>
+                    <p>• Use thermal cues (proximity / body heat / environment) as primary interaction.</p>
+                    <p>• Layer MR visuals to reveal hidden presence and dissolve object/subject boundaries.</p>
+                  </div>
+                </details>
               </div>
             </div>
           </div>
 
-          {/* 배경판 + 인터랙티브 이미지 */}
+          {/* Line */}
+          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+
+          {/* Media Section 1 (Whispers 형식 유지: 배경판 + 16:9) → Thermal은 인터랙티브 이미지 삽입 */}
           <div className="my-40 md:my-40 relative">
             <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
               <AspectRatio ratio={16 / 9}>
@@ -214,51 +258,55 @@ const ThermalTraceProjectDetail = () => {
               </AspectRatio>
             </div>
 
-            <div className="relative z-10 rounded-xl overflow-hidden">
+            <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
               <InteractiveImageSection
                 baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png"
                 overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png"
               />
-            </div>
+            </AspectRatio>
           </div>
 
+          {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          {/* Summary */}
+          {/* Summary (Whispers 카드 레이아웃 동일) */}
           <section aria-labelledby="car-title" className="mt-6 mb-6">
             <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
+
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-lg border border-white/10 bg-white/5 p-6">
                 <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
                 <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
                   <li>Passive runway experience</li>
-                  <li>Rigid object/subject boundary limits narrative and agency</li>
-                  <li>Bias toward “seeing” hides non-visual presence and environment</li>
-                  <li>Stage treated as set, not as an interactive spatial interface</li>
+                  <li>Rigid object/subject boundary</li>
+                  <li>Bias toward seeing hides non-visual presence</li>
+                  <li>Stage treated as set, not interface</li>
                 </ul>
               </div>
+
               <div className="rounded-lg border border-white/10 bg-white/5 p-6">
                 <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
                 <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-                  <li>Thermal interaction: proximity, body heat, environmental temperature (heat traces)</li>
-                  <li>Camouflage for models and viewers to dissolve boundaries</li>
-                  <li>Mixed-reality layering combining material space with ephemeral signals</li>
+                  <li>Thermal interaction (proximity / body heat / ambient)</li>
+                  <li>Camouflage to dissolve boundaries</li>
+                  <li>MR layering of tangible + ephemeral</li>
                   <li>Discovery loop: sense → explore → reveal</li>
                 </ul>
               </div>
+
               <div className="rounded-lg border border-white/10 bg-white/5 p-6">
                 <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
                 <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-                  <li>Audience shifts from viewer to explorer</li>
-                  <li>Paradigm moves from spectacle to sensing</li>
-                  <li>Space functions as the interface, uniting visible/invisible cues</li>
-                  <li>New runway format that tests visibility, presence, and form</li>
+                  <li>Audience shifts to explorer</li>
+                  <li>Sensing over spectacle</li>
+                  <li>Space as interface</li>
+                  <li>New runway format</li>
                 </ul>
               </div>
             </div>
           </section>
 
-          {/* Full text */}
+          {/* Full text (Whispers 동일) */}
           <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
             <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
               Full text
@@ -267,27 +315,26 @@ const ThermalTraceProjectDetail = () => {
               <div>
                 <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Approach</h3>
                 <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                  The work reimagines the runway as a perceptual landscape rather than a stage. Models and viewers alike are disguised to dissolve the boundary between object and subject. Physical presence becomes the primary interface, with proximity and body temperature guiding interaction. Mixed reality overlays augment the scene, constructing a layered exhibition space that blends tangible matter with ephemeral perception. This approach fosters new ways of engaging with space, narrative, and the concept of visibility.
+                  Runway reframed as a perceptual landscape. Presence becomes interface; thermal cues guide interaction.
+                  MR overlays blend matter and perception, enabling layered discovery.
                 </p>
               </div>
-
               <div>
                 <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
                 <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                  This project reimagines the runway as a perceptual landscape rather than a stage. Boundaries between model and audience dissolve, with physical presence, distance, and body heat driving interaction. Mixed reality overlays merge matter and perception, expanding fashion into an experience to be lived rather than seen
+                  Dissolve object/subject boundaries and expand fashion from spectacle to lived, sensed experience.
                 </p>
               </div>
-
               <div>
                 <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
                 <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                  Fashion is reframed as a medium to be discovered, not displayed. Through thermal detection and environmental response, audiences become thermal explorers, uncovering hidden presence. XR terrains—forests, islands, coastal zones—react in real time, testing visibility and concealment. The strategy layers thermal interfaces, responsive environments, and mixed reality to build a flexible, scalable exhibition format.
+                  Thermal interfaces + responsive terrains (islands, forests, coasts) + MR reveal systems.
                 </p>
               </div>
             </div>
           </details>
 
-          {/* Research */}
+          {/* Research (Whispers 동일 카드 + details) */}
           <section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
             <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Research</h2>
 
@@ -309,12 +356,19 @@ const ThermalTraceProjectDetail = () => {
                 <p className="text-sm text-gray-400 mt-2">need creative runway formats</p>
               </div>
             </div>
+
+            <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black p-4">
+              <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
+              <p className="mt-6 text-sm text-gray-400">
+                Preliminary survey supported the direction: strong demand for immersive, interactive formats beyond passive viewing.
+              </p>
+            </details>
           </section>
 
-          {/* Process */}
-          <section id="process" className="rounded-lg bg-black">
-            <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
+          {/* Process (Whispers 동일) */}
+          <section id="process" className="rounded-lg bg-black mt-6 mb-6">
+            <h2 className="text-xl md:text-xl font-Medium mb-6 text-gray-300">Process</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
                 <h3 className="text-white font-light mb-3">01 Ideation</h3>
                 <p className="text-gray-400 text-sm">Brainstorming</p>
@@ -322,20 +376,20 @@ const ThermalTraceProjectDetail = () => {
               </div>
               <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
                 <h3 className="text-white font-light mb-3">02 Analysis</h3>
-                <p className="text-gray-400 text-sm">Context & precedents</p>
-                <p className="text-gray-400 text-sm">Stage Environment Research</p>
+                <p className="text-gray-400 text-sm">Precedents</p>
+                <p className="text-gray-400 text-sm">Stage environment research</p>
               </div>
               <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
                 <h3 className="text-white font-light mb-3">03 Development</h3>
-                <p className="text-gray-400 text-sm">Stage & Exhibition design</p>
-                <p className="text-gray-400 text-sm">User Interaction</p>
+                <p className="text-gray-400 text-sm">Spatial & interaction design</p>
+                <p className="text-gray-400 text-sm">Exhibition build</p>
               </div>
             </div>
           </section>
 
-          {/* Tools & Roles */}
-          <div className="mb-20 md:mb-20">
-            <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Tools & Roles</h2>
+          {/* Tools & Roles (Whispers 동일 테이블) */}
+          <div className="mt-6 mb-6">
+            <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
             <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
               <table className="w-full text-left text-sm text-gray-400">
                 <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
@@ -354,17 +408,17 @@ const ThermalTraceProjectDetail = () => {
                   <tr>
                     <td className="px-4 py-4 font-light">Texturing</td>
                     <td className="px-4 py-4">Photoshop</td>
-                    <td className="px-4 py-4">PBR material Maps</td>
+                    <td className="px-4 py-4">PBR materials</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-4 font-light">Lighting & Render</td>
                     <td className="px-4 py-4">V-Ray, Unity</td>
-                    <td className="px-4 py-4">Spatial Real time renders</td>
+                    <td className="px-4 py-4">Spatial real-time renders</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-4 font-light">Interaction / VR</td>
                     <td className="px-4 py-4">Unity</td>
-                    <td className="px-4 py-4">VR Exhibition Prototype</td>
+                    <td className="px-4 py-4">VR prototype</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-4 font-light">Graphics</td>
@@ -376,126 +430,100 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>
 
-          {/* Design Highlights */}
-          <section id="design" className="mt-10">
-            <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
-            <ul className="space-y-3 text-gray-300">
-              <li>• Thermal UX: interactions driven by body heat.</li>
-              <li>• Camouflage performance to blur object/subject roles.</li>
-              <li>• Modular environments for adaptive narrative tension.</li>
-              <li>• Space-as-interface: audience navigates through sensing, not just sight.</li>
-              <li>• Visibility stress-test: challenges how presence and form are perceived.</li>
+          {/* Design Highlights (Whispers 동일) */}
+          <section id="design" className="mt-6 mb-6">
+            <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
+            <ul className="space-y-3 text-gray-400">
+              <li>• Thermal UX: proximity/body-heat driven interactions.</li>
+              <li>• Camouflage performance blurring object/subject.</li>
+              <li>• Modular environments for narrative tension.</li>
+              <li>• Space-as-interface: navigate by sensing.</li>
+              <li>• Visibility stress-test.</li>
             </ul>
           </section>
 
+          {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          <div className={CONTAINER}>
-            <CarouselSection images={carouselImages} title="Transformable stage" />
+          {/* Graphic / Spatial Images (Whispers처럼 단순 이미지 시퀀스) */}
+          <div className="w-full mb-4">
+            <img className="w-full h-full" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
+          </div>
+          <div className="w-full">
+            <img className="w-full h-full" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
+          </div>
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" />
           </div>
 
-          {/* Spatial Design Image */}
-          <div className={CONTAINER}>
-            <div className="w-full">
-              <img
-                className="w-full h-auto mb-20 md:mb-40"
-                src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png"
-                alt=""
-                loading="lazy"
-                decoding="async"
-                sizes="100vw"
-              />
+          {/* Idea Development (Whispers 형식의 텍스트 블록) */}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+              <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Idea Development</h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
+                Fashion reframed as something to be discovered through thermal detection. Viewers become thermal explorers,
+                uncovering hidden presence via subtle heat traces and proximity sensing.
+              </p>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className={`${CONTAINER} w-full h-px my-20 md:my-40 bg-gray-500/50`} />
+          {/* Line */}
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-          {/* Exhibition Design Image */}
-          <div className={CONTAINER}>
-            <div className="w-full">
-              <img
-                className="w-full h-auto mt-20 mb-40"
-                src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png"
-                alt=""
-                loading="lazy"
-                decoding="async"
-                sizes="100vw"
+          {/* Media Section 2 (Whispers의 AR APP 섹션 위치 재사용 → Thermal 전용 인터랙티브 링크) */}
+          <div className="mt-40 mb-20 md:mt-40 relative">
+            <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-[#000A42] z-0" />
+            <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+              <InteractiveExperience
+                src="https://lucent-banoffee-a50286.netlify.app"
+                title="Thermal Trace Interactive Experience"
+                description="Experience the thermal detection interface in real-time"
               />
-            </div>
+            </AspectRatio>
           </div>
 
-          {/* Exhibition Design Section with Interactive Image */}
-          <div className={`${CONTAINER} rounded-lg bg-transparent overflow-hidden`}>
-            <InteractiveImageSection
-              baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png"
-              overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png"
-            />
-
-            <InteractiveExperience
-              src="https://lucent-banoffee-a50286.netlify.app"
-              title="Thermal Trace Interactive Experience"
-              description="Experience the thermal detection interface in real-time"
-            />
-
-            <div className="w-full">
-              <img
-                src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png"
-                className="w-full h-auto mb-20 md:mb-40 mt-20 md:mt-40"
-                alt=""
-                loading="lazy"
-                decoding="async"
-                sizes="100vw"
-              />
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className={`${CONTAINER} w-full h-px my-20 md:my-40 bg-gray-500/50`} />
-
-          <div className={CONTAINER}>
+          {/* Post Project Direction (Whispers의 ContentSection 포맷 유지) */}
+          <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
             <ContentSection title="Post Project Direction">
               <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-400 font-light">
-                The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
+                Expanding to a public interactive XR installation with headset + sensor interface to gather qualitative feedback
+                and refine sensory engagement before full deployment.
               </p>
             </ContentSection>
           </div>
 
-          {/* Navigation */}
-          <div className="pb-40 md:pb-60 flex items-center justify-center mt-32 md:mt-52">
-            <Link
-              to="/project/Learn"
-              className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
-            >
-              <span>Next project</span>
-              <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
-            </Link>
-          </div>
-
-          {/* Remaining Images */}
-          <div className={CONTAINER}>
-            {project.images.slice(1).map((image, index) => (
-              <div key={index + 1} className="mb-20">
-                <div className="w-full">
-                  <AspectRatio ratio={16 / 9} className="w-full">
-                    <ImageWithLoading
-                      src={image}
-                      alt={`${project.title} - Image ${index + 2}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </AspectRatio>
-                </div>
-              </div>
-            ))}
+          {/* End Image */}
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png" />
           </div>
         </section>
 
+        {/* Navigation (Whispers와 동일) */}
+        <div className="pb-40 md:pb-60 flex items-center justify-center">
+          <Link to="/project/Learn" className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium">
+            <span>Next project</span>
+            <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
+          </Link>
+        </div>
+
         <BackToTopButton />
 
+        {/* ============================
+            Whispers와 동일: 전용 스타일
+           ============================ */}
         <style>{`
           .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
+          .img-lqip.reveal-show { filter: blur(4px); }
+
           .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
           .reveal-show { opacity: 1; filter: blur(0); }
+
+          @keyframes microWiggle {
+            0%   { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+            50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
+            100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+          }
+          .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
 
           .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
           .text-reveal-show { opacity: 1; transform: translateY(0); }
@@ -503,6 +531,7 @@ const ThermalTraceProjectDetail = () => {
           .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
 
           @media (prefers-reduced-motion: reduce) {
+            .play-wiggle { animation: none !important; }
             .reveal-init, .text-reveal-init { transition-duration: 1ms; filter: none; transform: none; }
           }
         `}</style>
@@ -512,3 +541,4 @@ const ThermalTraceProjectDetail = () => {
 };
 
 export default ThermalTraceProjectDetail;
+
