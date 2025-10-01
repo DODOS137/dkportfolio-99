@@ -80,13 +80,8 @@ const ThermalTraceProjectDetail = () => {
                       The Brief
                     </h2>
                     <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
-                      Create a short script for a VR linear narrative experience of up to 10 minutes. You can also
-                      add a graph of your narrative (e.g., from Celtex to your submission, not compulsory). You will
-                      illustrate the story through a VR storyboard in one of the available VR apps, suh as Open Brush or
-                      similar. You must demonstrate through the storyboard that you integrated VR-related concepts
-                      relevant to your story, such as interaction, embodiment, etc. You will be given examples of scripts
-                      and VR storyboards in class. You will create a recording of your storyboard with a voiceover
-                      presenting: the concept, interactive and navigation elements, etc.
+                      Design a fashion show environment that delivers a powerful and unprecedented spatial experience. The garments and the space must interact organically, and the setting should evoke a strong sense of novelty and intensity.
+                      
                     </p>
                   </div>
                 </div>
@@ -94,8 +89,31 @@ const ThermalTraceProjectDetail = () => {
 
 
 
+              {/* Line */}
+              <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+
+              
 
 
+              {/* Main Image (full-bleed colored plate behind) */}
+              <div className="my-40 md:my-40 relative">
+                {/* 뒤 배경판 */}
+                <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
+                  <AspectRatio ratio={16 / 9}>
+                    <div className="w-full h-full bg-[#0044FA]" />
+                  </AspectRatio>
+                </div>
+                {/* 앞 이미지 */}
+                <AspectRatio
+                  ratio={16 / 9}
+                  className="relative z-10 bg-[#FF7F00] border-none overflow-hidden"
+                >
+              {/* Interactive Image 1 */}
+             <div className="rounded-lg bg-transparent">
+            <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
+             </div>
+                </AspectRatio>
+              </div>
 
 
 
