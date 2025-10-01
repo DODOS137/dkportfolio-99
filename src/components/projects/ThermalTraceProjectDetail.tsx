@@ -7,9 +7,9 @@ import { thermalTraceProjectData } from '@/data/thermalTraceProject';
 import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ProjectHero from './shared/ProjectHero';
-import ProjectContent from './shared/ProjectContent';
+// import ProjectContent from './shared/ProjectContent'; // ❌ 미사용 → 제거
 import ProjectMetadata from './shared/ProjectMetadata';
-import ProcessGrid from './shared/ProcessGrid';
+// import ProcessGrid from './shared/ProcessGrid'; // ❌ 미사용 → 제거
 import InteractiveImageSection from './thermal-trace/InteractiveImageSection';
 import CarouselSection from './thermal-trace/CarouselSection';
 import ContentSection from './thermal-trace/ContentSection';
@@ -59,7 +59,7 @@ const ThermalTraceProjectDetail = () => {
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
-      (lcpImg as any).fetchPriority = 'high';
+      // (lcpImg as any).fetchPriority = 'high'; // 타입 에러 나면 주석 유지
       lcpImg.decoding = 'async';
     }
 
@@ -163,7 +163,7 @@ const ThermalTraceProjectDetail = () => {
         <ProjectHero
           title={project.heroTitle}
           subtitle="Reimaging the Fashion Show Through XR"
-          year=2022-2025
+          year="2022–2025"   // ✅ 숫자 뺄셈 방지: 문자열로
           client="Personal Project"
           role="XR & Exhibition Designer"
         />
@@ -177,86 +177,60 @@ const ThermalTraceProjectDetail = () => {
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               loading="eager"
-              fetchPriority="high"
+              // fetchPriority="high" // ❌ 타입 에러 우려 → 제거
               decoding="async"
               sizes="100vw"
             />
           </div>
 
-
-
- 
-          
-          
           {/* Shared Container */}
-            <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-                {/* Left Column */}
-                <div>
-                  <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
-                    {project.title}
+          <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+              {/* Left Column */}
+              <div>
+                <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
+                  {project.title}
+                </h2>
+                <p className="text-base md:text-base font-bold text-gray-500 mb-10">
+                  2022–2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
+                </p>
+              </div>
+
+              {/* Right Column */}
+              <div className="space-y-6">
+                <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+                  An exhibition design project developed in 2022 as a self-initiated extension of undergraduate coursework.
+                </p>
+
+                <div className="mb-6 mt-6 md:mt-6">
+                  <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
+                    The Brief
                   </h2>
-                  <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-                    2022-2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
-                  </p>
-        
-                </div>
-
-                {/* Right Column */}
-                <div className="space-y-6">
-                  <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-                    An exhibition design project developed in 2022 as a self-initiated extension of undergraduate coursework.
-                  </p>
-
-                  <div className="mb-6 mt-6 md:mt-6">
-                    <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
-                      The Brief
-                    </h2>
-                    <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+                  <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
                     Design a fashion show environment that delivers a powerful and unprecedented spatial experience. The garments and the space must interact organically, and the setting should evoke a strong sense of novelty and intensity.
-                    </p>
-                  </div>
+                  </p>
                 </div>
               </div>
-             </div>
+            </div>
+          </div>
 
+          {/* Interactive Image 1 (with colored plate behind) */}
+          <div className={`${CONTAINER} relative my-20`}>
+            {/* 뒤 배경판 */}
+            <div className="absolute inset-0 -z-10 rounded-xl overflow-hidden pointer-events-none">
+              <AspectRatio ratio={16 / 9}>
+                <div className="w-full h-full bg-[#000078]" />
+              </AspectRatio>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-{/* Interactive Image 1 (with colored plate behind) */}
-<div className={`${CONTAINER} relative my-20`}>
-  {/* 뒤 배경판 */}
-  <div className="absolute inset-0 -z-10 rounded-xl overflow-hidden pointer-events-none">
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#000078]" />
-    </AspectRatio>
-  </div>
-
-  {/* 실제 인터랙티브 이미지 */}
-  <div className="relative z-10 rounded-xl overflow-hidden">
-    <InteractiveImageSection
-      baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png"
-      overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png"
-    />
-  </div>
-</div>
-
+            {/* 실제 인터랙티브 이미지 */}
+            <div className="relative z-10 rounded-xl overflow-hidden">
+              <InteractiveImageSection
+                baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png"
+                overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png"
+              />
+            </div>
+          </div>
 
           {/* Divider */}
           <div className={`${CONTAINER} w-full h-px my-20 md:my-40 bg-gray-500/50`} />
@@ -405,7 +379,7 @@ const ThermalTraceProjectDetail = () => {
                     <td className="px-4 py-4">Photoshop</td>
                     <td className="px-4 py-4">PBR materials</td>
                   </tr>
-                  <tr>
+                    <tr>
                     <td className="px-4 py-4 font-light">Lighting & Render</td>
                     <td className="px-4 py-4">Unity, 3ds Max</td>
                     <td className="px-4 py-4">Spatial Real time renders</td>
@@ -605,7 +579,7 @@ const ThermalTraceProjectDetail = () => {
             </Link>
           </div>
 
-          {/* Remaining Images (프로젝트 공통 컴포넌트 방식 유지) */}
+          {/* Remaining Images */}
           <div className={CONTAINER}>
             {project.images.slice(1).map((image, index) => (
               <div key={index + 1} className="mb-20">
@@ -647,3 +621,4 @@ const ThermalTraceProjectDetail = () => {
 };
 
 export default ThermalTraceProjectDetail;
+
