@@ -640,7 +640,6 @@ const LearnProjectDetail = () => {
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/* Spatial Design Images */}
-              <div className="rounded-lg bg-transparent">
                 <div className="w-full">
                   <img className="w-full h-auto" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 </div>
