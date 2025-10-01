@@ -7,9 +7,9 @@ import { thermalTraceProjectData } from '@/data/thermalTraceProject';
 import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ProjectHero from './shared/ProjectHero';
-// import ProjectContent from './shared/ProjectContent'; // ❌ 미사용 → 제거
+
 import ProjectMetadata from './shared/ProjectMetadata';
-// import ProcessGrid from './shared/ProcessGrid'; // ❌ 미사용 → 제거
+
 import InteractiveImageSection from './thermal-trace/InteractiveImageSection';
 import CarouselSection from './thermal-trace/CarouselSection';
 import ContentSection from './thermal-trace/ContentSection';
@@ -329,6 +329,7 @@ const ThermalTraceProjectDetail = () => {
       <p className="text-sm text-gray-400 mt-2">need creative runway formats</p>
     </div>
   </div>
+  </section> 
 
               {/* Process */}
               <section id="process" className="rounded-lg bg-black">
