@@ -44,7 +44,7 @@ const ThermalTraceProjectDetail = () => {
   <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year={project.heroYear} client="Personal Project" role="XR & Exhibition Designer" />
+      <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year="2022-2025" client="Personal Project" role="XR & Exhibition Designer" />
 
       <section className="">
         {/* First Image */}
@@ -52,18 +52,84 @@ const ThermalTraceProjectDetail = () => {
           <img src={project.images[0]} alt={`${project.title} - Image 1`} className="w-full h-auto object-contain" />
         </div>
 
-        <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[250px] z-10">        
-          {/* Project Description */}
-          <div className="rounded-lg bg-transparent mt-20 mb-40 md:mt-20 mb-40">
-            <h2 className="text-xl md:text-xl lg:text-xl mb-6 md:mb-8 text-white font-light">
-              Thermal Trace
-            </h2>
-            <p className="text-base md:text-base lg:text-base text-gray-300 leading-relaxed mb-6 md:mb-8 font-light">
-              Thermal Trace explores a new paradigm of fashion presentation by removing visual spectacle and foregrounding sensory engagement. Set in a secluded environment untouched by human intervention, this XR installation uses thermal detection to reveal camouflaged figures—merging body heat, environmental awareness, and spatial interaction. The project invites viewers to become active participants, shifting the role of the audience from passive observer to discoverer.
-            </p>
-            
-            <ProjectMetadata projectType="Personal Project" projectCategory="XR Contents & Exhibition Design" teamType="Solo Project" duration="8 weeks" />
-          </div>
+
+
+
+      {/* Shared Container */}
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+    
+       {/* Left Column */}
+       <div>
+       {/* Title */}
+       <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-6">
+       {project.title}
+       </h2>
+
+      {/* Location + Year */}
+      <p className="text-base md:text-base font-bold text-gray-500 mb-10">
+        2022-2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
+      </p>
+
+      {/* ✅ NEW: Image under location/year */}
+      <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
+ 
+      </div>
+    </div>
+
+    {/* Right Column */}
+    <div className="space-y-6">
+    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+   An exhibition design project developed in 2022 as a self-initiated extension of undergraduate coursework, proposing and planning a new fashion show platform.
+    </p>
+       
+
+    
+
+       
+       <div className="mb-6 mt-6 md:mt-6"> 
+         <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
+      The Brief
+          </h2>
+       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+        Design a fashion show environment that delivers a powerful and unprecedented spatial experience. The garments and the space must interact organically, and the setting should evoke a strong sense of novelty and intensity.
+       </p>
+      </div>
+
+
+
+
+
+              {/* Main Image (full-bleed colored plate behind) */}
+              <div className="my-40 md:my-40 relative">
+                {/* 뒤 배경판 */}
+                <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
+                  <AspectRatio ratio={16 / 9}>
+                    <div className="w-full h-full bg-[#FF7F00]" />
+                  </AspectRatio>
+                </div>
+                {/* 앞 이미지 */}
+                <AspectRatio
+                  ratio={16 / 9}
+                  className="relative z-10 bg-[#FF7F00] border-none overflow-hidden"
+                >
+           <div className="rounded-lg bg-transparent">
+            <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
+             </div>
+                  />
+                </AspectRatio>
+              </div>
+
+
+
+
+
+
+
+
+
+
+        
 
            {/* Interactive Image 1 */}
           <div className="rounded-lg bg-transparent">
