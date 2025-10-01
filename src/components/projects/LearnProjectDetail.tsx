@@ -649,7 +649,12 @@ const LearnProjectDetail = () => {
                 <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
                 <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                  <img className="w-full h-auto" src="/lovable-uploads/web1920-Learn-26.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                </div>
+              </div>
+
+                <div className="w-full">
+                  <img className="w-full h-auto" src="/lovable-uploads/web1920-Learn-27.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 </div>
               </div>
 
