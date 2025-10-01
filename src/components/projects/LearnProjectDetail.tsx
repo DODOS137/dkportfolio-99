@@ -594,11 +594,7 @@ const LearnProjectDetail = () => {
                <div className="w-full">
                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn1_대지 10.png" />
                </div> 
-              {/*Level Design Image3*/}        
-               <div className="w-full">
-               <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 19.png" />
-               </div>    
-
+ 
                {/* Line */}
               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
@@ -660,6 +656,18 @@ const LearnProjectDetail = () => {
               </div>
 
 
+              {/* Line */}
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+               
+                {/* Spatial Design Image 4 */}
+                <div className="w-full">
+                  <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" />
+                </div>
+              </div>
+
+               
+             
               {/* Line */}
               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
