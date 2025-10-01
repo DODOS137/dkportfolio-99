@@ -402,7 +402,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
           </div>)}
          </section>
-     </div>
+     
       
       
       <BackToTopButton />
