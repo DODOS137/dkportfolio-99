@@ -564,13 +564,11 @@ const LearnProjectDetail = () => {
 
               {/* Line */}
               <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+            
 
               {/* YouTube Video Section */}
-              <div className="my-40 md:my-40 relative">
- 
-
-                <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+              <div className="mt-40 md:mt-40 relative">
+                 <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
                   <LiteYouTube
                     id="aCJblmM9yzs"
                     title="Project video"
