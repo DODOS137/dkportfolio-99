@@ -64,7 +64,7 @@ const ThermalTraceProjectDetail = () => {
                     {project.title}
                   </h2>
                   <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-                    2022-2025 │ VR Content Design │ Solo Project │ 8 weeks
+                    2022-2025 │ XR Contents & Exhibition Design │ Solo Project │ 8 weeks
                   </p>
         
                 </div>
@@ -106,7 +106,7 @@ const ThermalTraceProjectDetail = () => {
                 {/* 앞 이미지 */}
                 <AspectRatio
                   ratio={16 / 9}
-                  className="relative z-10 bg-[#FF7F00] border-none overflow-hidden"
+                  className="relative z-10 bg-[#0044FA] border-none overflow-hidden"
                 >
               {/* Interactive Image 1 */}
              <div className="rounded-lg bg-transparent">
@@ -119,226 +119,195 @@ const ThermalTraceProjectDetail = () => {
 
           
 
-           {/* Interactive Image 1 */}
-          <div className="rounded-lg bg-transparent">
-            <InteractiveImageSection baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png" overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png" />
-             </div>
+
           
 
-          {/* Line */} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-500/50"></div>
+              {/* Line */}
+              <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
 
-           {/* Summary */}
-            <section aria-labelledby="sum-title" className="mt-8">
-              <h2 id="sum-title" className="text-xl md:text-xl font-light text-gray-300 mb-8">
-                Summary
-              </h2>
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Challenge</h3>
-                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>Passive runway experience</li>
-                    <li>Rigid object/subject boundary limits narrative and agency</li>
-                    <li>Bias toward “seeing” hides non-visual presence and environment</li>
-                    <li>Stage treated as set, not as an interactive spatial interface</li>
-                  </ul>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Approach</h3>
-                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>Thermal interaction: proximity, body heat, environmental temperature (heat traces)</li>
-                    <li>Camouflage for models and viewers to dissolve boundaries</li>
-                    <li>Mixed-reality layering combining material space with ephemeral signals</li>
-                    <li>Discovery loop: sense → explore → reveal</li>
-                  </ul>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                  <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-2">Result</h3>
-                  <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-                    <li>Audience shifts from viewer to explorer</li>
-                    <li>Paradigm moves from spectacle to sensing</li>
-                    <li>Space functions as the interface, uniting visible/invisible cues</li>
-                    <li>New runway format that tests visibility, presence, and form</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
+ 
+              
+{/* Challenge Summary */}
+<section aria-labelledby="car-title" className="mt-6 mb-6">
+  <h2 id="car-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
 
-            {/* Full text */}
-            <details className="mt-8 mb-20 rounded-lg border border-white/10 bg-black">
-              <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
-              <div className="px-4 pb-4 mt-6 space-y-8">
-                <div>
-                  <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
-                  <p className="text-sm leading-relaxed font-light text-gray-400">
-                    The work reimagines the runway as a perceptual landscape rather than a stage. Models and viewers alike are disguised to dissolve the boundary between object and subject. Physical presence becomes the primary interface, with proximity and body temperature guiding interaction. Mixed reality overlays augment the scene, constructing a layered exhibition space that blends tangible matter with ephemeral perception. This approach fosters new ways of engaging with space, narrative, and the concept of visibility.</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
-                  <p className="text-sm leading-relaxed font-light text-gray-400">
-                  This project reimagines the runway as a perceptual landscape rather than a stage. Boundaries between model and audience dissolve, with physical presence, distance, and body heat driving interaction. Mixed reality overlays merge matter and perception, expanding fashion into an experience to be lived rather than seen
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
-                  <p className="text-sm leading-relaxed font-light text-gray-400">
-                  Fashion is reframed as a medium to be discovered, not displayed. Through thermal detection and environmental response, audiences become thermal explorers, uncovering hidden presence. XR terrains—forests, islands, coastal zones—react in real time, testing visibility and concealment. The strategy layers thermal interfaces, responsive environments, and mixed reality to build a flexible, scalable exhibition format.
-                  </p>
-                </div>
-                 
-               </div>
-            </details>
+  <div className="grid md:grid-cols-3 gap-6">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+        <li>Gaps in public understanding of ocean ecosystems</li>
+        <li>Overemphasis on iconic large marine species</li>
+        <li>Overlooked bottom-dwelling and invertebrate life</li>
+        <li>Reliance on visual-only formats</li>
+      </ul>
+    </div>
 
-          {/* Research */}
-            <section id="research" aria-labelledby="research-title" className="mb-20">
-              <h2 id="research-title" className="text-xl md:text-xl font-light text-gray-300 mb-6">Research</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">78%</p>
-                  <p className="text-sm text-gray-400 mt-2">call for experiential formats</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">40%</p>
-                  <p className="text-sm text-gray-400 mt-2">fashion designers / industry</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl md:text-3xl font-light text-white">56</p>
-                  <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-2xl md:text-xl font-light text-white">Immersion Demand</p>
-                  <p className="text-sm text-gray-400 mt-2">beyond conventional runway formats</p>
-                </div>
-              </div>
+    {/* Approach */}
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+        <li>Sound-driven storytelling</li>
+        <li>Immersive design for emotional impact</li>
+        <li>Hybrid: AR triggers + tactile modules</li>
+        <li>Focus on sub-rock invertebrates</li>
+      </ul>
+    </div>
 
-              <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
-                <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
-                <p className="mt-8 text-sm text-gray-400">
-                 A preliminary survey conducted with 56 participants supported the conceptual direction of this project. 78% responded positively to questions suggesting that fashion shows should move beyond conventional viewing formats and explore new experiential approaches. Notably, 40% of respondents (22 individuals) identified as either fashion designers or professionals in the fashion industry—reinforcing the relevance of this investigation within the design field.
-              </p>
-              </details>
-            </section>
+    {/* Result */}
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
+      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
+        <li>Pause · listen · empathize</li>
+        <li>Invisible made visible (emotional · sonic · spatial)</li>
+        <li>Scalable, mobile exhibition system</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-            {/* Process */}
-            <section id="process" className="rounded-lg bg-black">
-              <h2 className="text-xl md:text-xl font-light mb-8 md:mb-8 text-gray-300">Process</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-20">
-                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-                  <h3 className="text-white font-light mb-3">01 Ideation</h3>
-                  <p className="text-gray-400 text-sm">Brainstorming</p>
-                  <p className="text-gray-400 text-sm">Concept sketches</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-                  <h3 className="text-white font-light mb-3">02 Analysis</h3>
-                  <p className="text-gray-400 text-sm">Context & precedents</p>
-                  <p className="text-gray-400 text-sm">Stage Environment Research</p>
-                </div>
-                <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-                  <h3 className="text-white font-light mb-3">03 Development</h3>
-                  <p className="text-gray-400 text-sm">Spatial/level design</p>
-                  <p className="text-gray-400 text-sm">User Interactiont</p>
-                </div>
-              </div>
-            </section>
+{/* Challenge full text*/}    
+<details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
+  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
+    Full text
+  </summary>
+  <div className="px-4 pb-6 pt-6 space-y-6">
+    <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Approach</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        Instead of relying on traditional data visualisation or scientific display, the project uses immersive design as an emotional trigger. It explores new ways to communicate marine biodiversity loss, shifting the focus toward sound as a storytelling medium. Visitors are encouraged to pause, listen, and emotionally reconnect with the life forms that often go unnoticed.
+      </p>
+    </div>
 
-              {/* Tools & Roles */}
-            <div className="mb-20 md:mb-20">
-              <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6 md:mb-8">Tools & Roles</h2>
-              <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-                <table className="w-full text-left text-sm text-gray-400">
-                  <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
-                    <tr>
-                      <th className="px-4 py-3">Part</th>
-                      <th className="px-4 py-3">Tools</th>
-                      <th className="px-4 py-3">Outputs</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/10">
-                    <tr>
-                      <td className="px-4 py-4 font-light">Modeling</td>
-                      <td className="px-4 py-4">AutoCAD, 3ds Max</td>
-                      <td className="px-4 py-4">Stage</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">Texturing</td>
-                      <td className="px-4 py-4">Photoshop</td>
-                      <td className="px-4 py-4">PBR materials</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">Lighting & Render</td>
-                      <td className="px-4 py-4">Unity, 3ds Max</td>
-                      <td className="px-4 py-4">Spatial Real time renders</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">Interaction / VR</td>
-                      <td className="px-4 py-4">Unity</td>
-                      <td className="px-4 py-4">VR Exhibition Prototype</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">Graphics</td>
-                      <td className="px-4 py-4">Adobe Suite</td>
-                      <td className="px-4 py-4">Art works</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+    <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        In alignment with the UN Ocean Decade (2021–2030), the project addresses the global communication gap in ocean awareness. Despite its planetary significance, the ocean remains underrepresented in education and policy. This exhibition reframes that disconnect through interactive design, making invisible marine life more visible—emotionally, sonically, and spatially.
+      </p>
+    </div>
 
-    {/* Design Highlights */}       
-    <section id="design" className="mt-10">
-  <h2 className="text-xl md:text-xl font-light text-gray-300 mb-6">Design Highlights</h2>
-  <ul className="space-y-3 text-gray-300">
-    <li>• Thermal UX: interactions driven by body heat.</li>
-    <li>• Camouflage performance to blur object/subject roles.</li>
-    <li>• Modular environments for adaptive narrative tension.</li>
-    <li>• Space-as-interface: audience navigates through sensing, not just sight.</li>
-    <li>• Visibility stress-test: challenges how presence and form are perceived.</li>
+    <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        Design research focused on species that inhabit hidden marine zones, particularly sub-rock environments. Rather than prioritising well-known marine mammals, the project shifts attention to invertebrates and bottom-dwellers whose acoustic signals are biologically rich but rarely studied. A hybrid strategy of immersive audio, AR interaction, and tactile exhibition components forms the foundation of the storytelling.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
+      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+        The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.
+      </p>
+    </div>
+  </div>
+</details>
+
+{/*Research*/}
+<section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
+  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Research</h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <p className="text-3xl md:text-3xl font-light text-white">91%</p>
+      <p className="text-sm text-gray-400 mt-2">only visual-centric exhibitions experienced</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <p className="text-3xl md:text-3xl font-light text-white">87%</p>
+      <p className="text-sm text-gray-400 mt-2">most familiar with whales/dolphins</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <p className="text-3xl md:text-3xl font-light text-white">108</p>
+      <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <p className="text-2xl md:text-xl font-light text-white">Insight</p>
+      <p className="text-sm text-gray-400 mt-2">Public knowledge centred on a few iconic species</p>
+    </div>
+  </div>
+
+  <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black p-4">
+    <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
+    <p className="mt-6 text-sm text-gray-400">
+      To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
+    </p>
+  </details>
+</section>
+
+{/* Process Section */}
+<section id="process" className="rounded-lg bg-black mt-6 mb-6">
+  <h2 className="text-xl md:text-xl font-Medium mb-6 text-gray-300">Process</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <h3 className="text-white font-light mb-3">01 Ideation</h3>
+      <p className="text-gray-400 text-sm">Brainstorming</p>
+      <p className="text-gray-400 text-sm">Concept sketches</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <h3 className="text-white font-light mb-3">02 Analysis</h3>
+      <p className="text-gray-400 text-sm">Precedents</p>
+      <p className="text-gray-400 text-sm">Ocean issues & species research</p>
+    </div>
+    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+      <h3 className="text-white font-light mb-3">03 Development</h3>
+      <p className="text-gray-400 text-sm">Product & spatial design</p>
+      <p className="text-gray-400 text-sm">AR application · Exhibition build</p>
+    </div>
+  </div>
+</section>
+
+{/* Tools & Roles Table */}
+<div className="mt-6 mb-6">
+  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
+  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
+    <table className="w-full text-left text-sm text-gray-400">
+      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+        <tr>
+          <th className="px-4 py-3">Part</th>
+          <th className="px-4 py-3">Tools</th>
+          <th className="px-4 py-3">Outputs</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-white/10">
+        <tr>
+          <td className="px-4 py-4 font-light">Modeling</td>
+          <td className="px-4 py-4">AutoCAD, 3ds Max</td>
+          <td className="px-4 py-4">Exhibition modules, Space </td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Texturing</td>
+          <td className="px-4 py-4">Substance Painter, Photoshop</td>
+          <td className="px-4 py-4">PBR stone/metal material maps</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Lighting & Render</td>
+          <td className="px-4 py-4"> V-Ray</td>
+          <td className="px-4 py-4">Spatial ambience renders</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Interaction / AR</td>
+          <td className="px-4 py-4">Unity (AR Foundation)</td>
+          <td className="px-4 py-4">AR species animations, QR triggers</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Graphics</td>
+          <td className="px-4 py-4">Adobe Suite </td>
+          <td className="px-4 py-4">Exhibition panels, accessibility assets</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{/* Design Highlights */}       
+<section id="design" className="mt-6 mb-6">
+  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
+  <ul className="space-y-3 text-gray-400">
+    <li>• Sound as narrative; bioacoustics drive empathy.</li>
+    <li>• Rock-like plinths for solitary listening.</li>
+    <li>• Flexible exhibition format designed for scalability and adaptability across contexts.</li>
+    <li>• AR scans trigger species; touch + sound + vision combined.</li>
   </ul>
-
-  <details className="mt-8 rounded-lg border border-white/10 bg-black p-4">
-    <summary className="cursor-pointer text-sm text-gray-400">Full text</summary>
-    <div className="mt-8 space-y-4 text-sm text-gray-400">
-
-              {/*idea development text start*/}
+</section>
            
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Idea Development
-              </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">This project reframes fashion not as something to be seen, but as something to be discovered through thermal detection. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle thermal cues—heat traces, environmental temperature shifts, and proximity sensing. The XR installation creates a reward structure based on thermal awareness, shifting the focus from spectacle to sensing. Viewers become thermal explorers, engaging with camouflaged presence through detection rather than simply seeing.
-                </p>
-            </div>
-          </div>
-        
-             <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-               Spatial Design
-              </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
-               </p>
-              </div>
-          </div>
-
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16 mb-6 md:mb-8">
-              <h2 className="text-sm md:text-sm font-light text-gray-300 mb-6 md:mb-8 min-w-[200px]">
-                Exhibition Design
-              </h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Set across natural landscapes designed for camouflage—such as islands, forests, and coastal zones—the experience is structured as a responsive terrain. Each space reacts dynamically to the viewer's position and thermal presence, enabled by a real-time XR sensing system. The traditional runway dissolves into an interactive field that tests visibility, form, and presence. Modular environments are choreographed to evoke narrative tension and guide movement through atmospheric shifts. The space itself becomes the interface, framing the act of seeing as an embodied process.
-                </p>
-              </div>
-            </div>
-
-            
-
-     
-
-         
-             </div>  
-             </details>
-           </section>
 
 
           {/* Line */} 
