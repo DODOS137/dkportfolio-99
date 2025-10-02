@@ -616,7 +616,7 @@ const LearnProjectDetail = () => {
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
                 <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
                   <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
-                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sunlight, shadow, and relic placement guide attention. The library is layered with visual contrasts: clinical architecture vs organic deterioration; digital interfaces vs paper records. These dichotomies build an interpretive landscape, where meaning is sensed more than spoken.
+                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sunlight, shadow, and artifact placement guide the viewer’s attention. The library unfolds through layered contrasts: precise architectural order against organic decay, and digital interfaces against paper records. These tensions shape an interpretive landscape where meaning is felt rather than explained.
                   </p>
                 </div>
               </div>
