@@ -773,8 +773,8 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A rest zone designed as a hunter's study, filled with personal collections, insects, and field objects gathered during expeditions. The space invites quiet observation while offering an elevated view of the vertical glass sculpture that links all three floors.
-              </p>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A rest area styled as a hunter’s study, showcasing personal collections, insects, and expedition artifacts. The space encourages quiet observation and offers an elevated view of the vertical glass sculpture linking all three floors.
+           </p>
            </div> 
            </div> 
 
@@ -800,7 +800,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Gift Shop</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The museum gift shop concept proposes products inspired by native Korean species, reflecting the institution’s unique identity. Items include collectible cards featuring endangered animals and resin-encased specimens of Korean insects.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The gift shop concept features products inspired by native Korean species, reinforcing the museum’s identity. Items include collectible cards of endangered animals and resin-encased specimens of Korean insects.
            </p>
            </div> 
            </div>   
