@@ -279,7 +279,7 @@ your research abilities. They should reflect your own interests and support your
   </div> 
 
          {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
            {/* YouTube Video Section */}
   <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
@@ -471,7 +471,7 @@ your research abilities. They should reflect your own interests and support your
 </section>
 
             {/* Line */}
-            <div className="w-full h-px my-40 md:my-40 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
            
             {/* World buliding Image 1,2*/}
             <div className="w-full">
