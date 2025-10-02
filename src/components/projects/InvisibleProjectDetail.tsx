@@ -301,7 +301,7 @@ your research abilities. They should reflect your own interests and support your
 </div>
 
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-40 bg-transparent" />
 
 {/* Summary */}
 <section aria-labelledby="sum-title" className="mt-6 mb-6">
@@ -471,7 +471,7 @@ your research abilities. They should reflect your own interests and support your
 </section>
 
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-40 bg-transparent" />
            
             {/* World buliding Image 1,2*/}
             <div className="w-full">
@@ -485,7 +485,7 @@ your research abilities. They should reflect your own interests and support your
                    </div>
 
            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-10 md:my-10 bg-transparent" />
 
            {/*Would building text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -514,7 +514,7 @@ your research abilities. They should reflect your own interests and support your
            </div> 
           
            {/* Line */}
-            <div className="w-full h-px mb-3 md:mb-3 bg-gray-black" />
+            <div className="w-full h-px mb-3 md:mb-3 bg-transparent" />
 
            {/*Narrative Arc text start2*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -526,7 +526,7 @@ your research abilities. They should reflect your own interests and support your
            </div> 
 
             {/* Line */}
-            <div className="w-full h-px my-4 md:my-4 bg-gray-black" />
+            <div className="w-full h-px my-4 md:my-4 bg-transparent" />
 
           {/*Vdieo Development text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -538,7 +538,7 @@ your research abilities. They should reflect your own interests and support your
            </div>
 
             {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-10 md:my-10 bg-transparent" />
 
             {/* Video Development Image 1*/}
             <div className="w-full">
@@ -550,7 +550,7 @@ your research abilities. They should reflect your own interests and support your
             </div>
 
              {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-40 bg-transparent" />
 
             {/* Floor Plan Image 1*/}
              <div className="w-full mb-20 md:mb-20">
@@ -562,19 +562,40 @@ your research abilities. They should reflect your own interests and support your
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber expressed its theme through spatial and interactive cues.</p>
-            <ul className="space-y-2 text-gray-400">
-    <li>• Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion.</li>
-    <li>• Light: Reflective surfaces and reactive illumination revealed scientific qualities.</li>
-    <li>• Life: Organic forms suggested biological evolution in an alien ecosystem.</li>
-    <li>• Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</li>
-   
-  </ul>
-           
            </div> 
            </div>
 
+
+             {/* Line */}
+            <div className="w-full h-px my-4 md:my-4 bg-transparent" />
+
+
+          
+          {/*Space text 2*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
+           <ul className="text-sm md:text-sm lg:text-sm font-light text-gray-400 space-y-2">    
+              <li>• Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion.</li>
+              <li>• Light: Reflective surfaces and reactive illumination revealed scientific qualities.</li>
+              <li>• Life: Organic forms suggested biological evolution in an alien ecosystem.</li>
+              <li>• Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</li>
+           
+           </ul>
+           </div> 
+           </div>
+
+
+
+
+
+            
+
+   
+
+
             {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-10 md:my-10 bg-transparent" />
 
             {/* Exterior Image 1*/}
              <div className="w-full">
@@ -582,7 +603,7 @@ your research abilities. They should reflect your own interests and support your
             </div>
 
             {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-gray-black" />
+            <div className="w-full h-px my-5 md:my-5 bg-transparent" />
 
             {/* 증빙컷 Image */}
              <div className="w-full mb-10 md:mb-10">
@@ -595,7 +616,7 @@ your research abilities. They should reflect your own interests and support your
             </div>
 
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-20 bg-transparent" />
 
              {/* Space Image 1*/}
              <div className="w-full mb-10 md:mb-10">
@@ -618,10 +639,10 @@ your research abilities. They should reflect your own interests and support your
             </div>
          
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-20 bg-transparent" />
  
             {/* Line */}
-            <div className="w-full h-px my-20 md:my-20 bg-gray-black" />
+            <div className="w-full h-px my-20 md:my-20 bg-transparent" />
 
            {/* Full playing Video Section */}
 <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */}
@@ -650,7 +671,7 @@ your research abilities. They should reflect your own interests and support your
 </div>
 
              {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-10 md:my-10 bg-transparent" />
 
             {/*Final Outcome text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -662,7 +683,7 @@ your research abilities. They should reflect your own interests and support your
            </div>
 
              {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-10 md:my-10 bg-transparent" />
           
            {/*Ocean Web Image1*/}        
           <div className="w-full">
@@ -670,7 +691,7 @@ your research abilities. They should reflect your own interests and support your
           </div>
 
             {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-10 md:my-10 bg-transparent" />
 
             {/*Post-Project Direction text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -682,7 +703,7 @@ your research abilities. They should reflect your own interests and support your
            </div>
 
             {/* Line */}
-            <div className="w-full h-px my-4 md:my-4 bg-gray-black" />
+            <div className="w-full h-px my-4 md:my-4 bg-transparent" />
 
            {/*The Ocean text start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -694,7 +715,7 @@ your research abilities. They should reflect your own interests and support your
            </div>
 
             {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-gray-black" />
+            <div className="w-full h-px my-10 md:my-10 bg-transparent" />
 
             {/* extra images */}
             <div className="w-full">
