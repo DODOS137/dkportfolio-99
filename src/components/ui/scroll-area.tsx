@@ -31,9 +31,9 @@ const ScrollBar = React.forwardRef<
     className={cn(
       "flex touch-none select-none transition-all duration-300 ease-out",
       orientation === "vertical" &&
-        "h-full w-4 p-[2px] bg-black hover:w-5",   // 배경을 완전 검정, 넓게 하고 hover 확장
+        "h-full w-4 p-[2px] bg-transparent hover:w-5",   // 배경을 완전 검정, 넓게 하고 hover 확장
       orientation === "horizontal" &&
-        "h-4 flex-col p-[2px] bg-black hover:h-5",  // 가로도 동일
+        "h-4 flex-col p-[2px] bg-transparent hover:h-5",  // 가로도 동일
       className
     )}
     {...props}
