@@ -329,7 +329,7 @@ const SeoulMuseumProjectDetail = () => {
   </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
            {/* YouTube Video Section */}
   <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
@@ -630,7 +630,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
              </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
           {/*Exhibtion Plan*/}
           <div className="w-full">
@@ -703,7 +703,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
           {/*Lobby Images*/}
           <div className="w-full">
@@ -787,7 +787,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
               </div>
 
            {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
           {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
@@ -815,7 +815,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           </div>
 
            {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-gray-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-gray-black"></div>
 
           {/*Final Outcome image*/}
           <div className="w-full">
