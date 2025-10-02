@@ -289,7 +289,7 @@ const LearnProjectDetail = () => {
               </div>
 
               {/* Line */}
-              <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/* Main Image (full-bleed colored plate behind) */}
               <div className="my-40 md:my-40 relative">
@@ -316,7 +316,7 @@ const LearnProjectDetail = () => {
               </div>
 
               {/* Line */}
-              <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/* Summary */}
               <section aria-labelledby="car-title" className="mt-6 mb-6">
