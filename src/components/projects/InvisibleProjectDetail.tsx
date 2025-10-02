@@ -567,7 +567,7 @@ your research abilities. They should reflect your own interests and support your
 
 
              {/* Line */}
-            <div className="w-full h-px my-4 md:my-4 bg-transparent" />
+            <div className="w-full h-px my-1 md:my-1 bg-transparent" />
 
 
           
