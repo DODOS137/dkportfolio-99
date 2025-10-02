@@ -561,8 +561,15 @@ your research abilities. They should reflect your own interests and support your
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber embodied its theme through interactive and environmental cues. Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion. Light: Reflective surfaces and reactive illumination highlighted scientific properties. Life: Organic forms suggested biological evolution in an alien ecosystem. Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.
-           </p>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber expressed its theme through spatial and interactive cues.</p>
+            <ul className="space-y-2 text-gray-400">
+    <li>• Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion.</li>
+    <li>• Light: Reflective surfaces and reactive illumination revealed scientific qualities.</li>
+    <li>• Life: Organic forms suggested biological evolution in an alien ecosystem.</li>
+    <li>• Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</li>
+   
+  </ul>
+           
            </div> 
            </div>
 
@@ -619,7 +626,7 @@ your research abilities. They should reflect your own interests and support your
            {/* Full playing Video Section */}
 <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */}
   {/* ✅ 캡션 */}
-  <p className="relative z-20 mb-8 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
+  <p className="relative z-20 mb-4 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
     Full playing Video
   </p>
 
@@ -649,7 +656,7 @@ your research abilities. They should reflect your own interests and support your
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A virtual ocean environment is constructed where objects evolve autonomously in response to user-input variables, based on the concept of "evolution." Within this bounded space, the mechanism simulates how lifeforms might adapt to their environment over time. The system is designed to generate diverse outcomes depending on the data provided by the user, offering a dynamic and interactive experience. This concept is being developed as the primary content for the Life Chamber, enhancing the thematic depth and educational engagement of the exhibit.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A virtual ocean environment was built where objects evolve autonomously in response to user inputs, based on the concept of evolution. The system simulates how lifeforms adapt to their environment over time, generating diverse outcomes from user data and creating a dynamic, interactive experience. This concept serves as the primary content for the Life Chamber, enhancing both thematic depth and educational engagement.
            </p>
            </div> 
            </div>
@@ -669,7 +676,7 @@ your research abilities. They should reflect your own interests and support your
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Direction</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A virtual ocean environment is constructed where objects evolve autonomously in response to user-input variables, based on the concept of "evolution." Within this bounded space, the mechanism simulates how lifeforms might adapt to their environment over time. The system is designed to generate diverse outcomes depending on the data provided by the user, offering a dynamic and interactive experience. This concept is being developed as the primary content for the Life Chamber, enhancing the thematic depth and educational engagement of the exhibit.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A responsive virtual ocean simulated autonomous life evolution driven by user input. Varying environmental conditions triggered emergent behaviours, encouraging scientific thinking through exploration and experimentation.
            </p>
            </div> 
            </div>
