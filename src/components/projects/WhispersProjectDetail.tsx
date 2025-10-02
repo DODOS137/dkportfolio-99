@@ -308,7 +308,7 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-40 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
  
 
     
@@ -495,7 +495,7 @@ const WhispersProjectDetail = () => {
         <tr>
           <td className="px-4 py-4 font-light">Modeling</td>
           <td className="px-4 py-4">AutoCAD, 3ds Max</td>
-          <td className="px-4 py-4">Exhibition modules, Space </td>
+          <td className="px-4 py-4">Exhibition modules, spatial layouts</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Texturing</td>
@@ -566,13 +566,26 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 19.png" />
           </div> 
 
-          {/*idea development text start*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          {/*idea development text 1*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Idea Development</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is treated not just as data but as a narrative layer. Scientific studies revealing the bioacoustics of marine invertebrates were used to frame the emotional tone of the exhibition. The project highlights how sonic signals from these animals reveal behavioural patterns and ecosystem health. These acoustic ecologies become a channel to foster empathy and reframe conservation dialogue. While marine mammals like whales and dolphins receive outsized attention due to their intelligence and emotional expressiveness, lesser-known species—particularly invertebrates and bottom-dwellers—remain largely excluded from both public empathy and conservation priorities. This project aims to redress that imbalance by amplifying the voices of species that are hidden, both physically and culturally, from mainstream awareness.</p>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">ound is treated not as raw data but as narrative. Bioacoustic studies of marine invertebrates shaped the exhibition’s emotional tone, showing how sonic signals reveal behaviour and ecosystem health. These acoustic ecologies open a channel for empathy and a reframing of conservation dialogue.
+           </p>
            </div>
            </div>
+
+
+          
+          {/*idea development text 2*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">While whales and dolphins receive outsized attention, invertebrates and bottom-dwellers remain excluded from empathy and conservation. The project addresses this imbalance by amplifying the hidden voices of these species.
+           </p>
+           </div>
+           </div>
+
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
