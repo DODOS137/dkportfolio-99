@@ -327,7 +327,7 @@ const ThermalTraceProjectDetail = () => {
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Idea Development</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">This project reframes fashion not as something to be seen, but as something to be discovered through thermal detection. Rather than offering a passive visual display, it invites the audience to detect hidden figures through subtle thermal cues—heat traces, environmental temperature shifts, and proximity sensing. The XR installation creates a reward structure based on thermal awareness, shifting the focus from spectacle to sensing. Viewers become thermal explorers, engaging with camouflaged presence through detection rather than simply seeing.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">This project reframes fashion as something discovered through thermal detection. Instead of passive display, it invites audiences to detect hidden figures via heat traces, temperature shifts, and proximity sensing.
            </p>
            </div>
            </div>
@@ -408,7 +408,7 @@ const ThermalTraceProjectDetail = () => {
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> By utilizing XR technology to reveal models that lie just beyond the threshold of human perception, the exhibition challenges the audience to engage with the show on a deeper sensory level. Viewers are invited to track the presence of the models not through traditional visual cues, but through their emitted body heat, redirecting attention to the delicate outlines and nuanced movements of each form. This deliberate sensory shift encourages participants to experience fashion in an entirely new dimension—where physical presence, warmth, and subtlety replace spectacle, and perception is broadened to include modes of awareness typically overlooked in conventional shows. Ultimately, the project seeks to redefine the role of the viewer, transforming them from passive observers into active seekers of form and atmosphere.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">XR reveals models beyond normal perception, challenging audiences to engage on a deeper sensory level. Instead of visual cues, viewers track models through body heat, focusing on delicate outlines and subtle movements.
            </p>
            </div>
            </div>
@@ -437,8 +437,8 @@ const ThermalTraceProjectDetail = () => {
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post Project Direction</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project will be expanded into an interactive XR installation accessible via headset and sensor interface. A public showcase is planned to gather qualitative user feedback, assess perception thresholds, and refine sensory engagement techniques prior to full deployment.
-            </p>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project will expand into an interactive XR installation with headset and sensor interface. A public showcase will collect feedback, test perception thresholds, and refine engagement methods before full deployment.
+           </p>
            </div>
            </div>
             
