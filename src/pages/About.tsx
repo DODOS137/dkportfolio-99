@@ -15,9 +15,9 @@ const About = () => {
           <div className="text-white space-y-8">
             <div className="backdrop-blur-sm p-6 border border-black/10 bg-transparent rounded-md px-0 py-20">
               <h2 className="text-2xl font-semibold mb-8">Do Hyun Kim</h2>
-              <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">Designer specialising in spatial design and immersive technologies, particularly VR/XR. Work explores how virtual environments can expand human experience and create new forms of engagement within physical space. Committed to investigating the practical and emotional potential of immersive tools across contexts—ranging from exhibitions and education to gaming.
+              <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">Designer specialising in 3D spatial design and its applications across diverse contexts. Work investigates how digital and physical environments can be integrated to enhance human experience, communication, and engagement. Areas of practice include exhibitions, education, interactive media, and visual storytelling.
               </p>
-                <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">Collaborative by nature, I thrive in multidisciplinary teams where ideas are challenged, tested, and refined. I value dialogue that balances creative ambition with technical feasibility, believing that strong design emerges through clear thinking, shared goals, and critical discussion.
+                <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">Collaborative in approach, accustomed to working within multidisciplinary teams to test and refine ideas. Design process balances creativity with technical feasibility, ensuring outcomes that are both effective and contextually meaningful.
                 </p>  
             </div>
             
@@ -38,7 +38,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold mb-8">What I do</h3>
                 <ul className="space-y-2">
                   <li>Spatial Design</li>
-                  <li>Virtual Reality Design & Development </li>
+                  <li>3D Design & Development </li>
                   
                   <li>Exhibition Design</li>
                 </ul>
@@ -47,13 +47,13 @@ const About = () => {
             
             <div className="backdrop-blur-sm p-6 border border-black/10 bg-transparent rounded-md mt-16 px-0 my-0 py-[40px]">
               <h2 className="text-2xl font-semibold mb-8">Research Interests</h2>
-              <p className="text-xl leading-relaxed font-light text-gray-400"> I take a human- and environment-centred approach to design, drawing inspiration from the fundamental principles found in nature and the cognitive patterns we encounter in everyday life. I seek to reframe these familiar elements through fresh and diverse perspectives, exploring how they can be meaningfully applied within real-world contexts.
+              <p className="text-xl leading-relaxed font-light text-gray-400"> I take a human- and environment-centred approach to design, drawing inspiration from natural principles and everyday cognitive patterns. My work reinterprets these familiar elements through fresh perspectives, exploring how they can be applied in meaningful and practical contexts.
               </p>
               </div>
             
             <div className="backdrop-blur-sm p-6 border border-black/10 bg-transparent rounded-md px-0 py-0">
               <h2 className="text-2xl font-semibold mb-8">Design Direction</h2>
-              <p className="text-xl leading-relaxed font-light text-gray-400">By focusing on content that reflects shared experiences—familiar objects or commonly felt emotions—I aim to create work that is both relatable and resonant. I believe that when design is grounded in what people already recognise and connect with, it becomes more intuitive, accessible, and meaningful in everyday life.
+              <p className="text-xl leading-relaxed font-light text-gray-400">Work with shared experiences, using familiar objects and common emotions as reference points. This approach keeps design straightforward, recognisable, and practical for everyday use.
               </p>
               </div>
             
