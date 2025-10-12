@@ -274,9 +274,9 @@ const ThermalTraceProjectDetail = () => {
           <td className="px-4 py-4">PBR material maps</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Lighting & Render</td>
+          <td className="px-4 py-4 font-light">Lighting & Rendering</td>
           <td className="px-4 py-4">Unity, V-Ray</td>
-          <td className="px-4 py-4">Real time renders</td>
+          <td className="px-4 py-4">Spatial real-time renders</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Interaction / VR</td>
@@ -286,7 +286,7 @@ const ThermalTraceProjectDetail = () => {
         <tr>
           <td className="px-4 py-4 font-light">Graphics</td>
           <td className="px-4 py-4">Adobe Suite </td>
-          <td className="px-4 py-4">Art works</td>
+          <td className="px-4 py-4">Artworks</td>
         </tr>
       </tbody>
     </table>
@@ -432,15 +432,17 @@ const ThermalTraceProjectDetail = () => {
            {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-            
-           {/*Post Project Direction text start*/}
+
+            {/*Final Outcome start*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post Project Direction</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project will expand into an interactive XR installation with headset and sensor interface. A public showcase will collect feedback, test perception thresholds, and refine engagement methods before full deployment.
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project currently exists as a WebGL prototype and conceptual sketch that explores sensory experience through temperature-responsive visual data. Evolving this concept into an XR installation where a physical model’s body temperature triggers the visual transformation could extend its potential into real-world contexts. This approach presents opportunities for application across fashion shows, brand showcases, and sensory-based art installations, where digital aesthetics and physical presence converge.
            </p>
            </div>
            </div>
+
+ 
             
 
           {/*Line*/} 
