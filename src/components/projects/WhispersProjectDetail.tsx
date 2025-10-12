@@ -417,12 +417,7 @@ const WhispersProjectDetail = () => {
       </p>
     </div>
 
-    <div>
-      <h3 className="text-sm md:text-sm font-light text-gray-300 mb-3">Final Outcome</h3>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        The project offers a contemplative space that fosters emotional storytelling. It challenges hierarchical species empathy and contributes to broader discourse on inclusive marine conservation, while also providing an efficient and scalable platform for delivering immersive exhibitions in diverse environments.
-      </p>
-    </div>
+
   </div>
 </details>
 
@@ -503,7 +498,7 @@ const WhispersProjectDetail = () => {
           <td className="px-4 py-4">PBR stone/metal material maps</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Lighting & Render</td>
+          <td className="px-4 py-4 font-light">Lighting & Rendering</td>
           <td className="px-4 py-4"> V-Ray</td>
           <td className="px-4 py-4">Spatial ambience renders</td>
         </tr>
@@ -570,7 +565,7 @@ const WhispersProjectDetail = () => {
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Idea Development</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">ound is treated not as raw data but as narrative. Bioacoustic studies of marine invertebrates shaped the exhibition’s emotional tone, showing how sonic signals reveal behaviour and ecosystem health. These acoustic ecologies open a channel for empathy and a reframing of conservation dialogue.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is treated not as raw data but as narrative. Bioacoustic studies of marine invertebrates shaped the exhibition’s emotional tone, showing how sonic signals reveal behaviour and ecosystem health. These acoustic ecologies open a channel for empathy and a reframing of conservation dialogue.
            </p>
            </div>
            </div>
@@ -720,6 +715,19 @@ const WhispersProjectDetail = () => {
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/web1920-whispers from the bottom_대지 14.png" />
           </div>   
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+           {/*Final Outcome text 1*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project creates a reflective environment where emotional storytelling becomes a way to raise ecological awareness. It questions the hierarchy of empathy between humans and other species, encouraging visitors to connect with marine life on a deeper emotional level. Beyond the exhibition itself, the work presents a modular system that can be reconfigured for various spatial settings, allowing flexible adaptation across institutions. With the potential to collaborate with organisations such as UNESCO and related educational partners, it proposes a scalable platform for future development in environmental education, cultural communication, and immersive learning experiences.
+           </p>
+           </div>
+           </div>
 
        
           
