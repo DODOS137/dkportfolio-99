@@ -422,9 +422,9 @@ const LearnProjectDetail = () => {
                         <td className="px-4 py-4">PBR material Maps</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-4 font-light">Lighting & Render</td>
-                        <td className="px-4 py-4">V-Ray, Unity</td>
-                        <td className="px-4 py-4">Spatial ambience, Real time renders</td>
+                        <td className="px-4 py-4 font-light">Lighting & Rendering</td>
+                        <td className="px-4 py-4">V-Ray</td>
+                        <td className="px-4 py-4">Spatial renders</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-4 font-light">Interaction / VR</td>
@@ -434,7 +434,7 @@ const LearnProjectDetail = () => {
                       <tr>
                         <td className="px-4 py-4 font-light">Graphics</td>
                         <td className="px-4 py-4">Adobe Suite</td>
-                        <td className="px-4 py-4">Art works</td>
+                        <td className="px-4 py-4">Artworks</td>
                       </tr>
                     </tbody>
                   </table>
@@ -644,6 +644,18 @@ const LearnProjectDetail = () => {
 
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+             {/* Final Outcome Text */}
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                  <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
+                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project presents an interactive VR storytelling game that transforms learning into a narrative journey. By merging emotional storytelling with interactive design, it bridges the boundaries between play and education, turning abstract ideas into embodied understanding. The system can be further developed into an immersive learning platform that reinterprets classic fairy tales, allowing users to navigate story worlds where narrative choices and actions foster experiential understanding of values and concepts.
+                  </p>
+                </div>
+              </div>
+
+              {/* Line */}
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
               {/* Post-Project Section Text */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
