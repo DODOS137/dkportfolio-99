@@ -677,7 +677,9 @@ your research abilities. They should reflect your own interests and support your
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A virtual ocean environment was built where objects evolve autonomously in response to user inputs, based on the concept of evolution. The system simulates how lifeforms adapt to their environment over time, generating diverse outcomes from user data and creating a dynamic, interactive experience. This concept serves as the primary content for the Life Chamber, enhancing both thematic depth and educational engagement.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project transforms scientific concepts into participatory and immersive storytelling experiences.
+It moves beyond exhibition display to propose a new way of communicating scientific complexity through emotional engagement.
+The framework can be expanded as a VR learning platform for science and natural history museums, offering a scalable model for institutions that aim to integrate immersive education and research-based exhibitions.
            </p>
            </div> 
            </div>
@@ -697,7 +699,7 @@ your research abilities. They should reflect your own interests and support your
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Direction</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400"> A responsive virtual ocean simulated autonomous life evolution driven by user input. Varying environmental conditions triggered emergent behaviours, encouraging scientific thinking through exploration and experimentation.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The initial prototype aimed for a VR experience but largely positioned the user as an observer, with limited interaction beyond spatial and visual exploration. Acknowledging this constraint, The Ocean is presented as a conceptual post-project exploration that outlines a responsive system in which user-entered data would drive autonomous evolutionary behaviours, informing the design of a future interactive build.
            </p>
            </div> 
            </div>
@@ -745,7 +747,7 @@ your research abilities. They should reflect your own interests and support your
             </div>
 
             {/* Slider 2 */}
-            <div className="w-full mb-40 md:mb-40">
+            <div className="w-full ">
               <Carousel className="w-full bg-black" setApi={setSecondApi} opts={{ loop: true }}>
                 <CarouselContent>
                   {secondSliderImages.map((image, index) => (
@@ -773,6 +775,13 @@ your research abilities. They should reflect your own interests and support your
                 ))}
               </div>
             </div>
+
+          
+          
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent" />
+
+          
 
             {/* data images (optional) */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-6 lg:px-[200px]">
