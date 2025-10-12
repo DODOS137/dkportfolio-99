@@ -244,7 +244,7 @@ const InvisibleProjectDetail = () => {
 
       {/* Location + Year */}
       <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-        2024 │ VR Contents Design │ Solo Project │ 16 weeks
+        2024 │ VR Content Design │ Solo Project │ 16 weeks
       </p>
 
       {/* ✅ NEW: Image under location/year */}
@@ -439,9 +439,9 @@ your research abilities. They should reflect your own interests and support your
           <td className="px-4 py-4">PBR material maps</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Lighting & Render</td>
+          <td className="px-4 py-4 font-light">Lighting & Rendering</td>
           <td className="px-4 py-4">Unreal Engine, 3ds Max</td>
-          <td className="px-4 py-4">Spatial Real time renders</td>
+          <td className="px-4 py-4">Spatial real-time renders</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Interaction / VR</td>
@@ -451,7 +451,7 @@ your research abilities. They should reflect your own interests and support your
         <tr>
           <td className="px-4 py-4 font-light">Graphics & Video</td>
           <td className="px-4 py-4">Adobe Suite, Runway AI</td>
-          <td className="px-4 py-4">Art works</td>
+          <td className="px-4 py-4">Artworks</td>
         </tr>
       </tbody>
     </table>
@@ -648,7 +648,7 @@ your research abilities. They should reflect your own interests and support your
 <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */}
   {/* ✅ 캡션 */}
   <p className="relative z-20 mb-4 md:mb-8 text-center text-white text-lg md:text-xl font-medium tracking-wide">
-    Full playing Video
+    Full playthrough Video
   </p>
 
   {/* ✅ FULL-BLEED 빨강판 (뷰포트 가로 100%) */}
