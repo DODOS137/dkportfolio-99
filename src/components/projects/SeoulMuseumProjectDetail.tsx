@@ -498,19 +498,19 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           <td className="px-4 py-4">PBR material maps</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Lighting & Render</td>
+          <td className="px-4 py-4 font-light">Lighting & Rendering</td>
           <td className="px-4 py-4">V-Ray</td>
-          <td className="px-4 py-4">Spatial Real time renders</td>
+          <td className="px-4 py-4">Spatial image renders</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">VR Museum</td>
           <td className="px-4 py-4">Unreal Engine</td>
-          <td className="px-4 py-4">Spatial Real time renders</td>
+          <td className="px-4 py-4">Spatial real-time renders</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Graphics</td>
           <td className="px-4 py-4">Adobe Suite</td>
-          <td className="px-4 py-4">Exhibition panels, accessibility assets, Art works</td>
+          <td className="px-4 py-4">Exhibition panels, accessibility assets, Artworks</td>
         </tr>
       </tbody>
     </table>
@@ -632,7 +632,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
-          {/*Exhibtion Plan*/}
+          {/*Exhibition Plan*/}
           <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" loading="lazy" decoding="async" fetchPriority="low" />
              </div>
@@ -733,7 +733,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-20 bg-black"></div>
 
-          {/*Exhibtion Hall*/}
+          {/*Exhibition Hall*/}
            <div className="w-full">
             <img className="w-full h-auto " src="/lovable-uploads/6c195957-4548-4480-b204-fa616c83621b.png" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
