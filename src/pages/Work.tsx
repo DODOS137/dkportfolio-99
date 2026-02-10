@@ -24,19 +24,22 @@ const projects: Project[] = [{
   imageUrl: "/lovable-uploads/89fa6153-0435-48f8-9cc7-7d4eacde6883.png"
  }, {
   id: "2",
+  title: "Thermal Trace",
+  slug: "Thermal-Trace",
+  description: "Reimagining the Fashion Show Through XR",
+  category: "XR & Exhibition Design",
+  imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
+
+
+
+}, {
+  id: "3",
   title: "Invisible",
   slug: "invisible-space-museum",
   description: "Scientific Virtual Reality Content",
   category: "VR Design",
   imageUrl: "/lovable-uploads/dd05d902-8937-42b8-bb1e-c6ad7461546b.png"
 
-}, {
-  id: "3",
-  title: "Seoul Nature history Museum",
-  slug: "Seoul-Nature-History-Museum",
-  description: "Brand Renewal and Spatial Design",
-  category: "Spatial Design",
-  imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
 
 }, {
   id: "4",
@@ -49,11 +52,11 @@ const projects: Project[] = [{
 }, {
 
    id: "5",
-  title: "Thermal Trace",
-  slug: "Thermal-Trace",
-  description: "Reimagining the Fashion Show Through XR",
-  category: "XR & Exhibition Design",
-  imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png"
+  title: "Seoul Nature history Museum",
+  slug: "Seoul-Nature-History-Museum",
+  description: "Brand Renewal and Spatial Design",
+  category: "Spatial Design",
+  imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png"
 
 }];
 
