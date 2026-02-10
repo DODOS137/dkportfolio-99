@@ -37,7 +37,7 @@ const About = () => {
               <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10">
                 <h3 className="text-xl font-semibold mb-8">What I do</h3>
                 <ul className="space-y-2">
-                  <li>XR Exhibition Prototyping (AR / WebGL / Interactive)</li>
+                  <li>XR Exhibition Prototyping (XR / WebGL / Interactive)</li>
                   <li>Immersive Spatial Design & Visitor Journey Planning</li>
                   <li>3D Modelling, Texturing & Real-time Rendering</li>
 
