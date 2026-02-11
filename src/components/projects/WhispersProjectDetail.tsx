@@ -545,10 +545,7 @@ const WhispersProjectDetail = () => {
           
           {/* Graphic design images Section */}
  
-            {/*Development Image1*/}     
-          <div className="w-full mb-4">
-            <img className="w-full h-full" src="/lovable-uploads/a0b20d87-ef7c-4183-9209-6abb798b0f65.png" />
-          </div>   
+  
 
            {/*Development Image1*/}     
           <div className="w-full mb-4">
@@ -559,12 +556,12 @@ const WhispersProjectDetail = () => {
         
          {/*Research Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/web1920-whispers from the bottom_대지 17.png" />
+            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
           </div>  
          
           {/*Research Image2-1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 19.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB3.jpg" />
           </div> 
 
           {/*idea development text 1*/}
@@ -593,7 +590,7 @@ const WhispersProjectDetail = () => {
 
           {/*Poster Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-4 md:mb-4" src="/lovable-uploads/web1920-whispers from the bottom-26.png" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
           </div>     
 
 
@@ -632,12 +629,12 @@ const WhispersProjectDetail = () => {
 
           {/*Process Rendering Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom-33.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB5.jpg" />
           </div>
 
           {/*Process Rendering Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/web1920-whispers from the bottom-38.png" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB5.jpg" />
           </div>
 
            {/*Line*/} 
@@ -668,7 +665,7 @@ const WhispersProjectDetail = () => {
                     
           {/*Spatial Design Process Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 12.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB7.jpg" />
           </div> 
 
 
@@ -683,24 +680,24 @@ const WhispersProjectDetail = () => {
        
           {/*Bridge Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 7.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8.jpg" />
           </div>
 
           
 
           {/*Product Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10-30.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB9.jpg" />
           </div>
 
           {/*Product Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 2.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB10.jpg" />
           </div>  
 
           {/*Detail Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 3.png" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB11.jpg" />
           </div> 
 
 
@@ -709,17 +706,17 @@ const WhispersProjectDetail = () => {
 
           {/*Exhibition Design Image2*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 13.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB12.jpg" />
           </div>    
 
           {/*Detail Image3*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-whispers from the bottom_대지 10 사본 5.png" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB13.jpg" />
           </div> 
 
            {/*Exhibition Design Image3*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/web1920-whispers from the bottom_대지 14.png" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" />
           </div>   
 
           {/*Line*/} 
