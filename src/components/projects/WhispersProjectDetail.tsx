@@ -548,7 +548,13 @@ const WhispersProjectDetail = () => {
             {/*Development Image1*/}     
           <div className="w-full mb-4">
             <img className="w-full h-full" src="/lovable-uploads/a0b20d87-ef7c-4183-9209-6abb798b0f65.png" />
+          </div>   
+
+           {/*Development Image1*/}     
+          <div className="w-full mb-4">
+            <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" />
           </div>           
+          
           
         
          {/*Research Image2*/}        
