@@ -532,7 +532,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Site Image*/}     
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/lovable-uploads/web1920-SeoulNatural_대지 4.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/SNM/SNM1.jpg" loading="lazy" decoding="async" fetchPriority="low" />
           </div>   
          
            {/*Site Selection text start*/}
@@ -558,7 +558,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Problem Image2*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/b198fa56-2b47-4b29-8cde-90478a687f5b.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-full" src="/webimages/SNM/SNM2.jpg" loading="lazy" decoding="async" fetchPriority="low" />
           </div>     
 
           {/*Line*/} 
@@ -598,7 +598,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
           
           {/* Narrative */}
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/51157240-a9c5-460b-aa6c-d0dff38ae86e.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-full" src="/webimages/SNM/SNM3.jpg" loading="lazy" decoding="async" fetchPriority="low" />
           </div> 
 
           {/*Line*/} 
@@ -618,7 +618,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/* Floor Plan */}
             <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 8.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM4.jpg" loading="lazy" decoding="async" fetchPriority="low" />
              </div>
 
           {/*Line*/} 
@@ -626,7 +626,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/* Floor Plan2 */}
             <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 9.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM5.jpg" loading="lazy" decoding="async" fetchPriority="low" />
              </div>
 
           {/*Line*/} 
@@ -634,7 +634,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Exhibition Plan*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/11615802-b3be-45ae-b796-562156a2ffe9.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM6.jpg" loading="lazy" decoding="async" fetchPriority="low" />
              </div>
 
           {/*Line*/} 
@@ -663,7 +663,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*증빙 Images*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM7.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -671,7 +671,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*증빙 Images 2*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_대지 10 사본 2.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM8.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
            {/*Line*/} 
@@ -691,7 +691,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
            {/*Built-in 1*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/9e5c0006-1fbb-47e2-893e-76d4cdffe825.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM9.jpg" loading="lazy" decoding="async" fetchPriority="low" />
            </div>
 
           {/*Line*/} 
@@ -699,7 +699,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
            {/*Built-in 2*/}
            <div className="w-full">
-           <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural.png" loading="lazy" decoding="async" fetchPriority="low" />
+           <img className="w-full h-auto " src="/webimages/SNM/SNM10.jpg" loading="lazy" decoding="async" fetchPriority="low" />
            </div>
 
           {/*Line*/} 
@@ -707,7 +707,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Lobby Images*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/2d5ad0c5-c648-41c4-952f-2bf356a1bbe1.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM11.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -727,7 +727,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
          {/*Lobby Images2*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/2c1579d8-8849-44ef-b82b-60f0a459098c.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM12.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -735,7 +735,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Exhibition Hall*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/6c195957-4548-4480-b204-fa616c83621b.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM13.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -755,7 +755,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Exhibtion Hall 2*/} 
             <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/8c62ae91-46c3-431b-a691-98c542349817.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM14.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -763,7 +763,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
            {/*Rest Area Image 1*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/5f5ce678-d608-42a9-a4e1-a57984d5eed2.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM15.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
            {/*Line*/} 
@@ -783,7 +783,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
             {/*Rest Area Image 2*/}
            <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-S.N.M_대지 24.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM16.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
            {/*Line*/} 
@@ -791,7 +791,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
-            <img className="w-full h-auto" src="/lovable-uploads/755af641-478b-42de-aedb-1022955dc03a.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto" src="/webimages/SNM/SNM17.jpg" loading="lazy" decoding="async" fetchPriority="low" />
 
            {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
@@ -810,7 +810,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
              
               <div className="w-full ">
  
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-SeoulNatural_대지 20.png" loading="lazy" decoding="async" fetchPriority="low" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM18.jpg" loading="lazy" decoding="async" fetchPriority="low" />
             </div>
           </div>
 
@@ -819,7 +819,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*Final Outcome image*/}
           <div className="w-full">
-            <img className="w-full h-auto " src="/lovable-uploads/web1920-SeoulNatural_1.png" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-auto " src="/webimages/SNM/SNM19.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
 
           {/*Line*/} 
@@ -839,7 +839,7 @@ Moved away from passive, linear layouts towards participatory and immersive expe
 
           {/*End Image */}
            <div className="w-full mb-40 md:mb-40">
-            <img src="/lovable-uploads/12162067-822b-4528-a213-d6d12bf4ecc2.png" className="w-full h-auto mb-40 md:mb-0" loading="lazy" decoding="async" fetchPriority="low" />
+            <img src="/webimages/SNM/SNM20.jpg" className="w-full h-auto mb-40 md:mb-0" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
           
         </div>
