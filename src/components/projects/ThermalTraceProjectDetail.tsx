@@ -316,7 +316,7 @@ const ThermalTraceProjectDetail = () => {
 
             {/*Art works images1*/}     
           <div className="w-full ">
-            <img className="w-full h-auto" src="/lovable-uploads/115e4ef3-f572-4222-9101-3e140a672d1c.png" />
+            <img className="w-full h-auto" src="/webimages/ThermalTrace/TT1.jpg" />
           </div>
 
 
@@ -339,7 +339,7 @@ const ThermalTraceProjectDetail = () => {
 
               {/*Art works images2*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/web1920-Fashion Show-26.png" />
+            <img className="w-full h-full" src="/webimages/ThermalTrace/TT2.jpg" />
           </div> 
 
            {/*Line*/} 
@@ -347,7 +347,7 @@ const ThermalTraceProjectDetail = () => {
 
               {/*Art works images3*/}     
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/web1920-Fashion Show_대지 19.png" />
+            <img className="w-full h-full" src="/webimages/ThermalTrace/TT3.jpg" />
           </div> 
 
   
@@ -381,7 +381,7 @@ const ThermalTraceProjectDetail = () => {
 
           {/* Spatial Design Image */}
           <div className="w-full">
-            <img className="w-full h-auto" src="/lovable-uploads/ee33591e-e9b0-4e8e-a3f0-181d426fdff8.png" />
+            <img className="w-full h-auto" src="/webimages/ThermalTrace/TT4.jpg" />
           </div>
 
 
@@ -449,7 +449,7 @@ const ThermalTraceProjectDetail = () => {
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
             
             <div className="w-full">
-            <img src="/lovable-uploads/fd54a2e9-da0e-4967-89dc-aa0c028ad12a.png" className="w-full h-auto" />
+            <img src="/webimages/ThermalTrace/TT5.jpg" className="w-full h-auto" />
           </div>
            </div>
 
