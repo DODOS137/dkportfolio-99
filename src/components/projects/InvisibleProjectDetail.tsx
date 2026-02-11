@@ -479,7 +479,7 @@ your research abilities. They should reflect your own interests and support your
                 <img
                   alt="World overview"
                   className="w-full h-full object-contain"
-                  src="/lovable-uploads/e7d6a48f-e367-42e9-b5c1-67b383af035b.png"
+                  src="/webimages/Invisible/INV1.jpg"
                 />
               </AspectRatio>
                    </div>
@@ -500,7 +500,7 @@ your research abilities. They should reflect your own interests and support your
               <img
                 alt="World secondary"
                 className="w-full h-auto mt-20 mb-20 md:mt-20 mb-20"
-                src="/lovable-uploads/web1920-Space Museum_대지 6.png"
+                src="/webimages/Invisible/INV2.jpg"
               />
             </div>
 
@@ -544,7 +544,7 @@ your research abilities. They should reflect your own interests and support your
             <div className="w-full">
               <img
                 className="w-full h-auto"
-                src="/lovable-uploads/8ef06019-dad8-43fc-b25b-4b7192935c0c.png"
+                src="/webimages/Invisible/INV3.jpg"
                 alt="Video development board"
               />
             </div>
@@ -554,7 +554,7 @@ your research abilities. They should reflect your own interests and support your
 
             {/* Floor Plan Image 1*/}
              <div className="w-full mb-20 md:mb-20">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 35 사본.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV4.jpg" alt="Floor plan" />
             </div>
 
            {/*Space text start*/}
@@ -599,7 +599,7 @@ your research abilities. They should reflect your own interests and support your
 
             {/* Exterior Image 1*/}
              <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-36.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV5.jpg" alt="Floor plan" />
             </div>
 
             {/* Line */}
@@ -607,12 +607,12 @@ your research abilities. They should reflect your own interests and support your
 
             {/* 증빙컷 Image */}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-40.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV6.jpg" alt="Floor plan" />
             </div>
 
             {/* 증빙컷 2*/}
              <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV7.jpg" alt="Floor plan" />
             </div>
 
             {/* Line */}
@@ -620,22 +620,22 @@ your research abilities. They should reflect your own interests and support your
 
              {/* Space Image 1*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-37-37.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV8.jpg" alt="Floor plan" />
             </div>
 
             {/* Space Image 2*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-38.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV9.jpg" alt="Floor plan" />
             </div>
 
              {/* Space Image 3*/}
              <div className="w-full mb-10 md:mb-10">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-39.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV10.jpg" alt="Floor plan" />
             </div>
 
             {/* Space Image 4*/}
              <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum-41.png" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Floor plan" />
             </div>
          
             {/* Line */}
@@ -689,7 +689,7 @@ The framework can be expanded as a VR learning platform for science and natural 
           
            {/*Ocean Web Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full" src="/lovable-uploads/web1920-Space Museum_대지 22.png" />
+            <img className="w-full h-full" src="/webimages/Invisible/INV12.jpg" />
           </div>
 
             {/* Line */}
@@ -721,10 +721,10 @@ The framework can be expanded as a VR learning platform for science and natural 
 
             {/* extra images */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 23.png" />
-              <img className="w-full h-auto" src="/lovable-uploads/web1920-Space Museum_대지 24.png" alt="Ocean image 2" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV13.jpg" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV14.jpg" alt="Ocean image 2" />
               <img
-                src="/lovable-uploads/web1920-Space Museum_대지 25.png"
+                src="/webimages/Invisible/INV15.jpg"
                 className="w-full h-auto mb-20 md:mb-40"
                 alt="Ocean image 3"
               />
@@ -732,14 +732,14 @@ The framework can be expanded as a VR learning platform for science and natural 
 
             <div className="w-full">
               <img
-                src="/lovable-uploads/web1920-Space Museum_대지 28.png"
+                src="/webimages/Invisible/INV16.jpg"
                 className="w-full h-auto mb-20 md:mb-20"
                 alt="Ocean image 4"
               />
 
               <div className="w-full">
                 <img
-                  src="/lovable-uploads/c98f26de-0fe3-414b-9b0e-704fe61c8d71.png"
+                  src="/webimages/Invisible/INV17.jpg"
                   className="w-full h-auto mb-20 md:mb-20"
                   alt="Ocean image 5"
                 />
