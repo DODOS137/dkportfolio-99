@@ -634,7 +634,7 @@ const WhispersProjectDetail = () => {
 
           {/*Process Rendering Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB5.jpg" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB6.jpg" />
           </div>
 
            {/*Line*/} 
