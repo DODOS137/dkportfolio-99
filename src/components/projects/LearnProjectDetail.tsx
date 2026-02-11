@@ -305,7 +305,7 @@ const LearnProjectDetail = () => {
                   className="relative z-10 bg-[#FF7F00] border-none overflow-hidden"
                 >
                   <img
-                    src="/lovable-uploads/153d6e31-3d91-407b-913a-171c29388036.png"
+                    src="/webimages/Learn/LEARN1.jpg"
                     alt=""
                     className="block w-full h-full object-contain"
                     loading="lazy"
@@ -460,7 +460,7 @@ const LearnProjectDetail = () => {
                 <AspectRatio ratio={16 / 9} className="w-full">
                   <img
                     className="w-full h-full"
-                    src="/lovable-uploads/2234aeee-ea59-4284-b6f6-58ed4a4141c2.png"
+                    src="/webimages/Learn/LEARN2.jpg"
                     alt=""
                     loading="lazy"
                     decoding="async"
@@ -502,7 +502,7 @@ const LearnProjectDetail = () => {
                 <div className="w-full">
                   <img
                     alt="RX-056 Character Design"
-                    src="/lovable-uploads/web1920-Learn_대지 17 사본.png"
+                    src="/webimages/Learn/LEARN3.jpg"
                     className="w-full h-auto"
                     loading="lazy"
                     decoding="async"
@@ -513,7 +513,7 @@ const LearnProjectDetail = () => {
                 <div className="w-full">
                   <img
                     alt="RX-056 Character Design"
-                    src="/lovable-uploads/web1920-Learn_대지 7.png"
+                    src="/webimages/Learn/LEARN4.jpg"
                     className="w-full h-auto"
                     loading="lazy"
                     decoding="async"
@@ -521,7 +521,7 @@ const LearnProjectDetail = () => {
                   />
                   <img
                     alt="RX-056 Character Design"
-                    src="/lovable-uploads/web1920-Learn_대지 8.png"
+                    src="/webimages/Learn/LEARN5.jpg"
                     className="w-full h-auto"
                     loading="lazy"
                     decoding="async"
@@ -585,20 +585,20 @@ const LearnProjectDetail = () => {
 
               {/* Level Design Section */}
               <div className="w-full">
-                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 12.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                <img className="w-full h-full" src="/webimages/Learn/LEARN6.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
               </div>
               <div className="w-full">
-                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn1_대지 10.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                <img className="w-full h-full" src="/webimages/Learn/LEARN7.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
               </div>
 
               {/* Line */}
               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
               <div className="w-full">
-                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 11.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                <img className="w-full h-full" src="/webimages/Learn/LEARN8.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
               </div>
               <div className="w-full">
-                <img className="w-full h-full" src="/lovable-uploads/web1920-Learn_대지 18.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                <img className="w-full h-full" src="/webimages/Learn/LEARN9.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
               </div>
 
               {/* Line */}
@@ -606,7 +606,7 @@ const LearnProjectDetail = () => {
 
               {/* Spatial Design Image1 */}
               <div className="w-full ">
-                <img className="w-full h-auto" src="/lovable-uploads/dbc61aac-d704-4f72-9df3-d77191c87385.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
               </div>
 
               {/* Line */}
@@ -626,19 +626,19 @@ const LearnProjectDetail = () => {
 
               {/* Spatial Design Images */}
                 <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/d854924c-7721-45ce-94a3-9ab126ba6078.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                  <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 </div>
 
                 {/* Line */}
                 <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
                 <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/web1920-Learn-26.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                  <img className="w-full h-auto" src="/webimages/Learn/LEARN12.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 </div>
               
 
                 <div className="w-full">
-                  <img className="w-full h-auto" src="/lovable-uploads/web1920-Learn-27.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                  <img className="w-full h-auto" src="/webimages/Learn/LEARN13.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
                 
               </div>
 
@@ -670,7 +670,7 @@ const LearnProjectDetail = () => {
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               <div className="w-full">
-                <img className="w-full h-auto" src="/lovable-uploads/751b69f0-75d5-4aca-82d4-73ff52116e9d.png" alt="" loading="lazy" decoding="async" sizes="100vw" />
+                <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" alt="" loading="lazy" decoding="async" sizes="100vw" />
               </div>
 
 
