@@ -429,7 +429,7 @@ const ThermalTraceProjectDetail = () => {
           <InteractiveExperience src="https://lucent-banoffee-a50286.netlify.app" title="Thermal Trace Interactive Experience" description="Experience the thermal detection interface in real-time" />
 
 
-           {/*Line*/} 
+           {/*Line*/}
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
