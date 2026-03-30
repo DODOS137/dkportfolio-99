@@ -584,6 +584,18 @@ const WhispersProjectDetail = () => {
            </div>
            </div>
 
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+          {/*ai text 1*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Integrated AI Workflow</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Refined design challenges and identified solution clues through iterative AI dialogue . Conceptual product forms derived from AI underwent rigorous post-processing to develop high-fidelity mockups. Subsequently, foundational character concepts and motion patterns were established via generative models, with AI-generated visual assets serving as primary sources for manual 2D graphic editing and composition.
+           </p>
+           </div>
+           </div>
+
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
