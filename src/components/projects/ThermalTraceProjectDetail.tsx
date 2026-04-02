@@ -324,12 +324,12 @@ const ThermalTraceProjectDetail = () => {
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Accessibility</td>
-          <td className="px-4 py-4">+25% Capacity (Est.)</td>
+          <td className="px-4 py-4">+25% Capacity</td>
           <td className="px-4 py-4">Spatial Efficiency: Physical simulation and user testing (based on a 30m² area) confirmed that the layout accommodates 25% more participants compared to conventional setups.</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Operational</td>
-          <td className="px-4 py-4">Cost Efficiency (Est.)</td>
+          <td className="px-4 py-4">Cost Efficiency</td>
           <td className="px-4 py-4">Logistics-Free Showcase: Eliminates physical shipping and onsite storage costs by replacing material transport with seamless digital data deployment for global fashion events.</td>
         </tr>
  
