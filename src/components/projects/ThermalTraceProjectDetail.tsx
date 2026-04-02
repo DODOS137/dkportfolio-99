@@ -329,7 +329,7 @@ const ThermalTraceProjectDetail = () => {
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Operational</td>
-          <td className="px-4 py-4">Cost Efficiency</td>
+          <td className="px-4 py-4">Cost Efficiency (Est.)</td>
           <td className="px-4 py-4">Logistics-Free Showcase: Eliminates physical shipping and onsite storage costs by replacing material transport with seamless digital data deployment for global fashion events.</td>
         </tr>
  
