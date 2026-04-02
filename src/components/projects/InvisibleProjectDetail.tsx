@@ -470,6 +470,42 @@ your research abilities. They should reflect your own interests and support your
   </ul>
 </section>
 
+          {/* Design Highlights table */} 
+<div className="mt-6 mb-6">
+  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
+    <table className="w-full text-left text-sm text-gray-400">
+      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+        <tr>
+          <th className="px-4 py-3">Category</th>
+          <th className="px-4 py-3">Indicator</th>
+          <th className="px-4 py-3">Rationale / Data Source</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-white/10">
+        <tr>
+          <td className="px-4 py-4 font-light">Production</td>
+          <td className="px-4 py-4">-70% Time Saved</td>
+          <td className="px-4 py-4">Gen-AI Video Workflow: Produced a 3-minute high-fidelity AI video in ~7.5 hours (450 min); this represents a 70% reduction in lead time compared to traditional motion graphics production cycles for similar complexity.</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Accessibility</td>
+          <td className="px-4 py-4">High Efficiency (Est.)</td>
+          <td className="px-4 py-4">Knowledge Acquisition: Enhanced information retention and user convenience by transforming complex scientific data into an immersive VR/Video experience, reducing cognitive load for general audiences.</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Operational</td>
+          <td className="px-4 py-4">Cost Efficiency (Est.)</td>
+          <td className="px-4 py-4">Digital Showcasing: High-impact promotion and global distribution at a fraction of the cost (<5%) of physical pavilion construction, significantly reducing overhead for large-scale exhibitions.</td>
+        </tr>
+ 
+      
+      </tbody>
+    </table>
+  </div>
+</div>
+
+          
+
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent" />
            
