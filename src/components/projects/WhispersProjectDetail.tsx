@@ -528,6 +528,41 @@ const WhispersProjectDetail = () => {
   </ul>
 </section>
 
+<div className="mt-6 mb-6">
+  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
+  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
+    <table className="w-full text-left text-sm text-gray-400">
+      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+        <tr>
+          <th className="px-4 py-3">Category</th>
+          <th className="px-4 py-3">Indicator</th>
+          <th className="px-4 py-3">Rationale / Data Source</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-white/10">
+        <tr>
+          <td className="px-4 py-4 font-light">Production</td>
+          <td className="px-4 py-4">-50% Time (Est.) </td>
+          <td className="px-4 py-4">AI-Accelerated Workflow: Optimized 2D graphic assets and texture generation using generative AI, reducing the lead time by half compared to my average manual production speed for similar tasks.</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Accessibility</td>
+          <td className="px-4 py-4">+3.7% Reach</td>
+          <td className="px-4 py-4">Inclusive Experience: Survey data (4 out of 108 respondents) identified visually impaired users; the sound-centric design extends exhibition access to this underserved demographic.</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Operational</td>
+          <td className="px-4 py-4">Cost Efficiency</td>
+          <td className="px-4 py-4">Scalable Modular Design: Engineered a flexible moving module system to minimize on-site re-fabrication and logistics costs across varying exhibition scales.</td>
+        </tr>
+ 
+      
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 
           
           
