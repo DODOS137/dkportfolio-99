@@ -470,7 +470,7 @@ your research abilities. They should reflect your own interests and support your
   </ul>
 </section>
 
-          {/* Design Highlights table */} 
+{/* Design Highlights table */} 
 <div className="mt-6 mb-6">
   <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
     <table className="w-full text-left text-sm text-gray-400">
@@ -495,7 +495,7 @@ your research abilities. They should reflect your own interests and support your
         <tr>
           <td className="px-4 py-4 font-light">Operational</td>
           <td className="px-4 py-4">Cost Efficiency (Est.)</td>
-          <td className="px-4 py-4">Digital Showcasing: High-impact promotion and global distribution at a fraction of the cost (<5%) of physical pavilion construction, significantly reducing overhead for large-scale exhibitions.</td>
+          <td className="px-4 py-4">Digital Showcasing: High-impact promotion and global distribution at a fraction of the cost (<5%) of physical pavilion construction, significantly reducing overhead for large-scale exhibitions. </td>
         </tr>
  
       
