@@ -489,12 +489,12 @@ your research abilities. They should reflect your own interests and support your
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Accessibility</td>
-          <td className="px-4 py-4">High Efficiency (Est.)</td>
+          <td className="px-4 py-4">High Efficiency</td>
           <td className="px-4 py-4">Knowledge Acquisition: Enhanced information retention and user convenience by transforming complex scientific data into an immersive VR/Video experience, reducing cognitive load for general audiences.</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Operational</td>
-          <td className="px-4 py-4">Cost Efficiency (Est.)</td>
+          <td className="px-4 py-4">Cost Efficiency</td>
           <td className="px-4 py-4">Digital Showcasing: High-impact promotion and global distribution at a fraction of the cost (<5%) of physical pavilion construction, significantly reducing overhead for large-scale exhibitions. </td>
         </tr>
  
