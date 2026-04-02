@@ -44,7 +44,7 @@ const ThermalTraceProjectDetail = () => {
   <ProjectLayout>
       <ProjectNavigation />
 
-      <ProjectHero title={project.heroTitle} subtitle="Reimaging the Fashion Show Through XR" year="2022-2025" client="Personal Project" role="XR & Exhibition Designer" />
+      <ProjectHero title={project.heroTitle} subtitle="Reimagining the Fashion Show Through XR" year="2022-2025" client="Personal Project" role="XR & Exhibition Designer" />
 
       <section className="">
         {/* First Image */}
