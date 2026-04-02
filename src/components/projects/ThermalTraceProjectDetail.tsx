@@ -304,6 +304,40 @@ const ThermalTraceProjectDetail = () => {
     <li>• Visibility stress-test: challenges how presence and form are perceived.</li>
   </ul>
 </section>
+
+{/* Design Highlights table */} 
+<div className="mt-6 mb-6">
+  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
+    <table className="w-full text-left text-sm text-gray-400">
+      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+        <tr>
+          <th className="px-4 py-3">Category</th>
+          <th className="px-4 py-3">Indicator</th>
+          <th className="px-4 py-3">Rationale / Data Source</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-white/10">
+        <tr>
+          <td className="px-4 py-4 font-light">Production</td>
+          <td className="px-4 py-4">90%+ Stability</td>
+          <td className="px-4 py-4">Technical Optimization: Optimized WebGL and VR packages to ensure seamless performance; on-site survey data confirmed over 90% stability across various standard mobile/PC devices without high-end VR hardware.</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Accessibility</td>
+          <td className="px-4 py-4">+25% Capacity</td>
+          <td className="px-4 py-4">Spatial Efficiency: Physical simulation and user testing (based on a 30m² area) confirmed that the layout accommodates 25% more participants compared to conventional setups.</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Operational</td>
+          <td className="px-4 py-4">Cost Efficiency</td>
+          <td className="px-4 py-4">Logistics-Free Showcase: Eliminates physical shipping and onsite storage costs by replacing material transport with seamless digital data deployment for global fashion events.</td>
+        </tr>
+ 
+      
+      </tbody>
+    </table>
+  </div>
+</div>
            
 
 
