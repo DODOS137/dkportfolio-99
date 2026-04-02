@@ -485,7 +485,7 @@ your research abilities. They should reflect your own interests and support your
         <tr>
           <td className="px-4 py-4 font-light">Production</td>
           <td className="px-4 py-4">-70% Time Saved</td>
-          <td className="px-4 py-4">Gen-AI Video Workflow: Produced a 3-minute high-fidelity AI video in ~7.5 hours (450 min); this represents a 70% reduction in lead time compared to traditional motion graphics production cycles for similar complexity.</td>
+          <td className="px-4 py-4">Gen-AI Video Workflow: Produced a 3-minute AI video in ~7.5 hours (450 min); this represents a 70% reduction in lead time compared to traditional motion graphics production cycles for similar complexity.</td>
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">Accessibility</td>
@@ -495,7 +495,7 @@ your research abilities. They should reflect your own interests and support your
         <tr>
           <td className="px-4 py-4 font-light">Operational</td>
           <td className="px-4 py-4">Cost Efficiency</td>
-          <td className="px-4 py-4">Digital Showcasing: High-impact promotion and global distribution at a fraction of the cost (<5%) of physical pavilion construction, significantly reducing overhead for large-scale exhibitions. </td>
+          <td className="px-4 py-4">Digital Showcasing: High-impact promotion and global distribution at a fraction of the cost {"(<5%)"} of physical pavilion construction, significantly reducing overhead for large-scale exhibitions. </td>
         </tr>
  
       
