@@ -527,6 +527,40 @@ Moved away from passive, linear layouts towards participatory and immersive expe
   </ul>
 </section>
 
+{/* Design Highlights table */} 
+<div className="mt-6 mb-6">
+  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
+    <table className="w-full text-left text-sm text-gray-400">
+      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
+        <tr>
+          <th className="px-4 py-3">Category</th>
+          <th className="px-4 py-3">Indicator</th>
+          <th className="px-4 py-3">Rationale / Data Source</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-white/10">
+        <tr>
+          <td className="px-4 py-4 font-light">Production</td>
+          <td className="px-4 py-4">Space Efficiency</td>
+          <td className="px-4 py-4">Interior Re-engineering: Focused on internal spatial optimization rather than structural changes, increasing visitor capacity and improving flow within the existing footprint. </td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Accessibility</td>
+          <td className="px-4 py-4">Virtual Pavilion</td>
+          <td className="px-4 py-4">VR Content Integration: Designed a VR-ready digital twin of the museum to overcome physical space constraints, allowing for 'unlimited' exhibition expansion and remote access.</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-4 font-light">Operational</td>
+          <td className="px-4 py-4">Revenue Growth</td>
+          <td className="px-4 py-4">Profit Diversification: Strategic identity overhaul and unique merchandise (MD) design, projected to surpass the 2020 baseline ($516,809) by creating new revenue streams. </td>
+        </tr>
+ 
+      
+      </tbody>
+    </table>
+  </div>
+</div>
+
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
