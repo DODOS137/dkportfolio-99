@@ -528,8 +528,8 @@ const WhispersProjectDetail = () => {
   </ul>
 </section>
 
+{/* Design Highlights table */} 
 <div className="mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
   <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
     <table className="w-full text-left text-sm text-gray-400">
       <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
