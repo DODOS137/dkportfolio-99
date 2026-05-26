@@ -356,25 +356,25 @@ const WhispersProjectDetail = () => {
 
 
 
-{/*Research*/}
+{/*Summary*/}
 <section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
   <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">Challenge</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Challenge</p>
       <p className="text-sm text-gray-400 mt-2">Visual-first marine exhibitions overlook hidden species.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">Evidence</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Evidence</p>
       <p className="text-sm text-gray-400 mt-2">Research showed awareness centred on iconic marine animals.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">Proposal</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Proposal</p>
       <p className="text-sm text-gray-400 mt-2">Shifted the experience from looking to listening through sound, touch, and AR.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-2xl md:text-xl font-light text-white">Outputs</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Outputs</p>
       <p className="text-sm text-gray-400 mt-2">Modular listening stations, AR triggers, spatial renders, graphics, and visitor journey logic.</p>
     </div>
   </div>
@@ -431,16 +431,7 @@ const WhispersProjectDetail = () => {
   </div>
 </div>
 
-{/* Design Highlights */}       
-<section id="design" className="mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
-  <ul className="space-y-3 text-gray-400">
-    <li>• Sound as narrative; bioacoustics drive empathy.</li>
-    <li>• Rock-like plinths for solitary listening.</li>
-    <li>• Flexible exhibition format designed for scalability and adaptability across contexts.</li>
-    <li>• AR scans trigger species; touch + sound + vision combined.</li>
-  </ul>
-</section>
+
 
 {/* Design Highlights table */} 
 <div className="mt-6 mb-6">
