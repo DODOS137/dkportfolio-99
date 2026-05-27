@@ -388,48 +388,7 @@ const WhispersProjectDetail = () => {
 </section>
 
 
-{/* Tools & Roles Table */}
-<div className="mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
-  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-    <table className="w-full text-left text-sm text-gray-400">
-      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
-        <tr>
-          <th className="px-4 py-3">Part</th>
-          <th className="px-4 py-3">Tools</th>
-          <th className="px-4 py-3">Outputs</th>
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-white/10">
-        <tr>
-          <td className="px-4 py-4 font-light">Modeling</td>
-          <td className="px-4 py-4">AutoCAD, 3ds Max</td>
-          <td className="px-4 py-4">Exhibition modules, spatial layouts</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Texturing</td>
-          <td className="px-4 py-4">Substance Painter, Photoshop</td>
-          <td className="px-4 py-4">PBR stone/metal material maps</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Lighting & Rendering</td>
-          <td className="px-4 py-4"> V-Ray</td>
-          <td className="px-4 py-4">Spatial ambience renders</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Interaction / AR</td>
-          <td className="px-4 py-4">Unity (AR Foundation)</td>
-          <td className="px-4 py-4">AR species animations, QR triggers</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Graphics</td>
-          <td className="px-4 py-4">Adobe Suite </td>
-          <td className="px-4 py-4">Exhibition panels, accessibility assets</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+
 
 
 
@@ -440,27 +399,32 @@ const WhispersProjectDetail = () => {
     <table className="w-full text-left text-sm text-gray-400">
       <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
         <tr>
-          <th className="px-4 py-3">Category</th>
-          <th className="px-4 py-3">Indicator</th>
-          <th className="px-4 py-3">Rationale / Data Source</th>
+          <th className="px-4 py-3"></th>
+          <th className="px-4 py-3">Impact</th>
+          <th className="px-4 py-3">Output</th>
         </tr>
       </thead>
       <tbody className="divide-y divide-white/10">
         <tr>
-          <td className="px-4 py-4 font-light">Production</td>
-          <td className="px-4 py-4">-50% Time (Est.) </td>
-          <td className="px-4 py-4">AI-Accelerated Workflow: Optimized 2D graphic assets and texture generation using generative AI, reducing the lead time by half compared to my average manual production speed for similar tasks.</td>
-        </tr>
+          <td className="px-4 py-4 font-light">Sound-led storytelling</td>
+          <td className="px-4 py-4">Reframes overlooked marine life through listening rather than visual spectacle.</td>
+          <td className="px-4 py-4">Bioacoustic visitor journey</tr>
         <tr>
-          <td className="px-4 py-4 font-light">Accessibility</td>
-          <td className="px-4 py-4">+3.7% Reach</td>
-          <td className="px-4 py-4">Inclusive Experience: Survey data (4 out of 108 respondents) identified visually impaired users; the sound-centric design extends exhibition access to this underserved demographic.</td>
-        </tr>
+          <td className="px-4 py-4 font-light">Tactile modules</td>
+          <td className="px-4 py-4">Supports non-visual engagement; 4/108 survey participants identified as visually impaired.</td>
+          <td className="px-4 py-4">Rock-like listening stations</tr>
         <tr>
-          <td className="px-4 py-4 font-light">Operational</td>
-          <td className="px-4 py-4">Cost Efficiency</td>
-          <td className="px-4 py-4">Scalable Modular Design: Engineered a flexible moving module system to minimize on-site re-fabrication and logistics costs across varying exhibition scales.</td>
-        </tr>
+          <td className="px-4 py-4 font-light">AI-assisted workflow</td>
+          <td className="px-4 py-4">~50% faster(Est.) asset production compared with previous manual workflow.</td>
+          <td className="px-4 py-4">Graphics and texture assets</tr>
+       <tr>
+          <td className="px-4 py-4 font-light">AR discovery</td>
+          <td className="px-4 py-4">Turns hidden species into active digital encounters.</td>
+          <td className="px-4 py-4">QR/AR species triggers</tr>
+       <tr>
+          <td className="px-4 py-4 font-light">Modular system</td>
+          <td className="px-4 py-4">Allows flexible installation across different exhibition contexts.</td>
+          <td className="px-4 py-4">Reconfigurable exhibition layout</tr>
  
       
       </tbody>
@@ -491,147 +455,21 @@ const WhispersProjectDetail = () => {
            {/*Development Image1*/}     
           <div className="w-full mb-4">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" />
-          </div>           
-          
-          
-        
-         {/*Research Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
-          </div>  
-         
-          {/*Research Image2-1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB3.jpg" />
-          </div> 
+          </div>    
 
-          {/*idea development text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Idea Development</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is treated not as raw data but as narrative. Bioacoustic studies of marine invertebrates shaped the exhibition’s emotional tone, showing how sonic signals reveal behaviour and ecosystem health. These acoustic ecologies open a channel for empathy and a reframing of conservation dialogue.
-           </p>
-           </div>
-           </div>
-
-
-          
-          {/*idea development text 2*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">While whales and dolphins receive outsized attention, invertebrates and bottom-dwellers remain excluded from empathy and conservation. The project addresses this imbalance by amplifying the hidden voices of these species.
-           </p>
-           </div>
-           </div>
+          {/*Development Image2*/}     
+          <div className="w-full mb-4">
+            <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" />
+          </div>   
 
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-          {/*ai text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Integrated AI Workflow</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Refined design challenges and identified solution clues through iterative AI dialogue . Conceptual product forms derived from AI underwent rigorous post-processing to develop high-fidelity mockups. Subsequently, foundational character concepts and motion patterns were established via generative models, with AI-generated visual assets serving as primary sources for manual 2D graphic editing and composition.
-           </p>
-           </div>
-           </div>
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-          {/*Poster Design Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
-          </div>     
-
-
-
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-          
-{/* AR APP YouTube Video Section */}
-<div className="mt-40 mb-20 md:mt-40 relative">
-  {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
-  <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-[#C7B299]  z-0" />
-
-  {/* 유튜브 플레이어 */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
-  </AspectRatio>
-</div>
-
-
-          {/*Product Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Product Design</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Custom-designed headset stands emulate smoothed underwater rocks, integrating both audio hardware and tactile visuality. Each plinth invites solitary listening through high-resolution recordings of marine species. The subtlety of these soundscapes becomes a form of protest against the visual-centric bias of most exhibitions.
-          </p>
-         </div>
-         </div>
-          
-          
-          
-         {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-          {/*Process Rendering Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB5.jpg" />
-          </div>
-
-          {/*Process Rendering Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB6.jpg" />
-          </div>
-
-           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-           {/*Spatial Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Exhibition modules are mobile and adaptable, enabling flexible installation across diverse locations. Ceiling-mounted wave-shaped metal fixtures and textured lighting elements simulate underwater ambience, enriching the overall spatial immersion.</p>
-         </div>
-         </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-          {/*Exhibition Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The experience combines analog tactility with digital immersion. Visitors use AR-enabled displays to scan QR codes, triggering animated 3D models of species in motion. This integration of touch, sound, and vision deepens the emotional engagement, transforming passive observation into active reflection.</p>
-          </div>
-         </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-                    
-          {/*Spatial Design Process Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB7.jpg" />
-          </div> 
-
-
-
-
-
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>  
-
-       
-          {/*Bridge Image1*/}        
+           
+           
+           
+           
+           {/*Bridge Image1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8.jpg" />
           </div>
@@ -670,7 +508,97 @@ const WhispersProjectDetail = () => {
            {/*Exhibition Design Image3*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" />
-          </div>   
+          </div>  
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          
+        
+         {/*Research Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
+          </div>  
+         
+          {/*Research Image2-1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB3.jpg" />
+          </div> 
+
+ 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+
+
+
+
+
+          {/*Poster Design Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
+          </div>     
+
+
+
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+          
+{/* AR APP YouTube Video Section */}
+<div className="mt-40 mb-20 md:mt-40 relative">
+  {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
+  <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-[#C7B299]  z-0" />
+
+  {/* 유튜브 플레이어 */}
+  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
+    <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
+  </AspectRatio>
+</div>
+
+
+
+          
+          
+          
+         {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+          {/*Process Rendering Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB5.jpg" />
+          </div>
+
+          {/*Process Rendering Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB6.jpg" />
+          </div>
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+
+
+                    
+          {/*Spatial Design Process Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB7.jpg" />
+          </div> 
+
+
+
+
+
+
+
+ 
+
+       
+ 
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
