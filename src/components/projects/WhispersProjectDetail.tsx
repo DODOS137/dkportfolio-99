@@ -408,23 +408,28 @@ const WhispersProjectDetail = () => {
         <tr>
           <td className="px-4 py-4 font-light">Sound-led storytelling</td>
           <td className="px-4 py-4">Reframes overlooked marine life through listening rather than visual spectacle.</td>
-          <td className="px-4 py-4">Bioacoustic visitor journey</tr>
+          <td className="px-4 py-4">Bioacoustic visitor journey</td>
+        </tr>
         <tr>
           <td className="px-4 py-4 font-light">Tactile modules</td>
           <td className="px-4 py-4">Supports non-visual engagement; 4/108 survey participants identified as visually impaired.</td>
-          <td className="px-4 py-4">Rock-like listening stations</tr>
+          <td className="px-4 py-4">Rock-like listening stations</td>
+        </tr>
         <tr>
           <td className="px-4 py-4 font-light">AI-assisted workflow</td>
           <td className="px-4 py-4">~50% faster(Est.) asset production compared with previous manual workflow.</td>
-          <td className="px-4 py-4">Graphics and texture assets</tr>
+          <td className="px-4 py-4">Graphics and texture assets</td>
+        </tr>
        <tr>
           <td className="px-4 py-4 font-light">AR discovery</td>
           <td className="px-4 py-4">Turns hidden species into active digital encounters.</td>
-          <td className="px-4 py-4">QR/AR species triggers</tr>
+          <td className="px-4 py-4">QR/AR species triggers</td>
+       </tr>
        <tr>
           <td className="px-4 py-4 font-light">Modular system</td>
           <td className="px-4 py-4">Allows flexible installation across different exhibition contexts.</td>
-          <td className="px-4 py-4">Reconfigurable exhibition layout</tr>
+          <td className="px-4 py-4">Reconfigurable exhibition layout</td>
+       </tr>
  
       
       </tbody>
