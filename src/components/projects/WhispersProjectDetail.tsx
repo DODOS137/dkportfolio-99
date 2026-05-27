@@ -464,11 +464,11 @@ const WhispersProjectDetail = () => {
 
           {/*Development Image2*/}     
           <div className="w-full mb-4">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" />
+            <img className="w-full h-full" src="/webimages/WFTB/WFB15.jpg" />
           </div>   
 
           {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
            
            
@@ -516,34 +516,10 @@ const WhispersProjectDetail = () => {
           </div>  
 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+ 
           
         
-         {/*Research Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
-          </div>  
-         
-          {/*Research Image2-1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB3.jpg" />
-          </div> 
-
  
-
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-
-
-
-
-
-          {/*Poster Design Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
-          </div>     
 
 
 
@@ -593,6 +569,35 @@ const WhispersProjectDetail = () => {
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB7.jpg" />
           </div> 
+
+
+         {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+         {/*Research Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
+          </div>  
+         
+          {/*Research Image2-1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB3.jpg" />
+          </div> 
+
+ 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+
+
+
+
+
+          {/*Poster Design Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
+          </div>    
 
 
 
