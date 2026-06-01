@@ -453,7 +453,7 @@ const WhispersProjectDetail = () => {
           
           
           
-          {/* Graphic design images Section */}
+
  
   
 
@@ -464,8 +464,13 @@ const WhispersProjectDetail = () => {
 
           {/*Development Image2*/}     
           <div className="w-full mb-4">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB15.jpg" />
+            <img className="w-full h-full" src="/webimages/WFTB/WFB1-2.jpg" />
           </div>   
+
+          {/*Development Image3*/}     
+          <div className="w-full mb-4">
+            <img className="w-full h-full" src="/webimages/WFTB/WFB1-3.jpg" />
+          </div> 
 
           
 
