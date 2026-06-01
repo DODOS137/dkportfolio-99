@@ -606,7 +606,7 @@ const WhispersProjectDetail = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Mobile modules allow the exhibition to be reconfigured across different venues, while wave-like ceiling elements and reflective lighting create an underwater atmosphere.
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Mobile modules allow the exhibition to be reconfigured across different venues, while wave-like ceiling elements and reflective lighting create an underwater atmosphere.</p>
           </div>
          </div>
 
