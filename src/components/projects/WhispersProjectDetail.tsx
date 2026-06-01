@@ -463,7 +463,7 @@ const WhispersProjectDetail = () => {
           </div>    
 
           {/*Development Image2*/}     
-          <div className="w-full mb-4">
+          <div className="w-full mb-0">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1-2.jpg" />
           </div>   
 
