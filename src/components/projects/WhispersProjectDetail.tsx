@@ -371,11 +371,11 @@ const WhispersProjectDetail = () => {
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <p className="text-xl md:text-xl font-light text-gray-300">Evidence</p>
-      <p className="text-sm text-gray-400 mt-2">Research showed awareness centred on iconic marine animals.</p>
+      <p className="text-sm text-gray-400 mt-2">Public awareness was concentrated on iconic marine animals.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <p className="text-xl md:text-xl font-light text-gray-300">Proposal</p>
-      <p className="text-sm text-gray-400 mt-2">Shifted the experience from looking to listening through sound, touch, and AR.</p>
+      <p className="text-sm text-gray-400 mt-2">A modular exhibition system shifting visitors from looking to listening through sound, touch, and AR.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <p className="text-xl md:text-xl font-light text-gray-300">Outputs</p>
