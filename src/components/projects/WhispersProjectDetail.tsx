@@ -467,6 +467,20 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full" src="/webimages/WFTB/WFB15.jpg" />
           </div>   
 
+          
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+           {/*idea development text 1*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Idea Development</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is used as a narrative layer rather than background information. By focusing on the bioacoustics of overlooked marine invertebrates, the exhibition shifts ocean conservation from visual spectacle to intimate listening.
+           </p>
+           </div>
+           </div>
+
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
@@ -542,11 +556,25 @@ const WhispersProjectDetail = () => {
 
 
 
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+          
+          {/*Exhibition AR Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition combines tactile modules, sound, QR/AR scanning, and animated species content, turning passive viewing into active discovery.
+          </p>
+          </div>
+         </div>
+
+
           
           
           
          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
           {/*Process Rendering Image1*/}        
           <div className="w-full">
@@ -557,6 +585,7 @@ const WhispersProjectDetail = () => {
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB6.jpg" />
           </div>
+          
 
            {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
@@ -569,6 +598,19 @@ const WhispersProjectDetail = () => {
           <div className="w-full">
             <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB7.jpg" />
           </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+          {/*Spatial Design Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Mobile modules allow the exhibition to be reconfigured across different venues, while wave-like ceiling elements and reflective lighting create an underwater atmosphere.
+          </div>
+         </div>
+
+
 
 
          {/*Line*/} 
@@ -618,7 +660,7 @@ const WhispersProjectDetail = () => {
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project creates a reflective environment where emotional storytelling becomes a way to raise ecological awareness. It questions the hierarchy of empathy between humans and other species, encouraging visitors to connect with marine life on a deeper emotional level. Beyond the exhibition itself, the work presents a modular system that can be reconfigured for various spatial settings, allowing flexible adaptation across institutions. With the potential to collaborate with organisations such as UNESCO and related educational partners, it proposes a scalable platform for future development in environmental education, cultural communication, and immersive learning experiences.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project proposes a modular, sound-led exhibition platform that reveals overlooked marine life through listening, touch, and AR discovery. It can be adapted across educational, cultural, and environmental exhibition contexts.
            </p>
            </div>
            </div>
