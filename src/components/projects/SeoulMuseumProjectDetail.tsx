@@ -341,6 +341,10 @@ const SeoulMuseumProjectDetail = () => {
     </AspectRatio>
   </div>
 
+   <p className="text-xl md:text-xl font-Medium text-black mb-6 relative z-10">
+    Project Video
+  </p>
+
   <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
     <LiteYouTube
       id="8GEK3igRom0" 
