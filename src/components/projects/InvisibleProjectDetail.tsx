@@ -307,200 +307,84 @@ your research abilities. They should reflect your own interests and support your
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent" />
 
-{/* Summary */}
-<section aria-labelledby="sum-title" className="mt-6 mb-6">
-  <h2 id="sum-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">
-    Summary
-  </h2>
-  <div className="grid md:grid-cols-3 gap-6">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-        <li>Conventional museum format</li>
-        <li>Abstract scientific concepts inaccessible</li>
-        <li>Weak emotional engagement</li>
-      </ul>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-        <li>VR-spatial storytelling</li>
-        <li>Four core themes: gravity · light · life · time</li>
-        <li>Symbolic + immersive spatial design</li>
-        <li>Intuitive interactions for accessibility</li>
-      </ul>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-        <li>67% found VR more effective</li>
-        <li>Gravity & time most impactful</li>
-        <li>Higher curiosity, mixed learning outcomes</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
-{/* Full text */}
-<details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
-  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
-  <div className="px-4 pb-6 mt-6 space-y-6">
-    <div>
-      <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
-      <p className="text-sm leading-relaxed font-light text-gray-400">
-       The project focused on simplifying complex topics into accessible narratives and designing intuitive interaction models. Symbolism and abstraction were employed to visualise phenomena beyond everyday perception, while immersive environments provided an emotional framework to deepen connection and engagement. This design approach positioned science not only as knowledge to be learned, but as an experience to be felt.
-    </p>
-    </div>
-    <div>
-      <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
-      <p className="text-sm leading-relaxed font-light text-gray-400">
-        The project sought to reimagine the communication of science in cultural institutions. Instead of presenting information as static content, the aim was to transform exhibitions into participatory experiences where knowledge emerges through interaction. By reframing scientific concepts as shared emotional and symbolic languages, the work highlights how immersive media can bridge gaps in public science education and broaden accessibility across different backgrounds.
-      </p>
-    </div>
-    <div>
-      <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
-      <p className="text-sm leading-relaxed font-light text-gray-400">
-        Four universal scientific themes—gravity, light, life, and time—were selected as the foundation of the exhibition. Each theme was spatially embodied in a dedicated immersive environment, combining abstraction with sensory cues.
-      </p>
-    </div>
-   
-  </div>
-</details>
 
-{/* Research */}
+
+
+
+{/*Summary*/}
 <section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
-  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Research</h2>
+  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
+
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">73%</p>
-      <p className="text-sm text-gray-400 mt-2">found displays lacked spatial clarity</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Challenge</p>
+      <p className="text-sm text-gray-400 mt-2">Abstract scientific concepts are often difficult to understand through conventional museum displays.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">76%</p>
-      <p className="text-sm text-gray-400 mt-2">preferred immersive VR-based learning</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Evidence</p>
+      <p className="text-sm text-gray-400 mt-2">Research showed that visitors preferred immersive VR-based learning and clearer spatial explanations.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">306</p>
-      <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Proposal</p>
+      <p className="text-sm text-gray-400 mt-2">Transform gravity, light, life, and time into an emotional VR journey across symbolic spatial chambers.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-2xl md:text-xl font-light text-white">Insight</p>
-      <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Outputs</p>
+      <p className="text-sm text-gray-400 mt-2">VR environment, AI-generated science videos, spatial renders, thematic chambers, narrative flow, and interactive learning prototype.</p>
     </div>
   </div>
 
   <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black p-4">
     <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
     <p className="mt-6 text-sm text-gray-400">
-      An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.
-    </p>
+     An online and offline survey involving 306 participants was conducted to examine the limitations of traditional science exhibitions and gauge interest in immersive educational technologies. Results indicated that 73% (223) of respondents believed conventional science displays lacked engaging spatial formats and narrative clarity. Furthermore, 76% (233) expressed a desire for immersive VR-based experiences to better understand abstract scientific concepts. These insights informed the design rationale and validated the project's direction.</p>
   </details>
 </section>
 
-{/* Process */}
-<section id="process" className="rounded-lg bg-black mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Process</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <h3 className="text-white font-light mb-3">01 Ideation</h3>
-      <p className="text-gray-400 text-sm">Brainstorming</p>
-      <p className="text-gray-400 text-sm">Concept sketches</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <h3 className="text-white font-light mb-3">02 Analysis</h3>
-      <p className="text-gray-400 text-sm">Context & precedents</p>
-      <p className="text-gray-400 text-sm">Narrative flow</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <h3 className="text-white font-light mb-3">03 Development</h3>
-      <p className="text-gray-400 text-sm">World/spatial/level design</p>
-      <p className="text-gray-400 text-sm">Video development</p>
-    </div>
-  </div>
-</section>
 
-{/* Tools & Roles */}
-<div className="mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
-  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-    <table className="w-full text-left text-sm text-gray-400">
-      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
-        <tr>
-          <th className="px-4 py-3">Part</th>
-          <th className="px-4 py-3">Tools</th>
-          <th className="px-4 py-3">Outputs</th>
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-white/10">
-        <tr>
-          <td className="px-4 py-4 font-light">Modeling</td>
-          <td className="px-4 py-4">AutoCAD, 3ds Max</td>
-          <td className="px-4 py-4">3D Assets, Space</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Texturing</td>
-          <td className="px-4 py-4">Photoshop</td>
-          <td className="px-4 py-4">PBR material maps</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Lighting & Rendering</td>
-          <td className="px-4 py-4">Unreal Engine, 3ds Max</td>
-          <td className="px-4 py-4">Spatial real-time renders</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Interaction / VR</td>
-          <td className="px-4 py-4">Unreal Engine</td>
-          <td className="px-4 py-4">VR Environment</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Graphics & Video</td>
-          <td className="px-4 py-4">Adobe Suite, Runway AI</td>
-          <td className="px-4 py-4">Artworks</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
 
-{/* Design Highlights */}       
-<section id="design" className="mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
-  <ul className="space-y-3 text-gray-400">
-    <li>• Virtual environment & worldbuilding.</li>
-    <li>• Perceptual transformation from the explorer’s perspective.</li>
-    <li>• Video production using AI generator.</li>
-    <li>• Spatial design tailored to each chamber’s theme.</li>
-    <li>• Chambers translate abstraction into felt space: distortion, reflection, growth, temporal shifts.</li>
-  </ul>
-</section>
+
+
 
 {/* Design Highlights table */} 
 <div className="mt-6 mb-6">
+<h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
   <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
     <table className="w-full text-left text-sm text-gray-400">
       <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
         <tr>
-          <th className="px-4 py-3">Category</th>
-          <th className="px-4 py-3">Indicator</th>
-          <th className="px-4 py-3">Rationale / Data Source</th>
+          <th className="px-4 py-3"></th>
+          <th className="px-4 py-3">Impact</th>
+          <th className="px-4 py-3">Output</th>
         </tr>
       </thead>
       <tbody className="divide-y divide-white/10">
         <tr>
-          <td className="px-4 py-4 font-light">Production</td>
-          <td className="px-4 py-4">-70% Time Saved</td>
-          <td className="px-4 py-4">Gen-AI Video Workflow: Produced a 3-minute AI video in ~7.5 hours (450 min); this represents a 70% reduction in lead time compared to traditional motion graphics production cycles for similar complexity.</td>
+          <td className="px-4 py-4 font-light">Scientific Storytelling</td>
+          <td className="px-4 py-4">Makes abstract science emotionally and spatially understandable.</td>
+          <td className="px-4 py-4">Gravity / Light / Life / Time narrative</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Accessibility</td>
-          <td className="px-4 py-4">High Efficiency</td>
-          <td className="px-4 py-4">Knowledge Acquisition: Enhanced information retention and user convenience by transforming complex scientific data into an immersive VR/Video experience, reducing cognitive load for general audiences.</td>
+          <td className="px-4 py-4 font-light">VR Spatial Journey</td>
+          <td className="px-4 py-4">Turns learning into embodied exploration rather than passive viewing.</td>
+          <td className="px-4 py-4">Immersive VR experience</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Operational</td>
-          <td className="px-4 py-4">Cost Efficiency</td>
-          <td className="px-4 py-4">Digital Showcasing: High-impact promotion and global distribution at a fraction of the cost {"(<5%)"} of physical pavilion construction, significantly reducing overhead for large-scale exhibitions. </td>
+          <td className="px-4 py-4 font-light">Thematic Spaces</td>
+          <td className="px-4 py-4">Translates each concept into a different spatial atmosphere and interaction.</td>
+          <td className="px-4 py-4">Distortion / Reflection / Time spaces</td>
         </tr>
+       <tr>
+          <td className="px-4 py-4 font-light">AI Video Workflow</td>
+          <td className="px-4 py-4">Accelerates visual development for complex scientific phenomena.</td>
+          <td className="px-4 py-4">AI-generated science videos</td>
+       </tr>
+       <tr>
+          <td className="px-4 py-4 font-light">Learning Platform</td>
+          <td className="px-4 py-4">Connects worldbuilding, video, spatial design, and VR into one educational system.</td>
+          <td className="px-4 py-4">VR prototype + interactive content</td>
+       </tr>
  
       
       </tbody>
@@ -508,10 +392,30 @@ your research abilities. They should reflect your own interests and support your
   </div>
 </div>
 
+
+
+          
+          
+          
           
 
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent" />
+
+          
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+          
            
             {/* World buliding Image 1,2*/}
             <div className="w-full">
