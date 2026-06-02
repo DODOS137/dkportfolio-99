@@ -357,85 +357,32 @@ const SeoulMuseumProjectDetail = () => {
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
-{/* Summary */}
-<section aria-labelledby="sum-title" className="mt-6 mb-6">
-  <h2 id="sum-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">
-    Summary
-  </h2>
-  <div className="grid md:grid-cols-3 gap-6">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Challenge</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-         <li>Outdated façade & interiors</li>
-         <li>Weak cultural identity</li>
-         <li>Limited visitor engagement</li>
-      </ul>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Approach</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-                    <li>Contemporary landmark façade</li>
-                    <li>Spatial renewal & circulation upgrade</li>
-                    <li>Immersive storytelling + interactive media</li>
-     
-      </ul>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6">
-      <h3 className="text-sm uppercase tracking-wider text-gray-300 mb-3">Result</h3>
-      <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside">
-                    <li>Repositioned as cultural landmark</li>
-                    <li>Enhanced visitor experience</li>
-                    <li>Alignment with modern expectations</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
-{/* Full text */}
-<details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black">
-  <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">Full text</summary>
-  <div className="px-4 pb-6 mt-6 space-y-6">
-    <div>
-      <h3 className="text-sm font-light text-gray-300 mb-3">Approach</h3>
-      <p className="text-sm leading-relaxed font-light text-gray-400">
-      Redefined the museum's identity by repositioning it through the lens of traditional Korean hunters. This narrative perspective shaped the exhibition tone, user experience, and spatial arrangement, bridging heritage interpretation with modern interaction design.
-      </p>
-    </div>
-    <div>
-      <h3 className="text-sm font-light text-gray-300 mb-3">Project Purpose</h3>
-      <p className="text-sm leading-relaxed font-light text-gray-400">
-     The museum’s collection is valued, yet its outdated grey façade, obsolete interiors, and weak identity limit its appeal—often compared to a municipal office rather than a cultural institution. A renewal strategy is proposed: redefine the façade with a contemporary landmark identity, update interiors for better circulation and engagement, and integrate immersive storytelling and interactive media. These changes would reposition the museum as a dynamic cultural space aligned with modern expectations.
-     </p>
-    </div>
-    <div>
-      <h3 className="text-sm font-light text-gray-300 mb-3">Development Strategy</h3>
-      <p className="text-sm leading-relaxed font-light text-gray-400">
-Moved away from passive, linear layouts towards participatory and immersive experiences. Reinterpreted outdated specimen-dense layouts with layered environmental cues, emphasising active visitor engagement. Reception, gift shop, and circulation were integrated with symbolic and narrative depth to enhance institutional coherence.
-     </p>
-    </div>
-   
-  </div>
-</details>
 
-{/* Research */}
+
+
+
+
+{/*Summary*/}
 <section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
-  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Research</h2>
+  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
+
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">84%</p>
-      <p className="text-sm text-gray-400 mt-2">demand renewal</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Challenge</p>
+      <p className="text-sm text-gray-400 mt-2">The museum’s identity, interiors, and visitor experience felt outdated and visually disconnected from contemporary cultural expectations.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">64%</p>
-      <p className="text-sm text-gray-400 mt-2">lacked a uniquely Korean perspective</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Evidence</p>
+      <p className="text-sm text-gray-400 mt-2">Research showed strong demand for renewal and a clearer Korean perspective within the museum experience.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-3xl md:text-3xl font-light text-white">213</p>
-      <p className="text-sm text-gray-400 mt-2">participants surveyed</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Proposal</p>
+      <p className="text-sm text-gray-400 mt-2">Reposition the museum as a contemporary cultural landmark through façade renewal, immersive interiors, VR extension, and brand storytelling.</p>
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-2xl md:text-xl font-light text-white">Insight</p>
-      <p className="text-sm text-gray-400 mt-2">VR-based immersive experiences</p>
+      <p className="text-xl md:text-xl font-light text-gray-300">Outputs</p>
+      <p className="text-sm text-gray-400 mt-2">Museum renewal concept, spatial renders, VR museum, exhibition panels, identity system, merchandise, and visitor-experience assets.</p>
     </div>
   </div>
 
@@ -443,121 +390,57 @@ Moved away from passive, linear layouts towards participatory and immersive expe
     <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
     <p className="mt-6 text-sm text-gray-400">
      A survey was conducted with 213 individuals who had previously visited the Seodaemun Museum of Natural History, either on-site or online. Among them, 32 participants had also experienced renowned natural history museums abroad. While the museum's collection of specimens was largely appreciated, 84% of respondents (179 people) highlighted the need for spatial and interior renewal. Critical feedback pointed to the building's outdated grey façade and lack of distinctive identity, often being compared to a generic municipal office rather than a museum.
-    </p>
 
-   <p className="mt-3 text-sm text-gray-400">
-    In addition, 72% (153 people) felt that the exhibitions relied too heavily on static text and specimens, lacking engaging storytelling or interactive interpretation. 67% (142 people) expressed disappointment at the absence of digital media or interactive technologies such as AR and VR. 59% (126 people) noted insufficient accessibility and inclusivity, citing limited multilingual support and lack of tactile features for disabled visitors. Importantly, 64% (137 people) highlighted the absence of a uniquely Korean perspective, observing that the museum resembled a generic international format rather than reflecting local cultural identity. Finally, 71% (151 people) emphasized the need for stronger community and educational engagement, pointing out the lack of workshops, public programs, and collaborations with schools.
-   </p>
+In addition, 72% (153 people) felt that the exhibitions relied too heavily on static text and specimens, lacking engaging storytelling or interactive interpretation. 67% (142 people) expressed disappointment at the absence of digital media or interactive technologies such as AR and VR. 59% (126 people) noted insufficient accessibility and inclusivity, citing limited multilingual support and lack of tactile features for disabled visitors. Importantly, 64% (137 people) highlighted the absence of a uniquely Korean perspective, observing that the museum resembled a generic international format rather than reflecting local cultural identity. Finally, 71% (151 people) emphasized the need for stronger community and educational engagement, pointing out the lack of workshops, public programs, and collaborations with schools.
 
-   <p className="mt-3 text-sm text-gray-400">
-    The findings reveal a strong demand not only for architectural redefinition but also for narrative, technological, and cultural transformation that aligns with contemporary expectations for cultural institutions.
-   </p>
-     
+The findings reveal a strong demand not only for architectural redefinition but also for narrative, technological, and cultural transformation that aligns with contemporary expectations for cultural institutions.
+</p>
   </details>
 </section>
 
-{/* Process */}
-<section id="process" className="rounded-lg bg-black mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Process</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <h3 className="text-white font-light mb-3">01 Ideation</h3>
-      <p className="text-gray-400 text-sm">Brainstorming</p>
-      <p className="text-gray-400 text-sm">Concept sketches</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <h3 className="text-white font-light mb-3">02 Analysis</h3>
-      <p className="text-gray-400 text-sm">Context & precedents</p>
-      <p className="text-gray-400 text-sm">Context & Problem Analysis</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <h3 className="text-white font-light mb-3">03 Development</h3>
-      <p className="text-gray-400 text-sm">Brand identity redefinition</p>
-      <p className="text-gray-400 text-sm">Spatial / Product / Exhibition design</p>
-    </div>
-  </div>
-</section>
 
-{/* Tools & Roles */}
-<div className="mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Tools & Roles</h2>
-  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-    <table className="w-full text-left text-sm text-gray-400">
-      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
-        <tr>
-          <th className="px-4 py-3">Part</th>
-          <th className="px-4 py-3">Tools</th>
-          <th className="px-4 py-3">Outputs</th>
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-white/10">
-        <tr>
-          <td className="px-4 py-4 font-light">Modeling</td>
-          <td className="px-4 py-4">AutoCAD, 3ds Max, Blender</td>
-          <td className="px-4 py-4">3D Product images, Space</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Texturing</td>
-          <td className="px-4 py-4">Photoshop</td>
-          <td className="px-4 py-4">PBR material maps</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Lighting & Rendering</td>
-          <td className="px-4 py-4">V-Ray</td>
-          <td className="px-4 py-4">Spatial image renders</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">VR Museum</td>
-          <td className="px-4 py-4">Unreal Engine</td>
-          <td className="px-4 py-4">Spatial real-time renders</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Graphics</td>
-          <td className="px-4 py-4">Adobe Suite</td>
-          <td className="px-4 py-4">Exhibition panels, accessibility assets, Artworks</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
 
-{/* Design Highlights */}       
-<section id="design" className="mt-6 mb-6">
-  <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
-  <ul className="space-y-3 text-gray-400">
-    <li>• Identity: Rebranded through hunter’s worldview.</li>
-    <li>• Space: From static to immersive, participatory layouts.</li>
-    <li>• Narrative: Respectful coexistence with nature as storyline.</li>
-  </ul>
-</section>
+
+
 
 {/* Design Highlights table */} 
 <div className="mt-6 mb-6">
+<h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
   <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
     <table className="w-full text-left text-sm text-gray-400">
       <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
         <tr>
-          <th className="px-4 py-3">Category</th>
-          <th className="px-4 py-3">Indicator</th>
-          <th className="px-4 py-3">Rationale / Data Source</th>
+          <th className="px-4 py-3"></th>
+          <th className="px-4 py-3">Impact</th>
+          <th className="px-4 py-3">Output</th>
         </tr>
       </thead>
       <tbody className="divide-y divide-white/10">
         <tr>
-          <td className="px-4 py-4 font-light">Production</td>
-          <td className="px-4 py-4">Space Efficiency</td>
-          <td className="px-4 py-4">Interior Re-engineering: Focused on internal spatial optimization rather than structural changes, increasing visitor capacity and improving flow within the existing footprint. </td>
+          <td className="px-4 py-4 font-light">Museum Repositioning</td>
+          <td className="px-4 py-4">Rebrands the museum as a contemporary cultural landmark.</td>
+          <td className="px-4 py-4">Façade renewal + identity direction</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Accessibility</td>
-          <td className="px-4 py-4">Virtual Pavilion</td>
-          <td className="px-4 py-4">VR Content Integration: Designed a VR-ready digital twin of the museum to overcome physical space constraints, allowing for 'unlimited' exhibition expansion and remote access.</td>
+          <td className="px-4 py-4 font-light">Cultural Narrative</td>
+          <td className="px-4 py-4">Introduces a clearer Korean perspective into the natural-history experience.</td>
+          <td className="px-4 py-4">Exhibition story + visual language</td>
         </tr>
         <tr>
-          <td className="px-4 py-4 font-light">Operational</td>
-          <td className="px-4 py-4">Revenue Growth</td>
-          <td className="px-4 py-4">Profit Diversification: Strategic identity overhaul and unique merchandise (MD) design, projected to surpass the 2020 baseline ($516,809) by creating new revenue streams. </td>
+          <td className="px-4 py-4 font-light">Spatial Renewal</td>
+          <td className="px-4 py-4">Turns static museum rooms into atmospheric, immersive visitor spaces.</td>
+          <td className="px-4 py-4">Interior renders + circulation plan</td>
         </tr>
+       <tr>
+          <td className="px-4 py-4 font-light">VR Extension</td>
+          <td className="px-4 py-4">Overcomes physical limitations through a digital museum layer.</td>
+          <td className="px-4 py-4">Unreal Engine VR museum</td>
+       </tr>
+       <tr>
+          <td className="px-4 py-4 font-light">Visitor-Facing System</td>
+          <td className="px-4 py-4">Unifies graphics, accessibility assets, and merchandise into a coherent museum experience.</td>
+          <td className="px-4 py-4">Panels, signage, MD, brand assets</td>
+       </tr>
  
       
       </tbody>
@@ -565,8 +448,29 @@ Moved away from passive, linear layouts towards participatory and immersive expe
   </div>
 </div>
 
+
+
+          
+          
+          
+          
+
+
+          
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+
+
+
+
+
+
+
+
+          
 
           {/*Site Image*/}     
           <div className="w-full">
