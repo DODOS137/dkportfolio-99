@@ -203,7 +203,7 @@ const WhispersProjectDetail = () => {
           <img
             alt={`${project.title} - Image 1`}
             className="w-full h-auto object-contain"
-            src="/lovable-uploads/801c52bc-cbaa-4c2f-a6ec-6d86c1a70034.png"
+            src="/webimages/WFTB/1.WFBCOVER1.jpg"
             loading="eager"           // ✅ NEW
             fetchpriority="high"     // ✅ NEW
             decoding="async"         // ✅ NEW
@@ -481,7 +481,7 @@ const WhispersProjectDetail = () => {
            {/*idea development text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[400px]"></h2>
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is used as a narrative layer rather than background information. By focusing on the bioacoustics of overlooked marine invertebrates, the exhibition shifts ocean conservation from visual spectacle to intimate listening.
            </p>
            </div>
