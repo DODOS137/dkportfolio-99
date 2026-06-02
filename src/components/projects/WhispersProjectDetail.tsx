@@ -568,7 +568,7 @@ const WhispersProjectDetail = () => {
          </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
           
 
