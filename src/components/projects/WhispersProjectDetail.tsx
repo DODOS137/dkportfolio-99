@@ -548,11 +548,35 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+
+           {/*Exhibition Flow */}       
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB15.jpg" />
+          </div>  
+
+                    {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+          {/*Exhibition AR Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition combines tactile modules, sound, QR/AR scanning, and animated species content, turning passive viewing into active discovery.
+          </p>
+          </div>
+         </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+          
+
           
 {/* AR APP YouTube Video Section */}
 <div className="mt-40 mb-20 md:mt-40 relative">
   {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
-  <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-[#C7B299]  z-0" />
+  <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
 
   {/* 유튜브 플레이어 */}
   <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
@@ -566,14 +590,7 @@ const WhispersProjectDetail = () => {
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
           
-          {/*Exhibition AR Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition combines tactile modules, sound, QR/AR scanning, and animated species content, turning passive viewing into active discovery.
-          </p>
-          </div>
-         </div>
+
 
 
           
