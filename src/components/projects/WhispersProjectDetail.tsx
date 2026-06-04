@@ -570,6 +570,13 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
+         {/*Exhibition Flow2 */}       
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB16.jpg" />
+          </div>  
+
+           {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
           
 
           
