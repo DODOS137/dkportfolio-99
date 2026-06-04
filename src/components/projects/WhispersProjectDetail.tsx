@@ -574,7 +574,7 @@ const WhispersProjectDetail = () => {
 
           
 {/* AR APP YouTube Video Section */}
-<div className="mt-40 mb-20 md:mt-40 relative">
+<div className="mt-10 mb-20 md:mt-10 relative">
   {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
   <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
 
@@ -601,8 +601,11 @@ const WhispersProjectDetail = () => {
 
           {/*Process Rendering Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB5.jpg" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB5.jpg" />
           </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
           {/*Process Rendering Image2*/}        
           <div className="w-full">
