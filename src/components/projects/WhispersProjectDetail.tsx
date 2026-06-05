@@ -403,7 +403,7 @@ const WhispersProjectDetail = () => {
     <table className="w-full text-left text-sm text-gray-400">
       <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
         <tr>
-          <th className="px-4 py-3"></th>
+          <th className="px-4 py-3">Feature</th>
           <th className="px-4 py-3">Impact</th>
           <th className="px-4 py-3">Output</th>
         </tr>
@@ -586,7 +586,7 @@ const WhispersProjectDetail = () => {
   <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
 
   <p className="text-xl md:text-xl font-Medium text-gray-300 mb-6 relative z-10">
-    Project Video
+    QR-to-AR mobile test
   </p>
 
   {/* 유튜브 플레이어 */}
