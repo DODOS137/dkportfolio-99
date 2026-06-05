@@ -379,7 +379,7 @@ const WhispersProjectDetail = () => {
     </div>
     <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
       <p className="text-xl md:text-xl font-light text-gray-300">Outputs</p>
-      <p className="text-sm text-gray-400 mt-2">Modular listening stations, AR triggers, spatial renders, graphics, and visitor journey logic.</p>
+      <p className="text-sm text-gray-400 mt-2">Modular listening stations, AR triggers, spatial renders, graphics, and visitor flow.</p>
     </div>
   </div>
 
@@ -421,7 +421,7 @@ const WhispersProjectDetail = () => {
         </tr>
         <tr>
           <td className="px-4 py-4 font-light">AI-assisted workflow</td>
-          <td className="px-4 py-4">~50% faster(Est.) asset production compared with previous manual workflow.</td>
+          <td className="px-4 py-4">Reduced early-stage visual asset production time by approximately 50%.</td>
           <td className="px-4 py-4">Graphics and texture assets</td>
         </tr>
        <tr>
@@ -585,6 +585,10 @@ const WhispersProjectDetail = () => {
   {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
   <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
 
+  <p className="text-xl md:text-xl font-Medium text-gray-300 mb-6 relative z-10">
+    Project Video
+  </p>
+
   {/* 유튜브 플레이어 */}
   <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
     <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
@@ -605,6 +609,25 @@ const WhispersProjectDetail = () => {
           
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+          {/*Spatial Design Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Rock-like listening modules combine headphones, QR/AR access, and tactile interaction, while layered ceiling elements use wave metal, glass, light, and reflection to simulate an underwater atmosphere.
+          </p>
+          </div>
+         </div>
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+
+          
 
           {/*Process Rendering Image1*/}        
           <div className="w-full">
@@ -632,16 +655,9 @@ const WhispersProjectDetail = () => {
             <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB7.jpg" />
           </div> 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-          {/*Spatial Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Mobile modules allow the exhibition to be reconfigured across different venues, while wave-like ceiling elements and reflective lighting create an underwater atmosphere.</p>
-          </div>
-         </div>
+
+
 
 
 
