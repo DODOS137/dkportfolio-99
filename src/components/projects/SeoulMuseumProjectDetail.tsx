@@ -275,16 +275,16 @@ const SeoulMuseumProjectDetail = () => {
     </p>   
        
     <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-    This project proposes a conceptual and spatial renewal of the Seodaemun Museum of Natural History, Korea's first public natural history museum. The redesign envisions a new identity—Seoul Natural History Museum—grounded in Korea's cultural relationship with nature, particularly from the perspective of traditional hunters. The project spans spatial reconfiguration, exhibition curation, branding, and product design.
+   This project proposes a conceptual and spatial renewal of Seodaemun Museum of Natural History, Korea’s first public natural history museum. Reimagined as Seoul Natural History Museum, the proposal introduces a new Korean natural-history identity through spatial reconfiguration, exhibition curation, branding, and product design.
     </p>
 
-       <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-    Initiated as a graduation project, the proposal was developed by requesting a brief from Seodaemun Museum of Natural History and receiving curatorial feedback during the process.
-       </p>
+   <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+    Developed as a graduation project, the brief was requested from Seodaemun Museum of Natural History, with curatorial feedback received during the process.
+   </p>
        
     <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
    <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
-      Client
+      Institutional Collaboration
     </p>
      <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
      Seodaemun Museum of Natural History
@@ -298,7 +298,7 @@ const SeoulMuseumProjectDetail = () => {
       The Brief
           </h2>
        <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
-        As one of Seoul’s earliest natural history museums, the institution has served the public for decades. However, much of its spatial layout and exhibition language remain rooted in traditional display methods, limiting its relevance to contemporary audiences.
+        Renew the museum’s outdated spatial and exhibition language while working within the existing architectural framework, and propose a distinctly Korean concept not previously introduced to the institution.
        </p>
       </div>
 
