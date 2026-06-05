@@ -665,14 +665,16 @@ const WhispersProjectDetail = () => {
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-         {/*Research Image2*/}        
+       
+          
+          {/*Research Image2*/}        
           <div className="w-full">
             <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
           </div>  
          
           {/*Research Image2-1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB3.jpg" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB3.jpg" />
           </div> 
 
  
