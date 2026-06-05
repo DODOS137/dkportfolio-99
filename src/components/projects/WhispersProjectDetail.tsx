@@ -585,7 +585,7 @@ const WhispersProjectDetail = () => {
   {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
   <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
 
-  <p className="text-xl md:text-xl font-Medium text-gray-300 mb-6 relative z-10">
+  <p className="text-sm md:text-sm font-Medium text-gray-300 mb-6 relative z-10">
     QR-to-AR mobile test
   </p>
 
