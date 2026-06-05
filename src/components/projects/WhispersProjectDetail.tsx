@@ -586,7 +586,7 @@ const WhispersProjectDetail = () => {
   <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
 
   <p className="text-sm md:text-sm font-Medium text-gray-300 mb-6 relative z-10">
-    QR-to-AR mobile test
+    QR-to-AR prototype test
   </p>
 
   {/* 유튜브 플레이어 */}
