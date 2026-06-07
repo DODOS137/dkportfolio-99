@@ -734,6 +734,21 @@ The findings reveal a strong demand not only for architectural redefinition but 
            {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
+
+
+
+
+          {/*built-in Image 2*/}
+           <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM23.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+
+          
+
            {/*Built-in display cases Text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -746,7 +761,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-           {/*Rest Area Image 2*/}
+           {/*built-in Image 2*/}
            <div className="w-full">
             <img className="w-full h-auto " src="/webimages/SNM/SNM16.jpg" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
@@ -754,7 +769,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-           {/*Built-in 1*/}
+           {/*Built-in 3*/}
            <div className="w-full">
             <img className="w-full h-auto " src="/webimages/SNM/SNM9.jpg" loading="lazy" decoding="async" fetchPriority="low" />
            </div>
@@ -762,7 +777,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-black"></div>
 
-           {/*Built-in 2*/}
+           {/*Built-in 4*/}
            <div className="w-full">
            <img className="w-full h-auto " src="/webimages/SNM/SNM10.jpg" loading="lazy" decoding="async" fetchPriority="low" />
            </div>
