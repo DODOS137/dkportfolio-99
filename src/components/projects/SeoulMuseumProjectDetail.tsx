@@ -642,6 +642,16 @@ The findings reveal a strong demand not only for architectural redefinition but 
            </div> 
            </div> 
 
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          {/* Narrative Image 2*/}
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/SNM/SNM22.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+          </div> 
+
+
+
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
@@ -651,10 +661,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
           
           
           
-          {/* Narrative Image 2*/}
-          <div className="w-full">
-            <img className="w-full h-full" src="/webimages/SNM/SNM22.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-          </div> 
+
 
 
 
