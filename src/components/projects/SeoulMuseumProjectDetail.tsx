@@ -331,28 +331,29 @@ const SeoulMuseumProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-           {/* YouTube Video Section */}
-  <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
-  <div
-    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
-  >
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#F7931E]" />
+
+   {/* YouTube Video Section */}
+<div className="my-20 md:my-20 relative py-8 md:py-12">
+  {/* Background */}
+  <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#F7931E] z-0" />
+
+  {/* Content */}
+  <div className="relative z-10">
+    <p className="text-xl md:text-xl font-Medium text-black mb-6">
+        VR Experenice Walkthrough
+    </p>
+
+    <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
+      <LiteYouTube
+        id="8GEK3igRom0"
+        title="Project video"
+        className="w-full h-full bg-transparent"
+      />
     </AspectRatio>
   </div>
-
-   <p className="text-xl md:text-xl font-Medium text-black mb-6 relative z-10">
-      VR Experenice Walkthrough
-  </p>
-
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <LiteYouTube
-      id="8GEK3igRom0" 
-      title="Seoul Museum Project Video"
-      className="w-full h-full bg-transparent"  
-    />
-  </AspectRatio>
 </div>
+
+
           
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
@@ -397,6 +398,10 @@ The findings reveal a strong demand not only for architectural redefinition but 
 </p>
   </details>
 </section>
+
+
+ {/*Line*/} 
+ <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>        
 
 
 
@@ -730,7 +735,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
               </div>
 
            {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
            {/*Built-in display cases Text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -740,6 +745,14 @@ The findings reveal a strong demand not only for architectural redefinition but 
            </p>
            </div> 
            </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+           {/*Rest Area Image 2*/}
+           <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM16.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
@@ -766,13 +779,9 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
           
 
-            {/*Rest Area Image 2*/}
-           <div className="w-full">
-            <img className="w-full h-auto " src="/webimages/SNM/SNM16.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-              </div>
+        
 
-           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+       
 
           {/* Product Design Section */}
           <div className="rounded-lg bg-transparent">
@@ -823,7 +832,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>      
 
           {/*End Image */}
-           <div className="w-full mb-40 md:mb-40">
+           <div className="w-full mb-20 md:mb-40">
             <img src="/webimages/SNM/SNM20.jpg" className="w-full h-auto mb-40 md:mb-0" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
           
