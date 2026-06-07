@@ -572,7 +572,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
        
 <div className="flex gap-5 items-start">
   {/* Image */}
-  <div className="w-1/2 h-[10px] overflow-hidden">
+  <div className="w-1/2 h-auto overflow-hidden">
     <img
       src="/webimages/SNM/SNM1.jpg"
       alt="Seoul Natural History Museum"
@@ -641,7 +641,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
           {/* Narrative Image 2*/}
           <div className="w-full">
-            <img className="w-full h-full" src="/webimages/SNM/SNM23.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+            <img className="w-full h-full" src="/webimages/SNM/SNM22.jpg" loading="lazy" decoding="async" fetchPriority="low" />
           </div> 
 
 
