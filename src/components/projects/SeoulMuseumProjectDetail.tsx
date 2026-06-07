@@ -630,6 +630,8 @@ The findings reveal a strong demand not only for architectural redefinition but 
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Narrative Arc</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400 mb-3">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.
            </p>
+           </div> 
+           </div> 
 
            {/*Narrative Arc text start2*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -637,7 +639,8 @@ The findings reveal a strong demand not only for architectural redefinition but 
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 min-w-[200px]"></h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400 mb-3">Rooted in this worldview, Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space. The project transforms static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
            </p>
-
+           </div> 
+           </div> 
 \
 
           {/*Line*/} 
