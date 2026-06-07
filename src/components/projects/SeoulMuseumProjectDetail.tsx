@@ -588,7 +588,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
   </div>
 
   {/* Text */}
-  <div className="w-auto">
+  <div className="w-full">
     <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3">
       Site Selection
     </h2>
