@@ -609,7 +609,11 @@ The findings reveal a strong demand not only for architectural redefinition but 
           {/*Problem Image2*/}     
           <div className="w-full">
             <img className="w-full h-full" src="/webimages/SNM/SNM2.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-          </div>     
+          </div>   
+          {/*Problem Image3*/}     
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/SNM/SNM2-1.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+          </div> 
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
