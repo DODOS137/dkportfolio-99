@@ -769,13 +769,6 @@ The findings reveal a strong demand not only for architectural redefinition but 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-           {/*Built-in 3*/}
-           <div className="w-full">
-            <img className="w-full h-auto " src="/webimages/SNM/SNM9.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-           </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-black"></div>
 
            {/*Built-in 4*/}
            <div className="w-full">
