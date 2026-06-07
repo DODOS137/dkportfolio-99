@@ -308,34 +308,31 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
  
 
     
           
-  {/* YouTube Video Section */}
-  <div className="my-40 md:my-40 relative"> {/* ✅ NEW: relative */} 
-  <div
-    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]"
-  >
-    <AspectRatio ratio={16 / 9}>
-      <div className="w-full h-full bg-[#EFE8DC]" />
+{/* YouTube Video Section */}
+<div className="my-20 md:my-40 relative py-8 md:py-12">
+  {/* Background */}
+  <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#EFE8DC] z-0" />
+
+  {/* Content */}
+  <div className="relative z-10">
+    <p className="text-xl md:text-xl font-Medium text-black mb-6">
+      Project Video
+    </p>
+
+    <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800/50 overflow-hidden">
+      <LiteYouTube
+        id="zqz3Owz0K3o"
+        title="Project video"
+        className="w-full h-full bg-transparent"
+      />
     </AspectRatio>
   </div>
-
-  <p className="text-xl md:text-xl font-Medium text-black mb-6 relative z-10">
-    Project Video
-  </p>
-
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <LiteYouTube
-      id="zqz3Owz0K3o"
-      title="Project video"
-      className="w-full h-full bg-transparent"  
-    />
-  </AspectRatio>
 </div>
-          
    
 
 
@@ -348,7 +345,7 @@ const WhispersProjectDetail = () => {
           
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
 
 
@@ -392,7 +389,8 @@ const WhispersProjectDetail = () => {
 </section>
 
 
-
+ {/*Line*/} 
+ <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
 
 
@@ -451,7 +449,7 @@ const WhispersProjectDetail = () => {
 
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
          
           
@@ -472,14 +470,14 @@ const WhispersProjectDetail = () => {
           </div>   
 
           {/*Development Image3*/}     
-          <div className="w-full mb-4">
+          <div className="w-full mb-0">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1-3.jpg" />
           </div> 
 
           
 
            {/*idea development text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-0">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is used as a narrative layer rather than background information. By focusing on the bioacoustics of overlooked marine invertebrates, the exhibition shifts ocean conservation from visual spectacle to intimate listening.
@@ -488,7 +486,7 @@ const WhispersProjectDetail = () => {
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
            
            
@@ -546,7 +544,7 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
 
            {/*Exhibition Flow */}       
@@ -568,7 +566,7 @@ const WhispersProjectDetail = () => {
          </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
          {/*Exhibition Flow2 */}       
           <div className="w-full">
@@ -597,8 +595,7 @@ const WhispersProjectDetail = () => {
 
 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
 
           
 
@@ -608,7 +605,7 @@ const WhispersProjectDetail = () => {
           
           
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
 
 
@@ -652,7 +649,7 @@ const WhispersProjectDetail = () => {
                     
           {/*Spatial Design Process Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB7.jpg" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB7.jpg" />
           </div> 
 
 
@@ -663,7 +660,7 @@ const WhispersProjectDetail = () => {
 
 
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
        
           
@@ -689,7 +686,7 @@ const WhispersProjectDetail = () => {
 
           {/*Poster Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB4.jpg" />
           </div>    
 
 
@@ -704,7 +701,7 @@ const WhispersProjectDetail = () => {
  
 
           {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
 
            {/*Final Outcome text 1*/}
@@ -720,14 +717,17 @@ const WhispersProjectDetail = () => {
           
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
        
           
           
           {/*End Image*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-40" src="/lovable-uploads/a522c24b-08cb-42ad-85ad-aacfd97ff5bc.png" />
-          </div>            
+            <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/a522c24b-08cb-42ad-85ad-aacfd97ff5bc.png" />
+          </div>          
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
             
         </div>
       </section>
