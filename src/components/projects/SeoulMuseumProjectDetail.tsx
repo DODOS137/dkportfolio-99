@@ -704,23 +704,16 @@ The findings reveal a strong demand not only for architectural redefinition but 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
-            {/*Spatial & Exhibition text 1*/}
+            {/*Exhibition design & stands text 1*/}
            <div className="mb-3 flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial & Exhibition Design</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">As visitors ascend from the Marine Hall to the upper Terrestrial Halls, the exhibition textures gradually shift—becoming coarser to reflect how stone is shaped by different environments: the sea smooths, rivers carve, and mountains fracture. This erosion gradient is embedded into the museum's spatial and sculptural design, using stone as a visual language to express the distinct ecological logic of each zone.
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design & stands</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">As visitors move from the Marine Hall to the upper Terrestrial Halls, the spatial textures gradually shift from smooth to coarse, reflecting how sea, river, and mountain environments shape stone differently. This erosion gradient becomes a visual language across the museum’s sculptural elements and built-in furniture, linking each ecological zone to a distinct material atmosphere.
            </p>
            </div> 
            </div> 
 
-           {/*Spatial & Exhibition text 2*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project involved iterative testing and feedback to refine the spatial atmosphere, while custom built-in furniture was modeled to reflect the museum’s identity and reinforce its relationship with the surrounding space.
-           </p>
-           </div> 
-           </div> 
+
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
