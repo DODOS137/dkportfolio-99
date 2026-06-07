@@ -568,6 +568,35 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
 
 
+
+          <div className="flex gap-5 items-start">
+  {/* Image */}
+  <div className="w-1/2 h-[400px] overflow-hidden">
+    <img
+      src="/lovable-uploads/web1920-SeoulNatural-25.png"
+      alt="Seoul Natural History Museum"
+      className="w-full h-full object-cover"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  {/* Text */}
+  <div className="w-1/2">
+    <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-4">
+      Seoul Natural History Museum
+    </h2>
+
+    <p className="text-base md:text-base font-bold text-gray-500 mb-6">
+      2021 │ Spatial Design │ Solo Project │ 16 weeks
+    </p>
+
+    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+      This project proposes a conceptual and spatial renewal of Seodaemun Museum of Natural History, Korea’s first public natural history museum. Reimagined as Seoul Natural History Museum, the proposal introduces a new Korean natural-history identity through spatial reconfiguration, exhibition curation, branding, and product design.
+    </p>
+  </div>
+</div>
+
           
 
           {/*Site Image*/}     
@@ -602,39 +631,11 @@ The findings reveal a strong demand not only for architectural redefinition but 
           </div>     
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
-          {/*Problem Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">
-                Problem Analysis
-              </h2>
-             <div className="flex flex-col space-y-4 md:space-y-4 ">
-            <div>
-              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-3 min-w-[200px] text-gray-300">
-               Overcrowded Specimen Displays
-               </h3>
-              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light mb-4 md:mb-4">The museum's densely classified displays obscure environmental context and hinder engagement, presenting specimens in ways misaligned with local sensibilities.</p>
+         
 
-              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-3 min-w-[200px] text-gray-300">
-               Passive Viewing Format
-               </h3>
-              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light mb-4 md:mb-4">The exhibition's linear layout limits engagement, reducing the experience to passive viewing with little interaction or depth.
-              </p>
-
-              <h3 className="text-sm md:text-sm lg:text-sm font-light mb-3 md:mb-3 min-w-[200px] text-gray-300">
-               Lack of Identity in Spatial Elements
-               </h3>
-              <p className="text-sm md:text-sm lg:text-sm leading-relaxed text-gray-400 font-light">The space lacks visual cohesion, with outdated elements creating a bland, institutional feel that weakens cultural resonance.
-              </p>
-              </div>
-             </div>
-            </div>
-          </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+ 
           
           {/* Narrative */}
           <div className="w-full">
