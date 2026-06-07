@@ -230,7 +230,7 @@ const SeoulMuseumProjectDetail = () => {
           <img
             alt={`${project.title} - Image 1`}
             className="w-full h-auto object-contain"
-            src="/lovable-uploads/db58f1e0-0fea-4b68-953c-59d4580ad411.png"
+            src="/webimages/SNM/2.SNHMCOVER2.jpg"
             loading="eager"           // ✅ NEW
             fetchpriority="high"     // ✅ NEW
             decoding="async"         // ✅ NEW
@@ -342,7 +342,7 @@ const SeoulMuseumProjectDetail = () => {
   </div>
 
    <p className="text-xl md:text-xl font-Medium text-black mb-6 relative z-10">
-    Project Video
+      VR Experenice Walkthrough
   </p>
 
   <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
@@ -461,6 +461,101 @@ The findings reveal a strong demand not only for architectural redefinition but 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
 
+
+
+
+           {/*전체 프로세스 다이어그램*/}
+          <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM21.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
+
+
+
+
+
+           {/*Lobby Images*/}
+          <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM11.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+           {/*Reception Desk Text 1*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Reception Desk</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The reception area presents the museum’s renewed identity through a three-storey vertical installation inspired by Korean folding screens and mountain landscapes.
+           </p>
+           </div> 
+           </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+         {/*Lobby Images2*/}
+          <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM12.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
+
+
+
+           {/*Exhibition Hall*/}
+           <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM13.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          {/*Exhibition Hall comments*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Exhibition Hall</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition is divided into a Marine Zone on the first floor and a Terrestrial Zone on the upper levels. A vertical sculptural void connects the floors, linking immersive media, natural specimens, and historical artefacts into one continuous ecological journey.
+           </p>
+           </div> 
+           </div> 
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          {/*Exhibtion Hall 2*/} 
+            <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM14.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
+
+
+        
+          
+          
+          
+          
+          {/*Rest Area Image 1*/}
+           <div className="w-full">
+            <img className="w-full h-auto " src="/webimages/SNM/SNM15.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+              </div>
+
+           {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+           {/*2F Rest Area Text*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A hunter’s study-inspired rest area displays personal collections, insects, and expedition artefacts. It creates a quiet observation point overlooking the vertical glass sculpture connecting all three floors.
+           </p>
+           </div> 
+           </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
 
 
 
@@ -647,81 +742,11 @@ The findings reveal a strong demand not only for architectural redefinition but 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
-          {/*Lobby Images*/}
-          <div className="w-full">
-            <img className="w-full h-auto " src="/webimages/SNM/SNM11.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-              </div>
+         
 
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+         
 
-           {/*Reception Desk Text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Reception Desk</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The reception area introduces visitors to the museum's renewed identity through a vertical sculptural installation that spans all three floors. Behind the desk, a folding-screen-inspired frame and mountain-shaped artwork evoke Korean cultural and geographic heritage—establishing a strong sense of place upon entry.
-           </p>
-           </div> 
-           </div> 
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
-
-         {/*Lobby Images2*/}
-          <div className="w-full">
-            <img className="w-full h-auto " src="/webimages/SNM/SNM12.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-              </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
-
-          {/*Exhibition Hall*/}
-           <div className="w-full">
-            <img className="w-full h-auto " src="/webimages/SNM/SNM13.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-              </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
-
-          {/*Exhibition Hall comments*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Exhibition Hall</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition unfolds across two ecological zones: the first floor (Marine Zone) draws inspiration from ocean currents, with immersive media and fluid spatial divisions that evoke the rhythm of the sea; while the second and third floors (Terrestrial Zone) explore land-based habitats through layered displays that combine natural specimens with historical artefacts, such as traditional hunting tools. A vertical sculptural void connects all levels, symbolising the continuous flow of ecological systems throughout the museum.
-              </p>
-           </div> 
-           </div> 
-
-           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
-
-          {/*Exhibtion Hall 2*/} 
-            <div className="w-full">
-            <img className="w-full h-auto " src="/webimages/SNM/SNM14.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-              </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-black"></div>
-
-           {/*Rest Area Image 1*/}
-           <div className="w-full">
-            <img className="w-full h-auto " src="/webimages/SNM/SNM15.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-              </div>
-
-           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
-
-           {/*2F Rest Area Text*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> 2F Rest Area</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A rest area styled as a hunter’s study, showcasing personal collections, insects, and expedition artifacts. The space encourages quiet observation and offers an elevated view of the vertical glass sculpture linking all three floors.
-           </p>
-           </div> 
-           </div> 
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+          
 
             {/*Rest Area Image 2*/}
            <div className="w-full">
