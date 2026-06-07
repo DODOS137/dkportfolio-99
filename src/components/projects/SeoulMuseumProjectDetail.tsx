@@ -576,7 +576,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
     <img
       src="/webimages/SNM/SNM1.jpg"
       alt="Seoul Natural History Museum"
-      className="w-full h-full"
+      className="w-full h-auto"
       loading="lazy"
       decoding="async"
     />
@@ -584,13 +584,17 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
   {/* Text */}
   <div className="w-1/2">
-    <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-4">
-      </h2>
+    <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3">
+      Site Selection
+    </h2>
 
 
 
-    <p className="text-sm md:text-sm font-light text-gray-400 leading-relaxed font-light">
+    <p className="text-sm md:text-sm font-light text-gray-400 leading-relaxed font-light mb-3">
       서울특별시 서대문구 연희로 32길 51 (연희동 서대문자연사 박물관) </p>
+
+    <p className="text-sm md:text-sm font-light text-gray-400 leading-relaxed font-light ">
+      51, Yeonhui-ro, 32-gil, Seodaemun-gu. Seoul, Republic of Korea</p>
   </div>
 </div>
 
