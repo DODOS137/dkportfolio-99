@@ -570,7 +570,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
   {/*Site Image*/}
        
-<div className="flex gap-5 items-start">
+<div className="flex gap-[5px] items-start">
   {/* Image */}
   <div className="w-full h-auto overflow-hidden">
     <img
