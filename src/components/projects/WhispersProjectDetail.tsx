@@ -314,7 +314,7 @@ const WhispersProjectDetail = () => {
     
           
 {/* YouTube Video Section */}
-<div className="my-20 md:my-40 relative py-8 md:py-12">
+<div className="my-20 md:my-20 relative py-8 md:py-12">
   {/* Background */}
   <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#EFE8DC] z-0" />
 
@@ -345,7 +345,7 @@ const WhispersProjectDetail = () => {
           
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
 
 
 
@@ -449,7 +449,7 @@ const WhispersProjectDetail = () => {
 
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
 
          
           
@@ -486,7 +486,7 @@ const WhispersProjectDetail = () => {
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
 
            
            
@@ -544,7 +544,7 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
 
 
            {/*Exhibition Flow */}       
@@ -605,7 +605,7 @@ const WhispersProjectDetail = () => {
           
           
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
 
 
 
@@ -660,7 +660,7 @@ const WhispersProjectDetail = () => {
 
 
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
 
        
           
@@ -701,7 +701,7 @@ const WhispersProjectDetail = () => {
  
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
 
 
            {/*Final Outcome text 1*/}
@@ -717,7 +717,7 @@ const WhispersProjectDetail = () => {
           
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
        
           
           
@@ -727,7 +727,7 @@ const WhispersProjectDetail = () => {
           </div>          
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-40 md:my-20 bg-transparent"></div>
             
         </div>
       </section>
