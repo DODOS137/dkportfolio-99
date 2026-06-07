@@ -568,14 +568,15 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
 
 
-
-          <div className="flex gap-5 items-start">
+  {/*Site Image*/}
+       
+<div className="flex gap-5 items-start">
   {/* Image */}
   <div className="w-1/2 h-[400px] overflow-hidden">
     <img
-      src="/lovable-uploads/web1920-SeoulNatural-25.png"
+      src="/webimages/SNM/SNM1.jpg"
       alt="Seoul Natural History Museum"
-      className="w-full h-full object-cover"
+      className="w-full h-full"
       loading="lazy"
       decoding="async"
     />
@@ -584,16 +585,12 @@ The findings reveal a strong demand not only for architectural redefinition but 
   {/* Text */}
   <div className="w-1/2">
     <h2 className="text-xl md:text-xl font-bold text-white leading-tight mb-4">
-      Seoul Natural History Museum
-    </h2>
+      </h2>
 
-    <p className="text-base md:text-base font-bold text-gray-500 mb-6">
-      2021 │ Spatial Design │ Solo Project │ 16 weeks
-    </p>
 
-    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-      This project proposes a conceptual and spatial renewal of Seodaemun Museum of Natural History, Korea’s first public natural history museum. Reimagined as Seoul Natural History Museum, the proposal introduces a new Korean natural-history identity through spatial reconfiguration, exhibition curation, branding, and product design.
-    </p>
+
+    <p className="text-sm md:text-sm font-light text-gray-400 leading-relaxed font-light">
+      서울특별시 서대문구 연희로 32길 51 (연희동 서대문자연사 박물관) </p>
   </div>
 </div>
 
