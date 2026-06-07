@@ -570,9 +570,9 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
   {/*Site Image*/}
        
-<div className="flex gap-[5px] items-start">
+<div className="flex gap-[10px] items-start">
   {/* Image */}
-  <div className="w-[1540px] h-auto overflow-hidden">
+  <div className="w-full h-auto overflow-hidden">
     <img
       src="/webimages/SNM/SNM1.jpg"
       alt="Seoul Natural History Museum"
@@ -641,11 +641,16 @@ The findings reveal a strong demand not only for architectural redefinition but 
            </p>
            </div> 
            </div> 
-\
+
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
+       
+          
+          
+          
+          
           {/* Narrative Image 2*/}
           <div className="w-full">
             <img className="w-full h-full" src="/webimages/SNM/SNM22.jpg" loading="lazy" decoding="async" fetchPriority="low" />
