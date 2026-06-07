@@ -598,32 +598,7 @@ The findings reveal a strong demand not only for architectural redefinition but 
   </div>
 </div>
 
-          
-
-          {/*Site Image*/}     
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/SNM/SNM1.jpg" loading="lazy" decoding="async" fetchPriority="low" />
-          </div>   
-         
-           {/*Site Selection text start*/}
-
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Site Selection</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">서울특별시 서대문구 연희로 32길 51 (연희동 서대문자연사 박물관)</p>
-           </div> 
-           </div> 
-           {/* Line */}
-            <div className="w-full h-px mb-3 md:mb-3 bg-gray-black" />
-         
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">51, Yeonhui-ro, 32-gil, Seodaemun-gu. Seoul, Republic of Korea</p>
-           </div> 
-           </div>
-
-          {/*Line*/} 
+        {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
 
           {/*Problem Image2*/}     
@@ -638,6 +613,9 @@ The findings reveal a strong demand not only for architectural redefinition but 
 
  
           
+         
+          
+          
           {/* Narrative */}
           <div className="w-full">
             <img className="w-full h-full" src="/webimages/SNM/SNM3.jpg" loading="lazy" decoding="async" fetchPriority="low" />
@@ -650,10 +628,26 @@ The findings reveal a strong demand not only for architectural redefinition but 
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"> Narrative Arc</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence—tracking animals with care and honoring their lives, often referring to tigers as San-gun, or "Mountain Lord." This ethos of respect extended to falconry, where Maekkun formed mutual bonds with wild hawks, never claiming ownership and accepting their release with grace. Rooted in this worldview, the project Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space, transforming static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400 mb-3">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.
+           </p>
+
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Rooted in this worldview, Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space. The project transforms static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.
            </p>
            </div> 
            </div> 
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+
+          {/* Narrative Image 2*/}
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/SNM/SNM23.jpg" loading="lazy" decoding="async" fetchPriority="low" />
+          </div> 
+
+
+
+
+          
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-black"></div>
