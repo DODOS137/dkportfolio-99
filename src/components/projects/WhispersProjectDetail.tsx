@@ -246,7 +246,7 @@ const WhispersProjectDetail = () => {
    <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
       Client
     </p>
-     <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
+     <p className="text-sm md:text-sm text-gray-400 leading-relaxed font-light">
      UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution.
       </p>
       </div>
@@ -257,7 +257,7 @@ const WhispersProjectDetail = () => {
          <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
       The Brief
           </h2>
-       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
         Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of Ocean Science for Sustainable Development (2021-2030), tasks students to explore the crucial intersection between the ocean and the climate.
       </p>
       </div>
@@ -312,37 +312,31 @@ const WhispersProjectDetail = () => {
       {/* 챌린지 Container */}
        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-    
-       {/* Left Column */}
-     <div className="space-y-6">
-   <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
-   <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
-      Challenge
-    </p>
-     <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-     The ocean is essential to climate stability and life on Earth, yet its role remains widely overlooked in public awareness, education, and everyday decision-making.
-     </p>
-      </div>
-     </div>
-
-    {/* Right Column */}
-    <div className="space-y-6">
-   <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
-   <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
-      Propose 
-    </p>
-     <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-     To challenge visual-first marine exhibitions by shifting attention from iconic ocean animals to hidden and overlooked marine species, using sound, touch, and AR to create a more sensory and accessible understanding of marine life.
-     </p>
-      </div>
-    
-
-       
+       {/* Right Column */}
+       <div className="space-y-6">
        <div className="mb-6 mt-6 md:mt-6"> 
+       <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
+         Challenge
+          </h2>
+       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
+      The ocean is essential to climate stability and life on Earth, yet its role remains widely overlooked in public awareness, education, and everyday decision-making.
+      </p>
+      </div>
+
+        <div className="mb-6 mt-6 md:mt-6"> 
+       <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
+          Propose 
+          </h2>
+       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
+        To challenge visual-first marine exhibitions by shifting attention from iconic ocean animals to hidden and overlooked marine species, using sound, touch, and AR to create a more sensory and accessible understanding of marine life.
+        </p>
+        </div>
+      
+         <div className="mb-6 mt-6 md:mt-6"> 
          <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
          Outputs
           </h2>
-       <p className="text-base md:text-base lg:text-base leading-relaxed font-light text-gray-400">
+       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
        A modular hybrid exhibition system including sound-based listening stations, AR triggers, tactile elements, spatial renders, graphic design, and a visitor flow that guides audiences from looking to listening and discovery.
        </p>
       </div>
@@ -353,20 +347,18 @@ const WhispersProjectDetail = () => {
        </summary>
 
         <div className="px-4 pb-4 pt-6 space-y-4">
-    <div>
-      <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
+       <div>
+       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
         1. Public awareness was concentrated on iconic marine animals.
       </p>
     </div>
-
     <div>
       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
         2. To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight.
       </p>
     </div>
-
- </div>
-</details>
+   </div>
+   </details>
    </div>
    </div>
  
