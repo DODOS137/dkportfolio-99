@@ -301,11 +301,6 @@ const WhispersProjectDetail = () => {
   </div>
 
 
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
    
           
           
@@ -321,7 +316,7 @@ const WhispersProjectDetail = () => {
        <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
          Challenge
           </h2>
-       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
+       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
       The ocean is essential to climate stability and life on Earth, yet its role remains widely overlooked in public awareness, education, and everyday decision-making.
       </p>
       </div>
@@ -330,7 +325,7 @@ const WhispersProjectDetail = () => {
        <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
           Propose 
           </h2>
-       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
+       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
         To challenge visual-first marine exhibitions by shifting attention from iconic ocean animals to hidden and overlooked marine species, using sound, touch, and AR to create a more sensory and accessible understanding of marine life.
         </p>
         </div>
@@ -339,7 +334,7 @@ const WhispersProjectDetail = () => {
          <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
          Outputs
           </h2>
-       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
+       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
        A modular hybrid exhibition system including sound-based listening stations, AR triggers, tactile elements, spatial renders, graphic design, and a visitor flow that guides audiences from looking to listening and discovery.
        </p>
       </div>
