@@ -397,7 +397,7 @@ const WhispersProjectDetail = () => {
    
 
          {/*Line*/} 
-          <div className="w-full h-px my-2 md:my-2 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
          
           {/*Render Images*/}   
@@ -476,7 +476,7 @@ const WhispersProjectDetail = () => {
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
            
            
@@ -502,17 +502,8 @@ const WhispersProjectDetail = () => {
           {/*Exhibition Flow */}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB15.jpg" />
-          </div>  
-
- 
-
-
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-         {/*Exhibition Flow2 */}       
+          </div>
+          {/*Exhibition Flow2 */}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB16.jpg" />
           </div>  
@@ -523,7 +514,7 @@ const WhispersProjectDetail = () => {
 
           
 {/* AR APP YouTube Video Section */}
-<div className="mt-10 mb-20 md:mt-10 relative">
+<div className="mt-0 mb-0 md:mt-0 relative">
   {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
   <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
 
@@ -553,51 +544,32 @@ const WhispersProjectDetail = () => {
 
 
          {/* Process-3*/}
-         <div className="my-0 md:my-0 relative">
-         <div className="relative z-10">
-         <p className="font-Medium mb-6">
-         <span className="text-sm md:text-base text-gray-400">Process </span>
-         <span className="ml-3 text-xl md:text-xl text-white"> Spatial Design & 3D Modelling </span>
-          </p>
-          </div>
-          </div>
-          {/*Spatial Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Rock-like listening modules combine headphones, QR/AR access, and tactile interaction, while layered ceiling elements use wave metal, glass, light, and reflection to simulate an underwater atmosphere.
-          </p>
-          </div>
+         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+         <span className="text-sm md:text-sm text-gray-600 font-Medium">
+          Process
+         </span>
+         <div>
+         <span className="text-base md:text-base text-white font-Medium">
+          Spatial Design & 3D Modelling
+         </span>
+         <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+         Rock-like listening modules combine headphones, QR/AR access, and tactile interaction, while layered ceiling elements use wave metal, glass, light, and reflection to simulate an underwater atmosphere.
+         </p>
          </div>
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-
-
-          
+         </div>
 
           {/*Process Rendering Image1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB5.jpg" />
           </div>
-
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
           {/*Process Rendering Image2*/}        
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB6.jpg" />
           </div>
-          
-
-           {/*Line*/} 
+          {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-
-
-
-                    
           {/*Spatial Design Process Image1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB7.jpg" />
@@ -615,24 +587,21 @@ const WhispersProjectDetail = () => {
 
 
 
-          {/* Process-4*/}
-         <div className="my-0 md:my-0 relative ">
-         <div className="relative z-10">
-         <p className="font-Medium mb-6">
-         <span className="text-sm md:text-base text-gray-400">Process </span>
-         <span className="ml-3 text-xl md:text-xl text-white"> Graphic Design </span>
-          </p>
-          </div>
-          </div>
-          {/*Spatial Design Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Leveraged generative AI to produce exhibition-aligned graphic assets and visual imagery, accelerating the design process and reducing production time.
-          </p>
-          </div>
+         {/* Process-4*/}
+         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+         <span className="text-sm md:text-sm text-gray-600 font-Medium">
+          Process
+         </span>
+         <div>
+         <span className="text-base md:text-base text-white font-Medium">
+          Graphic Design
+         </span>
+         <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+         Leveraged generative AI to produce exhibition-aligned graphic assets and visual imagery, accelerating the design process and reducing production time.
+         </p>
+         </div>
          </div>
        
-          
           {/*Research Image2*/}        
           <div className="w-full">
             <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
@@ -655,11 +624,6 @@ const WhispersProjectDetail = () => {
 
 
 
-
- 
-
-       
- 
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
