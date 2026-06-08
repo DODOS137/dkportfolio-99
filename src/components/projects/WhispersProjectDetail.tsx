@@ -512,23 +512,19 @@ const WhispersProjectDetail = () => {
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
           
 
+
+
+      {/* GIF Section */}
+      <div className="my-0 md:my-0 relative ">
+      <div className="relative z-10">
+      <p className="font-Medium mb-4">
+      <span className="text-sm md:text-base text-gray-600">Process </span>
+      <span className="ml-4 text-base md:text-base text-white">QR-to-AR prototype test </span>
+      </p>
+      </div>
+      </div> 
           
-{/* AR APP YouTube Video Section */}
-<div className="mt-0 mb-0 md:mt-0 relative">
-  {/* ✅ NEW: 배경판 (유튜브 플레이어보다 가로/세로 8px 크게, 뒤에 위치) */}
-  <div className="absolute inset-0 -top-0 -left-0 -right-0 -bottom-0 bg-black  z-0" />
-
-  <p className="text-sm md:text-sm font-Medium text-gray-300 mb-6 relative z-10">
-    QR-to-AR prototype test
-  </p>
-
-  {/* 유튜브 플레이어 */}
-  <AspectRatio ratio={16 / 9} className="relative z-10 rounded-lg border border-gray-800/50 overflow-hidden">
-    <LiteYouTube id="M0v75vAVitA" title="AR App video" /> {/* ✅ NEW */}
-  </AspectRatio>
-</div>
-
-          {/* GIF Section */}
+          
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div className="w-full aspect-[9/16] overflow-hidden">
       <img
@@ -570,7 +566,7 @@ const WhispersProjectDetail = () => {
           
           
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
          {/* Process-3*/}
@@ -613,7 +609,7 @@ const WhispersProjectDetail = () => {
 
 
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
 
@@ -653,15 +649,18 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
  
 
           {/*End Image*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB17.jpg" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB17.jpg" />
           </div>  
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
 
