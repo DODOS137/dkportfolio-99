@@ -434,8 +434,8 @@ const WhispersProjectDetail = () => {
 <div className="my-0 md:my-0 relative py-8 md:py-12">
    <div className="relative z-10">
     <p className="font-Medium mb-6">
-    <span className="text-sm md:text-base text-gray-400">Process </span>
-    <span className="ml-3 text-xl md:text-xl text-white"> Concept </span>
+    <span className="text-sm md:text-base text-gray-400">Context </span>
+    <span className="ml-3 text-xl md:text-xl text-white">Ocean Awareness Gap + Hybrid Exhibition </span>
     </p>
   </div>
 </div>
