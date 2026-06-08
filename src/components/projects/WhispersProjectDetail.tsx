@@ -359,7 +359,13 @@ const WhispersProjectDetail = () => {
    </details>
    </div>
    </div>
- 
+
+
+
+
+          
+ {/*Line*/} 
+ <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
     
           
@@ -367,8 +373,9 @@ const WhispersProjectDetail = () => {
 <div className="my-0 md:my-0 relative py-8 md:py-12">
 {/* Content */}
   <div className="relative z-10">
-    <p className="text-xl md:text-xl font-Medium text-white mb-6">
-      Project Video
+    <p className="font-Medium mb-6">
+    <span className="text-sm md:text-base text-gray-400">Project Video </span>
+    <span className="text-xl md:text-xl text-white"> Project Overview </span>
     </p>
   <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800 overflow-hidden">
       <LiteYouTube
@@ -382,24 +389,9 @@ const WhispersProjectDetail = () => {
    
 
          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-{/* Project Description Section */}
-<div className="mt-0 md:mt-0">
-  <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-    Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
-  </p>
-</div>
-
- {/*Line*/} 
- <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-      
-
-          
-
-
-          
-          
+         
           {/*Render Images*/}   
           {/*Bridge Image1*/}        
           <div className="w-full">
