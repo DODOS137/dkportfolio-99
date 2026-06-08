@@ -375,9 +375,9 @@ const WhispersProjectDetail = () => {
   <div className="relative z-10">
     <p className="font-Medium mb-6">
     <span className="text-sm md:text-base text-gray-400">Project Video </span>
-    <span className="text-xl md:text-xl text-white"> Project Overview </span>
+    <span className="ml-3 text-xl md:text-xl text-white"> Project Overview </span>
     </p>
-  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800 overflow-hidden">
+  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-400 overflow-hidden">
       <LiteYouTube
         id="zqz3Owz0K3o"
         title="Project video"
@@ -426,117 +426,19 @@ const WhispersProjectDetail = () => {
 
 
 
-         
-
-    
-
+{/*Line*/} 
+ <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
 
-
-{/*Summary*/}
-<section id="research" aria-labelledby="research-title" className="mt-6 mb-6">
-  <h2 id="research-title" className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Summary</h2>
-
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-xl md:text-xl font-light text-gray-300">Challenge</p>
-      <p className="text-sm text-gray-400 mt-2">Visual-first marine exhibitions overlook hidden species.</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-xl md:text-xl font-light text-gray-300">Evidence</p>
-      <p className="text-sm text-gray-400 mt-2">Public awareness was concentrated on iconic marine animals.</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-xl md:text-xl font-light text-gray-300">Proposal</p>
-      <p className="text-sm text-gray-400 mt-2">A modular exhibition system shifting visitors from looking to listening through sound, touch, and AR.</p>
-    </div>
-    <div className="rounded-lg border border-white/10 bg-white/5 p-6 text-center">
-      <p className="text-xl md:text-xl font-light text-gray-300">Outputs</p>
-      <p className="text-sm text-gray-400 mt-2">Modular listening stations, AR triggers, spatial renders, graphics, and visitor flow.</p>
-    </div>
-  </div>
-
-  <details className="mt-6 mb-6 rounded-lg border border-white/10 bg-black p-4">
-    <summary className="cursor-pointer text-sm text-gray-400">Full findings</summary>
-    <p className="mt-6 text-sm text-gray-400">
-      To better understand public perception of marine biodiversity, a preliminary survey was conducted with 108 participants. The findings revealed that 91% (98) had only experienced exhibitions that rely predominantly on visual stimuli—similar to conventional museum or gallery formats. When asked about the types of marine species they were most familiar with, 87% (94) mentioned iconic endangered mammals such as whales and dolphins, indicating that public awareness remains concentrated on a narrow range of charismatic megafauna. These results informed the direction of this project, which seeks to expand public understanding by highlighting lesser-known species through sound, rather than sight. 
+ {/* Process-1 */}
+<div className="my-0 md:my-0 relative py-8 md:py-12">
+   <div className="relative z-10">
+    <p className="font-Medium mb-6">
+    <span className="text-sm md:text-base text-gray-400">Process </span>
+    <span className="ml-3 text-xl md:text-xl text-white"> Concept </span>
     </p>
-  </details>
-</section>
-
-
- {/*Line*/} 
- <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-
-
-
-
-
-
-{/* Design Highlights table */} 
-<div className="mt-6 mb-6">
-<h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
-  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-    <table className="w-full text-left text-sm text-gray-400">
-      <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
-        <tr>
-          <th className="px-4 py-3">Feature</th>
-          <th className="px-4 py-3">Impact</th>
-          <th className="px-4 py-3">Output</th>
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-white/10">
-        <tr>
-          <td className="px-4 py-4 font-light">Sound-led storytelling</td>
-          <td className="px-4 py-4">Reframes overlooked marine life through listening rather than visual spectacle.</td>
-          <td className="px-4 py-4">Bioacoustic visitor journey</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">Tactile modules</td>
-          <td className="px-4 py-4">Supports non-visual engagement; 4/108 survey participants identified as visually impaired.</td>
-          <td className="px-4 py-4">Rock-like listening stations</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-4 font-light">AI-assisted workflow</td>
-          <td className="px-4 py-4">Reduced early-stage visual asset production time by approximately 50%.</td>
-          <td className="px-4 py-4">Graphics and texture assets</td>
-        </tr>
-       <tr>
-          <td className="px-4 py-4 font-light">AR discovery</td>
-          <td className="px-4 py-4">Turns hidden species into active digital encounters.</td>
-          <td className="px-4 py-4">QR/AR species triggers</td>
-       </tr>
-       <tr>
-          <td className="px-4 py-4 font-light">Modular system</td>
-          <td className="px-4 py-4">Allows flexible installation across different exhibition contexts.</td>
-          <td className="px-4 py-4">Reconfigurable exhibition layout</td>
-       </tr>
- 
-      
-      </tbody>
-    </table>
   </div>
 </div>
-
-
-
-          
-          
-          
-          
-
-
-          
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-         
-          
-          
-          
-
- 
   
 
            {/*Development Image1*/}     
@@ -566,44 +468,42 @@ const WhispersProjectDetail = () => {
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-           
-           
-           
-           
-
-
- 
-          
-        
- 
-
-
-
-
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-
-           {/*Exhibition Flow */}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB15.jpg" />
-          </div>  
-
-                    {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
+           
+           
+           
+           
 
-          {/*Exhibition AR Text*/} 
+         {/* Process-2 */}
+         <div className="my-0 md:my-0 relative py-8 md:py-12">
+         <div className="relative z-10">
+         <p className="font-Medium mb-6">
+         <span className="text-sm md:text-base text-gray-400">Process </span>
+         <span className="ml-3 text-xl md:text-xl text-white"> Exhibition Journey & Development </span>
+          </p>
+          </div>
+          </div>
+
+           {/*Exhibition  Text*/} 
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design</h2>
           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition combines tactile modules, sound, QR/AR scanning, and animated species content, turning passive viewing into active discovery.
           </p>
           </div>
          </div>
+  
+ 
+          
+         {/*Exhibition Flow */}       
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB15.jpg" />
+          </div>  
+
+ 
+
+
+
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
@@ -648,11 +548,18 @@ const WhispersProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
 
-
+         {/* Process-3*/}
+         <div className="my-0 md:my-0 relative py-8 md:py-12">
+         <div className="relative z-10">
+         <p className="font-Medium mb-6">
+         <span className="text-sm md:text-base text-gray-400">Process </span>
+         <span className="ml-3 text-xl md:text-xl text-white"> Spatial Design & 3D Modelling </span>
+          </p>
+          </div>
+          </div>
           {/*Spatial Design Text*/} 
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Spatial Design</h2>
           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Rock-like listening modules combine headphones, QR/AR access, and tactile interaction, while layered ceiling elements use wave metal, glass, light, and reflection to simulate an underwater atmosphere.
           </p>
           </div>
@@ -702,27 +609,37 @@ const WhispersProjectDetail = () => {
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+
+
+          {/* Process-4*/}
+         <div className="my-0 md:my-0 relative py-8 md:py-12">
+         <div className="relative z-10">
+         <p className="font-Medium mb-6">
+         <span className="text-sm md:text-base text-gray-400">Process </span>
+         <span className="ml-3 text-xl md:text-xl text-white"> Graphic Design </span>
+          </p>
+          </div>
+          </div>
+          {/*Spatial Design Text*/} 
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Leveraged generative AI to produce exhibition-aligned graphic assets and visual imagery, accelerating the design process and reducing production time.
+          </p>
+          </div>
+         </div>
        
           
           {/*Research Image2*/}        
           <div className="w-full">
             <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
           </div>  
-         
           {/*Research Image2-1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB3.jpg" />
           </div> 
 
- 
-
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-
-
-
-
 
           {/*Poster Design Image1*/}        
           <div className="w-full">
