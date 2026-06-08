@@ -297,7 +297,7 @@ const WhispersProjectDetail = () => {
 </details>
 
     </div>
-
+  </div>
   </div>
 
 
