@@ -372,11 +372,19 @@ const WhispersProjectDetail = () => {
 {/* YouTube Video Section */}
 <div className="my-0 md:my-0 relative py-8 md:py-12">
 {/* Content */}
-  <div className="relative z-10">
-    <p className="font-Medium mb-6">
-    <span className="text-sm md:text-base text-gray-400">Project Video </span>
-    <span className="ml-3 text-xl md:text-xl text-white"> Project Overview </span>
+   <div className="mb-6 grid grid-cols-[auto_1fr] gap-x-3">
+  <span className="text-sm md:text-base text-gray-800 font-Medium">
+    Project Overview
+  </span>
+  <div>
+    <span className="text-xl md:text-xl text-gray-400 font-Medium">
+     Project Video 
+    </span>
+     <p className="mt-6 mb-6 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+      Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
     </p>
+  </div>
+</div>
   <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-400 overflow-hidden">
       <LiteYouTube
         id="zqz3Owz0K3o"
