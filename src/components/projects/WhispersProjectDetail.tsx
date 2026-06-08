@@ -242,11 +242,7 @@ const WhispersProjectDetail = () => {
 
     {/* Right Column */}
     <div className="space-y-6">
-    <p className="text-base md:text-base text-gray-400 leading-relaxed font-light">
-    Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
-    </p>
-       
-    <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
+   <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
    <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
       Client
     </p>
@@ -314,13 +310,13 @@ const WhispersProjectDetail = () => {
     
           
 {/* YouTube Video Section */}
-<div className="my-20 md:my-20 relative py-8 md:py-12">
+<div className="my-0 md:my-0 relative py-8 md:py-12">
   {/* Background */}
-  <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#EFE8DC] z-0" />
+  <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-black z-0" />
 
   {/* Content */}
   <div className="relative z-10">
-    <p className="text-xl md:text-xl font-Medium text-black mb-6">
+    <p className="text-xl md:text-xl font-Medium text-white mb-6">
       Project Video
     </p>
 
@@ -345,7 +341,41 @@ const WhispersProjectDetail = () => {
           
           
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+          
+          
+          {/*Render Images*/}   
+          {/*Bridge Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8.jpg" />
+          </div>
+          {/*Product Design Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB9.jpg" />
+          </div>
+          {/*Product Design Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB10.jpg" />
+          </div>  
+          {/*Detail Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB11.jpg" />
+          </div> 
+         {/*Exhibition Design Image2*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB12.jpg" />
+          </div>    
+         {/*Detail Image3*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB13.jpg" />
+          </div> 
+         {/*Exhibition Design Image3*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" />
+          </div>  
+         
 
 
 
@@ -492,46 +522,6 @@ const WhispersProjectDetail = () => {
            
            
            
-           {/*Bridge Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8.jpg" />
-          </div>
-
-          
-
-          {/*Product Design Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB9.jpg" />
-          </div>
-
-          {/*Product Design Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB10.jpg" />
-          </div>  
-
-          {/*Detail Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB11.jpg" />
-          </div> 
-
-
-
-
-
-          {/*Exhibition Design Image2*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB12.jpg" />
-          </div>    
-
-          {/*Detail Image3*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB13.jpg" />
-          </div> 
-
-           {/*Exhibition Design Image3*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" />
-          </div>  
 
 
  
