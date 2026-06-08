@@ -370,7 +370,7 @@ const WhispersProjectDetail = () => {
     
           
 {/* YouTube Video Section */}
-<div className="my-0 md:my-0 relative py-8 md:py-12">
+<div className="my-0 md:my-0 relative">
 {/* Content */}
  <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
   <span className="text-sm md:text-sm text-gray-600 font-Medium">
@@ -439,7 +439,7 @@ const WhispersProjectDetail = () => {
 
 
  {/* Process-1 */}
-<div className="my-0 md:my-0 relative py-8 md:py-12">
+<div className="my-0 md:my-0 relative ">
    <div className="relative z-10">
     <p className="font-Medium mb-4">
     <span className="text-sm md:text-base text-gray-600">Context </span>
@@ -553,7 +553,7 @@ const WhispersProjectDetail = () => {
 
 
          {/* Process-3*/}
-         <div className="my-0 md:my-0 relative py-8 md:py-12">
+         <div className="my-0 md:my-0 relative">
          <div className="relative z-10">
          <p className="font-Medium mb-6">
          <span className="text-sm md:text-base text-gray-400">Process </span>
@@ -616,7 +616,7 @@ const WhispersProjectDetail = () => {
 
 
           {/* Process-4*/}
-         <div className="my-0 md:my-0 relative py-8 md:py-12">
+         <div className="my-0 md:my-0 relative ">
          <div className="relative z-10">
          <p className="font-Medium mb-6">
          <span className="text-sm md:text-base text-gray-400">Process </span>
