@@ -622,19 +622,18 @@ const WhispersProjectDetail = () => {
 
 
 
-
-
-
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+
+ 
 
           {/*End Image*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB17" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB17.jpg" />
           </div>  
 
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
 
           
            {/*Final Outcome text 1*/}
@@ -646,16 +645,7 @@ const WhispersProjectDetail = () => {
            </div>
            </div>
 
-       
-          
 
-       
-          
-          
-          {/*End Image*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/lovable-uploads/a522c24b-08cb-42ad-85ad-aacfd97ff5bc.png" />
-          </div>          
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
