@@ -373,11 +373,11 @@ const WhispersProjectDetail = () => {
 <div className="my-0 md:my-0 relative py-8 md:py-12">
 {/* Content */}
  <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-  <span className="text-sm md:text-base text-gray-600 font-Medium">
+  <span className="text-sm md:text-sm text-gray-600 font-Medium">
     Project Overview
   </span>
   <div>
-    <span className="text-base md:text-base text-gray-400 font-Medium">
+    <span className="text-base md:text-base text-white font-Medium">
      Project Video 
     </span>
      <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
@@ -385,7 +385,7 @@ const WhispersProjectDetail = () => {
     </p>
   </div>
 </div>
-  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-400 overflow-hidden">
+  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-600 overflow-hidden">
       <LiteYouTube
         id="zqz3Owz0K3o"
         title="Project video"
@@ -397,7 +397,7 @@ const WhispersProjectDetail = () => {
    
 
          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-2 md:my-2 bg-transparent"></div>
 
          
           {/*Render Images*/}   
@@ -441,9 +441,9 @@ const WhispersProjectDetail = () => {
  {/* Process-1 */}
 <div className="my-0 md:my-0 relative py-8 md:py-12">
    <div className="relative z-10">
-    <p className="font-Medium mb-6">
-    <span className="text-sm md:text-base text-gray-400">Context </span>
-    <span className="ml-3 text-xl md:text-xl text-white">Ocean Awareness Gap + Hybrid Exhibition </span>
+    <p className="font-Medium mb-4">
+    <span className="text-sm md:text-base text-gray-600">Context </span>
+    <span className="ml-4 text-base md:text-base text-white">Ocean Awareness Gap + Hybrid Exhibition </span>
     </p>
   </div>
 </div>
@@ -484,26 +484,22 @@ const WhispersProjectDetail = () => {
            
 
          {/* Process-2 */}
-         <div className="my-0 md:my-0 relative py-8 md:py-12">
-         <div className="relative z-10">
-         <p className="font-Medium mb-6">
-         <span className="text-sm md:text-base text-gray-400">Process </span>
-         <span className="ml-3 text-xl md:text-xl text-white"> Exhibition Journey & Development </span>
+         
+         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+         <span className="text-sm md:text-sm text-gray-600 font-Medium">
+          Process
+         </span>
+         <div>
+         <span className="text-base md:text-base text-white font-Medium">
+          Exhibition Journey & Development
+         </span>
+         <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+         The exhibition combines tactile modules, sound, QR/AR scanning, and animated species content, turning passive viewing into active discovery.
           </p>
-          </div>
-          </div>
-
-           {/*Exhibition  Text*/} 
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-          <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-          <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition combines tactile modules, sound, QR/AR scanning, and animated species content, turning passive viewing into active discovery.
-          </p>
-          </div>
          </div>
-  
- 
+         </div>
           
-         {/*Exhibition Flow */}       
+          {/*Exhibition Flow */}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB15.jpg" />
           </div>  
