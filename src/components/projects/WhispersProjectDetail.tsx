@@ -257,7 +257,7 @@ const WhispersProjectDetail = () => {
          <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
       The Brief
           </h2>
-       <p className="text-sm md:text-sm lg:text-base leading-relaxed font-light text-gray-400">
+       <p className="text-sm md:text-sm text-gray-400 leading-relaxed font-light">
         Set in collaboration with UNESCO, The Ocean Agency and the UN Decade of Ocean Science for Sustainable Development (2021-2030), tasks students to explore the crucial intersection between the ocean and the climate.
       </p>
       </div>
@@ -312,6 +312,9 @@ const WhispersProjectDetail = () => {
       {/* 챌린지 Container */}
        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+
+       {/* Empty Left Column */}
+        <div className="hidden md:block" />   
        {/* Right Column */}
        <div className="space-y-6">
        <div className="mb-6 mt-6 md:mt-6"> 
