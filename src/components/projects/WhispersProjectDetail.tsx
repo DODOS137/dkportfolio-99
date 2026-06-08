@@ -372,7 +372,7 @@ const WhispersProjectDetail = () => {
 {/* YouTube Video Section */}
 <div className="my-0 md:my-0 relative py-8 md:py-12">
 {/* Content */}
-   <div className="mb-6 grid grid-cols-[auto_1fr] gap-x-3">
+ <div className="mb-6 grid grid-cols-[auto_1fr] gap-x-3">
   <span className="text-sm md:text-base text-gray-800 font-Medium">
     Project Overview
   </span>
@@ -694,7 +694,7 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
             
-        </div>
+        
       </section>
       
       {/*Navigation Section*/}
