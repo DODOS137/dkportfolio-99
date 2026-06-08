@@ -393,7 +393,7 @@ const WhispersProjectDetail = () => {
       />
     </AspectRatio>
   </div>
-</div>
+
    
 
          {/*Line*/} 
@@ -694,7 +694,7 @@ const WhispersProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
             
-        
+      </div>
       </section>
       
       {/*Navigation Section*/}
