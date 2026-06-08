@@ -304,7 +304,7 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
  
 
     
@@ -316,7 +316,7 @@ const WhispersProjectDetail = () => {
     <p className="text-xl md:text-xl font-Medium text-white mb-6">
       Project Video
     </p>
-  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-400 overflow-hidden">
+  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-800 overflow-hidden">
       <LiteYouTube
         id="zqz3Owz0K3o"
         title="Project video"
