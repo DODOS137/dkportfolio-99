@@ -403,8 +403,7 @@ const WhispersProjectDetail = () => {
 
 
 
-  </div>
-  {/* 여기서 wrapper 닫기 */}
+
 
           
 
@@ -715,6 +714,9 @@ const WhispersProjectDetail = () => {
            </p>
            </div>
            </div>
+
+            </div>
+            {/* 여기서 wrapper 닫기 */}
 
 
 
