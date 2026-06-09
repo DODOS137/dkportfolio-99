@@ -214,7 +214,7 @@ const WhispersProjectDetail = () => {
 
 
 
-           {/* 여기부터 Project Overview 전까지 감싸기 */}
+  {/* 여기부터 Project Overview 전까지 감싸기 */}
   <div className="relative">
 
     {/* 오른쪽 여백 sticky box */}
@@ -328,9 +328,12 @@ const WhispersProjectDetail = () => {
   </div>
 </details>
 
-    </div>
   </div>
   </div>
+  </div>
+             </div>
+            {/* 여기서 wrapper 닫기 */}
+
 
 
    
@@ -388,8 +391,8 @@ const WhispersProjectDetail = () => {
       </p>
     </div>
    </div>
-   </div> {/* 여기서 wrapper 닫기 */}
    </details>
+          
    </div>
    </div>
 
