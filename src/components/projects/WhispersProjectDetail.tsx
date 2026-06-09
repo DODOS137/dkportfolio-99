@@ -214,6 +214,25 @@ const WhispersProjectDetail = () => {
 
 
 
+           {/* 여기부터 Project Overview 전까지 감싸기 */}
+  <div className="relative">
+
+    {/* 오른쪽 여백 sticky box */}
+    <div className="hidden xl:block absolute right-8 top-0 bottom-0 z-50">
+      <div className="sticky top-32 w-[170px]">
+        <p className="text-xs text-gray-600 font-Medium mb-2">
+          Client
+        </p>
+
+        <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
+          <p className="text-white mb-2">UNESCO IOC</p>
+          <p>The Ocean Agency</p>
+          <p>Woods Hole Oceanographic Institution</p>
+        </div>
+      </div>
+    </div>
+
+
 
 
 
@@ -382,7 +401,12 @@ const WhispersProjectDetail = () => {
  <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
 
-       
+
+
+  </div>
+  {/* 여기서 wrapper 닫기 */}
+
+          
 
 
     
