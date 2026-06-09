@@ -394,7 +394,8 @@ const WhispersProjectDetail = () => {
    </div>  {/* 여기서 wrapper 닫기 */}        
           
    </div>
-   </div>
+   </div
+   </div> 
 
  
 
