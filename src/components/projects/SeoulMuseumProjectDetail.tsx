@@ -190,7 +190,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
       {/* Main Content */}
       <section className="cv-auto"> {/* ✅ NEW: content-visibility */}
         {/* First Image */}
-        <div className="max-w-[1540px] mx-auto z-10">
+        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
           <img
             alt={`${project.title} - Image 1`}
             className="w-full h-auto object-contain"
@@ -208,7 +208,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
       <div className="sticky top-32 w-[170px]">
         <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
           <p className="text-white mb-2">Role</p>
-          <p className="text-gray-400 mb-4">Spatial & Exhibition Designer Designer</p>
+          <p className="text-gray-400 mb-4">Spatial & Exhibition Designer</p>
         
           <p className="text-white mb-2">Tools</p>
           <p>Adobe suite</p>
@@ -292,7 +292,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
   </div>
 
       {/* 챌린지 Container */}
-       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+       <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
 
        {/* Empty Left Column */}
