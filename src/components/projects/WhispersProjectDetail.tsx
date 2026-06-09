@@ -214,34 +214,7 @@ const WhispersProjectDetail = () => {
 
 
 
-{/* Side Client Table Wrapper */}
-<div className="relative max-w-[1540px] mx-auto">
 
-  {/* Right Margin Table */}
-  <aside className="hidden md:block absolute top-20 right-4 w-[210px] z-20">
-    <div className="border border-white/10 bg-black/60 backdrop-blur-sm p-4">
-      <p className="text-xs text-gray-500 font-Medium mb-3">
-        Client
-      </p>
-
-      <div className="space-y-3 text-xs text-gray-400 leading-relaxed font-light">
-        <div>
-          <p className="text-white font-Medium mb-1">UNESCO IOC</p>
-          <p>Ocean science communication brief.</p>
-        </div>
-
-        <div>
-          <p className="text-white font-Medium mb-1">The Ocean Agency</p>
-          <p>Marine awareness and campaign context.</p>
-        </div>
-
-        <div>
-          <p className="text-white font-Medium mb-1">WHOI</p>
-          <p>Oceanographic research reference.</p>
-        </div>
-      </div>
-    </div>
-  </aside>
 
 
 
@@ -410,7 +383,7 @@ const WhispersProjectDetail = () => {
 
 
        
-       </div> {/* ✅ Side Client Table Wrapper 닫기: 여기서 멈춤 */}
+
 
     
           
