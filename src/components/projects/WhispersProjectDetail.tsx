@@ -414,7 +414,7 @@ const WhispersProjectDetail = () => {
 
 
     
-          
+<div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">          
 {/* YouTube Video Section */}
 <div className="my-0 md:my-0 relative">
 {/* Content */}
@@ -725,7 +725,8 @@ const WhispersProjectDetail = () => {
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-            
+   
+      </div>     
       </div>
       </section>
       
