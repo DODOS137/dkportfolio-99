@@ -221,9 +221,10 @@ const WhispersProjectDetail = () => {
       <div className="sticky top-32 w-[170px]">
         <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
           <p className="text-white mb-2">Role</p>
-          <p>Exhibtion Designer</p>
+          <p className="text-gray400 mb-4">Exhibtion Designer</p>
+        
           <p className="text-white mb-2">Tools</p>
-          <p>Adobe suits</p>
+          <p>Adobe suite</p>
           <p>Auto CAD</p>
           <p>3DS MAX-Vray</p>
           <p>Unity</p>
@@ -515,7 +516,7 @@ const WhispersProjectDetail = () => {
 
           
 
-           {/*idea development text 1*/}
+           {/*Context text */}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-0">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
@@ -558,7 +559,7 @@ const WhispersProjectDetail = () => {
           </div>  
 
            {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
           
 
 
@@ -615,7 +616,7 @@ const WhispersProjectDetail = () => {
           
           
          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
 
 
          {/* Process-3*/}
@@ -658,7 +659,7 @@ const WhispersProjectDetail = () => {
 
 
          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
 
 
 
@@ -698,7 +699,7 @@ const WhispersProjectDetail = () => {
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
 
 
  
@@ -709,7 +710,7 @@ const WhispersProjectDetail = () => {
           </div>  
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
 
 
 
