@@ -117,27 +117,29 @@ const WhispersProjectDetail = () => {
       (window as any).requestIdleCallback ? (window as any).requestIdleCallback(run, { timeout: 500 }) : run();
     };
 
-    // 이미지 관찰자: 근접 시 decode & 표시
-    const imgIO = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const img = entry.target as HTMLImageElement;
-          if (entry.isIntersecting) {
-            imgIO.unobserve(img);
-            decodeOnIdle(img);
-          } else {
-            // 오프스크린 되면 미세 모션 중지
-            img.classList.remove('play-wiggle');
-          }
-        });
-      },
-      {
-        root: scrollRoot,
-        rootMargin: '600px 0px', // 더 이르게 프리로드
-        threshold: 0.05
+// 이미지 관찰자: 스크롤 페이드 인 / 페이드 아웃
+const imgIO = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const img = entry.target as HTMLImageElement;
+
+      if (entry.isIntersecting) {
+        img.classList.remove('img-lqip');
+        img.classList.add('reveal-show');
+      } else {
+        img.classList.remove('reveal-show');
       }
-    );
-    lazyImgs.forEach((img) => imgIO.observe(img));
+    });
+  },
+  {
+    root: scrollRoot,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.15
+  }
+);
+
+lazyImgs.forEach((img) => imgIO.observe(img));
+     
 
     // 텍스트 노드: 스크롤 페이드 인/아웃
     const textNodes = document.querySelectorAll<HTMLElement>(
@@ -752,17 +754,30 @@ const WhispersProjectDetail = () => {
         .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
         .img-lqip.reveal-show { filter: blur(4px); }
 
-        /* 이미지: 스크롤 페이드 */
-        .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
-        .reveal-show { opacity: 1; filter: blur(0); }
+ /* 이미지: 스크롤 페이드 인 / 페이드 아웃 */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(6px);
+  transition:
+    opacity 900ms ease-out,
+    transform 900ms ease-out,
+    filter 900ms ease-out;
+}
+
+.reveal-show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
 
         /* 이미지: '보일 때만' 미세 모션 */
         @keyframes microWiggle {
-          0%   { transform: translate3d(0, 4px, 0) scale(1.001); }
-          50%  { transform: translate3d(0, -4px, 0) scale(1.004); }
-          100% { transform: translate3d(0, 4px, 0) scale(1.001); }
+          0%   { transform: translate3d(0, 0,6px, 0) scale(1.001); }
+          50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
+          100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
         }
-        .play-wiggle { animation: microWiggle 4s ease-in-out infinite; will-change: transform; }
+        .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
 
         /* 텍스트: 페이드 인/아웃 */
         .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
