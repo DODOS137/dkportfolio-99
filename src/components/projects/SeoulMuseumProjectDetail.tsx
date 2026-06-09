@@ -57,126 +57,98 @@ const SeoulMuseumProjectDetail = () => {
      ✅ NEW: 이미지 LQIP + 지연 로딩 큐 + 스크롤 페이드 + content-visibility
      ============================ */
   useEffect(() => {
-    // 🔧 ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
+    // 🔧 FIX: ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
     const scrollRoot =
-      document.querySelector<HTMLElement>(
-        "[data-radix-scroll-area-viewport]",
-      ) || // shadcn
-      document.querySelector<HTMLElement>(".h-screen.w-screen.overflow-auto") ||
-      null;
+      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') // shadcn
+      || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto')
+      || null;
 
-    // 투명 1x1 픽셀 (초기 네트워크 요청 차단용)
-    const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAAAAACw=";
-
-    // 모든 이미지 수집
+    // 모든 섹션 내 이미지 수집
     const allImgs = Array.from(
-      document.querySelectorAll<HTMLImageElement>("section img"),
+      document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    // LCP 후보(맨 위 큰 이미지)는 즉시 로드
+    // LCP 후보(맨 위 큰 이미지)는 즉시/고우선 로드
     const lcpImg = allImgs[0];
     if (lcpImg) {
-      lcpImg.loading = "eager";
-      (lcpImg as any).fetchPriority = "high";
-      lcpImg.decoding = "async";
+      lcpImg.loading = 'eager';
+      (lcpImg as any).fetchPriority = 'high';
+      lcpImg.decoding = 'async';
+      // 컨테이너 최대폭 기준 힌트
+      if (!lcpImg.hasAttribute('sizes')) {
+        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
+      }
     }
 
-    // 나머지 이미지는 공격적 지연 로딩 준비
+    // 나머지 이미지는 native lazy + LQIP 효과만 (src는 건드리지 않음)
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
-      if (img.dataset.lazyEnhanced === "1") return; // 중복 방지
-      img.dataset.lazyEnhanced = "1";
+      if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
+      img.dataset.lazyEnhanced = '1';
 
-      const originalSrc = img.getAttribute("src");
-      if (!originalSrc) return;
+      // 브라우저 네이티브 힌트
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      (img as any).fetchPriority = 'low';
+      if (!img.hasAttribute('sizes')) {
+        img.setAttribute('sizes', '100vw'); // 안전 기본값
+      }
 
-      img.setAttribute("data-src", originalSrc);
-      img.setAttribute("src", transparentPixel);
-      img.loading = "lazy";
-      img.decoding = "async";
-      (img as any).fetchPriority = "low";
-
-      // LQIP 블러 + 페이드 초기 상태
-      img.classList.add("img-lqip", "reveal-init"); // 보일 때만 해제
+      // LQIP/페이드 초기 상태만 부여
+      img.classList.add('img-lqip', 'reveal-init');
     });
 
-    /* ----------------------------
-       🚀 PERF: 지연 로딩 큐 (동시 2개)
-       ---------------------------- */
-    const MAX_CONCURRENT = 2;
-    const queue: HTMLImageElement[] = [];
-    let inFlight = 0;
-
-    const processQueue = () => {
-      while (inFlight < MAX_CONCURRENT && queue.length) {
-        const img = queue.shift()!;
-        if (!img || img.dataset.loaded === "1") continue;
-
-        inFlight++;
-        const doReveal = () => {
-          requestAnimationFrame(() => {
-            img.classList.add("reveal-show");
-            img.classList.add("play-wiggle"); // 보일 때만 모션 켬
-            img.dataset.loaded = "1";
-            inFlight--;
-            processQueue();
+    // 보이면 decode → 클래스 토글 (JS 큐/1px 치환 없음)
+    const decodeOnIdle = (img: HTMLImageElement) => {
+      const run = () => {
+        if (typeof (img as any).decode === 'function') {
+          (img as any).decode().catch(() => {}).finally(() => {
+            img.classList.remove('img-lqip');
+            img.classList.add('reveal-show', 'play-wiggle');
           });
-        };
-
-        const ds = img.getAttribute("data-src");
-        if (ds && img.src !== ds) img.src = ds;
-
-        if (typeof (img as any).decode === "function") {
-          (img as any)
-            .decode()
-            .then(() => {
-              img.classList.remove("img-lqip");
-              doReveal();
-            })
-            .catch(() => {
-              img.classList.remove("img-lqip");
-              doReveal();
-            });
         } else {
           const onLoad = () => {
-            img.removeEventListener("load", onLoad);
-            img.classList.remove("img-lqip");
-            doReveal();
+            img.removeEventListener('load', onLoad);
+            img.classList.remove('img-lqip');
+            img.classList.add('reveal-show', 'play-wiggle');
           };
-          img.addEventListener("load", onLoad);
+          img.addEventListener('load', onLoad);
         }
-      }
+      };
+      (window as any).requestIdleCallback ? (window as any).requestIdleCallback(run, { timeout: 500 }) : run();
     };
 
-    // 이미지 관찰자: 근접 시 큐에 추가
-    const imgIO = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const img = entry.target as HTMLImageElement;
-          if (entry.isIntersecting) {
-            imgIO.unobserve(img);
-            queue.push(img);
-            processQueue();
-          } else {
-            img.classList.remove("play-wiggle");
-          }
-        });
-      },
-      {
-        root: scrollRoot,
-        rootMargin: "200px 0px",
-        threshold: 0.05,
-      },
-    );
-    lazyImgs.forEach((img) => imgIO.observe(img));
+// 이미지 관찰자: 스크롤 페이드 인 / 페이드 아웃
+const imgIO = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const img = entry.target as HTMLImageElement;
+
+      if (entry.isIntersecting) {
+        img.classList.remove('img-lqip');
+        img.classList.add('reveal-show');
+      } else {
+        img.classList.remove('reveal-show');
+      }
+    });
+  },
+  {
+    root: scrollRoot,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.15
+  }
+);
+
+lazyImgs.forEach((img) => imgIO.observe(img));
+     
 
     // 텍스트 노드: 스크롤 페이드 인/아웃
     const textNodes = document.querySelectorAll<HTMLElement>(
-      "section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th",
+      'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
     textNodes.forEach((el) => {
-      if (!el.classList.contains("text-reveal-init")) {
-        el.classList.add("text-reveal-init");
+      if (!el.classList.contains('text-reveal-init')) {
+        el.classList.add('text-reveal-init');
       }
     });
 
@@ -184,15 +156,15 @@ const SeoulMuseumProjectDetail = () => {
       (entries) => {
         entries.forEach((entry) => {
           const el = entry.target as HTMLElement;
-          if (entry.isIntersecting) el.classList.add("text-reveal-show");
-          else el.classList.remove("text-reveal-show");
+          if (entry.isIntersecting) el.classList.add('text-reveal-show');
+          else el.classList.remove('text-reveal-show');
         });
       },
       {
         root: scrollRoot,
-        rootMargin: "0px 0px -10% 0px",
-        threshold: 0.12,
-      },
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.12
+      }
     );
     textNodes.forEach((el) => textIO.observe(el));
 
@@ -237,7 +209,7 @@ const SeoulMuseumProjectDetail = () => {
           {" "}
           {/* ✅ NEW: content-visibility */}
           {/* First Image - Updated */}
-          <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
+          <div className="max-w-[1540px] mx-auto z-10">
             <img
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
@@ -440,7 +412,7 @@ const SeoulMuseumProjectDetail = () => {
             </div>
 
             {/*Line*/}
-            <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
               {/* YouTube Video Section */}
@@ -474,7 +446,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-5 md:my-5 bg-black"></div>
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
               {/*Lobby Images*/}
               <div className="w-full">
@@ -488,7 +460,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Reception Desk Text 1*/}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -505,7 +477,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Lobby Images2*/}
               <div className="w-full">
@@ -519,7 +491,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Exhibition Hall*/}
               <div className="w-full">
@@ -533,7 +505,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Exhibition Hall comments*/}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -553,7 +525,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Exhibtion Hall 2*/}
               <div className="w-full">
@@ -567,7 +539,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Rest Area Image 1*/}
               <div className="w-full">
@@ -581,7 +553,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*2F Rest Area Text*/}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -600,7 +572,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/* Process-1 */}
               <div className="my-0 md:my-0 relative ">
@@ -628,7 +600,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Narrative Arc text start*/}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -664,7 +636,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/* Narrative Image 2*/}
               <div className="w-full">
@@ -721,7 +693,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Problem Image2*/}
               <div className="w-full">
@@ -745,13 +717,13 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/*Line*/}
-              <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/* Floor Plan */}
               <div className="w-full">
@@ -765,7 +737,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-5 md:my-5 bg-black"></div>
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
               {/* Floor Plan2 */}
               <div className="w-full">
@@ -779,7 +751,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/*Exhibition Plan*/}
               <div className="w-full">
@@ -793,7 +765,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Exhibition design & stands text 1*/}
               <div className="mb-3 flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -814,7 +786,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*증빙 Images*/}
               <div className="w-full">
@@ -828,7 +800,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-5 md:my-5 bg-black"></div>
+              <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
               {/*증빙 Images 2*/}
               <div className="w-full">
@@ -842,7 +814,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/*built-in Image 2*/}
               <div className="w-full">
@@ -856,7 +828,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Built-in display cases Text 1*/}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -874,7 +846,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*built-in Image 2*/}
               <div className="w-full">
@@ -888,7 +860,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Built-in 4*/}
               <div className="w-full">
@@ -902,7 +874,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/* Product Design Section */}
               <div className="rounded-lg bg-transparent">
@@ -915,7 +887,7 @@ const SeoulMuseumProjectDetail = () => {
                 />
 
                 {/*Line*/}
-                <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+                <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
                 {/*2F Gift Shop Text*/}
                 <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -933,7 +905,7 @@ const SeoulMuseumProjectDetail = () => {
                 </div>
 
                 {/*Line*/}
-                <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+                <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
                 <div className="w-full ">
                   <img
@@ -947,7 +919,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-20 md:my-40 bg-black"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
               {/*Final Outcome image*/}
               <div className="w-full">
@@ -961,7 +933,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*Final Outcome Text*/}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -983,7 +955,7 @@ const SeoulMuseumProjectDetail = () => {
               </div>
 
               {/*Line*/}
-              <div className="w-full h-px my-10 md:my-10 bg-black"></div>
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               {/*End Image */}
               <div className="w-full mb-20 md:mb-40">
@@ -1000,7 +972,7 @@ const SeoulMuseumProjectDetail = () => {
         </section>
 
         {/*Navigation Section*/}
-        <div className="pb-40 md:pb-60 flex items-center justify-center mt-40 ">
+        <div className="pb-40 md:pb-60 flex items-center justify-center">
           <Link
             to="/project/learn"
             className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-black text-white border border-white hover:bg-white hover:text-black transition-colors duration-300 rounded-md text-base md:text-lg font-medium"
@@ -1010,38 +982,36 @@ const SeoulMuseumProjectDetail = () => {
           </Link>
         </div>
 
-        {/* Remaining Images */}
-        {project.images.slice(1).map((image, index) => (
-          <div key={index + 1} className="mb-20">
-            <div className="w-full">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <ImageWithLoading
-                  src={image}
-                  alt={`${project.title} - Image ${index + 2}`}
-                  className="w-full h-full object-cover"
-                />
-              </AspectRatio>
-            </div>
-          </div>
-        ))}
-
         <BackToTopButton />
 
-        {/* ============================
+      {/* ============================
           ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션)
           ============================ */}
-        <style>{`
+      <style>{`
         /* LQIP 블러 상태 */
         .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
         .img-lqip.reveal-show { filter: blur(4px); }
 
-        /* 이미지: 스크롤 페이드 */
-        .reveal-init { opacity: 0; filter: blur(3px); transition: opacity 720ms ease-out, filter 720ms ease-out; }
-        .reveal-show { opacity: 1; filter: blur(0); }
+ /* 이미지: 스크롤 페이드 인 / 페이드 아웃 */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(6px);
+  transition:
+    opacity 900ms ease-out,
+    transform 900ms ease-out,
+    filter 900ms ease-out;
+}
+
+.reveal-show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
 
         /* 이미지: '보일 때만' 미세 모션 */
         @keyframes microWiggle {
-          0%   { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+          0%   { transform: translate3d(0, 0,6px, 0) scale(1.001); }
           50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
           100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
         }
