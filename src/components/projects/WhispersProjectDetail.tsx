@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 // import YouTube from 'react-youtube'; // (미사용) 성능 최적화로 대체
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import ImageWithLoading from '@/components/ImageWithLoading';
+import ImageWithLoading from '@/components/ImageWithLoading'; 
 import { whispersProjectData } from '@/data/whispersProject';
 import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
