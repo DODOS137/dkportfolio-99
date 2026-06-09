@@ -219,15 +219,18 @@ const WhispersProjectDetail = () => {
   {/* 오른쪽 여백 sticky box */}
     <div className="hidden xl:block absolute right-8 top-0 bottom-0 z-50">
       <div className="sticky top-32 w-[170px]">
-        <p className="text-xs text-gray-600 font-Medium mb-2">
-          Client
-        </p>
-
         <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
-          <p className="text-white mb-2">UNESCO IOC</p>
-          <p>The Ocean Agency</p>
-          <p>Woods Hole Oceanographic Institution</p>
-        </div>
+          <p className="text-white mb-2">Role</p>
+          <p>Exhibtion Designer</p>
+          <p className="text-white mb-2">Tools</p>
+          <p>Adobe suits</p>
+          <p>Auto CAD</p>
+          <p>3DS MAX-Vray</p>
+          <p>Unity</p>
+      
+        
+        
+       </div>
       </div>
     </div>
 
@@ -431,7 +434,7 @@ const WhispersProjectDetail = () => {
     </p>
   </div>
 </div>
-  <AspectRatio ratio={16 / 9} className="rounded-lg border border-gray-600 overflow-hidden">
+  <AspectRatio ratio={16 / 9} className="rounded-lg border border-[#C7B299] overflow-hidden">
       <LiteYouTube
         id="zqz3Owz0K3o"
         title="Project video"
