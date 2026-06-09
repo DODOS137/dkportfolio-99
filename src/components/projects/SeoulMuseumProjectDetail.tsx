@@ -245,7 +245,7 @@ const SeoulMuseumProjectDetail = () => {
       <div className="sticky top-32 w-[170px]">
         <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
           <p className="text-white mb-2">Role</p>
-          <p className="text-gray400 mb-4">Spatial & Exhibition Designer Designer</p>
+          <p className="text-gray-400 mb-4">Spatial & Exhibition Designer Designer</p>
         
           <p className="text-white mb-2">Tools</p>
           <p>Adobe suite</p>
@@ -804,7 +804,7 @@ const SeoulMuseumProjectDetail = () => {
           </div>
 
            {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-gray-black"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-black"></div>
 
           {/*Final Outcome image*/}
           <div className="w-full">
@@ -830,7 +830,8 @@ const SeoulMuseumProjectDetail = () => {
            <div className="w-full mb-20 md:mb-40">
             <img src="/webimages/SNM/SNM20.jpg" className="w-full h-auto mb-40 md:mb-0" loading="lazy" decoding="async" fetchPriority="low" />
               </div>
-          
+
+         </div>
         </div>
       </section>
       
