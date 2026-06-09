@@ -214,10 +214,9 @@ const WhispersProjectDetail = () => {
 
 
 
-  {/* 여기부터 Project Overview 전까지 감싸기 */}
+  {/* Tools and roles */}
   <div className="relative">
-
-    {/* 오른쪽 여백 sticky box */}
+  {/* 오른쪽 여백 sticky box */}
     <div className="hidden xl:block absolute right-8 top-0 bottom-0 z-50">
       <div className="sticky top-32 w-[170px]">
         <p className="text-xs text-gray-600 font-Medium mb-2">
@@ -331,8 +330,7 @@ const WhispersProjectDetail = () => {
   </div>
   </div>
   </div>
-             </div>
-            {/* 여기서 wrapper 닫기 */}
+
 
 
 
@@ -392,6 +390,8 @@ const WhispersProjectDetail = () => {
     </div>
    </div>
    </details>
+
+   </div>  {/* 여기서 wrapper 닫기 */}        
           
    </div>
    </div>
