@@ -211,6 +211,45 @@ const WhispersProjectDetail = () => {
         </div>
 
 
+       {/* Sticky Overview Scope */}
+       <div className="relative max-w-[1540px] mx-auto">
+       {/* Sticky Mini Table */}
+       <aside className="hidden xl:block absolute right-4 top-0 h-full w-[190px]">
+       <div className="sticky top-24 rounded-lg border border-white/10 bg-black/70 backdrop-blur-sm p-4 text-xs text-gray-400">
+       <p className="text-white text-sm font-Medium mb-4">
+        Project Index
+       </p>
+       <div className="space-y-3">
+        <div>
+          <p className="text-gray-600 mb-1">01</p>
+          <p>Client</p>
+        </div>
+
+        <div>
+          <p className="text-gray-600 mb-1">02</p>
+          <p>Brief</p>
+        </div>
+
+        <div>
+          <p className="text-gray-600 mb-1">03</p>
+          <p>Challenge</p>
+        </div>
+
+        <div>
+          <p className="text-gray-600 mb-1">04</p>
+          <p>Proposal</p>
+        </div>
+
+        <div>
+          <p className="text-gray-600 mb-1">05</p>
+          <p>Outputs</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+         
+
       
       {/* Shared Container */}
        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
@@ -360,7 +399,9 @@ const WhispersProjectDetail = () => {
    </div>
    </div>
 
-
+ 
+   </div>
+    {/* End Sticky Overview Scope */}
 
 
           
