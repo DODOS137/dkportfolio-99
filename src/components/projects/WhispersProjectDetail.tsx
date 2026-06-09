@@ -758,11 +758,11 @@ const WhispersProjectDetail = () => {
 
         /* 이미지: '보일 때만' 미세 모션 */
         @keyframes microWiggle {
-          0%   { transform: translate3d(0, 0.6px, 0) scale(1.001); }
-          50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
-          100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+          0%   { transform: translate3d(0, 4px, 0) scale(1.001); }
+          50%  { transform: translate3d(0, -4px, 0) scale(1.004); }
+          100% { transform: translate3d(0, 4px, 0) scale(1.001); }
         }
-        .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
+        .play-wiggle { animation: microWiggle 4s ease-in-out infinite; will-change: transform; }
 
         /* 텍스트: 페이드 인/아웃 */
         .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
