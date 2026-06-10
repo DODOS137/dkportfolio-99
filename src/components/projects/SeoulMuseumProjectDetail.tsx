@@ -473,7 +473,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
 
            {/*Narrative Arc text start2*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded journey shaped by Korean perspectives on nature, coexistence, and memory.</p>
@@ -488,6 +488,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+    
          {/* Process-2 */}
          <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
          <span className="text-sm md:text-sm text-gray-600 font-Medium">
@@ -502,6 +503,11 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </p>
          </div>
          </div>
+
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+   
 
     
           {/*전체 프로세스 다이어그램*/}       
@@ -548,7 +554,10 @@ lazyImgs.forEach((img) => imgIO.observe(img));
         </div>
       </div>
 
-         {/*Line*/} 
+      
+   
+   
+          {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
@@ -562,7 +571,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2-1.jpg" />
           </div>
        
-   '
+   
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
       
@@ -600,17 +609,20 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM6.jpg" />
           </div> 
+            
+          {/*증빙 Images*/}        
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/SNM/SNM7.jpg" />
+          </div>  
+          {/*증빙 Images 2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM8.jpg" />
+          </div> 
 
-           {/*Exhibition design & stands text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Design & stands</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">As visitors move from the Marine Hall to the upper Terrestrial Halls, the spatial textures gradually shift from smooth to coarse, reflecting how sea, river, and mountain environments shape stone differently. This erosion gradient becomes a visual language across the museum’s sculptural elements and built-in furniture, linking each ecological zone to a distinct material atmosphere.</p>
-           </div>
-           </div>
+ 
 
          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
          {/* Process-4*/}
          <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
@@ -627,14 +639,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
          </div>
          </div>
        
-          {/*증빙 Images*/}        
-          <div className="w-full">
-            <img className="w-full h-full" src="/webimages/SNM/SNM7.jpg" />
-          </div>  
-          {/*증빙 Images 2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM8.jpg" />
-          </div> 
+
 
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
