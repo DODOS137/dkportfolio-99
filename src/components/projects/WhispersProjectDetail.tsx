@@ -103,13 +103,13 @@ const WhispersProjectDetail = () => {
         if (typeof (img as any).decode === 'function') {
           (img as any).decode().catch(() => {}).finally(() => {
             img.classList.remove('img-lqip');
-            img.classList.add('reveal-show', 'play-wiggle');
+            img.classList.add('reveal-show');
           });
         } else {
           const onLoad = () => {
             img.removeEventListener('load', onLoad);
             img.classList.remove('img-lqip');
-            img.classList.add('reveal-show', 'play-wiggle');
+            img.classList.add('reveal-show');
           };
           img.addEventListener('load', onLoad);
         }
@@ -124,8 +124,7 @@ const imgIO = new IntersectionObserver(
       const img = entry.target as HTMLImageElement;
 
       if (entry.isIntersecting) {
-        img.classList.remove('img-lqip');
-        img.classList.add('reveal-show');
+        decodeOnIdle(img);
       } else {
         img.classList.remove('reveal-show');
       }
@@ -133,8 +132,8 @@ const imgIO = new IntersectionObserver(
   },
   {
     root: scrollRoot,
-    rootMargin: '0px 0px -10% 0px',
-    threshold: 0.15
+    rootMargin: '300px 0px 300px 0px',
+    threshold: 0.01
   }
 );
 
@@ -161,8 +160,8 @@ lazyImgs.forEach((img) => imgIO.observe(img));
       },
       {
         root: scrollRoot,
-        rootMargin: '0px 0px -10% 0px',
-        threshold: 0.12
+        rootMargin: '200px 0px 200px 0px',
+        threshold: 0.01
       }
     );
     textNodes.forEach((el) => textIO.observe(el));
@@ -207,7 +206,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             className="w-full h-auto object-contain"
             src="/webimages/WFTB/1.WFBCOVER1.jpg"
             loading="eager"           // ✅ NEW
-            fetchpriority="high"     // ✅ NEW
+            fetchPriority="high"     // ✅ NEW
             decoding="async"         // ✅ NEW
           />
         </div>
@@ -750,34 +749,26 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션)
           ============================ */}
       <style>{`
-        /* LQIP 블러 상태 */
-        .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
-        .img-lqip.reveal-show { filter: blur(4px); }
+        /* LQIP: 무거운 blur/filter 제거 */
+        .img-lqip { transform: translateZ(0); }
 
- /* 이미지: 스크롤 페이드 인 / 페이드 아웃 */
+ /* 이미지: 가벼운 스크롤 페이드 인 / 페이드 아웃 */
 .reveal-init {
   opacity: 0;
-  transform: translateY(24px);
-  filter: blur(6px);
+  transform: translateY(16px);
   transition:
-    opacity 900ms ease-out,
-    transform 900ms ease-out,
-    filter 900ms ease-out;
+    opacity 700ms ease-out,
+    transform 700ms ease-out;
+  will-change: opacity, transform;
 }
 
 .reveal-show {
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
 }
 
-        /* 이미지: '보일 때만' 미세 모션 */
-        @keyframes microWiggle {
-          0%   { transform: translate3d(0, 0,6px, 0) scale(1.001); }
-          50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
-          100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
-        }
-        .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
+        /* 이미지 흔들림 제거: 큰 이미지/GIF 많은 페이지에서 스크롤 버벅임 방지 */
+        .play-wiggle { animation: none !important; }
 
         /* 텍스트: 페이드 인/아웃 */
         .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
