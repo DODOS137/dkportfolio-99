@@ -607,12 +607,12 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
           {/*Exhibition Plan*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-4" src="/webimages/SNM/SNM6.jpg" />
+            <img className="w-full h-full mb-0 md:mb-8" src="/webimages/SNM/SNM6.jpg" />
           </div> 
             
           {/*증빙 Images*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM7.jpg" />
+            <img className="w-full h-full mb-5" src="/webimages/SNM/SNM7.jpg" />
           </div>  
           {/*증빙 Images 2*/}        
           <div className="w-full">
@@ -646,7 +646,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
           {/*built-in Image 2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM23.jpg" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/SNM/SNM23.jpg" />
           </div>    
 
            {/*Built-in display cases Text 1*/}
@@ -667,7 +667,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
 
    
@@ -696,11 +696,16 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-          {/*Gift Shop Image 2*/}       
+          {/*Gift Product Image 1*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM18.jpg" />
+            <img className="w-full h-full mb-0 md:mb-4" src="/webimages/SNM/SNM18.jpg" />
+          </div>  
+
+             {/*Gift Product Image 2*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM20.jpg" />
           </div>  
 
           {/*Line*/} 
@@ -725,14 +730,9 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          {/*End Image*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM20.jpg" />
-          </div>  
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-   
+
+
       </div>
       </section>
       
