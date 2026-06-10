@@ -383,10 +383,12 @@ lazyImgs.forEach((img) => imgIO.observe(img));
          {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-          {/*Render Images*/}   
 
+   
+   
+           {/*Render Images*/}   
            {/*Reception Desk Text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Reception Desk</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The reception area presents the museum’s renewed identity through a three-storey vertical installation inspired by Korean folding screens and mountain landscapes.</p>
@@ -395,7 +397,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
              {/*Lobby Images*/}        
           <div className="w-full">
-            <img className="w-full h-auto" src="/webimages/SNM/SNM11.jpg" />
+            <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM11.jpg" />
           </div>
 
              {/*Lobby Images2*/}        
@@ -410,27 +412,27 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
          
           {/*Exhibition Hall comments*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Hall</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition is divided into a Marine Zone on the first floor and a Terrestrial Zone on the upper levels. A vertical sculptural void connects the floors, linking immersive media, natural specimens, and historical artefacts into one continuous ecological journey.</p>
            </div>
            </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
           
          {/*Exhibition Hall*/}        
           <div className="w-full">
-            <img className="w-full h-auto" src="/webimages/SNM/SNM13.jpg" />
+            <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM13.jpg" />
           </div>
           {/*Exhibtion Hall 2*/}        
           <div className="w-full">
             <img className="w-full h-auto" src="/webimages/SNM/SNM14.jpg" />
           </div>
 
+            {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
            {/*2F Rest Area Text*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">2F Rest Area</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A hunter’s study-inspired rest area displays personal collections, insects, and expedition artefacts. It creates a quiet observation point overlooking the vertical glass sculpture connecting all three floors.</p>
@@ -452,7 +454,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
    <div className="relative z-10">
     <p className="font-Medium mb-4">
     <span className="text-sm md:text-base text-gray-600">Context </span>
-    <span className="ml-4 text-base md:text-base text-white">Narrative Arc + Korean Perspective </span>
+    <span className="ml-4 text-base md:text-base text-white">Narrative Arc + Korean cultural perspective </span>
     </p>
   </div>
 </div>
@@ -463,20 +465,25 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </div>    
 
            {/*Narrative Arc text start*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-0">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]">Narrative Arc</h2>
+           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.</p>
            </div>
            </div>
 
            {/*Narrative Arc text start2*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-0">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Rooted in this worldview, Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded space. The project transforms static displays into an interpretive journey shaped by Korean perspectives on nature, coexistence, and memory.</p>
+           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded journey shaped by Korean perspectives on nature, coexistence, and memory.</p>
            </div>
            </div>
+          {/*Narrative Image 2*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM22.jpg" />
+          </div>
+   
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
@@ -496,10 +503,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
          </div>
          </div>
 
-          {/*Narrative Image 2*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM22.jpg" />
-          </div>
+    
           {/*전체 프로세스 다이어그램*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM21.jpg" />
@@ -513,7 +517,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
       <div className="relative z-10">
       <p className="font-Medium mb-4">
       <span className="text-sm md:text-base text-gray-600">Process </span>
-      <span className="ml-4 text-base md:text-base text-white">Site Selection </span>
+      <span className="ml-4 text-base md:text-base text-white">Analysis </span>
       </p>
       </div>
       </div> 
@@ -545,9 +549,27 @@ lazyImgs.forEach((img) => imgIO.observe(img));
       </div>
 
          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-         {/* Process-3*/}
+
+
+          {/*Problem Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2.jpg" />
+          </div>
+          {/*Problem Image3*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2-1.jpg" />
+          </div>
+       
+   '
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+      
+   
+   
+   
+            {/* Process-3*/}
          <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
          <span className="text-sm md:text-sm text-gray-600 font-Medium">
           Process
@@ -561,17 +583,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
          </p>
          </div>
          </div>
-
-          {/*Problem Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2.jpg" />
-          </div>
-          {/*Problem Image3*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2-1.jpg" />
-          </div>
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+   
           {/*Floor Plan*/}        
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM4.jpg" />
