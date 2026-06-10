@@ -604,15 +604,15 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM5.jpg" />
           </div> 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
           {/*Exhibition Plan*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM6.jpg" />
+            <img className="w-full h-full mb-0 md:mb-4" src="/webimages/SNM/SNM6.jpg" />
           </div> 
             
           {/*증빙 Images*/}        
           <div className="w-full">
-            <img className="w-full h-full" src="/webimages/SNM/SNM7.jpg" />
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM7.jpg" />
           </div>  
           {/*증빙 Images 2*/}        
           <div className="w-full">
@@ -631,7 +631,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
          </span>
          <div>
          <span className="text-base md:text-base text-white font-Medium">
-          Built-in Display Cases & Product Design
+          Display Cases & Product Design
          </span>
          <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
          The museum experience extends into detailed display furniture, gift-shop products, and identity assets inspired by native Korean species.
@@ -658,25 +658,28 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
           {/*built-in Image 2*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM16.jpg" />
           </div>  
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+   
           {/*Built-in 4*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM10.jpg" />
           </div>  
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
-
-          {/*Gift Shop Image*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM17.jpg" />
-          </div>  
-
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+         
+   
            {/*2F Gift Shop Text*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -684,6 +687,13 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The gift shop concept features products inspired by native Korean species, reinforcing the museum’s identity. Items include collectible cards of endangered animals and resin-encased specimens of Korean insects.</p>
            </div>
            </div>
+
+          {/*Gift Shop Image*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM17.jpg" />
+          </div>  
+
+
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
