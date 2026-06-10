@@ -709,7 +709,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </div>  
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
           {/*Final Outcome image*/}       
           <div className="w-full">
@@ -717,7 +717,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </div>  
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
           
            {/*Final Outcome text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
