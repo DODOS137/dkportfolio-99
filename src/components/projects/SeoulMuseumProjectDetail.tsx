@@ -612,17 +612,9 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
           {/*Exhibition Plan*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-8" src="/webimages/SNM/SNM6.jpg" />
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM6.jpg" />
           </div> 
             
-          {/*증빙 Images*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-5" src="/webimages/SNM/SNM7.jpg" />
-          </div>  
-          {/*증빙 Images 2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM8.jpg" />
-          </div> 
 
  
 
