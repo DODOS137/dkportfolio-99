@@ -367,8 +367,8 @@ lazyImgs.forEach((img) => imgIO.observe(img));
      VR Experenice Walkthrough
     </span>
      <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-      Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
-    </p>
+      As a BA graduation project analyses the challenges of an existing museum and repositions it through a new narrative framework. The project proposes an integrated design direction across space, exhibition, branding, and product design.
+     </p>
   </div>
 </div>
   <AspectRatio ratio={16 / 9} className="rounded-lg border border-[#F7931E] overflow-hidden">
@@ -398,19 +398,15 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
           {/*Lobby Images2*/}        
           <div className="w-full">
             <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM12.jpg" />
           </div>
-          {/*Exhibition Hall*/}        
-          <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM13.jpg" />
-          </div>
-
-           {/*Exhibition Hall comments*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
+         
+          {/*Exhibition Hall comments*/}
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Hall</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition is divided into a Marine Zone on the first floor and a Terrestrial Zone on the upper levels. A vertical sculptural void connects the floors, linking immersive media, natural specimens, and historical artefacts into one continuous ecological journey.</p>
@@ -418,24 +414,31 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          
+         {/*Exhibition Hall*/}        
+          <div className="w-full">
+            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM13.jpg" />
+          </div>
           {/*Exhibtion Hall 2*/}        
           <div className="w-full">
             <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM14.jpg" />
           </div>
-          {/*Rest Area Image 1*/}       
-          <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM15.jpg" />
-          </div>    
 
            {/*2F Rest Area Text*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">2F Rest Area</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A hunter’s study-inspired rest area displays personal collections, insects, and expedition artefacts. It creates a quiet observation point overlooking the vertical glass sculpture connecting all three floors.</p>
            </div>
            </div>
+     
+          {/*Rest Area Image 1*/}       
+          <div className="w-full">
+            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM15.jpg" />
+          </div>    
+
+  
 
 {/*Line*/} 
  <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
