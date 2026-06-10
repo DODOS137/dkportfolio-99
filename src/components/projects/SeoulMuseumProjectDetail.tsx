@@ -42,7 +42,7 @@ const SeoulMuseumProjectDetail = () => {
   const heroRef = useScrollAnimation();
 
   /* ============================
-     ✅ NEW: 이미지 LQIP + 지연 로딩 큐 + 스크롤 페이드 + content-visibility
+     ✅ FIX: 가벼운 이미지 페이드 + 지연 로딩 + content-visibility
      ============================ */
   useEffect(() => {
     // 🔧 FIX: ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
@@ -82,8 +82,8 @@ const SeoulMuseumProjectDetail = () => {
         img.setAttribute('sizes', '100vw'); // 안전 기본값
       }
 
-      // LQIP/페이드 초기 상태만 부여
-      img.classList.add('img-lqip', 'reveal-init');
+      // 페이드 초기 상태만 부여
+      img.classList.add('reveal-init');
     });
 
     // 보이면 decode → 클래스 토글 (JS 큐/1px 치환 없음)
@@ -91,14 +91,12 @@ const SeoulMuseumProjectDetail = () => {
       const run = () => {
         if (typeof (img as any).decode === 'function') {
           (img as any).decode().catch(() => {}).finally(() => {
-            img.classList.remove('img-lqip');
-            img.classList.add('reveal-show', 'play-wiggle');
+            img.classList.add('reveal-show');
           });
         } else {
           const onLoad = () => {
             img.removeEventListener('load', onLoad);
-            img.classList.remove('img-lqip');
-            img.classList.add('reveal-show', 'play-wiggle');
+            img.classList.add('reveal-show');
           };
           img.addEventListener('load', onLoad);
         }
@@ -114,7 +112,6 @@ const imgIO = new IntersectionObserver(
 
       if (entry.isIntersecting) {
         decodeOnIdle(img);
-        img.classList.remove('img-lqip');
         img.classList.add('reveal-show');
       } else {
         img.classList.remove('reveal-show');
@@ -123,8 +120,8 @@ const imgIO = new IntersectionObserver(
   },
   {
     root: scrollRoot,
-    rootMargin: '0px 0px -10% 0px',
-    threshold: 0.15
+    rootMargin: '300px 0px 300px 0px',
+    threshold: 0.01
   }
 );
 
@@ -750,34 +747,26 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션)
           ============================ */}
       <style>{`
-        /* LQIP 블러 상태 */
-        .img-lqip { filter: blur(8px) saturate(0.9) brightness(0.98); transform: translateZ(0); transition: filter 420ms ease; }
-        .img-lqip.reveal-show { filter: blur(4px); }
-
- /* 이미지: 스크롤 페이드 인 / 페이드 아웃 */
-.reveal-init {
-  opacity: 0;
-  transform: translateY(24px);
-  filter: blur(6px);
-  transition:
-    opacity 900ms ease-out,
-    transform 900ms ease-out,
-    filter 900ms ease-out;
-}
-
-.reveal-show {
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
-}
-
-        /* 이미지: '보일 때만' 미세 모션 */
-        @keyframes microWiggle {
-          0%   { transform: translate3d(0, 0,6px, 0) scale(1.001); }
-          50%  { transform: translate3d(0, -0.6px, 0) scale(1.004); }
-          100% { transform: translate3d(0, 0.6px, 0) scale(1.001); }
+        /* 이미지: 가벼운 스크롤 페이드 인 / 페이드 아웃
+           ✅ 버벅임 원인이던 filter: blur() 제거
+           ✅ 무한 흔들림 animation 제거 */
+        .reveal-init {
+          opacity: 0;
+          transform: translateY(16px);
+          transition:
+            opacity 700ms ease-out,
+            transform 700ms ease-out;
+          will-change: opacity, transform;
         }
-        .play-wiggle { animation: microWiggle 7s ease-in-out infinite; will-change: transform; }
+
+        .reveal-show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .play-wiggle {
+          animation: none !important;
+        }
 
         /* 텍스트: 페이드 인/아웃 */
         .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
@@ -788,7 +777,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
         @media (prefers-reduced-motion: reduce) {
           .play-wiggle { animation: none !important; }
-          .reveal-init, .text-reveal-init { transition-duration: 1ms; filter: none; transform: none; }
+          .reveal-init, .text-reveal-init { transition-duration: 1ms; transform: none; }
         }
       `}</style>
     </ProjectLayout>
