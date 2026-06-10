@@ -381,12 +381,12 @@ lazyImgs.forEach((img) => imgIO.observe(img));
   </div>
 
          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
           {/*Render Images*/}   
 
            {/*Reception Desk Text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Reception Desk</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The reception area presents the museum’s renewed identity through a three-storey vertical installation inspired by Korean folding screens and mountain landscapes.</p>
@@ -395,22 +395,22 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
              {/*Lobby Images*/}        
           <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM11.jpg" />
+            <img className="w-full h-auto" src="/webimages/SNM/SNM11.jpg" />
           </div>
 
              {/*Lobby Images2*/}        
           <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM12.jpg" />
+            <img className="w-full h-auto" src="/webimages/SNM/SNM12.jpg" />
           </div>
    
 
           {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
          
           {/*Exhibition Hall comments*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Exhibition Hall</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The exhibition is divided into a Marine Zone on the first floor and a Terrestrial Zone on the upper levels. A vertical sculptural void connects the floors, linking immersive media, natural specimens, and historical artefacts into one continuous ecological journey.</p>
@@ -418,19 +418,19 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
           
          {/*Exhibition Hall*/}        
           <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM13.jpg" />
+            <img className="w-full h-auto" src="/webimages/SNM/SNM13.jpg" />
           </div>
           {/*Exhibtion Hall 2*/}        
           <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM14.jpg" />
+            <img className="w-full h-auto" src="/webimages/SNM/SNM14.jpg" />
           </div>
 
            {/*2F Rest Area Text*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
+           <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
            <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">2F Rest Area</h2>
            <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">A hunter’s study-inspired rest area displays personal collections, insects, and expedition artefacts. It creates a quiet observation point overlooking the vertical glass sculpture connecting all three floors.</p>
@@ -439,7 +439,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
      
           {/*Rest Area Image 1*/}       
           <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM15.jpg" />
+            <img className="w-full h-auto" src="/webimages/SNM/SNM15.jpg" />
           </div>    
 
   
