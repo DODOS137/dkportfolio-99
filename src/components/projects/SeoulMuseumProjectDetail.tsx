@@ -384,10 +384,6 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
           {/*Render Images*/}   
-          {/*Lobby Images*/}        
-          <div className="w-full">
-            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM11.jpg" />
-          </div>
 
            {/*Reception Desk Text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
@@ -397,13 +393,21 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
            </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+             {/*Lobby Images*/}        
+          <div className="w-full">
+            <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM11.jpg" />
+          </div>
 
-          {/*Lobby Images2*/}        
+             {/*Lobby Images2*/}        
           <div className="w-full">
             <img className="w-full h-auto mb-8 md:mb-8" src="/webimages/SNM/SNM12.jpg" />
           </div>
+   
+
+          {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+
          
           {/*Exhibition Hall comments*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
