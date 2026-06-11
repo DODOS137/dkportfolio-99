@@ -174,7 +174,7 @@ const ThermalTraceProjectDetail = () => {
             <img
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
-              src={project.images[0]}
+              src="/webimages/ThermalTrace/3.WEBCOVER1.jpg"
               loading="eager"
               fetchPriority="high"
               decoding="async"
@@ -188,14 +188,11 @@ const ThermalTraceProjectDetail = () => {
               <div className="sticky top-32 w-[170px]">
                 <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
                   <p className="text-white mb-2">Role</p>
-                  <p className="text-gray-400 mb-4">XR & Exhibition Designer</p>
+                  <p className="text-gray-400 mb-4">Hybrid Exhibition Designer</p>
 
                   <p className="text-white mb-2">Tools</p>
-                  <p>AutoCAD</p>
-                  <p>3DS MAX</p>
-                  <p>Unity / WebGL</p>
-                  <p>V-Ray</p>
-                  <p>Adobe Suite</p>
+                  <p>Adobe Suite</p> 
+                  <p>Unreal Engine</p>
                 </div>
               </div>
             </div>
@@ -210,7 +207,7 @@ const ThermalTraceProjectDetail = () => {
                   </h2>
 
                   <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-                    2022-2025 │ XR Contents & Exhibition Design │ Solo Project │
+                    2025 │ XR Contents & Exhibition Design │ Solo Project │
                     8 weeks
                   </p>
                 </div>
@@ -304,7 +301,10 @@ const ThermalTraceProjectDetail = () => {
           {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
+
+
+
+            <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
             {/* 중요: 영상 없음. 기준코드의 LiteYouTube 대신 겹쳐진 이미지 인터랙션 유지 */}
             <div className="my-0 md:my-0 relative">
               <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
@@ -324,6 +324,32 @@ const ThermalTraceProjectDetail = () => {
                 </div>
               </div>
 
+
+
+       
+              
+              
+              {/* 중요: iframe 프로토타입 컴포넌트 유지 */}
+              <InteractiveExperience
+                src="https://lucent-banoffee-a50286.netlify.app"
+                title="Thermal Trace Interactive Experience"
+                description="Experience the thermal detection interface in real-time"
+              />
+
+
+
+
+
+
+
+
+
+
+
+              
+
+              
+
               <div className="my-40 md:my-40 relative">
                 <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
                   <AspectRatio ratio={16 / 9}>
@@ -333,12 +359,12 @@ const ThermalTraceProjectDetail = () => {
 
                 <AspectRatio
                   ratio={16 / 9}
-                  className="relative z-10 bg-[#0044FA] border-none overflow-hidden"
+                  className="relative z-10 bg-black border-none overflow-hidden"
                 >
-                  <div className="rounded-lg bg-transparent">
+                  <div className="rounded-lg bg-[#0044FA]">
                     <InteractiveImageSection
-                      baseImage="/lovable-uploads/b4f192b1-54ab-437f-8dad-74993331f176.png"
-                      overlayImage="/lovable-uploads/585a63af-fb48-41d5-82bf-62bc652eff56.png"
+                      baseImage="/webimages/ThermalTrace/TT1-2.jpg"
+                      overlayImage="/webimages/ThermalTrace/TT1-1.jpg"
                     />
                   </div>
                 </AspectRatio>
@@ -348,76 +374,13 @@ const ThermalTraceProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Design Highlights table */}
-            <div className="mt-6 mb-6">
-              <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">
-                Design Highlights
-              </h2>
-              <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-                <table className="w-full text-left text-sm text-gray-400">
-                  <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
-                    <tr>
-                      <th className="px-4 py-3"></th>
-                      <th className="px-4 py-3">Impact</th>
-                      <th className="px-4 py-3">Output</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/10">
-                    <tr>
-                      <td className="px-4 py-4 font-light">Sensory Runway</td>
-                      <td className="px-4 py-4">
-                        Shifts fashion presentation from looking to sensing.
-                      </td>
-                      <td className="px-4 py-4">XR runway concept</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">
-                        Thermal Interaction
-                      </td>
-                      <td className="px-4 py-4">
-                        Turns body heat and proximity into reveal cues.
-                      </td>
-                      <td className="px-4 py-4">Heat-responsive system</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">
-                        Camouflage Performance
-                      </td>
-                      <td className="px-4 py-4">
-                        Dissolves the boundary between body, garment, and space.
-                      </td>
-                      <td className="px-4 py-4">Thermal reveal language</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">
-                        Adaptive Stage System
-                      </td>
-                      <td className="px-4 py-4">
-                        Tests visibility through exposure, obstruction, and
-                        distortion.
-                      </td>
-                      <td className="px-4 py-4">Versatile Stage System</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-light">
-                        Prototype Workflow
-                      </td>
-                      <td className="px-4 py-4">
-                        Connects 3D, Unity/WebGL, rendering, and graphics into a
-                        testable experience.
-                      </td>
-                      <td className="px-4 py-4">
-                        VR/WebGL prototype + visual assets
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+ 
 
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+ 
 
+  
+            
+            
             {/* Art Works Images */}
             <div className="w-full">
               <img
