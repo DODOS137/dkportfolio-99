@@ -350,28 +350,25 @@ const ThermalTraceProjectDetail = () => {
 
               
 
-              <div className="my-0 md:my-0 relative">
- 
-                  <AspectRatio ratio={16 / 9}>
-                    <div className="w-full h-full bg-[#0044FA]" />
-                  </AspectRatio>
-                </div>
+   
 
                 <AspectRatio
                   ratio={16 / 9}
-                  className="relative z-10 bg-black border-none overflow-hidden"
+                  className="relative z-10 bg-black border-[#0044FA] overflow-hidden"
                 >
-                  <div className="rounded-lg bg-[#0044FA]">
+                  <div className="rounded-lg bg-transparent">
                     <InteractiveImageSection
                       baseImage="/webimages/ThermalTrace/TT1-2.jpg"
                       overlayImage="/webimages/ThermalTrace/TT1-1.jpg"
                     />
                   </div>
                 </AspectRatio>
-              </div>
-            </div>
+     
 
-            {/* Line */}
+     
+          
+          
+          {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
  
