@@ -460,7 +460,7 @@ const ThermalTraceProjectDetail = () => {
               
   
              {/* Exhibition Design text */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
                 <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
 
                   <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
@@ -512,7 +512,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
     
               
-              <div className="w-full mb-4">
+              <div className="w-full mb-20">
               <img
                 className="w-full h-full"
                 src="/webimages/ThermalTrace/TT2.jpg"
@@ -553,8 +553,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
 
-              {/* Line */}
-              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
 
 
 
