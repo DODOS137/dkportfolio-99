@@ -449,7 +449,7 @@ const ThermalTraceProjectDetail = () => {
             {/* 공간이미지 2*/}
             <div className="w-full">
               <img
-                className="w-full h-auto"
+                className="w-full h-auto" 
                 src="/webimages/ThermalTrace/TT4-1.jpg"
               />
             </div>
