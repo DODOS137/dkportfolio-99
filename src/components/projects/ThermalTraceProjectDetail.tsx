@@ -350,8 +350,8 @@ const ThermalTraceProjectDetail = () => {
 
               
 
-              <div className="my-40 md:my-40 relative">
-                <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100vw]">
+              <div className="my-0 md:my-0 relative">
+ 
                   <AspectRatio ratio={16 / 9}>
                     <div className="w-full h-full bg-[#0044FA]" />
                   </AspectRatio>
