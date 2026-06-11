@@ -350,7 +350,7 @@ const ThermalTraceProjectDetail = () => {
    
               <AspectRatio
                   ratio={16 / 9}
-                  className="relative z-10 bg-blackoverflow-hidden"
+                  className="relative z-10 bg-black overflow-hidden"
                 >
                   <div className="rounded-lg  border-[#0044FA]  bg-transparent">
                     <InteractiveImageSection
