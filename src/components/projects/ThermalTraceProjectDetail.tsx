@@ -450,32 +450,19 @@ const ThermalTraceProjectDetail = () => {
             <div className="w-full">
               <img
                 className="w-full h-auto"
-                src="/webimages/ThermalTrace/TT4.jpg"
+                src="/webimages/ThermalTrace/TT4-1.jpg"
               />
             </div>
-
-              
-  
-            
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-            {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
-            <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
-              <InteractiveImageSection
-                baseImage="/webimages/ThermalTrace/TT2-1.jpg"
-                overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
-              />
 
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-              {/* Exhibition Design text */}
+              
+  
+             {/* Exhibition Design text */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
                 <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                  <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">
-                    Exhibition Design
-                  </h2>
+
                   <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
                     XR reveals models beyond normal perception, challenging
                     audiences to engage on a deeper sensory level. Instead of
@@ -484,6 +471,17 @@ const ThermalTraceProjectDetail = () => {
                   </p>
                 </div>
               </div>
+
+
+            {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
+            <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
+              <InteractiveImageSection
+                baseImage="/webimages/ThermalTrace/TT2-1.jpg"
+                overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
+              />
+
+ 
+
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
@@ -506,18 +504,28 @@ const ThermalTraceProjectDetail = () => {
 
             {/* Art Works Images */}
             {/* 포스터이미지 */}
-            <div className="w-full">
+            <div className="w-full mb-4">
               <img
                 className="w-full h-auto"
                 src="/webimages/ThermalTrace/TT1.jpg"
               />
             </div>
-           <div className="w-full">
+    
+              
+              <div className="w-full mb-4">
               <img
                 className="w-full h-full"
                 src="/webimages/ThermalTrace/TT2.jpg"
               />
             </div>
+
+            {/* 그래픽 이미지 */}
+            <div className="w-full">
+                <img
+                  src="/webimages/ThermalTrace/TT5.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
 
 
               {/* Line */}
@@ -551,17 +559,8 @@ const ThermalTraceProjectDetail = () => {
 
 
 
-              <div className="w-full">
-                <img
-                  src="/webimages/ThermalTrace/TT5.jpg"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-        
+            </div>
             </div>
             </div>
         </section>
