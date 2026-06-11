@@ -17,9 +17,9 @@ const ThermalTraceProjectDetail = () => {
   const heroRef = useScrollAnimation();
 
   const carouselImages = [
-    "/lovable-uploads/46b8ed4c-230a-45eb-8e27-124bea094c92.png",
-    "/lovable-uploads/f421ff4d-3ede-4f79-b712-89e44b679c75.png",
-    "/lovable-uploads/0ad6ae30-d45d-4de3-9d47-59c2ac18a0b0.png",
+    "/webimages/ThermalTrace/TT-S1.jpg",
+    "/webimages/ThermalTrace/TT-S2.jpg",
+    "/webimages/ThermalTrace/TT-S3.jpg",
   ];
 
   /* ============================
