@@ -10,7 +10,13 @@ interface InteractiveExperienceProps {
 const InteractiveExperience = ({ src, title, description }: InteractiveExperienceProps) => {
   return (
     <>
-      <div className="w-full aspect-[16/9] bg-black rounded-lg overflow-hidden border-1 border-[#0044FA]">
+   
+      
+      <p className="text-sm text-white mt-8 text-center">
+        Click the screen to begin, then press the X key to interact. Press ESC to exit.
+      </p>
+      
+      <div className="w-full aspect-[16/9] bg-black overflow-hidden border-1 border-[#0044FA]">
         <iframe
           src={src}
           className="w-full h-full"
@@ -19,7 +25,7 @@ const InteractiveExperience = ({ src, title, description }: InteractiveExperienc
           title={title}
         />
       </div>
-      <p className="text-sm text-[#0044FA] mt-8 text-center">
+      <p className="text-sm text-white mt-8 text-center">
         Click the screen to begin, then press the X key to interact. Press ESC to exit.
       </p>
     </>
