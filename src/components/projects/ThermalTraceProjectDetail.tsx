@@ -192,7 +192,7 @@ const ThermalTraceProjectDetail = () => {
 
                   <p className="text-white mb-2">Tools</p>
                   <p>Adobe Suite</p> 
-                  <p>Unreal Engine</p>
+                  <p>Unity/WebGL</p>
                 </div>
               </div>
             </div>
@@ -207,8 +207,8 @@ const ThermalTraceProjectDetail = () => {
                   </h2>
 
                   <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-                    2025 │ XR Contents & Exhibition Design │ Solo Project │
-                    8 weeks
+                    2022-2025 │ XR Contents & Exhibition Design │ Solo Project │
+                    8 weeks/12 weeks
                   </p>
                 </div>
 
@@ -238,6 +238,12 @@ const ThermalTraceProjectDetail = () => {
               </div>
             </div>
 
+
+          {/* Line */}
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+            
+
             {/* Challenge Container */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
@@ -249,8 +255,7 @@ const ThermalTraceProjectDetail = () => {
                       Challenge
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      Traditional runway shows rely on passive viewing and fixed
-                      visual boundaries.
+                    Traditional runway shows rely on passive viewing and fixed visual boundaries.
                     </p>
                   </div>
 
@@ -281,7 +286,7 @@ const ThermalTraceProjectDetail = () => {
 
                     <div className="px-4 pb-4 pt-6 space-y-4">
                       <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                        A preliminary survey conducted with 56 participants
+                        Research showed demand for more experiential fashion formats. A preliminary survey conducted with 56 participants
                         supported the conceptual direction of this project. 78%
                         responded positively to questions suggesting that
                         fashion shows should move beyond conventional viewing
@@ -338,32 +343,37 @@ const ThermalTraceProjectDetail = () => {
 
 
 
+               {/* Line */}
+               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-
-
-
-
-
-
-
-              
-
-              
 
    
-
-                <AspectRatio
+              <AspectRatio
                   ratio={16 / 9}
-                  className="relative z-10 bg-black border-[#0044FA] overflow-hidden"
+                  className="relative z-10 bg-blackoverflow-hidden"
                 >
-                  <div className="rounded-lg bg-transparent">
+                  <div className="rounded-lg  border-[#0044FA]  bg-transparent">
                     <InteractiveImageSection
                       baseImage="/webimages/ThermalTrace/TT1-2.jpg"
                       overlayImage="/webimages/ThermalTrace/TT1-1.jpg"
                     />
                   </div>
                 </AspectRatio>
-     
+
+
+
+               {/* Line */}
+               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+              
+
+              {/* 옥스포드 전시이미지 */}
+              <div className="w-full">
+                <img
+                  src="/webimages/ThermalTrace/TT6.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
 
      
           
@@ -373,8 +383,54 @@ const ThermalTraceProjectDetail = () => {
 
  
 
- 
 
+         {/* Process-1 */}
+         
+         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+         <span className="text-sm md:text-sm text-gray-600 font-Medium">
+          Context
+         </span>
+         <div>
+         <span className="text-base md:text-base text-white font-Medium">
+          Concept
+         </span>
+         <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                   This project reframes fashion as something discovered through
+                  thermal detection. Instead of passive display, it invites
+                  audiences to detect hidden figures via heat traces,
+                  temperature shifts, and proximity sensing.
+          </p>
+         </div>
+         </div>
+    
+         {/*컨셉 이미지 */}
+         <div className="w-full">
+                <img
+                  src="/webimages/ThermalTrace/TT7.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+              
+ 
+            {/* Process-1 */}
+         
+            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+            <span className="text-sm md:text-sm text-gray-600 font-Medium">
+            Process
+            </span>
+            <div>
+            <span className="text-base md:text-base text-white font-Medium">
+            Spatial Design
+            </span>
+            <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+            Camouflage-inspired landscapes become a responsive XR terrain, reacting to the viewer’s position and thermal presence. The runway dissolves into an interactive field where visibility, movement, and atmosphere shape the act of seeing.
+            </p>
+            </div>
+            </div>
   
             
             
@@ -389,23 +445,9 @@ const ThermalTraceProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-            {/* Idea Development text */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">
-                  Idea Development
-                </h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  This project reframes fashion as something discovered through
-                  thermal detection. Instead of passive display, it invites
-                  audiences to detect hidden figures via heat traces,
-                  temperature shifts, and proximity sensing.
-                </p>
-              </div>
-            </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
 
             <div className="w-full">
               <img
@@ -432,29 +474,7 @@ const ThermalTraceProjectDetail = () => {
               title="Transformable stage"
             />
 
-            {/* Spatial Design text */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">
-                  Spatial Design
-                </h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Set across natural landscapes designed for camouflage—such as
-                  islands, forests, and coastal zones—the experience is
-                  structured as a responsive terrain. Each space reacts
-                  dynamically to the viewer&apos;s position and thermal
-                  presence, enabled by a real-time XR sensing system. The
-                  traditional runway dissolves into an interactive field that
-                  tests visibility, form, and presence. Modular environments are
-                  choreographed to evoke narrative tension and guide movement
-                  through atmospheric shifts. The space itself becomes the
-                  interface, framing the act of seeing as an embodied process.
-                </p>
-              </div>
-            </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
             <div className="w-full">
               <img
@@ -527,12 +547,7 @@ const ThermalTraceProjectDetail = () => {
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-              <div className="w-full">
-                <img
-                  src="/webimages/ThermalTrace/TT6.jpg"
-                  className="w-full h-auto"
-                />
-              </div>
+
 
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
