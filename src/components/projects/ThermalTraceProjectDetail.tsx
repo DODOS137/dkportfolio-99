@@ -362,18 +362,10 @@ const ThermalTraceProjectDetail = () => {
 
 
 
-               {/* Line */}
-               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
               
 
-              {/* 옥스포드 전시이미지 */}
-              <div className="w-full">
-                <img
-                  src="/webimages/ThermalTrace/TT6.jpg"
-                  className="w-full h-auto"
-                />
-              </div>
+
 
      
           
@@ -455,6 +447,18 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
               {/* Line */}
+              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+              {/* 옥스포드 전시이미지 */}
+              <div className="w-full">
+                <img
+                  src="/webimages/ThermalTrace/TT6.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+                            {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
               
