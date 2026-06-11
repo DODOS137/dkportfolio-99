@@ -12,7 +12,7 @@ const InteractiveExperience = ({ src, title, description }: InteractiveExperienc
     <>
    
       
-      <p className="text-sm text-white mt-8 text-center">
+      <p className="text-sm text-white mb-8 text-center">
         Click the screen to begin, then press the X key to interact. Press ESC to exit.
       </p>
       
@@ -25,9 +25,7 @@ const InteractiveExperience = ({ src, title, description }: InteractiveExperienc
           title={title}
         />
       </div>
-      <p className="text-sm text-white mt-8 text-center">
-        Click the screen to begin, then press the X key to interact. Press ESC to exit.
-      </p>
+
     </>
   );
 };
