@@ -344,7 +344,7 @@ const ThermalTraceProjectDetail = () => {
 
 
                {/* Line */}
-               <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
    
@@ -416,8 +416,7 @@ const ThermalTraceProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
               
  
-            {/* Process-1 */}
-         
+            {/* Process-2 */}
             <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
             <span className="text-sm md:text-sm text-gray-600 font-Medium">
             Process
@@ -431,51 +430,15 @@ const ThermalTraceProjectDetail = () => {
             </p>
             </div>
             </div>
-  
-            
-            
-            {/* Art Works Images */}
-            <div className="w-full">
-              <img
-                className="w-full h-auto"
-                src="/webimages/ThermalTrace/TT1.jpg"
-              />
-            </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-
-
-
-
-            <div className="w-full">
-              <img
-                className="w-full h-full"
-                src="/webimages/ThermalTrace/TT2.jpg"
-              />
-            </div>
-
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-            <div className="w-full">
-              <img
-                className="w-full h-full"
-                src="/webimages/ThermalTrace/TT3.jpg"
-              />
-            </div>
-
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
+            {/* 슬라이더 */}
             <CarouselSection
               images={carouselImages}
               title="Transformable stage"
             />
 
 
-
+            {/* 공간이미지 1*/}
             <div className="w-full">
               <img
                 className="w-full h-auto"
@@ -483,14 +446,25 @@ const ThermalTraceProjectDetail = () => {
               />
             </div>
 
+            {/* 공간이미지 2*/}
+            <div className="w-full">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT4.jpg"
+              />
+            </div>
+
+              
+  
+            
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
             <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
               <InteractiveImageSection
-                baseImage="/lovable-uploads/673d5687-9173-4d58-8caa-854189586015.png"
-                overlayImage="/lovable-uploads/c5531ed2-75f4-45bd-bcb2-af267986f73a.png"
+                baseImage="/webimages/ThermalTrace/TT2-1.jpg"
+                overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
               />
 
               {/* Line */}
@@ -511,18 +485,44 @@ const ThermalTraceProjectDetail = () => {
                 </div>
               </div>
 
-              {/* Line */}
-              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-              {/* 중요: iframe 프로토타입 컴포넌트 유지 */}
-              <InteractiveExperience
-                src="https://lucent-banoffee-a50286.netlify.app"
-                title="Thermal Trace Interactive Experience"
-                description="Experience the thermal detection interface in real-time"
+
+
+
+         {/* Process-4*/}
+         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+         <span className="text-sm md:text-sm text-gray-600 font-Medium">
+          Process
+         </span>
+         <div>
+         <span className="text-base md:text-base text-white font-Medium">
+          Graphic Design
+         </span>
+         </div>
+         </div>              
+
+
+            {/* Art Works Images */}
+            {/* 포스터이미지 */}
+            <div className="w-full">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT1.jpg"
               />
+            </div>
+           <div className="w-full">
+              <img
+                className="w-full h-full"
+                src="/webimages/ThermalTrace/TT2.jpg"
+              />
+            </div>
+
 
               {/* Line */}
               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
 
               {/* Final Outcome */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -544,13 +544,12 @@ const ThermalTraceProjectDetail = () => {
                 </div>
               </div>
 
-              {/* Line */}
-              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-
 
               {/* Line */}
-              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+              <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
 
               <div className="w-full">
                 <img
