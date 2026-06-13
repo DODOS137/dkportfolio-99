@@ -687,6 +687,7 @@ const InvisibleProjectDetail = () => {
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
       </div>
+      </div>
       </section>
 
       {/*Navigation Section*/}
