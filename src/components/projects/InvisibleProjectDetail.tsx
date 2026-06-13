@@ -599,7 +599,7 @@ const InvisibleProjectDetail = () => {
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
           {/*Final Outcome text start*/}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
@@ -607,6 +607,31 @@ const InvisibleProjectDetail = () => {
               </p>
             </div> 
           </div>
+
+
+          {/*Line*/} 
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+          {/* Process */}
+          <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+            <span className="text-sm md:text-sm text-gray-600 font-Medium">
+              Process
+            </span>
+            <div>
+              <span className="text-base md:text-base text-white font-Medium">
+                Post-Project Direction
+              </span>
+              <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                The initial VR prototype offered limited interaction beyond spatial exploration. The Ocean extends this as a post-project concept, proposing a future system where user-entered data could generate autonomous evolutionary behaviours.
+              </p>
+            </div>
+          </div>
+
+
+
+   
 
           {/* Ocean Web Image */}
           <div className="w-full">
@@ -616,15 +641,7 @@ const InvisibleProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-          {/*Post-Project Direction text start*/}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Post-Project Direction</h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                The initial prototype aimed for a VR experience but largely positioned the user as an observer, with limited interaction beyond spatial and visual exploration. Acknowledging this constraint, The Ocean is presented as a conceptual post-project exploration that outlines a responsive system in which user-entered data would drive autonomous evolutionary behaviours, informing the design of a future interactive build.
-              </p>
-            </div> 
-          </div>
+ 
 
           {/*The Ocean text start*/}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
@@ -713,8 +730,7 @@ const InvisibleProjectDetail = () => {
             ))}
           </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+ 
 
     
       </div>
