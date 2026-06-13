@@ -44,11 +44,11 @@ const InvisibleProjectDetail = () => {
   const heroRef = useScrollAnimation<HTMLDivElement>();
 
   const secondSliderImages = [
-    "/lovable-uploads/1226e7bd-a3b6-4ca8-a21a-f9fe6b747eba.png",
-    "/lovable-uploads/b98a6c0c-ecf1-4cd1-8425-1d5a82e848ad.png",
-    "/lovable-uploads/ea8daafc-845b-416a-87fd-526d63257efd.png",
-    "/lovable-uploads/7dbae072-a951-477f-8d90-a4cd262da27a.png",
-    "/lovable-uploads/67404269-7e30-45dd-b380-5c5c9d441ea5.png",
+    "/webimages/Invisible/INV-S-1.jpg",
+    "/webimages/Invisible/INV-S-2.jpg",
+    "/webimages/Invisible/INV-S-3.jpg",
+    "/webimages/Invisible/INV-S-4.jpg",
+    "/webimages/Invisible/INV-S-5.jpg",
   ];
 
   const [secondApi, setSecondApi] = useState<CarouselApi | null>(null);
@@ -209,7 +209,7 @@ const InvisibleProjectDetail = () => {
         <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
           <AspectRatio ratio={16 / 9} className="w-full h-auto">
             <ImageWithLoading
-              src={project.images?.[0]}
+              src="/webimages/Invisible/2.invisibleCOVER.jpg"
               alt={`${project.title} - Image 1`}
               className="w-full h-full object-contain"
             />
