@@ -516,20 +516,15 @@ const InvisibleProjectDetail = () => {
             </div>
           </div>
 
-          {/* Floor Plan Image */}
-          <div className="w-full mb-10 md:mb-10">
-            <img className="w-full h-auto" src="/webimages/Invisible/INV4.jpg" alt="Floor plan" />
-          </div>
-
           {/*Space text start*/}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-1">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Each chamber expresses its theme through spatial and interactive cues.</p>
             </div>
           </div>
 
-          {/*Space text 2*/}
+          {/*Space text 1*/}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
@@ -542,10 +537,21 @@ const InvisibleProjectDetail = () => {
             </div> 
           </div>
 
+
           {/* Exterior Image */}
-          <div className="w-full">
+          <div className="w-full mb-10">
             <img className="w-full h-auto" src="/webimages/Invisible/INV5.jpg" alt="Exterior render" />
           </div>
+
+   
+
+          {/* Floor Plan Image */}
+          <div className="w-full">
+            <img className="w-full h-auto" src="/webimages/Invisible/INV4.jpg" alt="Floor plan" />
+          </div>
+
+
+
 
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
