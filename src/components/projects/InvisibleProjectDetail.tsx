@@ -395,24 +395,44 @@ const InvisibleProjectDetail = () => {
             <div className="relative z-10">
               <p className="font-Medium mb-4">
                 <span className="text-sm md:text-base text-gray-600">Context </span>
-                <span className="ml-4 text-base md:text-base text-white">Worldbuilding + Scientific storytelling </span>
+                <span className="ml-4 text-base md:text-base text-white">Narrative Arc + Worldbuilding  </span>
               </p>
             </div>
           </div>
    
           {/* Context image1 */}
              <div className="w-full">
-            <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" />
+            <img className="w-full h-auto" src="/webimages/Invisible/INV1-1.jpg" alt="Space render 4" />
           </div>
              {/* Context image2 */}
              <div className="w-full">
-            <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" />
+            <img className="w-full h-auto" src="/webimages/Invisible/INV1-2.jpg" alt="Space render 4" />
           </div>
 
+         {/*Line*/} 
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
+             {/*Worldbuilding text*/}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
+            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+              <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Worldbuilding</h2>
+              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
+                Set on the fictional alien planet A233, the project follows an explorer discovering abandoned artefacts and messages. Without a shared language, science becomes a universal language connecting two civilisations.
+              </p>
+            </div>
+          </div>
+
+             {/* Worldbuilding Image 1 */}
+          <div className="w-full">   
+            <img
+              alt="World secondary"
+              className="w-full h-auto mb-10 md:mb-10"
+              src="/webimages/Invisible/INV2.jpg"
+            />
+          </div>
    
 
-          {/* Worldbuilding Image 1 */}
+          {/* Worldbuilding Image 2 */}
           <div className="w-full">
             <AspectRatio ratio={16 / 9} className="w-full">
               <img
@@ -424,33 +444,15 @@ const InvisibleProjectDetail = () => {
           </div>
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-          {/*Worldbuilding text*/}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Worldbuilding</h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                Set on a fictional alien planet, A233, inhabited by an advanced civilisation. The player, as an interstellar explorer, uncovers abandoned structures, artefacts, and messages. Despite a lack of shared language, both species are assumed to understand the same laws of nature, framing science as a universal language that transcends cultural boundaries.
-              </p>
-            </div>
-          </div>
-
-          {/* Worldbuilding Image 2 */}
-          <div className="w-full">   
-            <img
-              alt="World secondary"
-              className="w-full h-auto mb-20 md:mb-20"
-              src="/webimages/Invisible/INV2.jpg"
-            />
-          </div>
 
           {/*Narrative Arc text start*/}
           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                The experience follows an unnamed interstellar explorer arriving on Planet A233 and moving through abandoned chambers, each corresponding to a universal scientific principle. The sequence is designed to mirror a shift from perception to comprehension, moving the user from wonder and disorientation toward clarity and resonance.
+                The experience follows an unnamed interstellar explorer through abandoned chambers on Planet A233, each representing a universal scientific principle. The journey moves from perception to comprehension, turning wonder and disorientation into clarity and resonance.
               </p>
             </div>
           </div>
@@ -460,25 +462,32 @@ const InvisibleProjectDetail = () => {
             <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
               <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
               <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                The spatial progression conveys scientific ideas through emotional rhythm: gravity creates awe and tension, light encourages curiosity, life evokes empathy, and time concludes the journey with introspection and impermanence.
-              </p>
+                Scientific ideas are conveyed through emotional rhythm: gravity creates tension, light sparks curiosity, life evokes empathy, and time ends the journey with introspection.</p>
             </div>
           </div>
 
-          {/*Video Development text start*/}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
-            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-              <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Video Development</h2>
-              <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                Each chamber embodies its theme through interactive and environmental cues such as distorted space, reflective surfaces, organic growth, and temporal transitions.
-              </p>
-            </div>
-          </div>
+
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          {/* Video Development Image */}
+          {/* Process */}
+          <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+            <span className="text-sm md:text-sm text-gray-600 font-Medium">
+              Process
+            </span>
+            <div>
+              <span className="text-base md:text-base text-white font-Medium">
+                Video Development
+              </span>
+              <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
+            </p>
+            </div>
+          </div>   
+     
+   
+             {/* Video Development Image */}
           <div className="w-full">
             <img
               className="w-full h-auto"
@@ -486,6 +495,8 @@ const InvisibleProjectDetail = () => {
               alt="Video development board"
             />
           </div>
+
+
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
