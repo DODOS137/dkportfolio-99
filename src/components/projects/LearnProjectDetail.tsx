@@ -207,13 +207,12 @@ const LearnProjectDetail = () => {
               <div className="sticky top-32 w-[170px]">
                 <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
                   <p className="text-white mb-2">Role</p>
-                  <p className="text-gray-400 mb-4">Virtual Reality Designer</p>
+                  <p className="text-gray-400 mb-4">VR Designer</p>
 
                   <p className="text-white mb-2">Tools</p>
                   <p>Open Brush</p>
                   <p>Unity</p>
-                  <p>3D Modelling</p>
-                  <p>Sketchfab</p>
+                  <p>3DS MAX</p>
                 </div>
               </div>
             </div>
@@ -233,31 +232,11 @@ const LearnProjectDetail = () => {
                   <p className="text-base md:text-base font-bold text-gray-500 mb-10">
                     2024 │ VR Content Design │ Solo Project │ 8 weeks
                   </p>
-
-                  {/* Image under location/year */}
-                  <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
-                    <img
-                      src="/webimages/Learn/LEARN1.jpg"
-                      alt={project.title}
-                      className="w-full h-full object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
                 </div>
 
                 {/* Right Column */}
                 <div className="space-y-6">
-                  <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
-                    <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
-                      Project Type
-                    </p>
-                    <p className="text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                      MA Thesis / VR Narrative Experience
-                    </p>
-                  </div>
-
-                  <div className="mb-6 mt-6 md:mt-6">
+                <div className="mb-6">
                     <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
                       The Brief
                     </h2>
@@ -312,7 +291,7 @@ const LearnProjectDetail = () => {
                       Propose
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      Build an abandoned-library world with three robot characters, using spatial progression, first-person navigation, and VR interaction sketches to guide the user from exploration toward empathy and moral choice.
+                      Original VR Content Creation and Asset Development
                     </p>
                   </div>
 
@@ -321,28 +300,11 @@ const LearnProjectDetail = () => {
                       Outputs
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      VR worldbuilding, character design, spatial renders, interaction sketches, level layouts, storyboards, 360-degree model viewing, and visual production assets.
+                      Worldbuilding, character design, spatial renders, interaction sketches, level layouts, storyboards, 360-degree model viewing, and visual production assets.
                     </p>
                   </div>
 
-                  <details className="mt-4 mb-6 rounded-lg border border-white/10 bg-black">
-                    <summary className="cursor-pointer select-none px-4 py-3 text-sm text-gray-400">
-                      Evidence
-                    </summary>
-
-                    <div className="px-4 pb-4 pt-6 space-y-4">
-                      <div>
-                        <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                          1. The project developed its narrative system through original worldbuilding, character scripts, VR storyboard testing, level planning, and spatial design.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                          2. Open Brush and 3D model viewers were used to test how first-person perspective, navigation, embodiment, and character scale could support the emotional rhythm of the VR experience.
-                        </p>
-                      </div>
-                    </div>
-                  </details>
+ 
                 </div>
               </div>
             </div>
@@ -351,17 +313,93 @@ const LearnProjectDetail = () => {
           {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+
+            {/* Spatial Design Image1 */}
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" />
+            </div>
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+            {/* Spatial Design Image2 */}
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" />
+            </div>
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+            {/* Spatial Design Image2 */}
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
+            </div>
+
+
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+            {/* Context */}
+            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+              <span className="text-sm md:text-sm text-gray-600 font-Medium">
+                Context
+              </span>
+              <div>
+                <span className="text-base md:text-base text-white font-Medium">
+                  Narrative Arc + Planning
+                </span>
+             </div>
+            </div>
+            
+            {/* 다이어그램1 */}
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
+            </div>
+
+            {/* Worldbuilding */}
+            <div className="w-full">
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/Learn/LEARN2.jpg" />
+            </div>
+
+            {/* Line */}
+            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+            {/* Worldbuilding Text */}
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
+              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Worldbuilding</h2>
+                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
+                  Set in a distant dystopian future, the story takes place in a world without humans, where robots continue obsolete duties with mechanical precision. The library becomes a symbolic setting for memory, ritual, and the question of whether purpose can remain after its creators disappear.
+                </p>
+              </div>
+            </div>
+
+            {/* Narrative Arc Text */}
+            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
+              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
+                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
+                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
+                  The player follows three robots—FR Pro, RX-056, and LS1-07—as they manage the abandoned library. When they discover a dying tree, the story introduces a moral choice between preserving the tree and preserving themselves, turning sacrifice into a symbolic act of empathy.
+                </p>
+              </div>
+            </div>
+
+            
+           
+           
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+           
+
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
             {/* YouTube Video Section */}
             <div className="my-0 md:my-0 relative">
               {/* Content */}
               <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
                 <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                  Project Overview
+                  Process
                 </span>
                 <div>
                   <span className="text-base md:text-base text-white font-Medium">
-                    VR Narrative Walkthrough
+                    VR Story board
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                     The project presents an original VR story set in an abandoned library where three robots confront memory, empathy, and sacrifice through spatial exploration.
@@ -378,41 +416,15 @@ const LearnProjectDetail = () => {
               </AspectRatio>
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+  
 
-            {/* Main visual image */}
-            <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/Learn/LEARN2.jpg" />
-            </div>
-
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-            {/* Worldbuilding Text */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Worldbuilding</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Set in a distant dystopian future, the story takes place in a world without humans, where robots continue obsolete duties with mechanical precision. The library becomes a symbolic setting for memory, ritual, and the question of whether purpose can remain after its creators disappear.
-                </p>
-              </div>
-            </div>
-
-            {/* Narrative Arc Text */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  The player follows three robots—FR Pro, RX-056, and LS1-07—as they manage the abandoned library. When they discover a dying tree, the story introduces a moral choice between preserving the tree and preserving themselves, turning sacrifice into a symbolic act of empathy.
-                </p>
-              </div>
-            </div>
+ 
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process-1 */}
+             
+            {/* Process-2 */}
             <div className="my-0 md:my-0 relative">
               <div className="relative z-10">
                 <p className="font-Medium mb-4">
@@ -423,11 +435,11 @@ const LearnProjectDetail = () => {
             </div>
 
             {/* Character Design Images */}
-            <div className="w-full mb-4">
+            <div className="w-full">
               <img className="w-full h-full" src="/webimages/Learn/LEARN3.jpg" />
             </div>
 
-            <div className="w-full mb-4">
+            <div className="w-full">
               <img className="w-full h-full" src="/webimages/Learn/LEARN4.jpg" />
             </div>
 
@@ -462,17 +474,17 @@ const LearnProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process-2 */}
+            {/* Process-3 */}
             <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
               <span className="text-sm md:text-sm text-gray-600 font-Medium">
                 Process
               </span>
               <div>
                 <span className="text-base md:text-base text-white font-Medium">
-                  Scriptwriting & Storyboard
+                  Spatial Design
                 </span>
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  Using VR drawing tools, 3D storyboards simulated first-person navigation and spatial flow, allowing refinement of emotional pacing and level logic early in development.
+                  Sunlight, shadow, and artefact placement guide the viewer’s attention. The library unfolds through layered contrasts between architectural order, organic decay, digital interfaces, and paper records.
                 </p>
               </div>
             </div>
@@ -500,36 +512,7 @@ const LearnProjectDetail = () => {
               <img className="w-full h-full" src="/webimages/Learn/LEARN9.jpg" />
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process-3 */}
-            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-              <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                Process
-              </span>
-              <div>
-                <span className="text-base md:text-base text-white font-Medium">
-                  Spatial Design
-                </span>
-                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  Sunlight, shadow, and artefact placement guide the viewer’s attention. The library unfolds through layered contrasts between architectural order, organic decay, digital interfaces, and paper records.
-                </p>
-              </div>
-            </div>
-
-            {/* Spatial Design Image1 */}
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
-            </div>
-
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-            {/* Spatial Design Images */}
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" />
-            </div>
 
             {/* Line */}
             <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
@@ -568,12 +551,9 @@ const LearnProjectDetail = () => {
               </div>
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" />
-            </div>
+
+
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
