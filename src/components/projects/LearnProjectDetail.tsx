@@ -1,20 +1,19 @@
 import React, { useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import ImageWithLoading from '@/components/ImageWithLoading';
 // import ModelViewer from '@/components/ModelViewer'; // ⬅ lazy 로 대체
 import { learnProjectData } from '@/data/learnProject';
-// import YouTube from 'react-youtube'; // ⬅ lazy 로 대체
 import BackToTopButton from '@/components/BackToTopButton';
+import ProjectLayout from './shared/ProjectLayout';
 import ProjectNavigation from './shared/ProjectNavigation';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 /* === 지연 로딩: 큰 의존성들 번들 분리 === */
 const ModelViewer = React.lazy(() => import('@/components/ModelViewer'));
-const YouTube = React.lazy(() => import('react-youtube'));
 
 /* ============================
    경량 YouTube 썸네일 플레이어
@@ -201,14 +200,9 @@ const LearnProjectDetail = () => {
     };
   }, []);
 
-  /* 투명 픽셀 (빈 이미지 자리용 – 화면엔 동일) */
-  const PIXEL = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
-
   return (
     <ScrollArea className="h-screen w-screen overflow-auto project-scroll">
-      <React.Fragment>
-        <BackToTopButton />
-        <div className="min-h-screen bg-black text-white">
+      <ProjectLayout>
           {/* Fixed Navigation */}
           <ProjectNavigation backText="Back to work" />
 
@@ -252,7 +246,23 @@ const LearnProjectDetail = () => {
             )}
 
             {/* Shared Container */}
-            <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+            <div className="relative max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
+              {/* 오른쪽 여백 sticky box */}
+              <div className="hidden xl:block absolute right-8 top-0 bottom-0 z-50">
+                <div className="sticky top-32 w-[170px]">
+                  <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
+                    <p className="text-white mb-2">Role</p>
+                    <p className="text-gray-400 mb-4">Virtual Reality Designer</p>
+
+                    <p className="text-white mb-2">Tools</p>
+                    <p>Open Brush</p>
+                    <p>Unity</p>
+                    <p>3D Modelling</p>
+                    <p>Sketchfab</p>
+                  </div>
+                </div>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
                 {/* Left Column */}
                 <div>
@@ -517,7 +527,7 @@ const LearnProjectDetail = () => {
                   </div>
                 </ErrorBoundary>
 
-                <h2 className="text-lg md:text-2xl font-light text-center text-xs md:text-sm text-gray-700">
+                <h2 className="text-xs md:text-sm font-light text-center text-gray-700">
                   Click and drag to rotate. Scroll to zoom.
                 </h2>
               </div>
@@ -676,7 +686,6 @@ const LearnProjectDetail = () => {
               ))}
             </div>
           </section>
-        </div>
 
         {/* 전역 스타일: 이미지 LQIP + 텍스트 페이드 인 + content-visibility */}
         <style>{`
@@ -692,10 +701,9 @@ const LearnProjectDetail = () => {
         `}</style>
 
         <BackToTopButton />
-      </React.Fragment>
+      </ProjectLayout>
     </ScrollArea>
   );
 };
 
 export default LearnProjectDetail;
-
