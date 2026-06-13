@@ -254,14 +254,6 @@ const InvisibleProjectDetail = () => {
     {/* Right Column */}
     <div className="space-y-6">
    <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
-   <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
-      MA Graduation Project
-    </p>
-     <p className="text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-      Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.
-      </p>
-      </div>
-
        <div className="mb-6 mt-6 md:mt-6"> 
          <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
       The Brief
@@ -274,6 +266,9 @@ const InvisibleProjectDetail = () => {
   </div>
   </div>
   </div>
+
+      {/*Line*/} 
+      <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
       {/* 챌린지 Container */}
        <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
@@ -297,7 +292,7 @@ const InvisibleProjectDetail = () => {
           Propose 
           </h2>
        <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-        Transform gravity, light, life, and time into an emotional VR journey across symbolic spatial chambers.
+       Immersive Educational Science Content Production for Museums and Learning Institutions.
         </p>
         </div>
 
@@ -351,8 +346,8 @@ const InvisibleProjectDetail = () => {
      Project Video
     </span>
      <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-      An immersive VR experience that translates complex scientific principles into spatial storytelling, emotional exploration, and interactive learning.
-     </p>
+      Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.
+      </p>
   </div>
 </div>
   <AspectRatio ratio={16 / 9} className="rounded-lg border border-[#AE0200] overflow-hidden">
@@ -367,50 +362,31 @@ const InvisibleProjectDetail = () => {
          {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          {/* Design Highlights table */} 
-          <div className="mt-6 mb-6">
-          <h2 className="text-xl md:text-xl font-Medium text-gray-300 mb-6">Design Highlights</h2>
-            <div className="overflow-x-auto rounded-lg border border-white/10 bg-black">
-              <table className="w-full text-left text-sm text-gray-400">
-                <thead className="bg-white/5 text-gray-300 uppercase text-sm tracking-wider">
-                  <tr>
-                    <th className="px-4 py-3"></th>
-                    <th className="px-4 py-3">Impact</th>
-                    <th className="px-4 py-3">Output</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-white/10">
-                  <tr>
-                    <td className="px-4 py-4 font-light">Scientific Storytelling</td>
-                    <td className="px-4 py-4">Makes abstract science emotionally and spatially understandable.</td>
-                    <td className="px-4 py-4">Gravity / Light / Life / Time narrative</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 font-light">VR Spatial Journey</td>
-                    <td className="px-4 py-4">Turns learning into embodied exploration rather than passive viewing.</td>
-                    <td className="px-4 py-4">Immersive VR experience</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 font-light">Thematic Spaces</td>
-                    <td className="px-4 py-4">Translates each concept into a different spatial atmosphere and interaction.</td>
-                    <td className="px-4 py-4">Distortion / Reflection / Time spaces</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 font-light">AI Video Workflow</td>
-                    <td className="px-4 py-4">Accelerates visual development for complex scientific phenomena.</td>
-                    <td className="px-4 py-4">AI-generated science videos</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 font-light">Learning Platform</td>
-                    <td className="px-4 py-4">Connects worldbuilding, video, spatial design, and VR into one educational system.</td>
-                    <td className="px-4 py-4">VR prototype + interactive content</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+
+
+          {/* Space Images */}
+          <div className="w-full mb-10 md:mb-10">
+            <img className="w-full h-auto" src="/webimages/Invisible/INV8.jpg" alt="Space render 1" />
           </div>
 
-          {/*Line*/} 
+          <div className="w-full mb-10 md:mb-10">
+            <img className="w-full h-auto" src="/webimages/Invisible/INV9.jpg" alt="Space render 2" />
+          </div>
+
+          <div className="w-full mb-10 md:mb-10">
+            <img className="w-full h-auto" src="/webimages/Invisible/INV10.jpg" alt="Space render 3" />
+          </div>
+
+          <div className="w-full">
+            <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" />
+          </div>
+
+
+
+
+
+
+         {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
           {/* Context */}
@@ -563,25 +539,9 @@ const InvisibleProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
 
-          {/* Space Images */}
-          <div className="w-full mb-10 md:mb-10">
-            <img className="w-full h-auto" src="/webimages/Invisible/INV8.jpg" alt="Space render 1" />
-          </div>
 
-          <div className="w-full mb-10 md:mb-10">
-            <img className="w-full h-auto" src="/webimages/Invisible/INV9.jpg" alt="Space render 2" />
-          </div>
 
-          <div className="w-full mb-10 md:mb-10">
-            <img className="w-full h-auto" src="/webimages/Invisible/INV10.jpg" alt="Space render 3" />
-          </div>
 
-          <div className="w-full">
-            <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" />
-          </div>
-
-          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
           {/* Full playing Video Section */}
           <div className="my-0 md:my-0 relative">
