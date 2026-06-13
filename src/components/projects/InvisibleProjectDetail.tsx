@@ -361,7 +361,7 @@ const InvisibleProjectDetail = () => {
   </div>
 
          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
 
@@ -557,7 +557,7 @@ const InvisibleProjectDetail = () => {
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
           {/* Development Evidence Image 1 */}
-          <div className="w-full mb-10 md:mb-10">
+          <div className="w-full mb-20 md:mb-20">
             <img className="w-full h-auto" src="/webimages/Invisible/INV6.jpg" alt="Development evidence 1" />
           </div>
 
