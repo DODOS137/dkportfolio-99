@@ -268,6 +268,11 @@ const LearnProjectDetail = () => {
               </div>
             </div>
 
+          {/* Line */}
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+             
+
             {/* 챌린지 Container */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
@@ -313,24 +318,29 @@ const LearnProjectDetail = () => {
           {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+          {/* ✅ Container fixed: 아래 섹션도 기준코드와 같은 좌우 여백 적용 */}
+          <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
 
             {/* Spatial Design Image1 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" />
             </div>
+
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
             {/* Spatial Design Image2 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" />
             </div>
+
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-            {/* Spatial Design Image2 */}
+
+            {/* Spatial Design Image3 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
             </div>
-
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
@@ -344,9 +354,9 @@ const LearnProjectDetail = () => {
                 <span className="text-base md:text-base text-white font-Medium">
                   Narrative Arc + Planning
                 </span>
-             </div>
+              </div>
             </div>
-            
+
             {/* 다이어그램1 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
@@ -380,14 +390,9 @@ const LearnProjectDetail = () => {
               </div>
             </div>
 
-            
-           
-           
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-
-           
+          </div>
 
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
             {/* YouTube Video Section */}
