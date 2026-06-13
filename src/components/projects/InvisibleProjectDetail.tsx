@@ -266,6 +266,7 @@ const InvisibleProjectDetail = () => {
   </div>
   </div>
   </div>
+  </div>
 
       {/*Line*/} 
       <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
@@ -360,7 +361,7 @@ const InvisibleProjectDetail = () => {
   </div>
 
          {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
 
 
@@ -398,6 +399,18 @@ const InvisibleProjectDetail = () => {
               </p>
             </div>
           </div>
+   
+          {/* Context image1 */}
+             <div className="w-full">
+            <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" />
+          </div>
+             {/* Context image2 */}
+             <div className="w-full">
+            <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" />
+          </div>
+
+
+   
 
           {/* Worldbuilding Image 1 */}
           <div className="w-full">
@@ -686,7 +699,7 @@ const InvisibleProjectDetail = () => {
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-      </div>
+    
       </div>
       </section>
 
