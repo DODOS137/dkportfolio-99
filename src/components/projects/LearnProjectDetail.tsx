@@ -355,7 +355,10 @@ const LearnProjectDetail = () => {
                   Narrative Arc + Planning
                 </span>
               </div>
-            </div>
+            </div>           
+             
+             {/* Line */}
+            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
             {/* 다이어그램1 */}
             <div className="w-full">
@@ -497,8 +500,7 @@ const LearnProjectDetail = () => {
               </div>
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+   
 
             {/* Level Design Section */}
             <div className="w-full">
