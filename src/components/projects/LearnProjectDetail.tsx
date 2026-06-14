@@ -359,8 +359,11 @@ const LearnProjectDetail = () => {
 
             {/* 다이어그램1 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN15.jpg" />
             </div>
+
+             {/* Line */}
+            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
             {/* Worldbuilding */}
             <div className="w-full">
@@ -368,7 +371,7 @@ const LearnProjectDetail = () => {
             </div>
 
             {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
             {/* Worldbuilding Text */}
             <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
