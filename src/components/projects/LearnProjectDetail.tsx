@@ -407,7 +407,7 @@ const LearnProjectDetail = () => {
                 </span>
                 <div>
                   <span className="text-base md:text-base text-white font-Medium">
-                    VR Story board
+                    Storyboarding 
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                     The project presents an original VR story set in an abandoned library where three robots confront memory, empathy, and sacrifice through spatial exploration.
