@@ -67,7 +67,7 @@ const Home = () => {
             <br />
             and experiences — from exhibitions to
             <br />
-            virtual worlds.
+            virtual worlds. 
             </h1>
             </div>
 
