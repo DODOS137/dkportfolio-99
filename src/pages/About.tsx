@@ -15,9 +15,10 @@ const About = () => {
           <div className="text-white space-y-8">
             <div className="backdrop-blur-sm p-6 border border-black/10 bg-transparent rounded-md px-0 py-20">
               <h2 className="text-2xl font-semibold mb-8">Do Hyun Kim</h2>
-              <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">Designer specialising in 3D spatial design and its applications across diverse contexts. Work investigates how digital and physical environments can be integrated to enhance human experience, communication, and engagement. Areas of practice include exhibitions, education, interactive media, and visual storytelling.
+              <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">I'm Dohyun Kim, a spatial and exhibition designer based in London.
+I'm drawn to the moment when a space stops being a backdrop and starts being the story — when sound, light, or movement shifts how people perceive the world around them.
               </p>
-                <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">Collaborative in approach, accustomed to working within multidisciplinary teams to test and refine ideas. Design process balances creativity with technical feasibility, ensuring outcomes that are both effective and contextually meaningful.
+                <p className="text-xl leading-relaxed py-[16px] font-light text-gray-400">My work moves between physical exhibitions and virtual environments, always asking the same question: what does it feel like to be inside this?
                 </p>  
             </div>
             
