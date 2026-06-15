@@ -129,11 +129,11 @@ const Home = () => {
                     className="min-w-full block group"
                   >
                     <div className="w-full h-[150px] md:h-[170px] lg:h-[185px] overflow-hidden bg-white/5">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover opacity-45 grayscale group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-500"
-                      />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain opacity-45 grayscale group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-500"
+                    />
                     </div>
                   </Link>
                 ))}
