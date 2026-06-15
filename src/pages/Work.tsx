@@ -67,7 +67,7 @@ const projects: Project[] = [{
 
   const Work = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [viewMode, setViewMode] = useState<'slider' | 'panel'>('slider');
+  const [viewMode, setViewMode] = useState<'slider' | 'panel'>('panel');
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % projects.length);
