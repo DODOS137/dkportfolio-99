@@ -170,7 +170,7 @@ const Home = () => {
             </div>
 
             {/* Small Slide Number */}
-            <div className="flex justify-center mt-4 text-white/40 text-xs tracking-[0.3em]">
+            <div className="font-mono flex justify-center mt-4 text-white/10 text-xs tracking-[0.3em]">
               {String(currentSlide + 1).padStart(2, '0')} /{' '}
               {String(projectSlides.length).padStart(2, '0')}
             </div>
