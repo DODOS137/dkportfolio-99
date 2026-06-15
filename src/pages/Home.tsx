@@ -76,7 +76,7 @@ const Home = () => {
 
             {/* Transparent Button Layer */}
             <div className="flex justify-center">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-3 flex gap-5 justify-center">
+              <div className="bg-black backdrop-blur-sm border border-transparent px-6 py-3 flex gap-5 justify-center">
                 <Link to="/work">
                   <Button
                     variant="outline"
