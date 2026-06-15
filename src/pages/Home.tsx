@@ -119,32 +119,32 @@ const Home = () => {
               ))}
             </div>
 
-            {/* Project Title + Tags */}
-            <div className="mb-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <h2 className="text-white text-xl md:text-2xl font-light tracking-tight">
-                {projectSlides[currentSlide].title}
-              </h2>
-
-              <div className="flex flex-wrap gap-3">
-                {projectSlides[currentSlide].tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className={`inline-flex items-center justify-center rounded-full border px-5 py-2 text-xs md:text-sm font-medium tracking-wide bg-transparent ${
-                      index === 0
-                        ? 'border-blue-300/70 text-blue-200'
-                        : index === 1
-                        ? 'border-yellow-400/70 text-yellow-300'
-                        : 'border-white/60 text-white/70'
-                    }`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
             {/* Project Image Slider */}
             <div className="relative w-full overflow-hidden">
+              {/* Project Title + Tags Overlay */}
+              <div className="absolute top-5 left-5 right-5 z-20 flex flex-col md:flex-row md:items-start md:justify-between gap-4 pointer-events-none">
+                <h2 className="text-white text-xl md:text-2xl font-light tracking-tight drop-shadow-lg">
+                  {projectSlides[currentSlide].title}
+                </h2>
+
+                <div className="flex flex-wrap gap-3">
+                  {projectSlides[currentSlide].tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className={`inline-flex items-center justify-center rounded-full border px-5 py-2 text-xs md:text-sm font-medium tracking-wide backdrop-blur-sm bg-black/20 ${
+                        index === 0
+                          ? 'border-blue-300/70 text-blue-200'
+                          : index === 1
+                          ? 'border-yellow-400/70 text-yellow-300'
+                          : 'border-white/60 text-white/70'
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               <div
                 className="flex transition-transform duration-700 ease-out"
                 style={{
