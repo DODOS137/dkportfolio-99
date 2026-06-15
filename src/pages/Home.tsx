@@ -61,13 +61,13 @@ const Home = () => {
             }`}
           >
             {/* Transparent Hero Text Box */}
-            <div className="w-full border border-white/70 bg-white/10 backdrop-blur-sm px-1 md:px-1 py-6 md:py-7">
-            <h1 className="text-white font-serif italic font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.12] tracking-tight">
-             Hi, I&apos;m Dohyun! I design immersive spaces
+            <div className="w-full border border-white/50 bg-white/5 backdrop-blur-sm px-1 md:px-1 py-6 md:py-7">
+            <h1 className="text-white/90 font-serif italic font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.12] tracking-tight">
+                 Hi, I&apos;m Dohyun! I design immersive spaces
             <br />
-            and experiences — from exhibitions to
+             and experiences; 
             <br />
-            virtual worlds. 
+            from exhibitions to virtual worlds.
             </h1>
             </div>
 
