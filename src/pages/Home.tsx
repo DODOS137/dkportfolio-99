@@ -66,13 +66,12 @@ const Home = () => {
                 className="text-white font-light italic text-4xl md:text-6xl lg:text-7xl leading-[1.12] tracking-tight"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
-                Hi, I&apos;m <span className="font-bold">Dohyun</span>! I design{' '}
-                <span className="font-bold">immersive spaces</span>
-                <br />
-                and <span className="font-bold">experiences</span>;
-                <br />
+              Hi, I&apos;m <span className="font-bold">Dohyun</span>! I design{' '}
+               <span className="font-bold">immersive spaces</span> and{' '}
+               <span className="font-bold">experiences</span>;
+               <br />
                 from exhibitions to virtual worlds.
-              </h1>
+            </h1>
             </div>
 
             {/* Transparent Button Layer */}
