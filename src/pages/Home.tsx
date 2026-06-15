@@ -91,14 +91,7 @@ const Home = () => {
                   </Button>
                 </Link>
 
-                <Link to="/about">
-                  <Button
-                    variant="outline"
-                    className="border-white/70 text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 px-8 py-2 text-xs md:text-sm"
-                  >
-                    About Me
-                  </Button>
-                </Link>
+
               </div>
             </div>
 
