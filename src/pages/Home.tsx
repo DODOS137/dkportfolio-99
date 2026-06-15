@@ -122,8 +122,8 @@ const Home = () => {
             {/* Project Image Slider */}
             <div className="relative w-full overflow-hidden">
               {/* Project Title + Tags Center Overlay */}
-              <div className="absolute top-1/2 left-5 right-5 z-30 -translate-y-1/2 flex flex-col md:flex-row md:items-center md:justify-between gap-4 pointer-events-none">
-                <h2 className="text-white text-xl md:text-2xl font-light tracking-tight drop-shadow-lg">
+              <div className="absolute top-8 left-5 right-5 z-30 flex flex-col md:flex-row md:items-center md:justify-between gap-4 pointer-events-none">
+                <h2 className="text-white text-xl md:text-2xl font-Bold tracking-tight drop-shadow-lg">
                   {projectSlides[currentSlide].title}
                 </h2>
 
