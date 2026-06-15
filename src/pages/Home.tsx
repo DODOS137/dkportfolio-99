@@ -73,7 +73,7 @@ const Home = () => {
               >
                 Hi, I&apos;m <span className="font-bold">Dohyun</span>! I design{' '}
                 <span className="font-bold">immersive spaces</span> and{' '}
-                <span className="font-bold">experiences</span>;
+                <span className="font-bold">experiences</span>
                 <br />
                 from exhibitions to virtual worlds.
               </h1>
