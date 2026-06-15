@@ -11,34 +11,34 @@ const Home = () => {
 
   const projectSlides = [
     {
-      title: 'Thermal Trace',
+      title: 'Whispers From The Bottom',
       image: '/webimages/Home/home-project-1.jpg',
       link: '/work',
-      tags: ['XR Design', 'Spatial Design', 'Interactive Experience'],
-    },
-    {
-      title: 'Whispers from the Bottom',
-      image: '/webimages/Home/home-project-2.jpg',
-      link: '/work',
-      tags: ['Hybrid Exhibition', 'AR Trigger', 'Sound Interaction'],
+      tags: ['Hybrid Exhibition', 'Spatial Design', 'Interaction'],
     },
     {
       title: 'Seoul Natural History Museum',
+      image: '/webimages/Home/home-project-2.jpg',
+      link: '/work',
+      tags: ['Exhibition', 'Spatial Design', 'VR'],
+    },
+    {
+      title: 'Thermal Trace',
       image: '/webimages/Home/home-project-3.jpg',
       link: '/work',
-      tags: ['Museum Design', 'Brand Identity', 'VR Extension'],
+      tags: ['Hybrid Exhibition', 'XR', 'Prototyping'],
     },
     {
-      title: 'Project 4',
+      title: 'Invisible',
       image: '/webimages/Home/home-project-4.jpg',
       link: '/work',
-      tags: ['Physical Prototyping', 'Illustration', 'UX Research'],
+      tags: ['VR', 'Level Design', 'Spatial Design'],
     },
     {
-      title: 'Project 5',
+      title: 'Learn',
       image: '/webimages/Home/home-project-5.jpg',
       link: '/work',
-      tags: ['Installation', 'Motion Design', 'Visual System'],
+      tags: ['VR', 'Level Design', 'Spatial Design'],
     },
   ];
 
@@ -123,7 +123,7 @@ const Home = () => {
             <div className="relative w-full overflow-hidden">
               {/* Project Title + Tags Center Overlay */}
               <div className="absolute top-8 left-5 right-5 z-30 flex flex-col md:flex-row md:items-center md:justify-between gap-4 pointer-events-none">
-                <h2 className="text-white text-xl md:text-2xl font-Bold tracking-tight drop-shadow-lg">
+                <h2 className="text-white text-xl md:text-2xl font-Bold italic tracking-tight drop-shadow-lg">
                   {projectSlides[currentSlide].title}
                 </h2>
 
