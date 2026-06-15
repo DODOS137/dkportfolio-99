@@ -11,29 +11,34 @@ const Home = () => {
 
   const projectSlides = [
     {
-      title: 'Project 1',
+      title: 'Thermal Trace',
       image: '/webimages/Home/home-project-1.jpg',
       link: '/work',
+      tags: ['XR Design', 'Spatial Design', 'Interactive Experience'],
     },
     {
-      title: 'Project 2',
+      title: 'Whispers from the Bottom',
       image: '/webimages/Home/home-project-2.jpg',
       link: '/work',
+      tags: ['Hybrid Exhibition', 'AR Trigger', 'Sound Interaction'],
     },
     {
-      title: 'Project 3',
+      title: 'Seoul Natural History Museum',
       image: '/webimages/Home/home-project-3.jpg',
       link: '/work',
+      tags: ['Museum Design', 'Brand Identity', 'VR Extension'],
     },
     {
       title: 'Project 4',
       image: '/webimages/Home/home-project-4.jpg',
       link: '/work',
+      tags: ['Physical Prototyping', 'Illustration', 'UX Research'],
     },
     {
       title: 'Project 5',
       image: '/webimages/Home/home-project-5.jpg',
       link: '/work',
+      tags: ['Installation', 'Motion Design', 'Visual System'],
     },
   ];
 
@@ -66,15 +71,15 @@ const Home = () => {
                 className="text-white font-light italic text-4xl md:text-6xl lg:text-7xl leading-[1.12] tracking-tight"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
-              Hi, I&apos;m <span className="font-bold">Dohyun</span>! I design{' '}
-               <span className="font-bold">immersive spaces</span> and{' '}
-               <span className="font-bold">experiences</span>;
-               <br />
+                Hi, I&apos;m <span className="font-bold">Dohyun</span>! I design{' '}
+                <span className="font-bold">immersive spaces</span> and{' '}
+                <span className="font-bold">experiences</span>;
+                <br />
                 from exhibitions to virtual worlds.
-            </h1>
+              </h1>
             </div>
 
-            {/* Transparent Button Layer */}
+            {/* Button Layer */}
             <div className="flex justify-center">
               <div className="bg-black backdrop-blur-sm border border-transparent px-6 py-3 flex gap-5 justify-center">
                 <Link to="/work">
@@ -114,6 +119,30 @@ const Home = () => {
               ))}
             </div>
 
+            {/* Project Title + Tags */}
+            <div className="mb-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <h2 className="text-white text-xl md:text-2xl font-light tracking-tight">
+                {projectSlides[currentSlide].title}
+              </h2>
+
+              <div className="flex flex-wrap gap-3">
+                {projectSlides[currentSlide].tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className={`inline-flex items-center justify-center rounded-full border px-5 py-2 text-xs md:text-sm font-medium tracking-wide bg-transparent ${
+                      index === 0
+                        ? 'border-blue-300/70 text-blue-200'
+                        : index === 1
+                        ? 'border-yellow-400/70 text-yellow-300'
+                        : 'border-white/60 text-white/70'
+                    }`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
             {/* Project Image Slider */}
             <div className="relative w-full overflow-hidden">
               <div
@@ -129,11 +158,11 @@ const Home = () => {
                     className="min-w-full block group"
                   >
                     <div className="w-full overflow-hidden bg-white/5">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-auto object-contain opacity-45 grayscale group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-500"
-                    />
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-auto object-contain opacity-45 grayscale group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-500"
+                      />
                     </div>
                   </Link>
                 ))}
