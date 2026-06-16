@@ -223,7 +223,7 @@ const InvisibleProjectDetail = () => {
       <div className="sticky top-32 w-[170px]">
         <div className="border border-white/10 bg-black/70 backdrop-blur-sm p-3 text-xs text-gray-400 leading-relaxed">
           <p className="text-white mb-2">Role</p>
-          <p className="text-gray-400 mb-4">VR Content Designer</p>
+          <p className="text-gray-400 mb-4">VR Designer</p>
 
           <p className="text-white mb-2">Tools</p>
           <p>Unreal Engine</p>
