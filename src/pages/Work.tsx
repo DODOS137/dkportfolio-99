@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { ChevronLeft, ChevronRight, Grid, Layers } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { ScrollArea } from '@/components/ui/scroll-area'; // ✅ 추가
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface Project {
   id: string;
@@ -79,7 +79,7 @@ const Work = () => {
   };
 
   return (
-    <ScrollArea className="h-screen w-full z-[1000]"> {/* ✅ 스크롤 영역 전체 감싸기 */}
+    <ScrollArea className="h-screen w-full z-[1000]">
       <div className="min-h-screen bg-black text-white overflow-hidden">
         <Navbar />
 
@@ -157,12 +157,22 @@ const Work = () => {
                       {/* Content Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center px-8">
-                          <span className="text-sm text-gray-700 uppercase tracking-wider block mb-4">
-                            {project.category}
-                          </span>
+                          {/* Main Tags - slider category 자리 대체 */}
+                          <div className="flex flex-wrap justify-center gap-2 mb-5">
+                            {project.tags?.map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="inline-flex items-center justify-center rounded-full border border-white/60 px-4 py-1.5 text-[10px] md:text-xs font-medium tracking-wide text-white/70 backdrop-blur-sm bg-black/40"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+
                           <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
                             {project.title}
                           </h2>
+
                           <p className="text-lg md:text-xl max-w-2xl mx-auto font-light text-gray-400">
                             {project.description}
                           </p>
@@ -252,18 +262,12 @@ const Work = () => {
                       </div>
 
                       <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                        {/* Main Tags - category 자리 대체 */}
+                        {/* Main Tags - panel category 자리 대체 */}
                         <div className="flex flex-wrap gap-2 mb-3">
                           {project.tags?.map((tag, tagIndex) => (
                             <span
                               key={tagIndex}
-                              className={`inline-flex items-center justify-center rounded-full border px-3 py-1 text-[10px] md:text-xs font-medium tracking-wide backdrop-blur-sm bg-black/40 ${
-                                tagIndex === 0
-                                  ? 'border-blue-300/70 text-blue-200'
-                                  : tagIndex === 1
-                                  ? 'border-yellow-400/70 text-yellow-300'
-                                  : 'border-white/60 text-white/70'
-                              }`}
+                              className="inline-flex items-center justify-center rounded-full border border-white/60 px-3 py-1 text-[10px] md:text-xs font-medium tracking-wide text-white/70 backdrop-blur-sm bg-black/40"
                             >
                               {tag}
                             </span>
