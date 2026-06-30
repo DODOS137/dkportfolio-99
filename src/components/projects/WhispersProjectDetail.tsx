@@ -486,13 +486,6 @@ lazyImgs.forEach((img) => imgIO.observe(img));
    
    
          {/* 그래픽 디자인*/}
-      
-       
-          {/*Research Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
-          </div>  
-
          {/*Poster Design Image1*/}        
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB4.jpg" />
@@ -521,6 +514,11 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           <div className="w-full mb-4">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" />
           </div>    
+         
+          {/*Development Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
+          </div>  
 
           {/*Development Image3*/}     
           <div className="w-full mb-0">
