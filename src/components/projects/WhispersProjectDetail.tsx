@@ -465,7 +465,7 @@ const WhispersProjectDetail = () => {
 {/* Poster Slider + Side Image */}
 <div className="w-full flex items-start justify-start gap-6">
   {/* Left: Poster Slider */}
-  <div className="w-[48.5%]">
+  <div className="w-[70%]">
     <img
       src={posterSlides[currentPosterSlide].image}
       alt={posterSlides[currentPosterSlide].alt}
@@ -476,7 +476,7 @@ const WhispersProjectDetail = () => {
   </div>
 
   {/* Right: Side Image */}
-  <div className="w-1/2">
+  <div className="w-[17%]">
     <img
       src="/webimages/WFTB/WFB4-4.jpg"
       alt="Poster side visual"
