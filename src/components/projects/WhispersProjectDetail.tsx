@@ -463,7 +463,7 @@ const WhispersProjectDetail = () => {
             </div>
 
 {/* Poster Slider + Side Image */}
-<div className="w-full flex items-start justify-start gap-6">
+<div className="w-full flex items-start justify-start gap-6 mb-4">
   {/* Left: Poster Slider */}
   <div className="w-[70%]">
     <img
@@ -486,7 +486,12 @@ const WhispersProjectDetail = () => {
     />
   </div>
 </div>
-      
+
+            {/*Poster Design Image3*/}        
+            <div className="w-full">
+              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4-5.jpg" />
+            </div>
+ 
              
              
              
