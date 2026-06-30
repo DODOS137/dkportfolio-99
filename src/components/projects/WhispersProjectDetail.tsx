@@ -508,18 +508,11 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </div>   
 
           {/*Development Image3*/}     
-          <div className="w-full mb-0">
+          <div className="w-full mb-4">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1-3.jpg" />
           </div> 
 
 
-          
-         {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-           
-           
-           
       {/* GIF Section */}
       <div className="my-0 md:my-0 relative ">
       <div className="relative z-10">
