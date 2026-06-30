@@ -46,15 +46,15 @@ const WhispersProjectDetail = () => {
 
   const posterSlides = [
     {
-      image: '/webimages/WFTB/poster-slide-1.jpg',
+      image: '/webimages/WFTB/WFB4-1.jpg',
       alt: 'Poster colour variation 1',
     },
     {
-      image: '/webimages/WFTB/poster-slide-2.jpg',
+      image: '/webimages/WFTB/WFB4-2.jpg',
       alt: 'Poster colour variation 2',
     },
     {
-      image: '/webimages/WFTB/poster-slide-3.jpg',
+      image: '/webimages/WFTB/WFB4-3.jpg',
       alt: 'Poster colour variation 3',
     },
   ];
