@@ -503,7 +503,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </div>    
 
           {/*Development Image2*/}     
-          <div className="w-full mb-0">
+          <div className="w-full mb-4">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1-2.jpg" />
           </div>   
 
@@ -512,56 +512,14 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-full" src="/webimages/WFTB/WFB1-3.jpg" />
           </div> 
 
+
           
-
-           {/*Context text */}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-0">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Sound is used as a narrative layer rather than background information. By focusing on the bioacoustics of overlooked marine invertebrates, the exhibition shifts ocean conservation from visual spectacle to intimate listening.
-           </p>
-           </div>
-           </div>
-
-          {/*Line*/} 
+         {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
            
            
            
-           
-
-         {/* Process-2 */}
-         
-         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-         <span className="text-sm md:text-sm text-gray-600 font-Medium">
-          Process
-         </span>
-         <div>
-         <span className="text-base md:text-base text-white font-Medium">
-          Exhibition Journey & Development
-         </span>
-         <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-         The exhibition combines tactile modules, sound, QR/AR scanning, and animated species content, turning passive viewing into active discovery.
-          </p>
-         </div>
-         </div>
-          
-          {/*Exhibition Flow */}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB15.jpg" />
-          </div>
-          {/*Exhibition Flow2 */}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB16.jpg" />
-          </div>  
-
-           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
-          
-
-
-
       {/* GIF Section */}
       <div className="my-0 md:my-0 relative ">
       <div className="relative z-10">
