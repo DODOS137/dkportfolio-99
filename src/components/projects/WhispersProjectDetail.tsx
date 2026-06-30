@@ -476,7 +476,7 @@ const WhispersProjectDetail = () => {
   </div>
 
   {/* Right: Side Image */}
-  <div className="w-[17%]">
+  <div className="w-full">
     <img
       src="/webimages/WFTB/WFB4-4.jpg"
       alt="Poster side visual"
