@@ -517,19 +517,8 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
 
    {/* GIF Section */}
-<div className="my-0 md:my-0 relative">
-  <div className="relative z-10">
-    <p className="font-Medium mb-4">
-      <span className="text-sm md:text-base text-gray-600">Process </span>
-      <span className="ml-4 text-base md:text-base text-white">
-        QR-to-AR prototype test
-      </span>
-    </p>
-  </div>
-</div>
-
-{/* GIF Board */}
-<div className="w-full bg-[#907A56] p-[100px]">
+   {/* GIF Board */}
+<div className="w-full bg-[#907A56] p-[80px]">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div className="w-full aspect-[9/16] overflow-hidden">
       <img
@@ -565,58 +554,6 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
 
 
-
-
-
-
-
-   
-
-      {/* GIF Section */}
-      <div className="my-0 md:my-0 relative ">
-      <div className="relative z-10">
-      <p className="font-Medium mb-4">
-      <span className="text-sm md:text-base text-gray-600">Process </span>
-      <span className="ml-4 text-base md:text-base text-white">QR-to-AR prototype test </span>
-      </p>
-      </div>
-      </div> 
-          
-          
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div className="w-full aspect-[9/16] overflow-hidden">
-      <img
-      src="/webimages/WFTBGIF1.gif"
-      alt="Process GIF 1"
-      className="w-full h-full object-cover"
-      loading="lazy"
-       />
-      </div>
-
-      <div className="w-full aspect-[9/16] overflow-hidden">
-      <img
-      src="/webimages/WFTBGIF2-1.gif"
-      alt="Process GIF 2"
-      className="w-full h-full object-cover"
-      loading="lazy"
-       />
-      </div>
-
-      <div className="w-full aspect-[9/16] overflow-hidden">
-      <img
-      src="/webimages/WFTBGIF3-1.gif"
-      alt="Process GIF 3"
-      className="w-full h-full object-cover"
-      loading="lazy"
-    />
-  </div>
-</div>
-
-
-
-
-
-          
 
 
 
