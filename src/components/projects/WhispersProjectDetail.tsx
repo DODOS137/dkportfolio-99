@@ -517,7 +517,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
          
           {/*Development Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
+            <img className="w-full h-full" src="/webimages/WFTB/WFB3.jpg" />
           </div>  
 
           {/*Development Image3*/}     
