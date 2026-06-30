@@ -464,7 +464,7 @@ const WhispersProjectDetail = () => {
 
             {/* Poster Colour Variation Slider */}
             <div className="w-full flex justify-start">
-              <div className="inline-block">
+              <div className="w-[45%]">
                 <img
                   src={posterSlides[currentPosterSlide].image}
                   alt={posterSlides[currentPosterSlide].alt}
