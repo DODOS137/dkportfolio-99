@@ -454,29 +454,49 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           {/*Render Images*/}   
           {/*Bridge Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8-1.jpg" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB8-1.jpg" />
           </div>
           {/*Product Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8-2.jpg" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB8-2.jpg" />
           </div>
           {/*Product Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB9.jpg" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB9.jpg" />
           </div>  
           {/*Detail Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB10.jpg" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB10.jpg" />
           </div> 
          {/*Exhibition Design Image2*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB13.jpg" />
+            <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB13.jpg" />
           </div>    
 
          {/*Exhibition Design Image3*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" />
+          </div>          
+   
+   
+        {/*Line*/} 
+        <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+   
+   
+   
+   
+         {/* 그래픽 디자인*/}
+      
+       
+          {/*Research Image2*/}        
+          <div className="w-full">
+            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
           </div>  
+
+         {/*Poster Design Image1*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB4.jpg" />
+          </div> 
          
 
 
@@ -501,11 +521,6 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           <div className="w-full mb-4">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" />
           </div>    
-
-          {/*Development Image2*/}     
-          <div className="w-full mb-4">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB1-2.jpg" />
-          </div>   
 
           {/*Development Image3*/}     
           <div className="w-full mb-0">
@@ -596,49 +611,6 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB7.jpg" />
           </div> 
 
-
-
-
-
-
-
-
-         {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
-
-
-
-         {/* Process-4*/}
-         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-         <span className="text-sm md:text-sm text-gray-600 font-Medium">
-          Process
-         </span>
-         <div>
-         <span className="text-base md:text-base text-white font-Medium">
-          Graphic Design
-         </span>
-         <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-         Leveraged generative AI to produce exhibition-aligned graphic assets and visual imagery, accelerating the design process and reducing production time.
-         </p>
-         </div>
-         </div>
-       
-          {/*Research Image2*/}        
-          <div className="w-full">
-            <img className="w-full h-full" src="/webimages/WFTB/WFB2.jpg" />
-          </div>  
-          {/*Research Image2-1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB3.jpg" />
-          </div> 
-
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-          {/*Poster Design Image1*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB4.jpg" />
-          </div>    
 
 
 
