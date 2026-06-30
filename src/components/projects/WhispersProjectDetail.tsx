@@ -454,28 +454,25 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           {/*Render Images*/}   
           {/*Bridge Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8.jpg" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8-1.jpg" />
           </div>
           {/*Product Design Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB9.jpg" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB8-2.jpg" />
           </div>
           {/*Product Design Image2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB10.jpg" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB9.jpg" />
           </div>  
           {/*Detail Image1*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB11.jpg" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB10.jpg" />
           </div> 
          {/*Exhibition Design Image2*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB12.jpg" />
+            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/WFTB/WFB13.jpg" />
           </div>    
-         {/*Detail Image3*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-20 md:mb-20" src="/webimages/WFTB/WFB13.jpg" />
-          </div> 
+
          {/*Exhibition Design Image3*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" />
