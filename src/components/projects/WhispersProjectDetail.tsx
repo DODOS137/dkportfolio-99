@@ -454,7 +454,7 @@ const WhispersProjectDetail = () => {
             </div>          
 
             {/*Line*/} 
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* 그래픽 디자인*/}
             {/*Poster Design Image1*/}        
@@ -462,20 +462,37 @@ const WhispersProjectDetail = () => {
               <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
             </div>
 
-            {/* Poster Colour Variation Slider */}
-            <div className="w-full flex justify-start">
-              <div className="w-[48%]">
-                <img
-                  src={posterSlides[currentPosterSlide].image}
-                  alt={posterSlides[currentPosterSlide].alt}
-                  className="block w-auto h-auto max-w-full"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </div>
+{/* Poster Slider + Side Image */}
+<div className="w-full flex items-start justify-start gap-6">
+  {/* Left: Poster Slider */}
+  <div className="w-[48.5%]">
+    <img
+      src={posterSlides[currentPosterSlide].image}
+      alt={posterSlides[currentPosterSlide].alt}
+      className="block w-full h-auto"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
 
-            {/*Line*/} 
+  {/* Right: Side Image */}
+  <div className="w-1/2">
+    <img
+      src="/webimages/WFTB/WFB4-4.jpg"
+      alt="Poster side visual"
+      className="block w-full h-auto"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+</div>
+      
+             
+             
+             
+             
+             
+             {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* Process-1 */}
