@@ -508,7 +508,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </div>   
 
           {/*Development Image3*/}     
-          <div className="w-full mb-4">
+          <div className="w-full mb-0">
             <img className="w-full h-full" src="/webimages/WFTB/WFB1-3.jpg" />
           </div> 
 
@@ -518,7 +518,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
    {/* GIF Section */}
    {/* GIF Board */}
-<div className="w-full bg-[#907A56] p-[80px]">
+<div className="w-full bg-[#907A56] p-[60px]">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div className="w-full aspect-[9/16] overflow-hidden">
       <img
@@ -654,20 +654,10 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB17.jpg" />
           </div>  
 
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
 
 
 
-          
-           {/*Final Outcome text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The project proposes a modular, sound-led exhibition platform that reveals overlooked marine life through listening, touch, and AR discovery. It can be adapted across educational, cultural, and environmental exhibition contexts.
-           </p>
-           </div>
-           </div>
+
 
 
 
