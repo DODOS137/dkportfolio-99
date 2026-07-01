@@ -402,12 +402,28 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM14.jpg" />
           </div>
 
+   
+   
+          {/*Built-in 4*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM10.jpg" />
+          </div> 
+
 
      
           {/*Rest Area Image 1*/}       
           <div className="w-full">
             <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM15.jpg" />
           </div>    
+
+   
+          {/*built-in Image 2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" />
+          </div>    
+
+
+   
 
              {/*Exhibition Outcome image*/}       
           <div className="w-full">
@@ -606,11 +622,6 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-          {/*built-in Image 2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-8 md:mb-8" src="/webimages/SNM/SNM23.jpg" />
-          </div>    
-
            {/*Built-in display cases Text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -627,16 +638,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM16.jpg" />
           </div>  
 
-
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-
-   
-          {/*Built-in 4*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM10.jpg" />
-          </div>  
+ 
 
           {/*Line*/} 
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
