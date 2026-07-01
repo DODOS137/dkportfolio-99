@@ -389,15 +389,15 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Exhibition Hall*/}
             <div className="w-full">
-              <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM13.jpg" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM13.jpg" />
             </div>
 
             {/*Exhibtion Hall 2*/}
             <div className="w-full">
-              <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM14.jpg" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM14.jpg" />
             </div>
 
-            {/*Built-in 4*/}
+            {/*Built-in detail images*/}
             <div className="w-full">
               <img className="w-full h-full mb-4" src="/webimages/SNM/SNM10.jpg" />
             </div>
@@ -407,10 +407,7 @@ const SeoulMuseumProjectDetail = () => {
               <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM15.jpg" />
             </div>
 
-            {/*built-in Image 2*/}
-            <div className="w-full">
-              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM16.jpg" />
-            </div>
+
 
             {/*Gift Shop Image*/}
             <div className="w-full">
