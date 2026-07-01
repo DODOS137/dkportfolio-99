@@ -422,14 +422,17 @@ const WhispersProjectDetail = () => {
             {/*Line*/} 
             <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-            {/*Render Images*/}   
+            {/*Render Images*/}  
+            <div className="w-full">
+              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB17.jpg" />
+            </div>
             {/*Bridge Image1*/}        
             <div className="w-full">
               <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB8-1.jpg" />
             </div>
             {/*Product Design Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB8-2.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB8-2.jpg" />
             </div>
             {/*Product Design Image2*/}        
             <div className="w-full">
@@ -453,13 +456,16 @@ const WhispersProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* 그래픽 디자인*/}
+            <div className="w-full">
+              <img className="w-full h-full" src="/webimages/WFTB/WFB18.jpg" />
+            </div>
             {/*Poster Design Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB4.jpg" />
             </div>
 
             {/* Poster Slider + Side Image */}
-            <div className="w-full flex items-start justify-start gap-6 mb-4">
+            <div className="w-full flex items-start justify-start mb-4">
               {/* Left: Poster Slider */}
               <div className="w-[70%]">
                 <img
