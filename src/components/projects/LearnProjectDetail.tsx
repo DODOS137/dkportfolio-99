@@ -16,28 +16,24 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const ModelViewer = React.lazy(() => import('@/components/ModelViewer'));
 
 /* ============================
-   ✅ 경량 YouTube (썸네일 → 클릭 시 iframe 로드)
+   ✅ YouTube Auto Play + Loop
    ============================ */
-const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
-  const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-  const src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
-  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const wrapper = (e.currentTarget.parentElement as HTMLElement);
-    if (!wrapper) return;
-    wrapper.innerHTML = `<iframe title="${title}" src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
-  };
+const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({
+  id,
+  title = 'YouTube video',
+  className = '',
+}) => {
+  const src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&modestbranding=1&rel=0&controls=1`;
+
   return (
     <div className={`relative w-full h-full bg-black ${className}`}>
-      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
-      <button
-        onClick={onClick}
-        className="absolute inset-0 w-full h-full flex items-center justify-center"
-        aria-label="Play video"
-      >
-        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
-          ▶ PLAY
-        </span>
-      </button>
+      <iframe
+        title={title}
+        src={src}
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full border-0"
+      />
     </div>
   );
 };
@@ -103,7 +99,9 @@ const LearnProjectDetail = () => {
           img.addEventListener('load', onLoad);
         }
       };
-      (window as any).requestIdleCallback ? (window as any).requestIdleCallback(run, { timeout: 500 }) : run();
+      (window as any).requestIdleCallback
+        ? (window as any).requestIdleCallback(run, { timeout: 500 })
+        : run();
     };
 
     // 이미지 관찰자: 스크롤 페이드 인 / 페이드 아웃
@@ -220,7 +218,6 @@ const LearnProjectDetail = () => {
             {/* Shared Container */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] mt-20 md:mt-20">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-
                 {/* Left Column */}
                 <div>
                   {/* Title */}
@@ -236,7 +233,7 @@ const LearnProjectDetail = () => {
 
                 {/* Right Column */}
                 <div className="space-y-6">
-                <div className="mb-6">
+                  <div className="mb-6">
                     <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
                       The Brief
                     </h2>
@@ -268,15 +265,12 @@ const LearnProjectDetail = () => {
               </div>
             </div>
 
-          {/* Line */}
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-             
+            {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* 챌린지 Container */}
             <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-
                 {/* Empty Left Column */}
                 <div className="hidden md:block" />
 
@@ -308,8 +302,6 @@ const LearnProjectDetail = () => {
                       Worldbuilding, character design, spatial renders, interaction sketches, level layouts, storyboards, 360-degree model viewing, and visual production assets.
                     </p>
                   </div>
-
- 
                 </div>
               </div>
             </div>
@@ -320,7 +312,6 @@ const LearnProjectDetail = () => {
 
           {/* ✅ Container fixed: 아래 섹션도 기준코드와 같은 좌우 여백 적용 */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
-
             {/* Spatial Design Image1 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" />
@@ -355,9 +346,9 @@ const LearnProjectDetail = () => {
                   Narrative Arc + Planning
                 </span>
               </div>
-            </div>           
-             
-             {/* Line */}
+            </div>
+
+            {/* Line */}
             <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
             {/* 다이어그램1 */}
@@ -365,7 +356,7 @@ const LearnProjectDetail = () => {
               <img className="w-full h-auto" src="/webimages/Learn/LEARN15.jpg" />
             </div>
 
-             {/* Line */}
+            {/* Line */}
             <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
             {/* Worldbuilding */}
@@ -410,7 +401,7 @@ const LearnProjectDetail = () => {
                 </span>
                 <div>
                   <span className="text-base md:text-base text-white font-Medium">
-                    Storyboarding 
+                    Storyboarding
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                     The project presents an original VR story set in an abandoned library where three robots confront memory, empathy, and sacrifice through spatial exploration.
@@ -418,7 +409,7 @@ const LearnProjectDetail = () => {
                 </div>
               </div>
 
-              <AspectRatio ratio={16 / 9} className="rounded-lg border border-[#FF7F00] overflow-hidden">
+              <AspectRatio ratio={16 / 9} className="border border-transparent overflow-hidden">
                 <LiteYouTube
                   id="aCJblmM9yzs"
                   title="Project video"
@@ -427,14 +418,9 @@ const LearnProjectDetail = () => {
               </AspectRatio>
             </div>
 
-  
-
- 
-
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-             
             {/* Process-2 */}
             <div className="my-0 md:my-0 relative">
               <div className="relative z-10">
@@ -500,8 +486,6 @@ const LearnProjectDetail = () => {
               </div>
             </div>
 
-   
-
             {/* Level Design Section */}
             <div className="w-full">
               <img className="w-full h-full" src="/webimages/Learn/LEARN6.jpg" />
@@ -521,8 +505,6 @@ const LearnProjectDetail = () => {
             <div className="w-full">
               <img className="w-full h-full" src="/webimages/Learn/LEARN9.jpg" />
             </div>
-
-
 
             {/* Line */}
             <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
@@ -560,10 +542,6 @@ const LearnProjectDetail = () => {
                 </p>
               </div>
             </div>
-
-
-
-
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
