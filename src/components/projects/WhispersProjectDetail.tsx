@@ -12,28 +12,24 @@ import BackToTopButton from '@/components/BackToTopButton';
 import { ScrollArea } from "@/components/ui/scroll-area"; // ✅ 추가
 
 /* ============================
-   ✅ NEW: 경량 YouTube (썸네일 → 클릭 시 iframe 로드)
+   ✅ YouTube Auto Play + Loop
    ============================ */
-const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({ id, title = 'YouTube video', className = '' }) => {
-  const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-  const src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
-  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const wrapper = (e.currentTarget.parentElement as HTMLElement);
-    if (!wrapper) return;
-    wrapper.innerHTML = `<iframe title="${title}" src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
-  };
+const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> = ({
+  id,
+  title = 'YouTube video',
+  className = '',
+}) => {
+  const src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&modestbranding=1&rel=0&controls=1`;
+
   return (
     <div className={`relative w-full h-full bg-black ${className}`}>
-      <img src={thumb} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
-      <button
-        onClick={onClick}
-        className="absolute inset-0 w-full h-full flex items-center justify-center"
-        aria-label="Play video"
-      >
-        <span className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2 text-xs tracking-widest text-white/90 backdrop-blur-sm bg-white/10">
-          ▶ PLAY
-        </span>
-      </button>
+      <iframe
+        title={title}
+        src={src}
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full border-0"
+      />
     </div>
   );
 };
@@ -462,42 +458,37 @@ const WhispersProjectDetail = () => {
               <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB4.jpg" />
             </div>
 
-{/* Poster Slider + Side Image */}
-<div className="w-full flex items-start justify-start gap-6 mb-4">
-  {/* Left: Poster Slider */}
-  <div className="w-[70%]">
-    <img
-      src={posterSlides[currentPosterSlide].image}
-      alt={posterSlides[currentPosterSlide].alt}
-      className="block w-full h-auto"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
+            {/* Poster Slider + Side Image */}
+            <div className="w-full flex items-start justify-start gap-6 mb-4">
+              {/* Left: Poster Slider */}
+              <div className="w-[70%]">
+                <img
+                  src={posterSlides[currentPosterSlide].image}
+                  alt={posterSlides[currentPosterSlide].alt}
+                  className="block w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
 
-  {/* Right: Side Image */}
-  <div className="w-full">
-    <img
-      src="/webimages/WFTB/WFB4-4.jpg"
-      alt="Poster side visual"
-      className="block w-full h-auto"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
-</div>
+              {/* Right: Side Image */}
+              <div className="w-full">
+                <img
+                  src="/webimages/WFTB/WFB4-4.jpg"
+                  alt="Poster side visual"
+                  className="block w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
 
             {/*Poster Design Image3*/}        
             <div className="w-full">
               <img className="w-full h-full" src="/webimages/WFTB/WFB4-5.jpg" />
             </div>
- 
-             
-             
-             
-             
-             
-             {/*Line*/} 
+
+            {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* Process-1 */}
