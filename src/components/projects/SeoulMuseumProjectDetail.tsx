@@ -496,30 +496,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
          </div>
          </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-   
-
-    
-          {/*전체 프로세스 다이어그램*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM21.jpg" />
-          </div>  
-
-           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-20 bg-transparent"></div>
-
       {/* Site Section */}
-      <div className="my-0 md:my-0 relative ">
-      <div className="relative z-10">
-      <p className="font-Medium mb-4">
-      <span className="text-sm md:text-base text-gray-600">Process </span>
-      <span className="ml-4 text-base md:text-base text-white">Analysis </span>
-      </p>
-      </div>
-      </div> 
-          
       <div className="flex gap-10 items-start">
         <div className="w-[1106px] h-auto overflow-hidden">
           <img
@@ -628,6 +605,12 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
+           {/*built-in Image 2*/}        
+          <div className="w-full">
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" />
+          </div>   
+   
+
            {/*Built-in display cases Text 1*/}
            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
            <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -636,10 +619,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
            </div>
 
-             {/*built-in Image 2*/}        
-          <div className="w-full">
-            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" />
-          </div>    
+   
 
  
 
