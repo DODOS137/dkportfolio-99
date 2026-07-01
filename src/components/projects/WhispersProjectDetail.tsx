@@ -410,7 +410,7 @@ const WhispersProjectDetail = () => {
                   </p>
                 </div>
               </div>
-              <AspectRatio ratio={16 / 9} className="rounded-lg border border-[#C7B299] overflow-hidden">
+              <AspectRatio ratio={16 / 9} className="border border-transparent overflow-hidden">
                 <LiteYouTube
                   id="zqz3Owz0K3o"
                   title="Project video"
