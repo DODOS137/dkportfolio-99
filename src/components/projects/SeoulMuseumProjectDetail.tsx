@@ -602,7 +602,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
  
 
           {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
          
    
 
