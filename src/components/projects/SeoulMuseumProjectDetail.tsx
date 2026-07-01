@@ -580,28 +580,6 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           </div> 
             
 
- 
-
-         {/*Line*/} 
-          <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-
-         {/* Process-4*/}
-         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-         <span className="text-sm md:text-sm text-gray-600 font-Medium">
-          Process
-         </span>
-         <div>
-         <span className="text-base md:text-base text-white font-Medium">
-          Display Cases & Product Design
-         </span>
-         <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-         The museum experience extends into detailed display furniture, gift-shop products, and identity assets inspired by native Korean species.
-         </p>
-         </div>
-         </div>
-       
-
-
           {/*Line*/} 
           <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
@@ -631,7 +609,7 @@ lazyImgs.forEach((img) => imgIO.observe(img));
 
 
 
-             {/*Gift Product Image 2*/}       
+             {/*End-Gift Product Image 2*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM20.jpg" />
           </div>  
