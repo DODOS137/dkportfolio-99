@@ -424,7 +424,7 @@ const WhispersProjectDetail = () => {
 
             {/*Render Images*/}  
             <div className="w-full">
-              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB18.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB18.jpg" />
             </div>
             {/*Bridge Image1*/}        
             <div className="w-full">
