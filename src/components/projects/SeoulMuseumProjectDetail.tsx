@@ -376,7 +376,10 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Lobby Images*/}
             <div className="w-full">
-              <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM11.jpg" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM24.jpg" />
+            </div>
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/SNM/SNM11.jpg" />
             </div>
 
             {/*Lobby Images2*/}
