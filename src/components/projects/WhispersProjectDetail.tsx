@@ -424,7 +424,7 @@ const WhispersProjectDetail = () => {
 
             {/*Render Images*/}  
             <div className="w-full">
-              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB17.jpg" />
+              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB18.jpg" />
             </div>
             {/*Bridge Image1*/}        
             <div className="w-full">
@@ -457,7 +457,7 @@ const WhispersProjectDetail = () => {
 
             {/* 그래픽 디자인*/}
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB18.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB19.jpg" />
             </div>
             {/*Poster Design Image1*/}        
             <div className="w-full">
