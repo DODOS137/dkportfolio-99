@@ -416,16 +416,22 @@ lazyImgs.forEach((img) => imgIO.observe(img));
             <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM15.jpg" />
           </div>    
 
-   
-          {/*built-in Image 2*/}        
+             {/*built-in Image 2*/}       
           <div className="w-full">
-            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" />
-          </div>    
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM16.jpg" />
+          </div>  
 
+             {/*Gift Shop Image*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM17.jpg" />
+          </div>  
+          {/*Gift Product Image 2*/}       
+          <div className="w-full">
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM18.jpg" />
+          </div>  
 
    
-
-             {/*Exhibition Outcome image*/}       
+            {/*Exhibition Outcome image*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM19.jpg" />
           </div>  
@@ -630,13 +636,10 @@ lazyImgs.forEach((img) => imgIO.observe(img));
            </div>
            </div>
 
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-          {/*built-in Image 2*/}       
+             {/*built-in Image 2*/}        
           <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM16.jpg" />
-          </div>  
+            <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" />
+          </div>    
 
  
 
@@ -644,45 +647,19 @@ lazyImgs.forEach((img) => imgIO.observe(img));
           <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
          
    
-           {/*2F Gift Shop Text*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Gift Shop</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">The gift shop concept features products inspired by native Korean species, reinforcing the museum’s identity. Items include collectible cards of endangered animals and resin-encased specimens of Korean insects.</p>
-           </div>
-           </div>
-
-          {/*Gift Shop Image*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM17.jpg" />
-          </div>  
 
 
 
-          {/*Line*/} 
-          <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-          {/*Gift Product Image 1*/}       
-          <div className="w-full">
-            <img className="w-full h-full mb-0 md:mb-4" src="/webimages/SNM/SNM18.jpg" />
-          </div>  
 
              {/*Gift Product Image 2*/}       
           <div className="w-full">
             <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM20.jpg" />
           </div>  
 
-          {/*Line*/} 
-          <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
-           {/*Final Outcome text 1*/}
-           <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-           <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-           <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
-           <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">Delivered a complete, testable museum experience encompassing space, identity, product, and narrative logic. With the support of Seodaemun Museum of Natural History, a seven-day solo exhibition was conducted within the museum, incorporating feedback from both visitors and staff. Structured for ongoing refinement, the work anticipates future feedback loops through public interaction and prototyping.</p>
-           </div>
-           </div>
+
+
 
           {/*Line*/} 
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
