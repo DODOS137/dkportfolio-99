@@ -384,15 +384,23 @@ const ThermalTraceProjectDetail = () => {
             <div className="w-full">
               <img
                 className="w-full h-auto"
-                src="/webimages/ThermalTrace/TT1.jpg"
+                src="/webimages/ThermalTrace/TT3.jpg"
               />
             </div>
     
-              
+               {/* 포스터이미지2 */}
               <div className="w-full">
               <img
                 className="w-full h-full"
-                src="/webimages/ThermalTrace/TT2.jpg"
+                src="/webimages/ThermalTrace/TT1.jpg"
+              />
+            </div>
+
+              {/* 포스터이미지3 */}
+              <div className="w-full">
+              <img
+                className="w-full h-full"
+                src="/webimages/ThermalTrace/TT3-1.jpg"
               />
             </div>
 
