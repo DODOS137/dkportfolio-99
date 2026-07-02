@@ -372,12 +372,17 @@ const InvisibleProjectDetail = () => {
             {/*Line*/}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Context */}
-            <div className="my-0 md:my-0 relative ">
-              <div className="relative z-10">
-                <p className="font-Medium mb-4">
-                  <span className="text-sm md:text-base text-gray-600">Context </span>
-                  <span className="ml-4 text-base md:text-base text-white">Narrative Arc + Worldbuilding  </span>
+             {/* context */}
+            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+              <span className="text-sm md:text-sm text-gray-600 font-Medium">
+                Context
+              </span>
+              <div>
+                <span className="text-base md:text-base text-white font-Medium">
+                  Narrative Arc + Worldbuilding
+                </span>
+                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                  Set on the fictional alien planet A233, the experience follows an unnamed explorer discovering abandoned artefacts and messages from another civilisation. Without a shared language, science becomes the universal connection between two worlds, transforming the journey from wonder and disorientation into understanding. Each chamber expresses a scientific principle through emotion.
                 </p>
               </div>
             </div>
@@ -392,18 +397,7 @@ const InvisibleProjectDetail = () => {
               <img className="w-full h-auto" src="/webimages/Invisible/INV1-2.jpg" alt="Space render 4" />
             </div>
 
-            {/*Line*/}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-            {/*Worldbuilding text*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Worldbuilding</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Set on the fictional alien planet A233, the project follows an explorer discovering abandoned artefacts and messages. Without a shared language, science becomes a universal language connecting two civilisations.
-                </p>
-              </div>
-            </div>
 
             {/* Worldbuilding Image 1 */}
             <div className="w-full">
@@ -425,33 +419,19 @@ const InvisibleProjectDetail = () => {
               </AspectRatio>
             </div>
 
-            {/*Line*/}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+  
 
-            {/*Narrative Arc text start*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  The experience follows an unnamed interstellar explorer through abandoned chambers on Planet A233, each representing a universal scientific principle. The journey moves from perception to comprehension, turning wonder and disorientation into clarity and resonance.
-                </p>
-              </div>
-            </div>
 
-            {/*Narrative Arc text start2*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Scientific ideas are conveyed through emotional rhythm: gravity creates tension, light sparks curiosity, life evokes empathy, and time ends the journey with introspection.
-                </p>
-              </div>
-            </div>
 
             {/*Line*/}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process */}
+   
+             
+             
+             
+             
+             {/* Process */}
             <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
               <span className="text-sm md:text-sm text-gray-600 font-Medium">
                 Process
