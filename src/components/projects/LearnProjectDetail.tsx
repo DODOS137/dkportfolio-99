@@ -317,21 +317,34 @@ const LearnProjectDetail = () => {
               <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" />
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
 
             {/* Spatial Design Image2 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" />
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
 
             {/* Spatial Design Image3 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
             </div>
+
+
+              {/* detail Image1 */}
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN12.jpg" />
+            </div>
+             {/* detail Image2 */}
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN13.jpg" />
+            </div>
+
+
+
+
+             
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
@@ -351,13 +364,9 @@ const LearnProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-            {/* 다이어그램1 */}
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN15.jpg" />
-            </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+
+
 
             {/* Worldbuilding */}
             <div className="w-full">
@@ -506,16 +515,9 @@ const LearnProjectDetail = () => {
               <img className="w-full h-full" src="/webimages/Learn/LEARN9.jpg" />
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN12.jpg" />
-            </div>
 
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN13.jpg" />
-            </div>
+
 
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
