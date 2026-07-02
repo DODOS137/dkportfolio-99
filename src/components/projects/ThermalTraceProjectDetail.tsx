@@ -344,7 +344,7 @@ const ThermalTraceProjectDetail = () => {
 
 
                {/* Line */}
-               <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+               <div className="w-full h-px my-2 md:my-2 bg-transparent"></div>
 
 
                {/*익스비션이미지 */}
@@ -362,7 +362,7 @@ const ThermalTraceProjectDetail = () => {
                   ratio={16 / 9}
                   className="relative z-10 bg-black overflow-hidden"
                 >
-                  <div className="rounded-lg  border-[#0044FA]  bg-transparent">
+                  <div className="border-transparent  bg-transparent">
                     <InteractiveImageSection
                       baseImage="/webimages/ThermalTrace/TT1-2.jpg"
                       overlayImage="/webimages/ThermalTrace/TT1-1.jpg"
