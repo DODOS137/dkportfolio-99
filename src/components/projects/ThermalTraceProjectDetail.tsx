@@ -318,7 +318,7 @@ const ThermalTraceProjectDetail = () => {
                 </span>
                 <div>
                   <span className="text-base md:text-base text-white font-Medium">
-                    Thermal Interaction Prototype
+                    outcome & Interaction Prototype
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                     The project reframes fashion as something discovered through
