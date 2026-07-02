@@ -351,7 +351,7 @@ const LearnProjectDetail = () => {
 
     
              
-             {/* Content */}
+             {/* process1 */}
               <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
                 <span className="text-sm md:text-sm text-gray-600 font-Medium">
                   Process
@@ -383,35 +383,9 @@ const LearnProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
           </div>
 
-          <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
-            {/* YouTube Video Section */}
-            <div className="my-0 md:my-0 relative">
-              {/* Content */}
-              <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-                <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                  Process
-                </span>
-                <div>
-                  <span className="text-base md:text-base text-white font-Medium">
-                    Storyboarding
-                  </span>
-                  <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                    The project presents an original VR story set in an abandoned library where three robots confront memory, empathy, and sacrifice through spatial exploration.
-                  </p>
-                </div>
-              </div>
+   
 
-              <AspectRatio ratio={16 / 9} className="border border-transparent overflow-hidden">
-                <LiteYouTube
-                  id="aCJblmM9yzs"
-                  title="Project video"
-                  className="w-full h-full bg-transparent"
-                />
-              </AspectRatio>
-            </div>
-
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+      
 
             {/* Process-2 */}
             <div className="my-0 md:my-0 relative">
@@ -463,20 +437,34 @@ const LearnProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process-3 */}
-            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-              <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                Process
-              </span>
-              <div>
-                <span className="text-base md:text-base text-white font-Medium">
-                  Spatial Design
+             <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
+            {/* YouTube Video Section */}
+            <div className="my-0 md:my-0 relative">
+              {/* Content */}
+              <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+                <span className="text-sm md:text-sm text-gray-600 font-Medium">
+                  Process
                 </span>
-                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  Sunlight, shadow, and artefact placement guide the viewer’s attention. The library unfolds through layered contrasts between architectural order, organic decay, digital interfaces, and paper records.
-                </p>
+                <div>
+                  <span className="text-base md:text-base text-white font-Medium">
+                    Storyboarding + Level Design
+                  </span>
+                  <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                   This original VR story follows three robots through an abandoned library, where memory, empathy, and sacrifice unfold through spatial exploration. Sunlight, shadow, and artefact placement guide the viewer’s attention, while contrasts between architectural order, organic decay, digital interfaces, and paper records turn the library into a layered narrative environment.
+                  </p>
+                </div>
               </div>
+
+              <AspectRatio ratio={16 / 9} className="border border-transparent overflow-hidden">
+                <LiteYouTube
+                  id="aCJblmM9yzs"
+                  title="Project video"
+                  className="w-full h-full bg-transparent"
+                />
+              </AspectRatio>
             </div>
+
+
 
             {/* Level Design Section */}
             <div className="w-full">
