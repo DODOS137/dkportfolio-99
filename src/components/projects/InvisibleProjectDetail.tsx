@@ -353,15 +353,15 @@ const InvisibleProjectDetail = () => {
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
             {/* Space Images */}
-            <div className="w-full mb-10 md:mb-10">
+            <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Invisible/INV8.jpg" alt="Space render 1" />
             </div>
 
-            <div className="w-full mb-10 md:mb-10">
+            <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Invisible/INV9.jpg" alt="Space render 2" />
             </div>
 
-            <div className="w-full mb-10 md:mb-10">
+            <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Invisible/INV10.jpg" alt="Space render 3" />
             </div>
 
