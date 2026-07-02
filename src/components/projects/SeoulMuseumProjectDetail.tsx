@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'; // ✅ NEW
+import React, { useEffect, useState } from 'react'; // ✅ UPDATED
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 // import YouTube from 'react-youtube'; // (미사용) 성능 최적화로 대체
@@ -37,13 +37,29 @@ const SeoulMuseumProjectDetail = () => {
   const project = seoulMuseumProjectData;
   const heroRef = useScrollAnimation();
 
+  const [currentGiftShopSlide, setCurrentGiftShopSlide] = useState(0);
+
+  const giftShopSliderImages = [
+    '/webimages/SNM/SNM26-1.jpg',
+    '/webimages/SNM/SNM26-2.jpg',
+    '/webimages/SNM/SNM26-3.jpg',
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentGiftShopSlide((prev) => (prev + 1) % giftShopSliderImages.length);
+    }, 700);
+
+    return () => clearInterval(timer);
+  }, [giftShopSliderImages.length]);
+
   /* ============================
      ✅ FIX: 가벼운 이미지 페이드 + 지연 로딩 + content-visibility
      ============================ */
   useEffect(() => {
     // 🔧 FIX: ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
     const scrollRoot =
-      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]') // shadcn
+      document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]')
       || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto')
       || null;
 
@@ -58,31 +74,30 @@ const SeoulMuseumProjectDetail = () => {
       lcpImg.loading = 'eager';
       (lcpImg as any).fetchPriority = 'high';
       lcpImg.decoding = 'async';
-      // 컨테이너 최대폭 기준 힌트
+
       if (!lcpImg.hasAttribute('sizes')) {
         lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
       }
     }
 
-    // 나머지 이미지는 native lazy + LQIP 효과만 (src는 건드리지 않음)
+    // 나머지 이미지는 native lazy + LQIP 효과만
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
-      if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
+      if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
 
-      // 브라우저 네이티브 힌트
       img.loading = 'lazy';
       img.decoding = 'async';
       (img as any).fetchPriority = 'low';
+
       if (!img.hasAttribute('sizes')) {
-        img.setAttribute('sizes', '100vw'); // 안전 기본값
+        img.setAttribute('sizes', '100vw');
       }
 
-      // 페이드 초기 상태만 부여
       img.classList.add('reveal-init');
     });
 
-    // 보이면 decode → 클래스 토글 (JS 큐/1px 치환 없음)
+    // 보이면 decode → 클래스 토글
     const decodeOnIdle = (img: HTMLImageElement) => {
       const run = () => {
         if (typeof (img as any).decode === 'function') {
@@ -97,6 +112,7 @@ const SeoulMuseumProjectDetail = () => {
           img.addEventListener('load', onLoad);
         }
       };
+
       (window as any).requestIdleCallback
         ? (window as any).requestIdleCallback(run, { timeout: 500 })
         : run();
@@ -129,6 +145,7 @@ const SeoulMuseumProjectDetail = () => {
     const textNodes = document.querySelectorAll<HTMLElement>(
       'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
+
     textNodes.forEach((el) => {
       if (!el.classList.contains('text-reveal-init')) {
         el.classList.add('text-reveal-init');
@@ -139,8 +156,12 @@ const SeoulMuseumProjectDetail = () => {
       (entries) => {
         entries.forEach((entry) => {
           const el = entry.target as HTMLElement;
-          if (entry.isIntersecting) el.classList.add('text-reveal-show');
-          else el.classList.remove('text-reveal-show');
+
+          if (entry.isIntersecting) {
+            el.classList.add('text-reveal-show');
+          } else {
+            el.classList.remove('text-reveal-show');
+          }
         });
       },
       {
@@ -149,16 +170,17 @@ const SeoulMuseumProjectDetail = () => {
         threshold: 0.12
       }
     );
+
     textNodes.forEach((el) => textIO.observe(el));
 
     return () => {
       imgIO.disconnect();
       textIO.disconnect();
     };
-  }, []); // ✅ NEW
+  }, []);
 
   return (
-    <ScrollArea className="h-screen w-screen overflow-auto"> {/* ✅ 추가 */}
+    <ScrollArea className="h-screen w-screen overflow-auto">
       <ProjectLayout>
         {/* Fixed Navigation */}
         <ProjectNavigation backText="Back to work" />
@@ -183,7 +205,7 @@ const SeoulMuseumProjectDetail = () => {
         </section>
 
         {/* Main Content */}
-        <section className="cv-auto"> {/* ✅ NEW: content-visibility */}
+        <section className="cv-auto">
           {/* First Image */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
             <img
@@ -229,7 +251,7 @@ const SeoulMuseumProjectDetail = () => {
                     2021 │ Spatial Design │ Solo Project │ 16 weeks
                   </p>
 
-                  {/* ✅ NEW: Image under location/year */}
+                  {/* Image under location/year */}
                   <div className="w-full h-[400px] overflow-hidden flex items-center justify-center">
                     <img
                       src="/lovable-uploads/web1920-SeoulNatural-25.png"
@@ -337,7 +359,7 @@ const SeoulMuseumProjectDetail = () => {
                       </div>
                     </div>
                   </details>
-                </div>  {/* 여기서 wrapper 닫기 */}
+                </div>
               </div>
             </div>
           </div>
@@ -407,11 +429,46 @@ const SeoulMuseumProjectDetail = () => {
               <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM15.jpg" />
             </div>
 
-
-
             {/*Gift Shop Image*/}
             <div className="w-full">
               <img className="w-full h-full mb-4" src="/webimages/SNM/SNM17.jpg" />
+            </div>
+
+
+            {/*Line*/}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+            {/*그래픽 Image*/}
+            <div className="w-full">
+              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM25.jpg" />
+            </div>
+
+            {/* 그래픽 Side Image + Fast Slider - Right Aligned */}
+            <div className="w-full flex justify-end mb-4">
+              <div className="w-[75%] flex items-stretch">
+                {/* Left: Fixed Side Image */}
+                <div className="w-[42%] overflow-hidden">
+                  <img
+                    src="/webimages/SNM/SNM26.jpg"
+                    alt="Gift shop side visual"
+                    className="block w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                {/* Right: Fast Slider */}
+                <div className="w-[58%] overflow-hidden">
+                  <img
+                    src={giftShopSliderImages[currentGiftShopSlide]}
+                    alt={`Gift shop slider ${currentGiftShopSlide + 1}`}
+                    className="block w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
             </div>
 
             {/*Gift Product Image 2*/}
@@ -606,12 +663,10 @@ const SeoulMuseumProjectDetail = () => {
         <BackToTopButton />
 
         {/* ============================
-            ✅ NEW: 전용 스타일 (LQIP + 페이드 + content-visibility + 근접재생 모션)
+            ✅ NEW: 전용 스타일
             ============================ */}
         <style>{`
-          /* 이미지: 가벼운 스크롤 페이드 인 / 페이드 아웃
-             ✅ 버벅임 원인이던 filter: blur() 제거
-             ✅ 무한 흔들림 animation 제거 */
+          /* 이미지: 가벼운 스크롤 페이드 인 / 페이드 아웃 */
           .reveal-init {
             opacity: 0;
             transform: translateY(16px);
@@ -631,15 +686,36 @@ const SeoulMuseumProjectDetail = () => {
           }
 
           /* 텍스트: 페이드 인/아웃 */
-          .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
-          .text-reveal-show { opacity: 1; transform: translateY(0); }
+          .text-reveal-init {
+            opacity: 0;
+            transform: translateY(6px);
+            transition:
+              opacity 540ms ease-out,
+              transform 540ms ease-out;
+            will-change: opacity, transform;
+          }
+
+          .text-reveal-show {
+            opacity: 1;
+            transform: translateY(0);
+          }
 
           /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
-          .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
+          .cv-auto {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1000px;
+          }
 
           @media (prefers-reduced-motion: reduce) {
-            .play-wiggle { animation: none !important; }
-            .reveal-init, .text-reveal-init { transition-duration: 1ms; transform: none; }
+            .play-wiggle {
+              animation: none !important;
+            }
+
+            .reveal-init,
+            .text-reveal-init {
+              transition-duration: 1ms;
+              transform: none;
+            }
           }
         `}</style>
       </ProjectLayout>
