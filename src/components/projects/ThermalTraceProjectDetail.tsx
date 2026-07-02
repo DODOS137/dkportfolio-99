@@ -514,12 +514,27 @@ const ThermalTraceProjectDetail = () => {
                     visual cues, viewers track models through body heat,
                     focusing on delicate outlines and subtle movements.
                   </p>
+
+                    <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
+                    The project currently exists as a WebGL prototype and
+                    conceptual sketch that explores sensory experience through
+                    temperature-responsive visual data. Evolving this concept
+                    into an XR installation where a physical model&apos;s body
+                    temperature triggers the visual transformation could extend
+                    its potential into real-world contexts. This approach
+                    presents opportunities for application across fashion shows,
+                    brand showcases, and sensory-based art installations, where
+                    digital aesthetics and physical presence converge.
+                  </p>
+
+
+                  
                 </div>
               </div>
 
 
             {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
-            <div className="rounded-lg bg-transparent border-1 border-gray500 overflow-hidden">
+            <div className="bg-transparent border-1 border-gray500 overflow-hidden">
               <InteractiveImageSection
                 baseImage="/webimages/ThermalTrace/TT2-1.jpg"
                 overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
@@ -545,25 +560,7 @@ const ThermalTraceProjectDetail = () => {
 
 
 
-              {/* Final Outcome */}
-              <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                  <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">
-                    Final Outcome
-                  </h2>
-                  <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                    The project currently exists as a WebGL prototype and
-                    conceptual sketch that explores sensory experience through
-                    temperature-responsive visual data. Evolving this concept
-                    into an XR installation where a physical model&apos;s body
-                    temperature triggers the visual transformation could extend
-                    its potential into real-world contexts. This approach
-                    presents opportunities for application across fashion shows,
-                    brand showcases, and sensory-based art installations, where
-                    digital aesthetics and physical presence converge.
-                  </p>
-                </div>
-              </div>
+
 
 
 
