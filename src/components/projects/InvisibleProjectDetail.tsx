@@ -425,7 +425,7 @@ const InvisibleProjectDetail = () => {
              
              
             {/* Process */}
-<div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+<div className="mb-8 grid grid-cols-[auto_1fr] gap-x-4">
   <span className="text-sm md:text-sm text-gray-600 font-Medium">
     Process
   </span>
@@ -437,10 +437,6 @@ const InvisibleProjectDetail = () => {
 
     <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
       The VR environment was structured as a sequence of symbolic chambers, each translating a scientific principle into spatial and emotional experience. Through distorted space, reflective surfaces, organic growth, and temporal transitions, the project turns abstract ideas into immersive environmental cues.
-    </p>
-
-    <p className="mt-4 mb-3 text-sm md:text-sm lg:text-sm font-light text-gray-400 leading-relaxed">
-      Each chamber expresses its theme through spatial and interactive cues.
     </p>
 
     <ul className="text-sm md:text-sm lg:text-sm font-light text-gray-400 space-y-2">
@@ -476,6 +472,11 @@ const InvisibleProjectDetail = () => {
             {/* Floor Plan Image */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Invisible/INV4.jpg" alt="Floor plan" />
+            </div>
+
+            {/* 레벨 Image */}
+            <div className="w-full">
+              <img className="w-full h-auto" src="/webimages/Invisible/INV6.jpg" alt="Floor plan" />
             </div>
 
 
