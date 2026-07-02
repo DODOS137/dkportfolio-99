@@ -484,47 +484,39 @@ const SeoulMuseumProjectDetail = () => {
             {/*Line*/}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process-1 */}
-            <div className="my-0 md:my-0 relative ">
-              <div className="relative z-10">
-                <p className="font-Medium mb-4">
-                  <span className="text-sm md:text-base text-gray-600">Context </span>
-                  <span className="ml-4 text-base md:text-base text-white">Narrative Arc + Korean cultural perspective </span>
+            {/* Process-2 */}
+            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+              <span className="text-sm md:text-sm text-gray-600 font-Medium">
+                conext
+              </span>
+              <div>
+                <span className="text-base md:text-base text-white font-Medium">
+                  Narrative Arc + Korean cultural perspective
+                </span>
+                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                 In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.
+                </p>
+                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                 Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded journey shaped by Korean perspectives on nature, coexistence, and memory.
                 </p>
               </div>
             </div>
 
             {/*Narrative*/}
-            <div className="w-full mb-4">
+            <div className="w-full">
               <img className="w-full h-full" src="/webimages/SNM/SNM3.jpg" />
             </div>
-
-            {/*Narrative Arc text start*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.
-                </p>
-              </div>
-            </div>
-
-            {/*Narrative Arc text start2*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-8">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[240px]"></h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded journey shaped by Korean perspectives on nature, coexistence, and memory.
-                </p>
-              </div>
-            </div>
-
             {/*Narrative Image 2*/}
             <div className="w-full">
               <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM22.jpg" />
             </div>
 
-            {/*Line*/}
+
+             
+             
+             
+             
+             {/*Line*/}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* Process-2 */}
