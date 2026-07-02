@@ -492,7 +492,7 @@ const ThermalTraceProjectDetail = () => {
 
 
               {/* 옥스포드 전시이미지 */}
-              <div className="w-full">
+              <div className="w-full mb-4">
                 <img
                   src="/webimages/ThermalTrace/TT6.jpg"
                   className="w-full h-auto"
