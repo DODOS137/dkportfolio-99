@@ -46,18 +46,15 @@ const LearnProjectDetail = () => {
      ✅ 기준코드 방식: 이미지 페이드 + 지연 로딩 + content-visibility
      ============================ */
   useEffect(() => {
-    // ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
     const scrollRoot =
       document.querySelector<HTMLElement>('[data-radix-scroll-area-viewport]')
       || document.querySelector<HTMLElement>('.h-screen.w-screen.overflow-auto')
       || null;
 
-    // 모든 섹션 내 이미지 수집
     const allImgs = Array.from(
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    // LCP 후보(맨 위 큰 이미지)는 즉시/고우선 로드
     const lcpImg = allImgs[0];
     if (lcpImg) {
       lcpImg.loading = 'eager';
@@ -68,7 +65,6 @@ const LearnProjectDetail = () => {
       }
     }
 
-    // 나머지 이미지는 native lazy + fade 효과만
     const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
@@ -84,7 +80,6 @@ const LearnProjectDetail = () => {
       img.classList.add('reveal-init');
     });
 
-    // 보이면 decode → 클래스 토글
     const decodeOnIdle = (img: HTMLImageElement) => {
       const run = () => {
         if (typeof (img as any).decode === 'function') {
@@ -99,12 +94,12 @@ const LearnProjectDetail = () => {
           img.addEventListener('load', onLoad);
         }
       };
+
       (window as any).requestIdleCallback
         ? (window as any).requestIdleCallback(run, { timeout: 500 })
         : run();
     };
 
-    // 이미지 관찰자: 스크롤 페이드 인 / 페이드 아웃
     const imgIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -127,10 +122,10 @@ const LearnProjectDetail = () => {
 
     lazyImgs.forEach((img) => imgIO.observe(img));
 
-    // 텍스트 노드: 스크롤 페이드 인/아웃
     const textNodes = document.querySelectorAll<HTMLElement>(
       'section h1, section h2, section h3, section h4, section h5, section h6, section p, section li, section summary, section blockquote, section figcaption, section td, section th'
     );
+
     textNodes.forEach((el) => {
       if (!el.classList.contains('text-reveal-init')) {
         el.classList.add('text-reveal-init');
@@ -151,6 +146,7 @@ const LearnProjectDetail = () => {
         threshold: 0.12
       }
     );
+
     textNodes.forEach((el) => textIO.observe(el));
 
     return () => {
@@ -310,82 +306,58 @@ const LearnProjectDetail = () => {
           {/* Line */}
           <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-          {/* ✅ Container fixed: 아래 섹션도 기준코드와 같은 좌우 여백 적용 */}
+          {/* Main Project Container */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
             {/* Spatial Design Image1 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" />
             </div>
 
-
-
             {/* Spatial Design Image2 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" />
             </div>
-
-
 
             {/* Spatial Design Image3 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
             </div>
 
-
-              {/* detail Image1 */}
+            {/* detail Image1 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN12.jpg" />
             </div>
-             {/* detail Image2 */}
+
+            {/* detail Image2 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN13.jpg" />
             </div>
 
-
-
-
-             
-
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-    
-             
-             {/* process1 */}
-              <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-                <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                  Process
+            {/* process1 */}
+            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+              <span className="text-sm md:text-sm text-gray-600 font-Medium">
+                Process
+              </span>
+              <div>
+                <span className="text-base md:text-base text-white font-Medium">
+                  Narrative Arc + Worldbuilding
                 </span>
-                <div>
-                  <span className="text-base md:text-base text-white font-Medium">
-                   Narrative Arc + Worldbuilding
-                  </span>
-                  <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                    Set in a distant future where humans have disappeared, this original VR story follows three robots maintaining an abandoned library with mechanical precision. Through spatial exploration, the library becomes a symbolic space for memory, ritual, and lost purpose. When the robots discover a dying tree, the narrative introduces a moral choice between self-preservation and sacrifice, turning empathy into the emotional core of the experience.
-                  </p>
-                </div>
+                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                  Set in a distant future where humans have disappeared, this original VR story follows three robots maintaining an abandoned library with mechanical precision. Through spatial exploration, the library becomes a symbolic space for memory, ritual, and lost purpose. When the robots discover a dying tree, the narrative introduces a moral choice between self-preservation and sacrifice, turning empathy into the emotional core of the experience.
+                </p>
               </div>
+            </div>
 
-             {/* world building Image1 */}
+            {/* world building Image1 */}
             <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Learn/LEARN2.jpg" />
             </div>
 
-     
-
-
-
-
-
-    
-
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
-          </div>
-
-   
-
-      
 
             {/* Process-2 */}
             <div className="my-0 md:my-0 relative">
@@ -437,7 +409,6 @@ const LearnProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-             <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
             {/* YouTube Video Section */}
             <div className="my-0 md:my-0 relative">
               {/* Content */}
@@ -450,7 +421,7 @@ const LearnProjectDetail = () => {
                     Storyboarding + Level Design
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                   This original VR story follows three robots through an abandoned library, where memory, empathy, and sacrifice unfold through spatial exploration. Sunlight, shadow, and artefact placement guide the viewer’s attention, while contrasts between architectural order, organic decay, digital interfaces, and paper records turn the library into a layered narrative environment.
+                    This original VR story follows three robots through an abandoned library, where memory, empathy, and sacrifice unfold through spatial exploration. Sunlight, shadow, and artefact placement guide the viewer’s attention, while contrasts between architectural order, organic decay, digital interfaces, and paper records turn the library into a layered narrative environment.
                   </p>
                 </div>
               </div>
@@ -463,8 +434,6 @@ const LearnProjectDetail = () => {
                 />
               </AspectRatio>
             </div>
-
-
 
             {/* Level Design Section */}
             <div className="w-full">
@@ -485,10 +454,6 @@ const LearnProjectDetail = () => {
             <div className="w-full">
               <img className="w-full h-full" src="/webimages/Learn/LEARN9.jpg" />
             </div>
-
-
-
-
 
             {/* Line */}
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
@@ -555,15 +520,34 @@ const LearnProjectDetail = () => {
           }
 
           /* 텍스트: 페이드 인/아웃 */
-          .text-reveal-init { opacity: 0; transform: translateY(6px); transition: opacity 540ms ease-out, transform 540ms ease-out; will-change: opacity, transform; }
-          .text-reveal-show { opacity: 1; transform: translateY(0); }
+          .text-reveal-init {
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 540ms ease-out, transform 540ms ease-out;
+            will-change: opacity, transform;
+          }
+
+          .text-reveal-show {
+            opacity: 1;
+            transform: translateY(0);
+          }
 
           /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
-          .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
+          .cv-auto {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1000px;
+          }
 
           @media (prefers-reduced-motion: reduce) {
-            .play-wiggle { animation: none !important; }
-            .reveal-init, .text-reveal-init { transition-duration: 1ms; transform: none; }
+            .play-wiggle {
+              animation: none !important;
+            }
+
+            .reveal-init,
+            .text-reveal-init {
+              transition-duration: 1ms;
+              transform: none;
+            }
           }
         `}</style>
       </ProjectLayout>
