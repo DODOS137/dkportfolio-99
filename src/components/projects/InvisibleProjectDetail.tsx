@@ -556,7 +556,7 @@ const InvisibleProjectDetail = () => {
                   alt="Ocean image 5"
                 />
               </div>
-            </div>
+      
 
             {/* Slider */}
             <div className="w-full">
