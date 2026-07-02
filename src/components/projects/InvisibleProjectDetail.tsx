@@ -335,7 +335,7 @@ const InvisibleProjectDetail = () => {
                     Project Video
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                    Immersive VR experience designed to make scientific knowledge more accessible to the general public. By translating complex principles into intuitive, interactive environments, the project lowers cognitive barriers and invites curiosity, engagement, and inclusive understanding of science.
+                   The project uses VR to transform scientific concepts into participatory and immersive storytelling experiences. By translating complex principles into intuitive, interactive environments, it lowers cognitive barriers and makes scientific knowledge more accessible to the general public. The framework can also expand into a scalable VR learning platform for science and natural history museums.
                   </p>
                 </div>
               </div>
@@ -508,33 +508,25 @@ const InvisibleProjectDetail = () => {
               </AspectRatio>
             </div>
 
-            {/*Line*/}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
-
-            {/*Final Outcome text start*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Final Outcome</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  The project transforms scientific concepts into participatory and immersive storytelling experiences. It moves beyond exhibition display to propose a new way of communicating scientific complexity through emotional engagement. The framework can be expanded as a VR learning platform for science and natural history museums, offering a scalable model for institutions that aim to integrate immersive education and research-based exhibitions.
-                </p>
-              </div>
-            </div>
+   
 
             {/*Line*/}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process */}
+
+             
+             
+             {/* Process */}
             <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
               <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                Process
+                Post-Project 
               </span>
               <div>
                 <span className="text-base md:text-base text-white font-Medium">
-                  Post-Project Direction
+                 the Ocean 
                 </span>
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  The initial VR prototype offered limited interaction beyond spatial exploration. The Ocean extends this as a post-project concept, proposing a future system where user-entered data could generate autonomous evolutionary behaviours.
+                 The Ocean extends the initial VR prototype into a responsive virtual ocean where user input and environmental conditions generate autonomous evolutionary behaviours. By turning exploration into experimentation, the concept encourages scientific thinking beyond passive spatial observation.
                 </p>
               </div>
             </div>
@@ -544,18 +536,9 @@ const InvisibleProjectDetail = () => {
               <img className="w-full h-full" src="/webimages/Invisible/INV12.jpg" alt="The Ocean overview" />
             </div>
 
-            {/*Line*/}
-            <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+  
 
-            {/*The Ocean text start*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">The Ocean (2025)</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  A responsive virtual ocean simulates autonomous life evolution based on user input. Different environmental conditions trigger emergent behaviours, reinforcing scientific thinking through exploration and experimentation.
-                </p>
-              </div>
-            </div>
+
 
             {/* extra images */}
             <div className="w-full">
@@ -563,7 +546,7 @@ const InvisibleProjectDetail = () => {
               <img className="w-full h-auto" src="/webimages/Invisible/INV14.jpg" alt="Ocean image 2" />
               <img
                 src="/webimages/Invisible/INV15.jpg"
-                className="w-full h-auto mb-20 md:mb-40"
+                className="w-full h-auto"
                 alt="Ocean image 3"
               />
             </div>
@@ -571,14 +554,14 @@ const InvisibleProjectDetail = () => {
             <div className="w-full">
               <img
                 src="/webimages/Invisible/INV16.jpg"
-                className="w-full h-auto mb-20 md:mb-20"
+                className="w-full h-auto"
                 alt="Ocean image 4"
               />
 
               <div className="w-full">
                 <img
                   src="/webimages/Invisible/INV17.jpg"
-                  className="w-full h-auto mb-20 md:mb-20"
+                  className="w-full h-auto"
                   alt="Ocean image 5"
                 />
               </div>
