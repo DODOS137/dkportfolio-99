@@ -12,11 +12,9 @@ const InteractiveExperience = ({ src, title, description }: InteractiveExperienc
     <>
    
       
-      <p className="text-sm text-white mb-8 text-center">
-        Click the screen to begin, then press the X key to interact. Press ESC to exit.
-      </p>
+
       
-      <div className="w-full aspect-[16/9] bg-black overflow-hidden border-1 border-[#0044FA]">
+      <div className="w-full aspect-[16/9] bg-black overflow-hidden border-1 border-[#0044FA] mb-4">
         <iframe
           src={src}
           className="w-full h-full"
@@ -25,6 +23,11 @@ const InteractiveExperience = ({ src, title, description }: InteractiveExperienc
           title={title}
         />
       </div>
+
+      <p className="text-sm text-white text-center">
+        Click the screen to begin, then press the X key to interact. Press ESC to exit.
+      </p>
+      
 
     </>
   );
