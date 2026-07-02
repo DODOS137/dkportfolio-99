@@ -499,8 +499,7 @@ const ThermalTraceProjectDetail = () => {
                 />
               </div>
 
-                            {/* Line */}
-              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+ 
 
               
   
@@ -514,8 +513,14 @@ const ThermalTraceProjectDetail = () => {
                     visual cues, viewers track models through body heat,
                     focusing on delicate outlines and subtle movements.
                   </p>
+                </div>
+              </div>
+              
+              {/* Exhibition Design text2 */}
+               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
+                <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
 
-                    <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
+                 <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
                     The project currently exists as a WebGL prototype and
                     conceptual sketch that explores sensory experience through
                     temperature-responsive visual data. Evolving this concept
@@ -526,14 +531,19 @@ const ThermalTraceProjectDetail = () => {
                     brand showcases, and sensory-based art installations, where
                     digital aesthetics and physical presence converge.
                   </p>
-
-
-                  
                 </div>
               </div>
 
 
-            {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
+
+
+
+              
+              
+              
+              
+              
+              {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
             <div className="bg-transparent border-1 border-gray500 overflow-hidden">
               <InteractiveImageSection
                 baseImage="/webimages/ThermalTrace/TT2-1.jpg"
@@ -543,8 +553,7 @@ const ThermalTraceProjectDetail = () => {
  
 
 
-            {/* Line */}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+      
 
 
 
