@@ -362,7 +362,7 @@ const ThermalTraceProjectDetail = () => {
                   ratio={16 / 9}
                   className="relative z-10 bg-black overflow-hidden"
                 >
-                  <div className="border-transparent  bg-transparent">
+                  <div className="border border-transparent bg-transparent">
                     <InteractiveImageSection
                       baseImage="/webimages/ThermalTrace/TT1-2.jpg"
                       overlayImage="/webimages/ThermalTrace/TT1-1.jpg"
