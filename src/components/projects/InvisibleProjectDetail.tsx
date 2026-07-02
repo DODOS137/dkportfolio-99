@@ -537,26 +537,17 @@ const InvisibleProjectDetail = () => {
             </div>
 
   
-
-
-
-            {/* extra images */}
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV13.jpg" alt="Ocean image 1" />
-              <img className="w-full h-auto" src="/webimages/Invisible/INV14.jpg" alt="Ocean image 2" />
-              <img
-                src="/webimages/Invisible/INV15.jpg"
-                className="w-full h-auto"
-                alt="Ocean image 3"
-              />
+              <div className="w-full">
+                <img
+                  src="/webimages/Invisible/INV13.jpg"
+                  className="w-full h-auto"
+                  alt="Ocean image 5"
+                />
+              </div>
             </div>
 
-            <div className="w-full">
-              <img
-                src="/webimages/Invisible/INV16.jpg"
-                className="w-full h-auto"
-                alt="Ocean image 4"
-              />
+
+
 
               <div className="w-full">
                 <img
