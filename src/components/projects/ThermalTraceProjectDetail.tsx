@@ -373,15 +373,38 @@ const ThermalTraceProjectDetail = () => {
 
 
 
-              
-
-
-
-     
-          
-          
-          {/* Line */}
+            {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+
+            {/* Art Works Images */}
+            {/* 포스터이미지 */}
+            <div className="w-full">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT1.jpg"
+              />
+            </div>
+    
+              
+              <div className="w-full">
+              <img
+                className="w-full h-full"
+                src="/webimages/ThermalTrace/TT2.jpg"
+              />
+            </div>
+
+
+
+             {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+
+
+              
 
  
 
@@ -503,47 +526,15 @@ const ThermalTraceProjectDetail = () => {
 
 
 
-         {/* Process-4*/}
-         <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-         <span className="text-sm md:text-sm text-gray-600 font-Medium">
-          Process
-         </span>
-         <div>
-         <span className="text-base md:text-base text-white font-Medium">
-          Graphic Design
-         </span>
-         </div>
-         </div>              
+            
 
 
-            {/* Art Works Images */}
-            {/* 포스터이미지 */}
-            <div className="w-full mb-4">
-              <img
-                className="w-full h-auto"
-                src="/webimages/ThermalTrace/TT1.jpg"
-              />
-            </div>
-    
-              
-              <div className="w-full mb-20">
-              <img
-                className="w-full h-full"
-                src="/webimages/ThermalTrace/TT2.jpg"
-              />
-            </div>
-
-            {/* 그래픽 이미지 */}
-            <div className="w-full">
-                <img
-                  src="/webimages/ThermalTrace/TT5.jpg"
-                  className="w-full h-auto"
-                />
-              </div>
 
 
-              {/* Line */}
-              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
+
+
+
 
 
               {/* Final Outcome */}
