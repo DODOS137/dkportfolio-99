@@ -544,7 +544,7 @@ const InvisibleProjectDetail = () => {
                   alt="Ocean image 5"
                 />
               </div>
-            </div>
+           
 
 
 
