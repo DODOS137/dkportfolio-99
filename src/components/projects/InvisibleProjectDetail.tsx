@@ -393,14 +393,14 @@ const InvisibleProjectDetail = () => {
             </div>
 
             {/* Context image2 */}
-            <div className="w-full mb-4">
+            <div className="w-full mb-8">
               <img className="w-full h-auto" src="/webimages/Invisible/INV1-2.jpg" alt="Space render 4" />
             </div>
 
 
 
              {/* world image1 */}
-            <div className="w-full mb-4">
+            <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Invisible/INV2.jpg" alt="Space render 4" />
             </div>
 
@@ -421,20 +421,40 @@ const InvisibleProjectDetail = () => {
              
              
              
-             {/* Process */}
-            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-              <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                Process
-              </span>
-              <div>
-                <span className="text-base md:text-base text-white font-Medium">
-                  Video Development
-                </span>
-                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  Each chamber embodied its theme via interactive and environmental cues (distorted space/reflective surfaces/organic growth/temporal transitions) to translate abstraction into felt experience.
-                </p>
-              </div>
-            </div>
+
+             
+             
+            {/* Process */}
+<div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+  <span className="text-sm md:text-sm text-gray-600 font-Medium">
+    Process
+  </span>
+
+  <div>
+    <span className="text-base md:text-base text-white font-Medium">
+      Spatial & Experience Development
+    </span>
+
+    <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+      The VR environment was structured as a sequence of symbolic chambers, each translating a scientific principle into spatial and emotional experience. Through distorted space, reflective surfaces, organic growth, and temporal transitions, the project turns abstract ideas into immersive environmental cues.
+    </p>
+
+    <p className="mt-4 mb-3 text-sm md:text-sm lg:text-sm font-light text-gray-400 leading-relaxed">
+      Each chamber expresses its theme through spatial and interactive cues.
+    </p>
+
+    <ul className="text-sm md:text-sm lg:text-sm font-light text-gray-400 space-y-2">
+      <li>• Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion.</li>
+      <li>• Light: Reflective surfaces and reactive illumination revealed scientific qualities.</li>
+      <li>• Life: Organic forms suggested biological evolution in an alien ecosystem.</li>
+      <li>• Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</li>
+    </ul>
+  </div>
+</div>
+
+
+           
+
 
             {/* Video Development Image */}
             <div className="w-full">
@@ -445,49 +465,11 @@ const InvisibleProjectDetail = () => {
               />
             </div>
 
-            {/*Line*/}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Process */}
-            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-              <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                Process
-              </span>
-              <div>
-                <span className="text-base md:text-base text-white font-Medium">
-                  Spatial Design & Planning
-                </span>
-                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  The VR environment was structured as a sequence of symbolic chambers where spatial atmosphere, scientific principle, and interaction logic are developed together.
-                </p>
-              </div>
-            </div>
 
-            {/*Space text start*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Each chamber expresses its theme through spatial and interactive cues.
-                </p>
-              </div>
-            </div>
-
-            {/*Space text 1*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]"></h2>
-                <ul className="text-sm md:text-sm lg:text-sm font-light text-gray-400 space-y-2">
-                  <li>• Gravity: Distorted space, floating objects, and black hole shaders created tension and immersion.</li>
-                  <li>• Light: Reflective surfaces and reactive illumination revealed scientific qualities.</li>
-                  <li>• Life: Organic forms suggested biological evolution in an alien ecosystem.</li>
-                  <li>• Time: Shifting architecture and transitions evoked temporal flow and cosmic cycles.</li>
-                </ul>
-              </div>
-            </div>
 
             {/* Exterior Image */}
-            <div className="w-full mb-10">
+            <div className="w-full">
               <img className="w-full h-auto" src="/webimages/Invisible/INV5.jpg" alt="Exterior render" />
             </div>
 
@@ -496,18 +478,9 @@ const InvisibleProjectDetail = () => {
               <img className="w-full h-auto" src="/webimages/Invisible/INV4.jpg" alt="Floor plan" />
             </div>
 
-            {/*Line*/}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
-            {/* Development Evidence Image 1 */}
-            <div className="w-full mb-20 md:mb-20">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV6.jpg" alt="Development evidence 1" />
-            </div>
 
-            {/* Development Evidence Image 2 */}
-            <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV7.jpg" alt="Development evidence 2" />
-            </div>
+
 
             {/*Line*/}
             <div className="w-full h-px my-20 md:my-20 bg-transparent"></div>
