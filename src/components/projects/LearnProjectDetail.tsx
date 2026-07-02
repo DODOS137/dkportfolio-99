@@ -349,52 +349,35 @@ const LearnProjectDetail = () => {
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
-            {/* Context */}
-            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
-              <span className="text-sm md:text-sm text-gray-600 font-Medium">
-                Context
-              </span>
-              <div>
-                <span className="text-base md:text-base text-white font-Medium">
-                  Narrative Arc + Planning
+    
+             
+             {/* Content */}
+              <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+                <span className="text-sm md:text-sm text-gray-600 font-Medium">
+                  Process
                 </span>
+                <div>
+                  <span className="text-base md:text-base text-white font-Medium">
+                   Narrative Arc + Worldbuilding
+                  </span>
+                  <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                    Set in a distant future where humans have disappeared, this original VR story follows three robots maintaining an abandoned library with mechanical precision. Through spatial exploration, the library becomes a symbolic space for memory, ritual, and lost purpose. When the robots discover a dying tree, the narrative introduces a moral choice between self-preservation and sacrifice, turning empathy into the emotional core of the experience.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
-
-
-
-
-
-            {/* Worldbuilding */}
+             {/* world building Image1 */}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/Learn/LEARN2.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN2.jpg" />
             </div>
 
-            {/* Line */}
-            <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
+     
 
-            {/* Worldbuilding Text */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-10">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Worldbuilding</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Set in a distant dystopian future, the story takes place in a world without humans, where robots continue obsolete duties with mechanical precision. The library becomes a symbolic setting for memory, ritual, and the question of whether purpose can remain after its creators disappear.
-                </p>
-              </div>
-            </div>
 
-            {/* Narrative Arc Text */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Narrative Arc</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  The player follows three robots—FR Pro, RX-056, and LS1-07—as they manage the abandoned library. When they discover a dying tree, the story introduces a moral choice between preserving the tree and preserving themselves, turning sacrifice into a symbolic act of empathy.
-                </p>
-              </div>
-            </div>
+
+
+
+    
 
             {/* Line */}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
