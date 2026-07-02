@@ -347,6 +347,16 @@ const ThermalTraceProjectDetail = () => {
                <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
 
 
+               {/*익스비션이미지 */}
+               <div className="w-full">
+                <img
+                  src="/webimages/ThermalTrace/TT2.jpg"
+                  className="w-full h-auto"
+                 />
+                </div>
+              
+
+
    
               <AspectRatio
                   ratio={16 / 9}
