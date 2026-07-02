@@ -373,7 +373,7 @@ const InvisibleProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
              {/* context */}
-            <div className="mb-4 grid grid-cols-[auto_1fr] gap-x-4">
+            <div className="grid grid-cols-[auto_1fr] gap-x-4 mb-8">
               <span className="text-sm md:text-sm text-gray-600 font-Medium">
                 Context
               </span>
@@ -393,30 +393,20 @@ const InvisibleProjectDetail = () => {
             </div>
 
             {/* Context image2 */}
-            <div className="w-full">
+            <div className="w-full mb-4">
               <img className="w-full h-auto" src="/webimages/Invisible/INV1-2.jpg" alt="Space render 4" />
             </div>
 
 
 
-            {/* Worldbuilding Image 1 */}
-            <div className="w-full">
-              <img
-                alt="World secondary"
-                className="w-full h-auto mb-10 md:mb-10"
-                src="/webimages/Invisible/INV2.jpg"
-              />
+             {/* world image1 */}
+            <div className="w-full mb-4">
+              <img className="w-full h-auto" src="/webimages/Invisible/INV2.jpg" alt="Space render 4" />
             </div>
 
-            {/* Worldbuilding Image 2 */}
-            <div className="w-full">
-              <AspectRatio ratio={16 / 9} className="w-full">
-                <img
-                  alt="World overview"
-                  className="w-full h-full object-contain"
-                  src="/webimages/Invisible/INV1.jpg"
-                />
-              </AspectRatio>
+             {/* world image2 */}
+            <div className="w-full mb-4">
+              <img className="w-full h-auto" src="/webimages/Invisible/INV1.jpg" alt="Space render 4" />
             </div>
 
   
