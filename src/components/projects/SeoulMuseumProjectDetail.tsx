@@ -441,14 +441,14 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*그래픽 Image*/}
             <div className="w-full">
-              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM25.jpg" />
+              <img className="w-full h-full" src="/webimages/SNM/SNM25.jpg" />
             </div>
 
             {/* 그래픽 Side Image + Fast Slider - Right Aligned */}
             <div className="w-full flex justify-end mb-4">
-              <div className="w-[75%] flex items-stretch">
+              <div className="w-full flex items-stretch">
                 {/* Left: Fixed Side Image */}
-                <div className="w-[42%] overflow-hidden">
+                <div className="w-full overflow-hidden">
                   <img
                     src="/webimages/SNM/SNM26.jpg"
                     alt="Gift shop side visual"
