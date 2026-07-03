@@ -524,8 +524,8 @@ const WhispersProjectDetail = () => {
 
             {/* GIF Section */}
             {/* GIF Board */}
-            <div className="w-full bg-[#3C2F21] p-[60px]">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="w-full">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
                 <div className="w-full aspect-[9/16] overflow-hidden">
                   <img
                     src="/webimages/WFTBGIF1.gif"
