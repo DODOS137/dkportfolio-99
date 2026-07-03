@@ -193,6 +193,7 @@ const ThermalTraceProjectDetail = () => {
                   <p className="text-white mb-2">Tools</p>
                   <p>Adobe Suite</p> 
                   <p>Unity/WebGL</p>
+                  <p>3DS MAX-Vray</p>
                 </div>
               </div>
             </div>
@@ -207,8 +208,8 @@ const ThermalTraceProjectDetail = () => {
                   </h2>
 
                   <p className="text-base md:text-base font-bold text-gray-500 mb-10">
-                    2022-2025 │ XR Contents & Exhibition Design │ Solo Project │
-                    8 weeks/12 weeks
+                    2022,2025 │ XR Contents & Exhibition Design │ Solo Project │
+                    8 weeks, 12 weeks
                   </p>
                 </div>
 
@@ -275,7 +276,7 @@ const ThermalTraceProjectDetail = () => {
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       XR runway concept, WebGL/VR prototype, thermal visual
-                      system, spatial stages, and campaign graphics.
+                      system, spatial stages, and graphics.
                     </p>
                   </div>
 
@@ -318,13 +319,10 @@ const ThermalTraceProjectDetail = () => {
                 </span>
                 <div>
                   <span className="text-base md:text-base text-white font-Medium">
-                    outcome & Interaction Prototype
+                   Interaction Prototype & Outcome
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                    The project reframes fashion as something discovered through
-                    thermal detection. Instead of passive display, it invites
-                    audiences to detect hidden figures through heat traces,
-                    temperature shifts, and proximity sensing.
+                 The project reframes fashion as something discovered through thermal detection. Instead of passive display, it invites audiences to detect hidden figures through heat traces, temperature shifts, and proximity sensing. A visual design language derived from body-temperature colour gradients informs the garments, spatial atmosphere, and interactive experience.
                   </p>
                 </div>
               </div>
@@ -428,10 +426,7 @@ const ThermalTraceProjectDetail = () => {
           Concept
          </span>
          <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                   This project reframes fashion as something discovered through
-                  thermal detection. Instead of passive display, it invites
-                  audiences to detect hidden figures via heat traces,
-                  temperature shifts, and proximity sensing.
+       The concept positions fashion as a hidden presence revealed through the audience’s body, movement, and proximity. Space becomes a sensing interface, transforming viewing into an act of detection and discovery.
           </p>
          </div>
          </div>
@@ -459,7 +454,7 @@ const ThermalTraceProjectDetail = () => {
             Spatial Design
             </span>
             <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-            Camouflage-inspired landscapes become a responsive XR terrain, reacting to the viewer’s position and thermal presence. The runway dissolves into an interactive field where visibility, movement, and atmosphere shape the act of seeing.
+            Camouflage-inspired landscapes become a responsive XR terrain, reacting to the viewer’s position and thermal presence. Built from simple modular arrangements, the runway can be flexibly transformed through layout, colour, and concept, adapting the space to different fashion narratives.
             </p>
             </div>
             </div>
