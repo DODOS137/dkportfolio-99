@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -8,12 +8,8 @@ import ProjectNavigation from './shared/ProjectNavigation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BackToTopButton from '@/components/BackToTopButton';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import ModelViewer from '@/components/ModelViewer';
 import { ScrollArea } from "@/components/ui/scroll-area";
-
-/* ============================
-   ✅ 360도 / Sketchfab 모델뷰어 지연 로딩
-   ============================ */
-const ModelViewer = React.lazy(() => import('@/components/ModelViewer'));
 
 /* ============================
    ✅ YouTube Auto Play + Loop
@@ -43,7 +39,7 @@ const LearnProjectDetail = () => {
   const heroRef = useScrollAnimation();
 
   /* ============================
-     ✅ 기준코드 방식: 이미지 페이드 + 지연 로딩 + content-visibility
+     ✅ 기준코드 방식: 이미지 페이드 + 지연 로딩
      ============================ */
   useEffect(() => {
     const scrollRoot =
@@ -181,7 +177,7 @@ const LearnProjectDetail = () => {
         </section>
 
         {/* Main Content */}
-        <section className="cv-auto">
+        <section>
           {/* First Image */}
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px] z-10">
             <img
@@ -385,18 +381,22 @@ const LearnProjectDetail = () => {
             {/* 360 Model Viewer */}
             <ErrorBoundary fallback={<div className="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">3D Model Viewer Unavailable</div>}>
               <div className="relative overflow-hidden">
-                <div className="flex w-full">
-                  <div className="w-1/2">
-                    <Suspense fallback={<div className="w-full h-64 bg-gray-900/60" />}>
-                      <ModelViewer modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0" isSketchfab={true} />
-                    </Suspense>
+                <div className="flex w-full gap-4">
+                  <div className="w-1/2 h-[520px] md:h-[620px]">
+                    <ModelViewer
+                      modelPath="https://sketchfab.com/3d-models/rx056-b62d552b21b8446ebce9f71b85700aa0"
+                      isSketchfab={true}
+                    />
                   </div>
-                  <div className="w-1/2">
-                    <Suspense fallback={<div className="w-full h-64 bg-gray-900/60" />}>
-                      <ModelViewer modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add" isSketchfab={true} />
-                    </Suspense>
+
+                  <div className="w-1/2 h-[520px] md:h-[620px]">
+                    <ModelViewer
+                      modelPath="https://sketchfab.com/3d-models/ls107-65e7ff25d71f4512829dfc88c5537add"
+                      isSketchfab={true}
+                    />
                   </div>
                 </div>
+
                 <div className="pointer-events-none absolute top-0 left-0 w-full h-[100px] bg-black z-[999]" />
                 <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[100px] bg-black z-[999]" />
               </div>
@@ -530,12 +530,6 @@ const LearnProjectDetail = () => {
           .text-reveal-show {
             opacity: 1;
             transform: translateY(0);
-          }
-
-          /* content-visibility: viewport 밖 렌더 비용 절감 + CLS 방지용 intrinsic size */
-          .cv-auto {
-            content-visibility: auto;
-            contain-intrinsic-size: 1px 1000px;
           }
 
           @media (prefers-reduced-motion: reduce) {
