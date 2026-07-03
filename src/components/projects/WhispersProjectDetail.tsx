@@ -281,10 +281,10 @@ const WhispersProjectDetail = () => {
                 <div className="space-y-6">
                   <div className="text-base md:text-base text-gray-300 leading-relaxed font-Medium">
                     <p className="text-base md:text-base mb-2 text-white leading-relaxed font-Medium">
-                      Client
+                      Institutional Collaboration
                     </p>
                     <p className="text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                      UNESCO IOC (Intergovernmental Oceanographic Commission), in collaboration with The Ocean Agency and Woods Hole Oceanographic Institution.
+                      UNESCO IOC (Intergovernmental Oceanographic Commission)
                     </p>
                   </div>
 
@@ -351,11 +351,10 @@ const WhispersProjectDetail = () => {
 
                   <div className="mb-6 mt-6 md:mt-6"> 
                     <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
-                      Propose 
+                      Proposal 
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      To challenge visual-first marine exhibitions by shifting attention from iconic ocean animals to hidden and overlooked marine species, using sound, touch, and AR to create a more sensory and accessible understanding of marine life.
-                    </p>
+                      To introduce overlooked marine life through a flexible, multi-sensory exhibition system combining sound. </p>
                   </div>
 
                   <div className="mb-6 mt-6 md:mt-6"> 
@@ -363,7 +362,7 @@ const WhispersProjectDetail = () => {
                       Outputs
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      A modular hybrid exhibition system including sound-based listening stations, AR triggers, tactile elements, spatial renders, graphic design, and a visitor flow that guides audiences from looking to listening and discovery.
+                      A modular hybrid exhibition system including sound-based listening stations, AR triggers, tactile elements, spatial renders, graphic design.
                     </p>
                   </div>
 
@@ -406,7 +405,7 @@ const WhispersProjectDetail = () => {
                     Project Video 
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                    Immersive sound-led exhibition amplifying overlooked marine life. Reframes ocean conservation through emotional and sensory storytelling.
+                    Whispers From the Bottom is a sound-led exhibition that reveals the hidden lives of small marine organisms living beneath rocks and along the ocean floor. Through modular listening stations, AR triggers, and adaptable spatial layouts, the project shifts attention from iconic ocean animals to overlooked species and the subtle sounds they create as they survive.
                   </p>
                 </div>
               </div>
@@ -568,7 +567,7 @@ const WhispersProjectDetail = () => {
                   Spatial Design & 3D Modelling
                 </span>
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  Rock-like listening modules combine headphones, QR/AR access, and tactile interaction, while layered ceiling elements use wave metal, glass, light, and reflection to simulate an underwater atmosphere.
+                  Rock-like listening modules integrate headphones and QR/AR access, while layered ceiling elements made of wave metal, glass, light, and reflection create an immersive underwater atmosphere.
                 </p>
               </div>
             </div>
