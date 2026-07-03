@@ -283,7 +283,7 @@ const LearnProjectDetail = () => {
 
                   <div className="mb-6 mt-6 md:mt-6">
                     <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
-                      Propose
+                      Proposal
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       Original VR Content Creation and Asset Development
@@ -295,7 +295,7 @@ const LearnProjectDetail = () => {
                       Outputs
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      Worldbuilding, character design, spatial renders, interaction sketches, level layouts, storyboards, 360-degree model viewing, and visual production assets.
+                      Worldbuilding, character design, spatial renders, interaction sketches, level layouts, storyboards and script.
                     </p>
                   </div>
                 </div>
