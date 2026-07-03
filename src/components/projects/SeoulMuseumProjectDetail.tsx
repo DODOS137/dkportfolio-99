@@ -377,7 +377,7 @@ const SeoulMuseumProjectDetail = () => {
                 </span>
                 <div>
                   <span className="text-base md:text-base text-white font-Medium">
-                    Outcome & VR Walkthrough
+                    VR Walkthrough & Outcome
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                     This project analyses the challenges of an existing museum and repositions it through a new narrative framework. It proposes an integrated design direction across spatial reconfiguration, exhibition design, brand identity, VR extension content, exhibition graphics, and museum product design. Key interventions include a renewed first-floor reception area inspired by Korean folding screens and mountain landscapes, restructured exhibition halls, and rest areas shaped by the narrative of a hunter’s study. Across the museum, immersive media, natural specimens, historical artefacts, and spatial storytelling are connected into one continuous ecological journey.
