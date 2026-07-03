@@ -402,7 +402,7 @@ const WhispersProjectDetail = () => {
                 </span>
                 <div>
                   <span className="text-base md:text-base text-white font-Medium">
-                    Project Video 
+                    Project Video & Outcome
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                     Whispers From the Bottom is a sound-led exhibition that reveals the hidden lives of small marine organisms living beneath rocks and along the ocean floor. Through modular listening stations, AR triggers, and adaptable spatial layouts, the project shifts attention from iconic ocean animals to overlooked species and the subtle sounds they create as they survive.
