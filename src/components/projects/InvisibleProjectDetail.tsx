@@ -523,7 +523,7 @@ const InvisibleProjectDetail = () => {
               </span>
               <div>
                 <span className="text-base md:text-base text-white font-Medium">
-                 the Ocean 
+                 The Ocean 
                 </span>
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                  The Ocean extends the initial VR prototype into a responsive virtual ocean where user input and environmental conditions generate autonomous evolutionary behaviours. By turning exploration into experimentation, the concept encourages scientific thinking beyond passive spatial observation.
