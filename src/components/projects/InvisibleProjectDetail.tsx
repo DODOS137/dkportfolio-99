@@ -280,7 +280,7 @@ const InvisibleProjectDetail = () => {
 
                   <div className="mb-6 mt-6 md:mt-6">
                     <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
-                      Propose
+                      Proposal
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       Immersive Educational Science Content Production for Museums and Learning Institutions.
@@ -292,7 +292,7 @@ const InvisibleProjectDetail = () => {
                       Outputs
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      VR environment, AI-generated science videos, spatial renders, thematic chambers, narrative flow, and interactive learning prototype.
+                      VR environment, AI-generated science video, narrative flow, and interactive learning prototype.
                     </p>
                   </div>
 
