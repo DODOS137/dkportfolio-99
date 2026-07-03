@@ -319,13 +319,13 @@ const SeoulMuseumProjectDetail = () => {
                       Challenge
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      An outdated museum identity and fragmented visitor experience weakened the museum’s cultural relevance.
+                    The museum’s outdated identity and fragmented exhibition flow weakened its cultural relevance, making the visitor experience feel passive and disconnected.
                     </p>
                   </div>
 
                   <div className="mb-6 mt-6 md:mt-6">
                     <h2 className="text-base md:text-base font-Medium text-white min-w-[200px] mb-2 md:mb-2">
-                      Propose
+                      Proposal
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
                       Transform the museum into a contemporary cultural landmark by integrating architectural renewal, immersive interiors, VR extension, and brand storytelling.
@@ -337,7 +337,7 @@ const SeoulMuseumProjectDetail = () => {
                       Outputs
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      Façade renewal concept, spatial renders, VR museum, exhibition graphics, identity system, merchandise, and visitor-experience design assets.
+                      Spatial reconfiguration, brand identity development, VR extension content, exhibition graphics, and museum product design.
                     </p>
                   </div>
 
@@ -380,7 +380,7 @@ const SeoulMuseumProjectDetail = () => {
                     Outcome & VR Walkthrough
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                    As a BA graduation project, this work analyses the challenges of an existing museum and repositions it through a new narrative framework. The project proposes an integrated design direction across space, exhibition, branding, and product design, centred on a renewed reception area, restructured exhibition halls, and a hunter’s study-inspired rest space. A three-storey vertical installation inspired by Korean folding screens and mountain landscapes connects the museum’s key zones, linking immersive media, natural specimens, and historical artefacts into one continuous ecological journey.
+                    This project analyses the challenges of an existing museum and repositions it through a new narrative framework. It proposes an integrated design direction across spatial reconfiguration, exhibition design, brand identity, VR extension content, exhibition graphics, and museum product design. Key interventions include a renewed first-floor reception area inspired by Korean folding screens and mountain landscapes, restructured exhibition halls, and rest areas shaped by the narrative of a hunter’s study. Across the museum, immersive media, natural specimens, historical artefacts, and spatial storytelling are connected into one continuous ecological journey.
                   </p>
                 </div>
               </div>
@@ -497,7 +497,7 @@ const SeoulMuseumProjectDetail = () => {
                  In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.
                 </p>
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                 Through the Eyes of a Hunter reimagines the Seodaemun Museum of Natural History as a culturally grounded journey shaped by Korean perspectives on nature, coexistence, and memory.
+                 Through the Eyes of a Hunter reimagines Seodaemun Museum of Natural History as Seoul Natural History Museum, repositioning it as a new cultural landmark for the city. The project proposes a culturally grounded visitor journey shaped by Korean perspectives on nature, coexistence, and memory.
                 </p>
               </div>
             </div>
@@ -587,7 +587,7 @@ const SeoulMuseumProjectDetail = () => {
                   Spatial Design & Exhibition Planning
                 </span>
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                  As visitors move from the Marine Hall to the upper Terrestrial Halls, the spatial textures gradually shift from smooth to coarse, reflecting how sea, river, and mountain environments shape stone differently. This erosion gradient becomes a visual language across the museum’s sculptural elements and built-in furniture, linking each ecological zone to a distinct material atmosphere.
+                  As visitors move from the Marine Hall to the upper Terrestrial Halls, spatial textures shift from smooth to coarse, reflecting how sea, river, and mountain environments shape stone differently. This erosion gradient informs the museum’s sculptural elements and display cases, giving each ecological zone a distinct material atmosphere. And built-in wall cabinets are placed throughout the visitor route, presenting preserved specimens, rare books, and historical artefacts as layered moments of discovery.
                 </p>
               </div>
             </div>
@@ -621,18 +621,7 @@ const SeoulMuseumProjectDetail = () => {
               <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" />
             </div>
 
-            {/*Built-in display cases Text 1*/}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-3">
-              <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
-                <h2 className="text-sm md:text-sm font-Medium text-gray-300 mb-3 min-w-[200px]">Built-in display cases</h2>
-                <p className="text-sm md:text-sm lg:text-sm font-light text-gray-400">
-                  Visitors encounter a sequence of built-in wall cabinets, each dedicated to a specific theme—from preserved biological specimens to rare books and historical artifacts—creating layered moments of discovery throughout the exhibition.
-                </p>
-              </div>
-            </div>
-
-            {/*Line*/}
-            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+    
 
             {/*End-Gift Product Image 2*/}
             <div className="w-full">
