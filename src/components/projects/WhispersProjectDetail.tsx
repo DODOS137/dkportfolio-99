@@ -564,7 +564,7 @@ const WhispersProjectDetail = () => {
               </span>
               <div>
                 <span className="text-base md:text-base text-white font-Medium">
-                  Spatial Design & 3D Modelling
+                  Spatial Design
                 </span>
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                   Rock-like listening modules integrate headphones and QR/AR access, while layered ceiling elements made of wave metal, glass, light, and reflection create an immersive underwater atmosphere.
