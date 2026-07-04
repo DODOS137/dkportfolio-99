@@ -569,10 +569,7 @@ const SeoulMuseumProjectDetail = () => {
               <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2.jpg" />
             </div>
 
-            {/*Problem Image3*/}
-            <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2-1.jpg" />
-            </div>
+
 
             {/*Line*/}
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
