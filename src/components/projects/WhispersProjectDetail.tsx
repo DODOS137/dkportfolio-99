@@ -455,9 +455,7 @@ const WhispersProjectDetail = () => {
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
             {/* 그래픽 디자인*/}
-            <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB19.jpg" />
-            </div>
+
             {/*Poster Design Image1*/}        
             <div className="w-full">
               <img className="w-full h-full" src="/webimages/WFTB/WFB4.jpg" />
