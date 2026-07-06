@@ -454,6 +454,33 @@ const WhispersProjectDetail = () => {
             {/*Line*/} 
             <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
 
+
+            {/* 팝업 디자인*/}
+
+            {/*Popup Image1*/}        
+            <div className="w-full">
+              <img className="w-full h-full" src="/webimages/WFTB/WFB19.jpg" />
+            </div>
+            {/*Popup Image2*/}        
+            <div className="w-full">
+              <img className="w-full h-full" src="/webimages/WFTB/WFB20.jpg" />
+            </div>
+            {/*Popup Image3*/}        
+            <div className="w-full">
+              <img className="w-full h-full" src="/webimages/WFTB/WFB21.jpg" />
+            </div>            
+             {/*Popup Image4*/}        
+            <div className="w-full">
+              <img className="w-full h-full" src="/webimages/WFTB/WFB22.jpg" />
+            </div>
+
+
+            {/*Line*/} 
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
+             
+
             {/* 그래픽 디자인*/}
 
             {/*Poster Design Image1*/}        
