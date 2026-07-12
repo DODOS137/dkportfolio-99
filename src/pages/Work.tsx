@@ -70,6 +70,9 @@ const Work = () => {
   const [viewMode, setViewMode] = useState<'slider' | 'panel'>('panel');
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
 
+  const exhibitionProjects = projects.slice(0, 3);
+  const virtualRealityProjects = projects.slice(3, 5);
+
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % projects.length);
   };
@@ -77,6 +80,59 @@ const Work = () => {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + projects.length) % projects.length);
   };
+
+  const renderPanelCard = (project: Project, index: number) => (
+    <div
+      key={project.id}
+      className="opacity-100 translate-y-0"
+      style={{
+        transitionDelay: `${index * 100}ms`,
+      }}
+    >
+      <Link
+        to={`/project/${project.slug}`}
+        className="group relative overflow-hidden bg-gray-900 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-[1.02] block"
+      >
+        <div className="aspect-[4/3] overflow-hidden">
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+          {/* Main Tags - panel category 자리 대체 */}
+          <div className="flex flex-wrap gap-2 mb-3">
+            {project.tags?.map((tag, tagIndex) => (
+              <span
+                key={tagIndex}
+                className="inline-flex items-center justify-center rounded-full border border-white/60 px-3 py-1 text-[10px] md:text-xs font-medium tracking-wide text-white/70 backdrop-blur-sm bg-black/40"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+            {project.title}
+          </h3>
+
+          <p className="text-sm line-clamp-2 text-gray-500">
+            {project.description}
+          </p>
+        </div>
+
+        {/* Project Number */}
+        <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+          <span className="text-xs text-white font-mono">
+            {String(index + 1).padStart(2, '0')}
+          </span>
+        </div>
+      </Link>
+    </div>
+  );
 
   return (
     <ScrollArea className="h-screen w-full z-[1000]">
@@ -239,59 +295,30 @@ const Work = () => {
           /* Panel View */
           <section className="py-8 px-4 md:px-8">
             <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project, index) => (
-                  <div
-                    key={project.id}
-                    className="opacity-100 translate-y-0"
-                    style={{
-                      transitionDelay: `${index * 100}ms`,
-                    }}
-                  >
-                    <Link
-                      to={`/project/${project.slug}`}
-                      className="group relative overflow-hidden bg-gray-900 rounded-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:transform hover:scale-105 block"
-                    >
-                      <div className="aspect-[4/3] overflow-hidden">
-                        <img
-                          src={project.imageUrl}
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-[3000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
-                      </div>
+              {/* Exhibition & Experience */}
+              <div className="mb-16">
+                <h2 className="text-sm md:text-base text-gray-400 uppercase tracking-[0.25em] font-light mb-4">
+                  exhibition &amp; experience
+                </h2>
 
-                      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                        {/* Main Tags - panel category 자리 대체 */}
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {project.tags?.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="inline-flex items-center justify-center rounded-full border border-white/60 px-3 py-1 text-[10px] md:text-xs font-medium tracking-wide text-white/70 backdrop-blur-sm bg-black/40"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+                  {exhibitionProjects.map((project, index) =>
+                    renderPanelCard(project, index)
+                  )}
+                </div>
+              </div>
 
-                        <h3 className="text-xl font-light text-white mb-2 group-hover:text-gray-200 transition-colors duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-                          {project.title}
-                        </h3>
+              {/* Virtual Reality */}
+              <div>
+                <h2 className="text-sm md:text-base text-gray-400 uppercase tracking-[0.25em] font-light mb-4">
+                  Virtual Reality
+                </h2>
 
-                        <p className="text-sm line-clamp-2 text-gray-500">
-                          {project.description}
-                        </p>
-                      </div>
-
-                      {/* Project Number */}
-                      <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <span className="text-xs text-white font-mono">
-                          {String(index + 1).padStart(2, '0')}
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  {virtualRealityProjects.map((project, index) =>
+                    renderPanelCard(project, index + exhibitionProjects.length)
+                  )}
+                </div>
               </div>
             </div>
           </section>
