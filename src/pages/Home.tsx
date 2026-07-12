@@ -26,7 +26,7 @@ const Home = () => {
       title: 'Thermal Trace',
       image: '/webimages/Home/home-project-3.jpg',
       link: '/work',
-      tags: ['Hybrid Exhibition', 'XR', 'Prototyping'],
+      tags: ['Hybrid Exhibition', 'XR', 'Retail Experience'],
     },
     {
       title: 'Invisible',
