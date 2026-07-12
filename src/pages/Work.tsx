@@ -103,7 +103,6 @@ const Work = () => {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-          {/* Main Tags - panel category 자리 대체 */}
           <div className="flex flex-wrap gap-2 mb-3">
             {project.tags?.map((tag, tagIndex) => (
               <span
@@ -124,7 +123,6 @@ const Work = () => {
           </p>
         </div>
 
-        {/* Project Number */}
         <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
           <span className="text-xs text-white font-mono">
             {String(index + 1).padStart(2, '0')}
@@ -213,7 +211,6 @@ const Work = () => {
                       {/* Content Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center px-8">
-                          {/* Main Tags - slider category 자리 대체 */}
                           <div className="flex flex-wrap justify-center gap-2 mb-5">
                             {project.tags?.map((tag, tagIndex) => (
                               <span
@@ -314,7 +311,7 @@ const Work = () => {
                   Virtual Reality
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
                   {virtualRealityProjects.map((project, index) =>
                     renderPanelCard(project, index + exhibitionProjects.length)
                   )}
