@@ -275,8 +275,7 @@ const ThermalTraceProjectDetail = () => {
                       Outputs
                     </h2>
                     <p className="text-sm md:text-sm leading-relaxed font-light text-gray-400">
-                      XR runway concept, WebGL/VR prototype, thermal visual
-                      system, spatial stages, and graphics.
+                      XR runway concept, WebGL/VR prototype, spatial stages, pop-up store images and graphics.
                     </p>
                   </div>
 
@@ -322,7 +321,7 @@ const ThermalTraceProjectDetail = () => {
                    Interaction Prototype & Outcome
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                 The project reframes fashion as something discovered through thermal detection. Instead of passive display, it invites audiences to detect hidden figures through heat traces, temperature shifts, and proximity sensing. A visual design language derived from body-temperature colour gradients informs the garments, spatial atmosphere, and interactive experience.
+                 The project reframes fashion as something discovered through thermal detection, inviting audiences to detect hidden figures through heat traces, temperature shifts, and proximity sensing. A visual design language derived from body-temperature colour gradients informs the garments, spatial atmosphere, and interactive experience, with the concept extending into pop-up stores and window displays as a flexible experience.
                   </p>
                 </div>
               </div>
