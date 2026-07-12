@@ -43,7 +43,7 @@ const projects: Project[] = [
     description: "Reimagining the Fashion Show Through XR",
     category: "Hybrid Exhibition Design",
     imageUrl: "/lovable-uploads/503ce5b5-0a40-48ae-bcf3-09b2ece8efde.png",
-    tags: ['Hybrid Exhibition', 'XR', 'Prototyping'],
+    tags: ['Hybrid Exhibition', 'XR', 'Retail Experience'],
   },
   {
     id: "4",
