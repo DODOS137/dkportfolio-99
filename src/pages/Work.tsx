@@ -29,7 +29,7 @@ const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Seoul Nature history Museum",
+    title: "Seoul Natural history Museum",
     slug: "Seoul-Nature-History-Museum",
     description: "Brand Renewal and Spatial Design",
     category: "Spatial & Exhibition Design",
