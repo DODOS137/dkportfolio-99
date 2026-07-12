@@ -24,7 +24,7 @@ const projects: Project[] = [
     slug: "Whispers-from-the-Bottom",
     description: "An Immersive Exhibition Platform Led by Sound",
     category: "Exhibition Design",
-    imageUrl: "/lovable-uploads/89fa6153-0435-48f8-9cc7-7d4eacde6883.png",
+    imageUrl: "/webimages/WFTB/1.WFBCOVER1.jpg",
     tags: ['Hybrid Exhibition', 'Spatial Design', 'Interaction'],
   },
   {
@@ -33,7 +33,7 @@ const projects: Project[] = [
     slug: "Seoul-Nature-History-Museum",
     description: "Brand Renewal and Spatial Design",
     category: "Spatial & Exhibition Design",
-    imageUrl: "/lovable-uploads/5c528cdd-4520-4f67-8841-ca136c06d4c8.png",
+    imageUrl: "/webimages/SNM/2.SNHMCOVER2.jpg",
     tags: ['Exhibition', 'Spatial Design', 'VR'],
   },
   {
@@ -51,7 +51,7 @@ const projects: Project[] = [
     slug: "invisible-space-museum",
     description: "Scientific Virtual Reality Content",
     category: "VR Design",
-    imageUrl: "/lovable-uploads/dd05d902-8937-42b8-bb1e-c6ad7461546b.png",
+    imageUrl: "/webimages/Invisible/2.invisibleCOVER.jpg",
     tags: ['VR', 'Level Design', 'Spatial Design'],
   },
   {
