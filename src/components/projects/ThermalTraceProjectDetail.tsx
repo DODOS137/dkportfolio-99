@@ -386,15 +386,15 @@ const ThermalTraceProjectDetail = () => {
               {/* pop-up2*/}
               <div className="w-full">
                 <img
-                  src="/webimages/ThermalTrace/TT10.jpg"
+                  src="/webimages/ThermalTrace/TT9.jpg"
                   className="w-full h-auto"
                 />
               </div>
 
                {/* pop-up3*/}
-              <div className="w-full">
+              <div className="w-full mb-4">
                 <img
-                  src="/webimages/ThermalTrace/TT9.jpg"
+                  src="/webimages/ThermalTrace/TT10.jpg"
                   className="w-full h-auto"
                 />
               </div>
@@ -573,8 +573,7 @@ const ThermalTraceProjectDetail = () => {
               />
             </div>
 
-              {/* Line */}
-              <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
+
 
 
               {/* 옥스포드 전시이미지 */}
