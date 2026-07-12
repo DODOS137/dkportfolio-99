@@ -386,7 +386,7 @@ const ThermalTraceProjectDetail = () => {
               {/* pop-up2*/}
               <div className="w-full">
                 <img
-                  src="/webimages/ThermalTrace/TT9.jpg"
+                  src="/webimages/ThermalTrace/TT10.jpg"
                   className="w-full h-auto"
                 />
               </div>
@@ -394,7 +394,7 @@ const ThermalTraceProjectDetail = () => {
                {/* pop-up3*/}
               <div className="w-full">
                 <img
-                  src="/webimages/ThermalTrace/TT10.jpg"
+                  src="/webimages/ThermalTrace/TT9.jpg"
                   className="w-full h-auto"
                 />
               </div>
@@ -528,7 +528,7 @@ const ThermalTraceProjectDetail = () => {
             </span>
             <div>
             <span className="text-base md:text-base text-white font-Medium">
-            Spatial Design
+            Runway Stage & Pop-Up Store
             </span>
             <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
             Camouflage-inspired landscapes become a responsive XR terrain, reacting to the viewer’s position and thermal presence. Built from simple modular arrangements, the runway can be flexibly transformed through layout, colour, and concept, adapting the space to different fashion narratives.
@@ -537,13 +537,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
 
-            {/* pop-up floor*/}
-            <div className="w-full mb-4">
-              <img
-                className="w-full h-auto"
-                src="/webimages/ThermalTrace/TT17.jpg"
-              />
-            </div>
+
               
 
               
@@ -564,10 +558,18 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
             {/* 공간이미지 2*/}
-            <div className="w-full">
+            <div className="w-full mb-4">
               <img
                 className="w-full h-auto" 
                 src="/webimages/ThermalTrace/TT4-1.jpg"
+              />
+            </div>
+
+             {/* pop-up floor*/}
+            <div className="w-full">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT17.jpg"
               />
             </div>
 
