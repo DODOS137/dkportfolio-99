@@ -376,6 +376,84 @@ const ThermalTraceProjectDetail = () => {
 
 
 
+              {/* pop-up1*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT8.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* pop-up2*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT9.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+               {/* pop-up3*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT10.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* pop-up4*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT11.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* pop-up5*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT12.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* pop-up6*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT13.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* pop-up7*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT14.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* pop-up8*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT15.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+               {/* pop-up9*/}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT16.jpg"
+                  className="w-full h-auto"
+                />
+              </div>
+
+           
+              
+              {/* Line */}
+            <div className="w-full h-px my-20 md:my-40 bg-transparent"></div>
+
+
 
             {/* Art Works Images */}
             {/* 포스터이미지 */}
@@ -458,6 +536,18 @@ const ThermalTraceProjectDetail = () => {
             </p>
             </div>
             </div>
+
+
+            {/* pop-up floor*/}
+            <div className="w-full mb-4">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT17.jpg"
+              />
+            </div>
+              
+
+              
 
             {/* 슬라이더 */}
             <CarouselSection
