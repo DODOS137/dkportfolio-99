@@ -376,7 +376,7 @@ const ThermalTraceProjectDetail = () => {
 
 
               {/* pop-up1*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT8.jpg"
                   className="w-full h-auto"
@@ -384,7 +384,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
               {/* pop-up2*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT9.jpg"
                   className="w-full h-auto"
@@ -392,7 +392,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
                {/* pop-up3*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT10.jpg"
                   className="w-full h-auto"
@@ -400,7 +400,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
               {/* pop-up4*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT11.jpg"
                   className="w-full h-auto"
@@ -408,7 +408,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
               {/* pop-up5*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT12.jpg"
                   className="w-full h-auto"
@@ -416,7 +416,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
               {/* pop-up6*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT13.jpg"
                   className="w-full h-auto"
@@ -424,7 +424,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
               {/* pop-up7*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT14.jpg"
                   className="w-full h-auto"
@@ -432,7 +432,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
               {/* pop-up8*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT15.jpg"
                   className="w-full h-auto"
@@ -440,7 +440,7 @@ const ThermalTraceProjectDetail = () => {
               </div>
 
                {/* pop-up9*/}
-              <div className="w-full mb-4">
+              <div className="w-full">
                 <img
                   src="/webimages/ThermalTrace/TT16.jpg"
                   className="w-full h-auto"
