@@ -29,6 +29,9 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
         allow="autoplay; encrypted-media; picture-in-picture"
         allowFullScreen
         className="w-full h-full border-0"
+      
+        loading="lazy"
+        fetchPriority="low"
       />
     </div>
   );
@@ -51,17 +54,11 @@ const LearnProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    const lcpImg = allImgs[0];
-    if (lcpImg) {
-      lcpImg.loading = 'eager';
-      (lcpImg as any).fetchPriority = 'high';
-      lcpImg.decoding = 'async';
-      if (!lcpImg.hasAttribute('sizes')) {
-        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
-      }
-    }
+    const allIframes = Array.from(
+      document.querySelectorAll<HTMLIFrameElement>('section iframe')
+    );
 
-    const lazyImgs = allImgs.slice(1);
+    const lazyImgs = allImgs;
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
@@ -74,6 +71,11 @@ const LearnProjectDetail = () => {
       }
 
       img.classList.add('reveal-init');
+    });
+
+    allIframes.forEach((iframe) => {
+      iframe.loading = 'lazy';
+      iframe.setAttribute('fetchpriority', 'low');
     });
 
     const decodeOnIdle = (img: HTMLImageElement) => {
@@ -184,8 +186,8 @@ const LearnProjectDetail = () => {
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               src={project.images[0]}
-              loading="eager"
-              fetchPriority="high"
+              loading="lazy"
+              fetchPriority="low"
               decoding="async"
             />
           </div>
@@ -306,27 +308,47 @@ const LearnProjectDetail = () => {
           <div className="max-w-[1540px] mx-auto px-4 md:px-[250px]">
             {/* Spatial Design Image1 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN14.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Spatial Design Image2 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN11.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Spatial Design Image3 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN10.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* detail Image1 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN12.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN12.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* detail Image2 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN13.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN13.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Line */}
@@ -349,7 +371,11 @@ const LearnProjectDetail = () => {
 
             {/* world building Image1 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Learn/LEARN2.jpg" />
+              <img className="w-full h-auto" src="/webimages/Learn/LEARN2.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Line */}
@@ -367,15 +393,27 @@ const LearnProjectDetail = () => {
 
             {/* Character Design Images */}
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/Learn/LEARN3.jpg" />
+              <img className="w-full h-full" src="/webimages/Learn/LEARN3.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/Learn/LEARN4.jpg" />
+              <img className="w-full h-full" src="/webimages/Learn/LEARN4.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             <div className="w-full mb-4">
-              <img className="w-full h-full" src="/webimages/Learn/LEARN5.jpg" />
+              <img className="w-full h-full" src="/webimages/Learn/LEARN5.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* 360 Model Viewer */}
@@ -437,22 +475,38 @@ const LearnProjectDetail = () => {
 
             {/* Level Design Section */}
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/Learn/LEARN6.jpg" />
+              <img className="w-full h-full" src="/webimages/Learn/LEARN6.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/Learn/LEARN7.jpg" />
+              <img className="w-full h-full" src="/webimages/Learn/LEARN7.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Line */}
             <div className="w-full h-px my-5 md:my-5 bg-transparent"></div>
 
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/Learn/LEARN8.jpg" />
+              <img className="w-full h-full" src="/webimages/Learn/LEARN8.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/Learn/LEARN9.jpg" />
+              <img className="w-full h-full" src="/webimages/Learn/LEARN9.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Line */}
