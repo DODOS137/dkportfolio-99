@@ -41,7 +41,14 @@ const ThermalTraceProjectDetail = () => {
       document.querySelectorAll<HTMLIFrameElement>("section iframe"),
     );
 
-    const lazyImgs = allImgs;
+    const lcpImg = allImgs[0];
+    if (lcpImg) {
+      lcpImg.loading = "eager";
+      (lcpImg as any).fetchPriority = "high";
+      lcpImg.decoding = "async";
+    }
+
+    const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === "1") return;
       img.dataset.lazyEnhanced = "1";
@@ -60,6 +67,14 @@ const ThermalTraceProjectDetail = () => {
       iframe.loading = "lazy";
       iframe.setAttribute("fetchpriority", "low");
     });
+
+    const preloadImage = (img: HTMLImageElement) => {
+      if (img.dataset.preloaded === "1") return;
+      img.dataset.preloaded = "1";
+
+      const preload = new Image();
+      preload.src = img.currentSrc || img.src;
+    };
 
     const decodeOnIdle = (img: HTMLImageElement) => {
       const run = () => {
@@ -89,6 +104,7 @@ const ThermalTraceProjectDetail = () => {
           const img = entry.target as HTMLImageElement;
 
           if (entry.isIntersecting) {
+            preloadImage(img);
             decodeOnIdle(img);
             img.classList.add("reveal-show");
           } else {
@@ -98,7 +114,7 @@ const ThermalTraceProjectDetail = () => {
       },
       {
         root: scrollRoot,
-        rootMargin: "300px 0px 300px 0px",
+        rootMargin: "5000px 0px 5000px 0px",
         threshold: 0.01,
       },
     );
@@ -174,9 +190,9 @@ const ThermalTraceProjectDetail = () => {
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               src="/webimages/ThermalTrace/3.WEBCOVER1.jpg"
-              loading="lazy"
+              loading="eager"
               decoding="async"
-              fetchPriority="low"
+              fetchPriority="high"
             />
           </div>
 
