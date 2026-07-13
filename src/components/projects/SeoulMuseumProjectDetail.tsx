@@ -501,9 +501,7 @@ const SeoulMuseumProjectDetail = () => {
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                  In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.
                 </p>
-                <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                 Through the Eyes of a Hunter reimagines Seodaemun Museum of Natural History as Seoul Natural History Museum, repositioning it as a new cultural landmark for the city. The project proposes a culturally grounded visitor journey shaped by Korean perspectives on nature, coexistence, and memory.
-                </p>
+
               </div>
             </div>
 
@@ -536,6 +534,11 @@ const SeoulMuseumProjectDetail = () => {
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                   The existing museum condition was analysed through site context, visitor feedback, spatial problems, and a renewed floor-plan strategy.
                 </p>
+              
+                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                 Through the Eyes of a Hunter reimagines Seodaemun Museum of Natural History as Seoul Natural History Museum, repositioning it as a new cultural landmark for the city. The project proposes a culturally grounded visitor journey shaped by Korean perspectives on nature, coexistence, and memory.
+                </p>
+                 
               </div>
             </div>
 
