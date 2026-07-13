@@ -531,13 +531,17 @@ const SeoulMuseumProjectDetail = () => {
                 <span className="text-base md:text-base text-white font-Medium">
                   Site, Problem & Planning
                 </span>
+  
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                 Through the Eyes of a Hunter reimagines Seodaemun Museum of Natural History as Seoul Natural History Museum, repositioning it as a new cultural landmark for the city. The project proposes a culturally grounded visitor journey shaped by Korean perspectives on nature, coexistence, and memory.
+                </p>           
+                 
+                 
+                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                   The existing museum condition was analysed through site context, visitor feedback, spatial problems, and a renewed floor-plan strategy.
                 </p>
               
-                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                 Through the Eyes of a Hunter reimagines Seodaemun Museum of Natural History as Seoul Natural History Museum, repositioning it as a new cultural landmark for the city. The project proposes a culturally grounded visitor journey shaped by Korean perspectives on nature, coexistence, and memory.
-                </p>
+
                  
               </div>
             </div>
