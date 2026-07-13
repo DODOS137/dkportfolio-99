@@ -493,6 +493,11 @@ const SeoulMuseumProjectDetail = () => {
                 <span className="text-base md:text-base text-white font-Medium">
                   Narrative Arc + Korean cultural perspective
                 </span>
+
+                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
+                 Korean identity was developed through spatial principles rather than decorative motifs. The hunter was interpreted as an observer and recorder of nature, informing the drawer-based specimen displays, study-like furniture and framed landscape structures. The visitor journey was reorganised as a vertical progression, allowing audiences to indirectly experience the path of a hunter travelling through the mountain ranges of the Korean Peninsula.
+                </p>
+
                 <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
                  In late Joseon Korea, hunters viewed nature not merely as a means of survival, but as a realm of spiritual reverence. Animals were tracked with care and honoured as living beings, with tigers often referred to as San-gun, or “Mountain Lord.” This respect also extended to falconry, where Maekkun formed mutual relationships with wild hawks rather than claiming ownership.
                 </p>
