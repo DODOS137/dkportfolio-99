@@ -91,8 +91,14 @@ const WhispersProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    // 모든 이미지는 native lazy + LQIP 효과 적용
-    const lazyImgs = allImgs;
+    const lcpImg = allImgs[0];
+    if (lcpImg) {
+      lcpImg.loading = 'eager';
+      (lcpImg as any).fetchPriority = 'high';
+      lcpImg.decoding = 'async';
+    }
+
+    const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
       img.dataset.lazyEnhanced = '1';
@@ -108,6 +114,14 @@ const WhispersProjectDetail = () => {
       // LQIP/페이드 초기 상태만 부여
       img.classList.add('img-lqip', 'reveal-init');
     });
+
+    const preloadImage = (img: HTMLImageElement) => {
+      if (img.dataset.preloaded === '1') return;
+      img.dataset.preloaded = '1';
+
+      const preload = new Image();
+      preload.src = img.currentSrc || img.src;
+    };
 
     // 보이면 decode → 클래스 토글 (JS 큐/1px 치환 없음)
     const decodeOnIdle = (img: HTMLImageElement) => {
@@ -136,6 +150,7 @@ const WhispersProjectDetail = () => {
           const img = entry.target as HTMLImageElement;
 
           if (entry.isIntersecting) {
+            preloadImage(img);
             decodeOnIdle(img);
           } else {
             img.classList.remove('reveal-show');
@@ -144,7 +159,7 @@ const WhispersProjectDetail = () => {
       },
       {
         root: scrollRoot,
-        rootMargin: '300px 0px 300px 0px',
+        rootMargin: '5000px 0px 5000px 0px',
         threshold: 0.01
       }
     );
@@ -216,8 +231,8 @@ const WhispersProjectDetail = () => {
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               src="/webimages/WFTB/1.WFBCOVER1.jpg"
-              loading="lazy"
-              fetchPriority="low"
+              loading="eager"
+              fetchPriority="high"
               decoding="async"
             />
           </div>
