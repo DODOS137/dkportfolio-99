@@ -30,6 +30,9 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
         allow="autoplay; encrypted-media; picture-in-picture"
         allowFullScreen
         className="w-full h-full border-0"
+      
+        loading="lazy"
+        fetchPriority="low"
       />
     </div>
   );
@@ -69,17 +72,7 @@ const InvisibleProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    const lcpImg = allImgs[0];
-    if (lcpImg) {
-      lcpImg.loading = 'eager';
-      (lcpImg as any).fetchPriority = 'high';
-      lcpImg.decoding = 'async';
-      if (!lcpImg.hasAttribute('sizes')) {
-        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
-      }
-    }
-
-    const lazyImgs = allImgs.slice(1);
+    const lazyImgs = allImgs;
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
@@ -204,6 +197,10 @@ const InvisibleProjectDetail = () => {
                 src="/webimages/Invisible/2.invisibleCOVER.jpg"
                 alt={`${project.title} - Image 1`}
                 className="w-full h-full object-contain"
+              
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </AspectRatio>
           </div>
@@ -354,19 +351,35 @@ const InvisibleProjectDetail = () => {
 
             {/* Space Images */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV8.jpg" alt="Space render 1" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV8.jpg" alt="Space render 1" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV9.jpg" alt="Space render 2" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV9.jpg" alt="Space render 2" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV10.jpg" alt="Space render 3" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV10.jpg" alt="Space render 3" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV11.jpg" alt="Space render 4" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Line*/}
@@ -389,24 +402,40 @@ const InvisibleProjectDetail = () => {
 
             {/* Context image1 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV1-1.jpg" alt="Space render 4" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV1-1.jpg" alt="Space render 4" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Context image2 */}
             <div className="w-full mb-8">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV1-2.jpg" alt="Space render 4" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV1-2.jpg" alt="Space render 4" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
 
 
              {/* world image1 */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV2.jpg" alt="Space render 4" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV2.jpg" alt="Space render 4" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
              {/* world image2 */}
             <div className="w-full mb-4">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV1.jpg" alt="Space render 4" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV1.jpg" alt="Space render 4" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
   
@@ -458,6 +487,10 @@ const InvisibleProjectDetail = () => {
                 className="w-full h-auto"
                 src="/webimages/Invisible/INV3.jpg"
                 alt="Video development board"
+              
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
 
@@ -466,17 +499,29 @@ const InvisibleProjectDetail = () => {
 
             {/* Exterior Image */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV5.jpg" alt="Exterior render" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV5.jpg" alt="Exterior render" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* Floor Plan Image */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV4.jpg" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV4.jpg" alt="Floor plan" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* 레벨 Image */}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/Invisible/INV6.jpg" alt="Floor plan" />
+              <img className="w-full h-auto" src="/webimages/Invisible/INV6.jpg" alt="Floor plan" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
 
@@ -533,7 +578,11 @@ const InvisibleProjectDetail = () => {
 
             {/* Ocean Web Image */}
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/Invisible/INV12.jpg" alt="The Ocean overview" />
+              <img className="w-full h-full" src="/webimages/Invisible/INV12.jpg" alt="The Ocean overview" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
   
@@ -542,6 +591,10 @@ const InvisibleProjectDetail = () => {
                   src="/webimages/Invisible/INV13.jpg"
                   className="w-full h-auto"
                   alt="Ocean image 5"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
            
@@ -554,6 +607,10 @@ const InvisibleProjectDetail = () => {
                   src="/webimages/Invisible/INV17.jpg"
                   className="w-full h-auto"
                   alt="Ocean image 5"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
       
@@ -566,7 +623,11 @@ const InvisibleProjectDetail = () => {
                     <CarouselItem key={index}>
                       <div className="relative w-full">
                         <AspectRatio ratio={16 / 9} className="w-full">
-                          <img src={image} alt={`Gallery slider ${index + 1}`} className="w-full h-full object-cover" />
+                          <img src={image} alt={`Gallery slider ${index + 1}`} className="w-full h-full object-cover" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
                         </AspectRatio>
                       </div>
                     </CarouselItem>
@@ -602,6 +663,10 @@ const InvisibleProjectDetail = () => {
                         src={image}
                         alt={`${project.title} - Image ${index + 2}`}
                         className="w-full h-full object-cover"
+                      
+                        loading="lazy"
+                        decoding="async"
+                        fetchPriority="low"
                       />
                     </AspectRatio>
                   </div>
