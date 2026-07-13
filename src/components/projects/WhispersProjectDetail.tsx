@@ -26,6 +26,8 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
       <iframe
         title={title}
         src={src}
+        loading="lazy"
+        fetchPriority="low"
         allow="autoplay; encrypted-media; picture-in-picture"
         allowFullScreen
         className="w-full h-full border-0"
@@ -75,7 +77,7 @@ const WhispersProjectDetail = () => {
   }, [posterSlides.length]);
 
   /* ============================
-     ✅ NEW: 이미지 LQIP + 지연 로딩 큐 + 스크롤 페이드 + content-visibility
+     ✅ NEW: 전체 이미지 lazy loading + LQIP + 스크롤 페이드 + content-visibility
      ============================ */
   useEffect(() => {
     // 🔧 FIX: ScrollArea는 자체 스크롤 컨테이너 → IO root를 그 뷰포트로 지정
@@ -89,20 +91,8 @@ const WhispersProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    // LCP 후보(맨 위 큰 이미지)는 즉시/고우선 로드
-    const lcpImg = allImgs[0];
-    if (lcpImg) {
-      lcpImg.loading = 'eager';
-      (lcpImg as any).fetchPriority = 'high';
-      lcpImg.decoding = 'async';
-      // 컨테이너 최대폭 기준 힌트
-      if (!lcpImg.hasAttribute('sizes')) {
-        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
-      }
-    }
-
-    // 나머지 이미지는 native lazy + LQIP 효과만 (src는 건드리지 않음)
-    const lazyImgs = allImgs.slice(1);
+    // 모든 이미지는 native lazy + LQIP 효과 적용
+    const lazyImgs = allImgs;
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return; // 중복 방지
       img.dataset.lazyEnhanced = '1';
@@ -226,8 +216,8 @@ const WhispersProjectDetail = () => {
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               src="/webimages/WFTB/1.WFBCOVER1.jpg"
-              loading="eager"
-              fetchPriority="high"
+              loading="lazy"
+              fetchPriority="low"
               decoding="async"
             />
           </div>
@@ -273,6 +263,8 @@ const WhispersProjectDetail = () => {
                       className="w-full h-full"
                       loading="lazy"
                       decoding="async"
+                    
+                      fetchPriority="low"
                     />
                   </div>
                 </div>
@@ -423,32 +415,60 @@ const WhispersProjectDetail = () => {
 
             {/*Render Images*/}  
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB18.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB18.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
             {/*Bridge Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB8-1.jpg" />
+              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB8-1.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
             {/*Product Design Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB8-2.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB8-2.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
             {/*Product Design Image2*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB9.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB9.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>  
             {/*Detail Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB10.jpg" />
+              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB10.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div> 
             {/*Exhibition Design Image2*/}       
             <div className="w-full">
-              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB13.jpg" />
+              <img className="w-full h-full mb-4 md:mb-4" src="/webimages/WFTB/WFB13.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>    
 
             {/*Exhibition Design Image3*/}       
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB14.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>          
 
             {/*Line*/} 
@@ -459,19 +479,35 @@ const WhispersProjectDetail = () => {
 
             {/*Popup Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB19.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB19.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
             {/*Popup Image2*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB20.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB20.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
             {/*Popup Image3*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB21.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB21.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>            
              {/*Popup Image4*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB22.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB22.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
 
 
@@ -485,7 +521,11 @@ const WhispersProjectDetail = () => {
 
             {/*Poster Design Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB4.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB4.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
 
             {/* Poster Slider + Side Image */}
@@ -498,6 +538,8 @@ const WhispersProjectDetail = () => {
                   className="block w-full h-auto"
                   loading="lazy"
                   decoding="async"
+                
+                  fetchPriority="low"
                 />
               </div>
 
@@ -509,13 +551,19 @@ const WhispersProjectDetail = () => {
                   className="block w-full h-auto"
                   loading="lazy"
                   decoding="async"
+                
+                  fetchPriority="low"
                 />
               </div>
             </div>
 
             {/*Poster Design Image3*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB4-5.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB4-5.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
 
             {/*Line*/} 
@@ -533,17 +581,29 @@ const WhispersProjectDetail = () => {
 
             {/*Development Image1*/}     
             <div className="w-full mb-0">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB1.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>    
 
             {/*Development Image2*/}        
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB3.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB3.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>  
 
             {/*Development Image3*/}     
             <div className="w-full mb-1">
-              <img className="w-full h-full" src="/webimages/WFTB/WFB1-3.jpg" />
+              <img className="w-full h-full" src="/webimages/WFTB/WFB1-3.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div> 
 
             {/* GIF Section */}
@@ -556,6 +616,9 @@ const WhispersProjectDetail = () => {
                     alt="Process GIF 1"
                     className="w-full h-full object-cover"
                     loading="lazy"
+                  
+                    decoding="async"
+                    fetchPriority="low"
                   />
                 </div>
 
@@ -565,6 +628,9 @@ const WhispersProjectDetail = () => {
                     alt="Process GIF 2"
                     className="w-full h-full object-cover"
                     loading="lazy"
+                  
+                    decoding="async"
+                    fetchPriority="low"
                   />
                 </div>
 
@@ -574,6 +640,9 @@ const WhispersProjectDetail = () => {
                     alt="Process GIF 3"
                     className="w-full h-full object-cover"
                     loading="lazy"
+                  
+                    decoding="async"
+                    fetchPriority="low"
                   />
                 </div>
               </div>
@@ -599,19 +668,31 @@ const WhispersProjectDetail = () => {
 
             {/*Process Rendering Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB5.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB5.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
             {/*Line*/} 
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
             {/*Process Rendering Image2*/}        
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB6.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB6.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>
             {/*Line*/} 
             <div className="w-full h-px my-10 md:my-10 bg-transparent"></div>
             {/*Spatial Design Process Image1*/}        
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB7.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB7.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div> 
 
             {/*Line*/} 
@@ -619,7 +700,11 @@ const WhispersProjectDetail = () => {
 
             {/*End Image*/}       
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB17.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/WFTB/WFB17.jpg" 
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+/>
             </div>  
 
             {/*Line*/} 
