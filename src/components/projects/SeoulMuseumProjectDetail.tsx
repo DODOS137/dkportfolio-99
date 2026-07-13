@@ -28,6 +28,9 @@ const LiteYouTube: React.FC<{ id: string; title?: string; className?: string }> 
         allow="autoplay; encrypted-media; picture-in-picture"
         allowFullScreen
         className="w-full h-full border-0"
+      
+        loading="lazy"
+        fetchPriority="low"
       />
     </div>
   );
@@ -68,20 +71,8 @@ const SeoulMuseumProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    // LCP 후보(맨 위 큰 이미지)는 즉시/고우선 로드
-    const lcpImg = allImgs[0];
-    if (lcpImg) {
-      lcpImg.loading = 'eager';
-      (lcpImg as any).fetchPriority = 'high';
-      lcpImg.decoding = 'async';
-
-      if (!lcpImg.hasAttribute('sizes')) {
-        lcpImg.setAttribute('sizes', '(min-width:1024px) 1540px, 100vw');
-      }
-    }
-
-    // 나머지 이미지는 native lazy + LQIP 효과만
-    const lazyImgs = allImgs.slice(1);
+    // 모든 이미지는 native lazy + LQIP 효과 적용
+    const lazyImgs = allImgs;
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
@@ -212,8 +203,8 @@ const SeoulMuseumProjectDetail = () => {
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               src="/webimages/SNM/2.SNHMCOVER2.jpg"
-              loading="eager"
-              fetchPriority="high"
+              loading="lazy"
+              fetchPriority="low"
               decoding="async"
             />
           </div>
@@ -259,6 +250,8 @@ const SeoulMuseumProjectDetail = () => {
                       className="w-full h-full"
                       loading="lazy"
                       decoding="async"
+                    
+                      fetchPriority="low"
                     />
                   </div>
                 </div>
@@ -398,40 +391,72 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Lobby Images*/}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/SNM/SNM24.jpg" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM24.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/SNM/SNM11.jpg" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM11.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Lobby Images2*/}
             <div className="w-full">
-              <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM12.jpg" />
+              <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM12.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Exhibition Hall*/}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/SNM/SNM13.jpg" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM13.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Exhibtion Hall 2*/}
             <div className="w-full">
-              <img className="w-full h-auto" src="/webimages/SNM/SNM14.jpg" />
+              <img className="w-full h-auto" src="/webimages/SNM/SNM14.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Built-in detail images*/}
             <div className="w-full">
-              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM10.jpg" />
+              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM10.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Rest Area Image 1*/}
             <div className="w-full">
-              <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM15.jpg" />
+              <img className="w-full h-auto mb-4" src="/webimages/SNM/SNM15.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Gift Shop Image*/}
             <div className="w-full">
-              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM17.jpg" />
+              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM17.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
 
@@ -441,7 +466,11 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*그래픽 Image*/}
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/SNM/SNM25.jpg" />
+              <img className="w-full h-full" src="/webimages/SNM/SNM25.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/* 그래픽 Side Image + Fast Slider - Right Aligned */}
@@ -455,6 +484,8 @@ const SeoulMuseumProjectDetail = () => {
                     className="block w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
+                  
+                    fetchPriority="low"
                   />
                 </div>
 
@@ -466,6 +497,8 @@ const SeoulMuseumProjectDetail = () => {
                     className="block w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
+                  
+                    fetchPriority="low"
                   />
                 </div>
               </div>
@@ -473,12 +506,20 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Gift Product Image 2*/}
             <div className="w-full">
-              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM18.jpg" />
+              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM18.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Exhibition Outcome image*/}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM19.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM19.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Line*/}
@@ -507,11 +548,19 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Narrative*/}
             <div className="w-full">
-              <img className="w-full h-full" src="/webimages/SNM/SNM3.jpg" />
+              <img className="w-full h-full" src="/webimages/SNM/SNM3.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
             {/*Narrative Image 2*/}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM22.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM22.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
 
@@ -555,6 +604,8 @@ const SeoulMuseumProjectDetail = () => {
                   className="w-[1106px] h-auto"
                   loading="lazy"
                   decoding="async"
+                
+                  fetchPriority="low"
                 />
               </div>
 
@@ -578,7 +629,11 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Problem Image2*/}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM2.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
 
@@ -603,7 +658,11 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Floor Plan*/}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM4.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM4.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Line*/}
@@ -611,7 +670,11 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Floor Plan2*/}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM5.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM5.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Line*/}
@@ -619,7 +682,11 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*Exhibition Plan*/}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM6.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM6.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Line*/}
@@ -627,14 +694,22 @@ const SeoulMuseumProjectDetail = () => {
 
             {/*built-in Image 2*/}
             <div className="w-full">
-              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" />
+              <img className="w-full h-full mb-4" src="/webimages/SNM/SNM23.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
     
 
             {/*End-Gift Product Image 2*/}
             <div className="w-full">
-              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM20.jpg" />
+              <img className="w-full h-full mb-0 md:mb-0" src="/webimages/SNM/SNM20.jpg" 
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+/>
             </div>
 
             {/*Line*/}
