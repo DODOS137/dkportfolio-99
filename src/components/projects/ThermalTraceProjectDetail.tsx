@@ -37,17 +37,11 @@ const ThermalTraceProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>("section img"),
     );
 
-    const lcpImg = allImgs[0];
-    if (lcpImg) {
-      lcpImg.loading = "eager";
-      (lcpImg as any).fetchPriority = "high";
-      lcpImg.decoding = "async";
-      if (!lcpImg.hasAttribute("sizes")) {
-        lcpImg.setAttribute("sizes", "(min-width:1024px) 1540px, 100vw");
-      }
-    }
+    const allIframes = Array.from(
+      document.querySelectorAll<HTMLIFrameElement>("section iframe"),
+    );
 
-    const lazyImgs = allImgs.slice(1);
+    const lazyImgs = allImgs;
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === "1") return;
       img.dataset.lazyEnhanced = "1";
@@ -60,6 +54,11 @@ const ThermalTraceProjectDetail = () => {
       }
 
       img.classList.add("reveal-init");
+    });
+
+    allIframes.forEach((iframe) => {
+      iframe.loading = "lazy";
+      iframe.setAttribute("fetchpriority", "low");
     });
 
     const decodeOnIdle = (img: HTMLImageElement) => {
@@ -175,9 +174,9 @@ const ThermalTraceProjectDetail = () => {
               alt={`${project.title} - Image 1`}
               className="w-full h-auto object-contain"
               src="/webimages/ThermalTrace/3.WEBCOVER1.jpg"
-              loading="eager"
-              fetchPriority="high"
+              loading="lazy"
               decoding="async"
+              fetchPriority="low"
             />
           </div>
 
@@ -349,7 +348,11 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT2.jpg"
                   className="w-full h-auto"
-                 />
+                 
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
                 </div>
               
 
@@ -380,6 +383,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT8.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -388,6 +395,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT9.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -396,6 +407,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT10.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -404,6 +419,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT11.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -412,6 +431,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT12.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -420,6 +443,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT13.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -428,6 +455,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT14.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -436,6 +467,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT15.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -444,6 +479,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT16.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -460,7 +499,11 @@ const ThermalTraceProjectDetail = () => {
               <img
                 className="w-full h-auto"
                 src="/webimages/ThermalTrace/TT3.jpg"
-              />
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
             </div>
     
                {/* 포스터이미지2 */}
@@ -468,7 +511,11 @@ const ThermalTraceProjectDetail = () => {
               <img
                 className="w-full h-full"
                 src="/webimages/ThermalTrace/TT1.jpg"
-              />
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
             </div>
 
               {/* 포스터이미지3 */}
@@ -476,7 +523,11 @@ const ThermalTraceProjectDetail = () => {
               <img
                 className="w-full h-full"
                 src="/webimages/ThermalTrace/TT3-1.jpg"
-              />
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
             </div>
 
 
@@ -513,6 +564,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT7.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
@@ -554,7 +609,11 @@ const ThermalTraceProjectDetail = () => {
               <img
                 className="w-full h-auto"
                 src="/webimages/ThermalTrace/TT4.jpg"
-              />
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
             </div>
 
             {/* 공간이미지 2*/}
@@ -562,7 +621,11 @@ const ThermalTraceProjectDetail = () => {
               <img
                 className="w-full h-auto" 
                 src="/webimages/ThermalTrace/TT4-1.jpg"
-              />
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
             </div>
 
              {/* pop-up floor*/}
@@ -570,7 +633,11 @@ const ThermalTraceProjectDetail = () => {
               <img
                 className="w-full h-auto"
                 src="/webimages/ThermalTrace/TT17.jpg"
-              />
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
             </div>
 
 
@@ -581,6 +648,10 @@ const ThermalTraceProjectDetail = () => {
                 <img
                   src="/webimages/ThermalTrace/TT6.jpg"
                   className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
 
