@@ -72,7 +72,14 @@ const InvisibleProjectDetail = () => {
       document.querySelectorAll<HTMLImageElement>('section img')
     );
 
-    const lazyImgs = allImgs;
+    const lcpImg = allImgs[0];
+    if (lcpImg) {
+      lcpImg.loading = 'eager';
+      (lcpImg as any).fetchPriority = 'high';
+      lcpImg.decoding = 'async';
+    }
+
+    const lazyImgs = allImgs.slice(1);
     lazyImgs.forEach((img) => {
       if (img.dataset.lazyEnhanced === '1') return;
       img.dataset.lazyEnhanced = '1';
@@ -87,6 +94,14 @@ const InvisibleProjectDetail = () => {
 
       img.classList.add('reveal-init');
     });
+
+    const preloadImage = (img: HTMLImageElement) => {
+      if (img.dataset.preloaded === '1') return;
+      img.dataset.preloaded = '1';
+
+      const preload = new Image();
+      preload.src = img.currentSrc || img.src;
+    };
 
     const decodeOnIdle = (img: HTMLImageElement) => {
       const run = () => {
@@ -114,6 +129,7 @@ const InvisibleProjectDetail = () => {
           const img = entry.target as HTMLImageElement;
 
           if (entry.isIntersecting) {
+            preloadImage(img);
             decodeOnIdle(img);
             img.classList.add('reveal-show');
           } else {
@@ -123,7 +139,7 @@ const InvisibleProjectDetail = () => {
       },
       {
         root: scrollRoot,
-        rootMargin: '300px 0px 300px 0px',
+        rootMargin: '5000px 0px 5000px 0px',
         threshold: 0.01
       }
     );
@@ -198,9 +214,9 @@ const InvisibleProjectDetail = () => {
                 alt={`${project.title} - Image 1`}
                 className="w-full h-full object-contain"
               
-                loading="lazy"
+                loading="eager"
                 decoding="async"
-                fetchPriority="low"
+                fetchPriority="high"
               />
             </AspectRatio>
           </div>
