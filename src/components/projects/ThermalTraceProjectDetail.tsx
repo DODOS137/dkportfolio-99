@@ -336,7 +336,7 @@ const ThermalTraceProjectDetail = () => {
                    Interaction Prototype & Outcome
                   </span>
                   <p className="mt-4 mb-4 text-sm md:text-sm text-gray-400 leading-relaxed font-light">
-                 The project reframes fashion as something discovered through thermal detection, inviting audiences to detect hidden figures through heat traces, temperature shifts, and proximity sensing. A visual design language derived from body-temperature colour gradients informs the garments, spatial atmosphere, and interactive experience, with the concept extending into pop-up stores and window displays as a flexible experience.
+                 The project reframes fashion as something discovered through thermal detection, inviting audiences to detect hidden figures through heat traces, temperature shifts, and proximity sensing. A visual design language derived from body-temperature colour gradients informs the garments, spatial atmosphere, and interactive experience. The project presents both virtual and physical runway environments based on the same concept, with the potential to evolve into digital exhibition content for pop-up stores, brand stores, and other retail experiences.
                   </p>
                 </div>
               </div>
