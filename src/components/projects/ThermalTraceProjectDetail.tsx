@@ -656,6 +656,18 @@ const ThermalTraceProjectDetail = () => {
                 />
             </div>
 
+             {/* pop-up floor2*/}
+            <div className="w-full">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT18.jpg"
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+            </div>
+
 
 
 
