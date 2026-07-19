@@ -644,49 +644,15 @@ const ThermalTraceProjectDetail = () => {
                 />
             </div>
 
-             {/* pop-up floor*/}
-            <div className="w-full">
-              <img
-                className="w-full h-auto"
-                src="/webimages/ThermalTrace/TT17.jpg"
-              
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
-                />
+
+            {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
+            <div className="bg-transparent border-1 border-gray500 overflow-hidden mb-4">
+              <InteractiveImageSection
+                baseImage="/webimages/ThermalTrace/TT2-1.jpg"
+                overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
+              />
             </div>
 
-             {/* pop-up floor2*/}
-            <div className="w-full mb-4">
-              <img
-                className="w-full h-auto"
-                src="/webimages/ThermalTrace/TT18.jpg"
-              
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
-                />
-            </div>
-
-
-
-
-              {/* 옥스포드 전시이미지 */}
-              <div className="w-full mb-4">
-                <img
-                  src="/webimages/ThermalTrace/TT6.jpg"
-                  className="w-full h-auto"
-                
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
-                />
-              </div>
-
- 
-
-              
-  
              {/* Exhibition Design text */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
                 <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -721,48 +687,63 @@ const ThermalTraceProjectDetail = () => {
 
 
 
-
-              
-              
-              
-              
-              
-              {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
-            <div className="bg-transparent border-1 border-gray500 overflow-hidden">
-              <InteractiveImageSection
-                baseImage="/webimages/ThermalTrace/TT2-1.jpg"
-                overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
-              />
+              {/* 옥스포드 전시이미지 */}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT6.jpg"
+                  className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+              </div>
 
  
 
-
-      
-
-
-
-
-            
+              
+  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+             {/* pop-up floor*/}
+            <div className="w-full">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT17.jpg"
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
             </div>
+
+             {/* pop-up floor2*/}
+            <div className="w-full">
+              <img
+                className="w-full h-auto"
+                src="/webimages/ThermalTrace/TT18.jpg"
+              
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+            </div>
+
+
+              
+              
+              
+              
+              
+
+ 
+            
+            
+            
+            
+            
+            
             </div>
             </div>
         </section>
