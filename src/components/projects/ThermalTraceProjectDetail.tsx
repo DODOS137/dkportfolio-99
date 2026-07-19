@@ -644,6 +644,18 @@ const ThermalTraceProjectDetail = () => {
                 />
             </div>
 
+              {/* 옥스포드 전시이미지 */}
+              <div className="w-full mb-4">
+                <img
+                  src="/webimages/ThermalTrace/TT6.jpg"
+                  className="w-full h-auto"
+                
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+              </div>
+
 
              {/* Exhibition Design text */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
@@ -692,17 +704,7 @@ const ThermalTraceProjectDetail = () => {
 
 
 
-              {/* 옥스포드 전시이미지 */}
-              <div className="w-full mb-4">
-                <img
-                  src="/webimages/ThermalTrace/TT6.jpg"
-                  className="w-full h-auto"
-                
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
-                />
-              </div>
+
 
  
 
