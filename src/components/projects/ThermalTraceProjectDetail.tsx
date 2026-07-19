@@ -657,7 +657,7 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
              {/* pop-up floor2*/}
-            <div className="w-full">
+            <div className="w-full mb-4">
               <img
                 className="w-full h-auto"
                 src="/webimages/ThermalTrace/TT18.jpg"
