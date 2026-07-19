@@ -645,14 +645,6 @@ const ThermalTraceProjectDetail = () => {
             </div>
 
 
-            {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
-            <div className="bg-transparent border-1 border-gray500 overflow-hidden mb-4">
-              <InteractiveImageSection
-                baseImage="/webimages/ThermalTrace/TT2-1.jpg"
-                overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
-              />
-            </div>
-
              {/* Exhibition Design text */}
               <div className="flex flex-col md:flex-row md:items-start md:space-x-16 mb-4">
                 <div className="rounded-lg bg-transparent flex flex-col md:flex-row md:items-start md:space-x-16">
@@ -683,6 +675,19 @@ const ThermalTraceProjectDetail = () => {
                   </p>
                 </div>
               </div>
+
+
+              
+
+            {/* Exhibition Design Section with Interactive Image: 겹쳐진 이미지 유지 */}
+            <div className="bg-transparent border-1 border-gray500 overflow-hidden mb-4">
+              <InteractiveImageSection
+                baseImage="/webimages/ThermalTrace/TT2-1.jpg"
+                overlayImage="/webimages/ThermalTrace/TT2-2.jpg"
+              />
+            </div>
+
+
 
 
 
